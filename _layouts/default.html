@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
 		<title>{{ page.title }}</title>
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
@@ -14,7 +15,7 @@
 	</head>
 	<body class="d-flex flex-column h-100">
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container">
 					<a href="/">
 						<img src="/assets/images/logo.png" width="44" height="44" class="mr-2"/>
@@ -27,17 +28,44 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
+							<!--
 							<li class="nav-item">
 								<a class="nav-link" href="/">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/about">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/updates">Updates</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/studio">Studio</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/core">Core</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/games">Games</a>
 							</li>
 							<li class="nav-item">
+								<a class="nav-link" href="/sources">Sources</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/downloads">Downloads</a>
+							</li>
+							<li class="nav-item">
 								<a class="nav-link" href="/docs">Docs</a>
 							</li>
+							-->
 						</ul>
-						<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Download</button>
+						<a type="button" href="https://www.patreon.com/vuengine" class="btn btn-outline-warning ml-2" target="_blank">
+							Support us
+						</a>
+						<!--
+						<a type="button" href="/downloads" class="btn btn-outline-primary ml-2" type="submit">
+							Download
+						</a>
+						-->
 					</div>
 				</div>
 			</nav>
@@ -47,7 +75,21 @@
 		</main>
 		<footer class="footer mt-auto py-3 bg-light">
 			<div class="container">
-				Footer
+				© 2006, 2019 Team VUEngine
+				<div class="float-right">
+					<a type="button" href="https://www.patreon.com/vuengine" target="_blank" class="btn btn-sm btn-outline-secondary">
+						<i class="fab fa-patreon"></i>
+					</a>
+					<a type="button" href="https://bitbucket.org/vuengine" target="_blank" class="btn btn-sm btn-outline-secondary">
+						<i class="fab fa-bitbucket"></i>
+					</a>
+					<a type="button" href="https://twitter.com/VUEngine" target="_blank" class="btn btn-sm btn-outline-secondary">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a type="button" href="https://www.youtube.com/channel/UCne21uFij_Z4oPh4sDvVtmA" target="_blank" class="btn btn-sm btn-outline-secondary">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
 			</div>
 		</footer>
 
