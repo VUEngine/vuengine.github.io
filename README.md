@@ -26,6 +26,6 @@ To update the gem later, run:
 
 To construct and serve and test your site locally, run the following in the root folder of this repository:
 
-    bundle exec jekyll serve
+    jekyll serve
 
 You can now view the site in your browser at http://127.0.0.1:4000.
