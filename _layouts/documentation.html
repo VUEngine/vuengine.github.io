@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sticky-top mb-5" style="top:20px;">
+                    {% include search-lunr.html %}
+
+                    <div class="accordion accordion-flush" id="docsnav">
+                        {% for section in site.data.documentation %}
+
+                        {% assign collapsed = true %}
+                        {% assign currentDocUrl = '' %}
+
+                        {% for docPage in section[1] %}
+                        {% assign current = page.url | split: '/documentation/' %}
+                        {% assign docPageLink = docPage.file | append: '/' %}
+                        {% if current[1] == docPageLink %}
+                        {% assign currentDocUrl = docPage.file %}
+                        {% assign collapsed = false %}
+                        {% assign currentDocSection = section[0] %}
+                        {% break %}
+                        {% endif %}
+                        {% endfor %}
+
+                        <div class="accordion-item border-bottom-0">
+                            <h2 class="accordion-header" id="flush-heading{{ forloop.index }}">
+                                <button class="accordion-button py-2 shadow-none{% if collapsed %} collapsed{% endif %}"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse{{ forloop.index }}"
+                                    aria-expanded="{% if collapsed %}false{% else %}true{% endif %}"
+                                    aria-controls="flush-collapse{{ forloop.index }}">
+                                    {{ section[0] }}
+                                </button>
+                            </h2>
+                            <div id="flush-collapse{{ forloop.index }}"
+                                class="accordion-collapse collapse{% unless collapsed %} show{% endunless %}"
+                                aria-labelledby="flush-heading{{ forloop.index }}" data-bs-parent="#docsnav">
+                                <ul class="list-unstyled mx-3 my-2">
+                                    {% for docPage in section[1] %}
+                                    <li>
+                                        {% if docPage.file == currentDocUrl %}
+                                        <i class="fas fa-circle text-primary"></i>
+                                        {% else %}
+                                        <i class="far fa-circle text-primary"></i>
+                                        {% endif %}
+
+                                        <a href="/documentation/{{ docPage.file }}/" class="text-decoration-none">
+                                            {{ docPage.name }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <nav aria-label="breadcrumb" class="mt-1 mb-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item text-primary">
+                            <i class="fas fa-book"></i>
+                            <a href="/documentation/" class="text-decoration-none">Documentation</a>
+                        </li>
+                        {% unless page.url == '/documentation/' %}
+                        <li class="breadcrumb-item text-muted">{{ currentDocSection }}</li>
+                        {% endunless %}
+                        <li class="breadcrumb-item text-muted" aria-current="page">{{ page.title }}</li>
+                    </ol>
+                </nav>
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>

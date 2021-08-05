@@ -1,126 +1,141 @@
 ---
 layout: default
-title: VUEngine
 ---
 
-<section class="jumbotron text-center mb-0">
+<section class="p-4 mb-4 bg-light">
 	<div class="container">
-		<h2>
-			We're a two-man team of enthusiasts creating a versatile, open source 
-    			Nintendo Virtual Boy game engine, development tools as well as new games for the system.
-		</h2>
+		<div class="row">
+			<div class="col-md-4 my-auto">
+				<h1 class="display-5 fw-bold">VUEngine Studio</h1>
+				<p class="fs-4">
+					Full featured Nintendo Virtual Boy game development
+					application.
+				</p>
+				<p class="fs-6">
+					Available for Windows, OSX and Linux.
+				</p>
+				<div class="btn btn-secondary btn-lg">
+					<i class="fas fa-hourglass-half"></i>
+					Coming soon
+				</div>
+				<!--
+				<a href="#download" role="button" class="btn btn-primary btn-lg">
+					<i class="fa fa-download"></i>
+					Download
+				</a>
+				<a href="/documentation/" role="button" class="btn btn-secondary btn-lg">
+					<i class="fas fa-book"></i>
+					Get Started
+				</a>
+				-->
+			</div>
+			<div class="col-md-8 mt-4 mt-md-0">
+				<img src="/assets/images/vuengine-studio.png" class="img-fluid" />
+			</div>
+		</div>
 	</div>
 </section>
 
-<div class="py-5">
-	<div class="container">
-		<div class="row">
-    
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
-					<div class="card-body">
-						<h5 class="card-title">
-							Support us
-						</h5>
-						<p class="card-text">
-							Support us on Patreon to get access to exclusive demos and more.
-						</p>
-					</div>
-					<div class="card-footer d-flex justify-content-between align-items-center">
-						<div class="btn-group">
-							<a type="button" class="btn btn-sm btn-outline-secondary" href="https://www.patreon.com/vuengine" target="_blank">
-								<i class="fab fa-patreon"></i>
-								Patreon
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-    
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
-					<div class="card-body">
-						<h5 class="card-title">
-							Get Sources
-						</h5>
-						<p class="card-text">
-							Find sources to all of our MIT-licensed projects on Github. 
-						</p>
-					</div>
-					<div class="card-footer d-flex justify-content-between align-items-center">
-						<div class="btn-group">
-							<a type="button" class="btn btn-sm btn-outline-secondary" href="https://github.com/VUEngine/" target="_blank">
-								<i class="fab fa-github"></i>
-								Github
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-    
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
-					<div class="card-body">
-						<h5 class="card-title">
-							Follow us
-						</h5>
-						<p class="card-text">
-							Stay close and up to date by following us on Twitter.
-						</p>
-					</div>
-					<div class="card-footer d-flex justify-content-between align-items-center">
-						<div class="btn-group">
-							<a type="button" class="btn btn-sm btn-outline-secondary" href="https://twitter.com/VUEngine" target="_blank">
-								<i class="fab fa-twitter"></i>
-								Twitter
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-    
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
-					<div class="card-body">
-						<h5 class="card-title">
-							VUEngine in motion
-						</h5>
-						<p class="card-text">
-							Find videos of our projects in our Youtube channel.
-						</p>
-					</div>
-					<div class="card-footer d-flex justify-content-between align-items-center">
-						<div class="btn-group">
-							<a type="button" class="btn btn-sm btn-outline-secondary" href="https://www.youtube.com/channel/UCne21uFij_Z4oPh4sDvVtmA" target="_blank">
-								<i class="fab fa-youtube"></i>
-								Youtube
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-    
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
-					<div class="card-body">
-						<h5 class="card-title">
-							Everything Virtual Boy
-						</h5>
-						<p class="card-text">
-							Stay connected with a great community of Virtual Boy enthusiasts.
-						</p>
-					</div>
-					<div class="card-footer d-flex justify-content-between align-items-center">
-						<div class="btn-group">
-							<a type="button" class="btn btn-sm btn-outline-secondary" href="https://www.planetvb.com" target="_blank">
-								<i class="fas fa-link"></i>
-								Planet Virtual Boy
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-      
+<section>
+	<div class="container px-4 py-4">
+		<div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
+			{% for feature in site.data.features %}
+			{% include feature.html %}
+			{% endfor %}
 		</div>
 	</div>
-</div>
+</section>
+
+<section class="bg-light">
+	<div class="container px-4 py-5">
+		<h2 class="mb-4">Made with VUEngine Studio</h2>
+
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+			{% assign max = 3 %}
+			{% assign counter = 0 %}
+			{% for game in site.data.games %}
+			{% include game.html %}
+			{% assign counter = counter | plus: 1 %}
+			{% if counter == max %}{% break %}{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<!--
+<section>
+	<div class="container px-4 py-4">
+		<a class="twitter-timeline" href="https://twitter.com/VUEngine?ref_src=twsrc%5Etfw" data-tweet-limit="1"
+			data-width="650" data-theme="light"></a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</section>
+-->
+
+<!-- <section class="p-4 mb-4" id="download">
+	<div class="container">
+		<h2 class="mb-4">Download</h2>
+
+		{% for asset in site.github.latest_release.assets %}
+        <a type="button" class="btn btn-sm btn-outline-primary" href="{{ asset.browser_download_url }}">
+            <i class="fas fa-download"></i>
+            {{ asset.name }}
+        </a>
+        {% endfor %}
+
+		<div class="d-flex flex-column flex-md-row align-items-top justify-content-center">
+			<div class="col-md-4 px-md-3 py-2 py-md-4 text-center">
+				<h3><i class="fab fa-windows fa-3x"></i></h3>
+				<p>
+					<a type="button" class="btn btn-lg-lg btn-primary d-block" href="{{ asset.browser_download_url }}">
+						<i class="fas fa-download"></i> Windows
+					</a>
+				</p>
+				<p>
+					VUEngine-Studio-1-0-0-Windows.zip{{ asset.name }}<br />
+					512 MB{{ asset.size }}<br />
+				</p>
+			</div>
+			<div class="col-md-4 px-md-3 py-2 py-md-4 text-center">
+				<h3><i class="fab fa-apple fa-3x"></i></h3>
+				<p>
+					<a type="button" class="btn btn-lg-lg btn-primary d-block" href="{{ asset.browser_download_url }}">
+						<i class="fas fa-download"></i> Mac
+					</a>
+				</p>
+				<p>
+					VUEngine-Studio-1-0-0-OSX.zip{{ asset.name }}<br />
+					512 MB{{ asset.size }}<br />
+				</p>
+			</div>
+			<div class="col-md-4 px-md-3 py-2 py-md-4 text-center">
+				<h3><i class="fab fa-linux fa-3x"></i></h3>
+				<p>
+					<a type="button" class="btn btn-lg-lg btn-primary d-block" href="{{ asset.browser_download_url }}">
+						<i class="fas fa-download"></i> Linux
+					</a>
+				</p>
+				<p>
+					VUEngine-Studio-1-0-0-Linux.zip{{ asset.name }}<br />
+					512 MB{{ asset.size }}<br />
+				</p>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<section>
+	<div class="container px-4 py-5">
+		<h2 class="mb-4">About Us</h2>
+
+		<p class="fs-5 mb-5">
+			Hello! We're a two-man team of enthusiasts creating a versatile, open source
+			Nintendo Virtual Boy game engine, development tools as well as new games for the system.
+		</p>
+		<div class="row">
+			{% for item in site.data.about %}
+			{% include about-box.html %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,100 +1,86 @@
 <!doctype html>
-<html lang="en" class="h-100">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
-		<title>{{ page.title }}</title>
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-	</head>
-	<body class="d-flex flex-column h-100">
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<div class="container">
-					<a href="/">
-						<img src="/assets/images/logo.png" width="44" height="44" class="mr-2"/>
-					</a>
-					<a class="navbar-brand" href="/">
-						VUEngine
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mr-auto">
-							<!--
-							<li class="nav-item">
-								<a class="nav-link" href="/">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/about">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/updates">Updates</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/studio">Studio</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/core">Core</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/games">Games</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/sources">Sources</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/downloads">Downloads</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/docs">Docs</a>
-							</li>
-							-->
-						</ul>
-						<a type="button" href="https://www.patreon.com/vuengine" class="btn btn-outline-warning ml-2" target="_blank">
-							<i class="fab fa-patreon"></i> Support us
-						</a>
-						<!--
-						<a type="button" href="/downloads" class="btn btn-outline-primary ml-2" type="submit">
-							Download
-						</a>
-						-->
-					</div>
-				</div>
-			</nav>
-		</header>
-		<main role="main" class="flex-shrink-0">
-    			{{ content }}
-		</main>
-		<footer class="footer mt-auto py-3 bg-light">
-			<div class="container">
-				© 2006, 2021 Team VUEngine
-				<div class="float-right">
-					<a type="button" href="https://www.patreon.com/vuengine" target="_blank" class="btn btn-sm btn-outline-secondary">
+<html class="h-100" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>{% if page.url != "/" %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+	<link rel="stylesheet" href="/assets/style.css">
+	<link rel="stylesheet" href="/assets/rogue/syntax-base16.monokai.dark.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+</head>
+
+<body class="d-flex flex-column h-100">
+	<header
+		class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-dark text-white">
+		<div class="container">
+			<div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+				<a href="/" class="d-flex align-items-center col-lg-3 mb-2 mb-lg-0 text-white text-decoration-none">
+					<img src="/assets/images/logo.png" width="44" height="44" class="bi me-2" />
+					<span class="fs-4 text-nowrap">
+						<strong>{{ site.title }}</strong>
+					</span>
+				</a>
+
+				<ul class="nav col-lg-6 justify-content-center">
+					<!-- {% for node in site.nav.pages %}
+					{%- assign check = page.url | split:'/' -%}
+					{%- assign topPage = check[1] | append: '/' | prepend: '/' -%}
+					<li><a class="nav-link px-2  {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
+							href="{{ node[1] }}">
+							{{ node[0] }}
+						</a></li>
+					{% endfor %} -->
+				</ul>
+
+				<div class="col-lg-3 text-end text-nowrap text-white">
+					<!-- <a href="/#download" role="button" class="btn btn-primary d-none d-lg-inline-block">
+						<i class="fa fa-download"></i> Download
+					</a> -->
+					<a href="https://www.patreon.com/VUEngine" role="button"
+						class="btn btn-warning d-none d-lg-inline-block">
 						<i class="fab fa-patreon"></i>
-					</a>
-					<a type="button" href="https://github.com/VUEngine" target="_blank" class="btn btn-sm btn-outline-secondary">
-						<i class="fab fa-github"></i>
-					</a>
-					<a type="button" href="https://twitter.com/VUEngine" target="_blank" class="btn btn-sm btn-outline-secondary">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a type="button" href="https://www.youtube.com/channel/UCne21uFij_Z4oPh4sDvVtmA" target="_blank" class="btn btn-sm btn-outline-secondary">
-						<i class="fab fa-youtube"></i>
+						Support Us
 					</a>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</header>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	</body>
+	<main role="main" class="flex-shrink-0">
+		{{ content }}
+	</main>
+
+	<footer class="footer mt-auto py-3 bg-secondary text-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					{{ site.data.footer.copyright }}
+				</div>
+				<div class="col-md-8 text-end">
+
+					{% for link in site.data.footer.links %}
+					<a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
+						<i class="{{ link.icon }}"></i>
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>
