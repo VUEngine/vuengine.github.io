@@ -45,10 +45,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-.carousel-indicators [data-bs-target] {
-  width: 64px;
-}
-
 .carousel-caption {
   bottom: 0;
   font-size: 0.8rem;
@@ -69,6 +65,15 @@ a:hover {
   transition-delay: 0s;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: unset;
+  color: unset;
+}
+
+.accordion-button::after {
+  background-image: none !important;
+}
+
 /* Custom */
 
 .highlighter-rouge > .highlight {
@@ -79,6 +84,10 @@ a:hover {
 
 .highlighter-rouge pre {
   margin-bottom: 0;
+}
+
+.fs-90p {
+  font-size: 90%;
 }
 
 .footer .btn:hover .fa-discord {

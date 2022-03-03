@@ -1,66 +1,97 @@
 <script src="/assets/js/lunr.js"></script>
 
 <script>
-{% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
-    "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
-    }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
-    "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
-    }, {% endfor %}{% for page in site.posts %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{ page.url }}",
-    "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
-    }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+  {% assign counter = 0 %}
+  var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{ page.url }}",
+      "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
+      }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{ page.url }}",
+      "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
+      }, {% endfor %}{% for page in site.posts %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{ page.url }}",
+      "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
+      }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
 
-var idx = lunr(function () {
-    this.ref('id')
-    this.field('title')
+  var idx = lunr(function () {
+      this.ref('id')
+      this.field('title')
 
-    documents.forEach(function (doc) {
-        this.add(doc)
-    }, this)
-});
-function lunr_search(term) {
-    document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
-    if(term) {
-        document.getElementById('lunrsearchresults').innerHTML = document.getElementById('lunrsearchresults').innerHTML;
-        //put results on the screen.
-        var results = idx.search(term);
-        if(results.length>0){
-            //console.log(idx.search(term));
-            //if results
-            for (var i = 0; i < results.length; i++) {
-                // more statements
-                var ref = results[i]['ref'];
-                var url = documents[ref]['url'];
-                var title = documents[ref]['title'];
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "' class='text-decoration-none'><span class='title'>" + title + "</span></a></li>";
-            }
-        } else {
-            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
-        }
-    }
-    return false;
-}
+      documents.forEach(function (doc) {
+          this.add(doc)
+      }, this)
+  });
+  function lunr_search(term) {
+      document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
+      if(term) {
+          document.getElementById('lunrsearchresults').innerHTML = document.getElementById('lunrsearchresults').innerHTML;
+          //put results on the screen.
+          var results = idx.search(term);
+          if(results.length>0){
+              //console.log(idx.search(term));
+              //if results
+              for (var i = 0; i < results.length; i++) {
+                  // more statements
+                  var ref = results[i]['ref'];
+                  var url = documents[ref]['url'];
+                  var title = documents[ref]['title'];
+                  document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "' class='text-decoration-none'><span class='title'>" + title + "</span></a></li>";
+              }
+          } else {
+              document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
+          }
+      } else {
+        document.getElementById('lunrsearchresults').innerHTML = '';
+      }
+      return false;
+  }
 </script>
+
 <style>
-    #lunrsearchresults {padding-top: 0.2rem;}
-    .lunrsearchresult {padding-bottom: 1rem;}
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
+  #lunrsearchresults ul {
+    border: 1px solid #ccc;
+    border-radius: 0 0 0.25rem 0.25rem;
+    list-style: none;
+    margin: -4px 0 0;
+    padding: 1rem;
+  }
+  .lunrsearchresult .title {
+    color: #d9230f;
+  }
+  .lunrsearchresult .url {
+    color: silver;
+  }
+  .lunrsearchresult a {
+    display: block;
+    color: #777;
+  }
+  .lunrsearchresult a:hover,
+  .lunrsearchresult a:focus {
+    text-decoration: none;
+  }
+  .lunrsearchresult a:hover .title {
+    text-decoration: underline;
+  }
 </style>
 
-
-<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search" /></p>
+<form
+  onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
+  class="input-group"
+>
+  <span class="input-group-text">
+    <i class="fas fa-search"></i>
+  </span>
+  <input
+    type="text"
+    class="form-control"
+    id="lunrsearch"
+    name="q"
+    maxlength="255"
+    value=""
+    placeholder="Search"
+  />
 </form>
-<div id="lunrsearchresults">
-    <ul></ul>
-</div>
+<div id="lunrsearchresults" class="fs-90p"></div>
