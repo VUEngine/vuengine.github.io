@@ -2,140 +2,267 @@
 layout: default
 ---
 
-<section class="p-4 mb-4 bg-light">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 my-auto">
-				<h1 class="display-5 fw-bold">VUEngine Studio</h1>
-				<p class="fs-4">
-					Full featured Nintendo Virtual Boy game development
-					application.
-				</p>
-				<p class="fs-6">
-					Available for Windows, OSX and Linux.
-				</p>
-				<div class="btn btn-secondary btn-lg">
-					<i class="fas fa-hourglass-half"></i>
-					Coming soon
-				</div>
-				<!--
-				<a href="#download" role="button" class="btn btn-primary btn-lg">
-					<i class="fa fa-download"></i>
-					Download
-				</a>
-				<a href="/documentation/" role="button" class="btn btn-secondary btn-lg">
-					<i class="fas fa-book"></i>
-					Get Started
-				</a>
-				-->
-			</div>
-			<div class="col-md-8 mt-4 mt-md-0">
-				<img src="/assets/images/vuengine-studio.png" class="img-fluid" />
-			</div>
-		</div>
-	</div>
+<section class="pt-md-0 p-4 mb-4 bg-dark text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 my-auto pb-md-5">
+        <p class="fs-3">
+          Full featured Nintendo Virtual Boy game development application.
+        </p>
+        <p class="fs-6 text-secondary">
+          Available soon for Windows, OSX and Linux. {% comment %} Preview
+          Release available now for Windows and Mac. {% endcomment %}
+        </p>
+
+        <div class="pb-md-5">
+          {% comment %} {% for asset in site.github.latest_release.assets %}
+          <a
+            href="{{ asset.browser_download_url }}"
+            role="button"
+            class="btn btn-primary btn-lg"
+            title="{{ asset.name }} ({{ asset.size }})"
+          >
+            <i class="fab fa-windows"></i>
+          </a>
+          {% endfor %} {% endcomment %} {% comment %}
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            role="button"
+            class="btn btn-primary btn-lg"
+            title="VUEngine-Studio-Preview-Windows.zip (512 MB)"
+            id="downloadWin"
+            style="display: none"
+          >
+            <i class="fab fa-windows"></i>
+            Download for Windows
+          </a>
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            role="button"
+            class="btn btn-primary btn-lg"
+            title="VUEngine-Studio-Preview-OSX.zip (512 MB)"
+            id="downloadOSX"
+            style="display: none"
+          >
+            <i class="fab fa-apple"></i>
+            Download for MacOS
+          </a>
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            role="button"
+            class="btn btn-primary btn-lg disabled"
+            title="VUEngine-Studio-Preview-Linux.zip (512 MB)"
+            id="downloadLinux"
+            style="display: none"
+          >
+            <i class="fab fa-linux"></i>
+            Download for Linux
+          </a>
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            role="button"
+            class="btn btn-primary btn-lg"
+            id="downloadGeneric"
+          >
+            <i class="fa fa-download"></i>
+            Download
+          </a>
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            role="button"
+            class="btn btn-outline-secondary btn-lg"
+            title="All releases"
+            id="downloadAll"
+            style="display: none"
+          >
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+          {% endcomment %}
+
+          <div class="btn btn-secondary btn-lg">
+            <i class="fas fa-hourglass-half"></i>
+            Coming soon
+          </div>
+
+          <script>
+            if (navigator.appVersion.indexOf("Win") != -1) {
+              document.getElementById("downloadGeneric").style.display = "none";
+              document.getElementById("downloadAll").style.display = null;
+              document.getElementById("downloadWin").style.display = null;
+            } else if (navigator.appVersion.indexOf("Mac") != -1) {
+              document.getElementById("downloadGeneric").style.display = "none";
+              document.getElementById("downloadAll").style.display = null;
+              document.getElementById("downloadOSX").style.display = null;
+            } else if (navigator.appVersion.indexOf("Linux") != -1) {
+              document.getElementById("downloadGeneric").style.display = "none";
+              document.getElementById("downloadAll").style.display = null;
+              document.getElementById("downloadLinux").style.display = null;
+            }
+          </script>
+        </div>
+      </div>
+      <div class="col-md-8 mt-4 mt-md-0">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/assets/images/VUEngine Studio Build.png"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption text-secondary d-none d-md-block">
+                Full featured Nintendo Virtual Boy IDE
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/assets/images/VUEngine Studio Plugins.png"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption text-secondary d-none d-md-block">
+                Wide range of included plugins to supercharge your project
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/assets/images/VUEngine Studio Templates.png"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption text-secondary d-none d-md-block">
+                Build upon various game templates
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/assets/images/VUEngine Studio Emulator.png"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption text-secondary d-none d-md-block">
+                Fully embedded emulator for testing
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/assets/images/VUEngine Studio Flash Carts.png"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption text-secondary d-none d-md-block">
+                Write to all your flash carts
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
-	<div class="container px-4 py-4">
-		<div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
-			{% for feature in site.data.features %}
-			{% include feature.html %}
-			{% endfor %}
-		</div>
-	</div>
+  <div class="container px-4 py-4">
+    <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
+      {% for feature in site.data.features %} {% include feature.html %} {%
+      endfor %}
+    </div>
+  </div>
 </section>
 
 <section class="bg-light">
-	<div class="container px-4 py-5">
-		<h2 class="mb-4">Made with VUEngine Studio</h2>
-
-		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-			{% assign max = 3 %}
-			{% assign counter = 0 %}
-			{% for game in site.data.games %}
-			{% include game.html %}
-			{% assign counter = counter | plus: 1 %}
-			{% if counter == max %}{% break %}{% endif %}
-			{% endfor %}
-		</div>
-	</div>
-</section>
-
-<!--
-<section>
-	<div class="container px-4 py-4">
-		<a class="twitter-timeline" href="https://twitter.com/VUEngine?ref_src=twsrc%5Etfw" data-tweet-limit="1"
-			data-width="650" data-theme="light"></a>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	</div>
-</section>
--->
-
-<!-- <section class="p-4 mb-4" id="download">
-	<div class="container">
-		<h2 class="mb-4">Download</h2>
-
-		{% for asset in site.github.latest_release.assets %}
-        <a type="button" class="btn btn-sm btn-outline-primary" href="{{ asset.browser_download_url }}">
-            <i class="fas fa-download"></i>
-            {{ asset.name }}
+  <div class="container px-4 py-5">
+    <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
+      <div class="col">
+        <h2>Made with VUEngine Studio</h2>
+      </div>
+      <div class="col text-end">
+        <a href="games" role="button" class="btn btn-secondary">
+          More games…
         </a>
-        {% endfor %}
+      </div>
+    </div>
 
-		<div class="d-flex flex-column flex-md-row align-items-top justify-content-center">
-			<div class="col-md-4 px-md-3 py-2 py-md-4 text-center">
-				<h3><i class="fab fa-windows fa-3x"></i></h3>
-				<p>
-					<a type="button" class="btn btn-lg-lg btn-primary d-block" href="{{ asset.browser_download_url }}">
-						<i class="fas fa-download"></i> Windows
-					</a>
-				</p>
-				<p>
-					VUEngine-Studio-1-0-0-Windows.zip{{ asset.name }}<br />
-					512 MB{{ asset.size }}<br />
-				</p>
-			</div>
-			<div class="col-md-4 px-md-3 py-2 py-md-4 text-center">
-				<h3><i class="fab fa-apple fa-3x"></i></h3>
-				<p>
-					<a type="button" class="btn btn-lg-lg btn-primary d-block" href="{{ asset.browser_download_url }}">
-						<i class="fas fa-download"></i> Mac
-					</a>
-				</p>
-				<p>
-					VUEngine-Studio-1-0-0-OSX.zip{{ asset.name }}<br />
-					512 MB{{ asset.size }}<br />
-				</p>
-			</div>
-			<div class="col-md-4 px-md-3 py-2 py-md-4 text-center">
-				<h3><i class="fab fa-linux fa-3x"></i></h3>
-				<p>
-					<a type="button" class="btn btn-lg-lg btn-primary d-block" href="{{ asset.browser_download_url }}">
-						<i class="fas fa-download"></i> Linux
-					</a>
-				</p>
-				<p>
-					VUEngine-Studio-1-0-0-Linux.zip{{ asset.name }}<br />
-					512 MB{{ asset.size }}<br />
-				</p>
-			</div>
-		</div>
-	</div>
-</section> -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% assign max = 3 %} {% assign counter = 0 %} {% for game in
+      site.data.games %} {% include game.html %} {% assign counter = counter |
+      plus: 1 %} {% if counter == max %}{% break %}{% endif %} {% endfor %}
+    </div>
+  </div>
+</section>
 
 <section>
-	<div class="container px-4 py-5">
-		<h2 class="mb-4">About Us</h2>
-
-		<p class="fs-5 mb-5">
-			Hello! We're a two-man team of enthusiasts creating a versatile, open source
-			Nintendo Virtual Boy game engine, development tools as well as new games for the system.
-		</p>
-		<div class="row">
-			{% for item in site.data.about %}
-			{% include about-box.html %}
-			{% endfor %}
-		</div>
-	</div>
+  <div class="container px-4 py-5">
+    <h2 class="mb-4">About Us</h2>
+    <p class="fs-5 mb-5">
+      Hello! We're a two-man team of enthusiasts creating a versatile, open
+      source Nintendo Virtual Boy game engine, development tools as well as new
+      games for the system.
+    </p>
+    <div class="row">
+      {% for item in site.data.about %} {% include about-box.html %} {% endfor
+      %}
+    </div>
+  </div>
 </section>
+
+{% comment %}
+<section>
+  <div class="container px-4 py-4">
+    <a
+      class="twitter-timeline"
+      href="https://twitter.com/VUEngine?ref_src=twsrc%5Etfw"
+      data-tweet-limit="1"
+      data-width="650"
+      data-theme="light"
+    ></a>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </div>
+</section>
+{% endcomment %}

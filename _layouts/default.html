@@ -1,86 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="h-100" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>
+      {% if page.url != "/" %}{{ page.title }} - {% endif %}{{ site.title }}
+    </title>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>{% if page.url != "/" %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/rogue/syntax-base16.monokai.dark.css"
+    />
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/fontawesome/css/all.css">
-	<link rel="stylesheet" href="/assets/style.css">
-	<link rel="stylesheet" href="/assets/rogue/syntax-base16.monokai.dark.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  </head>
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-</head>
+  <body class="d-flex flex-column h-100">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-dark text-white"
+    >
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-lg-row align-items-center justify-content-center"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center col-lg-3 mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <img
+              src="/assets/images/logo-full-color.png"
+              width="44"
+              height="44"
+              class="bi me-2"
+            />
+            <span class="fs-3 text-nowrap">
+              <strong>{{ site.title }}</strong>
+            </span>
+          </a>
 
-<body class="d-flex flex-column h-100">
-	<header
-		class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-dark text-white">
-		<div class="container">
-			<div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-				<a href="/" class="d-flex align-items-center col-lg-3 mb-2 mb-lg-0 text-white text-decoration-none">
-					<img src="/assets/images/logo.png" width="44" height="44" class="bi me-2" />
-					<span class="fs-4 text-nowrap">
-						<strong>{{ site.title }}</strong>
-					</span>
-				</a>
+          <ul class="nav col-lg-7 fs-5 justify-content-center">
+            {% for node in site.nav.pages %} {%- assign check = page.url |
+            split:'/' -%} {%- assign topPage = check[1] | append: '/' | prepend:
+            '/' -%}
+            <li>
+              <a
+                class="nav-link px-2 {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
+                href="{{ node[1] }}"
+              >
+                {{ node[0] }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
 
-				<ul class="nav col-lg-6 justify-content-center">
-					<!-- {% for node in site.nav.pages %}
-					{%- assign check = page.url | split:'/' -%}
-					{%- assign topPage = check[1] | append: '/' | prepend: '/' -%}
-					<li><a class="nav-link px-2  {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
-							href="{{ node[1] }}">
-							{{ node[0] }}
-						</a></li>
-					{% endfor %} -->
-				</ul>
+          <div class="col-lg-2 text-end text-nowrap text-white">
+            <a
+              href="https://www.patreon.com/VUEngine"
+              role="button"
+              class="btn btn-patreon d-none d-lg-inline-block"
+            >
+              <i class="fab fa-patreon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-				<div class="col-lg-3 text-end text-nowrap text-white">
-					<!-- <a href="/#download" role="button" class="btn btn-primary d-none d-lg-inline-block">
-						<i class="fa fa-download"></i> Download
-					</a> -->
-					<a href="https://www.patreon.com/VUEngine" role="button"
-						class="btn btn-warning d-none d-lg-inline-block">
-						<i class="fab fa-patreon"></i>
-						Support Us
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
+    <main role="main" class="flex-shrink-0">{{ content }}</main>
 
-	<main role="main" class="flex-shrink-0">
-		{{ content }}
-	</main>
+    <footer class="footer mt-auto py-3 bg-secondary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 py-2">{{ site.data.footer.copyright }}</div>
+          <div class="col-md-8 text-end">
+            {% for link in site.data.footer.links %}
+            <a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
+              <i class="{{ link.icon }}"></i>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </footer>
 
-	<footer class="footer mt-auto py-3 bg-secondary text-white">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					{{ site.data.footer.copyright }}
-				</div>
-				<div class="col-md-8 text-end">
-
-					{% for link in site.data.footer.links %}
-					<a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
-						<i class="{{ link.icon }}"></i>
-					</a>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>
