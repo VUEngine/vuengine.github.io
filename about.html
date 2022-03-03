@@ -1,0 +1,98 @@
+---
+layout: default
+title: About
+---
+
+<section class="bg-light">
+  <div class="container px-4 py-5">
+    <h2 class="mb-4">About Us</h2>
+    <p class="fs-5 mb-5">
+      Hello! We're Chris and Jorge, a two-man team of enthusiasts with a more
+      than 20 year long history of developing Nintendo Virtual Boy software. We
+      are creating a versatile, open source Nintendo Virtual Boy game engine,
+      development tools as well as new games for the system.
+    </p>
+    <div class="row">
+      {% for item in site.data.about %} {% include about-box.html %} {% endfor
+      %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container px-4 py-5">
+    <h2 class="mb-4">About VUEngine Studio</h2>
+    <p class="fs-5 mb-4">
+      VUEngine Studio is a custom integrated development environment (IDE),
+      tailor-made for
+      <a href="https://www.virtual-boy.com">Nintendo Virtual Boy</a> game
+      development with
+      <a href="https://github.com/VUEngine/VUEngine-Core">VUEngine</a>, our
+      versatile, object oriented Virtual Boy game engine. It is built with
+      <a href="https://theia-ide.org/">Eclipse Theia</a>, a framework for
+      building cloud and desktop IDEs using modern, state-of-the-art web
+      technologies. At its core, Theia reuses central building blocks of
+      <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+      and as such, VUEngine Studio looks and feels very much like VSCode and is
+      able to consume VSCode extensions.
+    </p>
+    <p class="fs-5">A quick history</p>
+    <p>
+      In the early days of the VB homebrew scene, setting up a development
+      environment was a challenge in itself, holding back many from even
+      attempting to write any code for the Virtual Boy. People would have to
+      patch and build the compiler themselves, then use some text editor to
+      write C code against rudimentary, non-standardized libraries, invoke the
+      compiler through the command line, throw the ROM at an inaccurate
+      emulator... rinse and repeat for every testworthy code change. In the best
+      case, tasks like compiling and running in an emulator were wired up to
+      some custom buttons in the text editor. But still, all that was custom
+      setup work.
+    </p>
+    <p>
+      Around 2011/2012 we managed to simplify the setup process tremendously by
+      packaging all the necessary tools and some sample code in a preconfigured
+      bundle called
+      <a href="https://www.virtual-boy.com/tools/vbde/"
+        >"VBDE" (Virtual Boy Development Environment)</a
+      >. Finally, setting up a development environment was as easy as
+      downloading and unzipping VBDE. Eventually, we also included VUEngine in
+      the VBDE package and started shipping both together.
+    </p>
+    <p>
+      VBDE has been a convenient tool for many years and made our lifes and
+      those of many other Virtual Boy developers much easier. However, at the
+      end of the day, VBDE was just a collection of mostly general purpose tools
+      with some minor customizations for our cause. As such, it left a lot to be
+      desired and we had long been striving for some better tools to replace
+      VBDE. When Visual Studio Code emerged, it looked like we had finally found
+      the right route to go down. We started implementing a custom extension
+      called "VUEngine IDE" in December 2018, and shortly after, we had
+      implemented all the needed tools and complete switched over from VBDE
+      internally.
+    </p>
+    <p>
+      Around the same time, we did a survey on our
+      <a href="https://www.patreon.com/VUEngine">Patreon</a>, asking our backers
+      what we should focus on in the following months. We were pleased to learn
+      that many people were interested in learning how to create their own games
+      with VUEngine, and we were eager to create a series of tutorials to
+      empower them to do so! However, in order to be able to demonstrate things
+      with the same tools people would eventually be using, we first needed to
+      finish our work on the new IDE. But months, even years went by and we
+      obviously had a bit too much work on our plates to bring our VSCode
+      extension, which we renamed to "VUEngine Studio" in the meantime, to a
+      releasable state.
+    </p>
+    <p>
+      Fast forward to November 2020. VUEngine Studio (the VSCode extension
+      version) was still an internal tool, shared with only a few other
+      developers. And we still weren't able to deliver those tutorials we
+      promised (sorry again for that!). We had poured a lot of energy into
+      <a href="https://www.virtual-boy.com/homebrew/formula-v/">Formula V</a>
+      that year and were taking a two months break from Virtual Boy development
+      to refill the batteries... or at least that was the plan, but things took
+      a U-turn after we learned about the Eclipse Theia project...
+    </p>
+  </div>
+</section>
