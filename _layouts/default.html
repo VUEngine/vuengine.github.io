@@ -28,7 +28,7 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
   </head>
 
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100 os-other">
     <header
       class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-dark text-white"
     >
@@ -96,6 +96,18 @@
       </div>
     </footer>
 
+    <script>
+      if (navigator.appVersion.indexOf("Win") != -1) {
+        document.body.classList.remove("os-other");
+        document.body.classList.add("os-win");
+      } else if (navigator.appVersion.indexOf("Mac") != -1) {
+        document.body.classList.remove("os-other");
+        document.body.classList.add("os-osx");
+      } else if (navigator.appVersion.indexOf("Linux") != -1) {
+        document.body.classList.remove("os-other");
+        document.body.classList.add("os-linux");
+      }
+    </script>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

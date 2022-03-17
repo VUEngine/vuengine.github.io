@@ -1,9 +1,28 @@
 /* Bootstrap overrides */
+body {
+  overflow-y: scroll;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+h2 {
+  margin: 2rem 0 1rem;
+}
+.accordion h2 {
+  margin-top: 0;
+}
+
 a {
   color: #d31422;
 }
 a:hover {
   color: #930c16;
+}
+
+blockquote {
+  border-left: 5px solid #ddd;
+  padding-left: 8px;
 }
 
 .btn-primary {
@@ -76,6 +95,69 @@ a:hover {
 
 /* Custom */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  display: none;
+  left: -25px;
+  padding-right: 100%;
+  position: absolute;
+}
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
+h6:hover a {
+  display: block;
+}
+
+body.os-osx .target-os-win,
+body.os-linux .target-os-win,
+body.os-other .target-os-win,
+body.os-win .target-os-osx,
+body.os-linux .target-os-osx,
+body.os-other .target-os-osx,
+body.os-win .target-os-linux,
+body.os-osx .target-os-linux,
+body.os-other .target-os-linux,
+body.os-win .target-os-other,
+body.os-osx .target-os-other,
+body.os-linux .target-os-other,
+body.os-win .target-os-not-win,
+body.os-osx .target-os-not-osx,
+body.os-linux .target-os-not-linux,
+body.os-other .target-os-not-other {
+  display: none;
+}
+
+.keys {
+  background-color: #6c757d;
+  border-radius: 0.25rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.3em 0.5em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
 .highlighter-rouge > .highlight {
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -84,6 +166,10 @@ a:hover {
 
 .highlighter-rouge pre {
   margin-bottom: 0;
+}
+
+.fs-80p {
+  font-size: 80%;
 }
 
 .fs-90p {

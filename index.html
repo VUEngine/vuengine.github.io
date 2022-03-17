@@ -11,7 +11,7 @@ layout: default
         </p>
         <p class="fs-6 text-secondary">
           Available soon for Windows, OSX and Linux. {% comment %} Preview
-          Release available now for Windows and Mac. {% endcomment %}
+          Release available now. {% endcomment %}
         </p>
 
         <div class="pb-md-5">
@@ -19,41 +19,38 @@ layout: default
           <a
             href="{{ asset.browser_download_url }}"
             role="button"
-            class="btn btn-primary btn-lg"
+            class="btn btn-primary btn-lg target-os-win"
             title="{{ asset.name }} ({{ asset.size }})"
           >
             <i class="fab fa-windows"></i>
           </a>
           {% endfor %} {% endcomment %} {% comment %}
           <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            href="https://github.com/VUEngine/VUEngine-Studio/releases/preview/VUEngine-Studio-Preview-Setup-Windows.zip"
             role="button"
-            class="btn btn-primary btn-lg"
-            title="VUEngine-Studio-Preview-Windows.zip (512 MB)"
+            class="btn btn-primary btn-lg target-os-win"
+            title="VUEngine-Studio-Preview-Setup-Windows.zip"
             id="downloadWin"
-            style="display: none"
           >
             <i class="fab fa-windows"></i>
             Download for Windows
           </a>
           <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            href="https://github.com/VUEngine/VUEngine-Studio/releases/preview/VUEngine-Studio-Preview-Mac.zip"
             role="button"
-            class="btn btn-primary btn-lg"
-            title="VUEngine-Studio-Preview-OSX.zip (512 MB)"
+            class="btn btn-primary btn-lg target-os-osx"
+            title="VUEngine-Studio-Preview-Mac.zip"
             id="downloadOSX"
-            style="display: none"
           >
             <i class="fab fa-apple"></i>
             Download for MacOS
           </a>
           <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            href="https://github.com/VUEngine/VUEngine-Studio/releases/preview/VUEngine-Studio-Preview-Linux.zip"
             role="button"
-            class="btn btn-primary btn-lg disabled"
-            title="VUEngine-Studio-Preview-Linux.zip (512 MB)"
+            class="btn btn-primary btn-lg disabled target-os-linux"
+            title="VUEngine-Studio-Preview-Linux.zip"
             id="downloadLinux"
-            style="display: none"
           >
             <i class="fab fa-linux"></i>
             Download for Linux
@@ -61,7 +58,7 @@ layout: default
           <a
             href="https://github.com/VUEngine/VUEngine-Studio/releases"
             role="button"
-            class="btn btn-primary btn-lg"
+            class="btn btn-primary btn-lg target-os-other"
             id="downloadGeneric"
           >
             <i class="fa fa-download"></i>
@@ -73,32 +70,15 @@ layout: default
             class="btn btn-outline-secondary btn-lg"
             title="All releases"
             id="downloadAll"
-            style="display: none"
           >
             <i class="fas fa-ellipsis-h"></i>
+            {% endcomment %}
+
+            <div class="btn btn-secondary btn-lg">
+              <i class="fas fa-hourglass-half"></i>
+              Coming soon
+            </div>
           </a>
-          {% endcomment %}
-
-          <div class="btn btn-secondary btn-lg">
-            <i class="fas fa-hourglass-half"></i>
-            Coming soon
-          </div>
-
-          <script>
-            if (navigator.appVersion.indexOf("Win") != -1) {
-              document.getElementById("downloadGeneric").style.display = "none";
-              document.getElementById("downloadAll").style.display = null;
-              document.getElementById("downloadWin").style.display = null;
-            } else if (navigator.appVersion.indexOf("Mac") != -1) {
-              document.getElementById("downloadGeneric").style.display = "none";
-              document.getElementById("downloadAll").style.display = null;
-              document.getElementById("downloadOSX").style.display = null;
-            } else if (navigator.appVersion.indexOf("Linux") != -1) {
-              document.getElementById("downloadGeneric").style.display = "none";
-              document.getElementById("downloadAll").style.display = null;
-              document.getElementById("downloadLinux").style.display = null;
-            }
-          </script>
         </div>
       </div>
       <div class="col-md-8 mt-4 mt-md-0">
