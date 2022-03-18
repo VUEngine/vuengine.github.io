@@ -29,7 +29,7 @@ layout: default
                 id="flush-heading{{ forloop.index }}"
               >
                 <button
-                  class="accordion-button px-1 py-2 shadow-none{% if collapsed %} collapsed{% endif %}"
+                  class="accordion-button px-1 py-1 shadow-none{% if collapsed %} collapsed{% endif %}"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapse{{ forloop.index }}"
@@ -45,7 +45,7 @@ layout: default
                 aria-labelledby="flush-heading{{ forloop.index }}"
                 data-bs-parent="#docsnav"
               >
-                <ul class="list-unstyled mx-3 mb-3 fs-90p">
+                <ul class="list-unstyled mx-3 mb-2 fs-90p">
                   {% for docPage in section[1] %}
                   <li>
                     {% if docPage.url == currentDocUrl %}
