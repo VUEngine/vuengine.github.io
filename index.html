@@ -11,66 +11,67 @@ layout: default
         </p>
         <p class="fs-6 text-secondary">Preview Release available now.</p>
 
-        <div class="pb-md-5">
-          {% comment %} {% for asset in site.github.latest_release.assets %}
+        <div class="pb-md-2">
+          {% for asset in site.github.latest_release.assets %} 
+          {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %} 
+          {% assign target = 'linux' %} 
+          {% assign logo = 'linux' %}
+          {% if platform == 'mac' %} 
+            {% assign target = 'osx' %} 
+            {% assign logo = 'apple' %} 
+          {% endif %} 
+          {% if platform == 'windows' %} 
+            {% assign target = 'win' %} 
+            {% assign logo = 'windows' %} 
+          {% endif %}
+
           <a
             href="{{ asset.browser_download_url }}"
             role="button"
-            class="btn btn-primary btn-lg target-os-win"
-            title="{{ asset.name }} ({{ asset.size }})"
+            class="btn btn-primary btn-lg target-os-{{ target }}"
+            title="{{ asset.name }} ({{ asset.size | divided_by: 1048576 }} MB)"
           >
-            <i class="fab fa-windows"></i>
+            <i class="fab fa-{{ logo }}"></i>
+            Download
           </a>
-          {% endfor %} {% endcomment %}
+          {% endfor %}
+
           <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Setup-Windows.exe"
-            role="button"
-            class="btn btn-primary btn-lg target-os-win"
-            title="VUEngine-Studio-Preview-Setup-Windows.exe"
-            id="downloadWin"
-          >
-            <i class="fab fa-windows"></i>
-            Download for Windows
-          </a>
-          <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Mac.zip"
-            role="button"
-            class="btn btn-primary btn-lg target-os-osx"
-            title="VUEngine-Studio-Preview-Mac.zip"
-            id="downloadOSX"
-          >
-            <i class="fab fa-apple"></i>
-            Download for MacOS
-          </a>
-          <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Linux.zip"
+            href="#"
             role="button"
             class="btn btn-primary btn-lg disabled target-os-linux"
-            title="VUEngine-Studio-Preview-Linux.zip"
-            id="downloadLinux"
+            title="Linux version not yet available"
           >
             <i class="fab fa-linux"></i>
-            Download for Linux
+            Download
           </a>
+
           <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            href="/downloads"
             role="button"
             class="btn btn-primary btn-lg target-os-other"
-            id="downloadGeneric"
           >
             <i class="fa fa-download"></i>
             Download
           </a>
           <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases"
+            href="/documentation/"
             role="button"
             class="btn btn-outline-secondary btn-lg"
-            title="All releases"
-            id="downloadAll"
+            title="Documentation"
           >
-            <i class="fas fa-ellipsis-h"></i>
+            <i class="fas fa-book"></i>
           </a>
         </div>
+
+        <p>
+          <a
+            href="/downloads"
+            class="fs-80p text-secondary target-os-not-other"
+          >
+            All downloads...
+          </a>
+        </p>
       </div>
       <div class="col-md-8 mt-4 mt-md-0">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">

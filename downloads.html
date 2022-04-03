@@ -1,0 +1,42 @@
+---
+layout: default
+title: Downloads
+---
+
+<section class="bg-light">
+	<div class="container px-4 py-2">
+		<h1 class="mt-4 fs-2">Releases</h1>
+	</div>
+</section>
+
+<section>
+  <div class="container px-4 py-4">
+      {% for release in site.github.releases %} 
+        <div class="fs-3">
+          <!--<a href="{{ release.html_url }}">-->{{ release.name }}<!--</a>-->
+        </div>
+        <p class="text-secondary fs-80p">
+          {% if release.prerelease %}
+            <span class="badge bg-secondary">Pre-release</span>
+          {% endif %}
+          <!--<i class="fa fa-tag"></i> {{ release.tag_name}} -->
+          <!--<i class="far fa-calendar"></i> -->{{ release.published_at | split: ' ' | first }} 
+          <!--<i class="far fa-user"></i> {{ release.author.login }} -->
+        </p>
+        {% if release.body %}
+          <p>{{ release.body }}</p>
+        {% endif %}
+        Assets:
+        <ul>
+          {% for asset in release.assets %} 
+            <li>
+              <a href="{{ asset.url }}">{{ asset.name }}</a> ({{ asset.size | divided_by: 1048576 }} MB)
+              <!--<div class="text-secondary fs-80p">
+                Downloads: {{ asset.download_count }}
+              </div>-->
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+  </div>
+</section>

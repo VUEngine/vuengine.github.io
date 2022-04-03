@@ -4,19 +4,20 @@ title: About
 ---
 
 <section class="bg-light">
-  <div class="container px-4 py-5">
-    <h2 class="mb-4">About Us</h2>
-    <p class="fs-5 mb-5">
+	<div class="container px-4 py-2">
+		<h1 class="mt-4 fs-2">About Us</h1>
+		<p class="fs-5 mb-4">
       Hello! We're Chris and Jorge, a two-man team of enthusiasts with a more
       than 20 year long history of developing Nintendo Virtual Boy software. We
       are creating a versatile, open source Nintendo Virtual Boy game engine,
       development tools as well as new games for the system.
-    </p>
+		</p>
     <div class="row">
-      {% for item in site.data.about %} {% include about-box.html %} {% endfor
-      %}
+      {% for item in site.data.about %} 
+        {% include about-box.html %} 
+      {% endfor %}
     </div>
-  </div>
+	</div>
 </section>
 
 <section>

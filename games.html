@@ -3,10 +3,17 @@ layout: default
 title: Games
 ---
 
-<div class="py-5">
-	<div class="container">
-		<h2 class="mb-4">Made with VUEngine Studio</h2>
+<section class="bg-light">
+	<div class="container px-4 py-2">
+		<h1 class="mt-4 fs-2">Made with VUEngine Studio</h1>
+		<p class="fs-5 mb-4">
+			A selection of projects that have been brought to live with VUEngine Studio.
+		</p>
+	</div>
+</section>
 
+<div class="py-4">
+	<div class="container">
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-1">
 			{% for game in site.data.games %}
 			{% include game.html %}

@@ -3,19 +3,10 @@ body {
   overflow-y: scroll;
 }
 
-h1 {
-  margin-bottom: 1.5rem;
-}
-h2 {
-  margin: 2rem 0 1rem;
-}
-.accordion h2 {
-  margin-top: 0;
-}
-
 a {
   color: #d31422;
 }
+
 a:hover {
   color: #930c16;
 }
@@ -29,23 +20,20 @@ blockquote {
   background-color: #d31422;
   border-color: #d31422;
 }
+
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
   background-color: #930c16;
   border-color: #930c16;
 }
+
 .btn-primary.disabled,
 .btn-primary:disabled {
   background-color: #666;
   border-color: #666;
 }
 
-.btn-patreon {
-  color: #ec6350;
-  border-color: #fff;
-  background-color: #fff;
-}
 .btn-patreon:hover {
   background-color: #c65141;
   border-color: #c65141;
@@ -93,35 +81,47 @@ blockquote {
   background-image: none !important;
 }
 
+.documentation h1 {
+  margin-bottom: 1.5rem;
+}
+
+.documentation h2 {
+  margin: 2rem 0 1rem;
+}
+
+.documentation .accordion h2 {
+  margin: 0;
+}
+
 /* Custom */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.documentation h1,
+.documentation h2,
+.documentation h3,
+.documentation h4,
+.documentation h5,
+.documentation h6 {
   position: relative;
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+.documentation h1 a,
+.documentation h2 a,
+.documentation h3 a,
+.documentation h4 a,
+.documentation h5 a,
+.documentation h6 a {
   display: none;
   left: -25px;
   padding-right: 100%;
   position: absolute;
 }
 
-h1:hover a,
-h2:hover a,
-h3:hover a,
-h4:hover a,
-h5:hover a,
-h6:hover a {
+.documentation h1:hover a,
+.documentation h2:hover a,
+.documentation h3:hover a,
+.documentation h4:hover a,
+.documentation h5:hover a,
+.documentation h6:hover a {
   display: block;
 }
 
@@ -144,7 +144,7 @@ body.os-other .target-os-not-other {
   display: none;
 }
 
-.keys {
+.documentation .keys {
   background-color: #6c757d;
   border-radius: 0.25rem;
   color: #fff;
@@ -158,7 +158,7 @@ body.os-other .target-os-not-other {
   white-space: nowrap;
 }
 
-.highlighter-rouge > .highlight {
+.highlighter-rouge>.highlight {
   border-radius: 10px;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -179,15 +179,36 @@ body.os-other .target-os-not-other {
 .footer .btn:hover .fa-discord {
   color: #7a83e6;
 }
+
 .footer .btn:hover .fa-github {
   color: #333;
 }
+
 .footer .btn:hover .fa-patreon {
   color: #ff424d;
 }
+
 .footer .btn:hover .fa-twitter {
   color: #1d9bf0;
 }
+
 .footer .btn:hover .fa-youtube {
   color: #ff0000;
+}
+
+/* Codicon overrides */
+
+.documentation .codicon[class*="codicon-"] {
+  color: #d63384;
+  font-size: 120%;
+  vertical-align: text-bottom;
+}
+
+/* Font Awesome overrides */
+
+.documentation .fa,
+.documentation .fab,
+.documentation .far,
+.documentation .fas {
+  color: #d63384;
 }

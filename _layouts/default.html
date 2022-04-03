@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="/assets/codicon/codicon.css" />
     <link
       rel="stylesheet"
       href="/assets/style.css?{{ site.time | split:' ' | first }}"
@@ -54,7 +55,7 @@
             </span>
           </a>
 
-          <ul class="nav col-lg-7 fs-5 justify-content-center">
+          <ul class="nav col-lg-7 fs-6 justify-content-center">
             {% for node in site.nav.pages %} {%- assign check = page.url |
             split:'/' -%} {%- assign topPage = check[1] | append: '/' | prepend:
             '/' -%}
@@ -73,7 +74,7 @@
             <a
               href="https://www.patreon.com/VUEngine"
               role="button"
-              class="btn btn-patreon d-none d-lg-inline-block"
+              class="btn btn-outline-secondary btn-patreon d-none d-lg-inline-block"
             >
               <i class="fab fa-patreon"></i>
             </a>
@@ -87,8 +88,8 @@
     <footer class="footer mt-auto py-3 bg-secondary text-white">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 py-2">{{ site.data.footer.copyright }}</div>
-          <div class="col-md-8 text-end">
+          <div class="col-md-6 py-2">{{ site.data.footer.copyright }}</div>
+          <div class="col-md-6 text-end">
             {% for link in site.data.footer.links %}
             <a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
               <i class="{{ link.icon }}"></i>
