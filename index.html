@@ -12,6 +12,7 @@ layout: default
         <p class="fs-6 text-secondary">Preview Release available now.</p>
 
         <div class="pb-md-2">
+          {% comment %}
           {% for asset in site.github.latest_release.assets %} 
             {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %} 
             {% assign target = 'linux' %} 
@@ -35,6 +36,27 @@ layout: default
               Download
             </a>
           {% endfor %}
+          {% endcomment %}
+
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Mac.zip"
+            role="button"
+            class="btn btn-primary btn-lg target-os-osx"
+            title="VUEngine-Studio-Preview-Mac.zip (222 MB)"
+          >
+            <i class="fab fa-apple"></i>
+            Download
+          </a>
+
+          <a
+            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Setup-Windows.exe"
+            role="button"
+            class="btn btn-primary btn-lg target-os-win"
+            title="VUEngine-Studio-Preview-Setup-Windows.exe (288 MB)"
+          >
+            <i class="fab fa-windows"></i>
+            Download
+          </a>
 
           <a
             href="#"

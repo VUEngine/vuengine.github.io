@@ -11,6 +11,7 @@ title: Downloads
 
 <section>
   <div class="container px-4 py-4">
+      {% comment %}
       {% for release in site.github.releases %} 
         <div class="fs-3">
           <!--<a href="{{ release.html_url }}">-->{{ release.name }}<!--</a>-->
@@ -38,5 +39,26 @@ title: Downloads
           {% endfor %}
         </ul>
       {% endfor %}
+      {% endcomment %}
+
+      <div class="fs-3">
+        VUEngine Studio Preview
+      </div>
+      <p class="text-secondary fs-80p">
+        2022-03-24 
+      </p>
+      <p>
+        First public preview release. MacOS and Windows versions only for now, Linux will follow.
+      </p>
+      Assets:
+      <ul>
+        <li>
+          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Mac.zip">VUEngine-Studio-Preview-Mac.zip</a> (222 MB)
+        </li>
+        <li>
+          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/preview/VUEngine-Studio-Preview-Setup-Windows.exe">VUEngine-Studio-Preview-Setup-Windows.exe</a> (288 MB)
+        </li>
+      </ul>
+
   </div>
 </section>
