@@ -13,27 +13,27 @@ layout: default
 
         <div class="pb-md-2">
           {% for asset in site.github.latest_release.assets %} 
-          {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %} 
-          {% assign target = 'linux' %} 
-          {% assign logo = 'linux' %}
-          {% if platform == 'mac' %} 
-            {% assign target = 'osx' %} 
-            {% assign logo = 'apple' %} 
-          {% endif %} 
-          {% if platform == 'windows' %} 
-            {% assign target = 'win' %} 
-            {% assign logo = 'windows' %} 
-          {% endif %}
+            {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %} 
+            {% assign target = 'linux' %} 
+            {% assign logo = 'linux' %}
+            {% if platform == 'mac' %} 
+              {% assign target = 'osx' %} 
+              {% assign logo = 'apple' %} 
+            {% endif %} 
+            {% if platform == 'windows' %} 
+              {% assign target = 'win' %} 
+              {% assign logo = 'windows' %} 
+            {% endif %}
 
-          <a
-            href="{{ asset.browser_download_url }}"
-            role="button"
-            class="btn btn-primary btn-lg target-os-{{ target }}"
-            title="{{ asset.name }} ({{ asset.size | divided_by: 1048576 }} MB)"
-          >
-            <i class="fab fa-{{ logo }}"></i>
-            Download
-          </a>
+            <a
+              href="{{ asset.browser_download_url }}"
+              role="button"
+              class="btn btn-primary btn-lg target-os-{{ target }}"
+              title="{{ asset.name }} ({{ asset.size | divided_by: 1048576 }} MB)"
+            >
+              <i class="fab fa-{{ logo }}"></i>
+              Download
+            </a>
           {% endfor %}
 
           <a
