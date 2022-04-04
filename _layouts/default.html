@@ -88,8 +88,8 @@
     <footer class="footer mt-auto py-3 bg-secondary text-white">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 py-2">{{ site.data.footer.copyright }}</div>
-          <div class="col-md-6 text-end">
+          <div class="col-md-6 py-2 text-center text-md-start">{{ site.data.footer.copyright }}</div>
+          <div class="col-md-6 text-center text-md-end">
             {% for link in site.data.footer.links %}
             <a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
               <i class="{{ link.icon }}"></i>
