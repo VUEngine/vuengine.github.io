@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>
-      {% if page.url != "/" %}{{ page.title }} - {% endif %}{{ site.title }}
+      {% if page.url != "/" %}{{ page.title }} - {% endif %}{% if page.url contains "/documentation/" %}Documentation - {% endif %}{{ site.title }}
     </title>
 
     <!-- Styles -->
