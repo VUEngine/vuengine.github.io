@@ -6,24 +6,33 @@ title: About
 <section class="bg-light">
 	<div class="container px-4 py-2">
 		<h1 class="mt-4 fs-2">About Us</h1>
+    <!--<div class="float-end ms-4">
+      <img class="rounded-circle" width="90" height="90" src="/assets/images/chris.jpg" title="Chris" />
+      <img class="rounded-circle" width="90" height="90" src="https://iliuspicda-a.akamaihd.net/photo/eXBwXFxdU35ZW1VfaQUGXgFERzR3ZXtQYCRwKBAXPltDXUt5fwgJX313cUJHPCJkVVVcQWQJAk8-/" title="Jorge" />
+    </div>-->
 		<p class="fs-5 mb-4">
       Hello! We're Chris and Jorge, a two-man team of enthusiasts with a more
       than 20 year long history of developing Nintendo Virtual Boy software. We
       are creating a versatile, open source Nintendo Virtual Boy game engine,
       development tools as well as new games for the system.
 		</p>
-    <div class="row">
+  </div>
+</section>
+
+<section>
+  <div class="container px-4 py-2 mb-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-1">
       {% for item in site.data.about %} 
         {% include about-box.html %} 
       {% endfor %}
     </div>
-	</div>
+  </div>
 </section>
 
-<section>
+<section class="bg-light">
   <div class="container px-4 py-5">
     <h2 class="mb-4">About VUEngine Studio</h2>
-    <p class="fs-5 mb-4">
+    <div class="fs-5">
       VUEngine Studio is a custom integrated development environment (IDE),
       tailor-made for
       <a href="https://www.virtual-boy.com">Nintendo Virtual Boy</a> game
@@ -36,7 +45,12 @@ title: About
       <a href="https://code.visualstudio.com/">Visual Studio Code</a>
       and as such, VUEngine Studio looks and feels very much like VSCode and is
       able to consume VSCode extensions.
-    </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container px-4 py-5 mb-4">
     <p class="fs-5">A quick history</p>
     <p>
       In the early days of the VB homebrew scene, setting up a development
@@ -69,7 +83,7 @@ title: About
       VBDE. When Visual Studio Code emerged, it looked like we had finally found
       the right route to go down. We started implementing a custom extension
       called "VUEngine IDE" in December 2018, and shortly after, we had
-      implemented all the needed tools and complete switched over from VBDE
+      implemented all the needed tools and completely switched over from VBDE
       internally.
     </p>
     <p>
