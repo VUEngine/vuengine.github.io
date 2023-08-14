@@ -13,84 +13,57 @@ layout: default
 
         <div class="pb-md-2">
           {% comment %}
-          {% for asset in site.github.latest_release.assets %} 
-            {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %} 
-            {% assign target = 'linux' %} 
-            {% assign logo = 'linux' %}
-            {% if platform == 'mac' %} 
-              {% assign target = 'osx' %} 
-              {% assign logo = 'apple' %} 
-            {% endif %} 
-            {% if platform == 'windows' %} 
-              {% assign target = 'win' %} 
-              {% assign logo = 'windows' %} 
-            {% endif %}
+          {% for asset in site.github.latest_release.assets %}
+          {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %}
+          {% assign target = 'linux' %}
+          {% assign logo = 'linux' %}
+          {% if platform == 'mac' %}
+          {% assign target = 'osx' %}
+          {% assign logo = 'apple' %}
+          {% endif %}
+          {% if platform == 'windows' %}
+          {% assign target = 'win' %}
+          {% assign logo = 'windows' %}
+          {% endif %}
 
-            <a
-              href="{{ asset.browser_download_url }}"
-              role="button"
-              class="btn btn-primary btn-lg target-os-{{ target }}"
-              title="{{ asset.name }} ({{ asset.size | divided_by: 1048576 }} MB)"
-            >
-              <i class="fab fa-{{ logo }}"></i>
-              Download
-            </a>
+          <a href="{{ asset.browser_download_url }}" role="button" class="btn btn-primary btn-lg target-os-{{ target }}"
+            title="{{ asset.name }} ({{ asset.size | divided_by: 1048576 }} MB)">
+            <i class="fab fa-{{ logo }}"></i>
+            Download
+          </a>
           {% endfor %}
           {% endcomment %}
 
-          <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Mac.zip"
-            role="button"
-            class="btn btn-primary btn-lg target-os-osx"
-            title="VUEngine-Studio-Preview-Mac.zip (222 MB)"
-          >
+          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Mac.zip"
+            role="button" class="btn btn-primary btn-lg target-os-osx" title="VUEngine-Studio-Preview-Mac.zip (222 MB)">
             <i class="fab fa-apple"></i>
             Download
           </a>
 
-          <a
-            href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Setup-Windows.exe"
-            role="button"
-            class="btn btn-primary btn-lg target-os-win"
-            title="VUEngine-Studio-Preview-Setup-Windows.exe (288 MB)"
-          >
+          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Setup-Windows.exe"
+            role="button" class="btn btn-primary btn-lg target-os-win"
+            title="VUEngine-Studio-Preview-Setup-Windows.exe (288 MB)">
             <i class="fab fa-windows"></i>
             Download
           </a>
 
-          <a
-            href="#"
-            role="button"
-            class="btn btn-primary btn-lg disabled target-os-linux"
-            title="Linux version not yet available"
-          >
+          <a href="#" role="button" class="btn btn-primary btn-lg disabled target-os-linux"
+            title="Linux version not yet available">
             <i class="fab fa-linux"></i>
             Download
           </a>
 
-          <a
-            href="/downloads"
-            role="button"
-            class="btn btn-primary btn-lg target-os-other"
-          >
+          <a href="/downloads" role="button" class="btn btn-primary btn-lg target-os-other">
             <i class="fa fa-download"></i>
             Download
           </a>
-          <a
-            href="/documentation/"
-            role="button"
-            class="btn btn-outline-secondary btn-lg"
-            title="Documentation"
-          >
+          <a href="/documentation/" role="button" class="btn btn-outline-secondary btn-lg" title="Documentation">
             <i class="fas fa-book"></i>
           </a>
         </div>
 
         <p>
-          <a
-            href="/downloads"
-            class="fs-80p text-secondary target-os-not-other"
-          >
+          <a href="/downloads" class="fs-80p text-secondary target-os-not-other">
             All downloads...
           </a>
         </p>
@@ -98,96 +71,50 @@ layout: default
       <div class="col-md-8 mt-4 mt-md-0">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="4"
-            ></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+              aria-current="true"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
-                src="/assets/images/VUEngine Studio Build.png"
-                class="d-block w-100"
-              />
+              <img src="/assets/images/VUEngine Studio Build.png" class="d-block w-100" />
               <div class="carousel-caption text-secondary d-none d-md-block">
                 Full-featured Nintendo Virtual Boy IDE
               </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="/assets/images/VUEngine Studio Plugins.png"
-                class="d-block w-100"
-              />
+              <img src="/assets/images/VUEngine Studio Plugins.png" class="d-block w-100" />
               <div class="carousel-caption text-secondary d-none d-md-block">
                 Wide range of included plugins to supercharge your project
               </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="/assets/images/VUEngine Studio Templates.png"
-                class="d-block w-100"
-              />
+              <img src="/assets/images/VUEngine Studio Templates.png" class="d-block w-100" />
               <div class="carousel-caption text-secondary d-none d-md-block">
                 Build upon various game templates
               </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="/assets/images/VUEngine Studio Emulator.png"
-                class="d-block w-100"
-              />
+              <img src="/assets/images/VUEngine Studio Emulator.png" class="d-block w-100" />
               <div class="carousel-caption text-secondary d-none d-md-block">
                 Fully embedded emulator for testing
               </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="/assets/images/VUEngine Studio Flash Carts.png"
-                class="d-block w-100"
-              />
+              <img src="/assets/images/VUEngine Studio Flash Carts.png" class="d-block w-100" />
               <div class="carousel-caption text-secondary d-none d-md-block">
                 Write to all your flash carts
               </div>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide="prev"
-          >
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide="next"
-          >
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -221,8 +148,8 @@ layout: default
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       {% assign max = 3 %} {% assign counter = 0 %} {% for game in
-      site.data.games %} {% include game.html %} {% assign counter = counter |
-      plus: 1 %} {% if counter == max %}{% break %}{% endif %} {% endfor %}
+      site.data.games %} {% if game.featured %} {% include game.html %} {% assign counter = counter |
+      plus: 1 %} {% if counter == max %}{% break %}{% endif %}{% endif %} {% endfor %}
     </div>
   </div>
 </section>
@@ -230,18 +157,9 @@ layout: default
 {% comment %}
 <section>
   <div class="container px-4 py-4">
-    <a
-      class="twitter-timeline"
-      href="https://twitter.com/VUEngine?ref_src=twsrc%5Etfw"
-      data-tweet-limit="1"
-      data-width="650"
-      data-theme="light"
-    ></a>
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
+    <a class="twitter-timeline" href="https://twitter.com/VUEngine?ref_src=twsrc%5Etfw" data-tweet-limit="1"
+      data-width="650" data-theme="light"></a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </section>
 {% endcomment %}
