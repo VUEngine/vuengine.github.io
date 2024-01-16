@@ -10,31 +10,37 @@ layout: default
           Full-featured Nintendo<br>
           Virtual Boy game development application.
         </p>
-        <p class="fs-6 text-secondary">Preview Release available now.</p>
+        <p class="fs-6 text-secondary">New Preview Release available now.</p>
 
         <div class="pb-md-2">
-          {% comment %}
           {% for asset in site.github.latest_release.assets %}
-          {% assign platform = asset.name | split: '.' | first | split: '-' | last | downcase %}
+          {% if asset.content_type != 'application/x-yaml' %}
+          {% assign ending = asset.name | split: '.' | last %}
+          {% if ending == 'deb' or ending == 'AppImage' %}
           {% assign target = 'linux' %}
           {% assign logo = 'linux' %}
-          {% if platform == 'mac' %}
+          {% assign label = ending %}
+          {% endif %}
+          {% if ending == 'pkg' %}
           {% assign target = 'osx' %}
           {% assign logo = 'apple' %}
+          {% assign label = 'Download' %}
           {% endif %}
-          {% if platform == 'windows' %}
+          {% if ending == 'exe' %}
           {% assign target = 'win' %}
           {% assign logo = 'windows' %}
+          {% assign label = 'Download' %}
           {% endif %}
 
           <a href="{{ asset.browser_download_url }}" role="button" class="btn btn-primary btn-lg target-os-{{ target }}"
             title="{{ asset.name }} ({{ asset.size | divided_by: 1048576 }} MB)">
             <i class="fab fa-{{ logo }}"></i>
-            Download
+            {{label}}
           </a>
+          {% endif %}
           {% endfor %}
-          {% endcomment %}
 
+          {% comment %}
           <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Mac.zip"
             role="button" class="btn btn-primary btn-lg target-os-osx" title="VUEngine-Studio-Preview-Mac.zip (222 MB)">
             <i class="fab fa-apple"></i>
@@ -53,10 +59,11 @@ layout: default
             <i class="fab fa-linux"></i>
             Download
           </a>
+          {% endcomment %}
 
           <a href="/downloads" role="button" class="btn btn-primary btn-lg target-os-other">
             <i class="fa fa-download"></i>
-            Download
+            Downloads
           </a>
           <a href="/documentation/" role="button" class="btn btn-outline-secondary btn-lg" title="Documentation">
             <i class="fas fa-book"></i>
@@ -78,6 +85,7 @@ layout: default
             <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
             <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
             <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="5"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -108,6 +116,12 @@ layout: default
               <img src="/assets/images/VUEngine Studio Flash Carts.png" class="d-block w-100" />
               <div class="carousel-caption text-secondary d-none d-md-block">
                 Write to all your flash carts
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/images/VUEngine Studio Editors.png" class="d-block w-100" />
+              <div class="carousel-caption text-secondary d-none d-md-block">
+                Graphical asset editors
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 # vuengine.github.io
 
-The VUEngine website.
+The VUEngine website at https://www.vuengine.dev/.
 
 ## Prerequisites
 
