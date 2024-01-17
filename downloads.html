@@ -11,6 +11,10 @@ title: Downloads
 
 <section>
   <div class="container px-4 py-4">
+    {% comment %}
+    // TODO: find out why getting release information through jekyll-github-metadata is not working on Github Pages
+    {% endcomment %}
+
     {% for release in site.github.releases %}
     <div class="fs-3">
       {{ release.name }}
@@ -21,18 +25,17 @@ title: Downloads
       {% endif %}
       <i class="fa fa-tag"></i> {{ release.tag_name}} &nbsp;
       <i class="far fa-calendar"></i> {{ release.created_at | split: ' ' | first }} &nbsp;
-      <!--<i class="far fa-user"></i> {{ release.author.login }} &nbsp;-->
       <i class="fab fa-github"></i> <a href="{{ release.html_url }}">Github</a> &nbsp;
     </p>
     {% if release.body %}
     <p>{{ release.body }}</p>
     {% endif %}
-    <!--Assets:-->
     <ul>
       {% for asset in release.assets %}
       {% if asset.content_type != 'application/x-yaml' %}
       <li>
-        <a href="{{ asset.url }}" title="Downloads: {{ asset.download_count }}">{{ asset.name }}</a> ({{ asset.size |
+        <a href="{{ asset.browser_download_url }}" title="Downloads: {{ asset.download_count }}">{{ asset.name }}</a>
+        ({{ asset.size |
         divided_by: 1048576 }} MB)
       </li>
       {% endif %}
@@ -58,35 +61,38 @@ title: Downloads
     <p class="text-secondary fs-80p">
       <i class="fa fa-tag"></i> v0.2.0 &nbsp;
       <i class="far fa-calendar"></i> 2024-01-16 &nbsp;
-      <i class="fab fa-github"></i> <a href="https://github.com/VUEngine/VUEngine-Studio/releases/tag/v0.2.0"
-        data-jzz-gui-player="true">Github</a> &nbsp;
+      <i class="fab fa-github"></i> <a href="https://github.com/VUEngine/VUEngine-Studio/releases/tag/v0.2.0">Github</a>
+      &nbsp;
     </p>
-    <p>Updated Preview release.</p>
+    <p>Updated preview release featuring graphical asset editors and a quadrillion other improvements. Now also
+      available for Linux.</p>
     <ul>
       <li>
-        <a href="https://api.github.com/repos/VUEngine/VUEngine-Studio/releases/assets/145899956" title="Downloads: 0"
-          data-jzz-gui-player="true">VUEngine-Studio-0-2-0-Setup.deb</a> (160 MB)
+        <a
+          href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.2.0/VUEngine-Studio-0-2-0-Setup.deb">VUEngine-Studio-0-2-0-Setup.deb</a>
+        (160 MB)
       </li>
       <li>
-        <a href="https://api.github.com/repos/VUEngine/VUEngine-Studio/releases/assets/145902693" title="Downloads: 0"
-          data-jzz-gui-player="true">VUEngine-Studio-0-2-0-Setup.exe</a> (312 MB)
+        <a
+          href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.2.0/VUEngine-Studio-0-2-0-Setup.exe">VUEngine-Studio-0-2-0-Setup.exe</a>
+        (312 MB)
       </li>
       <li>
-        <a href="https://api.github.com/repos/VUEngine/VUEngine-Studio/releases/assets/145901828" title="Downloads: 0"
-          data-jzz-gui-player="true">VUEngine-Studio-0-2-0-Setup.pkg</a> (243 MB)
+        <a
+          href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.2.0/VUEngine-Studio-0-2-0-Setup.pkg">VUEngine-Studio-0-2-0-Setup.pkg</a>
+        (243 MB)
       </li>
       <li>
-        <a href="https://api.github.com/repos/VUEngine/VUEngine-Studio/releases/assets/145900714" title="Downloads: 0"
-          data-jzz-gui-player="true">VUEngine-Studio-0-2-0.AppImage</a> (252 MB)
+        <a
+          href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.2.0/VUEngine-Studio-0-2-0.AppImage">VUEngine-Studio-0-2-0.AppImage</a>
+        (252 MB)
       </li>
       <li>
-        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.2.0.zip"
-          data-jzz-gui-player="true">Source
+        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.2.0.zip">Source
           code</a> (zip)
       </li>
       <li>
-        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.2.0.tar.gz"
-          data-jzz-gui-player="true">Source
+        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.2.0.tar.gz">Source
           code</a> (tar.gz)
       </li>
     </ul>
@@ -97,27 +103,27 @@ title: Downloads
     <p class="text-secondary fs-80p">
       <i class="fa fa-tag"></i> v0.1.0 &nbsp;
       <i class="far fa-calendar"></i> 2022-03-24 &nbsp;
-      <i class="fab fa-github"></i> <a href="https://github.com/VUEngine/VUEngine-Studio/releases/tag/v0.1.0"
-        data-jzz-gui-player="true">Github</a> &nbsp;
+      <i class="fab fa-github"></i> <a href="https://github.com/VUEngine/VUEngine-Studio/releases/tag/v0.1.0">Github</a>
+      &nbsp;
     </p>
     <p>First public preview release. MacOS and Windows versions only for now, Linux will follow.</p>
     <ul>
       <li>
-        <a href="https://api.github.com/repos/VUEngine/VUEngine-Studio/releases/assets/60513750" title="Downloads: 89"
-          data-jzz-gui-player="true">VUEngine-Studio-Preview-Mac.zip</a> (222 MB)
+        <a
+          href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Mac.zip">VUEngine-Studio-Preview-Mac.zip</a>
+        (222 MB)
       </li>
       <li>
-        <a href="https://api.github.com/repos/VUEngine/VUEngine-Studio/releases/assets/60514220" title="Downloads: 234"
-          data-jzz-gui-player="true">VUEngine-Studio-Preview-Setup-Windows.exe</a> (288 MB)
+        <a
+          href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.1.0/VUEngine-Studio-Preview-Setup-Windows.exe">VUEngine-Studio-Preview-Setup-Windows.exe</a>
+        (288 MB)
       </li>
       <li>
-        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.1.0.zip"
-          data-jzz-gui-player="true">Source
+        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.1.0.zip">Source
           code</a> (zip)
       </li>
       <li>
-        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.1.0.tar.gz"
-          data-jzz-gui-player="true">Source
+        <a href="https://github.com/VUEngine/VUEngine-Studio/archive/refs/tags/v0.1.0.tar.gz">Source
           code</a> (tar.gz)
       </li>
     </ul>
