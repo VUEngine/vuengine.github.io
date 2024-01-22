@@ -35,7 +35,7 @@ To work on devices running Apple Silicon, you will also need a `libmpc`, but ins
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-3. Install `x86_64` version of `libmpc`:  
+2. Install `x86_64` version of `libmpc`:  
 ```
 arch -x86_64 /usr/local/bin/brew install libmpc
 ```
