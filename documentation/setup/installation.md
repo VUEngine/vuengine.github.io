@@ -23,9 +23,24 @@ Note that binaries are are neither signed nor authored and macOS might warn you 
 
 You may need to install additional libraries to be able to build your code.
 
+#### Intel
+
     brew reinstall libmpc
 
-> Note: The bundled version of gcc has been built for Intel Macs. So if you're on an Apple Silicon device, you'll need to install libmpc via brew for x86 versions and manually copy files to usr/local/lib.
+#### Apple Silicon (ARM)
+To work on devices running Apple Silicon, you will also need a `libmpc`, but instead of `arm64` version installation of `x86_64` is required. In order to accomplish that you will need `brew` for `x86_64` machines (feel free to skip to step 2 if you already have it installed).
+
+1. Install brew with command:
+```
+arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+3. Install `x86_64` version of `libmpc`:  
+```
+arch -x86_64 /usr/local/bin/brew install libmpc
+```
+
+You can read more about using x86 libraries on Apple Silicon Macs [here](https://gist.github.com/progrium/b286cd8c82ce0825b2eb3b0b3a0720a0).
 
 ## Linux
 
