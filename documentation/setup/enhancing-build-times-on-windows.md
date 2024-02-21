@@ -9,7 +9,7 @@ On Windows, build times can be painfully slow. However, if you're running Window
 
 1.  Ensure that you have the Windows Subsystem for Linux enabled, and that you're using Windows Build version 18362 or later. To enable WSL run this command in a PowerShell prompt with admin privileges.
 
-        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux.
+        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
 2.  In a PowerShell prompt with admin privileges run the following command to install Ubuntu in WSL 1. Note that WSL 1 is recommended over WSL 2 for much faster file access.
 
