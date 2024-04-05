@@ -19,7 +19,6 @@ You can conveniently manage your project's plugins in the Plugins Browser (**B**
 - with the keyboard shortcut <span class="keys target-os-osx">⇧⌘L</span><span class="keys target-os-not-osx">Shift+Ctrl+L</span>
 - with the `Toggle Plugins View` command
 - through the menu: **View > Plugins**
-- double click the `config/Plugins.json` file
 
 <a href="/documentation/images/user-guide/vuengine-plugins-browser.png"><img src="/documentation/images/user-guide/vuengine-plugins-browser.png" width="100%" /></a>
 
@@ -35,7 +34,7 @@ The current search terms can be removed with the leftmost button <i class="codic
 
 ### Source of Truth
 
-The list of installed plugins is stored in the `config/Plugins.json` file in your project. Any changes you make by installing or uninstalling plugins will be written back to this file, which in turns triggers the re-generation of the `config.make` file in your project's root directory.
+The list of installed plugins is stored in the `config/GameConfig` file in your project. Any changes you make by installing or uninstalling plugins will be written back to this file, which in turns triggers the re-generation of the `config.make` file in your project's root directory.
 
 ## Custom Plugins
 
