@@ -17,6 +17,24 @@ title: Emulator
 
 [...]
 
+## Red Viper
+
+As a secondary built-in emulator, VUEngine Studio supports playtesting on a Nintendo 3DS using the [Red Viper](https://github.com/skyfloogle/red-viper) emulator (version v0.9.5 and up). This allows you to comfortably preview in stereo at true 50Hz. The integration utilizes the VBLink protocol to wirelessly send your ROM over your home WiFi.
+
+### Setup
+
+Boot up Red Viper and press Y on the main menu to set it to listen for new ROMs being transferred via VBLink.
+
+<a href="/documentation/images/user-guide/red-viper-vblink.png"><img src="/documentation/images/user-guide/red-viper-vblink.png"/></a>
+
+The above screen displays your Nintendo 3DS' IP address, `192.168.5.206` in this case. Configure VUEngine Studio accordingly and set Red Viper as the default emulator, as seen in the following screenshot.
+
+<a href="/documentation/images/user-guide/red-viper-set-ip.png"><img src="/documentation/images/user-guide/red-viper-set-ip.png" width="800"/></a>
+
+### Usage
+
+If Red Viper is set as the default emulator and as long as Red Viper is on the VBLink screen listening on the configured IP address, you're now able to use it just like any other emulator.
+
 ## Custom Emulator Configurations
 
 As an alternative to using the built-in emulator, you can also configure custom emulator configurations. This can be useful if for instance an external emulator offers functionality that is not present in the built-in one.
