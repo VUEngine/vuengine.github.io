@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>
+        {{ page.title }}
+    </title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/style.css?{{ site.time | split:' ' | first }}" />
+    <link rel="stylesheet" href="/assets/rogue/syntax-base16.monokai.dark.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ page.favicon }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ page.favicon }}" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ page.favicon }}" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="{{ page.favicon }}" />
+</head>
+
+<body class="d-flex flex-column h-100">
+    {{ content }}
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
