@@ -10,7 +10,8 @@ layout: default
           Full-featured Nintendo<br>
           Virtual Boy game development application.
         </p>
-        <p class="fs-6 text-secondary">New Preview Release available now.</p>
+
+        <p class="fs-6 text-secondary">Get the Preview Release!</p>
 
         <div class="pb-md-2">
           {% comment %}
@@ -18,6 +19,7 @@ layout: default
           Pages
           {% endcomment %}
 
+          {% comment %}
           {% for asset in site.github.latest_release.assets %}
           {% if asset.content_type != 'application/x-yaml' %}
           {% assign ending = asset.name | split: '.' | last %}
@@ -44,35 +46,25 @@ layout: default
           </a>
           {% endif %}
           {% endfor %}
+          {% endcomment %}
 
-
-
-
-          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.4.0/VUEngine-Studio-0-4-0-Setup.deb"
-            role="button" class="btn btn-primary btn-lg target-os-linux"
-            title="VUEngine-Studio-0-4-0-Setup.deb (157 MB)">
+          {% for file in site.data.downloads[0].files %}
+          {% if file.os %}
+          <a href="{{ file.link }}" role="button" class="btn btn-primary btn-lg target-os-{{ file.os }}"
+            title="{{ file.name }}">
+            {% if file.os == 'linux' %}
             <i class="fab fa-linux"></i>
-            deb
-          </a>
-          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.4.0/VUEngine-Studio-0-4-0-Setup.exe"
-            role="button" class="btn btn-primary btn-lg target-os-win" title="VUEngine-Studio-0-4-0-Setup.exe (305 MB)">
+            {% endif %}
+            {% if file.os == 'win' %}
             <i class="fab fa-windows"></i>
-            Download
-          </a>
-          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.4.0/VUEngine-Studio-0-4-0-Setup.pkg"
-            role="button" class="btn btn-primary btn-lg target-os-osx" title="VUEngine-Studio-0-4-0-Setup.pkg (237 MB)">
+            {% endif %}
+            {% if file.os == 'osx' %}
             <i class="fab fa-apple"></i>
-            Download
+            {% endif %}
+            {{ file.format }}
           </a>
-          <a href="https://github.com/VUEngine/VUEngine-Studio/releases/download/v0.4.0/VUEngine-Studio-0-4-0.AppImage"
-            role="button" class="btn btn-primary btn-lg target-os-linux"
-            title="VUEngine-Studio-0-4-0.AppImage (247 MB)">
-            <i class="fab fa-linux"></i>
-            AppImage
-          </a>
-
-
-
+          {% endif %}
+          {% endfor %}
 
           <a href="/downloads" role="button" class="btn btn-primary btn-lg target-os-other">
             <i class="fa fa-download"></i>

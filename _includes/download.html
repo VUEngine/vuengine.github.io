@@ -1,0 +1,17 @@
+<div class="fs-3">
+  {{ download.name }}
+</div>
+<p class="text-secondary fs-80p">
+  <i class="fa fa-tag"></i> {{ download.tag }} &nbsp;
+  <i class="far fa-calendar"></i> {{ download.date }} &nbsp;
+  <i class="fab fa-github"></i> <a href="{{ download.link }}">Github</a>
+  &nbsp;
+</p>
+{{ download.description }}
+<ul>
+  {% for file in download.files %}
+  <li>
+    <a href="{{ file.link }}">{{ file.name }}</a> ({{ file.meta }})
+  </li>
+  {% endfor %}
+</ul>
