@@ -1,9 +1,17 @@
 ---
 layout: documentation
-title: Enhancing build times on Windows
+title: Enhancing build times
 ---
 
-# Enhancing build times on Windows
+# Enhancing build times
+
+A whole lot of files are being thrown around during compilation of a project, and, depending on your system set up, there are different factors that can have an impact on build times.
+
+## Antivirus software
+
+If you're running Antivirus software on your system, you should create an exception for your project folder. It will otherwise slow down the build process if it wants to have an eye on every file that is being touched during compilation.
+
+## Windows Subsystem for Linux
 
 On Windows, build times can be painfully slow. However, if you're running Windows 10 or upwards, you can greatly enhance build times by using the Windows Subsystem for Linux (WSL).
 
