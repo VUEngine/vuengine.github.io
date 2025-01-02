@@ -162,7 +162,7 @@ body.os-other .target-os-not-other {
 
 .documentation .keys {
   background-color: #6c757d;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
   color: #fff;
   display: inline-block;
   font-size: 0.8em;
@@ -174,10 +174,28 @@ body.os-other .target-os-not-other {
   white-space: nowrap;
 }
 
+.documentation .setting {
+  background-color: #eee;
+  border-radius: .25rem;
+  color: #d63384;
+  font-family: var(--bs-font-monospace);
+  font-size: .9rem;
+  padding: 2px 6px;
+}
+
+.documentation .setting::before {
+  content: "\f013";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  padding-right: 3px;
+}
+
 .highlighter-rouge>.highlight {
   border-radius: 10px;
-  margin-bottom: 1rem;
+  font-size: .85rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
+  line-height: 110%;
 }
 
 .highlighter-rouge pre {

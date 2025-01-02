@@ -25,18 +25,23 @@ You may need to install additional libraries to be able to build your code.
 
 #### Intel
 
-    brew reinstall libmpc
+```bash
+brew reinstall libmpc
+```
 
 #### Apple Silicon (ARM)
+
 To work on devices running Apple Silicon, you will also need a `libmpc`, but instead of `arm64` version installation of `x86_64` is required. In order to accomplish that you will need `brew` for `x86_64` machines (feel free to skip to step 2 if you already have it installed).
 
 1. Install brew with command:
-```
+
+```bash
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. Install `x86_64` version of `libmpc`:  
-```
+2. Install `x86_64` version of `libmpc`:
+
+```bash
 arch -x86_64 /usr/local/bin/brew install libmpc
 ```
 
@@ -46,15 +51,19 @@ You can read more about using x86 libraries on Apple Silicon Macs [here](https:/
 
 VUEngine Studio can be run in different ways on Linux systems. Either install the `deb` using your favorite method, e.g.
 
-    sudo dpkg -i VUEngine-Studio-X-X-X-Setup.deb
+```bash
+sudo dpkg -i VUEngine-Studio-X-X-X-Setup.deb
+```
 
 Or use the AppImage without an installation. e.g. with
 
-    // make the appImage executable
-    chmod a+x VUEngine-Studio-X-X-X.AppImage
+```bash
+// make the appImage executable
+chmod a+x VUEngine-Studio-X-X-X.AppImage
 
-    // execute
-    ./VUEngine-Studio-X-X-X.AppImage
+// execute
+./VUEngine-Studio-X-X-X.AppImage
+```
 
 ## Bleeding Edge
 

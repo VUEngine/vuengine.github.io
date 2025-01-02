@@ -13,7 +13,7 @@ If you have opened any projects before, you'll see a handy list here as well und
 
 <a href="/documentation/images/getting-started/VUEngine-Studio-Getting-Started.png"><img src="/documentation/images/getting-started/VUEngine-Studio-Getting-Started.png" width="500" /></a>
 
-If you have closed the "Getting Started" view and can't see it anymore, you can open it again through the main menu with `Help > Getting Started` or through the command palette <span class="keys target-os-osx">⇧⌘P</span><span class="keys target-os-not-osx">Ctrl+P</span>. You could also just use the command palette to create a new project as shown in the screenshot below.
+If you have closed the "Getting Started" view and can't see it anymore, you can open it again through the main menu with `Help > Getting Started` or through the command palette <span class="keys" data-osx="⇧⌘P">Ctrl+P</span>. You could also just use the command palette to create a new project as shown in the screenshot below.
 
 <a href="/documentation/images/getting-started/VUEngine-Studio-Command-Palette-New-Project.png"><img src="/documentation/images/getting-started/VUEngine-Studio-Command-Palette-New-Project.png" width="500" /></a>
 

@@ -7,7 +7,7 @@ title: User Interface
 
 VUEngine Studio's user interface is modeled after Visual Studio Code, but with more flexibility and an additional right sidepanel and sidebar in mind. Like many other code editors, VUEngine Studio adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to, and an editor in the center, showing the content of the files you have opened.
 
-<a href="/documentation/images/basics/user-interface.png"><img src="/documentation/images/basics/user-interface.png" width="100%" /></a>
+<a href="/documentation/images/basics/user-interface/user-interface.png"><img src="/documentation/images/basics/user-interface/user-interface.png" width="100%" /></a>
 
 ## Layout
 
@@ -34,7 +34,7 @@ When you have more open items than can fit in the title area, you can use the `V
 
 You can open as many editors as you like side by side vertically and horizontally. You can either drag and drop an opened file to any side of the editor region, or right click it and select any of `Split Up/Down/Left/Right`.
 
-<a href="/documentation/images/basics/side-by-side-editing.png"><img src="/documentation/images/basics/side-by-side-editing.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/side-by-side-editing.png"><img src="/documentation/images/basics/user-interface/side-by-side-editing.png" width="600" /></a>
 
 Whenever you open another file, the editor that is active will display the content of that file. So if you have two editors side by side and you want to open file "file.c" into the right-hand editor, make sure that editor is active (by clicking inside it) before opening file "file.c". Editors will open to the right-hand side of the active one.
 
@@ -42,7 +42,7 @@ Whenever you open another file, the editor that is active will display the conte
 
 A Minimap (code outline) gives you a high-level overview of your source code, which is useful for quick navigation and code understanding. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area to quickly jump to different sections of your file.
 
-<a href="/documentation/images/basics/minimap.png"><img src="/documentation/images/basics/minimap.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/minimap.png"><img src="/documentation/images/basics/user-interface/minimap.png" width="600" /></a>
 
 You can move the minimap to the left hand side, disable it completely, change the scale and more with the following settings:
 
@@ -85,13 +85,13 @@ After opening a folder in VUEngine Studio, the contents of the folder are shown 
 
 VUEngine Studio works very well with other tools that you might use, especially command-line tools. If you want to run a command-line tool in the context of the folder you currently have open in VUEngine Studio, right-click the folder and select <span class="target-os-win">`Open in Command Prompt`</span><span class="target-os-not-win">`Open in Terminal`</span>.
 
-> **Tip:** Type <span class="keys target-os-osx">⌘P</span><span class="keys target-os-not-osx">Ctrl+P</span> to quickly search and open a file by its name.
+> **Tip:** Type <span class="keys" data-osx="⌘P">Ctrl+P</span> to quickly search and open a file by its name.
 
 By default, VUEngine Studio excludes some folders from the Explorer (for example. .git). Use the `files.exclude` setting to configure rules for hiding files and folders from the Explorer.
 
 ### Multi-selection
 
-You can select multiple files in the **File Explorer** and **OPEN EDITORS** view to run actions (Delete, Drag and Drop, Open) on multiple items. Use the <span class="keys target-os-osx">⌘</span><span class="keys target-os-not-osx">Ctrl</span> key with <span class="keys">click</span> to select individual files and <span class="keys">Shift + click</span> to select a range. If you select two items, you can use the context menu `Compare with Each Other` command to quickly diff two files.
+You can select multiple files in the **File Explorer** and **OPEN EDITORS** view to run actions (Delete, Drag and Drop, Open) on multiple items. Use the <span class="keys" data-osx="⌘">Ctrl</span> key with <span class="keys">click</span> to select individual files and <span class="keys">Shift + click</span> to select a range. If you select two items, you can use the context menu `Compare with Each Other` command to quickly diff two files.
 
 ### Filtering the document tree
 
@@ -99,7 +99,7 @@ You can type to filter the currently visible files in the **File Explorer**. Wit
 
 Hovering over the filter box and selecting **Enable Filter on Type** will show only matching files/folders. Use the 'X' **Clear** button to clear the filter.
 
-<a href="/documentation/images/basics/filtering-the-document-tree.png"><img src="/documentation/images/basics/filtering-the-document-tree.png" width="300" /></a>
+<a href="/documentation/images/basics/user-interface/filtering-the-document-tree.png"><img src="/documentation/images/basics/user-interface/filtering-the-document-tree.png" width="300" /></a>
 
 ### Open Editors
 
@@ -142,15 +142,15 @@ The Sidebars on the left and right let you quickly switch between Views. You can
 
 ## Command Palette
 
-VUEngine Studio is equally accessible from the keyboard. The most important key combination to know is <span class="keys target-os-osx">⇧⌘P</span><span class="keys target-os-not-osx">Shift+Ctrl+P</span>, which brings up the **Command Palette**. From here, you have access to all of the functionality of VUEngine Studio, including keyboard shortcuts for the most common operations.
+VUEngine Studio is equally accessible from the keyboard. The most important key combination to know is <span class="keys" data-osx="⇧⌘P">Shift+Ctrl+P</span>, which brings up the **Command Palette**. From here, you have access to all of the functionality of VUEngine Studio, including keyboard shortcuts for the most common operations.
 
-<a href="/documentation/images/basics/command-palette.png"><img src="/documentation/images/basics/command-palette.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/command-palette.png"><img src="/documentation/images/basics/user-interface/command-palette.png" width="600" /></a>
 
 The **Command Palette** provides access to many commands. You can execute editor commands, open files, build your project, convert images, etc, all using the same interactive window. Here are a few tips:
 
-- <span class="keys target-os-osx">⌘P</span><span class="keys target-os-not-osx">Ctrl+P</span> will let you navigate to any file or symbol by typing its name
-- <span class="keys target-os-osx">⇧⌘P</span><span class="keys target-os-not-osx">Shift+Ctrl+P</span> will bring you directly to the editor commands
-- <span class="keys target-os-osx">⇧⌘O</span><span class="keys target-os-not-osx">Shift+Ctrl+O</span> will let you navigate to a specific symbol in a file
+- <span class="keys" data-osx="⌘P">Ctrl+P</span> will let you navigate to any file or symbol by typing its name
+- <span class="keys" data-osx="⇧⌘P">Shift+Ctrl+P</span> will bring you directly to the editor commands
+- <span class="keys" data-osx="⇧⌘O">Shift+Ctrl+O</span> will let you navigate to a specific symbol in a file
 - <span class="keys">⌃G</span> will let you navigate to a specific line in a file
 
 Type "?" into the input field to get a list of available commands you can execute from there.
@@ -163,7 +163,7 @@ VUEngine Studio gives you many options to configure the editor. From the **View*
 
 Most editor configurations are kept in settings which can be modified directly. You can set options globally through user settings, per project through workspace settings, or per folder. Settings values are kept in a `settings.json` file in the user folder or currently opened folder under a `.vuengine` folder, or in a workspace file.
 
-- Select File > Preferences > Open Settings (UI) (or press <span class="keys target-os-osx">⌘,</span><span class="keys target-os-not-osx">Ctrl+,</span>) to edit the user `settings.json` file.
+- Select File > Preferences > Open Settings (UI) (or press <span class="keys" data-osx="⌘,">Ctrl+,</span>) to edit the user `settings.json` file.
 - To edit workspace settings, select the **Workspace** tab to edit the settings saved to the current workspace file.
 - To edit folder settings, select the **Folder** tab to edit the settings saved to the current folder.
 
@@ -173,7 +173,7 @@ When you single-click or select a file in the Explorer, it is shown in a preview
 
 Preview mode is indicated by italics in the Tab heading:
 
-<a href="/documentation/images/basics/preview-mode.png"><img src="/documentation/images/basics/preview-mode.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/preview-mode.png"><img src="/documentation/images/basics/user-interface/preview-mode.png" width="600" /></a>
 
 If you'd prefer to not use preview mode and always create a new Tab, you can control the behavior with this setting:
 
