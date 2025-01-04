@@ -5,7 +5,7 @@ title: Sound
 
 # Sound
 
-VUEngine supports two types of sound playback through a common interface: the Sound class. A SoundSpec specifies, among other properties, a list of SoundTracks to play:
+VUEngine supports two types of sound playback through a common interface: the `Sound` class. A **SoundSpec** specifies, among other properties, a list of `SoundTrack`s to play:
 
 ```cpp
 SoundTrackROMSpec* const MenuSongSoundTracks[] =
@@ -35,7 +35,7 @@ SoundROMSpec MenuSongSoundSpec =
 };
 ```
 
-A SoundTrackSpec determines if the playback reproduces sounds as natively supported by the VirtualBoy’s Virtual Sound Unit (VSU) or Pulse Code Modulation data (PCM).
+A **SoundTrackSpec** determines if the playback reproduces sounds as natively supported by the VirtualBoy’s Virtual Sound Unit (VSU) or Pulse Code Modulation data (PCM).
 
 ```cpp
 SoundTrackROMSpec MenuSongSoundTrack1 =
@@ -78,7 +78,7 @@ SoundTrackROMSpec MenuSongSoundTrack1 =
 };
 ```
 
-Each SoundTrackSpec must provide arrays for all the VSU’s hardware registers:
+Each **SoundTrackSpec** must provide arrays for all the VSU’s hardware registers:
 
 ```cpp
 /// Sound source mapping
@@ -126,7 +126,7 @@ const SoundTrackKeyframe MenuSongSoundTrack1Keyframes[] =
 
 The VUEngine’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source, instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
 
-To reproduce a sound, a request to the SoundManager’s instance can be performed as shown below:
+To reproduce a sound, a request to the `SoundManager`’s instance can be performed as shown below:
 
 ```cpp
     SoundManager::playSound
@@ -136,8 +136,7 @@ To reproduce a sound, a request to the SoundManager’s instance can be performe
     );
 ```
 
-
-A Sound can be acquired to control its playback as follows:
+A `Sound` can be acquired to control its playback as follows:
 
 ```cpp
     extern SoundSpec SampleSoundSpec;
@@ -145,7 +144,7 @@ A Sound can be acquired to control its playback as follows:
     Sound sound = SoundManager::getSound(SoundManager::getInstance(), &SampleSoundSpec, NULL, NULL);
 ```
 
-Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling Sound::play:
+Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling `Sound::play`:
 
 ```cpp
     if(!isDeleted(sound))
@@ -154,4 +153,4 @@ Sound playback supports spatial positioning through stereo separation if a refer
     }
 ```
 
-Sounds can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling SoundManager::playSound.
+`Sound`s can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.

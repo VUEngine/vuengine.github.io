@@ -4,13 +4,14 @@ title: Decoupling
 ---
 
 # Decoupled Interactions
+
 The engine implements the following mechanisms to avoid the implementation of bespoke methods for interaction between instances of different classes that tightly couple them.
 
-Messages
+## Messages
 
-Messages can be enums or strings that are sent between objects or propagated through hierarchies of Actors or lists of Components.
+Messages can be `enums` or strings that are sent between objects or propagated through hierarchies of `Actor`s or lists of `Component`s.
 
-The ListenerObject class implements various helper methods to send messages around:
+The `ListenerObject` class implements various helper methods to send messages around:
 
 ```cpp
     /// Send a message to another object.
@@ -27,9 +28,9 @@ The ListenerObject class implements various helper methods to send messages arou
     void sendMessageToSelf(uint32 message, uint32 delay, uint32 randomDelay);
 ```
 
-These are useful when, for example, an Actor processing a collision needs to inform the colliding Entity about it.
+These are useful when, for example, an `Actor` processing a collision needs to inform the colliding `Entity` about it.
 
-In the following example, when a Projectile hits a Entity of type kTypeEnemy, instead of calling a bespoke method on the colliding object that would depend on its class and would require the including of the header file where it is declared, it can send a message to it:
+In the following example, when a `Projectile` hits an `Entity` of type `kTypeEnemy`, instead of calling a bespoke method on the colliding object that would depend on its class and would require the including of the header file where it is declared, it can send a message to it:
 
 ```cpp
 bool Projectile::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
@@ -74,7 +75,7 @@ bool Enemy::handleMessage(Telegram telegram)
 }
 ```
 
-Messages can be propagated too, instead of being specifically directed to a known ListenerObject. Usually, the propagation starts at the Stage’s level and is done through the GameState’s interface:
+Messages can be propagated too, instead of being specifically directed to a known `ListenerObject`. Usually, the propagation starts at the `Stage`’s level and is done through the `GameState`’s interface:
 
 ```cpp
 bool PongState::onRemoteGoneAway(ListenerObject eventFirer __attribute__((unused)))
@@ -87,7 +88,7 @@ bool PongState::onRemoteGoneAway(ListenerObject eventFirer __attribute__((unused
 }
 ```
 
-And any interested Entity can process the message and let it be forwarded to other Entitys, but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-: 
+And any interested `Entity` can process the message and let it be forwarded to other instance of `Entity`, but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-: 
 
 ```cpp
 bool PongBall::handlePropagatedMessage(int32 message)
@@ -104,7 +105,7 @@ bool PongBall::handlePropagatedMessage(int32 message)
 }
 ```
 
-Messages that acts as commands can be propagated to the components attaching to a Entity:
+Messages that acts as commands can be propagated to the components attaching to an `Entity`:
 
 ```cpp
 void Entity::hide()
@@ -113,11 +114,11 @@ void Entity::hide()
 }
 ```
 
-Events
+## Events
 
-ListenerObjects can listen for events or fire them. This enables to implement event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
+`ListenerObject`s can listen for events or fire them. This enables to implement event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
 
-To listen for events, an EventListener plus a scope object must be attached to a ListenerObject:
+To listen for events, an `EventListener` plus a scope object must be attached to a `ListenerObject`:
 
 ```cpp
     Pong::addEventListener
@@ -126,7 +127,7 @@ To listen for events, an EventListener plus a scope object must be attached to a
     );
 ```
 
-An EventListener method must return a boolean and receive a ListenerObject as the event firer:
+An `EventListener` method must return a boolean and receive a `ListenerObject` as the event firer:
 
 ```cpp
 bool Pong::onPongBallOutOfBounds(ListenerObject eventFirer __attribute__ ((unused)))
@@ -144,9 +145,9 @@ bool Pong::onPongBallOutOfBounds(ListenerObject eventFirer __attribute__ ((unuse
 }
 ```
 
-If the EventListener returns false, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return true.
+If the `EventListener` returns false, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return true.
 
-An event is fired by calling fireEvent on an instance of ListenerObject:
+An event is fired by calling fireEvent on an instance of `ListenerObject`:
 
 ```cpp
     Pong::fireEvent(this, kEventPongRemoteInSync);

@@ -5,35 +5,35 @@ title: Game Levels
 
 # Game Levels
 
-Sprites already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of Sprites, but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
+`Sprite`s already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of `Sprite`s, but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
 
-VUEngine implements Stages as collections of a specific type of Entity: Actors.
+VUEngine implements `Stage`s as collections of a specific type of `Entity`: `Actor`s.
 
 ## Entity
 
-A Entity is a ListenerObject, so it can send and receive messages and it can listen for and fire events. It adds to it a 3D transformation, which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that transformation. Finally, it supports the attachment of Components to it. Components can be VisualComponents, like Sprites and Wireframes; BehavioralComponents, like steering behaviors; PhysicalComponents or ColliderComponents.
+A `Entity` is a `ListenerObject`, so it can send and receive messages and it can listen for and fire events. It adds to it a 3D transformation, which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that transformation. Finally, it supports the attachment of `Component`s to it. `Component`s can be visual components, like `Sprite`s and `Wireframe`s; behavioral components, like steering behaviors; physical components or collision components.
 
-The Entity class is abstract, therefore there can not be pure instances of it.
+The `Entity` class is abstract, therefore there can not be pure instances of it.
 
 
 ## Container
 
-Containers are Entitys that implement parenting by adding a local transformation relative to that of a parent Container. They are the means by which the engine implements the composite pattern.
+`Container`s are a special type of `Entity` that implement parenting by adding a local transformation relative to that of a parent `Container`. They are the means by which the engine implements the composite pattern.
 
-Containers can have children Containers, grandchildren Containers, grand-grandchildren Containers, etc.
+`Container`s can have children `Container`s, grandchildren `Container`s, grand-grandchildren `Container`s, etc.
 
-The engine takes care of keeping up to date the Containers’ transformation by concatenating their local transformations to their reference environment, which is the global transformation of the parent Container.
+The engine takes care of keeping up to date the `Container`s’ transformation by concatenating their local transformations to their reference environment, which is the global transformation of the parent `Container`.
 
-Containers can forward or block the flow of logic towards their children. They can propagate messages to them too.
+`Container`s can forward or block the flow of logic towards their children. They can propagate messages to them too.
 
-Containers are abstract too. So they are not used nor instantiated directly.
+`Container`s are abstract too. So they are not used nor instantiated directly.
 
 
 ## Stage
 
-At the root of the hierarchy of Containers, sits an instance of the Stage class. A Stage is the first type of Container and Entity that can be instantiated. It only allows instances of another specific type of Container as children: Actors. The Stage implements the logic to stream in and out Actors and is the proxy through which the GameState accesses the Actors in a game level.
+At the root of the hierarchy of `Container`s, sits an instance of the `Stage` class. A `Stage` is the first type of `Container` and `Entity` that can be instantiated. It only allows instances of another specific type of Container as children: `Actor`s. The `Stage` implements the logic to stream in and out `Actor`s and is the proxy through which the `GameState` accesses the `Actor`s in a game level.
 
-Being instantiable, the Stage has its own StageSpec to initialize it. Among a lot of other things, it has an option array of ActorSpecs that define the Actors that will populate the Stage:
+Being instantiable, the `Stage` has its own **StageSpec** to initialize it. Among a lot of other things, it has an option array of **ActorSpecs** that define the `Actor`s that will populate the `Stage`:
 
 ```cpp
 PositionedActorROMSpec StageActorsSpecs[] =
@@ -124,7 +124,7 @@ StageROMSpec StatefulActorsStageSpec =
 
 ## Actor
 
-Actors are the basic unit of game logic in VUEngine projects. They are special Containers that can be streamed in and out of Stages automatically or manually. They are configured by providing an ActorSpec that specifies, among other things, which components to attach to it when instantiated:
+`Actor`s are the basic unit of game logic in VUEngine projects. They are special `Container`s that can be streamed in and out of `Stage`s automatically or manually. They are configured by providing an **ActorSpec** that specifies, among other things, which components to attach to it when instantiated:
 
 ```cpp
 ComponentSpec* const BoxActorComponentSpecs[] = 
@@ -163,9 +163,9 @@ ActorROMSpec BoxActorSpec =
 };
 ```
 
-Actors can be instantiated and added to the Stage programmatically, that is to say that it is not mandatory to provide their specs in advance as part of the list of ActorSpecs defined in the StageSpec.
+`Actor`s can be instantiated and added to the `Stage` programmatically, that is to say that it is not mandatory to provide their specs in advance as part of the list of **ActorSpecs** defined in the **StageSpec**.
 
-To add Actors to the Stage programmatically, the following method can be used:
+To add `Actor`s to the `Stage` programmatically, the following method can be used:
 
 ```cpp
     extern ActorSpec PunkActorSpec;
@@ -182,7 +182,7 @@ To add Actors to the Stage programmatically, the following method can be used:
     Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false);
 ```
 
-Actors can be added dynamically to other Actors too:
+`Actor`s can be added dynamically to other `Actor`s too:
 
 ```cpp
     extern ActorSpec PunkActorSpec;
@@ -203,7 +203,7 @@ Actors can be added dynamically to other Actors too:
     Actor::spawnChildActor(this->leaderPunk, &positionedActor);
 ```
 
-Just as Actors are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
+Just as `Actor`s are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
 
 ```cpp
     if(NULL != childPunk)
@@ -212,9 +212,9 @@ Just as Actors are not instantiated directly, but through the shown methods, the
     }
 ```
 
-The game logic should always manipulate Actors and not Sprites, Textures or CharSets. There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, Actors are the main citizens in VUEngine based games.
+The game logic should always manipulate `Actor`s and not `Sprite`s, `Texture`s or `CharSets`. There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, `Actor`s are the main citizens in VUEngine based games.
 
-You acquire a direct reference to a newly spawned Actor when using the above methods:
+You acquire a direct reference to a newly spawned `Actor` when using the above methods:
 
 ```cpp
     /*
@@ -228,7 +228,7 @@ You acquire a direct reference to a newly spawned Actor when using the above met
         );
 ```
 
-Or you acquire it indirectly if the Actor is being added automatically by the Stage’s streaming as specified in the StageSpec:
+Or you acquire it indirectly if the `Actor` is being added automatically by the `Stage`’s streaming as specified in the **StageSpec**:
 
 ```cpp
     /*
@@ -238,7 +238,7 @@ Or you acquire it indirectly if the Actor is being added automatically by the St
     Actor childPunk = Actor::safeCast(Actor::getChildByName(this->leaderPunk, childPunkName, false));
 ```
 
-Then you can move around the Actor, rotate it, etc., and all its components will take care of keeping their states in sync with the Actor.
+Then you can move around the `Actor`, rotate it, etc., and all its components will take care of keeping their states in sync with the `Actor`.
 
 ```cpp
     if(!isDeleted(this->leaderPunk))
@@ -258,7 +258,7 @@ Then you can move around the Actor, rotate it, etc., and all its components will
     }
 ```
 
-Actor has helper methods to propagate calls related to animations, like play, pause, stop, etc., to the attached VisualComponents. This class basically facades the interactions to control Sprites’ animations.
+The `Actor` has helper methods to propagate calls related to animations, like play, pause, stop, etc., to the attached `VisualComponent`s. This class basically facades the interactions to control `Sprite`s’ animations.
 
 ```cpp
     /// Play the animation with the provided name.
@@ -305,7 +305,7 @@ Actor has helper methods to propagate calls related to animations, like play, pa
     int32 getNumberOfFrames();
 ```
 
-When you have an Actor with a Body attached to it, you can apply forces to it to move it using physics simulations:
+When you have an `Actor` with a `Body` attached to it, you can apply forces to it to move it using physics simulations:
 
 ```cpp
     Vector3D force = Vector3D::zero();
@@ -315,11 +315,11 @@ When you have an Actor with a Body attached to it, you can apply forces to it to
     Punk::applyForce(punk, &force, true);
 ```
 
-StatefulActor
+## StatefulActor
 
-A StatefulActor adds to the Actor an optional StateMachine. This is done to avoid having a superfluous call to Actor::update on Actors that don’t require a StateMachine.
+A `StatefulActor` adds to the `Actor` an optional `StateMachine`. This is done to avoid having a superfluous call to `Actor::update` on `Actor`s that don’t require a `StateMachine`.
 
-The StatefulActorSpec adds to the ActorState some fields of its own:
+The **StatefulActorSpec** adds to the **ActorSpec** some fields of its own:
 
 ```cpp
 StatefulActorROMSpec PunkStatefulActorSpec =
@@ -353,13 +353,13 @@ StatefulActorROMSpec PunkStatefulActorSpec =
 };
 ```
 
-This exemplifies how Specs are chained together for derived classes by having at the top the Spec of the base class and adding new fields, relevant to the derived class, to its Spec.
+This exemplifies how **Specs** are chained together for derived classes by having at the top the **Spec** of the base class and adding new fields, relevant to the derived class, to its Spec.
 
 ## ParticleSystem
 
-ParticleSystems are a specific kind of Actor whose purpose is to instantiate a peculiar kind of Entity: Particles.
+`ParticleSystem`s are a specific kind of `Actor` whose purpose is to instantiate a peculiar kind of `Entity`: `Particles`.
 
-As any other Actor, components can be attached to ParticleSystems and they have their own Spec that adds a few attributes to control how particles are generated:
+As any other `Actor`, components can be attached to `ParticleSystem`s and they have their own Spec that adds a few attributes to control how `Particle`s are generated:
 
 ```cpp
 ParticleSystemROMSpec StarsParticleSystemNormalSpec =
@@ -419,9 +419,9 @@ ParticleSystemROMSpec StarsParticleSystemNormalSpec =
 
 ## Particle
 
-Particles are lightweight, reusable Entitys that are instantiated by ParticleSystems. They don’t exist in the Stage as childs of it, although they can interact with other Actors by means of collisions.
+`Particle`s are a kind of lightweight, reusable `Entity`, that are instantiated by `ParticleSystem`s. They don’t exist in the `Stage` as childs of it, although they can interact with other `Actor`s by means of collisions.
 
-Particles manage their components in a more specific and constrained way than Actors in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to reduce the overhead of constantly creating and destroying them.
+`Particle`s manage their components in a more specific and constrained way than `Actor`s in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to reduce the overhead of constantly creating and destroying them.
 
 ```cpp
 ParticleROMSpec StarParticleSpec =
@@ -452,4 +452,4 @@ ParticleROMSpec StarParticleSpec =
 };
 ```
 
-Particles can have physics applied to them and they can even collide with other Entitys in a Stage.
+`Particle`s can have physics applied to them and they can even collide with other instances of `Entity` in a `Stage`.

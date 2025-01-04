@@ -29,5 +29,6 @@ A post processing effect function is one with a signature exemplified as follows
     static void wobble(uint32 currentDrawingFrameBufferSet, Entity entity);
 ```
 
-It is possible to pass a Entity to the post processing effect so the processed region of the screen can be relative to that object.
+It is possible to pass an `Entity` to the post processing effect so the processed region of the screen can be relative to that object.
+
 Depending on the effect, some might not be feasible for use on real hardware, since reading back from the framebuffers is very slow. The problem is that, for each framebuffer access, the hardware has to wait a certain amount of CPU cycles. 1 to write and 3(!) for read access. Therefore, it is advised to use post-processing effects carefully and try to manipulate only small areas of the screen. If possible, only write to, but not read from, the framebuffers.

@@ -7,11 +7,11 @@ title: Design Principles
 
 The engine has evolved over the years to implement the following patterns:
 
-## State machines
+## State Machines
 
-The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a state machine whose states must inherit from the GameState class.
+The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a `StateMachine` whose states must inherit from the `GameState` class.
 
-Any VUEngine based program must provide a GameState for the VUEngine instance’s StateMachine to enter to in the game’s starting function:
+Any VUEngine based program must provide a `GameState` for the VUEngine instance’s StateMachine to enter to in the game’s starting function:
 
 ```cpp
 int game(void)
@@ -24,7 +24,7 @@ int game(void)
 }
 ```
 
-In the state machine pattern implemented by the engine, the life cycle of any State consists of the following events:
+In the state machine pattern implemented by the engine, the life cycle of any `State` consists of the following events:
 
 ```cpp
 	/// Prepares the object to enter this state.
@@ -48,13 +48,13 @@ In the state machine pattern implemented by the engine, the life cycle of any St
 	virtual void resume(void* owner);
 ```
 
-Through the life of a program, the VUEngine instance will enter different game states, each representing a screen that is presented to the user for him to interact with.
+Through the life of a program, the `VUEngine` instance will enter different `GameState`s, each representing a screen that is presented to the user for him to interact with.
 
-StateMachines can be used by other classes, they are not exclusive to the VUEngine class. Actors, which are used to implement enemies, vehicles, etc., can use StateMachines to define the logic that drives their behavior with custom states that inherit from the generic State class.
+`StateMachines` can be used by other classes, they are not exclusive to the `VUEngine` class. `Actor`s, which are used to implement enemies, vehicles, etc., can use `StateMachines` to define the logic that drives their behavior with custom states that inherit from the generic `State` class.
 
 ## Components
 
-Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, Entity, that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of Components can be attached. The following is the complete list of the kind of components that the engine currently supports:
+Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, `Entity`, that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of `Component`s can be attached. The following is the complete list of the kind of `Component`s that the engine currently supports:
 
 ```cpp
 /// Component types
@@ -72,21 +72,21 @@ enum ComponentTypes
 };
 ```
 
-Each component keeps a reference to the object that it attaches to and takes care of updating its internal state in order to always stay in sync with the state of the relevant properties of its owner. A Sprite, for example, computes its position on the screen during the rendering subprocess according to the transformation of its owner.
+Each `Component` keeps a reference to the object that it attaches to and takes care of updating its internal state in order to always stay in sync with the state of the relevant properties of its owner. A `Sprite`, for example, computes its position on the screen during the rendering subprocess according to the transformation of its owner.
 
 ## Parenting
 
-In all possible scenarios, the VUEngine instance will enter a GameState that must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. Such objects are constructed and managed by a GameState through an instance of the Stage class. All the objects that belong to a Stage have to be instances of the Actor class. And both, it and the Stage class, inherit from the Container class, which is a special type of Entity that keeps a local transformation relative to that of another Container that acts as its parent.
+In all possible scenarios, the `VUEngine` instance will enter a `GameState` that must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. Such objects are constructed and managed by a `GameState` through an instance of the `Stage` class. All the objects that belong to a `Stage` have to be instances of the `Actor` class. And both, it and the `Stage` class, inherit from the `Container` class, which is a special type of `Entity` that keeps a local transformation relative to that of another `Container` that acts as its parent.
 
-Parenting allows easy transformation of whole sets of Actors in a Stage by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and this happens without having to manually keep track of the buttons’ absolute or global positions.
+Parenting allows easy transformation of whole sets of `Actor`s in a `Stage` by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and this happens without having to manually keep track of the buttons’ absolute or global positions.
 
 ## Decoupling
 
-Some of the earliest requirements and goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a ListenerObject class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
+Some of the earliest requirements and goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a `ListenerObject` class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
 
-Messages can be sent directly to another ListenerObject when the target is known, or they can be propagated through the Stage’s children list.
+Messages can be sent directly to another `ListenerObject` when the target is known, or they can be propagated through the `Stage`’s children list.
 
-A special kind of message, called command, can be propagated to the Components attached to a Entity.
+A special kind of message, called command, can be propagated to the `Component`s attached to a `Entity`.
 
 ## Separation of concerns 
 
@@ -103,9 +103,9 @@ The following sample code, that uses libgccvb, mangles the logic of the game wit
 
 From those arguments, some are about what to present (from coordinates in BGMAP memory space) while others are about where to present that (which WORLD to use and at which screen coordinates). The first is a data concern; the later is a mixture of hardware management and game logic concerns. Neither data related nor hardware related concerns are genuine concerns for the role that the developer adopts when solving a gaming problem. In the above example, the developer is working triple duties: hardware administrator, game programmer and artist / UI or screen designer.
 
-VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently to the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end use. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs “Spec”, as a short for “specification”:
+VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently to the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end use. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**, as a short for “specification”:
 
-The following exemplifies a Spec that specifies what to display (a Texture to be created and configured according to the provided TextureSpec) and how to display it (as a BGMAP WORLD):
+The following exemplifies a **Spec** that specifies what to display (a `Texture` to be created and configured according to the provided **TextureSpec**) and how to display it (as a BGMAP WORLD):
 
 ```cpp
 BgmapSpriteROMSpec PunkSpriteSpec =
@@ -140,7 +140,7 @@ BgmapSpriteROMSpec PunkSpriteSpec =
 	__WORLD_ON,
 };
 ```
-Then, the game programer uses the Spec to instantiate an Sprite that he can move around, rotate, hide, etc., without having to write code that crosses the line over to the field of hardware management tasks, nor has to go to the assets creator’s land:
+Then, the game programer uses the **Spec** to instantiate an `Sprite` that he can move around, rotate, hide, etc., without having to write code that crosses the line over to the field of hardware management tasks, nor has to go to the assets creator’s land:
 
 ```cpp
 	extern SpriteSpec PunkSpriteSpec;
@@ -168,6 +168,6 @@ While a game running on VUEngine could never aspire to run as fast as a feature-
 
 Some of the strategies that it uses to compensate for the heaviest of its features, like dynamic dispatching of function calls to support polymorphism, the calling cost of hot functions, or the lack of a dedicated arithmetic unit in the Virtual Boy’s CPU, are:
 
-Explicit non virtual calls on objects whose class doesn’t override a virtual method 
-Support for friend classes to access protected members (breaking encapsulation and tightly coupling some classes together)
-Fixed point math, preferably -but configurable- on 16 bit data types to prevent the promotion to 64 bit types when multiplying and dividing 32 bit data types
+* Explicit non virtual calls on objects whose class doesn’t override a virtual method 
+* Support for friend classes to access protected members (breaking encapsulation and tightly coupling some classes together)
+* Fixed point math, preferably -but configurable- on 16 bit data types to prevent the promotion to 64 bit types when multiplying and dividing 32 bit data types
