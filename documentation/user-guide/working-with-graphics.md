@@ -9,7 +9,7 @@ VUEngine now supports three kinds of visual elements that can display something 
 
 Sprites are the means by which the engine displays 2D images, while Wireframes are used to display non textured 3D geometry shapes.
 
-They are components that can be attached to GameObjects. But they can be instantiated on demand and controlled directly without the need to attach them to any GameObject. Both are created by the respective managers: the SpriteManager and the WireframeManager.
+They are components that can be attached to Entitys. But they can be instantiated on demand and controlled directly without the need to attach them to any Entity. Both are created by the respective managers: the SpriteManager and the WireframeManager.
 
 ## Sprites
 
