@@ -37,7 +37,7 @@ VES can be used with other libraries, and Team VUEngine even provides a ready to
     vbSetWorld(11, WRLD_END, 0, 0, 0, 0, 0, 0, 0, 0); // Blank world and END bit set
 ```
 
-If, on the other hand, your main concern is on creating content without mengling hardware management duties as part of it, VUEngine can make development move much faster once you get familiar with the general design principles that it follows. It can do that by letting you handle the development from a higher level of abstraction and working with sprites, sound effects, game objects, etc., instead of dealing with streams of bytes that you have to figure out when and where to write to. By using VUEngine, instead of your program dealing with the allocation of hardware resources, it will declare structures that specify what game objects and components are to be created and how the have to be configured:
+If, on the other hand, your main concern is on creating content without mengling hardware management duties as part of it, VUEngine can make development move much faster once you get familiar with the general design principles that it follows. It can do that by letting you handle the development from a higher level of abstraction and working with sprites, sound effects, game objects, etc., instead of dealing with streams of bytes that you have to figure out when and where to write to. By using VUEngine, instead of your program dealing with the allocation of hardware resources, it will declare structures that specify what game objects and components are to be created and how they are to be configured:
 
 ```cpp
 PositionedActorROMSpec WireframesStageActorSpecs[] =
@@ -57,7 +57,7 @@ PositionedActorROMSpec WireframesStageActorSpecs[] =
 };
 ```
 
-and then it will pass their references to the engine, which will manage and keep track of how your objects are assigned and use hardware resources:
+Then it has to pass their references to the engine, which will manage and keep track of how your objects are assigned and use the hardware resources:
 
 ```cpp
 void ShowcaseState::enter(void* owner __attribute__ ((unused)))

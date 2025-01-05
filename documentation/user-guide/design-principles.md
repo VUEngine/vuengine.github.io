@@ -14,13 +14,10 @@ The core of the engine is the VUEngine singleton class. It represents the progra
 Any VUEngine based program must provide a `GameState` for the VUEngine instance’s StateMachine to enter to in the game’s starting function:
 
 ```cpp
-int game(void)
+int32 game(void)
 {
 	// Start the game
-	VUEngine::start(VUEngine::getInstance(), GameState::safeCast(PrecautionScreenState::getInstance()));
-
-	// End program
-	return true;
+	return VUEngine::start(VUEngine::getInstance(), GameState::safeCast(PrecautionScreenState::getInstance()));
 }
 ```
 
@@ -171,3 +168,20 @@ Some of the strategies that it uses to compensate for the heaviest of its featur
 * Explicit non virtual calls on objects whose class doesn’t override a virtual method 
 * Support for friend classes to access protected members (breaking encapsulation and tightly coupling some classes together)
 * Fixed point math, preferably -but configurable- on 16 bit data types to prevent the promotion to 64 bit types when multiplying and dividing 32 bit data types
+
+## Safety
+
+To implement some of its OOP features, VUEngine makes extensive use of pointers and cast them aggresive through the code base. This inevitably runs the risk of using invalid pointers. To mitigate that pitfal, the engine provides a few tools and strategies.
+
+### Safe casting
+
+The engine provides methods with the form `Classname::safeCast` to safely cast objects and returns NULL in case that the object is invalid, deleted or isn't an instance of a class that derives from the one performing the call.
+
+`Classname::safeCast` decays into a plain, unsafe C cast under non debug build modes. When building in debug mode, the method `Classname::safeCast` performs a full blown RTTI, returning NULL if it fails or the same pointer casted to the desired class.
+
+When building in beta mode or below, the transpiler adds checks for the validity of the object pointer (`this`) passed to all methods. A call to `Classname::safeCast` is performed too to help track code paths that cause invalid pointers being passed to the wrong methods. This is a very costly check and can easily overflow the stack, particularly if multiplexed VIP interrupts are enabled.
+
+### Checking pointers
+
+Another tool provided to combat invalid pointers usage is the macro `isDeleted(objectPointer)`. It is advisable to always perform this check before calling any method on any object pointer.
+
