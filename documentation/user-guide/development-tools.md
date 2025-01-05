@@ -86,3 +86,4 @@ VUEngine::startProfiling(VUEngine::getInstance());
 Then, the profiler will show the following output:
 
 <img src="/documentation/images/user-guide/development-tools/profiler.png" width="500" />
+_Profiler's output_
