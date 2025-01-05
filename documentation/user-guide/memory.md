@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: Memory Allocation
+title: Memory
 ---
 
-# Memory Allocation
+# Memory
 
 To be able to efficiently allocate memory for dynamically created objects, VUEngine makes use of a `MemoryPool` construct rather than working with WRAM directly.
 
