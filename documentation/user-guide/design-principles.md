@@ -7,6 +7,17 @@ title: Design Principles
 
 The engine has evolved over the years to implement the following patterns:
 
+## Object Oriented Paradigm
+
+Since the beginning of its development, VUEngine has implemented mechanisms to support the following 3 basic features that Object Oriented Programming proposes:
+
+* Inheritance
+* Encapsulation
+* Polymorphism
+
+Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in
+order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code writen in a syntax close to that of C++'s, into standard C. We call our custom language Virtual C.
+
 ## State Machines
 
 The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a `StateMachine` whose states must inherit from the `GameState` class.
