@@ -26,7 +26,7 @@ The class modifiers are:
 
 ### Abstract classes
 
-The `abstract` class modifier prevents the creation of class instances through the `new` keyword.
+The `abstract` class modifier prevents the creation of class instances through the `new` keyword, whtout the requirement of there being at least one pure virtual method.
 
 ### Singleton classes
 

@@ -96,6 +96,7 @@ Finally, `Texture`s are displayed by `Sprite`s, either from BGMAP memory through
 ```cpp
 BgmapSpriteROMSpec PunkSpriteSpec =
 {
+	// Sprite
 	{
 		// Component
 		{
@@ -130,10 +131,56 @@ BgmapSpriteROMSpec PunkSpriteSpec =
 With these **Specs** defined, the original image can be displayed by instantiating a `Sprite` and positioning it appropriately:
 
 ```cpp
-[...]
+extern SpriteSpec PunkSpriteSpec;
+
+Sprite sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &PunkSpriteSpec);
+
+if(!isDeleted(sprite))
+{
+	PixelVector spritePosition =
+	{
+		__SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
+	};
+
+	Sprite::setPosition(sprite, &spritePosition);
+}
 ```
 
 `CharSet`s and `Texture`s are reusable, which means that multiple `Texture`s can share the same `CharSet` and that more than one `Sprite` can display the same `Texture`. The intricacies of how these relationships are worked out by the engine depend on the allocation type of the `CharSet`, which in turn depends on animations.
+
+### BGMAP Sprites
+
+The `Sprite` class cannot be directly instantiated since it is `abstract`. The first instantiable `Sprite` is the `BgmapSprite`. These use a whole VIP's WORLD to display a region of BGMAP memory.
+
+These kind of `Sprite`s support 3 display modes in function of the underlying hardware's capabilities:
+
+* BGAMP
+* AFFINE
+* H-BIAS
+
+### Affine transformations
+
+Affine transformation effects are supported both in hardware and by VUEngine. The effect to apply to a given `Sprite` is determined by the corresponding pointer in the **BgmapSpriteSpec**. If NULL, the engine applies a default full transformation by calling `Affine::transform`; otherwise, the provided affine function is applied.
+
+An affine function must have the following signature:
+
+```cpp
+static int16 BgmapSprite::someAffineEffect(BgmapSprite bgmapSprite);
+```
+
+The engine reserves a region of the param tables space for any `BgmapSprite` initialized with a `BgmapSpriteSpec` that sets its display mode as `__WORLD_AFFINE`. The manipulation of that space is done through the `param` attribute. Refer to the official Virtual Boy's documentation for the meaning of the param table for affine effects.
+
+### H-Bias effects
+
+These kind of effects apply a horizontal displacement on a per-line basis to a `Texture` that lives in BGMAP memory. This allows to achieve horizontal waving effects.
+
+```cpp
+static int16 BgmapSprite::someHBiasEffect(BgmapSprite bgmapSprite);
+```
+
+The engine reserves a region of the param tables space for any `BgmapSprite` initialized with a `BgmapSpriteSpec` that sets its display mode as `__WORLD_HBIAS`. The manipulation of that space is done through the `param` attribute. Refer to the official Virtual Boy's documentation for the meaning of the param table for h-bias effects.
+
+### OBJECT Sprites
 
 ## Wireframes
 
@@ -196,7 +243,20 @@ const PixelVector PyramidMeshesSegments[][2]=
 Then, as it was the case with `Sprite`s, a `Wireframe` can be instantiated by calling the corresponding manager:
 
 ```cpp
-[...]
+extern WireframeSpec SampleWireframeSpec;
+
+Wireframe wireframe = WireframeManager::createWireframe(WireframeManager::getInstance(), NULL, &SampleWireframeSpec);
+
+if(!isDeleted(wireframe))
+{
+	Vector3D wireframePosition =
+	{
+		-__PIXELS_TO_METERS(__SCREEN_WIDTH / 2), __PIXELS_TO_METERS(__SCREEN_HEIGHT / 2), 0, 0
+	};
+
+	Wireframe::setPosition(wireframe, &wireframePosition);
+}
+
 ```
 
 ## Printing
@@ -204,19 +264,54 @@ Then, as it was the case with `Sprite`s, a `Wireframe` can be instantiated by ca
 VUEngine uses a special `Sprite` to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
 
 ```cpp
-[...]
+	/// Print a string.
+	/// @param string: String to print
+	/// @param x: Column to start printing at
+	/// @param y: Row to start printing at
+	/// @param font: Name of font to use for printing
+	void text(const char* string, int32 x, int32 y, const char* font);
+
+	/// Print an integer value.
+	/// @param value: Integer to print
+	/// @param x: Column to start printing at
+	/// @param y: Row to start printing at
+	/// @param font: Name of font to use for printing
+	void int32(int32 value, uint8 x, uint8 y, const char* font);
+
+	/// Print a hex value.
+	/// @param value: Hex value to print
+	/// @param x: Column to start printing at
+	/// @param y: Row to start printing at
+	/// @param length: Digits to print
+	/// @param font: Name of font to use for printing
+	void hex(WORD value, uint8 x, uint8 y, uint8 length, const char* font);
+
+	/// Print a float value.
+	/// @param value: Float value to print
+	/// @param x: Column to start printing at
+	/// @param y: Row to start printing at
+	/// @param precision: How many decimals to print
+	/// @param font: Name of font to use for printing
+	void float(float value, uint8 x, uint8 y, int32 precision, const char* font);
 ```
 
 Printing is used as follows:
 
 ```cpp
-[...]
+Printing::text
+(
+	Printing::getInstance(),
+	"Hello World",
+	0,
+	0,
+	"Default"
+);
 ```
 
 To erase all printing, use:
 
 ```cpp
-[...]
+Printing::clear(Printing::getInstance());
 ```
 
 VUEngine comes with a default font for writing to the printing Layer, but you can replace it with any number of custom fonts.
@@ -233,25 +328,57 @@ The first approach puts stress on video memory since depending on the size of ea
 `CharSet`s can be shared by multiple `Texture`s. Whether this is the case or not, is determined by the shared flag of the **CharSetSpec**:
 
 ```cpp
-[...]
+CharSetROMSpec PunkCharsetSpec =
+{
+	// Number of chars in function of the number of frames to load at the same time
+	4 * 6,
+
+	// Whether it is shared or not
+	true,
+	
+	// Whether the tiles are optimized or not
+	false,
+
+	// Tiles array
+	PunkTiles,
+
+	// Frame offsets array
+	NULL,
+};
 ```
 
 When requesting a `CharSet` by providing a shared **CharSetSpec**, the engine will only allocate a `CharSet` once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU performance.
 
 The overshoot of a shared **CharSetSpec** that only allocates a single frame at any give moment is that any `Sprite` that uses a `Texture` which references that `CharSet` will show a change of animation if any of them changes the frame and that all instances will be in sync:
 
-**[IMAGE]**
+<img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" />
 
 Since it would be overkill to play animations on all `Sprite`s underlyed by a shared `CharSet`, the engine runs the animations only on the first Sprite.
 
 On the other hand, when using a non-shared **CharSetSpec** to create a `CharSet`, each request will be served with a new `CharSet` instance. This permits to having different sprites with the same graphics but displaying different frames of animation:
 
-**[IMAGE]**
+<img src="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" width="500" />
 
 To load the complete pixel data of all the animation frames of an animation, the **CharSetSpec** must specify the total amount of CHARs used by all of the:
 
 ```cpp
-[...]
+CharSetROMSpec PunkCharsetMultiframeSpec =
+{
+	// Number of chars in function of the number of frames to load at the same time
+	4 * 6 * 12,
+
+	// Whether it is shared or not
+	true,
+	
+	// Whether the tiles are optimized or not
+	false,
+
+	// Tiles array
+	PunkTiles,
+
+	// Frame offsets array
+	NULL,
+};
 ```
 
 Allocating all frames of animation has a meaning in regards to `Texture`s too. `Texture`s define how to organize the CHARs or tiles of a `CharSet` into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of `ObjectSprite`s. But when using BGMAPs with `BgmapSprite`s, the `Texture`’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.

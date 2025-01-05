@@ -116,20 +116,20 @@ VUEngine’s architectural philosophy is obsessed with the separation of these c
 The following exemplifies a **Spec** that specifies what to display (a `Texture` to be created and configured according to the provided **TextureSpec**) and how to display it (as a BGMAP WORLD):
 
 ```cpp
-BgmapSpriteROMSpec PunkSpriteSpec =
+BgmapSpriteROMSpec SomeSpriteSpec =
 {
 	{
 		// Component
 		{
 			// Allocator
-			__TYPE(BgmapAnimatedSprite),
+			__TYPE(BgmapSprite),
 
 			// Component type
 			kSpriteComponent
 		},
 
 		// Spec for the texture to display
-		(TextureSpec*)&PunkTextureSpec,
+		(TextureSpec*)&SomeTextureSpec,
 
 		// Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
 		__TRANSPARENCY_NONE,
@@ -152,18 +152,18 @@ BgmapSpriteROMSpec PunkSpriteSpec =
 Then, the game programer uses the **Spec** to instantiate an `Sprite` that he can move around, rotate, hide, etc., without having to write code that crosses the line over to the field of hardware management tasks, nor has to go to the assets creator’s land:
 
 ```cpp
-extern SpriteSpec PunkSpriteSpec;
+extern SpriteSpec SomeSpriteSpec;
 
-this->sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &PunkSpriteSpec);
+Sprite sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &SomeSpriteSpec);
 
-if(!isDeleted(this->sprite))
+if(!isDeleted(sprite))
 {
 	PixelVector spritePosition =
 	{
 		__SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
 	};
 
-	Sprite::setPosition(this->sprite, &spritePosition);
+	Sprite::setPosition(sprite, &spritePosition);
 }
 ```
 

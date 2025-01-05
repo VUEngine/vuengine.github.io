@@ -13,7 +13,8 @@ Once the image frame has been fully processed and written to the frame buffer at
 To apply a post-processing effect register it using the following call with a appropriate post processing function:
 
 ```cpp
-VUEngine::pushBackPostProcessingEffect(
+VUEngine::pushBackPostProcessingEffect
+(
     VUEngine::getInstance(),
     PostProcessingWobble::wobble,
     NULL
@@ -23,7 +24,8 @@ VUEngine::pushBackPostProcessingEffect(
 To remove a previously registered post-processing effect use the following code:
 
 ```cpp
-VUEngine::removePostProcessingEffect(
+VUEngine::removePostProcessingEffect
+(
     VUEngine::getInstance(),
     PostProcessingWobble::wobble,
     NULL
