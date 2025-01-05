@@ -66,3 +66,23 @@ It allows to modify at runtime the timer settings to test how the sound tolerate
 
 <img src="/documentation/images/user-guide/development-tools/debug-sound-test.png" width="500" />
 _Sound Test_
+
+# Profiler
+
+A `Profiler` can be used to help to spot and solve performance bottlenecks by displaying the approximate time in milliseconds that each of the engine's subprocesses take to complete.
+
+To enable the profiler, the `__ENABLE_PROFILER` macro must be defined in the game's *Config.h* header file:
+
+```cpp
+#define __ENABLE_PROFILER
+```
+
+Then, call the following at the point where profiling must start:
+
+```cpp
+VUEngine::startProfiling(VUEngine::getInstance());
+```
+
+Then, the profiler will show the following output:
+
+<img src="/documentation/images/user-guide/development-tools/profiler.png" width="500" />
