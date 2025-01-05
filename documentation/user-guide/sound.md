@@ -154,3 +154,63 @@ if(!isDeleted(sound))
 ```
 
 `Sound`s can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.
+
+## Timer settings
+
+The engine plays sounds during the timer interrupts, which are controlled by the `TimeManager`. The configuration of the hardware's timer can affect the output sound, this is a pressing fact when playing back PCM sound tracks.
+
+The timer can be configured at any time during the execution of a program, but it is usual to configure it once per `Stage`. In the **StageSpec** there is a field for the timer settings:
+
+```cpp
+/// An Stage Spec
+/// @memberof Stage
+typedef struct StageSpec
+{
+	AllocatorPointer allocator;
+
+	/// Timer config
+	struct Timer
+	{
+		/// Timer's resolution (__TIMER_100US or __TIMER_20US)
+		uint16 resolution;
+
+		/// Target elapsed time between timer interrupts
+		uint16 targetTimePerInterrupt;
+
+		/// Timer interrupt's target time units
+		uint16 targetTimePerInterrupttUnits;
+
+	} timer;
+    .
+    .
+    .
+};
+```
+
+The resolution corresponds to the hardware's capabilities of ticking at 20 or 100 us intervals. Hence, a resolution of `__TIMER_20US` allows for greater precision between interrupts.
+
+The target time per interrupt, measured either in milliseconds or in microseconds depending on the value of the target timer per interrupt units attribute (`kMS` or `kUS`), is the disired time interval between interrupts.
+
+Usually, a target timer per interrupt of 5, 10, or even 20 ms is good enough for rich sound effects and songs during gameplay. Depending on the `Stage`, firing more interrupts per second can have a negative impact on the performance of the game.
+
+In the case of PCM playback, a high frequency interrupt triggering is required to achieve acceptable sound playback and to reduce the noise, product of the fact that the VSU is not designed to reproduce such sounds and they are basically hacked together to make them possible on the platform.
+
+The next table shows some general guidance on what is achievable, although the actual results are highly dependent on the load on the `Stage`s complexity:
+
+```
+Target       Theoretical      Real          Efective       Real            
+  Hz         us/interrupt   us/interrupt   us/interrupt     Hz         Notes
+
+44000             23            -43            -40         43478        Unfeasible
+24000             42            -24            -20         23810        Unfeasible
+16000             63             -3              0         15873        Unfeasible
+11025             91             25             20         10989        Unfeasible
+ 9000            111             45             40          9009        Unfeasible
+ 8000            125             59             60          8000        Unfeasible
+ 7000            143             77             80          6993        Maximum, without animations
+ 6000            167            101            100          5988        Achievable in very simple scenes
+ 5500            182            116            120          5495        Realistic target
+ 5000            200            134            140          5000        Realistic target
+ 4500            222            156            160          4505        Realistic target, with some animations
+ 4000            250            184            180          4000        Minimum acceptable quality
+```
