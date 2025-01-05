@@ -62,4 +62,4 @@ Encapsulation support is implicitly implemented and fixed, in other words, there
 
 Dynamic or late dispatching is achieved by the custom implementation of virtual tables that are configurable at runtime.
 
-Methods that support late dispatching must be declared as `virtual` and they can optionally be pure:
+Methods that support late dispatching must be declared as `virtual` and they can optionally be pure, following C++ conventions.
