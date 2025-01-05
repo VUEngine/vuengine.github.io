@@ -14,18 +14,18 @@ Messages can be `enums` or strings that are sent between objects or propagated t
 The `ListenerObject` class implements various helper methods to send messages around:
 
 ```cpp
-    /// Send a message to another object.
-    /// @param receiver: ListenerObject that is the target of the message
-    /// @param message: The message's code
-    /// @param delay: Milliseconds to wait before sending the message
-    /// @param randomDelay: Range of a random delay in milliseconds to wait before sending the message
-    void sendMessageTo(ListenerObject receiver, uint32 message, uint32 delay, uint32 randomDelay);
+/// Send a message to another object.
+/// @param receiver: ListenerObject that is the target of the message
+/// @param message: The message's code
+/// @param delay: Milliseconds to wait before sending the message
+/// @param randomDelay: Range of a random delay in milliseconds to wait before sending the message
+void sendMessageTo(ListenerObject receiver, uint32 message, uint32 delay, uint32 randomDelay);
 
-    /// Send a message to itself.
-    /// @param message: The message's code
-    /// @param delay: Milliseconds to wait before sending the message
-    /// @param randomDelay: Range of a random delay in milliseconds to wait before sending the message
-    void sendMessageToSelf(uint32 message, uint32 delay, uint32 randomDelay);
+/// Send a message to itself.
+/// @param message: The message's code
+/// @param delay: Milliseconds to wait before sending the message
+/// @param randomDelay: Range of a random delay in milliseconds to wait before sending the message
+void sendMessageToSelf(uint32 message, uint32 delay, uint32 randomDelay);
 ```
 
 These are useful when, for example, an `Actor` processing a collision needs to inform the colliding `Entity` about it.
@@ -45,7 +45,7 @@ bool Projectile::collisionStarts(const CollisionInformation* collisionInformatio
                 {
                     Projectile::sendMessageTo
                     (
-                        0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity), 
+                        0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity),
                         kMessageProjectileHitYou, NULL
                     );
                 }
@@ -65,7 +65,7 @@ bool Enemy::handleMessage(Telegram telegram)
     switch(Telegram::getMessage(telegram))
     {
         case kMessageProjectileHitYou:
-            {                
+            {
                 Enemy::hitByProjectile(this);
             }
             break;
@@ -88,7 +88,7 @@ bool PongState::onRemoteGoneAway(ListenerObject eventFirer __attribute__((unused
 }
 ```
 
-And any interested `Entity` can process the message and let it be forwarded to other instance of `Entity`, but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-: 
+And any interested `Entity` can process the message and let it be forwarded to other instance of `Entity`, but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
 
 ```cpp
 bool PongBall::handlePropagatedMessage(int32 message)
@@ -121,10 +121,10 @@ void Entity::hide()
 To listen for events, an `EventListener` plus a scope object must be attached to a `ListenerObject`:
 
 ```cpp
-    Pong::addEventListener
-    (
-        this, ListenerObject::safeCast(this), (EventListener)Pong::onPongBallOutOfBounds, kEventPongBallStreamedOut
-    );
+Pong::addEventListener
+(
+    this, ListenerObject::safeCast(this), (EventListener)Pong::onPongBallOutOfBounds, kEventPongBallStreamedOut
+);
 ```
 
 An `EventListener` method must return a boolean and receive a `ListenerObject` as the event firer:
@@ -150,5 +150,5 @@ If the `EventListener` returns false, it is removed from the eventFirer’s list
 An event is fired by calling fireEvent on an instance of `ListenerObject`:
 
 ```cpp
-    Pong::fireEvent(this, kEventPongRemoteInSync);
+Pong::fireEvent(this, kEventPongRemoteInSync);
 ```

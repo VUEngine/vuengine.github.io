@@ -30,7 +30,7 @@ RumbleEffectROMSpec PointRumbleEffectSpec =
 To produce the effect, call `RumbleManager::startEffect` with a valid **RumbleEffectSpec**:
 
 ```cpp
-    extern RumbleEffectSpec PointRumbleEffectSpec;
-    
-    RumbleManager::startEffect(&PointRumbleEffectSpec);
+extern RumbleEffectSpec PointRumbleEffectSpec;
+
+RumbleManager::startEffect(&PointRumbleEffectSpec);
 ```

@@ -129,28 +129,28 @@ The VUEngine’s sound player is flexible enough to support all sound effects th
 To reproduce a sound, a request to the `SoundManager`’s instance can be performed as shown below:
 
 ```cpp
-    SoundManager::playSound
-    (
-        SoundManager::getInstance(), soundSpec, (const Vector3D*)&this->transformation.position, 
-        kSoundPlaybackNormal, NULL, NULL
-    );
+SoundManager::playSound
+(
+    SoundManager::getInstance(), soundSpec, (const Vector3D*)&this->transformation.position,
+    kSoundPlaybackNormal, NULL, NULL
+);
 ```
 
 A `Sound` can be acquired to control its playback as follows:
 
 ```cpp
-    extern SoundSpec SampleSoundSpec;
+extern SoundSpec SampleSoundSpec;
 
-    Sound sound = SoundManager::getSound(SoundManager::getInstance(), &SampleSoundSpec, NULL, NULL);
+Sound sound = SoundManager::getSound(SoundManager::getInstance(), &SampleSoundSpec, NULL, NULL);
 ```
 
 Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling `Sound::play`:
 
 ```cpp
-    if(!isDeleted(sound))
-    {
-        Sound::play(sound, &this->transformation.position, kSoundPlaybackFadeIn);
-    }
+if(!isDeleted(sound))
+{
+    Sound::play(sound, &this->transformation.position, kSoundPlaybackFadeIn);
+}
 ```
 
 `Sound`s can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.

@@ -18,8 +18,8 @@ static inline Vector3D Vector3D::scalarProduct(Vector3D vector, fixed_t scalar)
 {
 	return (Vector3D)
 	{
-		__FIXED_MULT(vector.x, scalar), 
-		__FIXED_MULT(vector.y, scalar), 
+		__FIXED_MULT(vector.x, scalar),
+		__FIXED_MULT(vector.y, scalar),
 		__FIXED_MULT(vector.z, scalar)
 	};
 }
@@ -35,8 +35,8 @@ static inline Vector3D Vector3D::scalarDivision(Vector3D vector, fixed_t scalar)
 
 	return (Vector3D)
 	{
-		__FIXED_DIV(vector.x, scalar), 
-		__FIXED_DIV(vector.y, scalar), 
+		__FIXED_DIV(vector.x, scalar),
+		__FIXED_DIV(vector.y, scalar),
 		__FIXED_DIV(vector.z, scalar)
 	};
 }
@@ -105,10 +105,9 @@ Since a great deal of game logic has to do with moving Actors around, but workin
 ```
 
 ```cpp
-    Vector3D position = Vector3D::getFromPixelVector((PixelVector){0, 64, 0, 0});
+Vector3D position = Vector3D::getFromPixelVector((PixelVector){0, 64, 0, 0});
 
-    Punk::setLocalPosition(this, &position);
+Punk::setLocalPosition(this, &position);
 ```
 
 When the Camera is located at coordinate [0, 0, 0] in 3D space, that is in meters, with no rotation around any axis, the corresponding physical pixel in the real world is [192, 112, 0] in real word. It means that in screen coordinates, the top left corner of the screen is at [-192, -112, 0], while the bottom right one is at [192, 112, 0]. In other words, if an ActorSpec is loaded at the screen coordinate [0, 0, 0], it will show up at the center of the screen when the Camera hasn’t been moved or rotated.
-
