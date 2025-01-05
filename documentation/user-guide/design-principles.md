@@ -35,25 +35,25 @@ int32 game(void)
 In the state machine pattern implemented by the engine, the life cycle of any `State` consists of the following events:
 
 ```cpp
-	/// Prepares the object to enter this state.
-	/// @param owner: Object that is entering in this state
-	virtual void enter(void* owner);
+/// Prepares the object to enter this state.
+/// @param owner: Object that is entering in this state
+virtual void enter(void* owner);
 
-	/// Updates the object in this state.
-	/// @param owner: Object that is in this state
-	virtual void execute(void* owner);
-	
-	/// Prepares the object to exit this state.
-	/// @param owner: Object that is exiting this state
-	virtual void exit(void* owner);
+/// Updates the object in this state.
+/// @param owner: Object that is in this state
+virtual void execute(void* owner);
 
-	/// Prepares the object to become inactive in this state.
-	/// @param owner: Object that is in this state
-	virtual void suspend(void* owner);
+/// Prepares the object to exit this state.
+/// @param owner: Object that is exiting this state
+virtual void exit(void* owner);
 
-	/// Prepares the object to become active in this state.
-	/// @param owner: Object that is in this state
-	virtual void resume(void* owner);
+/// Prepares the object to become inactive in this state.
+/// @param owner: Object that is in this state
+virtual void suspend(void* owner);
+
+/// Prepares the object to become active in this state.
+/// @param owner: Object that is in this state
+virtual void resume(void* owner);
 ```
 
 Through the life of a program, the `VUEngine` instance will enter different `GameState`s, each representing a screen that is presented to the user for him to interact with.
@@ -96,17 +96,17 @@ Messages can be sent directly to another `ListenerObject` when the target is kno
 
 A special kind of message, called command, can be propagated to the `Component`s attached to a `Entity`.
 
-## Separation of concerns 
+## Separation of concerns
 
 At the core of the engine’s principles lies the idea of separating audiovisual data from gaming logic, and both from hardware management logic. Management of the Virtual Boy’s hardware is something that all programs, games or not, require in order to do something meaningful with the platform. And it boils down, in all cases, to the manipulation of the same registers, memory addresses and what not, with the appropriate values to achieve a specific result among all the possible ones.
 
 The following sample code, that uses libgccvb, mangles the logic of the game with implicit knowledge of its data and of the hardware’s state:
 
 ```cpp
-        vbSetWorld(31, WRLD_ON, 0, 0, 0, 0, 0, 0, 384, 224); // Background
-        vbSetWorld(30, WRLD_ON, 384, 0, 0, 0, 0, 0, 384, 224); // Background
-        vbSetWorld(29, WRLD_ON, -1, 0, -1, 0, 0, 0, 0, 0); // blank
-        vbSetWorld(28, WRLD_ON, 40, -1, 0, 32, 0, 0, 335, 32); // Password
+vbSetWorld(31, WRLD_ON, 0, 0, 0, 0, 0, 0, 384, 224); // Background
+vbSetWorld(30, WRLD_ON, 384, 0, 0, 0, 0, 0, 384, 224); // Background
+vbSetWorld(29, WRLD_ON, -1, 0, -1, 0, 0, 0, 0, 0); // blank
+vbSetWorld(28, WRLD_ON, 40, -1, 0, 32, 0, 0, 335, 32); // Password
 ```
 
 From those arguments, some are about what to present (from coordinates in BGMAP memory space) while others are about where to present that (which WORLD to use and at which screen coordinates). The first is a data concern; the later is a mixture of hardware management and game logic concerns. Neither data related nor hardware related concerns are genuine concerns for the role that the developer adopts when solving a gaming problem. In the above example, the developer is working triple duties: hardware administrator, game programmer and artist / UI or screen designer.
@@ -148,22 +148,23 @@ BgmapSpriteROMSpec PunkSpriteSpec =
 	__WORLD_ON,
 };
 ```
+
 Then, the game programer uses the **Spec** to instantiate an `Sprite` that he can move around, rotate, hide, etc., without having to write code that crosses the line over to the field of hardware management tasks, nor has to go to the assets creator’s land:
 
 ```cpp
-	extern SpriteSpec PunkSpriteSpec;
+extern SpriteSpec PunkSpriteSpec;
 
-	this->sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &PunkSpriteSpec);
+this->sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &PunkSpriteSpec);
 
-	if(!isDeleted(this->sprite))
+if(!isDeleted(this->sprite))
+{
+	PixelVector spritePosition =
 	{
-		PixelVector spritePosition = 
-        {
-            __SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
-        };
+		__SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
+	};
 
-		Sprite::setPosition(this->sprite, &spritePosition);
-	}
+	Sprite::setPosition(this->sprite, &spritePosition);
+}
 ```
 
 Internally, the VUEngine’s core will figure out dynamically where to display what the programmer has requested to be displayed, while that which has to be displayed has already been defined elsewhere, not by the game programmer, but by the game designer or artist.
@@ -176,9 +177,9 @@ While a game running on VUEngine could never aspire to run as fast as a feature-
 
 Some of the strategies that it uses to compensate for the heaviest of its features, like dynamic dispatching of function calls to support polymorphism, the calling cost of hot functions, or the lack of a dedicated arithmetic unit in the Virtual Boy’s CPU, are:
 
-* Explicit non virtual calls on objects whose class doesn’t override a virtual method 
-* Support for friend classes to access protected members (breaking encapsulation and tightly coupling some classes together)
-* Fixed point math, preferably -but configurable- on 16 bit data types to prevent the promotion to 64 bit types when multiplying and dividing 32 bit data types
+- Explicit non virtual calls on objects whose class doesn’t override a virtual method
+- Support for friend classes to access protected members (breaking encapsulation and tightly coupling some classes together)
+- Fixed point math, preferably -but configurable- on 16 bit data types to prevent the promotion to 64 bit types when multiplying and dividing 32 bit data types
 
 ## Safety
 
@@ -195,4 +196,3 @@ When building in beta mode or below, the transpiler adds checks for the validity
 ### Checking pointers
 
 Another tool provided to combat invalid pointers usage is the macro `isDeleted(objectPointer)`. It is advisable to always perform this check before calling any method on any object pointer.
-

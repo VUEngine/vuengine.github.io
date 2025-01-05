@@ -15,7 +15,6 @@ A `Entity` is a `ListenerObject`, so it can send and receive messages and it can
 
 The `Entity` class is abstract, therefore there can not be pure instances of it.
 
-
 ## Container
 
 `Container`s are a special type of `Entity` that implement parenting by adding a local transformation relative to that of a parent `Container`. They are the means by which the engine implements the composite pattern.
@@ -27,7 +26,6 @@ The engine takes care of keeping up to date the `Container`s’ transformation b
 `Container`s can forward or block the flow of logic towards their children. They can propagate messages to them too.
 
 `Container`s are abstract too. So they are not used nor instantiated directly.
-
 
 ## Stage
 
@@ -41,7 +39,7 @@ PositionedActorROMSpec StageActorsSpecs[] =
     {&PunkActorSpec,        {0, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
     {&BoxActorSpec,         {150, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
     {&CogWheelActorSpec,    {-150, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
-	
+
     {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
 ```
@@ -127,7 +125,7 @@ StageROMSpec StatefulActorsStageSpec =
 `Actor`s are the basic unit of game logic in VUEngine projects. They are special `Container`s that can be streamed in and out of `Stage`s automatically or manually. They are configured by providing an **ActorSpec** that specifies, among other things, which components to attach to it when instantiated:
 
 ```cpp
-ComponentSpec* const BoxActorComponentSpecs[] = 
+ComponentSpec* const BoxActorComponentSpecs[] =
 {
 	(ComponentSpec*)&BoxSpriteSpec,
 	(ComponentSpec*)&BoxColliderSpec1,
@@ -168,48 +166,48 @@ ActorROMSpec BoxActorSpec =
 To add `Actor`s to the `Stage` programmatically, the following method can be used:
 
 ```cpp
-    extern ActorSpec PunkActorSpec;
-	
-    PositionedActor positionedActor = 
-    {
-        &PunkActorSpec, {0, 64, 16}, {0, 0, 0}, {1, 1, 1},  0, "Moe", NULL, NULL, false
-    };
+extern ActorSpec PunkActorSpec;
 
-    /*
-    * This is how we add actors to the Stage. Notice that we don't creates Sprites nor animate them
-    * directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
-    */
-    Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false);
+PositionedActor positionedActor =
+{
+    &PunkActorSpec, {0, 64, 16}, {0, 0, 0}, {1, 1, 1},  0, "Moe", NULL, NULL, false
+};
+
+/*
+* This is how we add actors to the Stage. Notice that we don't creates Sprites nor animate them
+* directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
+*/
+Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false);
 ```
 
 `Actor`s can be added dynamically to other `Actor`s too:
 
 ```cpp
-    extern ActorSpec PunkActorSpec;
+extern ActorSpec PunkActorSpec;
 
-    PositionedActor positionedActor = 
-    {
-        &PunkActorSpec,
-        {0, 0, 0},
-        {0, 0, 0},
-        {1, 1, 1},
-        0,
-        childPunkName,
-        NULL,
-        NULL,
-        false
-    };
+PositionedActor positionedActor =
+{
+    &PunkActorSpec,
+    {0, 0, 0},
+    {0, 0, 0},
+    {1, 1, 1},
+    0,
+    childPunkName,
+    NULL,
+    NULL,
+    false
+};
 
-    Actor::spawnChildActor(this->leaderPunk, &positionedActor);
+Actor::spawnChildActor(this->leaderPunk, &positionedActor);
 ```
 
 Just as `Actor`s are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
 
 ```cpp
-    if(NULL != childPunk)
-    {
-        Actor::deleteMyself(childPunk);
-    }
+if(NULL != childPunk)
+{
+    Actor::deleteMyself(childPunk);
+}
 ```
 
 The game logic should always manipulate `Actor`s and not `Sprite`s, `Texture`s or `CharSets`. There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, `Actor`s are the main citizens in VUEngine based games.
@@ -217,102 +215,102 @@ The game logic should always manipulate `Actor`s and not `Sprite`s, `Texture`s o
 You acquire a direct reference to a newly spawned `Actor` when using the above methods:
 
 ```cpp
-    /*
-    * This is how we add actors to the Stage. Notice that we don't creates Sprites nor animate them
-    * directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
-    */
-    this->leaderPunk = 
-        Actor::safeCast
-        (
-            Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false)
-        );
+/*
+* This is how we add actors to the Stage. Notice that we don't creates Sprites nor animate them
+* directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
+*/
+this->leaderPunk =
+    Actor::safeCast
+    (
+        Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false)
+    );
 ```
 
 Or you acquire it indirectly if the `Actor` is being added automatically by the `Stage`’s streaming as specified in the **StageSpec**:
 
 ```cpp
-    /*
-    * Let's see if the punk already has a child with the selected name.
-    * If not, then create and add it as a child.
-    */
-    Actor childPunk = Actor::safeCast(Actor::getChildByName(this->leaderPunk, childPunkName, false));
+/*
+* Let's see if the punk already has a child with the selected name.
+* If not, then create and add it as a child.
+*/
+Actor childPunk = Actor::safeCast(Actor::getChildByName(this->leaderPunk, childPunkName, false));
 ```
 
 Then you can move around the `Actor`, rotate it, etc., and all its components will take care of keeping their states in sync with the `Actor`.
 
 ```cpp
-    if(!isDeleted(this->leaderPunk))
-    {
-        Vector3D translation = Vector3D::zero();
-        Rotation localRotation = *Actor::getLocalRotation(this->leaderPunk);
+if(!isDeleted(this->leaderPunk))
+{
+    Vector3D translation = Vector3D::zero();
+    Rotation localRotation = *Actor::getLocalRotation(this->leaderPunk);
 
-        translation.x = __PIXELS_TO_METERS(1);
-        translation.z++;
-        localRotation.y = __I_TO_FIX10_6(255);
+    translation.x = __PIXELS_TO_METERS(1);
+    translation.z++;
+    localRotation.y = __I_TO_FIX10_6(255);
 
-        // Add a translation to the leader punk
-        Actor::translate(this->leaderPunk, &translation);
+    // Add a translation to the leader punk
+    Actor::translate(this->leaderPunk, &translation);
 
-        // Make it to face left or right by rotating it around its Y axis
-        Actor::setLocalRotation(this->leaderPunk, &localRotation);
-    }
+    // Make it to face left or right by rotating it around its Y axis
+    Actor::setLocalRotation(this->leaderPunk, &localRotation);
+}
 ```
 
 The `Actor` has helper methods to propagate calls related to animations, like play, pause, stop, etc., to the attached `VisualComponent`s. This class basically facades the interactions to control `Sprite`s’ animations.
 
 ```cpp
-    /// Play the animation with the provided name.
-    /// @param animationName: Name of the animation to play
-    void playAnimation(const char* animationName);
+/// Play the animation with the provided name.
+/// @param animationName: Name of the animation to play
+void playAnimation(const char* animationName);
 
-    /// Pause or unpause the currently playing animation if any.
-    /// @param pause: Flag that signals if the animation must be paused or unpaused
-    void pauseAnimation(bool pause);
+/// Pause or unpause the currently playing animation if any.
+/// @param pause: Flag that signals if the animation must be paused or unpaused
+void pauseAnimation(bool pause);
 
-    /// Stop any playing animation if any.
-    void stopAnimation();
+/// Stop any playing animation if any.
+void stopAnimation();
 
-    /// Check if an animation is playing.
-    /// @return True if an animation is playing; false otherwise
-    bool isPlaying();
+/// Check if an animation is playing.
+/// @return True if an animation is playing; false otherwise
+bool isPlaying();
 
-    /// Check if the animation whose name is provided is playing.
-    /// @param animationName: Name of the animation to check
-    /// @return True if an animation is playing; false otherwise
-    bool isPlayingAnimation(char* animationName);
+/// Check if the animation whose name is provided is playing.
+/// @param animationName: Name of the animation to check
+/// @return True if an animation is playing; false otherwise
+bool isPlayingAnimation(char* animationName);
 
-    /// Retrieve the animation function's name currently playing if any
-    /// @return Animation function's name currently playing if any
-    const char* getPlayingAnimationName();
+/// Retrieve the animation function's name currently playing if any
+/// @return Animation function's name currently playing if any
+const char* getPlayingAnimationName();
 
-    /// Skip the currently playing animation to the provided frame.
-    /// @param frame: The frame of the playing animation to skip to
-    /// @return True if the actual frame was changed; false otherwise
-    void setActualFrame(int16 frame);
+/// Skip the currently playing animation to the provided frame.
+/// @param frame: The frame of the playing animation to skip to
+/// @return True if the actual frame was changed; false otherwise
+void setActualFrame(int16 frame);
 
-    /// Skip the currently playing animation to the next frame.
-    void nextFrame();
+/// Skip the currently playing animation to the next frame.
+void nextFrame();
 
-    /// Rewind the currently playing animation to the previous frame.
-    void previousFrame();
+/// Rewind the currently playing animation to the previous frame.
+void previousFrame();
 
-    /// Retrieve the actual frame of the playing animation if any.
-    /// @return Actual frame of the playing animation if any
-    int16 getActualFrame();
+/// Retrieve the actual frame of the playing animation if any.
+/// @return Actual frame of the playing animation if any
+int16 getActualFrame();
 
-    /// Retrieve the number of frames in the currently playing animation if any.
-    /// @return The numer of frames if an animation is playing; o otherwise
-    int32 getNumberOfFrames();
+/// Retrieve the number of frames in the currently playing animation if any.
+/// @return The numer of frames if an animation is playing; o otherwise
+int32 getNumberOfFrames();
 ```
 
 When you have an `Actor` with a `Body` attached to it, you can apply forces to it to move it using physics simulations:
 
 ```cpp
-    Vector3D force = Vector3D::zero();
-            
-    force.x = Body::getMass(Punk::getBody(punk)) << 1;
+Vector3D force = Vector3D::zero();
 
-    Punk::applyForce(punk, &force, true);
+force.x = Body::getMass(Punk::getBody(punk)) << 1;
+
+Punk::applyForce(punk, &force, true);
 ```
 
 ## StatefulActor

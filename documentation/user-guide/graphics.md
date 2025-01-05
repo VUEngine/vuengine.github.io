@@ -21,7 +21,7 @@ A `CharSet` represents one or more CHARs and treats them as a single unit. These
 
 Take the following image as an example from which a **CharSetSpec** will be defined:
 
-<img src="/documentation/images/user-guide/working-with-graphics/punk-chars.png" width="300" />
+<img src="/documentation/images/user-guide/graphics/punk-chars.png" width="300" />
 
 The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The **Spec** that defines it is the following:
 
@@ -45,11 +45,11 @@ CharSetROMSpec PunkCharsetSpec =
 };
 ```
 
-`CharSet`s can have a unique usage or they can be shared to display more than one copy of the same image without increasing the memory footprint in the CHAR memory space. In the above example, the __PunkTiles__ is a reference to the array that actually holds the pixel data.
+`CharSet`s can have a unique usage or they can be shared to display more than one copy of the same image without increasing the memory footprint in the CHAR memory space. In the above example, the **PunkTiles** is a reference to the array that actually holds the pixel data.
 
 CHAR memory is arranged as a unidimensional array. Visually, it would look like this:
 
-<img src="/documentation/images/user-guide/working-with-graphics/punk-char-memory.png" />
+<img src="/documentation/images/user-guide/graphics/punk-char-memory.png" />
 
 In such an arrangement, the CHARs or tiles of this `CharSet` cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the CHARs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the `CharSet`, are used to provide such bidimensional order. In the engine these are encapsulated in a Texture class.
 

@@ -5,36 +5,36 @@ title: Introduction
 
 # Introduction
 
-So, you want to create some awesome game or application for the Nintendo Virtual Boy, or you just want to display stereoscopic graphics or even only to play music or sound effects on it. If you have already downloaded VUEngine Studio (VES for short) for any of that, it is most likely because you are not planning on writing assembly code, but C, and might already be wondering if VUEngine is the right tool to use to achieve your goals. 
+So, you want to create some awesome game or application for the Nintendo Virtual Boy, or you just want to display stereoscopic graphics or even only to play music or sound effects on it. If you have already downloaded VUEngine Studio (VES for short) for any of that, it is most likely because you are not planning on writing assembly code, but C, and might already be wondering if VUEngine is the right tool to use to achieve your goals.
 
-VES can be used with other libraries, and Team VUEngine even provides a ready to be used version of libgccvb, a basic set of functions that give access to the hardware features if you want to manage all the low level stuff yourself. With it, you will be controlling down to the hardware’s registers and memory level, most likely mixing data within the code that implements the logic of the game to do basic stuff like displaying some graphics, keeping track of mapping screen coordinates to video memory coordinates, among other things: 
+VES can be used with other libraries, and Team VUEngine even provides a ready to be used version of libgccvb, a basic set of functions that give access to the hardware features if you want to manage all the low level stuff yourself. With it, you will be controlling down to the hardware’s registers and memory level, most likely mixing data within the code that implements the logic of the game to do basic stuff like displaying some graphics, keeping track of mapping screen coordinates to video memory coordinates, among other things:
 
 ```cpp
-    copymem ((void*) CharSeg0, (void*)chPass, 512*16);
-    copymem ((void*) BGMap(0), (void*)bgPass, 512*16);
-    copymem ((void*) BGMap(1), (void*)bgPassbg, 512*16);
+copymem ((void*) CharSeg0, (void*)chPass, 512*16);
+copymem ((void*) BGMap(0), (void*)bgPass, 512*16);
+copymem ((void*) BGMap(1), (void*)bgPassbg, 512*16);
 
-    vbSetWorld(31, WRLD_ON, 0, 0, 0, 0, 0, 0, 384, 224); // Background
-    vbSetWorld(30, WRLD_ON, 384, 0, 0, 0, 0, 0, 384, 224); // Background
-    vbSetWorld(29, WRLD_ON, -1, 0, -1, 0, 0, 0, 0, 0); // blank
-    vbSetWorld(28, WRLD_ON, 40, -1, 0, 32, 0, 0, 335, 32); // Password
-    vbSetWorld(27, WRLD_ON, 44, -2, 88, 72, 0, 64, 32, 56); // Field Arrows
-    vbSetWorld(26, WRLD_ON, 84, -2, 96, 112, 0, 72, 152, 40); // [] [] [] []
-    vbSetWorld(25, WRLD_ON, 92, -2, 104, 16, 0, 200, 16, 24); // 1st number
-    vbSetWorld(24, WRLD_ON, 132, -2, 104, 16, 0, 200, 16, 24); // 2nd number
-    vbSetWorld(23, WRLD_ON, 172, -2, 104, 16, 0, 200, 16, 24); // 3rd number
-    vbSetWorld(22, WRLD_ON, 212, -2, 104, 16, 0, 200, 16, 24); // 4th number
-    vbSetWorld(21, WRLD_ON, -1, 0, -1, 0, 0, 0, 0, 0); // Invalid Password / Password Accepted
-    vbSetWorld(20, WRLD_ON, 40, -2, 200,  48, 0, 176, 224, 23); // +:Select A:Confirm B:Back
-    vbSetWorld(19, WRLD_ON, 0, -1, 0, 0, 0, 32, 32, 32); // Block 1
-    vbSetWorld(18, WRLD_ON, 0, -2, 32, 0, 0, 32, 32, 32); // Block 2
-    vbSetWorld(17, WRLD_ON, 0, -1, 64, 0, 0, 32, 32, 32); // Block 3
-    vbSetWorld(16, WRLD_ON, 0, -2, 96, 0, 0, 32, 32, 32); // Block 4
-    vbSetWorld(15, WRLD_ON, 0, -1, 128, 0, 0, 32, 32, 32); // Block 5
-    vbSetWorld(14, WRLD_ON, 0, -2, 160, 0, 0, 32, 32, 32); // Block 6
-    vbSetWorld(13, WRLD_ON, 0, -1, 192, 0, 0, 32, 32, 32); // Block 7
-    vbSetWorld(12, WRLD_ON, 40, -1, 48, 32, 0, 136, 192, 8); // Enter A Password:
-    vbSetWorld(11, WRLD_END, 0, 0, 0, 0, 0, 0, 0, 0); // Blank world and END bit set
+vbSetWorld(31, WRLD_ON, 0, 0, 0, 0, 0, 0, 384, 224); // Background
+vbSetWorld(30, WRLD_ON, 384, 0, 0, 0, 0, 0, 384, 224); // Background
+vbSetWorld(29, WRLD_ON, -1, 0, -1, 0, 0, 0, 0, 0); // blank
+vbSetWorld(28, WRLD_ON, 40, -1, 0, 32, 0, 0, 335, 32); // Password
+vbSetWorld(27, WRLD_ON, 44, -2, 88, 72, 0, 64, 32, 56); // Field Arrows
+vbSetWorld(26, WRLD_ON, 84, -2, 96, 112, 0, 72, 152, 40); // [] [] [] []
+vbSetWorld(25, WRLD_ON, 92, -2, 104, 16, 0, 200, 16, 24); // 1st number
+vbSetWorld(24, WRLD_ON, 132, -2, 104, 16, 0, 200, 16, 24); // 2nd number
+vbSetWorld(23, WRLD_ON, 172, -2, 104, 16, 0, 200, 16, 24); // 3rd number
+vbSetWorld(22, WRLD_ON, 212, -2, 104, 16, 0, 200, 16, 24); // 4th number
+vbSetWorld(21, WRLD_ON, -1, 0, -1, 0, 0, 0, 0, 0); // Invalid Password / Password Accepted
+vbSetWorld(20, WRLD_ON, 40, -2, 200,  48, 0, 176, 224, 23); // +:Select A:Confirm B:Back
+vbSetWorld(19, WRLD_ON, 0, -1, 0, 0, 0, 32, 32, 32); // Block 1
+vbSetWorld(18, WRLD_ON, 0, -2, 32, 0, 0, 32, 32, 32); // Block 2
+vbSetWorld(17, WRLD_ON, 0, -1, 64, 0, 0, 32, 32, 32); // Block 3
+vbSetWorld(16, WRLD_ON, 0, -2, 96, 0, 0, 32, 32, 32); // Block 4
+vbSetWorld(15, WRLD_ON, 0, -1, 128, 0, 0, 32, 32, 32); // Block 5
+vbSetWorld(14, WRLD_ON, 0, -2, 160, 0, 0, 32, 32, 32); // Block 6
+vbSetWorld(13, WRLD_ON, 0, -1, 192, 0, 0, 32, 32, 32); // Block 7
+vbSetWorld(12, WRLD_ON, 40, -1, 48, 32, 0, 136, 192, 8); // Enter A Password:
+vbSetWorld(11, WRLD_END, 0, 0, 0, 0, 0, 0, 0, 0); // Blank world and END bit set
 ```
 
 If, on the other hand, your main concern is on creating content without mengling hardware management duties as part of it, VUEngine can make development move much faster once you get familiar with the general design principles that it follows. It can do that by letting you handle the development from a higher level of abstraction and working with sprites, sound effects, game objects, etc., instead of dealing with streams of bytes that you have to figure out when and where to write to. By using VUEngine, instead of your program dealing with the allocation of hardware resources, it will declare structures that specify what game objects and components are to be created and how they are to be configured:
@@ -65,11 +65,11 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
     Base::enter(this, owner);
 
     if(NULL != this->stageSpec)
-    {		
+    {
         ShowcaseState::configureStage(this, this->stageSpec, NULL);
     }
-    .
-    .
+
+    ...
 ```
 
 ## Overview

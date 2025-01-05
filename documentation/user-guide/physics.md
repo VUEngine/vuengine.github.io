@@ -5,11 +5,11 @@ title: Physics
 
 # Physics
 
-The engine provides basic physics simulations by means of the Body component and collisions through various classes of Colliders.
+The engine provides basic physics simulations by means of the `Body` component and collisions through various classes of Colliders.
 
 ## Body
 
-A Body is a Component that attaches to a Entity. It has basic properties like mass, friction, bounciness, maximum speed and maximum velocity, etc. A BodySpec determines how to initialize these properties when instantiating a Body:
+A `Body` is a Component that attaches to a `Entity`. It has basic properties like mass, friction, bounciness, maximum speed and maximum velocity, etc. A `BodySpec` determines how to initialize these properties when instantiating a Body:
 
 ```cpp
 BodyROMSpec PunkBodySpec =
@@ -51,11 +51,11 @@ BodyROMSpec PunkBodySpec =
 
 ## Collider
 
-A Collider is a Component that attaches to a Entity and is capable of sensing collisions with other Colliders and informing its owner about these events.
+A `Collider` is a Component that attaches to a `Entity` and is capable of sensing collisions with other `Collider`s and informing its owner about these events.
 
-The engine provides a few kinds of Colliders: Balls, Boxes, LineFields.
+The engine provides a few kinds of Colliders: `Ball`s, `Box`es, `LineField`s.
 
-The typical ColliderSpec looks like the following:
+The typical `ColliderSpec` looks like the following:
 
 ```cpp
 ColliderROMSpec PunkColliderSpec =
@@ -92,7 +92,6 @@ ColliderROMSpec PunkColliderSpec =
 };
 ```
 
+In order to reduce the number of collision checks as much as possible, the `Collider` can be configured to be passive: it doesn’t check for collisions itself, but others can still check for collisions against it. Another property used to improve performance is the layers in which a `Collider` logically exists. This, in conjunction with the property that defines layers to ignore when checking for collisions, helps to reduce the number of tests per game cycle. For example, A solid `Particle` might need to bounce when colliding with the floor, but it doesn’t need to test if it collides with an item; in this case, the item’s `Collider` may be set to live in a collision layer that the `Particle`’s collider ignores.
 
-In order to reduce the number of collision checks as much as possible, the Collider can be configured to be passive: it doesn’t check for collisions itself, but others can still check for collisions against it. Another property used to improve performance is the layers in which a Collider logically exists. This, in conjunction with the property that defines layers to ignore when checking for collisions, helps to reduce the number of tests per game cycle. For example, A solid Particle might need to bounce when colliding with the floor, but it doesn’t need to test if it collides with an item; in this case, the item’s Collider may be set to live in a collision layer that the Particle’s collider ignores.
-
-Besides memory and performance, there are no other limitations with regards to how many Colliders can be added to the same Entity. 
+Besides memory and performance, there are no other limitations with regards to how many `Collider`s can be added to the same `Entity`.
