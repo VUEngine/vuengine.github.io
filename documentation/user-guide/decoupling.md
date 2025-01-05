@@ -3,7 +3,7 @@ layout: documentation
 title: Decoupling
 ---
 
-# Decoupled Interactions
+# Decoupling
 
 The engine implements the following mechanisms to avoid the implementation of bespoke methods for interaction between instances of different classes that tightly couple them.
 

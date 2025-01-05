@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: Game Levels
+title: Stages
 ---
 
-# Game Levels
+# Stages
 
 `Sprite`s already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of `Sprite`s, but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
 

@@ -1,9 +1,9 @@
 ---
 layout: documentation
-title: Working With Graphics
+title: Graphics
 ---
 
-# Working With Graphics
+# Graphics
 
 VUEngine now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: `Sprite`s, `Wireframe`s and `Printing`.
 
