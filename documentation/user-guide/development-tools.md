@@ -67,7 +67,7 @@ It allows to modify at runtime the timer settings to test how the sound tolerate
 <img src="/documentation/images/user-guide/development-tools/debug-sound-test.png" width="500" />
 _Sound Test_
 
-# Profiler
+## Profiler
 
 A `Profiler` can be used to help to spot and solve performance bottlenecks by displaying the approximate time in milliseconds that each of the engine's subprocesses take to complete.
 
