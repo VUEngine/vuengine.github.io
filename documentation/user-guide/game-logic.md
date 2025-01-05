@@ -5,6 +5,8 @@ title: Game Logic
 
 # Game Logic
 
+## Update
+
 Most likely, any game will run inside an infinite loop that starts after some previous initialization and that only breaks when the program is going to finish. VUEngine games work the same, but the loop where the actual game’s logic runs (not to confuse it with the loop that the engine’s core runs in as part of the cycle that loops over the engine’s subsystems like physics simulations, rendering, etc.) is implemented as an iterative call to the VUEngine instance’s current `GameState`’s execute method.
 
 The `GameState`’s implementation of the execute method calls `Stage::update` on its `Stage`’s instance, which in turn forwards that call to its children’s implementation.
@@ -40,3 +42,15 @@ void CogWheel::update()
     CogWheel::setLocalRotation(this, &localRotation);
 }
 ```
+
+## Actor initialization
+
+The instantiation and initialization of instance of `Actor` comprises, among other phases, the attachment of `Component`s to them. To save on performance, that doesn't happen immediately during construction. In many circumstances, it is necessary to execute some processes when an `Actor` is ready after initialization but before it starts to being updated. The engine calls the virtual method `Actor::ready` when the initialization is complete. Client code can override that method to performe custom procedures. The method's signature to override it is:
+
+```cpp
+	/// Make the localized actor ready to start operating once it has been completely intialized.
+	/// @param recursive: If true, the ready call is propagated to its children, grand children, etc.
+	override void ready(bool recursive);
+```
+
+The override must always call the base's implementation.
