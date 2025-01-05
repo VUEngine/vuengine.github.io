@@ -31,5 +31,6 @@ void SomeClass::someMethod()
         // Code here
     }
 }
+```
 
 - The soft limit for line length is 140 characters.
