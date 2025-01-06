@@ -85,22 +85,22 @@ Each **SoundTrackSpec** must provide arrays for all the VSU’s hardware registe
 /// @memberof VSUManager
 typedef struct VSUSoundSource
 {
-	uint8 SxINT;
-	uint8 spacer1[3];
-	uint8 SxLRV;
-	uint8 spacer2[3];
-	uint8 SxFQL;
-	uint8 spacer3[3];
-	uint8 SxFQH;
-	uint8 spacer4[3];
-	uint8 SxEV0;
-	uint8 spacer5[3];
-	uint8 SxEV1;
-	uint8 spacer6[3];
-	uint8 SxRAM;
-	uint8 spacer7[3];
-	uint8 SxSWP;
-	uint8 spacer8[35];
+    uint8 SxINT;
+    uint8 spacer1[3];
+    uint8 SxLRV;
+    uint8 spacer2[3];
+    uint8 SxFQL;
+    uint8 spacer3[3];
+    uint8 SxFQH;
+    uint8 spacer4[3];
+    uint8 SxEV0;
+    uint8 spacer5[3];
+    uint8 SxEV1;
+    uint8 spacer6[3];
+    uint8 SxRAM;
+    uint8 spacer7[3];
+    uint8 SxSWP;
+    uint8 spacer8[35];
 } VSUSoundSource;
 ```
 
@@ -109,18 +109,18 @@ And it has to provide a list of sound events that represent the duration of each
 ```cpp
 const SoundTrackKeyframe MenuSongSoundTrack1Keyframes[] =
 {
-	{60, kSoundTrackEventStart},
-	{60, kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxFQ},
-	{60, kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxFQ},
-	{60, kSoundTrackEventSxEV1},
-	{60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
-	{0, kSoundTrackEventEnd}
+    {60, kSoundTrackEventStart},
+    {60, kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxFQ},
+    {60, kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxFQ},
+    {60, kSoundTrackEventSxEV1},
+    {60, kSoundTrackEventSxFQ | kSoundTrackEventSxEV1},
+    {0, kSoundTrackEventEnd}
 };
 ```
 
@@ -166,24 +166,23 @@ The timer can be configured at any time during the execution of a program, but i
 /// @memberof Stage
 typedef struct StageSpec
 {
-	AllocatorPointer allocator;
+    AllocatorPointer allocator;
 
-	/// Timer config
-	struct Timer
-	{
-		/// Timer's resolution (__TIMER_100US or __TIMER_20US)
-		uint16 resolution;
+    /// Timer config
+    struct Timer
+    {
+        /// Timer's resolution (__TIMER_100US or __TIMER_20US)
+        uint16 resolution;
 
-		/// Target elapsed time between timer interrupts
-		uint16 targetTimePerInterrupt;
+        /// Target elapsed time between timer interrupts
+        uint16 targetTimePerInterrupt;
 
-		/// Timer interrupt's target time units
-		uint16 targetTimePerInterrupttUnits;
+        /// Timer interrupt's target time units
+        uint16 targetTimePerInterrupttUnits;
 
-	} timer;
-    .
-    .
-    .
+    } timer;
+
+    [...]
 };
 ```
 
@@ -198,7 +197,7 @@ In the case of PCM playback, a high frequency interrupt triggering is required t
 The next table shows some general guidance on what is achievable, although the actual results are highly dependent on the load on the `Stage`s complexity:
 
 ```
-Target       Theoretical      Real          Efective       Real            
+Target       Theoretical      Real          Efective       Real
   Hz         us/interrupt   us/interrupt   us/interrupt     Hz         Notes
 
 44000             23            -43            -40         43478        Unfeasible

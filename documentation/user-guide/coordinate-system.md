@@ -16,29 +16,27 @@ Sum and subtraction work the same with fixed point data types, but multiplicatio
 ```cpp
 static inline Vector3D Vector3D::scalarProduct(Vector3D vector, fixed_t scalar)
 {
-	return (Vector3D)
-	{
-		__FIXED_MULT(vector.x, scalar),
-		__FIXED_MULT(vector.y, scalar),
-		__FIXED_MULT(vector.z, scalar)
-	};
+    return (Vector3D)
+    {
+        __FIXED_MULT(vector.x, scalar),
+        __FIXED_MULT(vector.y, scalar),
+        __FIXED_MULT(vector.z, scalar)
+    };
 }
-
-//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 static inline Vector3D Vector3D::scalarDivision(Vector3D vector, fixed_t scalar)
 {
-	if(0 == scalar)
-	{
-		return Vector3D::zero();
-	}
+    if(0 == scalar)
+    {
+        return Vector3D::zero();
+    }
 
-	return (Vector3D)
-	{
-		__FIXED_DIV(vector.x, scalar),
-		__FIXED_DIV(vector.y, scalar),
-		__FIXED_DIV(vector.z, scalar)
-	};
+    return (Vector3D)
+    {
+        __FIXED_DIV(vector.x, scalar),
+        __FIXED_DIV(vector.y, scalar),
+        __FIXED_DIV(vector.z, scalar)
+    };
 }
 ```
 
@@ -48,49 +46,49 @@ Transformations and its attributes are declared as follows:
 // A spatial description
 typedef struct Transformation
 {
-	// spatial position
-	Vector3D position;
+    // spatial position
+    Vector3D position;
 
-	// spatial rotation
-	Rotation rotation;
+    // spatial rotation
+    Rotation rotation;
 
-	// spatial scale
-	Scale scale;
+    // spatial scale
+    Scale scale;
 
-	// validity flag
-	uint8 invalid;
+    // validity flag
+    uint8 invalid;
 
 } Transformation;
 
 // 3D Spatial position
 typedef struct Vector3D
 {
-	fixed_t x;
-	fixed_t y;
-	fixed_t z;
+    fixed_t x;
+    fixed_t y;
+    fixed_t z;
 
 } Vector3D;
 
 // 3D Spatial rotation (subject to gimbal lock)
 typedef struct Rotation
 {
-	// rotation around x axis
-	fixed_t x;
+    // rotation around x axis
+    fixed_t x;
 
-	// rotation around y axis
-	fixed_t y;
+    // rotation around y axis
+    fixed_t y;
 
-	// rotation around z axis
-	fixed_t z;
+    // rotation around z axis
+    fixed_t z;
 
 } Rotation;
 
 // 3D scale
 typedef struct Scale
 {
-	fix7_9 x;
-	fix7_9 y;
-	fix7_9 z;
+    fix7_9 x;
+    fix7_9 y;
+    fix7_9 z;
 
 } Scale;
 ```
@@ -100,8 +98,8 @@ Vector3D’s and Rotation’s components use fixed_t (10.6) data type to represe
 Since a great deal of game logic has to do with moving Actors around, but working on meters represented by 10.6 fixed point data type is not really intuitive, there are some macros and structs that help working with pixels instead and to convert to the data types that the engine uses internally:
 
 ```cpp
-#define __PIXELS_TO_METERS(pixels)				(fixed_t)((pixels) << (__FIXED_TO_I_BITS - __PIXELS_PER_METER_2_POWER))
-#define __METERS_TO_PIXELS(meters)				(((fixed_ext_t)(meters)) >> (__FIXED_TO_I_BITS - __PIXELS_PER_METER_2_POWER))
+#define __PIXELS_TO_METERS(pixels) (fixed_t)((pixels) << (__FIXED_TO_I_BITS - __PIXELS_PER_METER_2_POWER))
+#define __METERS_TO_PIXELS(meters) (((fixed_ext_t)(meters)) >> (__FIXED_TO_I_BITS - __PIXELS_PER_METER_2_POWER))
 ```
 
 ```cpp

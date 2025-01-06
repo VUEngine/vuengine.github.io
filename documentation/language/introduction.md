@@ -13,29 +13,29 @@ It consist of a set of scripts that act together as a transpiler that converts c
 
 Virtual C supports the following usual OOP features:
 
-* Classes
-* Inheritance
-* Encapsulation
-* Polymorphism
+- <a href="../syntax/">Classes</a>
+- <a href="../features/#Inheritance">Inheritance</a>
+- <a href="../features/#encapsulation">Encapsulation</a>
+- <a href="../features/#polymorphism">Polymorphism</a>
 
-It adds a few features of its own:
+And adds a few features of its own:
 
-* Abstract classes
-* Singleton classes
-* Static classes
-* Class extensions
-* Class mutation
-* Instance evolving
+- <a href="../custom-features/#abstract-classes">Abstract classes</a>
+- <a href="../custom-features/#singleton-classes">Singleton classes</a>
+- <a href="../custom-features/#static-classes">Static classes</a>
+- <a href="../custom-features/#class-extensions">Class extensions</a>
+- <a href="../custom-features/#class-mutation">Class mutation</a>
+- <a href="../custom-features/#instance-evolving">Instance evolution</a>
 
 ## Limitations
 
 Virtual C doesn't support all of the common OOP concepts or common features of full blown OOP languages. Among those unsupported are:
 
-* Multiple inheritance
-* Public or private attributes
-* Protected methods
-* Stack allocated class instances
-* Method/operator overloading
+- Multiple inheritance
+- Public or private attributes
+- Protected methods
+- Stack allocated class instances
+- Method/operator overloading
 
 In Virtual C, all attributes are protected; while all methods are either public or private.
 

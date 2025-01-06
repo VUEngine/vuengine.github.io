@@ -28,20 +28,20 @@ The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The *
 ```cpp
 CharSetROMSpec PunkCharsetSpec =
 {
-	// Number of chars in function of the number of frames to load at the same time
-	4 * 6,
+    // Number of chars in function of the number of frames to load at the same time
+    4 * 6,
 
-	// Whether it is shared or not
-	true,
+    // Whether it is shared or not
+    true,
 
-	// Whether the tiles are optimized or not
-	false,
+    // Whether the tiles are optimized or not
+    false,
 
-	// Tiles array
-	PunkTiles,
+    // Tiles array
+    PunkTiles,
 
-	// Frame offsets array
-	NULL,
+    // Frame offsets array
+    NULL,
 };
 ```
 
@@ -58,34 +58,34 @@ Textures need their own **TextureSpec** to be instantiated and properly initiali
 ```cpp
 TextureROMSpec PunkTextureSpec =
 {
-	(CharSetSpec*)&PunkCharsetSpec,
+    (CharSetSpec*)&PunkCharsetSpec,
 
-	// Pointer to the map array that defines how to use the tiles from the char set
-	PunkMap,
+    // Pointer to the map array that defines how to use the tiles from the char set
+    PunkMap,
 
-	// Horizontal size in tiles of the texture (max. 64)
-	4,
+    // Horizontal size in tiles of the texture (max. 64)
+    4,
 
-	// Vertical size in tiles of the texture (max. 64)
-	6,
+    // Vertical size in tiles of the texture (max. 64)
+    6,
 
-	// Padding added to the size for affine/hbias transformations (cols, rows)
-	{1, 1},
+    // Padding added to the size for affine/hbias transformations (cols, rows)
+    {1, 1},
 
-	// Number of frames that the texture supports
-	1,
+    // Number of frames that the texture supports
+    1,
 
-	// Palette index to use by the graphical data (0 - 3)
-	0,
+    // Palette index to use by the graphical data (0 - 3)
+    0,
 
-	// Flag to recyble the texture with a different map
-	false,
+    // Flag to recyble the texture with a different map
+    false,
 
-	// Flag to vertically flip the image
-	false,
+    // Flag to vertically flip the image
+    false,
 
-	// Flag to horizontally flip the image
-	false,
+    // Flag to horizontally flip the image
+    false,
 };
 ```
 
@@ -96,35 +96,35 @@ Finally, `Texture`s are displayed by `Sprite`s, either from BGMAP memory through
 ```cpp
 BgmapSpriteROMSpec PunkSpriteSpec =
 {
-	// Sprite
-	{
-		// Component
-		{
-			// Allocator
-			__TYPE(BgmapAnimatedSprite),
+    // Sprite
+    {
+        // Component
+        {
+            // Allocator
+            __TYPE(BgmapAnimatedSprite),
 
-			// Component type
-			kSpriteComponent
-		},
+            // Component type
+            kSpriteComponent
+        },
 
-		// Spec for the texture to display
-		(TextureSpec*)&PunkTextureSpec,
+        // Spec for the texture to display
+        (TextureSpec*)&PunkTextureSpec,
 
-		// Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
-		__TRANSPARENCY_NONE,
+        // Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
+        __TRANSPARENCY_NONE,
 
-		// Displacement added to the sprite's position
-		{0, 0, 2, 0},
-	},
+        // Displacement added to the sprite's position
+        {0, 0, 2, 0},
+    },
 
-	// The display mode (__WORLD_BGMAP, __WORLD_AFFINE, __WORLD_OBJECT or __WORLD_HBIAS)
-	__WORLD_BGMAP,
+    // The display mode (__WORLD_BGMAP, __WORLD_AFFINE, __WORLD_OBJECT or __WORLD_HBIAS)
+    __WORLD_BGMAP,
 
-	// Pointer to affine/hbias manipulation function
-	NULL,
+    // Pointer to affine/hbias manipulation function
+    NULL,
 
-	// Flag to indicate in which display to show the texture (__WORLD_ON, __WORLD_LON or __WORLD_RON)
-	__WORLD_ON,
+    // Flag to indicate in which display to show the texture (__WORLD_ON, __WORLD_LON or __WORLD_RON)
+    __WORLD_ON,
 };
 ```
 
@@ -137,12 +137,12 @@ Sprite sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, 
 
 if(!isDeleted(sprite))
 {
-	PixelVector spritePosition =
-	{
-		__SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
-	};
+    PixelVector spritePosition =
+    {
+        __SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
+    };
 
-	Sprite::setPosition(sprite, &spritePosition);
+    Sprite::setPosition(sprite, &spritePosition);
 }
 ```
 
@@ -154,9 +154,9 @@ The `Sprite` class cannot be directly instantiated since it is `abstract`. The f
 
 These kind of `Sprite`s support 3 display modes in function of the underlying hardware's capabilities:
 
-* BGAMP
-* AFFINE
-* H-BIAS
+- BGAMP
+- AFFINE
+- H-BIAS
 
 ### Affine transformations
 
@@ -191,30 +191,30 @@ The other kind of visual component are `Wireframe`s. These are non solid 3D shap
 ```cpp
 MeshROMSpec PyramidWireframeSpec =
 {
-	{
-		// Component
-		{
-			// Allocator
-			__TYPE(Mesh),
+    {
+        // Component
+        {
+            // Allocator
+            __TYPE(Mesh),
 
-			// Component type
-			kWireframeComponent
-		},
+            // Component type
+            kWireframeComponent
+        },
 
-		{0, 0, 0},
+        {0, 0, 0},
 
-		// Wireframe's lines' color
-		__COLOR_BLACK,
+        // Wireframe's lines' color
+        __COLOR_BLACK,
 
-		// Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
-		__TRANSPARENCY_NONE,
+        // Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
+        __TRANSPARENCY_NONE,
 
-		// Flag to render the wireframe in interlaced mode
-		false,
-	},
+        // Flag to render the wireframe in interlaced mode
+        false,
+    },
 
-	// Segments that compose the mesh
-	(PixelVector(*)[2])PyramidMeshesSegments
+    // Segments that compose the mesh
+    (PixelVector(*)[2])PyramidMeshesSegments
 };
 ```
 
@@ -223,20 +223,20 @@ The engine provides a few kinds of Wireframes: `Mesh`, `Line`, `Sphere` and `Ast
 ```cpp
 const PixelVector PyramidMeshesSegments[][2]=
 {
-	// base
-	{ {-64, 64, -64, 0}, { 64, 64, -64, 0} },
-	{ {-64, 64,  64, 0}, { 64, 64,  64, 0} },
-	{ {-64, 64, -64, 0}, {-64, 64,  64, 0} },
-	{ { 64, 64, -64, 0}, { 64, 64,  64, 0} },
+    // base
+    { {-64, 64, -64, 0}, { 64, 64, -64, 0} },
+    { {-64, 64,  64, 0}, { 64, 64,  64, 0} },
+    { {-64, 64, -64, 0}, {-64, 64,  64, 0} },
+    { { 64, 64, -64, 0}, { 64, 64,  64, 0} },
 
-	// vertex
-	{ {0, -64, 0, 0}, {-64, 64, -64, 0} },
-	{ {0, -64, 0, 0}, {-64, 64,  64, 0} },
-	{ {0, -64, 0, 0}, { 64, 64, -64, 0} },
-	{ {0, -64, 0, 0}, { 64, 64,  64, 0} },
+    // vertex
+    { {0, -64, 0, 0}, {-64, 64, -64, 0} },
+    { {0, -64, 0, 0}, {-64, 64,  64, 0} },
+    { {0, -64, 0, 0}, { 64, 64, -64, 0} },
+    { {0, -64, 0, 0}, { 64, 64,  64, 0} },
 
-	// limiter
-	{ {0, 0, 0, 0}, {0, 0, 0, 0} },
+    // limiter
+    { {0, 0, 0, 0}, {0, 0, 0, 0} },
 };
 ```
 
@@ -249,12 +249,12 @@ Wireframe wireframe = WireframeManager::createWireframe(WireframeManager::getIns
 
 if(!isDeleted(wireframe))
 {
-	Vector3D wireframePosition =
-	{
-		-__PIXELS_TO_METERS(__SCREEN_WIDTH / 2), __PIXELS_TO_METERS(__SCREEN_HEIGHT / 2), 0, 0
-	};
+    Vector3D wireframePosition =
+    {
+        -__PIXELS_TO_METERS(__SCREEN_WIDTH / 2), __PIXELS_TO_METERS(__SCREEN_HEIGHT / 2), 0, 0
+    };
 
-	Wireframe::setPosition(wireframe, &wireframePosition);
+    Wireframe::setPosition(wireframe, &wireframePosition);
 }
 
 ```
@@ -264,35 +264,35 @@ if(!isDeleted(wireframe))
 VUEngine uses a special `Sprite` to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
 
 ```cpp
-	/// Print a string.
-	/// @param string: String to print
-	/// @param x: Column to start printing at
-	/// @param y: Row to start printing at
-	/// @param font: Name of font to use for printing
-	void text(const char* string, int32 x, int32 y, const char* font);
+    /// Print a string.
+    /// @param string: String to print
+    /// @param x: Column to start printing at
+    /// @param y: Row to start printing at
+    /// @param font: Name of font to use for printing
+    void text(const char* string, int32 x, int32 y, const char* font);
 
-	/// Print an integer value.
-	/// @param value: Integer to print
-	/// @param x: Column to start printing at
-	/// @param y: Row to start printing at
-	/// @param font: Name of font to use for printing
-	void int32(int32 value, uint8 x, uint8 y, const char* font);
+    /// Print an integer value.
+    /// @param value: Integer to print
+    /// @param x: Column to start printing at
+    /// @param y: Row to start printing at
+    /// @param font: Name of font to use for printing
+    void int32(int32 value, uint8 x, uint8 y, const char* font);
 
-	/// Print a hex value.
-	/// @param value: Hex value to print
-	/// @param x: Column to start printing at
-	/// @param y: Row to start printing at
-	/// @param length: Digits to print
-	/// @param font: Name of font to use for printing
-	void hex(WORD value, uint8 x, uint8 y, uint8 length, const char* font);
+    /// Print a hex value.
+    /// @param value: Hex value to print
+    /// @param x: Column to start printing at
+    /// @param y: Row to start printing at
+    /// @param length: Digits to print
+    /// @param font: Name of font to use for printing
+    void hex(WORD value, uint8 x, uint8 y, uint8 length, const char* font);
 
-	/// Print a float value.
-	/// @param value: Float value to print
-	/// @param x: Column to start printing at
-	/// @param y: Row to start printing at
-	/// @param precision: How many decimals to print
-	/// @param font: Name of font to use for printing
-	void float(float value, uint8 x, uint8 y, int32 precision, const char* font);
+    /// Print a float value.
+    /// @param value: Float value to print
+    /// @param x: Column to start printing at
+    /// @param y: Row to start printing at
+    /// @param precision: How many decimals to print
+    /// @param font: Name of font to use for printing
+    void float(float value, uint8 x, uint8 y, int32 precision, const char* font);
 ```
 
 Printing is used as follows:
@@ -300,11 +300,11 @@ Printing is used as follows:
 ```cpp
 Printing::text
 (
-	Printing::getInstance(),
-	"Hello World",
-	0,
-	0,
-	"Default"
+    Printing::getInstance(),
+    "Hello World",
+    0,
+    0,
+    "Default"
 );
 ```
 
@@ -330,20 +330,20 @@ The first approach puts stress on video memory since depending on the size of ea
 ```cpp
 CharSetROMSpec PunkCharsetSpec =
 {
-	// Number of chars in function of the number of frames to load at the same time
-	4 * 6,
+    // Number of chars in function of the number of frames to load at the same time
+    4 * 6,
 
-	// Whether it is shared or not
-	true,
-	
-	// Whether the tiles are optimized or not
-	false,
+    // Whether it is shared or not
+    true,
 
-	// Tiles array
-	PunkTiles,
+    // Whether the tiles are optimized or not
+    false,
 
-	// Frame offsets array
-	NULL,
+    // Tiles array
+    PunkTiles,
+
+    // Frame offsets array
+    NULL,
 };
 ```
 
@@ -364,20 +364,20 @@ To load the complete pixel data of all the animation frames of an animation, the
 ```cpp
 CharSetROMSpec PunkCharsetMultiframeSpec =
 {
-	// Number of chars in function of the number of frames to load at the same time
-	4 * 6 * 12,
+    // Number of chars in function of the number of frames to load at the same time
+    4 * 6 * 12,
 
-	// Whether it is shared or not
-	true,
-	
-	// Whether the tiles are optimized or not
-	false,
+    // Whether it is shared or not
+    true,
 
-	// Tiles array
-	PunkTiles,
+    // Whether the tiles are optimized or not
+    false,
 
-	// Frame offsets array
-	NULL,
+    // Tiles array
+    PunkTiles,
+
+    // Frame offsets array
+    NULL,
 };
 ```
 

@@ -3,7 +3,7 @@ layout: documentation
 title: Features
 ---
 
-# Virtual C's Features
+# Features
 
 ## Inheritance
 
@@ -18,7 +18,7 @@ The base class of Virtual C is called `Object`, which declares and implements a 
 abstract class Object : Object
 {
     /// @protectedsection
-    // The unusual order of the attributes in the rest of the classes 
+    // The unusual order of the attributes in the rest of the classes
     // aims to optimize data packing as much as possible.
 
     /// Pointer to the class's virtual table
@@ -37,12 +37,12 @@ abstract class Object : Object
     void constructor();
 
     /// Retrieve the object's virtual table pointer
-    /// @return	Pointer to the object's virtual table pointer
+    /// @return Pointer to the object's virtual table pointer
     const void* getVTable();
 
     /// Converts the object into an instance of the target class if object's class is in the hierarchy of the target class.
     /// @param targetClass: pointer to the target class' virtual table
-    /// @return	True if successful
+    /// @return True if successful
     bool evolveTo(const void* targetClass);
 }
 ```
@@ -55,8 +55,8 @@ Any new class must always inherit from the `Object` class, which is done in a si
 
 Encapsulation support is implicitly implemented and fixed, in other words, there are no keywords to modify the access to attributes or methods. It is restricted to the following constraints:
 
-* Methods are either public or private, there are no protected methods.
-* Attributes are always protected, there are not public or private attributes.
+- Methods are either public or private, there are no protected methods.
+- Attributes are always protected, there are not public or private attributes.
 
 ## Polymorphism
 

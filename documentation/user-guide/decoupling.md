@@ -80,11 +80,11 @@ Messages can be propagated too, instead of being specifically directed to a know
 ```cpp
 bool PongState::onRemoteGoneAway(ListenerObject eventFirer __attribute__((unused)))
 {
-	CommunicationManager::disableCommunications(CommunicationManager::getInstance());
+    CommunicationManager::disableCommunications(CommunicationManager::getInstance());
 
-	PongState::propagateMessage(this, kMessagePongResetPositions);
+    PongState::propagateMessage(this, kMessagePongResetPositions);
 
-	return false;
+    return false;
 }
 ```
 
@@ -93,15 +93,14 @@ And any interested `Entity` can process the message and let it be forwarded to o
 ```cpp
 bool PongBall::handlePropagatedMessage(int32 message)
 {
-	switch(message)
-	{
-		case kMessagePongResetPositions:
+    switch(message)
+    {
+        case kMessagePongResetPositions:
+            PongBall::prepareToMove(this);
+            break;
+    }
 
-			PongBall::prepareToMove(this);
-			break;
-	}
-
-	return false;
+    return false;
 }
 ```
 

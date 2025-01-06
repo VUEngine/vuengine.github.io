@@ -12,26 +12,26 @@ In order to react to the actions of the user, the `GameState`s that implement th
 ```cpp
 void ActorsState::processUserInput(const UserInput* userInput)
 {
-	ActorsState::playSoundEffects(this, userInput, false);
+    ActorsState::playSoundEffects(this, userInput, false);
 
-	if(!isDeleted(this->leaderPunk))
-	{
-		/*
-		* Let add some children to the leader punk taking into account
-		* whether it is moving to the left or to the right just to 
-		* make the input more intuitive		
-		*/
-		if(K_LL & userInput->releasedKey)
-		{
-			ActorsState::createSlavePunk(this, K_LL);
-		}
-		else if(K_LR & userInput->releasedKey)
-		{
-			ActorsState::createSlavePunk(this, K_LR);
-		}
-	}
-	
-	Base::processUserInput(this, userInput);
+    if(!isDeleted(this->leaderPunk))
+    {
+        /*
+        * Let add some children to the leader punk taking into account
+        * whether it is moving to the left or to the right just to
+        * make the input more intuitive
+        */
+        if(K_LL & userInput->releasedKey)
+        {
+            ActorsState::createSlavePunk(this, K_LL);
+        }
+        else if(K_LR & userInput->releasedKey)
+        {
+            ActorsState::createSlavePunk(this, K_LR);
+        }
+    }
+
+    Base::processUserInput(this, userInput);
 }
 ```
 
@@ -42,30 +42,30 @@ The `UserInput` struct, passed as a pointer to the `GameState`, has the followin
 /// @memberof KeypadManager
 typedef struct UserInput
 {
-	/// All pressed key(s)
-	uint16 allKeys;
+    /// All pressed key(s)
+    uint16 allKeys;
 
-	/// Pressed key(s) just in the last cycle
-	uint16 pressedKey;
+    /// Pressed key(s) just in the last cycle
+    uint16 pressedKey;
 
-	/// Released key(s) just in the last cycle
-	uint16 releasedKey;
+    /// Released key(s) just in the last cycle
+    uint16 releasedKey;
 
-	/// Held key(s)
-	uint16 holdKey;
+    /// Held key(s)
+    uint16 holdKey;
 
-	/// How long the key(s) have been held (in game frames)
-	uint32 holdKeyDuration;
+    /// How long the key(s) have been held (in game frames)
+    uint32 holdKeyDuration;
 
-	/// Previously pressed key(s)
-	uint16 previousKey;
+    /// Previously pressed key(s)
+    uint16 previousKey;
 
-	/// Low power flag
-	uint16 powerFlag;
+    /// Low power flag
+    uint16 powerFlag;
 
-	/// Dummy input to force user input processing even if
-	/// there is not a real one
-	uint16 dummyKey;
+    /// Dummy input to force user input processing even if
+    /// there is not a real one
+    uint16 dummyKey;
 
 } UserInput;
 ```

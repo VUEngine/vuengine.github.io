@@ -42,18 +42,18 @@ If, on the other hand, your main concern is on creating content without mengling
 ```cpp
 PositionedActorROMSpec WireframesStageActorSpecs[] =
 {
-	{&HouseBigActorSpec, 	{-192, -8, 896}, {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&TunnelActorSpec,  	{0, 56, 1728}, 	 {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&HouseActorSpec,       {192,-8, 896}, 	 {0, 256, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&StreetActorSpec,      {0, 56, 832}, 	 {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&HouseActorSpec,       {-192, -8, 640}, {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&BusStopActorSpec,     {192, -8, 640},  {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&BillboardActorSpec,   {-160, -8, 450}, {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&LampActorSpec,        {192, -8, 512},  {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&LampActorSpec,        {192, -8, 1152}, {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
-	{&CurveLeftActorSpec,   {0, 56, 2112},   {0, 0, 0},   {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&HouseBigActorSpec,   {-192, -8,  896},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&TunnelActorSpec,     {   0, 56, 1728},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&HouseActorSpec,      { 192, -8,  896},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&StreetActorSpec,     {   0, 56,  832},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&HouseActorSpec,      {-192, -8,  640},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&BusStopActorSpec,    { 192, -8,  640},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&BillboardActorSpec,  {-160, -8,  450},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&LampActorSpec,       { 192, -8,  512},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&LampActorSpec,       { 192, -8, 1152},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
+    {&CurveLeftActorSpec,  {   0, 56, 2112},  {0, 0, 0},  {1, 1, 1},  0,  NULL,  NULL,  NULL,  false},
 
-	{NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
 ```
 
@@ -69,7 +69,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
         ShowcaseState::configureStage(this, this->stageSpec, NULL);
     }
 
-    ...
+    [...]
 ```
 
 ## Overview

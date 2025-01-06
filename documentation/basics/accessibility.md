@@ -6,7 +6,3 @@ title: Accessibility
 # Accessibility
 
 ...
-
-## Zoom
-
-[...]
