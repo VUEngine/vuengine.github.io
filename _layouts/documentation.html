@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="bg-light">
+<section class="text-bg-dark">
   <div class="container px-4 py-2">
     {% assign breadcrumb = 'Documentation' %}
     {% for section in site.data.documentation %}
@@ -18,14 +18,12 @@ layout: default
   </div>
 </section>
 
-<div class="documentation py-4">
+<section class="bg-light documentation py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-3 order-2 order-md-1">
         <div class="sticky-top mb-5 me-3" style="top: 20px">
-          {% include search-lunr.html %}
-
-          <div class="accordion accordion-flush mt-4" id="docsnav">
+          <div class="accordion accordion-flush" id="docsnav">
             {% for section in site.data.documentation %}
             {% assign collapsed = true %}
             {% assign currentDocUrl = '' %}
@@ -138,7 +136,7 @@ layout: default
       </div>
     </div>
   </div>
-</div>
+</section>
 
 {% comment %}
 <script>
