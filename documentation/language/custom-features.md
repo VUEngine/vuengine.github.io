@@ -93,8 +93,49 @@ Objects can only evolve to classes that either inherint from the object's origin
 
 Classes that are meant to be mutation targets must be abstract and cannot add additional attributes to its instances.
 
+Given the following class:
+
+```cpp
+class Punk : Actor
+{
+    /// @param punkSpec: Specification that determines how to configure the paddle
+    /// @param internalId: ID to keep track internally of the new instance
+    /// @param name: Name to assign to the new instance
+    void constructor(PunkSpec* punkSpec, int16 internalId, const char* const name);
+
+    /// Default interger message handler for propagateMessage
+    /// @param message: Propagated integer message
+    /// @return True if the propagation must stop; false if the propagation must reach other containers
+    override bool handlePropagatedMessage(int32 message);
+    .
+    .
+    .
+}
+```
+
+A valid mutation for it is:
+
+```cpp
+abstract class PunkStopping : Punk
+{
+    /// Process a newly detected collision by one of the component colliders.
+    /// @param collisionInformation: Information struct about the collision to resolve
+    /// @return True if the collider must keep track of the collision to detect if it persists and when it
+    /// ends; false otherwise
+    override bool collisionStarts(const CollisionInformation* collisionInformation);
+
+    /// Receive and process a Telegram.
+    /// @param telegram: Received telegram to process
+    /// @return True if the telegram was processed
+    override bool handleMessage(Telegram telegram);
+
+    /// Update this instance's logic.
+    override void update();
+}
+```
+
 The mutation of a class instance is done as follows:
 
 ```cpp
-SomeClass::mutateTo(someClassObject, SomeInheringClass::getClass());
+Punk::mutateTo(punk, PunkStopping::getClass());
 ```
