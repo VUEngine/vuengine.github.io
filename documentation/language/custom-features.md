@@ -5,7 +5,7 @@ title: Custom Features
 
 # Custom Features
 
-Virtual C adds a couple features of its own, thanks to the fact that it makes direct manipulation of virtual tables.
+Virtual C adds a couple features of its own, thanks to the fact that it manipulates virtual tables directly.
 
 ## Class modifiers
 
