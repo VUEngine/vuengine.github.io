@@ -84,16 +84,14 @@ Having a class that declares a `virtual` method or overrides one:
 ```cpp
 class CustomSprite : Sprite
 {
-    .
-    .
-    .
+    [...]
+
 	/// Render the sprite by configuring the DRAM assigned to it by means of the provided index.
 	/// @param index: Determines the region of DRAM that this sprite is allowed to configure
 	/// @return The index that determines the region of DRAM that this sprite manages
 	override int16 doRender(int16 index) = 0;
-    .
-    .
-    .
+
+    [...]
 }
 ```
 
@@ -135,9 +133,8 @@ class Punk : Actor
     /// @param message: Propagated integer message
     /// @return True if the propagation must stop; false if the propagation must reach other containers
     override bool handlePropagatedMessage(int32 message);
-    .
-    .
-    .
+    
+    [...]
 }
 ```
 
