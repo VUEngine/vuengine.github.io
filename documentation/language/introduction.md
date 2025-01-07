@@ -25,7 +25,7 @@ And adds a few features of its own:
 - <a href="../custom-features/#static-classes">Static classes</a>
 - <a href="../custom-features/#class-extensions">Class extensions</a>
 - <a href="../custom-features/#class-mutation">Class mutation</a>
-- <a href="../custom-features/#instance-evolving">Instance evolution</a>
+- <a href="../custom-features/#instance-mutation">Instance mutation</a>
 
 ## Limitations
 

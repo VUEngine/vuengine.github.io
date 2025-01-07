@@ -85,16 +85,16 @@ The following shows how to mutate a class' method:
 SomeClass::mutateMethod(someVirtualMethod, SomeClass::someVirtualMethodOverride);
 ```
 
-## Instance evolution
+## Instance mutation
 
-It is possible to modify the behavior of individual instances by means of the `evolveTo` method call. This effectively provides a language-level mechanism for state machines.
+It is possible to modify the behavior of individual instances by means of the `mutateTo` method call. This effectively provides a language-level mechanism for state machines.
 
 Objects can only evolve to classes that either inherint from the object's original class or to those from which the object's original class inherits.
 
-Classes that are meant to be evolutionary targets must be abstract and cannot add additional attributes to its instances.
+Classes that are meant to be mutation targets must be abstract and cannot add additional attributes to its instances.
 
-The evolution of a class instance is done as follows:
+The mutation of a class instance is done as follows:
 
 ```cpp
-SomeClass::evolveTo(someClassObject, SomeInheringClass::getClass());
+SomeClass::mutateTo(someClassObject, SomeInheringClass::getClass());
 ```
