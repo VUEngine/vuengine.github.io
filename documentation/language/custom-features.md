@@ -77,7 +77,7 @@ extension class SomeClass : BaseClass
 
 ## Class Mutation
 
-Virtual C allows the modification in real time of a class' virtual table ny changing the pointers to the virtual methods. This enables the possibility to change the behavior of all the class' instances simultaneously.
+Virtual C allows the modification in real time of a class' virtual table by changing the pointers to the virtual methods. This enables the possibility to change the behavior of all the class' instances simultaneously.
 
 Having a class that declares a `virtual` method or overrides one:
 
@@ -95,7 +95,7 @@ class CustomSprite : Sprite
 }
 ```
 
-It is possible to change at runtime the implementation of `handlePropagatedMessage` that is called on all the class instances by writing the following call to `mutateMethod` to another implemntation wih the same signature:
+For example, it is possible to change at runtime the implementation of `handlePropagatedMessage` that is called on all the class instances, by writing the following call to `mutateMethod` with another implementation of the same signature:
 
 ```cpp
 void CustomSprite::changeDoRenderImplementation()
