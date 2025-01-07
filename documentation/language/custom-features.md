@@ -3,7 +3,7 @@ layout: documentation
 title: Custom Features
 ---
 
-# Virtual C's Custom Features
+# Custom Features
 
 Virtual C adds a couple features of its own, thanks to the fact that it makes direct manipulation of virtual tables.
 
@@ -12,17 +12,17 @@ Virtual C adds a couple features of its own, thanks to the fact that it makes di
 There are a few optional class modifiers that can be added to a class declaration:
 
 ```cpp
-    [modifier] class ClassName: Object
-    {};
+[modifier] class ClassName: Object
+{};
 ```
 
 The class modifiers are:
 
-* `abstract`
-* `singleton`
-* `dynamic_singleton`
-* `static`
-* `extension`
+- `abstract`
+- `singleton`
+- `dynamic_singleton`
+- `static`
+- `extension`
 
 ### Abstract classes
 
@@ -52,9 +52,9 @@ Give some class:
 class SomeClass : BaseClass
 {
     uint32 someAttribute;
-    .
-    .
-    .
+
+    [...]
+
     void someMethod();
     virtual bool someVirtualMethod();
 };
@@ -66,9 +66,9 @@ The syntax to declare an extension for it is the following:
 extension class SomeClass : BaseClass
 {
     bool someVirtualMethodOverride();
-    .
-    .
-    .
+
+    [...]
+
 };
 ```
 
@@ -79,7 +79,7 @@ Virtual C allows the modification in real time of a class' virtual table ny chan
 The following shows how to mutate a class' method:
 
 ```cpp
-    SomeClass::mutateMethod(someVirtualMethod, SomeClass::someVirtualMethodOverride);
+SomeClass::mutateMethod(someVirtualMethod, SomeClass::someVirtualMethodOverride);
 ```
 
 ## Instance evolution
@@ -93,5 +93,5 @@ Classes that are meant to be evolutionary targets must be abstract and cannot ad
 The evolution of a class instance is done as follows:
 
 ```cpp
-    SomeClass::evolveTo(someClassObject, SomeInheringClass::getClass());
+SomeClass::evolveTo(someClassObject, SomeInheringClass::getClass());
 ```

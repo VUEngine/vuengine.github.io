@@ -47,76 +47,76 @@ PositionedActorROMSpec StageActorsSpecs[] =
 ```cpp
 StageROMSpec StatefulActorsStageSpec =
 {
-	// Class allocator
-	__TYPE(Stage),
+    // Class allocator
+    __TYPE(Stage),
 
-	// Timer config
-	{...},
+    // Timer config
+    {...},
 
-	// Sound config
-	{...},
+    // Sound config
+    {...},
 
-	// General stage's attributes
-	{
-		// Stage's size in pixels
-		{
-			// x, y, z
-			8191, __SCREEN_HEIGHT, 8191,
-		},
+    // General stage's attributes
+    {
+        // Stage's size in pixels
+        {
+            // x, y, z
+            8191, __SCREEN_HEIGHT, 8191,
+        },
 
-		// Camera's initial position inside the stage
-		{
-			// x, y, z, p
-			0, 0, 0, 0
-		},
+        // Camera's initial position inside the stage
+        {
+            // x, y, z, p
+            0, 0, 0, 0
+        },
 
-		// Camera's frustum
-		{
-			// x0, y0, z0
-			0, 0, -10,
+        // Camera's frustum
+        {
+            // x0, y0, z0
+            0, 0, -10,
             // x1, y1, z1
-    		__SCREEN_WIDTH, __SCREEN_HEIGHT, 4096
-		}
-	},
+            __SCREEN_WIDTH, __SCREEN_HEIGHT, 4096
+        }
+    },
 
-	// Streaming
-	{...},
+    // Streaming
+    {...},
 
-	// Rendering
-	{...},
+    // Rendering
+    {...},
 
-	// Physical world's properties
-	{...},
+    // Physical world's properties
+    {...},
 
-	// Assets
-	{
-		// Fonts to preload
-		(FontSpec**)StatefulActorsStageFondSpecs ,
+    // Assets
+    {
+        // Fonts to preload
+        (FontSpec**)StatefulActorsStageFondSpecs ,
 
-		// CharSets to preload
-		(CharSetSpec**)NULL,
+        // CharSets to preload
+        (CharSetSpec**)NULL,
 
-		// Textures to preload
-		(TextureSpec**)NULL,
+        // Textures to preload
+        (TextureSpec**)NULL,
 
-		// Sounds to load
-		(SoundSpec**)StatefulActorsStageSoundSpecs,
-	},
+        // Sounds to load
+        (SoundSpec**)StatefulActorsStageSoundSpecs,
+    },
 
-	// Actors
-	{
-		// UI configuration
-		{
-			(PositionedActor*)StatefulActorsStageUIActorsSpecs,
-			__TYPE(UIContainer),
-		},
+    // Actors
+    {
+        // UI configuration
+        {
+            (PositionedActor*)StatefulActorsStageUIActorsSpecs,
+            __TYPE(UIContainer),
+        },
 
-		// Stage's children actors
-		(PositionedActor*)StatefulActorsStageActorsSpecs,
-	},
+        // Stage's children actors
+        (PositionedActor*)StatefulActorsStageActorsSpecs,
+    },
 
-	// Post processing effects
-	(PostProcessingEffect*)NULL,
+    // Post processing effects
+    (PostProcessingEffect*)NULL,
 };
 ```
 
@@ -127,37 +127,37 @@ StageROMSpec StatefulActorsStageSpec =
 ```cpp
 ComponentSpec* const BoxActorComponentSpecs[] =
 {
-	(ComponentSpec*)&BoxSpriteSpec,
-	(ComponentSpec*)&BoxColliderSpec1,
-	NULL
+    (ComponentSpec*)&BoxSpriteSpec,
+    (ComponentSpec*)&BoxColliderSpec1,
+    NULL
 };
 
 ActorROMSpec BoxActorSpec =
 {
-	// Class allocator
-	__TYPE(Actor),
+    // Class allocator
+    __TYPE(Actor),
 
-	// Component specs
-	(ComponentSpec**)BoxActorComponentSpecs,
+    // Component specs
+    (ComponentSpec**)BoxActorComponentSpecs,
 
-	// Children specs
-	NULL,
+    // Children specs
+    NULL,
 
-	// Extra info
-	NULL,
+    // Extra info
+    NULL,
 
-	// Size
-	// If 0, it is computed from the visual components if any
-	{0, 0, 0},
+    // Size
+    // If 0, it is computed from the visual components if any
+    {0, 0, 0},
 
-	// Actor's in-game type
-	kTypeSolidObject,
+    // Actor's in-game type
+    kTypeSolidObject,
 
-	// Pointer to animation functions array
-	NULL,
+    // Pointer to animation functions array
+    NULL,
 
-	// Animation to play automatically
-	NULL
+    // Animation to play automatically
+    NULL
 };
 ```
 
@@ -424,29 +424,29 @@ ParticleSystemROMSpec StarsParticleSystemNormalSpec =
 ```cpp
 ParticleROMSpec StarParticleSpec =
 {
-	// Class allocator
-	__TYPE(Particle),
+    // Class allocator
+    __TYPE(Particle),
 
-	// Minimum life span in milliseconds
-	5 * 8 * 20,
+    // Minimum life span in milliseconds
+    5 * 8 * 20,
 
-	// Life span delta in milliseconds
-	100,
+    // Life span delta in milliseconds
+    100,
 
-	// Function pointer to control particle's behavior
-	NULL,
+    // Function pointer to control particle's behavior
+    NULL,
 
-	// Array of available animations
-	(const AnimationFunction**)&StarAnimationSpecs,
+    // Array of available animations
+    (const AnimationFunction**)&StarAnimationSpecs,
 
-	// Animation to play automatically
-	"Vanish",
+    // Animation to play automatically
+    "Vanish",
 
-	// animation to play upon collision
-	NULL,
+    // animation to play upon collision
+    NULL,
 
-	// object's in-game type
-	kTypeParticle,
+    // object's in-game type
+    kTypeParticle,
 };
 ```
 

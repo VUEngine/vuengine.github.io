@@ -11,7 +11,7 @@ Download the latest release for your operating system from the <a href="/downloa
 
 ## Windows
 
-Run the installer. It will take a little moment to install VUEngine Studio to `C:\VUEngine`, then automatically launch it when done.
+Run the installer. It will take a little moment to install VUEngine Studio to `C:\VUEngine` and automatically launch it when done.
 
 Note that binaries are not signed and Windows might warn you about it.
 
@@ -19,7 +19,7 @@ Note that binaries are not signed and Windows might warn you about it.
 
 Run the installer to install `VUEngine.app` to your Applications folder.
 
-Note that binaries are are neither signed nor authored and macOS might warn you about it. If that is the case for you, hold down the Options (⌥) key while double clicking and macOS will allow you to still run the setup and not warn you again in the future.
+Note that binaries are are neither signed nor authored and macOS might warn you about it. If that is the case for you, hold down either the Options key <span class="keys">⌥</span> or meta key <span class="keys">⌘</span> while right clicking the `pkg` installer and selecting "Open". MacOS will allow you to still run the setup and not warn you again in the future.
 
 You may need to install additional libraries to be able to build your code.
 
@@ -31,7 +31,7 @@ brew reinstall libmpc
 
 #### Apple Silicon (ARM)
 
-To work on devices running Apple Silicon, you will also need a `libmpc`, but instead of `arm64` version installation of `x86_64` is required. In order to accomplish that you will need `brew` for `x86_64` machines (feel free to skip to step 2 if you already have it installed).
+To work on devices running Apple Silicon, you will also need a `libmpc`, but instead of `arm64` version installation of `x86_64` is required. In order to accomplish that you will need `brew` for `x86_64` machines. Skip to step 2 if you already have it installed.
 
 1. Install brew with command:
 
@@ -39,7 +39,7 @@ To work on devices running Apple Silicon, you will also need a `libmpc`, but ins
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. Install `x86_64` version of `libmpc`:
+2. Install the `x86_64` version of `libmpc`:
 
 ```bash
 arch -x86_64 /usr/local/bin/brew install libmpc

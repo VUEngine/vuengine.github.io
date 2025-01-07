@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
+<html class="h-100" lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="utf-8" />
@@ -27,12 +27,12 @@
 
 <body class="d-flex flex-column h-100 os-other">
   <header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-dark text-white">
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 shadow text-bg-primary">
     <div class="container">
       <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-        <a href="/" class="d-flex align-items-center col-lg-3 mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="/assets/images/logo-full-color.png" width="44" height="44" class="bi me-2" />
-          <span class="fs-3 text-nowrap">
+        <a href="/" class="d-flex align-items-center col-lg-3 mb-2 mb-lg-0 text-decoration-none">
+          <img src="/assets/images/logo.png" width="44" height="44" class="bi me-2" />
+          <span class="fs-2 text-nowrap text-white">
             <strong>{{ site.title }}</strong>
           </span>
         </a>
@@ -50,11 +50,20 @@
           {% endfor %}
         </ul>
 
-        <div class="col-lg-2 text-end text-nowrap text-white">
+        <div class="col-lg-2 text-end text-nowrap">
+          {% comment %}
+          {% include search-lunr.html %}
+          {% endcomment %}
           <a href="https://www.patreon.com/VUEngine" role="button"
-            class="btn btn-outline-secondary btn-patreon d-none d-lg-inline-block">
-            <i class="fab fa-patreon"></i>
+            class="btn btn-outline-light btn-patreon d-none d-lg-inline-block">
+            <i class="fab fa-patreon"></i> Donate
           </a>
+          <button class="btn btn-link nav-link py-2 px-0 px-lg-2 fs-5 d-inline-block" id="bd-theme" type="button"
+            aria-label="Toggle theme (auto)" title="Toggle theme (auto)">
+            <i class="far fa-sun" data-bs-theme-value="light"></i>
+            <i class="far fa-moon" data-bs-theme-value="dark"></i>
+            <i class="fas fa-adjust" data-bs-theme-value="auto"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -62,7 +71,7 @@
 
   <main role="main" class="flex-shrink-0">{{ content }}</main>
 
-  <footer class="footer mt-auto py-3 bg-secondary text-white">
+  <footer class="footer mt-auto py-3 text-bg-dark">
     <div class="container">
       <div class="row">
         <div class="col-md-6 py-2 text-center text-md-start">{{ site.data.footer.copyright }}</div>
@@ -93,6 +102,7 @@
     });
   </script>
   <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/bootstrap/color-mode.js"></script>
 </body>
 
 </html>

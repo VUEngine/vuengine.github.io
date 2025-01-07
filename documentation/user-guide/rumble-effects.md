@@ -10,20 +10,20 @@ Rumble effects can be sent to a compatible device through the EXT port by means 
 ```cpp
 RumbleEffectROMSpec PointRumbleEffectSpec =
 {
-	// Effect #
-	56,
-	// Frequency
-	__RUMBLE_FREQ_240HZ,
-	// Positive Sustain
-	80,
-	// Negative Sustain
-	255,
-	// Overdrive
-	126,
-	// Break
-	255,
-	// Stop before starting
-	true,
+    // Effect #
+    56,
+    // Frequency
+    __RUMBLE_FREQ_240HZ,
+    // Positive Sustain
+    80,
+    // Negative Sustain
+    255,
+    // Overdrive
+    126,
+    // Break
+    255,
+    // Stop before starting
+    true,
 };
 ```
 

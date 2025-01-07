@@ -1,20 +1,29 @@
 ---
 layout: default
 ---
-<section class="bg-light">
+
+<section class="text-bg-dark">
   <div class="container px-4 py-2">
-    <h1 class="mt-4 fs-2">Documentation</h1>
+    {% assign breadcrumb = 'Documentation' %}
+    {% for section in site.data.documentation %}
+    {% for docPage in section[1] %}
+    {% if page.url == docPage.url %}
+    {% assign breadcrumb = breadcrumb | append: ' • ' | append: section[0] %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+
+    <h1 class="mt-4">{{ breadcrumb }}</h1>
   </div>
 </section>
 
-<div class="documentation py-4">
+<section class="bg-light documentation py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-3 order-2 order-md-1">
         <div class="sticky-top mb-5 me-3" style="top: 20px">
-          {% include search-lunr.html %}
-
-          <div class="accordion accordion-flush mt-4" id="docsnav">
+          <div class="accordion accordion-flush" id="docsnav">
             {% for section in site.data.documentation %}
             {% assign collapsed = true %}
             {% assign currentDocUrl = '' %}
@@ -29,8 +38,8 @@ layout: default
             {% endfor %}
 
             <div class="accordion-item border-bottom-0">
-              <h2 class="accordion-header" id="flush-heading{{ forloop.index }}">
-                <button class="accordion-button px-1 py-1 shadow-none{% if collapsed %} collapsed{% endif %}"
+              <h2 class="accordion-header" id="flush-heading-{{ forloop.index }}">
+                <button class="accordion-button px-1 py-1 shadow-none{% if collapsed == false %} current{% endif %}"
                   type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ forloop.index }}"
                   aria-expanded="{% if collapsed %}false{% else %}true{% endif %}"
                   aria-controls="flush-collapse{{ forloop.index }}">
@@ -39,7 +48,7 @@ layout: default
               </h2>
               <div id="flush-collapse{{ forloop.index }}"
                 class="accordion-collapse collapse{% unless collapsed %} show{% endunless %}"
-                aria-labelledby="flush-heading{{ forloop.index }}" data-bs-parent="#docsnav">
+                aria-labelledby="flush-heading-{{ forloop.index }}" data-bs-parent="#docsnav">
                 <ul class="list-unstyled mx-3 mb-2 fs-90p">
                   {% for docPage in section[1] %}
                   <li>
@@ -127,7 +136,7 @@ layout: default
       </div>
     </div>
   </div>
-</div>
+</section>
 
 {% comment %}
 <script>

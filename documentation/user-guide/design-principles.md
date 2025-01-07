@@ -11,9 +11,9 @@ The engine has evolved over the years to implement the following patterns:
 
 Since the beginning of its development, VUEngine has implemented mechanisms to support the following 3 basic features that Object Oriented Programming proposes:
 
-* Inheritance
-* Encapsulation
-* Polymorphism
+- Inheritance
+- Encapsulation
+- Polymorphism
 
 Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in
 order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code writen in a syntax close to that of C++'s, into standard C. We call our custom language Virtual C.
@@ -27,8 +27,11 @@ Any VUEngine based program must provide a `GameState` for the VUEngine instanceâ
 ```cpp
 int32 game(void)
 {
-	// Start the game
-	return VUEngine::start(GameState::safeCast(PrecautionScreenState::getInstance()));
+    // Start the game
+    return VUEngine::start
+    (
+        GameState::safeCast(PrecautionScreenState::getInstance())
+    );
 }
 ```
 
@@ -69,14 +72,14 @@ Lately, we have been changing the engine to fully embrace composition over inher
 /// @memberof Component
 enum ComponentTypes
 {
-	kColliderComponent = 0,
-	kSpriteComponent,
-	kWireframeComponent,
-	kBehaviorComponent,
-	kPhysicsComponent,
+    kColliderComponent = 0,
+    kSpriteComponent,
+    kWireframeComponent,
+    kBehaviorComponent,
+    kPhysicsComponent,
 
-	// Limmiter
-	kComponentTypes,
+    // Limmiter
+    kComponentTypes,
 };
 ```
 
@@ -118,34 +121,34 @@ The following exemplifies a **Spec** that specifies what to display (a `Texture`
 ```cpp
 BgmapSpriteROMSpec SomeSpriteSpec =
 {
-	{
-		// Component
-		{
-			// Allocator
-			__TYPE(BgmapSprite),
+    {
+        // Component
+        {
+            // Allocator
+            __TYPE(BgmapSprite),
 
-			// Component type
-			kSpriteComponent
-		},
+            // Component type
+            kSpriteComponent
+        },
 
-		// Spec for the texture to display
-		(TextureSpec*)&SomeTextureSpec,
+        // Spec for the texture to display
+        (TextureSpec*)&SomeTextureSpec,
 
-		// Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
-		__TRANSPARENCY_NONE,
+        // Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
+        __TRANSPARENCY_NONE,
 
-		// Displacement added to the sprite's position
-		{0, 0, 2, 0},
-	},
+        // Displacement added to the sprite's position
+        {0, 0, 2, 0},
+    },
 
-	// The display mode (__WORLD_BGMAP, __WORLD_AFFINE, __WORLD_OBJECT or __WORLD_HBIAS)
-	__WORLD_BGMAP,
+    // The display mode (__WORLD_BGMAP, __WORLD_AFFINE, __WORLD_OBJECT or __WORLD_HBIAS)
+    __WORLD_BGMAP,
 
-	// Pointer to affine/hbias manipulation function
-	NULL,
+    // Pointer to affine/hbias manipulation function
+    NULL,
 
-	// Flag to indicate in which display to show the texture (__WORLD_ON, __WORLD_LON or __WORLD_RON)
-	__WORLD_ON,
+    // Flag to indicate in which display to show the texture (__WORLD_ON, __WORLD_LON or __WORLD_RON)
+    __WORLD_ON,
 };
 ```
 
@@ -158,12 +161,12 @@ Sprite sprite = SpriteManager::createSprite(NULL, &SomeSpriteSpec);
 
 if(!isDeleted(sprite))
 {
-	PixelVector spritePosition =
-	{
-		__SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
-	};
+    PixelVector spritePosition =
+    {
+        __SCREEN_WIDTH / 2, __SCREEN_HEIGHT / 2, 0, 0
+    };
 
-	Sprite::setPosition(sprite, &spritePosition);
+    Sprite::setPosition(sprite, &spritePosition);
 }
 ```
 
