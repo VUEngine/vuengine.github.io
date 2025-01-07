@@ -20,7 +20,7 @@ You can conveniently manage your project's plugins in the Plugins Browser (**B**
 - with the `Toggle Plugins View` command
 - through the menu: **View > Plugins**
 
-<a href="/documentation/images/basics/plugins/vuengine-plugins-browser.png"><img src="/documentation/images/basics/plugins/vuengine-plugins-browser.png" width="100%" /></a>
+<a href="/documentation/images/basics/plugins/vuengine-plugins-browser.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/plugins/vuengine-plugins-browser.png" width="100%" /></a>
 
 ### Browsing Plugins
 
@@ -60,4 +60,4 @@ In the future, we plan to provide templates and a dialog for creating custom plu
 
 What defines a VUEngine Plugin as such, is the `vuengine.plugin` in its root. Open it to configure your plugin.
 
-<a href="/documentation/images/basics/plugins/vuengine-plugins-edit-plugin.png"><img src="/documentation/images/basics/plugins/vuengine-plugins-edit-plugin.png" width="100%" /></a>
+<a href="/documentation/images/basics/plugins/vuengine-plugins-edit-plugin.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/plugins/vuengine-plugins-edit-plugin.png" width="100%" /></a>

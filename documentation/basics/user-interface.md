@@ -7,7 +7,7 @@ title: User Interface
 
 VUEngine Studio's user interface is modeled after Visual Studio Code, but with more flexibility and an additional right sidepanel and sidebar in mind. Like many other code editors, VUEngine Studio adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to, and an editor in the center, showing the content of the files you have opened.
 
-<a href="/documentation/images/basics/user-interface/user-interface.png"><img src="/documentation/images/basics/user-interface/user-interface.png" width="100%" /></a>
+<a href="/documentation/images/basics/user-interface/user-interface.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/user-interface.png" width="100%" /></a>
 
 ## Layout
 
@@ -36,7 +36,7 @@ When you have more open items than can fit in the title area, you can use the `V
 
 You can open as many editors as you like side by side vertically and horizontally. You can either drag and drop an opened file to any side of the editor region, or right click it and select any of `Split Up/Down/Left/Right`.
 
-<a href="/documentation/images/basics/user-interface/side-by-side-editing.png"><img src="/documentation/images/basics/user-interface/side-by-side-editing.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/side-by-side-editing.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/side-by-side-editing.png" width="600" /></a>
 
 Whenever you open another file, the editor that is active will display the content of that file. So if you have two editors side by side and you want to open file "file.c" into the right-hand editor, make sure that editor is active (by clicking inside it) before opening file "file.c". Editors will open to the right-hand side of the active one.
 
@@ -44,7 +44,7 @@ Whenever you open another file, the editor that is active will display the conte
 
 A Minimap (code outline) gives you a high-level overview of your source code, which is useful for quick navigation and code understanding. A file's minimap is shown on the right side of the editor. You can click or drag the shaded area to quickly jump to different sections of your file.
 
-<a href="/documentation/images/basics/user-interface/minimap.png"><img src="/documentation/images/basics/user-interface/minimap.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/minimap.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/minimap.png" width="600" /></a>
 
 You can move the minimap to the left hand side, disable it completely, change the scale and more with the following settings:
 
@@ -93,7 +93,7 @@ You can type to filter the currently visible files in the **File Explorer**. Wit
 
 Hovering over the filter box and selecting **Enable Filter on Type** will show only matching files/folders. Use the 'X' **Clear** button to clear the filter.
 
-<a href="/documentation/images/basics/user-interface/filtering-the-document-tree.png"><img src="/documentation/images/basics/user-interface/filtering-the-document-tree.png" width="300" /></a>
+<a href="/documentation/images/basics/user-interface/filtering-the-document-tree.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/filtering-the-document-tree.png" width="300" /></a>
 
 ### Open Editors
 
@@ -138,7 +138,7 @@ The Sidebars on the left and right let you quickly switch between Views. You can
 
 VUEngine Studio is equally accessible from the keyboard. The most important key combination to know is <span class="keys" data-osx="⇧⌘P">Shift+Ctrl+P</span>, which brings up the **Command Palette**. From here, you have access to all of the functionality of VUEngine Studio, including keyboard shortcuts for the most common operations.
 
-<a href="/documentation/images/basics/user-interface/command-palette.png"><img src="/documentation/images/basics/user-interface/command-palette.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/command-palette.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/command-palette.png" width="600" /></a>
 
 The **Command Palette** provides access to many commands. You can execute editor commands, open files, build your project, convert images, etc, all using the same interactive window. Here are a few tips:
 
@@ -167,7 +167,7 @@ When you single-click or select a file in the Explorer, it is shown in a preview
 
 Preview mode is indicated by italics in the Tab heading:
 
-<a href="/documentation/images/basics/user-interface/preview-mode.png"><img src="/documentation/images/basics/user-interface/preview-mode.png" width="600" /></a>
+<a href="/documentation/images/basics/user-interface/preview-mode.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/preview-mode.png" width="600" /></a>
 
 If you'd prefer to not use preview mode and always create a new Tab, you can control the behavior with this setting:
 

@@ -13,13 +13,13 @@ VUEngine Studio IntelliSense features are powered by a language service and such
 
 You can trigger IntelliSense in any editor window by typing <span class="keys" data-osx="⌃Space">Ctrl+Space</span> or by typing a trigger character (such as color (:)).
 
-<a href="/documentation/images/basics/intellisense/method-auto-completion.png"><img src="/documentation/images/basics/intellisense/method-auto-completion.png"/></a>
+<a href="/documentation/images/basics/intellisense/method-auto-completion.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/intellisense/method-auto-completion.png"/></a>
 
 If documentation is available, such info will be shown to the right of the auto-complete selection by either pressing <span class="keys" data-osx="⌃Space">Ctrl+Space</span> or clicking the <i class="codicon codicon-chevron-right"></i> icon on the right. The accompanying documentation for the method will now expand to the side. The expanded documentation will stay so and will update as you navigate the list. You can close this by pressing <span class="keys" data-osx="⌃Space">Ctrl+Space</span> again or by clicking on the close icon.
 
 After choosing a method you are provided with a parameter hint for the parameter you are currently typing. You can also bring it up manually with <span class="keys" data-osx="⇧⌘Space">Shift+Ctrl+Space</span> when your cursor is inside the brackets of a function call.
 
-<a href="/documentation/images/basics/intellisense/method-parameters-hint.png"><img src="/documentation/images/basics/intellisense/method-parameters-hint.png"/></a>
+<a href="/documentation/images/basics/intellisense/method-parameters-hint.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/intellisense/method-parameters-hint.png"/></a>
 
 If you prefer, you can turn off IntelliSense while you type. See <a href="#customizing-intelliSense">Customizing IntelliSense</a> below to learn how to disable or customize VUEngine Studio's IntelliSense features.
 
@@ -27,7 +27,7 @@ If you prefer, you can turn off IntelliSense while you type. See <a href="#custo
 
 IntelliSense gives both inferred proposals and the global identifiers of the project. The inferred symbols are presented first, followed by the global identifiers (shown by the Word icon).
 
-<a href="/documentation/images/basics/intellisense/auto-completion-types.png"><img src="/documentation/images/basics/intellisense/auto-completion-types.png"/></a>
+<a href="/documentation/images/basics/intellisense/auto-completion-types.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/intellisense/auto-completion-types.png"/></a>
 
 VUEngine Studio IntelliSense offers different types of completions, including language server suggestions, snippets, and simple word based textual completions.
 

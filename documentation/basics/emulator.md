@@ -25,11 +25,11 @@ As a secondary built-in emulator, VUEngine Studio supports playtesting on a Nint
 
 Boot up Red Viper and press Y on the main menu to set it to listen for new ROMs being transferred via VBLink.
 
-<a href="/documentation/images/basics/emulator/red-viper-vblink.png"><img src="/documentation/images/basics/emulator/red-viper-vblink.png"/></a>
+<a href="/documentation/images/basics/emulator/red-viper-vblink.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/emulator/red-viper-vblink.png"/></a>
 
 The above screen displays your Nintendo 3DS' IP address, `192.168.5.206` in this case. Configure VUEngine Studio accordingly and set Red Viper as the default emulator, as seen in the following screenshot.
 
-<a href="/documentation/images/basics/emulator/red-viper-set-ip.png"><img src="/documentation/images/basics/emulator/red-viper-set-ip.png" width="800"/></a>
+<a href="/documentation/images/basics/emulator/red-viper-set-ip.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/emulator/red-viper-set-ip.png" width="800"/></a>
 
 ### Usage
 
