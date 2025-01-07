@@ -20,6 +20,7 @@ The class modifiers are:
 
 - `abstract`
 - `singleton`
+- `singleton!`
 - `dynamic_singleton`
 - `static`
 - `extension`
@@ -33,6 +34,8 @@ The `abstract` class modifier prevents the creation of class instances through t
 The language implements support to declare classes that can only have a single instance and adds automatically the necessary code to support it and to prevent more than one instantiation.
 
 The singleton classes' instances are allocated in the stack.
+
+The `singleton!` modifier makes the class instance inaccessible from the outside by making the `getInstance` method's linkage non global. 
 
 ### Dynamic Singleton classes
 
