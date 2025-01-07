@@ -39,6 +39,10 @@ If symbols were found in the current file, you will see the current symbol path 
 
 You can turn off breadcrumbs with the `View > Toggle Breadcrumbs` toggle or with the <span class="setting">breadcrumbs.enabled</span> setting.
 
+```json
+"breadcrumbs.enabled": false
+```
+
 ## Go to Definition
 
 If known, you can go to the definition of a symbol by pressing <span class="keys">F12</span>.

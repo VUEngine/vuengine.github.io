@@ -7,7 +7,9 @@ title: Introduction
 
 VUEngine Studio is a custom integrated development environment (IDE), tailor-made for <a href="https://www.virtual-boy.com">Nintendo Virtual Boy</a> game development with <a href="https://github.com/VUEngine/VUEngine-Core">VUEngine</a>, our versatile, object oriented Virtual Boy game engine.
 
-Check out the following sections of this documentation:
+As the end result, it can generate ROM files (`.vb`) that can be run in an emulator or, via a flash cart, on actual Virtual Boy hardware.
+
+To get started, check out the following sections of this documentation.
 
 - <a href="/documentation/setup/installation/">Setup</a>: to get your copy of VUEngine Studio up and running.
 - <a href="/documentation/basics/user-interface/">Editor Basics</a>: to get to know the IDE and the most important of its many features.
