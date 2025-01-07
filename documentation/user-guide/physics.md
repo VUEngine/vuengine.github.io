@@ -12,7 +12,7 @@ The engine provides basic physics simulations by means of the `Body` component a
 A `Body` is a Component that attaches to a `Entity`. It has basic properties like mass, friction, bounciness, maximum speed and maximum velocity, etc. A `BodySpec` determines how to initialize these properties when instantiating a Body:
 
 ```cpp
-BodyROMSpec ActorBodySpec =
+BodyROMSpec SomeActorBodySpec =
 {
     // Component
     {
@@ -54,7 +54,7 @@ An `Entity` with a `Body` attached to it will react to forces applied to it:
 ```cpp
     Vector3D force = 
     {
-        Body::getMass(Actor::getBody(someactor)), 0, 0
+        Body::getMass(SomeActor::getBody(someactor)), 0, 0
 
     };
 
@@ -73,7 +73,7 @@ The engine provides a few kinds of Colliders: `Ball`s, `Box`es, `LineField`s.
 The typical `ColliderSpec` looks like the following:
 
 ```cpp
-ColliderROMSpec ActorColliderSpec =
+ColliderROMSpec SomeActorColliderSpec =
 {
     // Component
     {
@@ -128,8 +128,10 @@ Collision as processed by overriding the following `Entity`'s methods:
     virtual void collisionEnds(const CollisionInformation* collisionInformation);
 ```
 
+The `CollisionInformation` struct holds information about the colliding `Entity`, the collision vector, and the `Collider`s involved in the collision event:
+
 ```cpp
-bool Actor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
+bool SomeActor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
 {
     Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
 
@@ -137,12 +139,12 @@ bool Actor::collisionStarts(const CollisionInformation* collisionInformation __a
     {
         switch(Entity::getInGameType(collidingEntity))
         {
-            case kTypeEnemy:
+            case kTypeSomeEntityType:
                 {
-                    Actor::sendMessageTo
+                    SomeActor::sendMessageTo
                     (
                         0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity),
-                        kMessageTouchedByActor, NULL
+                        kMessageTouchedBySomeActor, NULL
                     );
                 }
                 break;

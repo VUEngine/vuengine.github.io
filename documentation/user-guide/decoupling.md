@@ -30,10 +30,10 @@ void sendMessageToSelf(uint32 message, uint32 delay, uint32 randomDelay);
 
 These are useful when, for example, an `Actor` processing a collision needs to inform the colliding `Entity` about it.
 
-In the following example, when a `Projectile` hits an `Entity` of type `kTypeEnemy`, instead of calling a bespoke method on the colliding object that would depend on its class and would require the including of the header file where it is declared, it can send a message to it:
+In the following example, when an `Actor` hits an `Entity` of type `kTypeSomeEntityType`, instead of calling a bespoke method on the colliding object that would depend on its class and would require the inclusion of the header file where it is declared, it can send a message to it:
 
 ```cpp
-bool Projectile::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
+bool SomeActor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
 {
     Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
 
@@ -41,12 +41,12 @@ bool Projectile::collisionStarts(const CollisionInformation* collisionInformatio
     {
         switch(Entity::getInGameType(collidingEntity))
         {
-            case kTypeEnemy:
+            case kTypeSomeEntityType:
                 {
-                    Projectile::sendMessageTo
+                    SomeActor::sendMessageTo
                     (
                         0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity),
-                        kMessageProjectileHitYou, NULL
+                        kMessageTouchedBySomeActor, NULL
                     );
                 }
                 break;
@@ -60,13 +60,13 @@ bool Projectile::collisionStarts(const CollisionInformation* collisionInformatio
 And the colliding object can still have an specific reaction to the collision by processing the message sent to it:
 
 ```cpp
-bool Enemy::handleMessage(Telegram telegram)
+bool SomeOtherActor::handleMessage(Telegram telegram)
 {
     switch(Telegram::getMessage(telegram))
     {
-        case kMessageProjectileHitYou:
+        case kMessageTouchedBySomeActor:
             {
-                Enemy::hitByProjectile(this);
+                // Do interesting stuff
             }
             break;
     }
@@ -78,25 +78,20 @@ bool Enemy::handleMessage(Telegram telegram)
 Messages can be propagated too, instead of being specifically directed to a known `ListenerObject`. Usually, the propagation starts at the `Stage`’s level and is done through the `GameState`’s interface:
 
 ```cpp
-bool PongState::onRemoteGoneAway(ListenerObject eventFirer __attribute__((unused)))
-{
-    CommunicationManager::disableCommunications();
-
-    PongState::propagateMessage(this, kMessagePongResetPositions);
-
-    return false;
-}
+    SomeGameState::propagateMessage(this, kMessageSomeMessage);
 ```
 
 And any interested `Entity` can process the message and let it be forwarded to other instance of `Entity`, but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
 
 ```cpp
-bool PongBall::handlePropagatedMessage(int32 message)
+bool SomeClass::handlePropagatedMessage(int32 message)
 {
     switch(message)
     {
-        case kMessagePongResetPositions:
-            PongBall::prepareToMove(this);
+        case kMessageSomeMessage:
+
+            // Do interesting stuff
+
             break;
     }
 
