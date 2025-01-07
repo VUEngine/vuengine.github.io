@@ -27,7 +27,7 @@ The class modifiers are:
 
 ### Abstract classes
 
-The `abstract` class modifier prevents the creation of class instances through the `new` keyword, whtout the requirement of there being at least one pure virtual method.
+The `abstract` class modifier prevents the creation of class instances through the `new` keyword, without the requirement of there being at least one pure virtual method.
 
 ### Singleton classes
 
@@ -79,10 +79,38 @@ extension class SomeClass : BaseClass
 
 Virtual C allows the modification in real time of a class' virtual table ny changing the pointers to the virtual methods. This enables the possibility to change the behavior of all the class' instances simultaneously.
 
-The following shows how to mutate a class' method:
+Having a class that declares a `virtual` method or overrides one:
 
 ```cpp
-SomeClass::mutateMethod(someVirtualMethod, SomeClass::someVirtualMethodOverride);
+class CustomSprite : Sprite
+{
+    .
+    .
+    .
+	/// Render the sprite by configuring the DRAM assigned to it by means of the provided index.
+	/// @param index: Determines the region of DRAM that this sprite is allowed to configure
+	/// @return The index that determines the region of DRAM that this sprite manages
+	override int16 doRender(int16 index) = 0;
+    .
+    .
+    .
+}
+```
+
+It is possible to change at runtime the implementation of `handlePropagatedMessage` that is called on all the class instances by writing the following call to `mutateMethod` to another implemntation wih the same signature:
+
+```cpp
+void CustomSprite::changeDoRenderImplementation()
+{
+    CustomSprite::mutateMethod(doRender, CustomSprite::doRenderCustomImplementation);
+}
+
+//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+int16 CustomSprite::doRenderCustomImplementation(int16 index)
+{
+    // Do stuff
+}
 ```
 
 ## Instance mutation

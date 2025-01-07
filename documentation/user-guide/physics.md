@@ -49,6 +49,21 @@ BodyROMSpec PunkBodySpec =
     };
 ```
 
+An `Entity` with a `Body` attached to it will react to forces applied to it:
+
+```cpp
+	Vector3D force = 
+    {
+        Body::getMass(Punk::getBody(punk)), 0, 0
+
+    };
+
+    // If the object has a collider attached to it, the last argument
+    // forces to check if the movement in the force's direction won't
+    // result immediately in a collision
+	Punk::applyForce(punk, &force, true);
+```
+
 ## Collider
 
 A `Collider` is a Component that attaches to a `Entity` and is capable of sensing collisions with other `Collider`s and informing its owner about these events.
@@ -95,3 +110,45 @@ ColliderROMSpec PunkColliderSpec =
 In order to reduce the number of collision checks as much as possible, the `Collider` can be configured to be passive: it doesn’t check for collisions itself, but others can still check for collisions against it. Another property used to improve performance is the layers in which a `Collider` logically exists. This, in conjunction with the property that defines layers to ignore when checking for collisions, helps to reduce the number of tests per game cycle. For example, A solid `Particle` might need to bounce when colliding with the floor, but it doesn’t need to test if it collides with an item; in this case, the item’s `Collider` may be set to live in a collision layer that the `Particle`’s collider ignores.
 
 Besides memory and performance, there are no other limitations with regards to how many `Collider`s can be added to the same `Entity`.
+
+Collision as processed by overriding the following `Entity`'s methods:
+
+```cpp
+    /// Process a newly detected collision by one of the component colliders.
+    /// @param collisionInformation: Information struct about the collision to resolve 
+    /// @return True if the collider must keep track of the collision to detect if it persists and when it ends; false otherwise
+    virtual bool collisionStarts(const CollisionInformation* collisionInformation);
+
+    /// Process a going on collision detected by one of the component colliders.
+    /// @param collisionInformation: Information struct about the collision to resolve 
+    virtual void collisionPersists(const CollisionInformation* collisionInformation);
+
+    /// Process when a previously detected collision by one of the component colliders stops.
+    /// @param collisionInformation: Information struct about the collision to resolve
+    virtual void collisionEnds(const CollisionInformation* collisionInformation);
+```
+
+```cpp
+bool Punk::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
+{
+    Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
+
+    if(!isDeleted(collidingEntity))
+    {
+        switch(Entity::getInGameType(collidingEntity))
+        {
+            case kTypeEnemy:
+                {
+                    Punk::sendMessageTo
+                    (
+                        0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity),
+                        kMessageTouchedByPunk, NULL
+                    );
+                }
+                break;
+        }
+    }
+
+    return false;
+}
+```
