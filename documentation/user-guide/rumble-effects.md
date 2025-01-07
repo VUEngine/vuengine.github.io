@@ -8,7 +8,7 @@ title: Rumble Effects
 Rumble effects can be sent to a compatible device through the EXT port by means of the `RumbleManager` instance, which receives a **RumbleEffectSpec** that specifies the kind of effect to produce:
 
 ```cpp
-RumbleEffectROMSpec PointRumbleEffectSpec =
+RumbleEffectROMSpec SomeRumbleEffectSpec =
 {
     // Effect #
     56,
@@ -30,7 +30,7 @@ RumbleEffectROMSpec PointRumbleEffectSpec =
 To produce the effect, call `RumbleManager::startEffect` with a valid **RumbleEffectSpec**:
 
 ```cpp
-extern RumbleEffectSpec PointRumbleEffectSpec;
+extern RumbleEffectSpec SomeRumbleEffectSpec;
 
-RumbleManager::startEffect(&PointRumbleEffectSpec);
+RumbleManager::startEffect(&SomeRumbleEffectSpec);
 ```

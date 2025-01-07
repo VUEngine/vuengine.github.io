@@ -12,7 +12,7 @@ The engine provides basic physics simulations by means of the `Body` component a
 A `Body` is a Component that attaches to a `Entity`. It has basic properties like mass, friction, bounciness, maximum speed and maximum velocity, etc. A `BodySpec` determines how to initialize these properties when instantiating a Body:
 
 ```cpp
-BodyROMSpec PunkBodySpec =
+BodyROMSpec ActorBodySpec =
 {
     // Component
     {
@@ -52,16 +52,16 @@ BodyROMSpec PunkBodySpec =
 An `Entity` with a `Body` attached to it will react to forces applied to it:
 
 ```cpp
-	Vector3D force = 
+    Vector3D force = 
     {
-        Body::getMass(Punk::getBody(punk)), 0, 0
+        Body::getMass(Actor::getBody(someactor)), 0, 0
 
     };
 
     // If the object has a collider attached to it, the last argument
     // forces to check if the movement in the force's direction won't
     // result immediately in a collision
-	Punk::applyForce(punk, &force, true);
+    Actor::applyForce(someactor, &force, true);
 ```
 
 ## Collider
@@ -73,7 +73,7 @@ The engine provides a few kinds of Colliders: `Ball`s, `Box`es, `LineField`s.
 The typical `ColliderSpec` looks like the following:
 
 ```cpp
-ColliderROMSpec PunkColliderSpec =
+ColliderROMSpec ActorColliderSpec =
 {
     // Component
     {
@@ -100,7 +100,7 @@ ColliderROMSpec PunkColliderSpec =
     true,
 
     // Layers in which I live
-    kLayerPunk,
+    kLayerActor,
 
     // Layers to ignore when checking for collisions
     ~(kLayerSolid | kLayerDangers),
@@ -129,7 +129,7 @@ Collision as processed by overriding the following `Entity`'s methods:
 ```
 
 ```cpp
-bool Punk::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
+bool Actor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
 {
     Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
 
@@ -139,10 +139,10 @@ bool Punk::collisionStarts(const CollisionInformation* collisionInformation __at
         {
             case kTypeEnemy:
                 {
-                    Punk::sendMessageTo
+                    Actor::sendMessageTo
                     (
                         0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity),
-                        kMessageTouchedByPunk, NULL
+                        kMessageTouchedByActor, NULL
                     );
                 }
                 break;

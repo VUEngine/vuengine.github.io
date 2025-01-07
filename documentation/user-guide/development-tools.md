@@ -37,7 +37,7 @@ It shows a preview of the animations available through SpriteSpecs listed in the
 ```cpp
 const UserActor _userAnimatedActors[] =
 {
-    {&PunkActorSpec, "Punk"},
+    {&ActorSpec, "Actor"},
     {NULL, ""},
 };
 ```

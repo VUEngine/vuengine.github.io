@@ -10,26 +10,9 @@ User input is read by the `KeypadManager` class’ instance and the engine takes
 In order to react to the actions of the user, the `GameState`s that implement the logic of the specific game must provide a custom implementation of the `processUserInput` method.
 
 ```cpp
-void ActorsState::processUserInput(const UserInput* userInput)
+void SomeGameState::processUserInput(const UserInput* userInput)
 {
-    ActorsState::playSoundEffects(this, userInput, false);
-
-    if(!isDeleted(this->leaderPunk))
-    {
-        /*
-        * Let add some children to the leader punk taking into account
-        * whether it is moving to the left or to the right just to
-        * make the input more intuitive
-        */
-        if(K_LL & userInput->releasedKey)
-        {
-            ActorsState::createSlavePunk(this, K_LL);
-        }
-        else if(K_LR & userInput->releasedKey)
-        {
-            ActorsState::createSlavePunk(this, K_LR);
-        }
-    }
+    [...]
 
     Base::processUserInput(this, userInput);
 }

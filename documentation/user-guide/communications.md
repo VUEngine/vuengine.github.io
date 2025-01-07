@@ -10,9 +10,9 @@ VUEngine supports versus mode in games through connectivity between 2 Virtual Bo
 Transmission consists of a message and optional data to be transmitted as a stream of bytes. After transmission is completed, the client code must check for the validity of the transmitted data by verifying the received message.
 
 ```cpp
-void Pong::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataBytes)
+void SomeClass::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataBytes)
 {
-    uint32 receivedMessage = kMessagePongDummy;
+    uint32 receivedMessage = kMessageSomeClassDummy;
     const RemotePlayerData* remotePlayerData = NULL;
     CommunicationManager communicationManager = ;
 
@@ -43,8 +43,8 @@ void Pong::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataBytes)
     /*
     * The validity of the message is based on the command that was received
     */
-    while(!Pong::isMessageValid(this, receivedMessage, remotePlayerData->command));
+    while(!SomeClass::isMessageValid(this, receivedMessage, remotePlayerData->command));
 
-    Pong::processReceivedMessage(this, messageForRemote, receivedMessage, remotePlayerData);
+    SomeClass::processReceivedMessage(this, messageForRemote, receivedMessage, remotePlayerData);
 }
 ```

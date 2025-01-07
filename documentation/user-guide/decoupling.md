@@ -120,26 +120,20 @@ void Entity::hide()
 To listen for events, an `EventListener` plus a scope object must be attached to a `ListenerObject`:
 
 ```cpp
-Pong::addEventListener
+SomeClass::addEventListener
 (
-    this, ListenerObject::safeCast(this), (EventListener)Pong::onPongBallOutOfBounds, kEventPongBallStreamedOut
+    this, ListenerObject::safeCast(this), (EventListener)SomeClass::onSomeInterestingEvent, kEventInteresting
 );
 ```
 
 An `EventListener` method must return a boolean and receive a `ListenerObject` as the event firer:
 
 ```cpp
-bool Pong::onPongBallOutOfBounds(ListenerObject eventFirer __attribute__ ((unused)))
+bool SomeClass::onSomeInterestingEvent(ListenerObject eventFirer __attribute__ ((unused)))
 {
-    Pong::printScore(this);
+    // Do interesting stuff
 
-    RumbleManager::startEffect(&PointRumbleEffectSpec);
-
-    SoundManager::playSound
-    (
-        &Point1SoundSpec, NULL, kSoundPlaybackNormal, NULL, NULL
-    );
-
+    // Return true to keep listening for the event, false otherwise
     return true;
 }
 ```
@@ -149,5 +143,5 @@ If the `EventListener` returns false, it is removed from the eventFirer’s list
 An event is fired by calling fireEvent on an instance of `ListenerObject`:
 
 ```cpp
-Pong::fireEvent(this, kEventPongRemoteInSync);
+SomeClass::fireEvent(this, kEventInteresting);
 ```

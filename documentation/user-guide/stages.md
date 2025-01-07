@@ -36,7 +36,7 @@ Being instantiable, the `Stage` has its own **StageSpec** to initialize it. Amon
 ```cpp
 PositionedActorROMSpec StageActorsSpecs[] =
 {
-    {&PunkActorSpec,        {0, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
+    {&ActorSpec,        {0, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
     {&BoxActorSpec,         {150, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
     {&CogWheelActorSpec,    {-150, 64, 0}, {0, 0, 0}, {1, 1, 1},  0, NULL, NULL, NULL, false},
 
@@ -166,11 +166,11 @@ ActorROMSpec BoxActorSpec =
 To add `Actor`s to the `Stage` programmatically, the following method can be used:
 
 ```cpp
-extern ActorSpec PunkActorSpec;
+extern ActorSpec ActorSpec;
 
 PositionedActor positionedActor =
 {
-    &PunkActorSpec, {0, 64, 16}, {0, 0, 0}, {1, 1, 1},  0, "Moe", NULL, NULL, false
+    &ActorSpec, {0, 64, 16}, {0, 0, 0}, {1, 1, 1},  0, "Moe", NULL, NULL, false
 };
 
 /*
@@ -183,30 +183,30 @@ Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedAct
 `Actor`s can be added dynamically to other `Actor`s too:
 
 ```cpp
-extern ActorSpec PunkActorSpec;
+extern ActorSpec ActorSpec;
 
 PositionedActor positionedActor =
 {
-    &PunkActorSpec,
+    &ActorSpec,
     {0, 0, 0},
     {0, 0, 0},
     {1, 1, 1},
     0,
-    childPunkName,
+    childActorName,
     NULL,
     NULL,
     false
 };
 
-Actor::spawnChildActor(this->leaderPunk, &positionedActor);
+Actor::spawnChildActor(actor, &positionedActor);
 ```
 
 Just as `Actor`s are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
 
 ```cpp
-if(NULL != childPunk)
+if(NULL != childActor)
 {
-    Actor::deleteMyself(childPunk);
+    Actor::deleteMyself(childActor);
 }
 ```
 
@@ -219,7 +219,7 @@ You acquire a direct reference to a newly spawned `Actor` when using the above m
 * This is how we add actors to the Stage. Notice that we don't creates Sprites nor animate them
 * directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
 */
-this->leaderPunk =
+    Actor actor =
     Actor::safeCast
     (
         Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false)
@@ -229,30 +229,26 @@ this->leaderPunk =
 Or you acquire it indirectly if the `Actor` is being added automatically by the `Stage`’s streaming as specified in the **StageSpec**:
 
 ```cpp
-/*
-* Let's see if the punk already has a child with the selected name.
-* If not, then create and add it as a child.
-*/
-Actor childPunk = Actor::safeCast(Actor::getChildByName(this->leaderPunk, childPunkName, false));
+Actor childActor = Actor::safeCast(Actor::getChildByName(actor, childActorName, false));
 ```
 
 Then you can move around the `Actor`, rotate it, etc., and all its components will take care of keeping their states in sync with the `Actor`.
 
 ```cpp
-if(!isDeleted(this->leaderPunk))
+if(!isDeleted(actor))
 {
     Vector3D translation = Vector3D::zero();
-    Rotation localRotation = *Actor::getLocalRotation(this->leaderPunk);
+    Rotation localRotation = *Actor::getLocalRotation(actor);
 
     translation.x = __PIXELS_TO_METERS(1);
     translation.z++;
     localRotation.y = __I_TO_FIX10_6(255);
 
-    // Add a translation to the leader punk
-    Actor::translate(this->leaderPunk, &translation);
+    // Add a translation to the leader actor
+    Actor::translate(actor, &translation);
 
     // Make it to face left or right by rotating it around its Y axis
-    Actor::setLocalRotation(this->leaderPunk, &localRotation);
+    Actor::setLocalRotation(actor, &localRotation);
 }
 ```
 
@@ -308,9 +304,9 @@ When you have an `Actor` with a `Body` attached to it, you can apply forces to i
 ```cpp
 Vector3D force = Vector3D::zero();
 
-force.x = Body::getMass(Punk::getBody(punk)) << 1;
+force.x = Body::getMass(Actor::getBody(actor)) << 1;
 
-Punk::applyForce(punk, &force, true);
+Actor::applyForce(actor, &force, true);
 ```
 
 ## StatefulActor
@@ -320,14 +316,14 @@ A `StatefulActor` adds to the `Actor` an optional `StateMachine`. This is done t
 The **StatefulActorSpec** adds to the **ActorSpec** some fields of its own:
 
 ```cpp
-StatefulActorROMSpec PunkStatefulActorSpec =
+StatefulActorROMSpec ActorStatefulActorSpec =
 {
     {
         // Class allocator
         __TYPE(StatefulActor),
 
         // Component specs
-        (ComponentSpec**)PunkStatefulActorComponentSpecs,
+        (ComponentSpec**)ActorStatefulActorComponentSpecs,
 
         // Children specs
         NULL,
@@ -340,10 +336,10 @@ StatefulActorROMSpec PunkStatefulActorSpec =
         {0, 0, 0},
 
         // Actor's in-game type
-        kTypePunk,
+        kTypeActor,
 
         // Pointer to animation functions array
-        (const AnimationFunction**)&PunkStatefulActorAnimationSpecs,
+        (const AnimationFunction**)&ActorStatefulActorAnimationSpecs,
 
         // Animation to play automatically
         "Move"

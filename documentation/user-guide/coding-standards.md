@@ -34,3 +34,20 @@ void SomeClass::someMethod()
 ```
 
 - The soft limit for line length is 140 characters.
+
+- Opening and closing parenthesis, both for function' signatures and calls, follow Allman style blocks when the line reaches the soft time limit:
+
+```cpp
+void SomeClass::someMethod
+(
+    uint32 someParameter1, uint32 someParameter2, uint32 someParameter3, uint32 someParameter4, 
+    uint32 someParameter5, uint32 someParameter6, 
+)
+{
+    SomeClass::someOtherMethod
+    (
+        this, someParameter1, someParameter2, someParameter3, someParameter4, someParameter5, 
+        someParameter6
+    );
+}
+```

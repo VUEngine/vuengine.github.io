@@ -26,7 +26,7 @@ Take the following image as an example from which a **CharSetSpec** will be defi
 The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The **Spec** that defines it is the following:
 
 ```cpp
-CharSetROMSpec PunkCharsetSpec =
+CharSetROMSpec ActorCharsetSpec =
 {
     // Number of chars in function of the number of frames to load at the same time
     4 * 6,
@@ -38,14 +38,14 @@ CharSetROMSpec PunkCharsetSpec =
     false,
 
     // Tiles array
-    PunkTiles,
+    ActorTiles,
 
     // Frame offsets array
     NULL,
 };
 ```
 
-`CharSet`s can have a unique usage or they can be shared to display more than one copy of the same image without increasing the memory footprint in the CHAR memory space. In the above example, the **PunkTiles** is a reference to the array that actually holds the pixel data.
+`CharSet`s can have a unique usage or they can be shared to display more than one copy of the same image without increasing the memory footprint in the CHAR memory space. In the above example, the **ActorTiles** is a reference to the array that actually holds the pixel data.
 
 CHAR memory is arranged as a unidimensional array. Visually, it would look like this:
 
@@ -56,12 +56,12 @@ In such an arrangement, the CHARs or tiles of this `CharSet` cannot be directly 
 Textures need their own **TextureSpec** to be instantiated and properly initialized. The following corresponds to the Spec for the texture that reconstruct the original image:
 
 ```cpp
-TextureROMSpec PunkTextureSpec =
+TextureROMSpec ActorTextureSpec =
 {
-    (CharSetSpec*)&PunkCharsetSpec,
+    (CharSetSpec*)&ActorCharsetSpec,
 
     // Pointer to the map array that defines how to use the tiles from the char set
-    PunkMap,
+    ActorMap,
 
     // Horizontal size in tiles of the texture (max. 64)
     4,
@@ -94,7 +94,7 @@ A `Texture`’s map has to be loaded in BGMAP memory when it is displayed by a `
 Finally, `Texture`s are displayed by `Sprite`s, either from BGMAP memory through a single WORLD, or by rendering each CHAR into OBJECT memory. The following **SpriteSpec** exemplifies the former in reference to the **TextureSpec** above:
 
 ```cpp
-BgmapSpriteROMSpec PunkSpriteSpec =
+BgmapSpriteROMSpec ActorSpriteSpec =
 {
     // Sprite
     {
@@ -108,7 +108,7 @@ BgmapSpriteROMSpec PunkSpriteSpec =
         },
 
         // Spec for the texture to display
-        (TextureSpec*)&PunkTextureSpec,
+        (TextureSpec*)&ActorTextureSpec,
 
         // Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)
         __TRANSPARENCY_NONE,
@@ -131,9 +131,9 @@ BgmapSpriteROMSpec PunkSpriteSpec =
 With these **Specs** defined, the original image can be displayed by instantiating a `Sprite` and positioning it appropriately:
 
 ```cpp
-extern SpriteSpec PunkSpriteSpec;
+extern SpriteSpec ActorSpriteSpec;
 
-Sprite sprite = SpriteManager::createSprite(NULL, &PunkSpriteSpec);
+Sprite sprite = SpriteManager::createSprite(NULL, &ActorSpriteSpec);
 
 if(!isDeleted(sprite))
 {
@@ -327,7 +327,7 @@ The first approach puts stress on video memory since depending on the size of ea
 `CharSet`s can be shared by multiple `Texture`s. Whether this is the case or not, is determined by the shared flag of the **CharSetSpec**:
 
 ```cpp
-CharSetROMSpec PunkCharsetSpec =
+CharSetROMSpec ActorCharsetSpec =
 {
     // Number of chars in function of the number of frames to load at the same time
     4 * 6,
@@ -339,7 +339,7 @@ CharSetROMSpec PunkCharsetSpec =
     false,
 
     // Tiles array
-    PunkTiles,
+    ActorTiles,
 
     // Frame offsets array
     NULL,
@@ -361,7 +361,7 @@ On the other hand, when using a non-shared **CharSetSpec** to create a `CharSet`
 To load the complete pixel data of all the animation frames of an animation, the **CharSetSpec** must specify the total amount of CHARs used by all of the:
 
 ```cpp
-CharSetROMSpec PunkCharsetMultiframeSpec =
+CharSetROMSpec ActorCharsetMultiframeSpec =
 {
     // Number of chars in function of the number of frames to load at the same time
     4 * 6 * 12,
@@ -373,7 +373,7 @@ CharSetROMSpec PunkCharsetMultiframeSpec =
     false,
 
     // Tiles array
-    PunkTiles,
+    ActorTiles,
 
     // Frame offsets array
     NULL,

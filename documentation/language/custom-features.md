@@ -52,26 +52,28 @@ Classes can be extended through the use of the `extension` keyword. They provide
 Give some class:
 
 ```cpp
-class SomeClass : BaseClass
+class SomeClass : SomeBaseClass
 {
-    uint32 someAttribute;
-
     [...]
 
     void someMethod();
+
     virtual bool someVirtualMethod();
+
+    [...]
 };
 ```
 
 The syntax to declare an extension for it is the following:
 
 ```cpp
-extension class SomeClass : BaseClass
+extension class SomeClass : SomeBaseClass
 {
+    [...]
+
     bool someVirtualMethodOverride();
 
     [...]
-
 };
 ```
 
@@ -82,32 +84,29 @@ Virtual C allows the modification in real time of a class' virtual table by chan
 Having a class that declares a `virtual` method or overrides one:
 
 ```cpp
-class CustomSprite : Sprite
+class SomeClass : SomeBaseClass
 {
     [...]
 
-	/// Render the sprite by configuring the DRAM assigned to it by means of the provided index.
-	/// @param index: Determines the region of DRAM that this sprite is allowed to configure
-	/// @return The index that determines the region of DRAM that this sprite manages
-	override int16 doRender(int16 index) = 0;
+    virtual void someVirtualMethod();
 
     [...]
 }
 ```
 
-For example, it is possible to change at runtime the implementation of `handlePropagatedMessage` that is called on all the class instances, by writing the following call to `mutateMethod` with another implementation of the same signature:
+It is possible to change at runtime the implementation of a virtual method that is called on all the class instances, by writing the following call to `mutateMethod` with another implementation of the same signature:
 
 ```cpp
-void CustomSprite::changeDoRenderImplementation()
+void SomeClass::changeDoRenderImplementation()
 {
-    CustomSprite::mutateMethod(doRender, CustomSprite::doRenderCustomImplementation);
+    SomeClass::mutateMethod(someVirtualMethod, SomeClass::someVirtualMethodOverride);
 }
 
 //——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
-int16 CustomSprite::doRenderCustomImplementation(int16 index)
+void SomeClass::someVirtualMethodOverride()
 {
-    // Do stuff
+    // Do stuff differently
 }
 ```
 
@@ -122,18 +121,12 @@ Classes that are meant to be mutation targets must be abstract and cannot add ad
 Given the following class:
 
 ```cpp
-class Punk : Actor
+class SomeClass : SomeBaseClass
 {
-    /// @param punkSpec: Specification that determines how to configure the paddle
-    /// @param internalId: ID to keep track internally of the new instance
-    /// @param name: Name to assign to the new instance
-    void constructor(PunkSpec* punkSpec, int16 internalId, const char* const name);
+    [...]
 
-    /// Default interger message handler for propagateMessage
-    /// @param message: Propagated integer message
-    /// @return True if the propagation must stop; false if the propagation must reach other containers
-    override bool handlePropagatedMessage(int32 message);
-    
+    virtual void someVirtualMethod();
+
     [...]
 }
 ```
@@ -141,26 +134,18 @@ class Punk : Actor
 A valid mutation for it is:
 
 ```cpp
-abstract class PunkStopping : Punk
+abstract class SomeClassMutation : SomeClass
 {
-    /// Process a newly detected collision by one of the component colliders.
-    /// @param collisionInformation: Information struct about the collision to resolve
-    /// @return True if the collider must keep track of the collision to detect if it persists and when it
-    /// ends; false otherwise
-    override bool collisionStarts(const CollisionInformation* collisionInformation);
+    [...]
 
-    /// Receive and process a Telegram.
-    /// @param telegram: Received telegram to process
-    /// @return True if the telegram was processed
-    override bool handleMessage(Telegram telegram);
+    override void someVirtualMethod();
 
-    /// Update this instance's logic.
-    override void update();
+    [...]
 }
 ```
 
 The mutation of a class instance is done as follows:
 
 ```cpp
-Punk::mutateTo(punk, PunkStopping::getClass());
+SomeClass::mutateTo(object, SomeClassMutation::getClass());
 ```

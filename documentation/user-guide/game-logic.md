@@ -14,24 +14,16 @@ The `GameState`’s implementation of the execute method calls `Stage::update` o
 You have to provide to the engine at least one instance of class deriving from `GameState`. And most likely than not, it will override the execute method to implement the game’s specific logic.
 
 ```cpp
-void ActorsState::execute(void* owner __attribute__((unused)))
+void SomeGameState::execute(void* owner __attribute__((unused)))
 {
     Base::execute(this, owner);
 
-    if(!isDeleted(this->leaderPunk))
-    {
-        ActorsState::movePunks(this);
-        ActorsState::printPunkName(this, this->leaderPunk, 25);
-    }
-
-    if(this->showAdditionalDetails)
-    {
-        ActorsState::showAdditionalDetails(this);
-    }
+    // Do interesting stuff
+    [...]
 }
 ```
 
-By overriding the execute method, the `ActorsState::execute` method in the above example will be called once per game frame once the `VUEngine` instance’s `StateMachine` enters that state. And by forwarding the call to the base’s implementation, any class deriving from `Actor` that overrides its update method will be called once per frame too:
+By overriding the execute method, the `SomeGameState::execute` method in the above example will be called once per game frame once the `VUEngine` instance’s `StateMachine` enters that state. And by forwarding the call to the base’s implementation, any class deriving from `Actor` that overrides its update method will be called once per frame too:
 
 ```cpp
 void CogWheel::update()
