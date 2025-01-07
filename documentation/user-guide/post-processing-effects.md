@@ -15,7 +15,6 @@ To apply a post-processing effect register it using the following call with a ap
 ```cpp
 VUEngine::pushBackPostProcessingEffect
 (
-    VUEngine::getInstance(),
     PostProcessingWobble::wobble,
     NULL
 );
@@ -26,7 +25,6 @@ To remove a previously registered post-processing effect use the following code:
 ```cpp
 VUEngine::removePostProcessingEffect
 (
-    VUEngine::getInstance(),
     PostProcessingWobble::wobble,
     NULL
 );

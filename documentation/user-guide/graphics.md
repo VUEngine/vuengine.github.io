@@ -133,7 +133,7 @@ With these **Specs** defined, the original image can be displayed by instantiati
 ```cpp
 extern SpriteSpec PunkSpriteSpec;
 
-Sprite sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &PunkSpriteSpec);
+Sprite sprite = SpriteManager::createSprite(NULL, &PunkSpriteSpec);
 
 if(!isDeleted(sprite))
 {
@@ -245,7 +245,7 @@ Then, as it was the case with `Sprite`s, a `Wireframe` can be instantiated by ca
 ```cpp
 extern WireframeSpec SampleWireframeSpec;
 
-Wireframe wireframe = WireframeManager::createWireframe(WireframeManager::getInstance(), NULL, &SampleWireframeSpec);
+Wireframe wireframe = WireframeManager::createWireframe(NULL, &SampleWireframeSpec);
 
 if(!isDeleted(wireframe))
 {
@@ -300,7 +300,7 @@ Printing is used as follows:
 ```cpp
 Printing::text
 (
-	Printing::getInstance(),
+	
 	"Hello World",
 	0,
 	0,
@@ -311,7 +311,7 @@ Printing::text
 To erase all printing, use:
 
 ```cpp
-Printing::clear(Printing::getInstance());
+Printing::clear();
 ```
 
 VUEngine comes with a default font for writing to the printing Layer, but you can replace it with any number of custom fonts.

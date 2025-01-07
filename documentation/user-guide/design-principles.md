@@ -28,7 +28,7 @@ Any VUEngine based program must provide a `GameState` for the VUEngine instanceâ
 int32 game(void)
 {
 	// Start the game
-	return VUEngine::start(VUEngine::getInstance(), GameState::safeCast(PrecautionScreenState::getInstance()));
+	return VUEngine::start(GameState::safeCast(PrecautionScreenState::getInstance()));
 }
 ```
 
@@ -154,7 +154,7 @@ Then, the game programer uses the **Spec** to instantiate an `Sprite` that he ca
 ```cpp
 extern SpriteSpec SomeSpriteSpec;
 
-Sprite sprite = SpriteManager::createSprite(SpriteManager::getInstance(), NULL, &SomeSpriteSpec);
+Sprite sprite = SpriteManager::createSprite(NULL, &SomeSpriteSpec);
 
 if(!isDeleted(sprite))
 {

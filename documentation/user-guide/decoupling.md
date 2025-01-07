@@ -80,7 +80,7 @@ Messages can be propagated too, instead of being specifically directed to a know
 ```cpp
 bool PongState::onRemoteGoneAway(ListenerObject eventFirer __attribute__((unused)))
 {
-	CommunicationManager::disableCommunications(CommunicationManager::getInstance());
+	CommunicationManager::disableCommunications();
 
 	PongState::propagateMessage(this, kMessagePongResetPositions);
 
@@ -138,7 +138,7 @@ bool Pong::onPongBallOutOfBounds(ListenerObject eventFirer __attribute__ ((unuse
 
     SoundManager::playSound
     (
-        SoundManager::getInstance(), &Point1SoundSpec, NULL, kSoundPlaybackNormal, NULL, NULL
+        &Point1SoundSpec, NULL, kSoundPlaybackNormal, NULL, NULL
     );
 
     return true;

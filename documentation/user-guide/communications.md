@@ -14,7 +14,7 @@ void Pong::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataBytes)
 {
     uint32 receivedMessage = kMessagePongDummy;
     const RemotePlayerData* remotePlayerData = NULL;
-    CommunicationManager communicationManager = CommunicationManager::getInstance();
+    CommunicationManager communicationManager = ;
 
     /*
     * Data will be send sychroniously. This means that if the cable is disconnect during

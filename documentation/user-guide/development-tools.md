@@ -80,7 +80,7 @@ To enable the profiler, the `__ENABLE_PROFILER` macro must be defined in the gam
 Then, call the following at the point where profiling must start:
 
 ```cpp
-VUEngine::startProfiling(VUEngine::getInstance());
+VUEngine::startProfiling();
 ```
 
 Then, the profiler will show the following output:

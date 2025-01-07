@@ -131,7 +131,7 @@ To reproduce a sound, a request to the `SoundManager`’s instance can be perfor
 ```cpp
 SoundManager::playSound
 (
-    SoundManager::getInstance(), soundSpec, (const Vector3D*)&this->transformation.position,
+    soundSpec, (const Vector3D*)&this->transformation.position,
     kSoundPlaybackNormal, NULL, NULL
 );
 ```
@@ -141,7 +141,7 @@ A `Sound` can be acquired to control its playback as follows:
 ```cpp
 extern SoundSpec SampleSoundSpec;
 
-Sound sound = SoundManager::getSound(SoundManager::getInstance(), &SampleSoundSpec, NULL, NULL);
+Sound sound = SoundManager::getSound(&SampleSoundSpec, NULL, NULL);
 ```
 
 Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling `Sound::play`:
