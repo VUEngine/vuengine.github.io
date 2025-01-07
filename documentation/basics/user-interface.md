@@ -18,11 +18,13 @@ VUEngine Studio comes with a simple and intuitive layout that maximizes the spac
 - **(C) Editor** - The main area to edit your files. You can open as many editors as you like side by side vertically and horizontally.
 - **(D) Bottom Panel** - You can display different panels below the editor region for output or debug information, errors and warnings, or an integrated terminal.
 - **(E) Status Bar** - Information about the opened project and the file you're editing as well as build, emulator and flash cart statuses.
-- **(F) Action Buttons** - Buttons to build your project, see progress, queue running in an emulator or flashing to your flash cart(s).
+- **(F) Toolbar** - A freely configurable toolbar that comed pre-loaded with e.g. buttons to build your project, see progress, queue running in an emulator or flashing to your flash cart(s) on the right hand side and editor buttons on the left.
 
 You can freely drag and drop editors and widgets between all the editor area, sidebar and bottom panel.
 
 Each time you start VUEngine Studio, it opens up in the same state it was in when you last closed it. The last opened project, folder, layout, and opened files are preserved.
+
+You can revert to the default layout with the `View: Reset Workbench Layout` command.
 
 ## Tabs
 
@@ -61,14 +63,6 @@ In the above image, you can also see indentation guides (vertical lines) in the 
 
 ```json
 "editor.renderIndentGuides": false
-```
-
-## Breadcrumbs
-
-As seen in the above screenshot, the editor has a navigation bar above its contents called Breadcrumbs. It shows the current location and allows you to quickly navigate between folders, files, and symbols. Breadcrumbs always show the file path and, if the current file type has language support for symbols, the symbol path up to the cursor position. You can disable breadcrumbs with the `breadcrumbs.enabled` setting.
-
-```json
-"breadcrumbs.enabled": false
 ```
 
 ## Explorer
