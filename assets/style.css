@@ -3,16 +3,24 @@ body {
   overflow-y: scroll;
 }
 
+header {
+  background: var(--bs-primary) url('/assets/images/wireframe-header.jpg') no-repeat center;
+  background-size: cover;
+  border-bottom: 1px solid #111;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .3);
+}
+
+header .text-secondary {
+  color: rgba(255, 255, 255, .3) !important;
+}
+
 html[data-bs-theme="dark"] .bg-light {
   background-color: transparent !important;
 }
 
-html[data-bs-theme="dark"] section {
-  border-bottom: 1px solid rgba(0, 0, 0, .5);
-}
-
-header .nav-link.text-secondary {
-  color: rgba(255, 255, 255, .3) !important;
+html[data-bs-theme="dark"] .features .text-bg-dark {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-light-rgb),var(--bs-bg-opacity,1)) !important;
 }
 
 blockquote {
@@ -24,12 +32,6 @@ blockquote {
 .btn-primary:disabled {
   background-color: #666;
   border-color: #666;
-}
-
-.btn-patreon:hover {
-  background-color: #c65141;
-  border-color: #c65141;
-  color: #fff;
 }
 
 .bg-light {

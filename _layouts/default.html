@@ -42,7 +42,7 @@
           split:'/' -%} {%- assign topPage = check[1] | append: '/' | prepend:
           '/' -%}
           <li>
-            <a class="nav-link px-2 {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
+            <a class="nav-link fs-5 px-2 {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
               href="{{ node[1] }}">
               {{ node[0] }}
             </a>
@@ -50,12 +50,12 @@
           {% endfor %}
         </ul>
 
-        <div class="col-lg-2 text-end text-nowrap">
+        <div class="col-lg-2 text-end text-nowrap d-none d-lg-block">
           {% comment %}
           {% include search-lunr.html %}
           {% endcomment %}
           <a href="https://www.patreon.com/VUEngine" role="button"
-            class="btn btn-outline-light btn-patreon d-none d-lg-inline-block">
+            class="btn btn-outline-light btn-patreon d-inline-block">
             <i class="fab fa-patreon"></i> Donate
           </a>
           <button class="btn btn-link nav-link py-2 px-0 px-lg-2 fs-5 d-inline-block" id="bd-theme" type="button"
