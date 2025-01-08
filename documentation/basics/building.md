@@ -13,7 +13,7 @@ VUEngine Studio allows you to build your project and queue running it in an emul
 
 The central spot for building is the Build Panel.
 
-<a href="/documentation/images/basics/building/build-panel.png"><img src="/documentation/images/basics/building/build-panel.png" width="500" /></a>
+<a href="/documentation/images/basics/building/build-panel.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/building/build-panel.png" width="500" /></a>
 
 ### Action Buttons
 

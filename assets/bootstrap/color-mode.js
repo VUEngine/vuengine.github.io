@@ -39,7 +39,7 @@
       themeSwitcher.setAttribute('data-bs-theme', theme)
       document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
         if (element.getAttribute('data-bs-theme-value') === theme) {
-            element.setAttribute('style', 'display:block')
+            element.removeAttribute('style')
         } else {
             element.setAttribute('style', 'display:none')
         }

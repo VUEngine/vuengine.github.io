@@ -21,7 +21,7 @@ A `CharSet` represents one or more CHARs and treats them as a single unit. These
 
 Take the following image as an example from which a **CharSetSpec** will be defined:
 
-<img src="/documentation/images/user-guide/graphics/punk-chars.png" width="300" />
+<a href="/documentation/images/user-guide/graphics/punk-chars.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars.png" width="300" /></a>
 
 The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The **Spec** that defines it is the following:
 
@@ -49,7 +49,7 @@ CharSetROMSpec ActorCharsetSpec =
 
 CHAR memory is arranged as a unidimensional array. Visually, it would look like this:
 
-<img src="/documentation/images/user-guide/graphics/punk-char-memory.png" />
+<a href="/documentation/images/user-guide/graphics/punk-char-memory.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-char-memory.png" /></a>
 
 In such an arrangement, the CHARs or tiles of this `CharSet` cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the CHARs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the `CharSet`, are used to provide such bidimensional order. In the engine these are encapsulated in a Texture class.
 
@@ -350,13 +350,13 @@ When requesting a `CharSet` by providing a shared **CharSetSpec**, the engine wi
 
 The overshoot of a shared **CharSetSpec** that only allocates a single frame at any give moment is that any `Sprite` that uses a `Texture` which references that `CharSet` will show a change of animation if any of them changes the frame and that all instances will be in sync:
 
-<img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" />
+<a href="/documentation/images/user-guide/graphics/punk-chars-shared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" /></a>
 
 Since it would be overkill to play animations on all `Sprite`s underlyed by a shared `CharSet`, the engine runs the animations only on the first Sprite.
 
 On the other hand, when using a non-shared **CharSetSpec** to create a `CharSet`, each request will be served with a new `CharSet` instance. This permits to having different sprites with the same graphics but displaying different frames of animation:
 
-<img src="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" width="500" />
+<a href="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" width="500" /></a>
 
 To load the complete pixel data of all the animation frames of an animation, the **CharSetSpec** must specify the total amount of CHARs used by all of the:
 

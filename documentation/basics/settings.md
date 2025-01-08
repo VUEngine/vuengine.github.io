@@ -24,7 +24,7 @@ You can access your user settings in a few ways:
 - Select the **User** tab in the <a href="#settings-editor">Settings editor</a> <span class="keys" data-osx="⌘,">Ctrl+,</span>
 - Select the **Preferences: Open Settings (JSON)** command in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>
 
-<a href="/documentation/images/basics/settings/settings-editor-user-tab.png"><img src="/documentation/images/basics/settings/settings-editor-user-tab.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/settings-editor-user-tab.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-user-tab.png" width="100%" /></a>
 
 ## Workspace settings
 
@@ -40,7 +40,7 @@ You can access the workspace settings in a few ways:
 - Select the **Workspace** tab in the <a href="#settings-editor">Settings editor</a> <span class="keys" data-osx="⌘,">Ctrl+,</span>
 - Select the **Preferences: Open Workspace Settings (JSON)** command in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>
 
-<a href="/documentation/images/basics/settings/settings-editor-workspace-tab.png"><img src="/documentation/images/basics/settings/settings-editor-workspace-tab.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/settings-editor-workspace-tab.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-workspace-tab.png" width="100%" /></a>
 
 Not all user settings are available as workspace settings. For example, application-wide settings like for application updates can not be overridden by Workspace settings.
 
@@ -50,17 +50,17 @@ The Settings editor provides a graphical interface to manage both user and works
 
 When you open the Settings editor, you can search and discover the settings you are looking for. When you search using the search bar, the Settings editor filters the settings to only show those that match your criteria. This makes finding settings quick and easy.
 
-<a href="/documentation/images/basics/settings/settings-editor-search.png"><img src="/documentation/images/basics/settings/settings-editor-search.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/settings-editor-search.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-search.png" width="100%" /></a>
 
 VUEngine Studio applies changes to settings directly as you change them. You can identify settings that you modified by the colored bar on the left of the setting, similar to modified lines in the editor.
 
 In the example below, the engine core path and hide build folder settings were changed.
 
-<a href="/documentation/images/basics/settings/settings-editor-changed.png"><img src="/documentation/images/basics/settings/settings-editor-changed.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/settings-editor-changed.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-changed.png" width="100%" /></a>
 
 The gear icon alongside the setting <span class="keys" data-osx="⇧F9">Shift+F9</span> opens a context menu with options to reset a setting to its default value, and to copy the setting ID, copy a JSON name-value pair, or copy the settings URL.
 
-<a href="/documentation/images/basics/settings/settings-editor-context-menu.png"><img src="/documentation/images/basics/settings/settings-editor-context-menu.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/settings-editor-context-menu.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-context-menu.png" width="100%" /></a>
 
 ## Settings JSON file
 
@@ -70,7 +70,7 @@ You can also review and edit the `settings.json` file directly by opening it in 
 
 Settings are written as JSON by specifying the setting ID and value. You can quickly copy the corresponding JSON name-value pair for a setting by selecting the setting's gear icon in the Settings editor, and then selecting the Copy Setting as JSON action.
 
-<a href="/documentation/images/basics/settings/settings-json.png"><img src="/documentation/images/basics/settings/settings-json.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/settings-json.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-json.png" width="100%" /></a>
 
 Some settings can only be edited in `settings.json` such as Code Actions On Save and show an Edit in `settings.json` link in the Settings editor.
 
@@ -88,7 +88,7 @@ Depending on your platform, the user settings file is located here:
 
 Workspace settings are stored in your project's `.workspace` file.
 
-<a href="/documentation/images/basics/settings/workspace-settings.png"><img src="/documentation/images/basics/settings/workspace-settings.png" width="100%" /></a>
+<a href="/documentation/images/basics/settings/workspace-settings.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/workspace-settings.png" width="100%" /></a>
 
 ## Reset settings
 
