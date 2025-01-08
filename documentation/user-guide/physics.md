@@ -54,14 +54,14 @@ An `Entity` with a `Body` attached to it will react to forces applied to it:
 ```cpp
     Vector3D force = 
     {
-        Body::getMass(SomeActor::getBody(someactor)), 0, 0
+        Body::getMass(SomeActor::getBody(actor)), 0, 0
 
     };
 
     // If the object has a collider attached to it, the last argument
     // forces to check if the movement in the force's direction won't
     // result immediately in a collision
-    Actor::applyForce(someactor, &force, true);
+    Actor::applyForce(actor, &force, true);
 ```
 
 ## Collider
