@@ -356,7 +356,7 @@ This exemplifies how **Specs** are chained together for derived classes by havin
 As any other `Actor`, components can be attached to `ParticleSystem`s and they have their own Spec that adds a few attributes to control how `Particle`s are generated:
 
 ```cpp
-ParticleSystemROMSpec StarsParticleSystemNormalSpec =
+ParticleSystemROMSpec SomeParticleSystemNormalSpec =
 {
     // EntitySpec
     {...
@@ -378,7 +378,7 @@ ParticleSystemROMSpec StarsParticleSystemNormalSpec =
     1,
 
     // array of visual component specs
-    (const ComponentSpec**)StarSpriteSpecs,
+    (const ComponentSpec**)SomeSpriteSpecs,
 
     // array of physics component specs
     (const ComponentSpec**)NULL,
@@ -390,7 +390,7 @@ ParticleSystemROMSpec StarsParticleSystemNormalSpec =
     false,
 
     // particle spec
-    (ParticleSpec*)&StarParticleNormalSpec,
+    (ParticleSpec*)&SomeParticleNormalSpec,
 
     // minimum relative spawn position (x, y, z)
     {__PIXELS_TO_METERS(-20), __PIXELS_TO_METERS(-16), __PIXELS_TO_METERS(0)},
@@ -418,7 +418,7 @@ ParticleSystemROMSpec StarsParticleSystemNormalSpec =
 `Particle`s manage their components in a more specific and constrained way than `Actor`s in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to reduce the overhead of constantly creating and destroying them.
 
 ```cpp
-ParticleROMSpec StarParticleSpec =
+ParticleROMSpec SomeParticleSpec =
 {
     // Class allocator
     __TYPE(Particle),
@@ -433,7 +433,7 @@ ParticleROMSpec StarParticleSpec =
     NULL,
 
     // Array of available animations
-    (const AnimationFunction**)&StarAnimationSpecs,
+    (const AnimationFunction**)&SomeAnimationSpecs,
 
     // Animation to play automatically
     "Vanish",
