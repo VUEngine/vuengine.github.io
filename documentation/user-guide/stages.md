@@ -46,7 +46,7 @@ PositionedActorROMSpec StageActorsSpecs[] =
 ```
 
 ```cpp
-StageROMSpec StatefulActorsStageSpec =
+StageROMSpec ActorsStageSpec =
 {
     // Class allocator
     __TYPE(Stage),
@@ -92,7 +92,7 @@ StageROMSpec StatefulActorsStageSpec =
     // Assets
     {
         // Fonts to preload
-        (FontSpec**)StatefulActorsStageFondSpecs ,
+        (FontSpec**)ActorsStageFondSpecs ,
 
         // CharSets to preload
         (CharSetSpec**)NULL,
@@ -101,19 +101,19 @@ StageROMSpec StatefulActorsStageSpec =
         (TextureSpec**)NULL,
 
         // Sounds to load
-        (SoundSpec**)StatefulActorsStageSoundSpecs,
+        (SoundSpec**)ActorsStageSoundSpecs,
     },
 
     // Actors
     {
         // UI configuration
         {
-            (PositionedActor*)StatefulActorsStageUIActorsSpecs,
+            (PositionedActor*)ActorsStageUIActorsSpecs,
             __TYPE(UIContainer),
         },
 
         // Stage's children actors
-        (PositionedActor*)StatefulActorsStageActorsSpecs,
+        (PositionedActor*)ActorsStageActorsSpecs,
     },
 
     // Post processing effects
@@ -309,46 +309,6 @@ force.x = Body::getMass(Actor::getBody(actor)) << 1;
 
 Actor::applyForce(actor, &force, true);
 ```
-
-## StatefulActor
-
-A `StatefulActor` adds to the `Actor` an optional `StateMachine`. This is done to avoid having a superfluous call to `Actor::update` on `Actor`s that don’t require a `StateMachine`.
-
-The **StatefulActorSpec** adds to the **ActorSpec** some fields of its own:
-
-```cpp
-StatefulActorROMSpec ActorStatefulActorSpec =
-{
-    {
-        // Class allocator
-        __TYPE(StatefulActor),
-
-        // Component specs
-        (ComponentSpec**)ActorStatefulActorComponentSpecs,
-
-        // Children specs
-        NULL,
-
-        // Extra info
-        NULL,
-
-        // Size
-        // If 0, it is computed from the visual components if any
-        {0, 0, 0},
-
-        // Actor's in-game type
-        kTypeActor,
-
-        // Pointer to animation functions array
-        (const AnimationFunction**)&ActorStatefulActorAnimationSpecs,
-
-        // Animation to play automatically
-        "Move"
-    },
-};
-```
-
-This exemplifies how **Specs** are chained together for derived classes by having at the top the **Spec** of the base class and adding new fields, relevant to the derived class, to its Spec.
 
 ## ParticleSystem
 

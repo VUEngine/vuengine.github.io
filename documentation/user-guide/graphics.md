@@ -129,6 +129,8 @@ BgmapSpriteROMSpec ActorSpriteSpec =
 };
 ```
 
+This exemplifies how **Specs** are chained together for derived classes by having at the top the **Spec** of the base class and adding new fields, relevant to the derived class, to its Spec. In this case, the **BgmapSpriteSpec** adds the last 3 attributes to the **SpritePec**.
+
 With these **Specs** defined, the original image can be displayed by instantiating a `Sprite` and positioning it appropriately:
 
 ```cpp
