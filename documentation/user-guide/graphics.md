@@ -182,6 +182,8 @@ The engine reserves a region of the param tables space for any `BgmapSprite` ini
 
 ### OBJECT Sprites
 
+The `ObjectSprite` uses OBJECTs to render CHARs in one of the 4 posible WORLDS in OBJECT display mode. As all the `Sprite`s, they use a `Texture`, but its map is used directly used by the `ObjectSprite` to configure the OBJECTs. They are more flexible than `BgmapSprite`s, but use more memory and are heavier to process, both on the CPU and the VIP.
+
 ## Wireframes
 
 The other kind of visual component are `Wireframe`s. These are non solid 3D shapes that draw 1 pixel wide lines or circles. They leverage the ability of writing directly to the video frame buffers after the VIP has finished its drawing procedures during the current game frame. Accessing video memory with the CPU is slow and even more so when reading back from it, which is unavoidable when drawing single pixels.
