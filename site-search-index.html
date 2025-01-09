@@ -1,0 +1,12 @@
+---
+---
+{ {% for page in site.pages %}
+{% if page.url != '/' and page.url != '/site-search-index/' -%}
+"{{ page.url }}": {
+"url": "{{ page.url }}",
+"title": "{% if page.parents %}{{ page.parents }} > {% endif %}{{ page.title }}",
+"content": {{ page.content | strip_html | inspect | replace: '&quot;', '"' | remove: '\n' | remove: '\t' | remove: '`' |
+remove: '**' }}
+}{% unless forloop.last %},{% endunless %}
+{% endif -%}
+{% endfor -%} }

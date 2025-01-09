@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > Language
 title: Custom Features
 ---
 
@@ -35,7 +36,7 @@ The language implements support to declare classes that can only have a single i
 
 The singleton classes' instances are allocated in the stack.
 
-The `singleton!` modifier makes the class instance inaccessible from the outside by making the `getInstance` method's linkage non global. 
+The `singleton!` modifier makes the class instance inaccessible from the outside by making the `getInstance` method's linkage non global.
 
 ### Dynamic Singleton classes
 

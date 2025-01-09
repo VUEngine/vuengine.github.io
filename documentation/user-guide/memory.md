@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > User Guide
 title: Memory
 ---
 
@@ -22,5 +23,5 @@ It is strongly recommended to configure the `MemoryPool` to suit the game’s sp
 To check in realtime the 'MemoryPool's usage, use the following call in a suitable place:
 
 ```cpp
-    MemoryPool::printDetailedUsage(1, 1); 
+    MemoryPool::printDetailedUsage(1, 1);
 ```

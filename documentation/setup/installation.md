@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > Setup
 title: Installation
 ---
 

@@ -1,97 +1,95 @@
-<script src="/assets/js/lunr.js"></script>
-
+<script src="/assets/js/lunr.min.js"></script>
 <script>
-  {% assign counter = 0 %}
-  var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
-      "id": {{ counter }},
-      "url": "{{ site.url }}{{ page.url }}",
-      "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
-      }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
-      "id": {{ counter }},
-      "url": "{{ site.url }}{{ page.url }}",
-      "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
-      }, {% endfor %}{% for page in site.posts %}{
-      "id": {{ counter }},
-      "url": "{{ site.url }}{{ page.url }}",
-      "title": "{{ page.title }}"{% assign counter = counter | plus: 1 %}
-      }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+  let documents = {};
+  let idx = false;
 
-  var idx = lunr(function () {
-      this.ref('id')
-      this.field('title')
-
-      documents.forEach(function (doc) {
-          this.add(doc)
-      }, this)
-  });
   function lunr_search(term) {
-      document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
-      if(term) {
-          document.getElementById('lunrsearchresults').innerHTML = document.getElementById('lunrsearchresults').innerHTML;
-          //put results on the screen.
-          var results = idx.search(term);
-          if(results.length>0){
-              //console.log(idx.search(term));
-              //if results
-              for (var i = 0; i < results.length; i++) {
-                  // more statements
-                  var ref = results[i]['ref'];
-                  var url = documents[ref]['url'];
-                  var title = documents[ref]['title'];
-                  document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "' class='text-decoration-none'><span class='title'>" + title + "</span></a></li>";
-              }
-          } else {
-              document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
-          }
+    if (term && idx) {
+      document.getElementById('lunrsearchresults').innerHTML = document.getElementById('lunrsearchresults').innerHTML;
+      const results = idx.search('*' + term + '*');
+      if (results.length > 0) {
+        document.querySelectorAll('#lunrsearchresults')[0].innerHTML = '';
+        for (let i = 0; i < results.length; i++) {
+          const result = results[i];
+          const ref = result.ref;
+          const metadata = Object.values(result.matchData.metadata)[0].content;
+          const doc = documents[ref];
+          const url = doc.url;
+          const title = doc.title;
+          const content = doc.content;
+          const icon = url.startsWith('/documentation/') ? 'fas fa-book fa-fw' : 'far fa-file fa-fw';
+          const context = content.slice(
+            Math.max(0, metadata.position[0][0] - 25),
+            Math.min(metadata.position[0][0] + term.length + 25, content.length)
+          ).replace(new RegExp(term, 'gi'), '<span class="text-primary">$&</span>');
+
+          document.querySelectorAll('#lunrsearchresults')[0].innerHTML =
+            document.querySelectorAll('#lunrsearchresults')[0].innerHTML +
+            '<a href="' + url + '" class="list-group-item d-flex gap-3">' +
+            '<span class="icon"><i class="' + icon + '"></i></span>' +
+            '<span class="page flex-grow-1 d-flex flex-column">' +
+            '<span class="snippet text-nowrap">...' + context + '...</span>' +
+            '<span class="title text-secondary">' + title + '</span>' +
+            '</span>' +
+            '<span>↵</span>' +
+            '</a>';
+        }
       } else {
-        document.getElementById('lunrsearchresults').innerHTML = '';
+        document.querySelectorAll('#lunrsearchresults')[0].innerHTML = "Nothing found.";
       }
-      return false;
+    } else {
+      document.getElementById('lunrsearchresults').innerHTML = '';
+    }
+    return false;
   }
+
+  onkeydown = function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      document.getElementById('siteSearchToggle').click();
+    }
+  }
+
+  document.getElementById('siteSearch').addEventListener('shown.bs.modal', async () => {
+    document.getElementById('lunrsearch').focus();
+
+    if (!Object.keys(documents).length) {
+      const response = await fetch('/site-search-index/');
+      documents = await response.json();
+      idx = lunr(function () {
+        this.ref('url')
+        this.field('content')
+        this.metadataWhitelist = ['position', 'length']
+        Object.values(documents).forEach(function (doc) {
+          this.add(doc)
+        }, this)
+      });
+    }
+  });
 </script>
 
 <style>
-  #lunrsearchresults ul {
-    border: 1px solid #ccc;
-    border-radius: 0 0 0.25rem 0.25rem;
-    list-style: none;
-    margin: -4px 0 0;
-    padding: 1rem;
-  }
-  .lunrsearchresult .title {
-    color: #d9230f;
-  }
-  .lunrsearchresult .url {
-    color: silver;
-  }
-  .lunrsearchresult a {
-    display: block;
-    color: #777;
-  }
-  .lunrsearchresult a:hover,
-  .lunrsearchresult a:focus {
-    text-decoration: none;
-  }
-  .lunrsearchresult a:hover .title {
-    text-decoration: underline;
+  html[data-bs-theme="dark"] .siteSearch-input i {
+    color: rgba(const(--bs-light-rgb), var(--bs-text-opacity)) !important;
   }
 </style>
 
-<form
-  onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
-  class="input-group pt-2"
->
-  <span class="input-group-text">
-    <i class="fas fa-search text-dark"></i>
-  </span>
-  <input
-    type="text"
-    class="form-control"
-    id="lunrsearch"
-    name="q"
-    maxlength="255"
-    value=""
-    placeholder="Search"
-  />
-</form>
-<div id="lunrsearchresults" class="fs-90p"></div>
+<div class="siteSearch-input">
+  <i class="fas fa-search fa-lg text-dark position-absolute" style="left:32px;top:32px;"></i>
+  <input type="text" class="form-control form-control-lg" style="padding:0 48px" id="lunrsearch" name="q"
+    maxlength="255" value="" placeholder="Search" autocomplete="off" oninput="lunr_search(this.value)" />
+  <span class="keys position-absolute" data-osx="⌘K" style="right:30px;top:30px;">Ctrl+K</span>
+</div>
+<div id="lunrsearchresults" class="list-group overflow-auto flex-grow-1">
+</div>
+<div class="d-flex gap-3">
+  <div>
+    <span class="keys">↑</span> <span class="keys">↓</span> navigate
+  </div>
+  <div>
+    <span class="keys">↵</span> select
+  </div>
+  <div>
+    <span class="keys">esc</span> close
+  </div>
+</div>

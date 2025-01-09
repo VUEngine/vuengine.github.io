@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > User Guide
 title: Sound
 ---
 

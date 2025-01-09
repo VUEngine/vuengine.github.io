@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > User Guide
 title: Physics
 ---
 
@@ -52,7 +53,7 @@ BodyROMSpec SomeActorBodySpec =
 An `Entity` with a `Body` attached to it will react to forces applied to it:
 
 ```cpp
-    Vector3D force = 
+    Vector3D force =
     {
         Body::getMass(SomeActor::getBody(actor)), 0, 0
 
@@ -115,12 +116,12 @@ Collision as processed by overriding the following `Entity`'s methods:
 
 ```cpp
     /// Process a newly detected collision by one of the component colliders.
-    /// @param collisionInformation: Information struct about the collision to resolve 
+    /// @param collisionInformation: Information struct about the collision to resolve
     /// @return True if the collider must keep track of the collision to detect if it persists and when it ends; false otherwise
     virtual bool collisionStarts(const CollisionInformation* collisionInformation);
 
     /// Process a going on collision detected by one of the component colliders.
-    /// @param collisionInformation: Information struct about the collision to resolve 
+    /// @param collisionInformation: Information struct about the collision to resolve
     virtual void collisionPersists(const CollisionInformation* collisionInformation);
 
     /// Process when a previously detected collision by one of the component colliders stops.

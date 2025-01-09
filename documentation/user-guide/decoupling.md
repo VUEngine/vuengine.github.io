@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > User Guide
 title: Decoupling
 ---
 
@@ -117,7 +118,7 @@ To listen for events, an `EventListener` plus a scope object must be attached to
 ```cpp
 SomeClass::addEventListener
 (
-    someObject, ListenerObject::safeCast(someOtherObject), 
+    someObject, ListenerObject::safeCast(someOtherObject),
     (EventListener)SomeClass::onSomeInterestingEvent, kEventInteresting
 );
 ```

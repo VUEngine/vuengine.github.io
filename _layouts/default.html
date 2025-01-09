@@ -26,6 +26,16 @@
 </head>
 
 <body class="d-flex flex-column h-100 os-other">
+  <div class="modal fade" id="siteSearch" tabindex="-1" aria-labelledby="siteSearchTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="height: 60vh">
+        <div class="modal-body d-flex flex-column gap-3 overflow-hidden">
+          {% include search-lunr.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="d-flex flex-wrap py-3 text-bg-primary">
     <div class="container">
       <div class="d-flex flex-column gap-2 flex-lg-row align-items-center justify-content-between">
@@ -50,12 +60,10 @@
         </ul>
 
         <div class="col-lg-2 text-end text-nowrap">
-          <button class="btn btn-outline-light" aria-label="Search (Command+K)" title="Search (Command+K)">
+          <button type="button" id="siteSearchToggle" class="btn btn-outline-light" aria-label="Search" title="Search"
+            data-bs-toggle="modal" data-bs-target="#siteSearch">
             <i class="fa fa-search fa-lg"></i>
           </button>
-          {% comment %}
-          {% include search-lunr.html %}
-          {% endcomment %}
           <a href="https://www.patreon.com/VUEngine" role="button" class="btn btn-outline-light d-inline-block"
             aria-label="Donate" title="Donate">
             <i class="fab fa-patreon fa-lg"></i>

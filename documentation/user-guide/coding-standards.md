@@ -1,5 +1,6 @@
 ---
 layout: documentation
+parents: Documentation > User Guide
 title: Coding Standards
 ---
 
@@ -40,13 +41,13 @@ void SomeClass::someMethod()
 ```cpp
 void SomeClass::someMethod
 (
-    uint32 someParameter1, uint32 someParameter2, uint32 someParameter3, uint32 someParameter4, 
-    uint32 someParameter5, uint32 someParameter6, 
+    uint32 someParameter1, uint32 someParameter2, uint32 someParameter3, uint32 someParameter4,
+    uint32 someParameter5, uint32 someParameter6,
 )
 {
     SomeClass::someOtherMethod
     (
-        this, someParameter1, someParameter2, someParameter3, someParameter4, someParameter5, 
+        this, someParameter1, someParameter2, someParameter3, someParameter4, someParameter5,
         someParameter6
     );
 }

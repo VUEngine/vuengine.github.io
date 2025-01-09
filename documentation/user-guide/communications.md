@@ -1,11 +1,12 @@
 ---
 layout: documentation
+parents: Documentation > User Guide
 title: Communications
 ---
 
 # Communications
 
-VUEngine supports versus mode in games through connectivity between 2 Virtual Boy systems by means of the Link Cable and the `CommunicationManager`, which manages the hardware’s EXT port. It supports both synchronous and asynchronous communications. 
+VUEngine supports versus mode in games through connectivity between 2 Virtual Boy systems by means of the Link Cable and the `CommunicationManager`, which manages the hardware’s EXT port. It supports both synchronous and asynchronous communications.
 
 Transmission consists of a message and optional data to be transmitted as a stream of bytes. After transmission is completed, the client code must check for the validity of the transmitted data by verifying the received message.
 
