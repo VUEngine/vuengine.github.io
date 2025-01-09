@@ -5,7 +5,7 @@ title: Decoupling
 
 # Decoupling
 
-The engine implements the following mechanisms to avoid the implementation of bespoke methods for interaction between instances of different classes that tightly couple them.
+The engine implements the following mechanisms to avoid the implementation of bespoke methods for interaction between instances of different classes that would couple them tightly.
 
 ## Messages
 
@@ -104,20 +104,21 @@ Messages that acts as commands can be propagated to the components attaching to 
 ```cpp
 void Entity::hide()
 {
-    VisualComponent::propagateCommand(cVisualComponentCommandHide, this);
+    ComponentManager::propagateCommand(cVisualComponentCommandHide, this, kSpriteComponent);
 }
 ```
 
 ## Events
 
-`ListenerObject`s can listen for events or fire them. This enables to implement event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
+`ListenerObject`s can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
 
 To listen for events, an `EventListener` plus a scope object must be attached to a `ListenerObject`:
 
 ```cpp
 SomeClass::addEventListener
 (
-    this, ListenerObject::safeCast(this), (EventListener)SomeClass::onSomeInterestingEvent, kEventInteresting
+    someObject, ListenerObject::safeCast(someOtherObject), 
+    (EventListener)SomeClass::onSomeInterestingEvent, kEventInteresting
 );
 ```
 
@@ -133,7 +134,7 @@ bool SomeClass::onSomeInterestingEvent(ListenerObject eventFirer __attribute__ (
 }
 ```
 
-If the `EventListener` returns false, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return true.
+If the `EventListener` returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return `true`.
 
 An event is fired by calling fireEvent on an instance of `ListenerObject`:
 

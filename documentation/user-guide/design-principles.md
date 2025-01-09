@@ -22,7 +22,7 @@ order expose those features in a more friendly manner, we implemented a transpil
 
 The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a `StateMachine` whose states must inherit from the `GameState` class.
 
-Any VUEngine based program must provide a `GameState` for the VUEngine instance’s StateMachine to enter to in the game’s starting function:
+Any VUEngine based program must provide a `GameState` for the VUEngine instance’s `StateMachine` to enter to in the game’s starting function:
 
 ```cpp
 int32 game(void)
@@ -61,7 +61,7 @@ virtual void resume(void* owner);
 
 Through the life of a program, the `VUEngine` instance will enter different `GameState`s, each representing a screen that is presented to the user for him to interact with.
 
-`StateMachines` can be used by other classes, they are not exclusive to the `VUEngine` class. `Actor`s, which are used to implement enemies, vehicles, etc., can use `StateMachines` to define the logic that drives their behavior with custom states that inherit from the generic `State` class.
+`StateMachine`s can be used by other classes, they are not exclusive to the `VUEngine` class. `Actor`s, which are used to implement enemies, vehicles, etc., can use `StateMachine`s to define the logic that drives their behavior with custom states that inherit from the generic `State` class.
 
 ## Components
 
@@ -72,11 +72,11 @@ Lately, we have been changing the engine to fully embrace composition over inher
 /// @memberof Component
 enum ComponentTypes
 {
-    kColliderComponent = 0,
-    kSpriteComponent,
-    kWireframeComponent,
-    kBehaviorComponent,
-    kPhysicsComponent,
+	kSpriteComponent = 0,
+	kColliderComponent,
+	kPhysicsComponent,
+	kWireframeComponent,
+	kBehaviorComponent,
 
     // Limmiter
     kComponentTypes,
@@ -114,7 +114,7 @@ vbSetWorld(28, WRLD_ON, 40, -1, 0, 32, 0, 0, 335, 32); // Password
 
 From those arguments, some are about what to present (from coordinates in BGMAP memory space) while others are about where to present that (which WORLD to use and at which screen coordinates). The first is a data concern; the later is a mixture of hardware management and game logic concerns. Neither data related nor hardware related concerns are genuine concerns for the role that the developer adopts when solving a gaming problem. In the above example, the developer is working triple duties: hardware administrator, game programmer and artist / UI or screen designer.
 
-VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently to the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end use. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**, as a short for “specification”:
+VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently from the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end use. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**s, as a short for “specification”:
 
 The following exemplifies a **Spec** that specifies what to display (a `Texture` to be created and configured according to the provided **TextureSpec**) and how to display it (as a BGMAP WORLD):
 
@@ -186,13 +186,13 @@ Some of the strategies that it uses to compensate for the heaviest of its featur
 
 ## Safety
 
-To implement some of its OOP features, VUEngine makes extensive use of pointers and cast them aggresive through the code base. This inevitably runs the risk of using invalid pointers. To mitigate that pitfal, the engine provides a few tools and strategies.
+To implement some of its OOP features, VUEngine makes extensive use of pointers and casts them aggresively through the code base. This inevitably runs the risk of using invalid pointers. To mitigate that pitfal, the engine provides a few tools and strategies.
 
 ### Safe casting
 
-The engine provides methods with the form `Classname::safeCast` to safely cast objects and returns NULL in case that the object is invalid, deleted or isn't an instance of a class that derives from the one performing the call.
+The engine provides methods with the form `Classname::safeCast` to safely cast objects and returns `NULL` in case that the object is invalid, deleted or isn't an instance of a class that derives from the one performing the call.
 
-`Classname::safeCast` decays into a plain, unsafe C cast under non debug build modes. When building in debug mode, the method `Classname::safeCast` performs a full blown RTTI, returning NULL if it fails or the same pointer casted to the desired class.
+`Classname::safeCast` decays into a plain, unsafe C cast under non debug build modes. When building in debug mode, the method `Classname::safeCast` performs a full blown RTTI, returning `NULL` if it fails or the same pointer casted to the desired class.
 
 When building in beta mode or below, the transpiler adds checks for the validity of the object pointer (`this`) passed to all methods. A call to `Classname::safeCast` is performed too to help track code paths that cause invalid pointers being passed to the wrong methods. This is a very costly check and can easily overflow the stack, particularly if multiplexed VIP interrupts are enabled.
 

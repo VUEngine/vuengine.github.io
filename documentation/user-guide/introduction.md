@@ -70,10 +70,11 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
     }
 
     [...]
+}
 ```
 
 ## Overview
 
-VUEngine is a high-level, object oriented game engine for the Nintendo Virtual Boy. It is written in Virtual C, a custom C-dialect that resembles some of C++’ syntax that is converted by our custom transpiler to plain C with macros.
+VUEngine is a high-level, object oriented game engine for the Nintendo Virtual Boy. It is written in <a href="../../language/introduction">Virtual C</a>, a custom C-dialect that resembles some of C++’ syntax that is converted by our custom transpiler to plain C with macros.
 
 VUEngine aims to facilitate the creation of games for the Virtual Boy without having to worry about nor master its underlying hardware unless you want to. Instead, it provides higher level abstractions that are relevant for general game development.
