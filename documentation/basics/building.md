@@ -77,7 +77,7 @@ The Build Log Filter buttons (**H**) below the Build Log allow you to filter the
 
 ### Build Mode Switch
 
-A Build Mode Switch (**I**), which shows the current build mode, can be found in the Status Bar. Click to change the build mode. See the chapter below for more into about <a href="#build-modes">Build Modes</a>.
+A Build Mode Switch (**I**), which shows the current build mode, can be found in the Status Bar. Click to change the build mode. See the chapter below for more into about [Build Modes](#build-modes).
 
 ## Build Modes
 
@@ -128,7 +128,7 @@ This will delete the respective subfolder in the build folder for the currently 
 
 ## Pre and Post Build Tasks
 
-If, for some reason, you need to run certain <a href="/documentation/basics/tasks/">Tasks</a> or Commands before or after each build, you can set up pre and post build tasks according to your needs. There's two preferences for that take any number of Tasks or Commands and work through them sequentially.
+If, for some reason, you need to run certain [Tasks](/documentation/basics/tasks/) or Commands before or after each build, you can set up pre and post build tasks according to your needs. There's two preferences for that take any number of Tasks or Commands and work through them sequentially.
 
 ```jsonc
 "build.tasks.pre": []
@@ -140,13 +140,13 @@ If, for some reason, you need to run certain <a href="/documentation/basics/task
 
 In the above example, the output ROM would be patched through the **"Patch ROM"** Task after the build completed.
 
-See the <a href="/documentation/basics/tasks/">Tasks</a> page to learn how to set up a Task.
+See the [Tasks](/documentation/basics/tasks/) page to learn how to set up a Task.
 
 > Tip: The JSON preferences editor will assist you with auto completion of option names and, if applicable, values.
 
 ## The ROM file
 
-A successful build will result in the creation of a Virtual Boy ROM, a binary V810 machine code file that can be run on a Virtual Boy using a <a href="/documentation/basics/flash-carts/">flash cart</a> or on a Virtual Boy <a href="/documentation/basics/emulator/">emulator</a>. It will be written to `build/{mode}/output-{mode}.vb` and copied to `build/output.vb`.
+A successful build will result in the creation of a Virtual Boy ROM, a binary V810 machine code file that can be run on a Virtual Boy using a [flash cart](/documentation/basics/flash-carts/) or on a Virtual Boy [emulator](/documentation/basics/emulator/). It will be written to `build/{mode}/output-{mode}.vb` and copied to `build/output.vb`.
 
 ## Troubleshooting
 

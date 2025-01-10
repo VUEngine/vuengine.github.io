@@ -8,7 +8,7 @@ title: FAQ
 
 This page covers some of the most frequently asked questions about problems when using VUEngine Studio and VUEngine and how to resolve them.
 
-If you're still stuck and need some help, feel free to reach out! You can find us, jorgeche and KR155E, and other developers on the Planet Virtual Boy <a href="https://www.virtual-boy.com/forums/">forums</a> and <a href="https://www.virtual-boy.com/discord/">Discord</a>.
+If you're still stuck and need some help, feel free to reach out! You can find us, jorgeche and KR155E, and other developers on the Planet Virtual Boy [forums](https://www.virtual-boy.com/forums/) and [Discord](https://www.virtual-boy.com/discord/).
 
 #### All of a sudden, I am getting a lot of different exceptions which I can't seem to find a reason for in the code. What's going on?
 

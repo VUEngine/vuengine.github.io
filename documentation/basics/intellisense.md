@@ -22,7 +22,7 @@ After choosing a method you are provided with a parameter hint for the parameter
 
 <a href="/documentation/images/basics/intellisense/method-parameters-hint.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/intellisense/method-parameters-hint.png"/></a>
 
-If you prefer, you can turn off IntelliSense while you type. See <a href="#customizing-intelliSense">Customizing IntelliSense</a> below to learn how to disable or customize VUEngine Studio's IntelliSense features.
+If you prefer, you can turn off IntelliSense while you type. See [Customizing IntelliSense](#customizing-intelliSense) below to learn how to disable or customize VUEngine Studio's IntelliSense features.
 
 ## Types of completions
 

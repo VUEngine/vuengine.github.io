@@ -14,19 +14,19 @@ It consist of a set of scripts that act together as a transpiler that converts c
 
 Virtual C supports the following usual OOP features:
 
-- <a href="../syntax/">Classes</a>
-- <a href="../features/#Inheritance">Inheritance</a>
-- <a href="../features/#encapsulation">Encapsulation</a>
-- <a href="../features/#polymorphism">Polymorphism</a>
+- [Classes](../syntax/)
+- [Inheritance](../features/#Inheritance)
+- [Encapsulation](../features/#encapsulation)
+- [Polymorphism](../features/#polymorphism)
 
 And adds a few features of its own:
 
-- <a href="../custom-features/#abstract-classes">Abstract classes</a>
-- <a href="../custom-features/#singleton-classes">Singleton classes</a>
-- <a href="../custom-features/#static-classes">Static classes</a>
-- <a href="../custom-features/#class-extensions">Class extensions</a>
-- <a href="../custom-features/#class-mutation">Class mutation</a>
-- <a href="../custom-features/#instance-mutation">Instance mutation</a>
+- [Abstract classes](../custom-features/#abstract-classes)
+- [Singleton classes](../custom-features/#singleton-classes)
+- [Static classes](../custom-features/#static-classes)
+- [Class extensions](../custom-features/#class-extensions)
+- [Class mutation](../custom-features/#class-mutation)
+- [Instance mutation](../custom-features/#instance-mutation)
 
 ## Limitations
 

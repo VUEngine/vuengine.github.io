@@ -8,7 +8,7 @@ title: VUEngine Plugins
 
 VUEngine is built on a modular architecture that allows to seamlessly link in and use additional components alongside the actual engine through the concept of **VUEngine Plugins**.
 
-You can <a href="#custom-plugins">create plugins yourself</a>, but first and foremost, VUEngine Studio comes with a library of reuseable, prefab components like actors, states or fonts, that can be easily included in your VUEngine project for a good headstart and/or to add new functionality.
+You can [create plugins yourself](#custom-plugins), but first and foremost, VUEngine Studio comes with a library of reuseable, prefab components like actors, states or fonts, that can be easily included in your VUEngine project for a good headstart and/or to add new functionality.
 
 For example, the library covers all the basic needs of a Virtual Boy game, like an automatic pause feature, a blinking low battery indicator, various splash screens or even a save data manager to work with Save RAM, so you can focus on writing the actual game. It also offers a broad selection of ready to use fonts, post processing effects, special actors, and more.
 
@@ -51,9 +51,9 @@ All your custom plugins should reside in individual subfolders under this root f
 
 ### Creation
 
-In the future, we plan to provide templates and a dialog for creating custom plugins, similar to the <a href="/documentation/setup/getting-started/#new-project">New Project</a> dialog. For now, the recommended method is the following:
+In the future, we plan to provide templates and a dialog for creating custom plugins, similar to the [New Project](/documentation/setup/getting-started/#new-project) dialog. For now, the recommended method is the following:
 
-1. Find a plugin in the <a href="https://github.com/VUEngine/VUEngine-Plugins">VUEngine Plugins GitHub repository</a> to use as a starting point. The repository is organized by categories, so if you want to create, for instance, a font plugin, choose any plugin from the fonts directory.
+1. Find a plugin in the [VUEngine Plugins GitHub repository](https://github.com/VUEngine/VUEngine-Plugins) to use as a starting point. The repository is organized by categories, so if you want to create, for instance, a font plugin, choose any plugin from the fonts directory.
 2. Copy the respective plugin to a new folder below the user plugins base folder you configured.
 3. Adjust according to your own plugin's requirements.
 

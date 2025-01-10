@@ -13,7 +13,7 @@ VUEngine Studio provides different scopes for settings:
 - **User settings** - Settings that apply globally to any instance of VUEngine Studio you open.
 - **Workspace settings** - Settings stored inside your workspace and only apply when the workspace is opened.
 
-VUEngine Studio stores setting values in a settings JSON file. You can change settings values either by editing the settings JSON file or by using the <a href="#settings-editor">Settings editor</a>, which provides a graphical interface to manage settings.
+VUEngine Studio stores setting values in a settings JSON file. You can change settings values either by editing the settings JSON file or by using the [Settings editor](#settings-editor), which provides a graphical interface to manage settings.
 
 ## User settings
 
@@ -22,7 +22,7 @@ User settings are your personal settings for customizing VUEngine Studio. These 
 You can access your user settings in a few ways:
 
 - Select the **Preferences: Open Settings** command in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>
-- Select the **User** tab in the <a href="#settings-editor">Settings editor</a> <span class="keys" data-osx="⌘,">Ctrl+,</span>
+- Select the **User** tab in the [Settings editor](#settings-editor) <span class="keys" data-osx="⌘,">Ctrl+,</span>
 - Select the **Preferences: Open Settings (JSON)** command in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>
 
 <a href="/documentation/images/basics/settings/settings-editor-user-tab.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-user-tab.png" width="100%" /></a>
@@ -38,7 +38,7 @@ VUEngine Studio stores workspace settings at the root of the project in a folder
 You can access the workspace settings in a few ways:
 
 - Select the **Preferences: Open Workspace Settings** command in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>
-- Select the **Workspace** tab in the <a href="#settings-editor">Settings editor</a> <span class="keys" data-osx="⌘,">Ctrl+,</span>
+- Select the **Workspace** tab in the [Settings editor](#settings-editor) <span class="keys" data-osx="⌘,">Ctrl+,</span>
 - Select the **Preferences: Open Workspace Settings (JSON)** command in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>
 
 <a href="/documentation/images/basics/settings/settings-editor-workspace-tab.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-workspace-tab.png" width="100%" /></a>
