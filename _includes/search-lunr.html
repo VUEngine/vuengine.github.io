@@ -22,17 +22,29 @@
           const title = doc.title;
           const content = doc.content;
           const icon = url.startsWith('/documentation/') ? 'fas fa-book fa-fw' : 'far fa-file fa-fw';
-          const context = content.slice(
-            Math.max(0, metadata.position[0][0] - 25),
-            Math.min(metadata.position[0][0] + term.length + 25, content.length)
-          ).replace(new RegExp(term, 'gi'), '<span class="text-primary text-decoration-underline">$&</span>');
+          const context = '...'
+            + content.slice(
+              Math.max(0, metadata.position[0][0] - 25),
+              metadata.position[0][0]
+            )
+            + '<span class="text-primary text-decoration-underline">'
+            + content.slice(
+              metadata.position[0][0],
+              metadata.position[0][0] + metadata.position[0][1]
+            )
+            + '</span>'
+            + content.slice(
+              metadata.position[0][0] + metadata.position[0][1],
+              Math.min(metadata.position[0][0] + metadata.position[0][1] + 25, content.length)
+            )
+            + '...'
 
           resultsContainer.innerHTML =
             resultsContainer.innerHTML +
             '<a href="' + url + '" class="list-group-item d-flex gap-3" onmouseover="setActive(' + i + ')">' +
             '<span class="icon"><i class="' + icon + '"></i></span>' +
             '<span class="page flex-grow-1 d-flex flex-column">' +
-            '<span class="snippet text-nowrap">...' + context + '...</span>' +
+            '<span class="snippet text-nowrap">' + context + '</span>' +
             '<span class="title opacity-50">' + title + '</span>' +
             '</span>' +
             '<span>↵</span>' +
@@ -88,7 +100,7 @@
       idx = lunr(function () {
         this.ref('url')
         this.field('content')
-        this.metadataWhitelist = ['position', 'length']
+        this.metadataWhitelist = ['position']
         Object.values(documents).forEach(doc => {
           this.add(doc)
         }, this)
