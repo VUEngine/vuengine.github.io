@@ -25,7 +25,7 @@
           const context = content.slice(
             Math.max(0, metadata.position[0][0] - 25),
             Math.min(metadata.position[0][0] + term.length + 25, content.length)
-          ).replace(new RegExp(term, 'gi'), '<span class="text-primary">$&</span>');
+          ).replace(new RegExp(term, 'gi'), '<span class="text-primary text-decoration-underline">$&</span>');
 
           resultsContainer.innerHTML =
             resultsContainer.innerHTML +
@@ -104,7 +104,6 @@
 
   #lunrsearchresults a.active .text-primary {
     color: inherit !important;
-    text-decoration: underline;
   }
 </style>
 

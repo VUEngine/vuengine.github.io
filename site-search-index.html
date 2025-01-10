@@ -1,7 +1,7 @@
 ---
 ---
 { {% for page in site.pages %}
-{% if page.url != '/' and page.url != '/site-search-index/' -%}
+{% if page.url != '/' and page.url != '/404.html' and page.url != '/site-search-index/' -%}
 "{{ page.url }}": {
 "url": "{{ page.url }}",
 "title": "{% if page.parents %}{{ page.parents }} > {% endif %}{{ page.title }}",

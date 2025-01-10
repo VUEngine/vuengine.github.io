@@ -4,22 +4,29 @@ layout: default
 
 <section class="text-bg-dark">
   <div class="container px-4 py-2">
-    {% assign breadcrumb = 'Documentation' %}
+    {% assign currentSection = '' %}
     {% for section in site.data.documentation %}
     {% for docPage in section[1] %}
     {% if page.url == docPage.url %}
-    {% assign breadcrumb = breadcrumb | append: ' • ' | append: section[0] %}
+    {% assign currentSection = section %}
     {% break %}
     {% endif %}
     {% endfor %}
     {% endfor %}
 
-    <h1 class="mt-4">{{ breadcrumb }}</h1>
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/documentation/">Documentation</a></li>
+      {% unless page.url == '/documentation/' %}
+      <li class="breadcrumb-item"><a href="{{ currentSection[1][0].url }}">{{ currentSection[0] }}</a></li>
+      {% endunless %}
+      <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+    </ol>
   </div>
 </section>
 
-<section class="documentation py-4">
-  <div class="container">
+<section class="documentation">
+  <div class="container p-4">
     <div class="row">
       <div class="col-md-3 order-2 order-md-1">
         <div class="sticky-top mb-5 me-3" style="top: 20px">
@@ -87,23 +94,6 @@ layout: default
         </div>
       </div>
       <div class="col-md-9 order-1 order-md-2">
-        {% comment %}
-        <nav aria-label="breadcrumb" class="mt-1 mb-4">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item text-primary">
-              <i class="fas fa-book"></i>
-              <a href="/documentation/" class="text-decoration-none">Documentation</a>
-            </li>
-            {% unless page.url == '/documentation/' %}
-            <li class="breadcrumb-item text-muted">{{ currentDocSection }}</li>
-            {% endunless %}
-            <li class="breadcrumb-item text-muted" aria-current="page">
-              {{ page.title }}
-            </li>
-          </ol>
-        </nav>
-        {% endcomment %}
-
         {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true
         anchorClass="text-decoration-none" h_min=2 %}
 
@@ -137,23 +127,3 @@ layout: default
     </div>
   </div>
 </section>
-
-{% comment %}
-<script>
-  function replaceCtrlCmd(node) {
-    if (node.nodeType == 3) {
-      let targetString = "Ctrl";
-      if (navigator.appVersion.indexOf("Mac") != -1) {
-        targetString = "⌘";
-      }
-      node.data = node.data.replace(/CTRLCMD/g, targetString);
-    }
-    if (node.nodeType == 1 && node.nodeName != "SCRIPT") {
-      for (var i = 0; i < node.childNodes.length; i++) {
-        replaceCtrlCmd(node.childNodes[i]);
-      }
-    }
-  }
-  replaceCtrlCmd(document.body);
-</script>
-{% endcomment %}

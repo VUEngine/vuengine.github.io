@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="text-bg-dark">
+	<div class="container px-4 py-2">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+		</ol>
+	</div>
+</section>
+
+<section>
+	<div class="container p-4">
+		<ul>
+			{% for post in site.posts %}
+			<li>
+				{{ post.date | date: "%B %-d, %Y" }}:
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
