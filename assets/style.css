@@ -1,6 +1,13 @@
 /* Bootstrap overrides */
 body {
-  overflow-y: scroll;
+  background-image: radial-gradient(rgba(0, 0, 0, .1) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+main {
+  background-image: url('/assets/images/bg.png');
+  background-position: 75% 64px;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -20,7 +27,7 @@ html[data-bs-theme="dark"] .bg-light {
 
 html[data-bs-theme="dark"] .features .text-bg-dark {
   color: #000 !important;
-  background-color: RGBA(var(--bs-light-rgb),var(--bs-bg-opacity,1)) !important;
+  background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity,1)) !important;
 }
 
 .breadcrumb a {
