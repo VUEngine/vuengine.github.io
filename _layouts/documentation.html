@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="text-bg-dark">
-  <div class="container px-4 py-2">
+  <div class="container px-4 py-2 d-flex justify-content-between">
     {% assign currentSection = '' %}
     {% for section in site.data.documentation %}
     {% for docPage in section[1] %}
@@ -22,6 +22,10 @@ layout: default
       {% endunless %}
       <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
     </ol>
+    <div title='Last modified {{ lastModificationDate | date: "%B %-d, %Y" }}'>
+      {% capture lastModificationDate %}{% last_modified {{ page.path }} %}{% endcapture %}
+      {{ lastModificationDate | date: "%B %-d, %Y" }}
+    </div>
   </div>
 </section>
 
