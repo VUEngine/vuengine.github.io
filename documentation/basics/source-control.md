@@ -102,29 +102,7 @@ Click an indicator to open an inline diff of the change along with options to re
 
 Merge conflicts are recognized by VUEngine Studio. Differences are highlighted and there are inline actions to accept either one or both changes. Once the conflicts are resolved, stage the conflicting file so you can commit those changes.
 
-### 3-way merge editor
-
-To help you resolve merge conflicts, VUEngine Studio provides a 3-way merge editor where you can interactively accept incoming and current changes and view and edit the resulting merged file. The 3-way merge editor is opened by selecting the **Resolve in Merge Editor** button in the bottom right corner of a file with Git merge conflicts.
-
-The 3-way merge editor displays separate views for Incoming changes (on the left), Current changes (on the right), and the Result of the merge (at the bottom). Conflicts are highlighted and can be resolved by using the CodeLens buttons.
-
-### Resolving conflicts
-
-The 3-way merge editor allows you to resolve conflicts by accepting either one or both changes. You can also manually edit the result of the merge.
-
-For some conflicts, the merge editor shows an **Accept Combination** button. Accepting the combination resolves the current conflict by smartly merging both changes. This is especially useful for changes in the same line that don't touch the same characters.
-
-Use the **Ignore** buttons to accept neither the incoming nor current change, but mark the conflict as resolved. This resets the conflicting area to the state before any changes were made.
-
-### Completing the merge
-
-You can use the conflict counter in the right of the result editor to keep track of how many unresolved conflicts are remaining. Clicking on the counter jumps to the next unresolved conflict. Once all conflicts are resolved, you can complete the merge by selecting Complete Merge in the bottom right corner. This stages the file and closes the merge editor.
-
-### Alternative layouts and more
-
-Selecting the three dots (···) in the top right corner of the merge editor opens a context menu with additional options. You can switch to a vertical layout and display the base view, which shows the state of the file before any changes were made.
-
-The three dots next to **Incoming**, **Current**, and **Result** offer options for each view, such as showing a side-by-side diff against base, accepting all changes, or resetting the result.
+<a href="/documentation/images/basics/source-control/git-merge-conflict.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/source-control/git-merge-conflict.png" /></a>
 
 ## Timeline view
 
