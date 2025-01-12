@@ -1,0 +1,1423 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BgmapSprite Class Reference"
+permalink: documentation/api/class-bgmap-sprite/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">BgmapSprite Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for BgmapSprite:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_bgmap_sprite.png" usemap="#BgmapSprite_map" alt />
+  <map id="BgmapSprite_map" name="BgmapSprite_map">
+<area href="/documentation/api/class-sprite/" alt="Sprite" shape="rect" coords="241,0,392,24" />
+<area href="/documentation/api/class-bgmap-animated-sprite/" alt="BgmapAnimatedSprite" shape="rect" coords="0,112,151,136" />
+<area href="/documentation/api/class-frame-blend-bgmap-sprite/" alt="FrameBlendBgmapSprite" shape="rect" coords="161,112,312,136" />
+<area href="/documentation/api/class-m-bgmap-sprite/" alt="MBgmapSprite" shape="rect" coords="322,112,473,136" />
+<area href="/documentation/api/class-printing-sprite/" alt="PrintingSprite" shape="rect" coords="483,112,634,136" />
+<area href="/documentation/api/class-m-bgmap-animated-sprite/" alt="MBgmapAnimatedSprite" shape="rect" coords="322,168,473,192" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9d3835d41f46f9e802c9981d9c0ae4e0" id="r_a9d3835d41f46f9e802c9981d9c0ae4e0"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d3835d41f46f9e802c9981d9c0ae4e0">BgmapSpriteROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a39e03bb327a11ae87d86a06133a0ae95" id="r_a39e03bb327a11ae87d86a06133a0ae95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e03bb327a11ae87d86a06133a0ae95">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec</a> *bgmapSpriteSpec)</td></tr>
+
+<tr class="memitem:a9fb6fe7f99905bf4b1fd893c84065941" id="r_a9fb6fe7f99905bf4b1fd893c84065941"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fb6fe7f99905bf4b1fd893c84065941">registerWithManager</a> ()</td></tr>
+<tr class="memdesc:a9fb6fe7f99905bf4b1fd893c84065941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register this sprite with the appropriate sprites manager.  <br /></td></tr>
+
+<tr class="memitem:a3be1af71dd45c81b97544c64f1522022" id="r_a3be1af71dd45c81b97544c64f1522022"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be1af71dd45c81b97544c64f1522022">unregisterWithManager</a> ()</td></tr>
+<tr class="memdesc:a3be1af71dd45c81b97544c64f1522022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unegister this sprite with the appropriate sprites manager.  <br /></td></tr>
+
+<tr class="memitem:aa802cf980b2c5c7f8c705e22a9d96bc2" id="r_aa802cf980b2c5c7f8c705e22a9d96bc2"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa802cf980b2c5c7f8c705e22a9d96bc2">hasSpecialEffects</a> ()</td></tr>
+
+<tr class="memitem:a3279842a5eef6a15179a34a01fe8824b" id="r_a3279842a5eef6a15179a34a01fe8824b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3279842a5eef6a15179a34a01fe8824b">processEffects</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> maximumParamTableRowsToComputePerCall)</td></tr>
+
+<tr class="memitem:a99d2e83efdf86779d0adf8ed4c894cdf" id="r_a99d2e83efdf86779d0adf8ed4c894cdf"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99d2e83efdf86779d0adf8ed4c894cdf">doRender</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="/documentation/api/class-sprite/">index</a>)</td></tr>
+
+<tr class="memitem:aebfc1b21f694c6451d67fad75121cb8d" id="r_aebfc1b21f694c6451d67fad75121cb8d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebfc1b21f694c6451d67fad75121cb8d">setMultiframe</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> frame)</td></tr>
+
+<tr class="memitem:a30c7f2d9ac4da2bea4d6dab0cffc0036" id="r_a30c7f2d9ac4da2bea4d6dab0cffc0036"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30c7f2d9ac4da2bea4d6dab0cffc0036">setRotation</a> (const <a class="el" href="/documentation/api/struct-rotation/">Rotation</a> *<a class="el" href="/documentation/api/class-sprite/">rotation</a>)</td></tr>
+
+<tr class="memitem:a3e34643b5f5b53391d6d97ac940e5aee" id="r_a3e34643b5f5b53391d6d97ac940e5aee"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e34643b5f5b53391d6d97ac940e5aee">setScale</a> (const <a class="el" href="/documentation/api/struct-pixel-scale/">PixelScale</a> *<a class="el" href="/documentation/api/class-sprite/">scale</a>)</td></tr>
+
+<tr class="memitem:a22cc595117cd06d06d373df4290dcca7" id="r_a22cc595117cd06d06d373df4290dcca7"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22cc595117cd06d06d373df4290dcca7">getTotalPixels</a> ()</td></tr>
+
+<tr class="memitem:af18b1902c5246f803bc72326fc94783f" id="r_af18b1902c5246f803bc72326fc94783f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af18b1902c5246f803bc72326fc94783f">configureTexture</a> ()</td></tr>
+<tr class="memdesc:af18b1902c5246f803bc72326fc94783f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the sprite's texture.  <br /></td></tr>
+
+<tr class="memitem:a7a19673b49dcf58bc017d0d8fa358851" id="r_a7a19673b49dcf58bc017d0d8fa358851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a19673b49dcf58bc017d0d8fa358851">setMode</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> display, <a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="/documentation/api/-printing-8h/">mode</a>)</td></tr>
+
+<tr class="memitem:aa665a3e3c8bf78f989bcb4011bbad489" id="r_aa665a3e3c8bf78f989bcb4011bbad489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa665a3e3c8bf78f989bcb4011bbad489">setParam</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#a40d500c6236679abdf351e5c6b506275">param</a>)</td></tr>
+
+<tr class="memitem:a563df721ebecc380c00c4850d2d9b716" id="r_a563df721ebecc380c00c4850d2d9b716"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a563df721ebecc380c00c4850d2d9b716">getParam</a> ()</td></tr>
+
+<tr class="memitem:a09176d91242a19949329b5fe84b39746" id="r_a09176d91242a19949329b5fe84b39746"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09176d91242a19949329b5fe84b39746">getParamTableRow</a> ()</td></tr>
+
+<tr class="memitem:a2b787e87a74d3246426903503a9a6fd2" id="r_a2b787e87a74d3246426903503a9a6fd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b787e87a74d3246426903503a9a6fd2">invalidateParamTable</a> ()</td></tr>
+<tr class="memdesc:a2b787e87a74d3246426903503a9a6fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the rewrite of the sprite's param table during the next rendering cycle.  <br /></td></tr>
+
+<tr class="memitem:abcfffd7086549124f21207e3e7845dcd" id="r_abcfffd7086549124f21207e3e7845dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcfffd7086549124f21207e3e7845dcd">onTextureRewritten</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer)</td></tr>
+
+<tr class="memitem:a62dfb12e34d2dc9e3fa05186970c8f54" id="r_a62dfb12e34d2dc9e3fa05186970c8f54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62dfb12e34d2dc9e3fa05186970c8f54">applyAffineTransformations</a> ()</td></tr>
+<tr class="memdesc:a62dfb12e34d2dc9e3fa05186970c8f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start rewriting the sprite's param table for affine transformations.  <br /></td></tr>
+
+<tr class="memitem:a30a82f966319ce76cc4c5303d577d9b1" id="r_a30a82f966319ce76cc4c5303d577d9b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30a82f966319ce76cc4c5303d577d9b1">applyHbiasEffects</a> ()</td></tr>
+<tr class="memdesc:a30a82f966319ce76cc4c5303d577d9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start rewriting the sprite's param table for hbias effects.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a0105216691cb468b59490d4abb66878b" id="r_a0105216691cb468b59490d4abb66878b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a></td></tr>
+<tr class="memdesc:a0105216691cb468b59490d4abb66878b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset that keeps track of where to continue writing in param table.  <br /></td></tr>
+
+<tr class="memitem:a40d500c6236679abdf351e5c6b506275" id="r_a40d500c6236679abdf351e5c6b506275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40d500c6236679abdf351e5c6b506275">param</a></td></tr>
+
+<tr class="memitem:a28dc37ee0352dd3ff921c035bded8bff" id="r_a28dc37ee0352dd3ff921c035bded8bff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-bgmap-sprite-8h/">ParamTableEffectMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a></td></tr>
+<tr class="memdesc:a28dc37ee0352dd3ff921c035bded8bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to function that implements the param table based effects.  <br /></td></tr>
+
+<tr class="memitem:ab233ec12eb20fb5df4ed3afb589e78ca" id="r_ab233ec12eb20fb5df4ed3afb589e78ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-bgmap-texture-source/">BgmapTextureSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a></td></tr>
+<tr class="memdesc:ab233ec12eb20fb5df4ed3afb589e78ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-texture/">Texture</a>'s configuration in BGMAP space.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_sprite')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-sprite/">Sprite</a></td></tr>
+<tr class="memitem:a50089a4168b6e666c121d7225d88a270 inherit pub_types_class_sprite" id="r_a50089a4168b6e666c121d7225d88a270"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-sprite-spec/">SpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">SpriteROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_sprite')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-sprite/">Sprite</a></td></tr>
+<tr class="memitem:aefe1c9d8c9b3dcfbbf578d6dbeabad55 inherit pub_methods_class_sprite" id="r_aefe1c9d8c9b3dcfbbf578d6dbeabad55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-sprite-spec/">SpriteSpec</a> *spriteSpec)</td></tr>
+
+<tr class="memitem:a5759123de35a932a985701ee9b097843 inherit pub_methods_class_sprite" id="r_a5759123de35a932a985701ee9b097843"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getRightBox</a> ()</td></tr>
+
+<tr class="memitem:a8a774e7a40743ad087f708362b9ffbcd inherit pub_methods_class_sprite" id="r_a8a774e7a40743ad087f708362b9ffbcd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">createAnimationController</a> ()</td></tr>
+<tr class="memdesc:a8a774e7a40743ad087f708362b9ffbcd inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an animation controller for this sprite.  <br /></td></tr>
+
+<tr class="memitem:a9800e4cdd85a268dac00c90d2db63744 inherit pub_methods_class_sprite" id="r_a9800e4cdd85a268dac00c90d2db63744"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">forceChangeOfFrame</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> actualFrame)</td></tr>
+
+<tr class="memitem:ac9cdad625ec7aa6d1114c4af1fb29cb0 inherit pub_methods_class_sprite" id="r_ac9cdad625ec7aa6d1114c4af1fb29cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">transform</a> ()</td></tr>
+<tr class="memdesc:ac9cdad625ec7aa6d1114c4af1fb29cb0 inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sprite's transformation.  <br /></td></tr>
+
+<tr class="memitem:a96ceaf54c5a2d9948dcd7578c717c8e4 inherit pub_methods_class_sprite" id="r_a96ceaf54c5a2d9948dcd7578c717c8e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">render</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="/documentation/api/class-sprite/">index</a>, <a class="el" href="/documentation/api/-types-8h/">bool</a> <a class="el" href="/documentation/api/class-sprite/">updateAnimation</a>)</td></tr>
+
+<tr class="memitem:a95126cbe568a388a5b1092dee95716d0 inherit pub_methods_class_sprite" id="r_a95126cbe568a388a5b1092dee95716d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-texture/">Texture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getTexture</a> ()</td></tr>
+
+<tr class="memitem:aaee5125c2e8cc6d2046bb1d4464b0fe9 inherit pub_methods_class_sprite" id="r_aaee5125c2e8cc6d2046bb1d4464b0fe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getIndex</a> ()</td></tr>
+
+<tr class="memitem:aeac573e4073e67ad3881272ef9ee854a inherit pub_methods_class_sprite" id="r_aeac573e4073e67ad3881272ef9ee854a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getHead</a> ()</td></tr>
+
+<tr class="memitem:aa83ab801bb041eb08d070da7ad8d8034 inherit pub_methods_class_sprite" id="r_aa83ab801bb041eb08d070da7ad8d8034"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getHalfWidth</a> ()</td></tr>
+
+<tr class="memitem:aa2e7968b95d4c4a0ce2c17d57893a921 inherit pub_methods_class_sprite" id="r_aa2e7968b95d4c4a0ce2c17d57893a921"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getHalfHeight</a> ()</td></tr>
+
+<tr class="memitem:ac5c8a8276abf7bf231dfa43b37760b0d inherit pub_methods_class_sprite" id="r_ac5c8a8276abf7bf231dfa43b37760b0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveHead</a> ()</td></tr>
+
+<tr class="memitem:abc7f3d0631a6d0bdfc70caa2e55af816 inherit pub_methods_class_sprite" id="r_abc7f3d0631a6d0bdfc70caa2e55af816"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveWidth</a> ()</td></tr>
+
+<tr class="memitem:a796e93312ce1ef5bef771cb55831cc7a inherit pub_methods_class_sprite" id="r_a796e93312ce1ef5bef771cb55831cc7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveHeight</a> ()</td></tr>
+
+<tr class="memitem:aecefbef74e6f06e6165c201f81c6be87 inherit pub_methods_class_sprite" id="r_aecefbef74e6f06e6165c201f81c6be87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveX</a> ()</td></tr>
+
+<tr class="memitem:ace5012eb7c17fe4ee7c3bb14e2dba9c0 inherit pub_methods_class_sprite" id="r_ace5012eb7c17fe4ee7c3bb14e2dba9c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveY</a> ()</td></tr>
+
+<tr class="memitem:a57e0aa6b66a0e148feb90b251087e3e6 inherit pub_methods_class_sprite" id="r_a57e0aa6b66a0e148feb90b251087e3e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveP</a> ()</td></tr>
+
+<tr class="memitem:ad7b88ce31fa4d2e408b92d7c3f788f22 inherit pub_methods_class_sprite" id="r_ad7b88ce31fa4d2e408b92d7c3f788f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveMX</a> ()</td></tr>
+
+<tr class="memitem:a9c32fff97ecf3c193f2472985c436150 inherit pub_methods_class_sprite" id="r_a9c32fff97ecf3c193f2472985c436150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveMY</a> ()</td></tr>
+
+<tr class="memitem:a811890e9e8583cf605ff6cbb9af53c70 inherit pub_methods_class_sprite" id="r_a811890e9e8583cf605ff6cbb9af53c70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getEffectiveMP</a> ()</td></tr>
+
+<tr class="memitem:a2fbad365ddcb821e066613e12bd6ab82 inherit pub_methods_class_sprite" id="r_a2fbad365ddcb821e066613e12bd6ab82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">isVisible</a> ()</td></tr>
+
+<tr class="memitem:ade5637d98dc9ecb298c3c9370b7c0f3b inherit pub_methods_class_sprite" id="r_ade5637d98dc9ecb298c3c9370b7c0f3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">isHidden</a> ()</td></tr>
+
+<tr class="memitem:aaf8fe49ab3d975dfae52b515b415ab54 inherit pub_methods_class_sprite" id="r_aaf8fe49ab3d975dfae52b515b415ab54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">isBgmap</a> ()</td></tr>
+
+<tr class="memitem:aa2bfadbf85ac3dcb291d62802bb3609d inherit pub_methods_class_sprite" id="r_aa2bfadbf85ac3dcb291d62802bb3609d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">isObject</a> ()</td></tr>
+
+<tr class="memitem:a9abc4fe1a45871687249a62a385fd827 inherit pub_methods_class_sprite" id="r_a9abc4fe1a45871687249a62a385fd827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">isAffine</a> ()</td></tr>
+
+<tr class="memitem:a1d70b0c45c163f7b1a1320a856604d69 inherit pub_methods_class_sprite" id="r_a1d70b0c45c163f7b1a1320a856604d69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">isHBias</a> ()</td></tr>
+
+<tr class="memitem:ac8c0409bdf28f9379d3c7e5cc270b807 inherit pub_methods_class_sprite" id="r_ac8c0409bdf28f9379d3c7e5cc270b807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">setPosition</a> (const <a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a> *<a class="el" href="/documentation/api/class-sprite/">position</a>)</td></tr>
+
+<tr class="memitem:aeeb64ba35ee240a6e021c210066742bd inherit pub_methods_class_sprite" id="r_aeeb64ba35ee240a6e021c210066742bd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getPosition</a> ()</td></tr>
+<tr class="memdesc:aeeb64ba35ee240a6e021c210066742bd inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the position cache.  <br /></td></tr>
+
+<tr class="memitem:ab8a400225fbb50488f914626870f3701 inherit pub_methods_class_sprite" id="r_ab8a400225fbb50488f914626870f3701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">setDisplacement</a> (const <a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a> *<a class="el" href="/documentation/api/class-sprite/">displacement</a>)</td></tr>
+
+<tr class="memitem:a4b6892daa303400c88b8d47512200ab6 inherit pub_methods_class_sprite" id="r_a4b6892daa303400c88b8d47512200ab6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getDisplacement</a> ()</td></tr>
+
+<tr class="memitem:ae127b9087c0dcaaa1d119f4c8d14e052 inherit pub_methods_class_sprite" id="r_ae127b9087c0dcaaa1d119f4c8d14e052"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">getDisplacedPosition</a> ()</td></tr>
+
+<tr class="memitem:a8103ba59ceb600cc3811e9bd53ca657a inherit pub_methods_class_sprite" id="r_a8103ba59ceb600cc3811e9bd53ca657a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">addChar</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePoint, const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:ab2064ec97f1ae117be572301359c94b7 inherit pub_methods_class_sprite" id="r_ab2064ec97f1ae117be572301359c94b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">putChar</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePoint, const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:aacf885f30169eb1da6bd786229c237ee inherit pub_methods_class_sprite" id="r_aacf885f30169eb1da6bd786229c237ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">putPixel</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePixel, const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *charSetPixel, <a class="el" href="/documentation/api/-types-8h/">BYTE</a> newPixelColor)</td></tr>
+
+<tr class="memitem:abe2a14a2e0e00fc6944f81c1a43ea499 inherit pub_methods_class_sprite" id="r_abe2a14a2e0e00fc6944f81c1a43ea499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">invalidateRendering</a> ()</td></tr>
+<tr class="memdesc:abe2a14a2e0e00fc6944f81c1a43ea499 inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate the flags that determine if the sprite requires rendering.  <br /></td></tr>
+
+<tr class="memitem:a5e70e16bf7e519926dee9b96b71ae6a0 inherit pub_methods_class_sprite" id="r_a5e70e16bf7e519926dee9b96b71ae6a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">updateAnimation</a> ()</td></tr>
+<tr class="memdesc:a5e70e16bf7e519926dee9b96b71ae6a0 inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the animation.  <br /></td></tr>
+
+<tr class="memitem:a4c1dc5415ea785f969270a6f20c55dba inherit pub_methods_class_sprite" id="r_a4c1dc5415ea785f969270a6f20c55dba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">forceShow</a> ()</td></tr>
+<tr class="memdesc:a4c1dc5415ea785f969270a6f20c55dba inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forcefully show the sprite.  <br /></td></tr>
+
+<tr class="memitem:a0073f8efc331ea5c4812eea05af3c55c inherit pub_methods_class_sprite" id="r_a0073f8efc331ea5c4812eea05af3c55c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">forceHide</a> ()</td></tr>
+<tr class="memdesc:a0073f8efc331ea5c4812eea05af3c55c inherit pub_methods_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forcefully hide the sprite.  <br /></td></tr>
+
+<tr class="memitem:a78f7b04c95411fa24eae3241874cbc63 inherit pub_methods_class_sprite" id="r_a78f7b04c95411fa24eae3241874cbc63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_sprite')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-sprite/">Sprite</a></td></tr>
+<tr class="memitem:a8e04cea2969b211ed291467c1711a183 inherit pub_attribs_class_sprite" id="r_a8e04cea2969b211ed291467c1711a183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">checkIfWithinScreenSpace</a></td></tr>
+<tr class="memdesc:a8e04cea2969b211ed291467c1711a183 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to check if rendered even if outside the screen.  <br /></td></tr>
+
+<tr class="memitem:ad973d742f323cbd172e809cc75e83189 inherit pub_attribs_class_sprite" id="r_ad973d742f323cbd172e809cc75e83189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">position</a></td></tr>
+<tr class="memdesc:ad973d742f323cbd172e809cc75e83189 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position cache.  <br /></td></tr>
+
+<tr class="memitem:aaef43fd36e71fe32ddd70a0a5b1f88a4 inherit pub_attribs_class_sprite" id="r_aaef43fd36e71fe32ddd70a0a5b1f88a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">displacement</a></td></tr>
+<tr class="memdesc:aaef43fd36e71fe32ddd70a0a5b1f88a4 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displacement added to the sprite's position.  <br /></td></tr>
+
+<tr class="memitem:aabbc0bec2e23682d148cc8ad195c6164 inherit pub_attribs_class_sprite" id="r_aabbc0bec2e23682d148cc8ad195c6164"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-rotation/">Rotation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">rotation</a></td></tr>
+<tr class="memdesc:aabbc0bec2e23682d148cc8ad195c6164 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/struct-rotation/">Rotation</a> cache.  <br /></td></tr>
+
+<tr class="memitem:ac56d109f8f1fca3a6b8669be46fc1d1b inherit pub_attribs_class_sprite" id="r_ac56d109f8f1fca3a6b8669be46fc1d1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">index</a></td></tr>
+
+<tr class="memitem:a473b764adb02066959947206e8ddd54f inherit pub_attribs_class_sprite" id="r_a473b764adb02066959947206e8ddd54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-pixel-scale/">PixelScale</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">scale</a></td></tr>
+<tr class="memdesc:a473b764adb02066959947206e8ddd54f inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/struct-scale/">Scale</a> cache.  <br /></td></tr>
+
+<tr class="memitem:ab0b07fc114d06a143184727cfa6de561 inherit pub_attribs_class_sprite" id="r_ab0b07fc114d06a143184727cfa6de561"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">head</a></td></tr>
+<tr class="memdesc:ab0b07fc114d06a143184727cfa6de561 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head flags for DRAM entries.  <br /></td></tr>
+
+<tr class="memitem:a23671d52da0111ab08cab587e53e39c3 inherit pub_attribs_class_sprite" id="r_a23671d52da0111ab08cab587e53e39c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">halfWidth</a></td></tr>
+<tr class="memdesc:a23671d52da0111ab08cab587e53e39c3 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the texture's half width.  <br /></td></tr>
+
+<tr class="memitem:a99ef22c192ee7c6a6cbff3c12e457805 inherit pub_attribs_class_sprite" id="r_a99ef22c192ee7c6a6cbff3c12e457805"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">halfHeight</a></td></tr>
+<tr class="memdesc:a99ef22c192ee7c6a6cbff3c12e457805 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the texture's half height.  <br /></td></tr>
+
+<tr class="memitem:aa4978b284ebaae7225869d238dcb32cb inherit pub_attribs_class_sprite" id="r_aa4978b284ebaae7225869d238dcb32cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-texture/">Texture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">texture</a></td></tr>
+<tr class="memdesc:aa4978b284ebaae7225869d238dcb32cb inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-texture/">Texture</a> to display.  <br /></td></tr>
+
+<tr class="memitem:a3a2ebc345bf023a5b13176afc367d093 inherit pub_attribs_class_sprite" id="r_a3a2ebc345bf023a5b13176afc367d093"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sprite/">hasTextures</a></td></tr>
+<tr class="memdesc:a3a2ebc345bf023a5b13176afc367d093 inherit pub_attribs_class_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for special sprites.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-sprite/">Sprite</a></p>
+<p>Displays a texture that is allocated in BGMAP space. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">72</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a9d3835d41f46f9e802c9981d9c0ae4e0" name="a9d3835d41f46f9e802c9981d9c0ae4e0"></a>
+<h2 class="memtitle">BgmapSpriteROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec</a> <a class="el" href="#a9d3835d41f46f9e802c9981d9c0ae4e0">BgmapSpriteROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">61</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a62dfb12e34d2dc9e3fa05186970c8f54" name="a62dfb12e34d2dc9e3fa05186970c8f54"></a>
+<h2 class="memtitle">applyAffineTransformations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::applyAffineTransformations </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start rewriting the sprite's param table for affine transformations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">569</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  570</span>{</div>
+<div class="line"><span class="lineno">  571</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="stringliteral">&quot;BgmapSprite::applyAffineTransformations: null texture&quot;</span>);</div>
+<div class="line"><span class="lineno">  572</span> </div>
+<div class="line"><span class="lineno">  573</span>    this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = 0;</div>
+<div class="line"><span class="lineno">  574</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a0105216691cb468b59490d4abb66878b"><div class="ttname"><a href="#a0105216691cb468b59490d4abb66878b">BgmapSprite::paramTableRow</a></div><div class="ttdeci">int16 paramTableRow</div><div class="ttdoc">Offset that keeps track of where to continue writing in param table.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:77</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aa4978b284ebaae7225869d238dcb32cb"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::texture</a></div><div class="ttdeci">Texture texture</div><div class="ttdoc">Texture to display.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:90</a></div></div>
+</div>
+</div>
+</div>
+<a id="a30a82f966319ce76cc4c5303d577d9b1" name="a30a82f966319ce76cc4c5303d577d9b1"></a>
+<h2 class="memtitle">applyHbiasEffects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::applyHbiasEffects </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start rewriting the sprite's param table for hbias effects. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">578</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  579</span>{</div>
+<div class="line"><span class="lineno">  580</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="stringliteral">&quot;BgmapSprite::applyHbiasEffects: null texture&quot;</span>);</div>
+<div class="line"><span class="lineno">  581</span> </div>
+<div class="line"><span class="lineno">  582</span>    this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = 0;</div>
+<div class="line"><span class="lineno">  583</span>}</div>
+</div>
+</div>
+</div>
+<a id="af18b1902c5246f803bc72326fc94783f" name="af18b1902c5246f803bc72326fc94783f"></a>
+<h2 class="memtitle">configureTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::configureTexture </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the sprite's texture. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">435</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  436</span>{</div>
+<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  438</span>    {</div>
+<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  440</span>    }</div>
+<div class="line"><span class="lineno">  441</span> </div>
+<div class="line"><span class="lineno">  442</span>    <a class="code hl_typedef" href="/documentation/api/-texture-8h/">TextureSpec</a>* textureSpec =((<a class="code hl_typedef" href="/documentation/api/-bgmap-sprite-8h/">BgmapSpriteSpec</a>*)this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>)-&gt;spriteSpec.textureSpec;</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == textureSpec)</div>
+<div class="line"><span class="lineno">  445</span>    {</div>
+<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  447</span>    }</div>
+<div class="line"><span class="lineno">  448</span> </div>
+<div class="line"><span class="lineno">  449</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a> = <a class="code hl_function" href="/documentation/api/class-texture/">Texture::get</a>(<a class="code hl_define" href="/documentation/api/-oop-8h/">typeofclass</a>(<a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a>), textureSpec, 0, <span class="keyword">false</span>, <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_1x1</a>);</div>
+<div class="line"><span class="lineno">  450</span>    </div>
+<div class="line"><span class="lineno">  451</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  452</span>    {</div>
+<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  454</span>    }</div>
+<div class="line"><span class="lineno">  455</span> </div>
+<div class="line"><span class="lineno">  456</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mx = <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getXOffset</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>) &lt;&lt; 3;</div>
+<div class="line"><span class="lineno">  457</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.my = <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getYOffset</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>) &lt;&lt; 3;</div>
+<div class="line"><span class="lineno">  458</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mp = 0;</div>
+<div class="line"><span class="lineno">  459</span> </div>
+<div class="line"><span class="lineno">  460</span>    <a class="code hl_function" href="#a7a19673b49dcf58bc017d0d8fa358851">BgmapSprite::setMode</a>(<span class="keyword">this</span>, ((<a class="code hl_typedef" href="/documentation/api/-bgmap-sprite-8h/">BgmapSpriteSpec</a>*)this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>)-&gt;display, ((<a class="code hl_typedef" href="/documentation/api/-bgmap-sprite-8h/">BgmapSpriteSpec</a>*)this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>)-&gt;bgmapMode);</div>
+<div class="line"><span class="lineno">  461</span> </div>
+<div class="line"><span class="lineno">  462</span>    <span class="keywordflow">if</span>(0 != this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> &amp;&amp; !<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  463</span>    {</div>
+<div class="line"><span class="lineno">  464</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">Texture::addEventListener</a></div>
+<div class="line"><span class="lineno">  465</span>        (</div>
+<div class="line"><span class="lineno">  466</span>            this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, ListenerObject::safeCast(<span class="keyword">this</span>), (<a class="code hl_typedef" href="/documentation/api/class-listener-object/">EventListener</a>)<a class="code hl_function" href="#abcfffd7086549124f21207e3e7845dcd">BgmapSprite::onTextureRewritten</a>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventTextureRewritten</a></div>
+<div class="line"><span class="lineno">  467</span>        );</div>
+<div class="line"><span class="lineno">  468</span>    }</div>
+<div class="line"><span class="lineno">  469</span>}</div>
+<div class="ttc" id="a_bgmap_sprite_8c_html_a0d276167ff979110ce20c9f9d54d5526"><div class="ttname"><a href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a></div><div class="ttdeci">friend class BgmapTexture</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:29</a></div></div>
+<div class="ttc" id="a_bgmap_sprite_8h_html_a861066fef770d86461a150d6ee42e9a0"><div class="ttname"><a href="/documentation/api/-bgmap-sprite-8h/">BgmapSpriteSpec</a></div><div class="ttdeci">struct BgmapSpriteSpec BgmapSpriteSpec</div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1ae286982cfb5c9a956606f7f1cb760ff6"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventTextureRewritten</a></div><div class="ttdeci">@ kEventTextureRewritten</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:45</a></div></div>
+<div class="ttc" id="a_oop_8h_html_a8a833e6680131ee2dc131d6bbf6e03a0"><div class="ttname"><a href="/documentation/api/-oop-8h/">typeofclass</a></div><div class="ttdeci">#define typeofclass(ClassName)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:271</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_texture_8h_html_aff7079ea46646b6abd7a16af6976797f"><div class="ttname"><a href="/documentation/api/-texture-8h/">TextureSpec</a></div><div class="ttdeci">struct TextureSpec TextureSpec</div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a421ca709c25fc4249c7eec6b6cb725d0"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_1x1</a></div><div class="ttdeci">#define __WORLD_1x1</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:123</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a40d500c6236679abdf351e5c6b506275"><div class="ttname"><a href="#a40d500c6236679abdf351e5c6b506275">BgmapSprite::param</a></div><div class="ttdeci">uint32 param</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:81</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a7a19673b49dcf58bc017d0d8fa358851"><div class="ttname"><a href="#a7a19673b49dcf58bc017d0d8fa358851">BgmapSprite::setMode</a></div><div class="ttdeci">void setMode(uint16 display, uint16 mode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:473</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_ab233ec12eb20fb5df4ed3afb589e78ca"><div class="ttname"><a href="#ab233ec12eb20fb5df4ed3afb589e78ca">BgmapSprite::bgmapTextureSource</a></div><div class="ttdeci">BgmapTextureSource bgmapTextureSource</div><div class="ttdoc">Texture&#39;s configuration in BGMAP space.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:87</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_abcfffd7086549124f21207e3e7845dcd"><div class="ttname"><a href="#abcfffd7086549124f21207e3e7845dcd">BgmapSprite::onTextureRewritten</a></div><div class="ttdeci">bool onTextureRewritten(ListenerObject eventFirer)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:560</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a7dc941d16ba2c4f81b32dc11c4dd00ae"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture::getYOffset</a></div><div class="ttdeci">int16 getYOffset()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:146</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a89ad2b58248a1a129871278544581fc0"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture::getXOffset</a></div><div class="ttdeci">int16 getXOffset()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:139</a></div></div>
+<div class="ttc" id="aclass_component_html_ada6fd2c1a873fe14efcc7db63d7a5d7e"><div class="ttname"><a href="/documentation/api/class-component/">Component::componentSpec</a></div><div class="ttdeci">const ComponentSpec * componentSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the component.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:84</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_a2a08be5bc263fa301ef555d27eb62fb3"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::EventListener</a></div><div class="ttdeci">bool(* EventListener)(ListenerObject, ListenerObject)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:32</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa44d2f3fc00a88658f64cac1c02b47f7"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::addEventListener</a></div><div class="ttdeci">void addEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:64</a></div></div>
+<div class="ttc" id="aclass_texture_html_a1f147398961876ee0f73fb669c4be281"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::get</a></div><div class="ttdeci">static Texture get(ClassPointer textureClass, const TextureSpec *textureSpec, int16 minimumSegment, bool mustLiveAtEvenSegment, uint32 scValue)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:59</a></div></div>
+</div>
+</div>
+</div>
+<a id="a39e03bb327a11ae87d86a06133a0ae95" name="a39e03bb327a11ae87d86a06133a0ae95"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>bgmapSpriteSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the sprite attaches to </td></tr>
+    <tr><td class="paramname">bgmapSpriteSpec</td><td>Specification that determines how to configure the sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">78</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != bgmapSpriteSpec, <span class="stringliteral">&quot;BgmapSprite::constructor: NULL bgmapSpriteSpec&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   83</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, (<a class="code hl_typedef" href="/documentation/api/-sprite-8h/">SpriteSpec</a>*)&amp;bgmapSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-bgmap-sprite-spec/">spriteSpec</a>);</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mx = 0;</div>
+<div class="line"><span class="lineno">   86</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.my = 0;</div>
+<div class="line"><span class="lineno">   87</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mp = 0;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">displacement</a> = bgmapSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-bgmap-sprite-spec/">spriteSpec</a>.<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">displacement</a>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> = 0;</div>
+<div class="line"><span class="lineno">   92</span>    this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = 0;</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a> = bgmapSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-bgmap-sprite-spec/">applyParamTableEffect</a>;</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_function" href="#af18b1902c5246f803bc72326fc94783f">BgmapSprite::configureTexture</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   97</span>}</div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_sprite_8h_html_ac55135f1d25ca9a9ffa850d7a37ab58e"><div class="ttname"><a href="/documentation/api/-sprite-8h/">SpriteSpec</a></div><div class="ttdeci">struct SpriteSpec SpriteSpec</div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a28dc37ee0352dd3ff921c035bded8bff"><div class="ttname"><a href="#a28dc37ee0352dd3ff921c035bded8bff">BgmapSprite::applyParamTableEffect</a></div><div class="ttdeci">ParamTableEffectMethod applyParamTableEffect</div><div class="ttdoc">Pointer to function that implements the param table based effects.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:84</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_af18b1902c5246f803bc72326fc94783f"><div class="ttname"><a href="#af18b1902c5246f803bc72326fc94783f">BgmapSprite::configureTexture</a></div><div class="ttdeci">void configureTexture()</div><div class="ttdoc">Configure the sprite&#39;s texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:435</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aaef43fd36e71fe32ddd70a0a5b1f88a4"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::displacement</a></div><div class="ttdeci">PixelVector displacement</div><div class="ttdoc">Displacement added to the sprite&#39;s position.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:68</a></div></div>
+<div class="ttc" id="astruct_bgmap_sprite_spec_html_a8f93ab6ce559ddad528aa453bbc035bc"><div class="ttname"><a href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec::spriteSpec</a></div><div class="ttdeci">SpriteSpec spriteSpec</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:46</a></div></div>
+<div class="ttc" id="astruct_bgmap_sprite_spec_html_abbadf2d7b576d6ccfbdbb3a4d625d4c4"><div class="ttname"><a href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec::applyParamTableEffect</a></div><div class="ttdeci">ParamTableEffectMethod applyParamTableEffect</div><div class="ttdoc">Pointer to affine/hbias manipulation function.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:55</a></div></div>
+<div class="ttc" id="astruct_sprite_spec_html_afb73c23188e49e79e458119ee21b152a"><div class="ttname"><a href="/documentation/api/struct-sprite-spec/">SpriteSpec::displacement</a></div><div class="ttdeci">PixelVector displacement</div><div class="ttdoc">Displacement added to the sprite&#39;s position.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:40</a></div></div>
+</div>
+</div>
+</div>
+<a id="a99d2e83efdf86779d0adf8ed4c894cdf" name="a99d2e83efdf86779d0adf8ed4c894cdf"></a>
+<h2 class="memtitle">doRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapSprite::doRender </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Render the sprite by configuring the DRAM assigned to it by means of the provided index. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">index</td><td>Determines the region of DRAM that this sprite is allowed to configure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index that determines the region of DRAM that this sprite manages </dd></dl>
+
+<p>Implements <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-frame-blend-bgmap-sprite/">FrameBlendBgmapSprite</a>, <a class="el" href="/documentation/api/class-m-bgmap-sprite/">MBgmapSprite</a>, and <a class="el" href="/documentation/api/class-printing-sprite/">PrintingSprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">162</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>{</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  165</span>    {</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_function" href="#af18b1902c5246f803bc72326fc94783f">BgmapSprite::configureTexture</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a>;</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>), <span class="stringliteral">&quot;BgmapSprite::doRender: null texture&quot;</span>);</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[<a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>];</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>    <span class="comment">// Get coordinates</span></div>
+<div class="line"><span class="lineno">  176</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> gx = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">position</a>.x + this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">displacement</a>.x - this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfWidth</a>;</div>
+<div class="line"><span class="lineno">  177</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> gy = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">position</a>.y + this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">displacement</a>.y - this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfHeight</a>;</div>
+<div class="line"><span class="lineno">  178</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> gp = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">position</a>.parallax + this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">displacement</a>.parallax;</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> auxGp = <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(gp);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    <span class="comment">// Get sprite&#39;s size</span></div>
+<div class="line"><span class="lineno">  183</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> w = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfWidth</a> &lt;&lt; 1;</div>
+<div class="line"><span class="lineno">  184</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> h = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfHeight</a> &lt;&lt; 1;</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    <span class="comment">// Set the head</span></div>
+<div class="line"><span class="lineno">  187</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> mx = this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mx;</div>
+<div class="line"><span class="lineno">  188</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> my = this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.my;</div>
+<div class="line"><span class="lineno">  189</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> mp = this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mp;</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>    <span class="comment">// Cap coordinates to camera space</span></div>
+<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">if</span>(_cameraFrustum-&gt;x0 - auxGp &gt; gx)</div>
+<div class="line"><span class="lineno">  193</span>    {</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            mx += (_cameraFrustum-&gt;x0 - auxGp - gx);</div>
+<div class="line"><span class="lineno">  197</span>            w -= (_cameraFrustum-&gt;x0 - auxGp - gx);</div>
+<div class="line"><span class="lineno">  198</span>            gx = _cameraFrustum-&gt;x0 - auxGp;</div>
+<div class="line"><span class="lineno">  199</span>        }</div>
+<div class="line"><span class="lineno">  200</span>    }</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> myDisplacement = 0;</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">if</span>(_cameraFrustum-&gt;y0 &gt; gy)</div>
+<div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>        myDisplacement = (_cameraFrustum-&gt;y0 - gy);</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>        my += myDisplacement;</div>
+<div class="line"><span class="lineno">  209</span>        h -= (_cameraFrustum-&gt;y0 - gy);</div>
+<div class="line"><span class="lineno">  210</span>        gy = _cameraFrustum-&gt;y0;</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">if</span>(w + gx &gt;= _cameraFrustum-&gt;x1 + auxGp)</div>
+<div class="line"><span class="lineno">  214</span>    {</div>
+<div class="line"><span class="lineno">  215</span>        w = _cameraFrustum-&gt;x1 - gx + auxGp;</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__WORLD_SIZE_DISPLACEMENT</a> &gt;= w)</div>
+<div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a>;</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  224</span><span class="comment">    if(_cameraFrustum-&gt;y0 &gt; h + gy)</span></div>
+<div class="line"><span class="lineno">  225</span><span class="comment">    {</span></div>
+<div class="line"><span class="lineno">  226</span><span class="comment">        worldPointer-&gt;head = __WORLD_OFF;</span></div>
+<div class="line"><span class="lineno">  227</span><span class="comment">#ifdef __PROFILE_GAME</span></div>
+<div class="line"><span class="lineno">  228</span><span class="comment">        worldPointer-&gt;w = 0;</span></div>
+<div class="line"><span class="lineno">  229</span><span class="comment">        worldPointer-&gt;h = 0;</span></div>
+<div class="line"><span class="lineno">  230</span><span class="comment">#endif</span></div>
+<div class="line"><span class="lineno">  231</span><span class="comment">    }</span></div>
+<div class="line"><span class="lineno">  232</span><span class="comment">*/</span></div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">if</span>(h + gy &gt;= _cameraFrustum-&gt;y1)</div>
+<div class="line"><span class="lineno">  234</span>    {</div>
+<div class="line"><span class="lineno">  235</span>        h = _cameraFrustum-&gt;y1 - gy;</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span><span class="preprocessor">#ifdef __HACK_BGMAP_SPRITE_HEIGHT</span></div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__MINIMUM_BGMAP_SPRITE_HEIGHT</a> &gt;= h &amp;&amp; 0 == gy)</div>
+<div class="line"><span class="lineno">  240</span>    {</div>
+<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">if</span> (<a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__WORLD_SIZE_DISPLACEMENT</a> &gt;= h)</div>
+<div class="line"><span class="lineno">  242</span>        {</div>
+<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a>;</div>
+<div class="line"><span class="lineno">  244</span>        }</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>        my -= <a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__MINIMUM_BGMAP_SPRITE_HEIGHT</a> - h;</div>
+<div class="line"><span class="lineno">  247</span>    }</div>
+<div class="line"><span class="lineno">  248</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__WORLD_SIZE_DISPLACEMENT</a> &gt;= h)</div>
+<div class="line"><span class="lineno">  250</span>    {</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a>;</div>
+<div class="line"><span class="lineno">  252</span>    }</div>
+<div class="line"><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">gx</a> = gx;</div>
+<div class="line"><span class="lineno">  256</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">gy</a> = gy;</div>
+<div class="line"><span class="lineno">  257</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">gp</a> = gp;</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">mx</a> = mx;</div>
+<div class="line"><span class="lineno">  260</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">my</a> = my;</div>
+<div class="line"><span class="lineno">  261</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">mp</a> = mp;</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">w</a> = w - <a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__WORLD_SIZE_DISPLACEMENT</a>;</div>
+<div class="line"><span class="lineno">  264</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">h</a> = h - <a class="code hl_define" href="/documentation/api/-bgmap-sprite-8h/">__WORLD_SIZE_DISPLACEMENT</a>;</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>    worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">head</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> | (BgmapTexture::safeCast(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))-&gt;segment;</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">if</span>(0 &lt; this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>)</div>
+<div class="line"><span class="lineno">  269</span>    {</div>
+<div class="line"><span class="lineno">  270</span>        worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">param</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a>)((((this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> + (myDisplacement &lt;&lt; 4))) - 0x20000) &gt;&gt; 1) &amp; 0xFFF0;</div>
+<div class="line"><span class="lineno">  271</span>    }</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>;</div>
+<div class="line"><span class="lineno">  274</span>}</div>
+<div class="ttc" id="a_bgmap_sprite_8h_html_a2ae5f2e62d7f7b4110b8579c38c0125a"><div class="ttname"><a href="/documentation/api/-bgmap-sprite-8h/">__MINIMUM_BGMAP_SPRITE_HEIGHT</a></div><div class="ttdeci">#define __MINIMUM_BGMAP_SPRITE_HEIGHT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:34</a></div></div>
+<div class="ttc" id="a_bgmap_sprite_8h_html_a6e6e2569794873a17e5a67d7048da1d0"><div class="ttname"><a href="/documentation/api/-bgmap-sprite-8h/">__WORLD_SIZE_DISPLACEMENT</a></div><div class="ttdeci">#define __WORLD_SIZE_DISPLACEMENT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h:29</a></div></div>
+<div class="ttc" id="a_constants_8h_html_aa53f7e054a332adcc8a9dfe08c0afc6f"><div class="ttname"><a href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a></div><div class="ttdeci">#define __NO_RENDER_INDEX</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:83</a></div></div>
+<div class="ttc" id="a_math_8h_html_ae06c9230cce66d88216862571f7c687d"><div class="ttname"><a href="/documentation/api/-math-8h/">__ABS</a></div><div class="ttdeci">#define __ABS(number)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:34</a></div></div>
+<div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a1714d848093e67716ac55dc8bf5754c6"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a></div><div class="ttdeci">WorldAttributes _worldAttributesCache[__TOTAL_LAYERS]</div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_abc07e0a37c68c8b2b1921b4c77579d54"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a></div><div class="ttdeci">struct WorldAttributes WorldAttributes</div></div>
+<div class="ttc" id="aclass_sprite_html_a23671d52da0111ab08cab587e53e39c3"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::halfWidth</a></div><div class="ttdeci">int16 halfWidth</div><div class="ttdoc">Cache of the texture&#39;s half width.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:84</a></div></div>
+<div class="ttc" id="aclass_sprite_html_a99ef22c192ee7c6a6cbff3c12e457805"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::halfHeight</a></div><div class="ttdeci">int16 halfHeight</div><div class="ttdoc">Cache of the texture&#39;s half height.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:87</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ab0b07fc114d06a143184727cfa6de561"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::head</a></div><div class="ttdeci">uint16 head</div><div class="ttdoc">Head flags for DRAM entries.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:81</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ac56d109f8f1fca3a6b8669be46fc1d1b"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::index</a></div><div class="ttdeci">int16 index</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:75</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ad973d742f323cbd172e809cc75e83189"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::position</a></div><div class="ttdeci">PixelVector position</div><div class="ttdoc">Position cache.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:65</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a2c9c2b0ea21dc3323524e32f21b1debc"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::param</a></div><div class="ttdeci">uint16 param</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:158</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a660bf7636cff565e0d5d1f3660079be4"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gy</a></div><div class="ttdeci">int16 gy</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:152</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a66d953ec55e766f754ed1893b8ecd92d"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::h</a></div><div class="ttdeci">uint16 h</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:157</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a6b65501a6ae7e2383552dbb6e7e20123"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::mp</a></div><div class="ttdeci">int16 mp</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:154</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a9a8615b4de66ad6238fbb3e20aee0a08"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::mx</a></div><div class="ttdeci">uint16 mx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:153</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_aab6263a482dd9b7d942de94c70fa3c3d"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gp</a></div><div class="ttdeci">int16 gp</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:151</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_aaf1f412fc7b6698551060b52a86fede2"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::my</a></div><div class="ttdeci">uint16 my</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:155</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_acb9f15818e3cd2a067a9774014dc6a49"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gx</a></div><div class="ttdeci">int16 gx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:150</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_af739afd6d875fed53d946b23dcbb32d9"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::w</a></div><div class="ttdeci">uint16 w</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:156</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_afa6a23e6d1f88f29ec84088763289a17"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::head</a></div><div class="ttdeci">uint16 head</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:149</a></div></div>
+</div>
+</div>
+</div>
+<a id="a563df721ebecc380c00c4850d2d9b716" name="a563df721ebecc380c00c4850d2d9b716"></a>
+<h2 class="memtitle">getParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> BgmapSprite::getParam </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the offset within param table space that determines the area where this sprite is allowed to write </p><dl class="section return"><dt>Returns</dt><dd>Offset within param table space </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">532</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  533</span>{</div>
+<div class="line"><span class="lineno">  534</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>;</div>
+<div class="line"><span class="lineno">  535</span>}</div>
+</div>
+</div>
+</div>
+<a id="a09176d91242a19949329b5fe84b39746" name="a09176d91242a19949329b5fe84b39746"></a>
+<h2 class="memtitle">getParamTableRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapSprite::getParamTableRow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the offset that keeps track of where to continue writing in param table </p><dl class="section return"><dt>Returns</dt><dd>Offset within param table space </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">539</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  540</span>{</div>
+<div class="line"><span class="lineno">  541</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a>;</div>
+<div class="line"><span class="lineno">  542</span>}</div>
+</div>
+</div>
+</div>
+<a id="a22cc595117cd06d06d373df4290dcca7" name="a22cc595117cd06d06d373df4290dcca7"></a>
+<h2 class="memtitle">getTotalPixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int32</a> BgmapSprite::getTotalPixels </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the sprite's total number of pixels actually displayed. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-sprite/">Sprite</a>'s total number of pixels actually displayed </dd></dl>
+
+<p>Implements <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">423</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  424</span>{</div>
+<div class="line"><span class="lineno">  425</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>)</div>
+<div class="line"><span class="lineno">  426</span>    {</div>
+<div class="line"><span class="lineno">  427</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/class-sprite/">Sprite::getEffectiveWidth</a>(<span class="keyword">this</span>) * <a class="code hl_function" href="/documentation/api/class-sprite/">Sprite::getEffectiveHeight</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  428</span>    }</div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  431</span>}</div>
+<div class="ttc" id="aclass_sprite_html_a796e93312ce1ef5bef771cb55831cc7a"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::getEffectiveHeight</a></div><div class="ttdeci">uint16 getEffectiveHeight()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:336</a></div></div>
+<div class="ttc" id="aclass_sprite_html_abc7f3d0631a6d0bdfc70caa2e55af816"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::getEffectiveWidth</a></div><div class="ttdeci">uint16 getEffectiveWidth()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:323</a></div></div>
+</div>
+</div>
+</div>
+<a id="aa802cf980b2c5c7f8c705e22a9d96bc2" name="aa802cf980b2c5c7f8c705e22a9d96bc2"></a>
+<h2 class="memtitle">hasSpecialEffects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> BgmapSprite::hasSpecialEffects </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the sprite has affine or hbias effects. </p><dl class="section return"><dt>Returns</dt><dd>True if the sprite's mode of display is (__WORLD_AFFINE or __WORLD_HBIAS) </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">132</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a> &amp;&amp; 0 != ((<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a> ) &amp; this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a>);</div>
+<div class="line"><span class="lineno">  135</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a714111f7030c4eda61ddb6025bb0ae09"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a></div><div class="ttdeci">#define __WORLD_AFFINE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:119</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_aaa037589c85902435998ada9479e200b"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a></div><div class="ttdeci">#define __WORLD_HBIAS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:120</a></div></div>
+</div>
+</div>
+</div>
+<a id="a2b787e87a74d3246426903503a9a6fd2" name="a2b787e87a74d3246426903503a9a6fd2"></a>
+<h2 class="memtitle">invalidateParamTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::invalidateParamTable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force the rewrite of the sprite's param table during the next rendering cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">546</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  547</span>{</div>
+<div class="line"><span class="lineno">  548</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a> &amp; this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a>)</div>
+<div class="line"><span class="lineno">  549</span>    {</div>
+<div class="line"><span class="lineno">  550</span>        <a class="code hl_function" href="#a62dfb12e34d2dc9e3fa05186970c8f54">BgmapSprite::applyAffineTransformations</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  551</span>    }</div>
+<div class="line"><span class="lineno">  552</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a> &amp; this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a>)</div>
+<div class="line"><span class="lineno">  553</span>    {</div>
+<div class="line"><span class="lineno">  554</span>        <a class="code hl_function" href="#a30a82f966319ce76cc4c5303d577d9b1">BgmapSprite::applyHbiasEffects</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  555</span>    }</div>
+<div class="line"><span class="lineno">  556</span>}</div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a30a82f966319ce76cc4c5303d577d9b1"><div class="ttname"><a href="#a30a82f966319ce76cc4c5303d577d9b1">BgmapSprite::applyHbiasEffects</a></div><div class="ttdeci">void applyHbiasEffects()</div><div class="ttdoc">Start rewriting the sprite&#39;s param table for hbias effects.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:578</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a62dfb12e34d2dc9e3fa05186970c8f54"><div class="ttname"><a href="#a62dfb12e34d2dc9e3fa05186970c8f54">BgmapSprite::applyAffineTransformations</a></div><div class="ttdeci">void applyAffineTransformations()</div><div class="ttdoc">Start rewriting the sprite&#39;s param table for affine transformations.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:569</a></div></div>
+</div>
+</div>
+</div>
+<a id="abcfffd7086549124f21207e3e7845dcd" name="abcfffd7086549124f21207e3e7845dcd"></a>
+<h2 class="memtitle">onTextureRewritten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> BgmapSprite::onTextureRewritten </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>eventFirer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback for when the sprite's texture is rewriten. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">eventFirer</td><td>The rewrite texture </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the listener must be kept; false to remove after the current call </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">560</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  561</span>{</div>
+<div class="line"><span class="lineno">  562</span>    <a class="code hl_function" href="#a3279842a5eef6a15179a34a01fe8824b">BgmapSprite::processEffects</a>(<span class="keyword">this</span>, <a class="code hl_function" href="/documentation/api/class-sprite-manager/">SpriteManager::getMaximumParamTableRowsToComputePerCall</a>());</div>
+<div class="line"><span class="lineno">  563</span> </div>
+<div class="line"><span class="lineno">  564</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  565</span>}</div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a3279842a5eef6a15179a34a01fe8824b"><div class="ttname"><a href="#a3279842a5eef6a15179a34a01fe8824b">BgmapSprite::processEffects</a></div><div class="ttdeci">override void processEffects(int32 maximumParamTableRowsToComputePerCall)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:139</a></div></div>
+<div class="ttc" id="aclass_sprite_manager_html_a4b2cf72c300a592da45c2f24ca13c84d"><div class="ttname"><a href="/documentation/api/class-sprite-manager/">SpriteManager::getMaximumParamTableRowsToComputePerCall</a></div><div class="ttdeci">static int32 getMaximumParamTableRowsToComputePerCall()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-manager-8c-source/">SpriteManager.c:365</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3279842a5eef6a15179a34a01fe8824b" name="a3279842a5eef6a15179a34a01fe8824b"></a>
+<h2 class="memtitle">processEffects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::processEffects </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>maximumParamTableRowsToComputePerCall</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process affine and hbias effects </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumParamTableRowsToComputePerCall</td><td>Used to defer param table computations (-1 to compute the whole table) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">139</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>{</div>
+<div class="line"><span class="lineno">  141</span>    <span class="comment">// Set the world size according to the zoom</span></div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span>(0 &lt; this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> &amp;&amp; (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a>)<a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>)</div>
+<div class="line"><span class="lineno">  143</span>    {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span>(0 != ((<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a>) &amp; this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a>) &amp;&amp; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a>)</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span>(0 &lt;= this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a>)</div>
+<div class="line"><span class="lineno">  147</span>            {</div>
+<div class="line"><span class="lineno">  148</span>                <span class="comment">// Apply affine transformation</span></div>
+<div class="line"><span class="lineno">  149</span>                this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a>(<span class="keyword">this</span>, maximumParamTableRowsToComputePerCall);</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">if</span>(0 &gt; this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a>)</div>
+<div class="line"><span class="lineno">  152</span>                {</div>
+<div class="line"><span class="lineno">  153</span>                    this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = -1;</div>
+<div class="line"><span class="lineno">  154</span>                }</div>
+<div class="line"><span class="lineno">  155</span>            }</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="line"><span class="lineno">  158</span>}</div>
+<div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
+</div>
+</div>
+</div>
+<a id="a9fb6fe7f99905bf4b1fd893c84065941" name="a9fb6fe7f99905bf4b1fd893c84065941"></a>
+<h2 class="memtitle">registerWithManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::registerWithManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register this sprite with the appropriate sprites manager. </p>
+
+<p>Implements <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">118</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>{</div>
+<div class="line"><span class="lineno">  120</span>    <a class="code hl_function" href="/documentation/api/class-sprite-manager/">SpriteManager::registerSprite</a>(Sprite::safeCast(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="aclass_sprite_manager_html_a4daa4f3aa0727f304b2ab5e4ff16cd61"><div class="ttname"><a href="/documentation/api/class-sprite-manager/">SpriteManager::registerSprite</a></div><div class="ttdeci">static bool registerSprite(Sprite sprite)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-manager-8c-source/">SpriteManager.c:238</a></div></div>
+</div>
+</div>
+</div>
+<a id="a7a19673b49dcf58bc017d0d8fa358851" name="a7a19673b49dcf58bc017d0d8fa358851"></a>
+<h2 class="memtitle">setMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::setMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>display</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Configure the displays on which to show the sprite and how it will be displayed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">display</td><td>Displays on which to show the sprite (__WORLD_ON, __WORLD_LON or __WORLD_RON) </td></tr>
+    <tr><td class="paramname">mode</td><td>The mode to use to display the sprite (__WORLD_BGMAP | __WORLD_AFFINE | __WORLD_HBIAS) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">473</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  474</span>{</div>
+<div class="line"><span class="lineno">  475</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> &amp;= ~(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a>);</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>    <span class="keywordflow">if</span>(((<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a>) &amp; this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a>) &amp;&amp; 0 != this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>)</div>
+<div class="line"><span class="lineno">  478</span>    {</div>
+<div class="line"><span class="lineno">  479</span>        <span class="comment">// Free param table space</span></div>
+<div class="line"><span class="lineno">  480</span>        ParamTableManager::free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  481</span> </div>
+<div class="line"><span class="lineno">  482</span>        this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> = 0;</div>
+<div class="line"><span class="lineno">  483</span>    }</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> &amp;&amp; !<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  486</span>    {</div>
+<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">switch</span>(<a class="code hl_variable" href="/documentation/api/-printing-8h/">mode</a>)</div>
+<div class="line"><span class="lineno">  488</span>        {</div>
+<div class="line"><span class="lineno">  489</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a>:</div>
+<div class="line"><span class="lineno">  490</span> </div>
+<div class="line"><span class="lineno">  491</span>                <span class="comment">// Set map head</span></div>
+<div class="line"><span class="lineno">  492</span>                this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> = display | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a>;</div>
+<div class="line"><span class="lineno">  493</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  494</span> </div>
+<div class="line"><span class="lineno">  495</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a>:</div>
+<div class="line"><span class="lineno">  496</span> </div>
+<div class="line"><span class="lineno">  497</span>                this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> = display | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a>;</div>
+<div class="line"><span class="lineno">  498</span>                this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> = ParamTableManager::allocate(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  499</span>                this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a> = </div>
+<div class="line"><span class="lineno">  500</span>                    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a> ? this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a> : BgmapSprite::doApplyAffineTransformations;</div>
+<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  502</span> </div>
+<div class="line"><span class="lineno">  503</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a>:</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>                <span class="comment">// Set map head</span></div>
+<div class="line"><span class="lineno">  506</span>                this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> = display | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_HBIAS</a>;</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a28dc37ee0352dd3ff921c035bded8bff">applyParamTableEffect</a>)</div>
+<div class="line"><span class="lineno">  509</span>                {</div>
+<div class="line"><span class="lineno">  510</span>                    this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> = ParamTableManager::allocate(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  511</span>                }</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  514</span>        }</div>
+<div class="line"><span class="lineno">  515</span>    }</div>
+<div class="line"><span class="lineno">  516</span> </div>
+<div class="line"><span class="lineno">  517</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> &amp;= ~__WORLD_END;</div>
+<div class="line"><span class="lineno">  518</span>}</div>
+<div class="ttc" id="a_printing_8h_html_a69645055f0fa7d64868d1e7519099e29"><div class="ttname"><a href="/documentation/api/-printing-8h/">mode</a></div><div class="ttdeci">uint8 mode</div><div class="ttdoc">Printing mode (Default or Debug)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:199</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a2c324b05d7418c89acfa97c408d2d454"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a></div><div class="ttdeci">#define __WORLD_BGMAP</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:121</a></div></div>
+</div>
+</div>
+</div>
+<a id="aebfc1b21f694c6451d67fad75121cb8d" name="aebfc1b21f694c6451d67fad75121cb8d"></a>
+<h2 class="memtitle">setMultiframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::setMultiframe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the current multiframe </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frame</td><td>Current animation frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-m-bgmap-animated-sprite/">MBgmapAnimatedSprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">278</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>{</div>
+<div class="line"><span class="lineno">  280</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> mx = <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getXOffset</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>);</div>
+<div class="line"><span class="lineno">  281</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> my = <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getYOffset</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>);</div>
+<div class="line"><span class="lineno">  282</span>    </div>
+<div class="line"><span class="lineno">  283</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> cols = <a class="code hl_function" href="/documentation/api/class-texture/">Texture::getCols</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>);</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> allocableFrames = (64 - mx) / cols;</div>
+<div class="line"><span class="lineno">  286</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> usableCollsPerRow = allocableFrames * cols;</div>
+<div class="line"><span class="lineno">  287</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> usedCollsPerRow = frame * cols;</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> col = usedCollsPerRow % usableCollsPerRow;</div>
+<div class="line"><span class="lineno">  290</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> row = <a class="code hl_function" href="/documentation/api/class-texture/">Texture::getRows</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>) * (frame / allocableFrames);</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.mx = mx + (col &lt;&lt; 3);</div>
+<div class="line"><span class="lineno">  293</span>    this-&gt;<a class="code hl_variable" href="#ab233ec12eb20fb5df4ed3afb589e78ca">bgmapTextureSource</a>.my = my + (row &lt;&lt; 3);</div>
+<div class="line"><span class="lineno">  294</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">rendered</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  295</span>}</div>
+<div class="ttc" id="aclass_texture_html_abacf43e3820b7b235125641af2540e94"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::getRows</a></div><div class="ttdeci">uint32 getRows()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:464</a></div></div>
+<div class="ttc" id="aclass_texture_html_aeac775fbaf2cb2eb46494853d656d106"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::getCols</a></div><div class="ttdeci">uint32 getCols()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:457</a></div></div>
+<div class="ttc" id="aclass_visual_component_html_a8187995dea3d4565a028dd7f4c4fc3a6"><div class="ttname"><a href="/documentation/api/class-visual-component/">VisualComponent::rendered</a></div><div class="ttdeci">bool rendered</div><div class="ttdoc">Rendering status flag.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:99</a></div></div>
+</div>
+</div>
+</div>
+<a id="aa665a3e3c8bf78f989bcb4011bbad489" name="aa665a3e3c8bf78f989bcb4011bbad489"></a>
+<h2 class="memtitle">setParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::setParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the offset within param table space that determines the area where this sprite is allowed to write. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">param</td><td>Offset within param table space </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">522</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  523</span>{</div>
+<div class="line"><span class="lineno">  524</span>    this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a> = <a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>;</div>
+<div class="line"><span class="lineno">  525</span> </div>
+<div class="line"><span class="lineno">  526</span>    <span class="comment">// Set flag to rewrite texture&#39;s param table</span></div>
+<div class="line"><span class="lineno">  527</span>    <a class="code hl_function" href="#a2b787e87a74d3246426903503a9a6fd2">BgmapSprite::invalidateParamTable</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  528</span>}</div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a2b787e87a74d3246426903503a9a6fd2"><div class="ttname"><a href="#a2b787e87a74d3246426903503a9a6fd2">BgmapSprite::invalidateParamTable</a></div><div class="ttdeci">void invalidateParamTable()</div><div class="ttdoc">Force the rewrite of the sprite&#39;s param table during the next rendering cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:546</a></div></div>
+</div>
+</div>
+</div>
+<a id="a30c7f2d9ac4da2bea4d6dab0cffc0036" name="a30c7f2d9ac4da2bea4d6dab0cffc0036"></a>
+<h2 class="memtitle">setRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::setRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-rotation/">Rotation</a> *</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the sprite's rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">rotation</td><td><a class="el" href="/documentation/api/struct-rotation/">Rotation</a> to apply to the sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">299</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>{</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a>)</div>
+<div class="line"><span class="lineno">  302</span>    {</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a> = *<a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a>;</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">if</span>(0 &lt; this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>)</div>
+<div class="line"><span class="lineno">  309</span>    {</div>
+<div class="line"><span class="lineno">  310</span>        this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = -1 == this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> ? 0 : this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a>;</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>        <span class="comment">// Scale the texture in the next render cycle</span></div>
+<div class="line"><span class="lineno">  313</span>        <a class="code hl_function" href="#a2b787e87a74d3246426903503a9a6fd2">BgmapSprite::invalidateParamTable</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  314</span>    }</div>
+<div class="line"><span class="lineno">  315</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  316</span>    {</div>
+<div class="line"><span class="lineno">  317</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">NormalizedDirection</a> normalizedDirection =</div>
+<div class="line"><span class="lineno">  318</span>        {</div>
+<div class="line"><span class="lineno">  319</span>            <a class="code hl_define" href="/documentation/api/-math-8h/">__QUARTER_ROTATION_DEGREES</a> &lt; <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(<a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a>-&gt;y) || <a class="code hl_define" href="/documentation/api/-math-8h/">__QUARTER_ROTATION_DEGREES</a> &lt; <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(<a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a>-&gt;z)  ? <a class="code hl_define" href="/documentation/api/-constants-8h/">__LEFT</a> : <a class="code hl_define" href="/documentation/api/-constants-8h/">__RIGHT</a>,</div>
+<div class="line"><span class="lineno">  320</span>            <a class="code hl_define" href="/documentation/api/-math-8h/">__QUARTER_ROTATION_DEGREES</a> &lt; <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(<a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a>-&gt;x) || <a class="code hl_define" href="/documentation/api/-math-8h/">__QUARTER_ROTATION_DEGREES</a> &lt; <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(<a class="code hl_variable" href="/documentation/api/class-sprite/">rotation</a>-&gt;z) ? <a class="code hl_define" href="/documentation/api/-constants-8h/">__UP</a> : <a class="code hl_define" href="/documentation/api/-constants-8h/">__DOWN</a>,</div>
+<div class="line"><span class="lineno">  321</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">__FAR</a>,</div>
+<div class="line"><span class="lineno">  322</span>        };</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__LEFT</a> == normalizedDirection.<a class="code hl_variable" href="/documentation/api/struct-normalized-direction/">x</a>)</div>
+<div class="line"><span class="lineno">  325</span>        {</div>
+<div class="line"><span class="lineno">  326</span>            <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::setHorizontalFlip</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__RIGHT</a> == normalizedDirection.<a class="code hl_variable" href="/documentation/api/struct-normalized-direction/">x</a>)</div>
+<div class="line"><span class="lineno">  329</span>        {</div>
+<div class="line"><span class="lineno">  330</span>            <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::setHorizontalFlip</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  331</span>        }</div>
+<div class="line"><span class="lineno">  332</span> </div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__UP</a> == normalizedDirection.<a class="code hl_variable" href="/documentation/api/struct-normalized-direction/">y</a>)</div>
+<div class="line"><span class="lineno">  334</span>        {</div>
+<div class="line"><span class="lineno">  335</span>            <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::setVerticalFlip</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  336</span>        }</div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__DOWN</a> == normalizedDirection.<a class="code hl_variable" href="/documentation/api/struct-normalized-direction/">y</a>)</div>
+<div class="line"><span class="lineno">  338</span>        {</div>
+<div class="line"><span class="lineno">  339</span>            <a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::setVerticalFlip</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  340</span>        }       </div>
+<div class="line"><span class="lineno">  341</span>    }</div>
+<div class="line"><span class="lineno">  342</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a28290a8e491565e2b415ceefe5178f43"><div class="ttname"><a href="/documentation/api/-constants-8h/">__DOWN</a></div><div class="ttdeci">#define __DOWN</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:148</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a41d27532849c6ddd0e6b9d8bfd630017"><div class="ttname"><a href="/documentation/api/-constants-8h/">__LEFT</a></div><div class="ttdeci">#define __LEFT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:145</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a9717164b8f653d262ee7b4bec1422f01"><div class="ttname"><a href="/documentation/api/-constants-8h/">__RIGHT</a></div><div class="ttdeci">#define __RIGHT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:146</a></div></div>
+<div class="ttc" id="a_constants_8h_html_aabf8d6488b2a4d61cb11b56b948e5808"><div class="ttname"><a href="/documentation/api/-constants-8h/">__FAR</a></div><div class="ttdeci">#define __FAR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:150</a></div></div>
+<div class="ttc" id="a_constants_8h_html_aed9f8798bfe5cc31fac96f00cbd3c95b"><div class="ttname"><a href="/documentation/api/-constants-8h/">__UP</a></div><div class="ttdeci">#define __UP</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:147</a></div></div>
+<div class="ttc" id="a_math_8h_html_a15192782eca2f5753b541155da1bcfd7"><div class="ttname"><a href="/documentation/api/-math-8h/">__QUARTER_ROTATION_DEGREES</a></div><div class="ttdeci">#define __QUARTER_ROTATION_DEGREES</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:178</a></div></div>
+<div class="ttc" id="a_types_8h_html_a31b6b54742e1f839eed67b5485ebf746"><div class="ttname"><a href="/documentation/api/-types-8h/">NormalizedDirection</a></div><div class="ttdeci">struct NormalizedDirection NormalizedDirection</div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a7c9cad9737766e6abc74d07c5a461a0f"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture::setHorizontalFlip</a></div><div class="ttdeci">void setHorizontalFlip(bool value)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:153</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_ac52fbf20d6177a656258bde63d508039"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture::setVerticalFlip</a></div><div class="ttdeci">void setVerticalFlip(bool value)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:172</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aabbc0bec2e23682d148cc8ad195c6164"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::rotation</a></div><div class="ttdeci">Rotation rotation</div><div class="ttdoc">Rotation cache.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:71</a></div></div>
+<div class="ttc" id="astruct_normalized_direction_html_a38328fcb6eec2f5c961c9a6f6f20475c"><div class="ttname"><a href="/documentation/api/struct-normalized-direction/">NormalizedDirection::x</a></div><div class="ttdeci">int8 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:192</a></div></div>
+<div class="ttc" id="astruct_normalized_direction_html_abdc742c640ca42ea5342c398191d3a8d"><div class="ttname"><a href="/documentation/api/struct-normalized-direction/">NormalizedDirection::y</a></div><div class="ttdeci">int8 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:193</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3e34643b5f5b53391d6d97ac940e5aee" name="a3e34643b5f5b53391d6d97ac940e5aee"></a>
+<h2 class="memtitle">setScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::setScale </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-pixel-scale/">PixelScale</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the sprite's scale. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">scale</td><td><a class="el" href="/documentation/api/struct-scale/">Scale</a> to apply to the sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">346</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>{</div>
+<div class="line"><span class="lineno">  348</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/class-sprite/">scale</a>)</div>
+<div class="line"><span class="lineno">  349</span>    {</div>
+<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  351</span>    }</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">scale</a> = *<a class="code hl_variable" href="/documentation/api/class-sprite/">scale</a>;</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>    <span class="keywordflow">if</span>(0 != (<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_AFFINE</a> &amp; this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a>))</div>
+<div class="line"><span class="lineno">  356</span>    {</div>
+<div class="line"><span class="lineno">  357</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">PixelScale</a> scaleHelper = *<a class="code hl_variable" href="/documentation/api/class-sprite/">scale</a>;</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(0 &lt; scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">x</a>, <span class="stringliteral">&quot;Sprite::scale: 0 scale x&quot;</span>);</div>
+<div class="line"><span class="lineno">  360</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(0 &lt; scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">y</a>, <span class="stringliteral">&quot;Sprite::scale: 0 scale y&quot;</span>);</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>        <span class="keyword">extern</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">Rotation</a> _previousCameraInvertedRotation;</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> vector = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">transformation</a>-&gt;position), _previousCameraInvertedRotation);</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a> ratio = __FIXED_TO_FIX7_9(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getScale</a>(vector.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">  367</span> </div>
+<div class="line"><span class="lineno">  368</span>        ratio = 0 &gt; ratio? <a class="code hl_define" href="/documentation/api/-math-8h/">__1I_FIX7_9</a> : ratio;</div>
+<div class="line"><span class="lineno">  369</span>        ratio = <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9</a>(<a class="code hl_define" href="/documentation/api/-config-8h/">__MAXIMUM_SCALE</a>) &lt; ratio? <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9</a>(<a class="code hl_define" href="/documentation/api/-config-8h/">__MAXIMUM_SCALE</a>) : ratio;</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>        scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">x</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_MULT</a>(scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">x</a>, ratio);</div>
+<div class="line"><span class="lineno">  372</span>        scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">y</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_MULT</a>(scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">y</a>, ratio);</div>
+<div class="line"><span class="lineno">  373</span> </div>
+<div class="line"><span class="lineno">  374</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">rendered</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><span class="lineno">  377</span>        {</div>
+<div class="line"><span class="lineno">  378</span>            <span class="comment">// Add 1 pixel to the width and 7 to the height to avoid cutting off the graphics</span></div>
+<div class="line"><span class="lineno">  379</span>            this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfWidth</a> = </div>
+<div class="line"><span class="lineno">  380</span>                __FIXED_TO_I</div>
+<div class="line"><span class="lineno">  381</span>                (</div>
+<div class="line"><span class="lineno">  382</span>                    <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a></div>
+<div class="line"><span class="lineno">  383</span>                    (</div>
+<div class="line"><span class="lineno">  384</span>                        __FIXED_MULT</div>
+<div class="line"><span class="lineno">  385</span>                        (</div>
+<div class="line"><span class="lineno">  386</span>                            __FIX7_9_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__COS</a>(__FIXED_TO_I(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">transformation</a>-&gt;rotation.y))),</div>
+<div class="line"><span class="lineno">  387</span>                            __FIXED_MULT</div>
+<div class="line"><span class="lineno">  388</span>                            (</div>
+<div class="line"><span class="lineno">  389</span>                            __I_TO_FIXED((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>-&gt;textureSpec-&gt;cols &lt;&lt; 2),</div>
+<div class="line"><span class="lineno">  390</span>                            __FIX7_9_TO_FIXED(scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">x</a>)</div>
+<div class="line"><span class="lineno">  391</span>                            )</div>
+<div class="line"><span class="lineno">  392</span>                        )</div>
+<div class="line"><span class="lineno">  393</span>                    )</div>
+<div class="line"><span class="lineno">  394</span>                ) + 1;</div>
+<div class="line"><span class="lineno">  395</span> </div>
+<div class="line"><span class="lineno">  396</span>            this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfHeight</a> = </div>
+<div class="line"><span class="lineno">  397</span>                __FIXED_TO_I</div>
+<div class="line"><span class="lineno">  398</span>                (</div>
+<div class="line"><span class="lineno">  399</span>                    <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a></div>
+<div class="line"><span class="lineno">  400</span>                    (</div>
+<div class="line"><span class="lineno">  401</span>                        __FIXED_MULT</div>
+<div class="line"><span class="lineno">  402</span>                        (</div>
+<div class="line"><span class="lineno">  403</span>                            __FIX7_9_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__COS</a>(__FIXED_TO_I(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">transformation</a>-&gt;rotation.x))),</div>
+<div class="line"><span class="lineno">  404</span>                            __FIXED_MULT</div>
+<div class="line"><span class="lineno">  405</span>                            (</div>
+<div class="line"><span class="lineno">  406</span>                            __I_TO_FIXED((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>-&gt;textureSpec-&gt;rows &lt;&lt; 2),</div>
+<div class="line"><span class="lineno">  407</span>                            __FIX7_9_TO_FIXED(scaleHelper.<a class="code hl_variable" href="/documentation/api/struct-pixel-scale/">y</a>)</div>
+<div class="line"><span class="lineno">  408</span>                            )</div>
+<div class="line"><span class="lineno">  409</span>                        )</div>
+<div class="line"><span class="lineno">  410</span>                    )</div>
+<div class="line"><span class="lineno">  411</span>                ) + 1;</div>
+<div class="line"><span class="lineno">  412</span>        }</div>
+<div class="line"><span class="lineno">  413</span> </div>
+<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">if</span>(0 &lt; this-&gt;<a class="code hl_variable" href="#a40d500c6236679abdf351e5c6b506275">param</a>)</div>
+<div class="line"><span class="lineno">  415</span>        {</div>
+<div class="line"><span class="lineno">  416</span>            this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> = -1 == this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a> ? 0 : this-&gt;<a class="code hl_variable" href="#a0105216691cb468b59490d4abb66878b">paramTableRow</a>;</div>
+<div class="line"><span class="lineno">  417</span>        }</div>
+<div class="line"><span class="lineno">  418</span>    }</div>
+<div class="line"><span class="lineno">  419</span>}</div>
+<div class="ttc" id="a_config_8h_html_a79368727b46119eeaa3d28abe098337f"><div class="ttname"><a href="/documentation/api/-config-8h/">__MAXIMUM_SCALE</a></div><div class="ttdeci">#define __MAXIMUM_SCALE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:271</a></div></div>
+<div class="ttc" id="a_math_8h_html_a07ecb6966c54d1d4c8e158f148bf54af"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX7_9_MULT</a></div><div class="ttdeci">#define __FIX7_9_MULT(a, b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:149</a></div></div>
+<div class="ttc" id="a_math_8h_html_a34b8e4452c7e779acbae2d6e08e6ab2f"><div class="ttname"><a href="/documentation/api/-math-8h/">__I_TO_FIX7_9</a></div><div class="ttdeci">#define __I_TO_FIX7_9(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:87</a></div></div>
+<div class="ttc" id="a_math_8h_html_a63c7af9c5b7fab26a746835ecc2a56d8"><div class="ttname"><a href="/documentation/api/-math-8h/">__COS</a></div><div class="ttdeci">#define __COS(x)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:169</a></div></div>
+<div class="ttc" id="a_math_8h_html_aaecce9150856766446dd597a4db7b419"><div class="ttname"><a href="/documentation/api/-math-8h/">__1I_FIX7_9</a></div><div class="ttdeci">#define __1I_FIX7_9</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:47</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1757b728f9a2d5cbd98e211d57fb545f"><div class="ttname"><a href="/documentation/api/-types-8h/">PixelScale</a></div><div class="ttdeci">struct PixelScale PixelScale</div></div>
+<div class="ttc" id="a_types_8h_html_a1a50da385ff64683d90ba3832f046a04"><div class="ttname"><a href="/documentation/api/-types-8h/">Rotation</a></div><div class="ttdeci">struct Rotation Rotation</div></div>
+<div class="ttc" id="a_types_8h_html_ab04f901853123890736948a2ff6bef01"><div class="ttname"><a href="/documentation/api/-types-8h/">Vector3D</a></div><div class="ttdeci">struct Vector3D Vector3D</div></div>
+<div class="ttc" id="a_types_8h_html_adbf2a4e3e76406df6176d7822cf25357"><div class="ttname"><a href="/documentation/api/-types-8h/">fix7_9</a></div><div class="ttdeci">#define fix7_9</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:37</a></div></div>
+<div class="ttc" id="aclass_component_html_a079d309fbac2b3b2a6be4f7096da3955"><div class="ttname"><a href="/documentation/api/class-component/">Component::transformation</a></div><div class="ttdeci">const Transformation * transformation</div><div class="ttdoc">Pointer to the transformation that the component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:87</a></div></div>
+<div class="ttc" id="aclass_sprite_html_a473b764adb02066959947206e8ddd54f"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::scale</a></div><div class="ttdeci">PixelScale scale</div><div class="ttdoc">Scale cache.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:78</a></div></div>
+<div class="ttc" id="astruct_pixel_scale_html_a25163751761fa706ef792c2bd032a913"><div class="ttname"><a href="/documentation/api/struct-pixel-scale/">PixelScale::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:261</a></div></div>
+<div class="ttc" id="astruct_pixel_scale_html_a6de5836260d84ee2c4ac7ee09e4d48b9"><div class="ttname"><a href="/documentation/api/struct-pixel-scale/">PixelScale::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:260</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a04c1d12f9346b45225abba0cc3e17ac6"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::getScale</a></div><div class="ttdeci">static fixed_t getScale(fixed_t z, bool applyScalingMultiplier)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:735</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a860a28658ddc9659f7e52d0aad75b4c0"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:102</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ad931fcff82a2f302f1520915c38c4ac3"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a></div><div class="ttdeci">static Vector3D rotate(Vector3D vector, Rotation rotation)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:565</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_aec9100efb3a3849e9ec606b0f3cf045b"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a></div><div class="ttdeci">static Vector3D getRelativeToCamera(Vector3D vector)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:441</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3be1af71dd45c81b97544c64f1522022" name="a3be1af71dd45c81b97544c64f1522022"></a>
+<h2 class="memtitle">unregisterWithManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapSprite::unregisterWithManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unegister this sprite with the appropriate sprites manager. </p>
+
+<p>Implements <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">125</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{</div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_function" href="/documentation/api/class-sprite-manager/">SpriteManager::unregisterSprite</a>(Sprite::safeCast(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">  128</span>}</div>
+<div class="ttc" id="aclass_sprite_manager_html_aa826578906b1742ac54ff3762bb8b261"><div class="ttname"><a href="/documentation/api/class-sprite-manager/">SpriteManager::unregisterSprite</a></div><div class="ttdeci">static void unregisterSprite(Sprite sprite)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-manager-8c-source/">SpriteManager.c:290</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a28dc37ee0352dd3ff921c035bded8bff" name="a28dc37ee0352dd3ff921c035bded8bff"></a>
+<h2 class="memtitle">applyParamTableEffect</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-bgmap-sprite-8h/">ParamTableEffectMethod</a> BgmapSprite::applyParamTableEffect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to function that implements the param table based effects. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">84</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<a id="ab233ec12eb20fb5df4ed3afb589e78ca" name="ab233ec12eb20fb5df4ed3afb589e78ca"></a>
+<h2 class="memtitle">bgmapTextureSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-bgmap-texture-source/">BgmapTextureSource</a> BgmapSprite::bgmapTextureSource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-texture/">Texture</a>'s configuration in BGMAP space. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">87</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<a id="a40d500c6236679abdf351e5c6b506275" name="a40d500c6236679abdf351e5c6b506275"></a>
+<h2 class="memtitle">param</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> BgmapSprite::param</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Offset within param table space that determines the area where this sprite is allowed to write </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">81</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<a id="a0105216691cb468b59490d4abb66878b" name="a0105216691cb468b59490d4abb66878b"></a>
+<h2 class="memtitle">paramTableRow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapSprite::paramTableRow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Offset that keeps track of where to continue writing in param table. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">77</a> of file <a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Graphics/2d/Sprites/Bgmap/<a class="el" href="/documentation/api/-bgmap-sprite-8h-source/">BgmapSprite.h</a></li>
+<li>VUEngine-Core/source/Component/Graphics/2d/Sprites/Bgmap/<a class="el" href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c</a></li>
+</ul>
+</div>
+
+
+</div>

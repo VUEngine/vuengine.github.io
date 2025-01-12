@@ -1,0 +1,952 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "CharSet Class Reference"
+permalink: documentation/api/class-char-set/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">CharSet Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for CharSet:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_char_set.png" usemap="#CharSet_map" alt />
+  <map id="CharSet_map" name="CharSet_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="0,0,94,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab2c401c0faff47b8901daebd9b9adad7" id="r_ab2c401c0faff47b8901daebd9b9adad7"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2c401c0faff47b8901daebd9b9adad7">CharSetROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4ee3179d9d799d681eafd459ec35230c" id="r_a4ee3179d9d799d681eafd459ec35230c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee3179d9d799d681eafd459ec35230c">constructor</a> (const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *<a class="el" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>, <a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>)</td></tr>
+
+<tr class="memitem:a69e7e37c55d781666b78ae651f80e6c9" id="r_a69e7e37c55d781666b78ae651f80e6c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69e7e37c55d781666b78ae651f80e6c9">increaseUsageCount</a> ()</td></tr>
+<tr class="memdesc:a69e7e37c55d781666b78ae651f80e6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the usage count.  <br /></td></tr>
+
+<tr class="memitem:a3d0c15c4e31c8034c4b727aecce0ec36" id="r_a3d0c15c4e31c8034c4b727aecce0ec36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d0c15c4e31c8034c4b727aecce0ec36">decreaseUsageCount</a> ()</td></tr>
+<tr class="memdesc:a3d0c15c4e31c8034c4b727aecce0ec36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the usage count.  <br /></td></tr>
+
+<tr class="memitem:a5a9130005dc160cee47c1f8c9e3303f9" id="r_a5a9130005dc160cee47c1f8c9e3303f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a9130005dc160cee47c1f8c9e3303f9">getUsageCount</a> ()</td></tr>
+
+<tr class="memitem:a9afc6326ffa0aba25674604d43cbecce" id="r_a9afc6326ffa0aba25674604d43cbecce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9afc6326ffa0aba25674604d43cbecce">isShared</a> ()</td></tr>
+
+<tr class="memitem:aea895c7b332238909c4cbafde2340105" id="r_aea895c7b332238909c4cbafde2340105"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea895c7b332238909c4cbafde2340105">isOptimized</a> ()</td></tr>
+
+<tr class="memitem:a5fb8e6a2f4db1f30b3770e9ce65cb050" id="r_a5fb8e6a2f4db1f30b3770e9ce65cb050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fb8e6a2f4db1f30b3770e9ce65cb050">setOffset</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>)</td></tr>
+
+<tr class="memitem:a0549ea94e712ba5d9d07c5af35c398eb" id="r_a0549ea94e712ba5d9d07c5af35c398eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0549ea94e712ba5d9d07c5af35c398eb">getOffset</a> ()</td></tr>
+
+<tr class="memitem:a7f869f9d7095bb1057d849aef56ab151" id="r_a7f869f9d7095bb1057d849aef56ab151"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f869f9d7095bb1057d849aef56ab151">getSpec</a> ()</td></tr>
+
+<tr class="memitem:acdf03ed372ffef069075946fc19bc931" id="r_acdf03ed372ffef069075946fc19bc931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdf03ed372ffef069075946fc19bc931">getNumberOfChars</a> ()</td></tr>
+
+<tr class="memitem:a19355c5c96426c80ba0a43e454205486" id="r_a19355c5c96426c80ba0a43e454205486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19355c5c96426c80ba0a43e454205486">addChar</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> charToAddTo, const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:ad149a5942b648983ecad27dd64d47036" id="r_ad149a5942b648983ecad27dd64d47036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad149a5942b648983ecad27dd64d47036">putChar</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> charToReplace, const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:a7622f1030d320957da6d07f1481e8e11" id="r_a7622f1030d320957da6d07f1481e8e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7622f1030d320957da6d07f1481e8e11">putPixel</a> (const <a class="el" href="/documentation/api/-types-8h/">uint32</a> charToReplace, const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *charSetPixel, <a class="el" href="/documentation/api/-types-8h/">BYTE</a> newPixelColor)</td></tr>
+
+<tr class="memitem:a379c3c056a0ebedef45bba68730bdab0" id="r_a379c3c056a0ebedef45bba68730bdab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a379c3c056a0ebedef45bba68730bdab0">setFrame</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> frame)</td></tr>
+
+<tr class="memitem:ac035a4c1e52a4495ef7d05404832a8af" id="r_ac035a4c1e52a4495ef7d05404832a8af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac035a4c1e52a4495ef7d05404832a8af">write</a> ()</td></tr>
+<tr class="memdesc:ac035a4c1e52a4495ef7d05404832a8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the tile graphical data to VRAM.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad7ef17b525c1318fe4f1dadecb306775" id="r_ad7ef17b525c1318fe4f1dadecb306775"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-char-set/">CharSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ef17b525c1318fe4f1dadecb306775">get</a> (const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *<a class="el" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>)</td></tr>
+
+<tr class="memitem:a1e405442cf275f8d9de1c3af0edc78a0" id="r_a1e405442cf275f8d9de1c3af0edc78a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e405442cf275f8d9de1c3af0edc78a0">release</a> (<a class="el" href="/documentation/api/class-char-set/">CharSet</a> charSet)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ad451d042daed7d193b7cd6e9fd21917c" id="r_ad451d042daed7d193b7cd6e9fd21917c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a></td></tr>
+<tr class="memdesc:ad451d042daed7d193b7cd6e9fd21917c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spec used in the construction of the char set.  <br /></td></tr>
+
+<tr class="memitem:a9a88d4f63545f438ac6e35ea74da8563" id="r_a9a88d4f63545f438ac6e35ea74da8563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a></td></tr>
+
+<tr class="memitem:a9d834a09cb3b9917debe3c7fb70c6fb2" id="r_a9d834a09cb3b9917debe3c7fb70c6fb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a></td></tr>
+<tr class="memdesc:a9d834a09cb3b9917debe3c7fb70c6fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset in CHAR space where the block allocated for this char set starts.  <br /></td></tr>
+
+<tr class="memitem:aaef83d0a67eb7136d2d93c4058ad0897" id="r_aaef83d0a67eb7136d2d93c4058ad0897"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a></td></tr>
+<tr class="memdesc:aaef83d0a67eb7136d2d93c4058ad0897"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true the graphical data is written to VRAM; false otherwise.  <br /></td></tr>
+
+<tr class="memitem:a3cef982c787d67d5583f70b504df7de2" id="r_a3cef982c787d67d5583f70b504df7de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a></td></tr>
+<tr class="memdesc:a3cef982c787d67d5583f70b504df7de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of references to this char set instance.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a2a08be5bc263fa301ef555d27eb62fb3 inherit pub_types_class_listener_object" id="r_a2a08be5bc263fa301ef555d27eb62fb3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="/documentation/api/-types-8h/">bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">EventListener</a>) (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>)</td></tr>
+
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:aa44d2f3fc00a88658f64cac1c02b47f7 inherit pub_methods_class_listener_object" id="r_aa44d2f3fc00a88658f64cac1c02b47f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ace4fdcff88c182d1a52be1f479f77ca5 inherit pub_methods_class_listener_object" id="r_ace4fdcff88c182d1a52be1f479f77ca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a60fd7db5c9893337dd5dceaf83e14f90 inherit pub_methods_class_listener_object" id="r_a60fd7db5c9893337dd5dceaf83e14f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aee33a794d8e3f8d701053b225c4373d3 inherit pub_methods_class_listener_object" id="r_aee33a794d8e3f8d701053b225c4373d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListenerScopes</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="/documentation/api/-types-8h/">uint32</a> message, <a class="el" href="/documentation/api/-types-8h/">uint32</a> delay, <a class="el" href="/documentation/api/-types-8h/">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> message, <a class="el" href="/documentation/api/-types-8h/">uint32</a> delay, <a class="el" href="/documentation/api/-types-8h/">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> message)</td></tr>
+
+<tr class="memitem:ac00bf51bd5d127ab6c703fe37008ea68 inherit pub_methods_class_listener_object" id="r_ac00bf51bd5d127ab6c703fe37008ea68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-char-set/">CharSet</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages the color data of tile array and writes it to VRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">79</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ab2c401c0faff47b8901daebd9b9adad7" name="ab2c401c0faff47b8901daebd9b9adad7"></a>
+<h2 class="memtitle">CharSetROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> <a class="el" href="#ab2c401c0faff47b8901daebd9b9adad7">CharSetROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-char-set/">CharSet</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">68</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a19355c5c96426c80ba0a43e454205486" name="a19355c5c96426c80ba0a43e454205486"></a>
+<h2 class="memtitle">addChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::addChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>charToAddTo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *</td>          <td class="paramname"><span class="paramname"><em>newChar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add the color provided color data to a CHAR. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charToAddTo</td><td>Index of the CHAR to add to </td></tr>
+    <tr><td class="paramname">newChar</td><td>Color data array for the CHAR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">160</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>{</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != newChar &amp;&amp; charToAddTo &lt; this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars)</div>
+<div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_function" href="/documentation/api/class-mem/">Mem::combineWORDs</a></div>
+<div class="line"><span class="lineno">  165</span>        (</div>
+<div class="line"><span class="lineno">  166</span>            (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a> + (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a> + charToAddTo) &lt;&lt; 4)),</div>
+<div class="line"><span class="lineno">  167</span>            (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)&amp;this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;tiles[<a class="code hl_define" href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a>(charToAddTo) + 1] + this-&gt;<a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a>,</div>
+<div class="line"><span class="lineno">  168</span>            (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)newChar,</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_define" href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a>(1)</div>
+<div class="line"><span class="lineno">  170</span>        );</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="line"><span class="lineno">  172</span>}</div>
+<div class="ttc" id="a_char_set_8h_html_a8d2a862d5e64a42c9f9528e88f7f190c"><div class="ttname"><a href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a></div><div class="ttdeci">#define __UINT32S_PER_CHARS(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:36</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a1ad70af8407e01a18bf78f24c8923645"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a></div><div class="ttdeci">#define __CHAR_SPACE_BASE_ADDRESS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:103</a></div></div>
+<div class="ttc" id="aclass_char_set_html_a9a88d4f63545f438ac6e35ea74da8563"><div class="ttname"><a href="#a9a88d4f63545f438ac6e35ea74da8563">CharSet::tilesDisplacement</a></div><div class="ttdeci">uint32 tilesDisplacement</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:87</a></div></div>
+<div class="ttc" id="aclass_char_set_html_a9d834a09cb3b9917debe3c7fb70c6fb2"><div class="ttname"><a href="#a9d834a09cb3b9917debe3c7fb70c6fb2">CharSet::offset</a></div><div class="ttdeci">uint16 offset</div><div class="ttdoc">Offset in CHAR space where the block allocated for this char set starts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:90</a></div></div>
+<div class="ttc" id="aclass_char_set_html_ad451d042daed7d193b7cd6e9fd21917c"><div class="ttname"><a href="#ad451d042daed7d193b7cd6e9fd21917c">CharSet::charSetSpec</a></div><div class="ttdeci">const CharSetSpec * charSetSpec</div><div class="ttdoc">Spec used in the construction of the char set.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:84</a></div></div>
+<div class="ttc" id="aclass_mem_html_a94c3edcd533afb7122d4faf953896352"><div class="ttname"><a href="/documentation/api/class-mem/">Mem::combineWORDs</a></div><div class="ttdeci">static void combineWORDs(WORD *destination, const WORD *source1, const WORD *source2, uint32 numberOfWORDS)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-mem-8h-source/">Mem.h:161</a></div></div>
+</div>
+</div>
+</div>
+<a id="a4ee3179d9d799d681eafd459ec35230c" name="a4ee3179d9d799d681eafd459ec35230c"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::constructor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSetSpec</td><td>Spec to use in the construction of the char set </td></tr>
+    <tr><td class="paramname">offset</td><td>Offset in CHAR space where the block allocated for this char set starts </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">50</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   53</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment">// Save spec</span></div>
+<div class="line"><span class="lineno">   56</span>    this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a> = <a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>;</div>
+<div class="line"><span class="lineno">   57</span>    this-&gt;<a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a> = 0;</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment">// Set the offset</span></div>
+<div class="line"><span class="lineno">   60</span>    this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a> = <a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>;</div>
+<div class="line"><span class="lineno">   61</span>    this-&gt;<a class="code hl_variable" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a> = 1;</div>
+<div class="line"><span class="lineno">   62</span>    this-&gt;<a class="code hl_variable" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_function" href="#ac035a4c1e52a4495ef7d05404832a8af">CharSet::write</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="aclass_char_set_html_a3cef982c787d67d5583f70b504df7de2"><div class="ttname"><a href="#a3cef982c787d67d5583f70b504df7de2">CharSet::usageCount</a></div><div class="ttdeci">uint8 usageCount</div><div class="ttdoc">Number of references to this char set instance.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:96</a></div></div>
+<div class="ttc" id="aclass_char_set_html_aaef83d0a67eb7136d2d93c4058ad0897"><div class="ttname"><a href="#aaef83d0a67eb7136d2d93c4058ad0897">CharSet::written</a></div><div class="ttdeci">bool written</div><div class="ttdoc">If true the graphical data is written to VRAM; false otherwise.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:93</a></div></div>
+<div class="ttc" id="aclass_char_set_html_ac035a4c1e52a4495ef7d05404832a8af"><div class="ttname"><a href="#ac035a4c1e52a4495ef7d05404832a8af">CharSet::write</a></div><div class="ttdeci">void write()</div><div class="ttdoc">Write the tile graphical data to VRAM.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8c-source/">CharSet.c:241</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3d0c15c4e31c8034c4b727aecce0ec36" name="a3d0c15c4e31c8034c4b727aecce0ec36"></a>
+<h2 class="memtitle">decreaseUsageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CharSet::decreaseUsageCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decrease the usage count. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">90</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>{</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span>(0 &lt; this-&gt;<a class="code hl_variable" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a>)</div>
+<div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        this-&gt;<a class="code hl_variable" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a>--;</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> 0 == this-&gt;<a class="code hl_variable" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a>;</div>
+<div class="line"><span class="lineno">   98</span>}</div>
+</div>
+</div>
+</div>
+<a id="ad7ef17b525c1318fe4f1dadecb306775" name="ad7ef17b525c1318fe4f1dadecb306775"></a>
+<h2 class="memtitle">get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-char-set/">CharSet</a> CharSet::get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a charSet configured with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSetSpec</td><td>Spec used to select or initialize a texture with </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-char-set/">CharSet</a> initialized with the provided spec </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">27</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>)</div>
+<div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> CharSetManager::getCharSet(<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>);</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div>
+</div>
+</div>
+<a id="acdf03ed372ffef069075946fc19bc931" name="acdf03ed372ffef069075946fc19bc931"></a>
+<h2 class="memtitle">getNumberOfChars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> CharSet::getNumberOfChars </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the number of CHARs used by the char set. </p><dl class="section return"><dt>Returns</dt><dd>Number of CHARs used by the char set </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">153</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>{</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars;</div>
+<div class="line"><span class="lineno">  156</span>}</div>
+</div>
+</div>
+</div>
+<a id="a0549ea94e712ba5d9d07c5af35c398eb" name="a0549ea94e712ba5d9d07c5af35c398eb"></a>
+<h2 class="memtitle">getOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> CharSet::getOffset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the offset within CHAR space. </p><dl class="section return"><dt>Returns</dt><dd>Offset within CHAR space </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">139</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>{</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>;</div>
+<div class="line"><span class="lineno">  142</span>}</div>
+</div>
+</div>
+</div>
+<a id="a7f869f9d7095bb1057d849aef56ab151" name="a7f869f9d7095bb1057d849aef56ab151"></a>
+<h2 class="memtitle">getSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> * CharSet::getSpec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the spec used in the construction of the char set. </p><dl class="section return"><dt>Returns</dt><dd>Spec used in the construction of the char set </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">146</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>{</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>;</div>
+<div class="line"><span class="lineno">  149</span>}</div>
+</div>
+</div>
+</div>
+<a id="a5a9130005dc160cee47c1f8c9e3303f9" name="a5a9130005dc160cee47c1f8c9e3303f9"></a>
+<h2 class="memtitle">getUsageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> CharSet::getUsageCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the usage count. </p><dl class="section return"><dt>Returns</dt><dd>Usage count </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">102</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>{</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a>;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
+</div>
+</div>
+</div>
+<a id="a69e7e37c55d781666b78ae651f80e6c9" name="a69e7e37c55d781666b78ae651f80e6c9"></a>
+<h2 class="memtitle">increaseUsageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::increaseUsageCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase the usage count. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">83</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>{</div>
+<div class="line"><span class="lineno">   85</span>    this-&gt;<a class="code hl_variable" href="#a3cef982c787d67d5583f70b504df7de2">usageCount</a>++;</div>
+<div class="line"><span class="lineno">   86</span>}</div>
+</div>
+</div>
+</div>
+<a id="aea895c7b332238909c4cbafde2340105" name="aea895c7b332238909c4cbafde2340105"></a>
+<h2 class="memtitle">isOptimized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CharSet::isOptimized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the char set is optimized. </p><dl class="section return"><dt>Returns</dt><dd>True if the char set is optimized; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">116</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>{</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;optimized;</div>
+<div class="line"><span class="lineno">  119</span>}</div>
+</div>
+</div>
+</div>
+<a id="a9afc6326ffa0aba25674604d43cbecce" name="a9afc6326ffa0aba25674604d43cbecce"></a>
+<h2 class="memtitle">isShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CharSet::isShared </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the char set is shared. </p><dl class="section return"><dt>Returns</dt><dd>True if the char set is share; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">109</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>{</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;shared;</div>
+<div class="line"><span class="lineno">  112</span>}</div>
+</div>
+</div>
+</div>
+<a id="ad149a5942b648983ecad27dd64d47036" name="ad149a5942b648983ecad27dd64d47036"></a>
+<h2 class="memtitle">putChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::putChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>charToReplace</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *</td>          <td class="paramname"><span class="paramname"><em>newChar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replace the color provided color data to a CHAR. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charToReplace</td><td>Index of the CHAR to replace </td></tr>
+    <tr><td class="paramname">newChar</td><td>Color data array for the CHAR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">176</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>{</div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != newChar &amp;&amp; charToReplace &lt; this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars)</div>
+<div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_function" href="/documentation/api/class-mem/">Mem::copyWORD</a></div>
+<div class="line"><span class="lineno">  181</span>        (</div>
+<div class="line"><span class="lineno">  182</span>            (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a> + (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a> + charToReplace) &lt;&lt; 4)),</div>
+<div class="line"><span class="lineno">  183</span>            (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)newChar,</div>
+<div class="line"><span class="lineno">  184</span>            <a class="code hl_define" href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a>(1)</div>
+<div class="line"><span class="lineno">  185</span>        );</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="line"><span class="lineno">  187</span>}</div>
+<div class="ttc" id="aclass_mem_html_ac9c8b30e5322d77b7c31d00a7986b7c5"><div class="ttname"><a href="/documentation/api/class-mem/">Mem::copyWORD</a></div><div class="ttdeci">static void copyWORD(WORD *destination, const WORD *source, uint32 numberOfWORDS)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-mem-8h-source/">Mem.h:133</a></div></div>
+</div>
+</div>
+</div>
+<a id="a7622f1030d320957da6d07f1481e8e11" name="a7622f1030d320957da6d07f1481e8e11"></a>
+<h2 class="memtitle">putPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::putPixel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>charToReplace</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetPixel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">BYTE</a></td>          <td class="paramname"><span class="paramname"><em>newPixelColor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replace a pixel in a CHAR. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charToReplace</td><td>Index of the CHAR to replace </td></tr>
+    <tr><td class="paramname">charSetPixel</td><td>Coordinate in CHAR space of the CHAR to replace </td></tr>
+    <tr><td class="paramname">newPixelColor</td><td>Color data for the pixel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">191</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>{</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span>(charSetPixel &amp;&amp; charToReplace &lt; this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars &amp;&amp; charSetPixel-&gt;<a class="code hl_variable" href="/documentation/api/struct-pixel/">x</a> &lt; 8 &amp;&amp; charSetPixel-&gt;<a class="code hl_variable" href="/documentation/api/struct-pixel/">y</a> &lt; 8)</div>
+<div class="line"><span class="lineno">  194</span>    {</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keyword">static</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a> auxChar[] =</div>
+<div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><span class="lineno">  198</span>        };</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>        <a class="code hl_function" href="/documentation/api/class-mem/">Mem::copyBYTE</a>(auxChar, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a>*)<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a> + (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>) &lt;&lt; 4) + (charToReplace &lt;&lt; 4), (<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(1 &lt;&lt; 4));</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> displacement = (charSetPixel-&gt;<a class="code hl_variable" href="/documentation/api/struct-pixel/">y</a> &lt;&lt; 1) + (charSetPixel-&gt;<a class="code hl_variable" href="/documentation/api/struct-pixel/">x</a> &gt;&gt; 2);</div>
+<div class="line"><span class="lineno">  203</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> pixelToReplaceDisplacement = (charSetPixel-&gt;<a class="code hl_variable" href="/documentation/api/struct-pixel/">x</a> % 4) &lt;&lt; 1;</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>        <span class="comment">// TODO: review this, only works with non transparency pixels</span></div>
+<div class="line"><span class="lineno">  206</span>        auxChar[displacement] &amp;= (~(0x03 &lt;&lt; pixelToReplaceDisplacement) | ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a>)newPixelColor &lt;&lt; pixelToReplaceDisplacement));</div>
+<div class="line"><span class="lineno">  207</span><span class="comment">//      auxChar[displacement] |= (uint16)newPixelColor &lt;&lt; pixelToReplaceDisplacement;</span></div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="/documentation/api/class-mem/">Mem::copyBYTE</a></div>
+<div class="line"><span class="lineno">  210</span>        (</div>
+<div class="line"><span class="lineno">  211</span>            (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a>*)<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a> + (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>) &lt;&lt; 4) + (charToReplace &lt;&lt; 4), auxChar, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>) &lt;&lt; 4)</div>
+<div class="line"><span class="lineno">  212</span>        );</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="line"><span class="lineno">  214</span>}</div>
+<div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_a47bd55d8c6a9b45db1ac0957cee2a82d"><div class="ttname"><a href="/documentation/api/-types-8h/">BYTE</a></div><div class="ttdeci">uint8 BYTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:28</a></div></div>
+<div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
+<div class="ttc" id="aclass_mem_html_a0fbf4262123ef0e88d06c2e56b01b152"><div class="ttname"><a href="/documentation/api/class-mem/">Mem::copyBYTE</a></div><div class="ttdeci">static void copyBYTE(BYTE *destination, const BYTE *source, uint32 numberOfBYTES)</div></div>
+<div class="ttc" id="astruct_pixel_html_a5d3a3575d5f2081d4c962a493d050357"><div class="ttname"><a href="/documentation/api/struct-pixel/">Pixel::x</a></div><div class="ttdeci">uint16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:243</a></div></div>
+<div class="ttc" id="astruct_pixel_html_af2ae784e29ab1c51435471b6e16f7632"><div class="ttname"><a href="/documentation/api/struct-pixel/">Pixel::y</a></div><div class="ttdeci">uint16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:244</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1e405442cf275f8d9de1c3af0edc78a0" name="a1e405442cf275f8d9de1c3af0edc78a0"></a>
+<h2 class="memtitle">release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void CharSet::release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-char-set/">CharSet</a></td>          <td class="paramname"><span class="paramname"><em>charSet</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Release a charSet. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSet</td><td><a class="el" href="/documentation/api/class-char-set/">CharSet</a> to release </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">39</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
+<div class="line"><span class="lineno">   41</span>    CharSetManager::releaseCharSet(charSet);</div>
+<div class="line"><span class="lineno">   42</span>}</div>
+</div>
+</div>
+</div>
+<a id="a379c3c056a0ebedef45bba68730bdab0" name="a379c3c056a0ebedef45bba68730bdab0"></a>
+<h2 class="memtitle">setFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::setFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the current frame (frame * number of CHARs + number of CHARs) to write to CHAR memory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frame</td><td>The frame to write to CHAR memory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">218</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>{</div>
+<div class="line"><span class="lineno">  220</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a> = 0;</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;frameOffsets)</div>
+<div class="line"><span class="lineno">  223</span>    {</div>
+<div class="line"><span class="lineno">  224</span>        <a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a> = this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;frameOffsets[frame] - 1;</div>
+<div class="line"><span class="lineno">  225</span>    }</div>
+<div class="line"><span class="lineno">  226</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  227</span>    {</div>
+<div class="line"><span class="lineno">  228</span>        <a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a> = <a class="code hl_define" href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a>(this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars * frame);</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a> || this-&gt;<a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a> != <a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a>)</div>
+<div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>        this-&gt;<a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a> = <a class="code hl_variable" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a>;</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>        <a class="code hl_function" href="#ac035a4c1e52a4495ef7d05404832a8af">CharSet::write</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="line"><span class="lineno">  237</span>}</div>
+</div>
+</div>
+</div>
+<a id="a5fb8e6a2f4db1f30b3770e9ce65cb050" name="a5fb8e6a2f4db1f30b3770e9ce65cb050"></a>
+<h2 class="memtitle">setOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::setOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the offset within CHAR space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">offset</td><td>Offset within CHAR space </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">123</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a> &lt; 2048, <span class="stringliteral">&quot;CharSet::setOffset: offset out of bounds&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    this-&gt;<a class="code hl_variable" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a> = this-&gt;<a class="code hl_variable" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a> &amp;&amp; this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a> == <a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>;</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a> = <a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>;</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a>)</div>
+<div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">CharSet::fireEvent</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventCharSetChangedOffset</a>);</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="line"><span class="lineno">  135</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a9a6eed8d4df6f8596f6a68da2630e2c2"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventCharSetChangedOffset</a></div><div class="ttdeci">@ kEventCharSetChangedOffset</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:47</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa7bddc5d7ebb22d3d3cd7537786c4b27"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::fireEvent</a></div><div class="ttdeci">void fireEvent(uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:286</a></div></div>
+</div>
+</div>
+</div>
+<a id="ac035a4c1e52a4495ef7d05404832a8af" name="ac035a4c1e52a4495ef7d05404832a8af"></a>
+<h2 class="memtitle">write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CharSet::write </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write the tile graphical data to VRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">241</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>{</div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(0 &lt; this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars, <span class="stringliteral">&quot;CharSet::write: 0 chars&quot;</span>);</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> tilesToWrite = this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;numberOfChars;</div>
+<div class="line"><span class="lineno">  246</span> </div>
+<div class="line"><span class="lineno">  247</span><span class="preprocessor">#ifdef __SHOW_SPRITES_PROFILING</span></div>
+<div class="line"><span class="lineno">  248</span>    <span class="keyword">extern</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> _writtenTiles;</div>
+<div class="line"><span class="lineno">  249</span>    _writtenTiles += tilesToWrite;</div>
+<div class="line"><span class="lineno">  250</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">switch</span>(this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;tiles[0])</div>
+<div class="line"><span class="lineno">  253</span>    {</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">case</span> <a class="code hl_define" href="/documentation/api/-char-set-8h/">__CHAR_SET_COMPRESSION_RLE</a>:</div>
+<div class="line"><span class="lineno">  255</span> </div>
+<div class="line"><span class="lineno">  256</span>            CharSet::writeRLE(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  257</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>            <span class="keywordflow">if</span>(100 &lt; tilesToWrite)</div>
+<div class="line"><span class="lineno">  262</span>            {</div>
+<div class="line"><span class="lineno">  263</span>                <a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">CACHE_RESET</a>;</div>
+<div class="line"><span class="lineno">  264</span>            }</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span><span class="preprocessor">#ifndef __RELEASE</span></div>
+<div class="line"><span class="lineno">  267</span>            <a class="code hl_function" href="/documentation/api/class-mem/">Mem::copyWORD</a></div>
+<div class="line"><span class="lineno">  268</span>            (</div>
+<div class="line"><span class="lineno">  269</span>                (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a> + (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>) &lt;&lt; 4)),</div>
+<div class="line"><span class="lineno">  270</span>                &amp;this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;tiles[1] + this-&gt;tilesDisplacement,</div>
+<div class="line"><span class="lineno">  271</span>                <a class="code hl_define" href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a>(tilesToWrite)</div>
+<div class="line"><span class="lineno">  272</span>            );</div>
+<div class="line"><span class="lineno">  273</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  274</span>            <span class="comment">// Based on dasi&#39;s memcpy</span></div>
+<div class="line"><span class="lineno">  275</span>            <span class="keyword">asm</span></div>
+<div class="line"><span class="lineno">  276</span>            (</div>
+<div class="line"><span class="lineno">  277</span>                <span class="stringliteral">&quot;loop%=:                \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  278</span>                <span class="stringliteral">&quot;ld.w   0[%1], r11      \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  279</span>                <span class="stringliteral">&quot;ld.w   4[%1], r12      \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  280</span>                <span class="stringliteral">&quot;ld.w   8[%1], r13      \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  281</span>                <span class="stringliteral">&quot;st.w   r11, 0[%0]      \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  282</span>                <span class="stringliteral">&quot;addi   16, %0, %0      \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  283</span>                <span class="stringliteral">&quot;ld.w   12[%1], r11     \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  284</span>                <span class="stringliteral">&quot;st.w   r12, -12[%0]    \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  285</span>                <span class="stringliteral">&quot;addi   16, %1, %1      \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  286</span>                <span class="stringliteral">&quot;st.w   r13, -8[%0]     \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  287</span>                <span class="stringliteral">&quot;add    -1, %2          \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  288</span>                <span class="stringliteral">&quot;st.w   r11, -4[%0]     \n\t&quot;</span>     \</div>
+<div class="line"><span class="lineno">  289</span>                <span class="stringliteral">&quot;bne   loop%=           \n\t&quot;</span></div>
+<div class="line"><span class="lineno">  290</span>                : <span class="comment">// No Output</span></div>
+<div class="line"><span class="lineno">  291</span>                : <span class="stringliteral">&quot;r&quot;</span> ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CHAR_SPACE_BASE_ADDRESS</a> + (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a>) &lt;&lt; 4))), </div>
+<div class="line"><span class="lineno">  292</span>                    <span class="stringliteral">&quot;r&quot;</span> (&amp;this-&gt;<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>-&gt;tiles[1] + this-&gt;tilesDisplacement), <span class="stringliteral">&quot;r&quot;</span> (<a class="code hl_define" href="/documentation/api/-char-set-8h/">__UINT32S_PER_CHARS</a>(tilesToWrite) &gt;&gt; 2)</div>
+<div class="line"><span class="lineno">  293</span>                : <span class="stringliteral">&quot;r11&quot;</span>, <span class="stringliteral">&quot;r12&quot;</span>, <span class="stringliteral">&quot;r13&quot;</span> <span class="comment">// regs used</span></div>
+<div class="line"><span class="lineno">  294</span>            );</div>
+<div class="line"><span class="lineno">  295</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="line"><span class="lineno">  298</span> </div>
+<div class="line"><span class="lineno">  299</span>    this-&gt;<a class="code hl_variable" href="#aaef83d0a67eb7136d2d93c4058ad0897">written</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  300</span>}</div>
+<div class="ttc" id="a_char_set_8h_html_a4f24fa8e786d6a4295e212c753e0b1e8"><div class="ttname"><a href="/documentation/api/-char-set-8h/">__CHAR_SET_COMPRESSION_RLE</a></div><div class="ttdeci">#define __CHAR_SET_COMPRESSION_RLE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:39</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_hardware_manager_8h_html_a49126cf070caaf085a44ac1d98bdf053"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">CACHE_RESET</a></div><div class="ttdeci">#define CACHE_RESET</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:40</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad451d042daed7d193b7cd6e9fd21917c" name="ad451d042daed7d193b7cd6e9fd21917c"></a>
+<h2 class="memtitle">charSetSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a>* CharSet::charSetSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spec used in the construction of the char set. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">84</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+
+</div>
+</div>
+<a id="a9d834a09cb3b9917debe3c7fb70c6fb2" name="a9d834a09cb3b9917debe3c7fb70c6fb2"></a>
+<h2 class="memtitle">offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> CharSet::offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Offset in CHAR space where the block allocated for this char set starts. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">90</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+
+</div>
+</div>
+<a id="a9a88d4f63545f438ac6e35ea74da8563" name="a9a88d4f63545f438ac6e35ea74da8563"></a>
+<h2 class="memtitle">tilesDisplacement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> CharSet::tilesDisplacement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">87</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+
+</div>
+</div>
+<a id="a3cef982c787d67d5583f70b504df7de2" name="a3cef982c787d67d5583f70b504df7de2"></a>
+<h2 class="memtitle">usageCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> CharSet::usageCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of references to this char set instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">96</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+
+</div>
+</div>
+<a id="aaef83d0a67eb7136d2d93c4058ad0897" name="aaef83d0a67eb7136d2d93c4058ad0897"></a>
+<h2 class="memtitle">written</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CharSet::written</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true the graphical data is written to VRAM; false otherwise. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8h-source/">93</a> of file <a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Graphics/2d/Textures/Char/<a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a></li>
+<li>VUEngine-Core/source/Component/Graphics/2d/Textures/Char/<a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a></li>
+</ul>
+</div>
+
+
+</div>

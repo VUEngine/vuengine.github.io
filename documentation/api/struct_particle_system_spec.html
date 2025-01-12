@@ -1,0 +1,376 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ParticleSystemSpec Struct Reference"
+permalink: documentation/api/struct-particle-system-spec/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">ParticleSystemSpec Struct Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>&gt;</code></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:adbfa6b4145a1dab7c39e0792ca951e62" id="r_adbfa6b4145a1dab7c39e0792ca951e62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbfa6b4145a1dab7c39e0792ca951e62">actorSpec</a></td></tr>
+
+<tr class="memitem:afb963f8846994074e23a8016fb92bdde" id="r_afb963f8846994074e23a8016fb92bdde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb963f8846994074e23a8016fb92bdde">recycleParticles</a></td></tr>
+<tr class="memdesc:afb963f8846994074e23a8016fb92bdde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reuse expired particles?  <br /></td></tr>
+
+<tr class="memitem:a155a86f1cfcecf449c7d44e1940565ab" id="r_a155a86f1cfcecf449c7d44e1940565ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a155a86f1cfcecf449c7d44e1940565ab">minimumSpawnDelay</a></td></tr>
+<tr class="memdesc:a155a86f1cfcecf449c7d44e1940565ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum generation delay in milliseconds.  <br /></td></tr>
+
+<tr class="memitem:a4d51f2d8bf9ff4f66801d053f9568e41" id="r_a4d51f2d8bf9ff4f66801d053f9568e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d51f2d8bf9ff4f66801d053f9568e41">spawnDelayDelta</a></td></tr>
+<tr class="memdesc:a4d51f2d8bf9ff4f66801d053f9568e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">gGneration delay delta in milliseconds  <br /></td></tr>
+
+<tr class="memitem:aaa78b4dfb5b9811c5d09d88ac085da8d" id="r_aaa78b4dfb5b9811c5d09d88ac085da8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa78b4dfb5b9811c5d09d88ac085da8d">maximumNumberOfAliveParticles</a></td></tr>
+<tr class="memdesc:aaa78b4dfb5b9811c5d09d88ac085da8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of alive particles.  <br /></td></tr>
+
+<tr class="memitem:ae2ba9d40340ee97a6df240134ecb3b09" id="r_ae2ba9d40340ee97a6df240134ecb3b09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ba9d40340ee97a6df240134ecb3b09">maximumNumberOfParticlesToSpawnPerCycle</a></td></tr>
+<tr class="memdesc:ae2ba9d40340ee97a6df240134ecb3b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of particles to spawn in each cycle.  <br /></td></tr>
+
+<tr class="memitem:a6395d16bd2eb6c6f70d886c43cf69d45" id="r_a6395d16bd2eb6c6f70d886c43cf69d45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6395d16bd2eb6c6f70d886c43cf69d45">visualComponentSpecs</a></td></tr>
+<tr class="memdesc:a6395d16bd2eb6c6f70d886c43cf69d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of visual component specs to select randomly.  <br /></td></tr>
+
+<tr class="memitem:a746340bba6186d8be1bac8bdba45301b" id="r_a746340bba6186d8be1bac8bdba45301b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a746340bba6186d8be1bac8bdba45301b">physicsComponentSpecs</a></td></tr>
+<tr class="memdesc:a746340bba6186d8be1bac8bdba45301b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of physical component specs to select randomly.  <br /></td></tr>
+
+<tr class="memitem:a489bafb96b84778347ab594b60788e0f" id="r_a489bafb96b84778347ab594b60788e0f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a489bafb96b84778347ab594b60788e0f">colliderComponentSpecs</a></td></tr>
+<tr class="memdesc:a489bafb96b84778347ab594b60788e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of body component specs to select randomly.  <br /></td></tr>
+
+<tr class="memitem:a6b2dc3e27373260b1db0d53f52ad2450" id="r_a6b2dc3e27373260b1db0d53f52ad2450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b2dc3e27373260b1db0d53f52ad2450">autoStart</a></td></tr>
+<tr class="memdesc:a6b2dc3e27373260b1db0d53f52ad2450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auto start.  <br /></td></tr>
+
+<tr class="memitem:a958116a5bd2391fed2587564726dcca7" id="r_a958116a5bd2391fed2587564726dcca7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-particle-spec/">ParticleSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958116a5bd2391fed2587564726dcca7">particleSpec</a></td></tr>
+<tr class="memdesc:a958116a5bd2391fed2587564726dcca7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-particle/">Particle</a>'s spec.  <br /></td></tr>
+
+<tr class="memitem:a8ecd2063184ff112215480237ae283fe" id="r_a8ecd2063184ff112215480237ae283fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ecd2063184ff112215480237ae283fe">minimumRelativeSpawnPosition</a></td></tr>
+<tr class="memdesc:a8ecd2063184ff112215480237ae283fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum relative spawn position.  <br /></td></tr>
+
+<tr class="memitem:a184620f1ee01b589628f31adca9be93b" id="r_a184620f1ee01b589628f31adca9be93b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a184620f1ee01b589628f31adca9be93b">maximumRelativeSpawnPosition</a></td></tr>
+<tr class="memdesc:a184620f1ee01b589628f31adca9be93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum relative spawn position.  <br /></td></tr>
+
+<tr class="memitem:a2a4c00d9555adce1b8855f19cd598075" id="r_a2a4c00d9555adce1b8855f19cd598075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4c00d9555adce1b8855f19cd598075">minimumForce</a></td></tr>
+<tr class="memdesc:a2a4c00d9555adce1b8855f19cd598075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum force to apply (use <a class="el" href="/documentation/api/-types-8h/">int32</a> values in the spec to avoid overflow)  <br /></td></tr>
+
+<tr class="memitem:a353279da4521e091443f6e92dd92ee87" id="r_a353279da4521e091443f6e92dd92ee87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a353279da4521e091443f6e92dd92ee87">maximumForce</a></td></tr>
+<tr class="memdesc:a353279da4521e091443f6e92dd92ee87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum force to apply (use <a class="el" href="/documentation/api/-types-8h/">int32</a> values in the spec to avoid overflow)  <br /></td></tr>
+
+<tr class="memitem:a137012a3a8f4abf476771a86cf461c21" id="r_a137012a3a8f4abf476771a86cf461c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a137012a3a8f4abf476771a86cf461c21">movementType</a></td></tr>
+<tr class="memdesc:a137012a3a8f4abf476771a86cf461c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of movement for the particles.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a> Spec </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">26</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="adbfa6b4145a1dab7c39e0792ca951e62" name="adbfa6b4145a1dab7c39e0792ca951e62"></a>
+<h2 class="memtitle">actorSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a> ParticleSystemSpec::actorSpec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">28</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a6b2dc3e27373260b1db0d53f52ad2450" name="a6b2dc3e27373260b1db0d53f52ad2450"></a>
+<h2 class="memtitle">autoStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> ParticleSystemSpec::autoStart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Auto start. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">55</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a489bafb96b84778347ab594b60788e0f" name="a489bafb96b84778347ab594b60788e0f"></a>
+<h2 class="memtitle">colliderComponentSpecs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a>** ParticleSystemSpec::colliderComponentSpecs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Array of body component specs to select randomly. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">52</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a353279da4521e091443f6e92dd92ee87" name="a353279da4521e091443f6e92dd92ee87"></a>
+<h2 class="memtitle">maximumForce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> ParticleSystemSpec::maximumForce</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum force to apply (use <a class="el" href="/documentation/api/-types-8h/">int32</a> values in the spec to avoid overflow) </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">70</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="aaa78b4dfb5b9811c5d09d88ac085da8d" name="aaa78b4dfb5b9811c5d09d88ac085da8d"></a>
+<h2 class="memtitle">maximumNumberOfAliveParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> ParticleSystemSpec::maximumNumberOfAliveParticles</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of alive particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">40</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="ae2ba9d40340ee97a6df240134ecb3b09" name="ae2ba9d40340ee97a6df240134ecb3b09"></a>
+<h2 class="memtitle">maximumNumberOfParticlesToSpawnPerCycle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> ParticleSystemSpec::maximumNumberOfParticlesToSpawnPerCycle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of particles to spawn in each cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">43</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a184620f1ee01b589628f31adca9be93b" name="a184620f1ee01b589628f31adca9be93b"></a>
+<h2 class="memtitle">maximumRelativeSpawnPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> ParticleSystemSpec::maximumRelativeSpawnPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum relative spawn position. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">64</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a2a4c00d9555adce1b8855f19cd598075" name="a2a4c00d9555adce1b8855f19cd598075"></a>
+<h2 class="memtitle">minimumForce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> ParticleSystemSpec::minimumForce</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum force to apply (use <a class="el" href="/documentation/api/-types-8h/">int32</a> values in the spec to avoid overflow) </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">67</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a8ecd2063184ff112215480237ae283fe" name="a8ecd2063184ff112215480237ae283fe"></a>
+<h2 class="memtitle">minimumRelativeSpawnPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> ParticleSystemSpec::minimumRelativeSpawnPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum relative spawn position. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">61</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a155a86f1cfcecf449c7d44e1940565ab" name="a155a86f1cfcecf449c7d44e1940565ab"></a>
+<h2 class="memtitle">minimumSpawnDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> ParticleSystemSpec::minimumSpawnDelay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum generation delay in milliseconds. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">34</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a137012a3a8f4abf476771a86cf461c21" name="a137012a3a8f4abf476771a86cf461c21"></a>
+<h2 class="memtitle">movementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> ParticleSystemSpec::movementType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of movement for the particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">73</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a958116a5bd2391fed2587564726dcca7" name="a958116a5bd2391fed2587564726dcca7"></a>
+<h2 class="memtitle">particleSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-particle-spec/">ParticleSpec</a>* ParticleSystemSpec::particleSpec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-particle/">Particle</a>'s spec. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">58</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a746340bba6186d8be1bac8bdba45301b" name="a746340bba6186d8be1bac8bdba45301b"></a>
+<h2 class="memtitle">physicsComponentSpecs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a>** ParticleSystemSpec::physicsComponentSpecs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Array of physical component specs to select randomly. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">49</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="afb963f8846994074e23a8016fb92bdde" name="afb963f8846994074e23a8016fb92bdde"></a>
+<h2 class="memtitle">recycleParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> ParticleSystemSpec::recycleParticles</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reuse expired particles? </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">31</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a4d51f2d8bf9ff4f66801d053f9568e41" name="a4d51f2d8bf9ff4f66801d053f9568e41"></a>
+<h2 class="memtitle">spawnDelayDelta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> ParticleSystemSpec::spawnDelayDelta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>gGneration delay delta in milliseconds </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">37</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a6395d16bd2eb6c6f70d886c43cf69d45" name="a6395d16bd2eb6c6f70d886c43cf69d45"></a>
+<h2 class="memtitle">visualComponentSpecs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a>** ParticleSystemSpec::visualComponentSpecs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Array of visual component specs to select randomly. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-particle-system-8h-source/">46</a> of file <a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this struct was generated from the following file:<ul>
+<li>VUEngine-Core/source/Entity/Container/Actor/ParticleSystem/<a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a></li>
+</ul>
+</div>
+
+
+</div>

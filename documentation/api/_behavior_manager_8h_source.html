@@ -1,0 +1,84 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BehaviorManager.h"
+permalink: documentation/api/-behavior-manager-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-50a76a95c270d8da901755fa74f7e297/">Logic</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">BehaviorManager.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-behavior-manager-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef BEHAVIOR_MANAGER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define BEHAVIOR_MANAGER_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-clock-8h/">Clock.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-component-manager-8h/">ComponentManager.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-behavior-8h/">Behavior.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="/documentation/api/class-behavior-manager/">   30</a></span>singleton <span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-behavior-manager/">BehaviorManager</a> : <a class="code hl_class" href="/documentation/api/class-component-manager/">ComponentManager</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="/documentation/api/class-behavior-manager/">   38</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="/documentation/api/class-behavior-manager/">BehaviorManager</a> <a class="code hl_function" href="/documentation/api/class-behavior-manager/">getInstance</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">override</span> <a class="code hl_class" href="/documentation/api/class-behavior/">Behavior</a> <a class="code hl_function" href="/documentation/api/class-behavior-manager/">instantiateComponent</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> owner, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a>* behaviorSpec);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-behavior-manager/">deinstantiateComponent</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> owner, <a class="code hl_class" href="/documentation/api/class-behavior/">Behavior</a> behavior);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-behavior-manager/">reset</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_behavior_8h_html"><div class="ttname"><a href="/documentation/api/-behavior-8h/">Behavior.h</a></div></div>
+<div class="ttc" id="a_clock_8h_html"><div class="ttname"><a href="/documentation/api/-clock-8h/">Clock.h</a></div></div>
+<div class="ttc" id="a_component_manager_8h_html"><div class="ttname"><a href="/documentation/api/-component-manager-8h/">ComponentManager.h</a></div></div>
+<div class="ttc" id="aclass_behavior_html"><div class="ttname"><a href="/documentation/api/class-behavior/">Behavior</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:49</a></div></div>
+<div class="ttc" id="aclass_behavior_manager_html"><div class="ttname"><a href="/documentation/api/class-behavior-manager/">BehaviorManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00030">BehaviorManager.h:31</a></div></div>
+<div class="ttc" id="aclass_behavior_manager_html_ab284a8afaf7e9248ca63be90b61bea91"><div class="ttname"><a href="/documentation/api/class-behavior-manager/">BehaviorManager::getInstance</a></div><div class="ttdeci">static BehaviorManager getInstance()</div></div>
+<div class="ttc" id="aclass_behavior_manager_html_abb9ce3dd84eef95ecca8cb1763118cf0"><div class="ttname"><a href="/documentation/api/class-behavior-manager/">BehaviorManager::reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdoc">Reset the manager&#39;s state.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-manager-8c-source/">BehaviorManager.c:71</a></div></div>
+<div class="ttc" id="aclass_behavior_manager_html_ad1b6d19bc20939962ef46f600c63eb11"><div class="ttname"><a href="/documentation/api/class-behavior-manager/">BehaviorManager::deinstantiateComponent</a></div><div class="ttdeci">override void deinstantiateComponent(Entity owner, Behavior behavior)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-manager-8c-source/">BehaviorManager.c:49</a></div></div>
+<div class="ttc" id="aclass_behavior_manager_html_ad4f2d9ed88d818848b0c04253bf3fa44"><div class="ttname"><a href="/documentation/api/class-behavior-manager/">BehaviorManager::instantiateComponent</a></div><div class="ttdeci">override Behavior instantiateComponent(Entity owner, const BehaviorSpec *behaviorSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-manager-8c-source/">BehaviorManager.c:31</a></div></div>
+<div class="ttc" id="aclass_component_manager_html"><div class="ttname"><a href="/documentation/api/class-component-manager/">ComponentManager</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8h-source/">ComponentManager.h:38</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="astruct_behavior_spec_html"><div class="ttname"><a href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:26</a></div></div>
+</div></div>
+
+
+</div>

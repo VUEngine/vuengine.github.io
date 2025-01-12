@@ -1,0 +1,81 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "CollisionTester.h"
+permalink: documentation/api/-collision-tester-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3d59fd1310cba71f74cd42cf97b49f36/">Physics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-698fa324242060d8a4cd9ec45684df0d/">Collision</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">CollisionTester.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-collision-tester-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef COLLISION_TESTER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="/documentation/api/-collision-tester-8h/">   11</a></span><span class="preprocessor">#define COLLISION_HELPER_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-collider-8h/">Collider.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-listener-object-8h/">ListenerObject.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// FORWARD DECLARATIONS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-collider/">Collider</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="/documentation/api/class-collision-tester/">   35</a></span><span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-collision-tester/">CollisionTester</a> : <a class="code hl_class" href="/documentation/api/class-object/">Object</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collision-tester/">testOverlaping</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    (</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="/documentation/api/class-collider/">Collider</a> requesterCollider, <a class="code hl_class" href="/documentation/api/class-collider/">Collider</a> otherCollider, <a class="code hl_struct" href="/documentation/api/struct-collision-information/">CollisionInformation</a>* collisionInformation, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> sizeDelta</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    );</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_collider_8h_html"><div class="ttname"><a href="/documentation/api/-collider-8h/">Collider.h</a></div></div>
+<div class="ttc" id="a_listener_object_8h_html"><div class="ttname"><a href="/documentation/api/-listener-object-8h/">ListenerObject.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="aclass_collider_html"><div class="ttname"><a href="/documentation/api/class-collider/">Collider</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:181</a></div></div>
+<div class="ttc" id="aclass_collision_tester_html"><div class="ttname"><a href="/documentation/api/class-collision-tester/">CollisionTester</a></div><div class="ttdef"><b>Definition</b> <a href="#l00035">CollisionTester.h:36</a></div></div>
+<div class="ttc" id="aclass_collision_tester_html_aa320a593e3d9f7c086491ea3ce7e9c97"><div class="ttname"><a href="/documentation/api/class-collision-tester/">CollisionTester::testOverlaping</a></div><div class="ttdeci">static void testOverlaping(Collider requesterCollider, Collider otherCollider, CollisionInformation *collisionInformation, fixed_t sizeDelta)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collision-tester-8c-source/">CollisionTester.c:38</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="/documentation/api/class-object/">Object</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8h-source/">Object.h:36</a></div></div>
+<div class="ttc" id="astruct_collision_information_html"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:85</a></div></div>
+</div></div>
+
+
+</div>

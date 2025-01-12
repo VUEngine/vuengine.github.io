@@ -1,0 +1,824 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "HardwareManager.h File Reference"
+permalink: documentation/api/-hardware-manager-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-d9d4eb5f564a24519992882a131745ab/">Hardware</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">HardwareManager.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-object-8h-source/">Object.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-hardware-manager-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-hardware-manager/">HardwareManager</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a58457e42200392f6927d03ebe2546044" id="r_a58457e42200392f6927d03ebe2546044"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58457e42200392f6927d03ebe2546044">__CCR</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a074bb96d4b297c6fd08e24db5d5d5b9d" id="r_a074bb96d4b297c6fd08e24db5d5d5b9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a074bb96d4b297c6fd08e24db5d5d5b9d">__CCSR</a>&#160;&#160;&#160;0x04</td></tr>
+
+<tr class="memitem:ac27bdceb4ca8f730983d6b3730af4ac4" id="r_ac27bdceb4ca8f730983d6b3730af4ac4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac27bdceb4ca8f730983d6b3730af4ac4">__CDTR</a>&#160;&#160;&#160;0x08</td></tr>
+
+<tr class="memitem:a56c761f411a1a0e129a0cc0ab5918eaa" id="r_a56c761f411a1a0e129a0cc0ab5918eaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56c761f411a1a0e129a0cc0ab5918eaa">__CDRR</a>&#160;&#160;&#160;0x0C</td></tr>
+
+<tr class="memitem:ad07141ff8ab422e2e56e5679bbdfb23e" id="r_ad07141ff8ab422e2e56e5679bbdfb23e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad07141ff8ab422e2e56e5679bbdfb23e">__SDLR</a>&#160;&#160;&#160;0x10</td></tr>
+
+<tr class="memitem:ad52a1ce5b96506157e1e1cf59309811d" id="r_ad52a1ce5b96506157e1e1cf59309811d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52a1ce5b96506157e1e1cf59309811d">__SDHR</a>&#160;&#160;&#160;0x14</td></tr>
+
+<tr class="memitem:a4b3126127f087e3ca8004f08ec835e3d" id="r_a4b3126127f087e3ca8004f08ec835e3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b3126127f087e3ca8004f08ec835e3d">__TLR</a>&#160;&#160;&#160;0x18</td></tr>
+
+<tr class="memitem:a61896f5047a8d51da54c476b52717103" id="r_a61896f5047a8d51da54c476b52717103"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61896f5047a8d51da54c476b52717103">__THR</a>&#160;&#160;&#160;0x1C</td></tr>
+
+<tr class="memitem:ab4637e0a935e3e5b222bbd0aa961a42e" id="r_ab4637e0a935e3e5b222bbd0aa961a42e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4637e0a935e3e5b222bbd0aa961a42e">__TCR</a>&#160;&#160;&#160;0x20</td></tr>
+
+<tr class="memitem:a3b4ddb29a97e0c82db6c66e1748080f4" id="r_a3b4ddb29a97e0c82db6c66e1748080f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b4ddb29a97e0c82db6c66e1748080f4">__WCR</a>&#160;&#160;&#160;0x24</td></tr>
+
+<tr class="memitem:a5dc04f0fb4cbdc131fd9c6b9c0b831b4" id="r_a5dc04f0fb4cbdc131fd9c6b9c0b831b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dc04f0fb4cbdc131fd9c6b9c0b831b4">__SCR</a>&#160;&#160;&#160;0x28</td></tr>
+
+<tr class="memitem:a112c8db64bc8a8ddb57bbf2dfe521ce5" id="r_a112c8db64bc8a8ddb57bbf2dfe521ce5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a112c8db64bc8a8ddb57bbf2dfe521ce5">CACHE_ENABLE</a>&#160;&#160;&#160;asm(&quot;mov 2,r1 \n  ldsr r1,sr24&quot;: /* No Output */: /* No Input */: &quot;r1&quot; /* Reg r1 Used */)</td></tr>
+
+<tr class="memitem:a90f89963b947193c2402e2322f28a623" id="r_a90f89963b947193c2402e2322f28a623"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90f89963b947193c2402e2322f28a623">CACHE_DISABLE</a>&#160;&#160;&#160;asm(&quot;ldsr r0,sr24&quot;)</td></tr>
+
+<tr class="memitem:a6aa9a24395c266642b2b23819d2340d6" id="r_a6aa9a24395c266642b2b23819d2340d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aa9a24395c266642b2b23819d2340d6">CACHE_CLEAR</a>&#160;&#160;&#160;asm(&quot;mov 1,r1 \n  ldsr r1,sr24&quot;: /* No Output */: /* No Input */: &quot;r1&quot; /* Reg r1 Used */)</td></tr>
+
+<tr class="memitem:a49126cf070caaf085a44ac1d98bdf053" id="r_a49126cf070caaf085a44ac1d98bdf053"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49126cf070caaf085a44ac1d98bdf053">CACHE_RESET</a>&#160;&#160;&#160;<a class="el" href="#a90f89963b947193c2402e2322f28a623">CACHE_DISABLE</a>; <a class="el" href="#a6aa9a24395c266642b2b23819d2340d6">CACHE_CLEAR</a>; <a class="el" href="#a112c8db64bc8a8ddb57bbf2dfe521ce5">CACHE_ENABLE</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa46b657a4b20f6dcec5f489f2e8663b1" id="r_aa46b657a4b20f6dcec5f489f2e8663b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-hardware-manager/">HardwareManager</a> <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa46b657a4b20f6dcec5f489f2e8663b1">halt</a> ()</td></tr>
+<tr class="memdesc:aa46b657a4b20f6dcec5f489f2e8663b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Halt the CPU.  <br /></td></tr>
+
+<tr class="memitem:a2ebcf430415355db7d03ee27fd44e0b8" id="r_a2ebcf430415355db7d03ee27fd44e0b8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ebcf430415355db7d03ee27fd44e0b8">reset</a> ()</td></tr>
+<tr class="memdesc:a2ebcf430415355db7d03ee27fd44e0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset hardware registries.  <br /></td></tr>
+
+<tr class="memitem:a24f44a6f33d3eba56356a0327fae89cb" id="r_a24f44a6f33d3eba56356a0327fae89cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24f44a6f33d3eba56356a0327fae89cb">setInterruptLevel</a> (<a class="el" href="/documentation/api/-types-8h/">uint8</a> level)</td></tr>
+
+<tr class="memitem:a19b245c55ce6fb5e9f3b9d340b67be31" id="r_a19b245c55ce6fb5e9f3b9d340b67be31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19b245c55ce6fb5e9f3b9d340b67be31">enableInterrupts</a> ()</td></tr>
+<tr class="memdesc:a19b245c55ce6fb5e9f3b9d340b67be31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable interrupts.  <br /></td></tr>
+
+<tr class="memitem:a8d527bac30981b66c0624acf71abcc98" id="r_a8d527bac30981b66c0624acf71abcc98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d527bac30981b66c0624acf71abcc98">disableInterrupts</a> ()</td></tr>
+<tr class="memdesc:a8d527bac30981b66c0624acf71abcc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupts.  <br /></td></tr>
+
+<tr class="memitem:a64fd42c9e48ced4badb8e3aa9d0e241c" id="r_a64fd42c9e48ced4badb8e3aa9d0e241c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64fd42c9e48ced4badb8e3aa9d0e241c">resumeInterrupts</a> ()</td></tr>
+<tr class="memdesc:a64fd42c9e48ced4badb8e3aa9d0e241c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume interrupts.  <br /></td></tr>
+
+<tr class="memitem:a1437aad453f12a8a3a2d250ab48851e6" id="r_a1437aad453f12a8a3a2d250ab48851e6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1437aad453f12a8a3a2d250ab48851e6">suspendInterrupts</a> ()</td></tr>
+<tr class="memdesc:a1437aad453f12a8a3a2d250ab48851e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend interrupts.  <br /></td></tr>
+
+<tr class="memitem:a6d9a7c14fcc0afcc086d020ea12d6c9c" id="r_a6d9a7c14fcc0afcc086d020ea12d6c9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d9a7c14fcc0afcc086d020ea12d6c9c">enableMultiplexedInterrupts</a> ()</td></tr>
+<tr class="memdesc:a6d9a7c14fcc0afcc086d020ea12d6c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable multiplexed interrupts.  <br /></td></tr>
+
+<tr class="memitem:adfc72d6b78408eb93b00f51ed17d3af4" id="r_adfc72d6b78408eb93b00f51ed17d3af4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfc72d6b78408eb93b00f51ed17d3af4">disableMultiplexedInterrupts</a> ()</td></tr>
+<tr class="memdesc:adfc72d6b78408eb93b00f51ed17d3af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable multiplexed interrupts.  <br /></td></tr>
+
+<tr class="memitem:a08721b2c72b526eeb0a920c70ede8890" id="r_a08721b2c72b526eeb0a920c70ede8890"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08721b2c72b526eeb0a920c70ede8890">getStackPointer</a> ()</td></tr>
+
+<tr class="memitem:ac3bcc02a18074d6b66ba67a4ba90a74f" id="r_ac3bcc02a18074d6b66ba67a4ba90a74f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3bcc02a18074d6b66ba67a4ba90a74f">getLinkPointer</a> ()</td></tr>
+
+<tr class="memitem:ad9e84f033edc290afb9539b99ab75c82" id="r_ad9e84f033edc290afb9539b99ab75c82"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9e84f033edc290afb9539b99ab75c82">getPSW</a> ()</td></tr>
+
+<tr class="memitem:a64eebe6ecfe85239b0e18f2013a7d001" id="r_a64eebe6ecfe85239b0e18f2013a7d001"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64eebe6ecfe85239b0e18f2013a7d001">printStackStatus</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y, <a class="el" href="/documentation/api/-types-8h/">bool</a> resumed)</td></tr>
+
+<tr class="memitem:a00109b1fc5f4118d1a24be2ba059220c" id="r_a00109b1fc5f4118d1a24be2ba059220c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00109b1fc5f4118d1a24be2ba059220c">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3d39baf10a8ca1b139b6134967827112" id="r_a3d39baf10a8ca1b139b6134967827112"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d39baf10a8ca1b139b6134967827112">_hardwareRegisters</a></td></tr>
+
+<tr class="memitem:a227adb6ae481866dcf7954c86c23b89f" id="r_a227adb6ae481866dcf7954c86c23b89f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a> _enabledInterrupts&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a227adb6ae481866dcf7954c86c23b89f">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</a></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a58457e42200392f6927d03ebe2546044" name="a58457e42200392f6927d03ebe2546044"></a>
+<h2 class="memtitle">__CCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __CCR&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">24</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a074bb96d4b297c6fd08e24db5d5d5b9d" name="a074bb96d4b297c6fd08e24db5d5d5b9d"></a>
+<h2 class="memtitle">__CCSR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __CCSR&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">25</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a56c761f411a1a0e129a0cc0ab5918eaa" name="a56c761f411a1a0e129a0cc0ab5918eaa"></a>
+<h2 class="memtitle">__CDRR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __CDRR&#160;&#160;&#160;0x0C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">27</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ac27bdceb4ca8f730983d6b3730af4ac4" name="ac27bdceb4ca8f730983d6b3730af4ac4"></a>
+<h2 class="memtitle">__CDTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __CDTR&#160;&#160;&#160;0x08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">26</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a5dc04f0fb4cbdc131fd9c6b9c0b831b4" name="a5dc04f0fb4cbdc131fd9c6b9c0b831b4"></a>
+<h2 class="memtitle">__SCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SCR&#160;&#160;&#160;0x28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">34</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ad52a1ce5b96506157e1e1cf59309811d" name="ad52a1ce5b96506157e1e1cf59309811d"></a>
+<h2 class="memtitle">__SDHR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SDHR&#160;&#160;&#160;0x14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">29</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ad07141ff8ab422e2e56e5679bbdfb23e" name="ad07141ff8ab422e2e56e5679bbdfb23e"></a>
+<h2 class="memtitle">__SDLR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SDLR&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">28</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ab4637e0a935e3e5b222bbd0aa961a42e" name="ab4637e0a935e3e5b222bbd0aa961a42e"></a>
+<h2 class="memtitle">__TCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __TCR&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">32</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a61896f5047a8d51da54c476b52717103" name="a61896f5047a8d51da54c476b52717103"></a>
+<h2 class="memtitle">__THR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __THR&#160;&#160;&#160;0x1C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">31</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a4b3126127f087e3ca8004f08ec835e3d" name="a4b3126127f087e3ca8004f08ec835e3d"></a>
+<h2 class="memtitle">__TLR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __TLR&#160;&#160;&#160;0x18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">30</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a3b4ddb29a97e0c82db6c66e1748080f4" name="a3b4ddb29a97e0c82db6c66e1748080f4"></a>
+<h2 class="memtitle">__WCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __WCR&#160;&#160;&#160;0x24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">33</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6aa9a24395c266642b2b23819d2340d6" name="a6aa9a24395c266642b2b23819d2340d6"></a>
+<h2 class="memtitle">CACHE_CLEAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CACHE_CLEAR&#160;&#160;&#160;asm(&quot;mov 1,r1 \n  ldsr r1,sr24&quot;: /* No Output */: /* No Input */: &quot;r1&quot; /* Reg r1 Used */)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">39</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a90f89963b947193c2402e2322f28a623" name="a90f89963b947193c2402e2322f28a623"></a>
+<h2 class="memtitle">CACHE_DISABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CACHE_DISABLE&#160;&#160;&#160;asm(&quot;ldsr r0,sr24&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">38</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a112c8db64bc8a8ddb57bbf2dfe521ce5" name="a112c8db64bc8a8ddb57bbf2dfe521ce5"></a>
+<h2 class="memtitle">CACHE_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CACHE_ENABLE&#160;&#160;&#160;asm(&quot;mov 2,r1 \n  ldsr r1,sr24&quot;: /* No Output */: /* No Input */: &quot;r1&quot; /* Reg r1 Used */)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">37</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a49126cf070caaf085a44ac1d98bdf053" name="a49126cf070caaf085a44ac1d98bdf053"></a>
+<h2 class="memtitle">CACHE_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CACHE_RESET&#160;&#160;&#160;<a class="el" href="#a90f89963b947193c2402e2322f28a623">CACHE_DISABLE</a>; <a class="el" href="#a6aa9a24395c266642b2b23819d2340d6">CACHE_CLEAR</a>; <a class="el" href="#a112c8db64bc8a8ddb57bbf2dfe521ce5">CACHE_ENABLE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">40</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a8d527bac30981b66c0624acf71abcc98" name="a8d527bac30981b66c0624acf71abcc98"></a>
+<h2 class="memtitle">disableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::disableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disable interrupts. </p>
+
+</div>
+</div>
+<a id="adfc72d6b78408eb93b00f51ed17d3af4" name="adfc72d6b78408eb93b00f51ed17d3af4"></a>
+<h2 class="memtitle">disableMultiplexedInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::disableMultiplexedInterrupts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disable multiplexed interrupts. </p>
+
+</div>
+</div>
+<a id="a19b245c55ce6fb5e9f3b9d340b67be31" name="a19b245c55ce6fb5e9f3b9d340b67be31"></a>
+<h2 class="memtitle">enableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::enableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable interrupts. </p>
+
+</div>
+</div>
+<a id="a6d9a7c14fcc0afcc086d020ea12d6c9c" name="a6d9a7c14fcc0afcc086d020ea12d6c9c"></a>
+<h2 class="memtitle">enableMultiplexedInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::enableMultiplexedInterrupts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable multiplexed interrupts. </p>
+
+</div>
+</div>
+<a id="ac3bcc02a18074d6b66ba67a4ba90a74f" name="ac3bcc02a18074d6b66ba67a4ba90a74f"></a>
+<h2 class="memtitle">getLinkPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> halt::getLinkPointer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the Link Pointer's value. </p><dl class="section return"><dt>Returns</dt><dd>Link pointer </dd></dl>
+
+</div>
+</div>
+<a id="ad9e84f033edc290afb9539b99ab75c82" name="ad9e84f033edc290afb9539b99ab75c82"></a>
+<h2 class="memtitle">getPSW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> halt::getPSW </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the PSW </p><dl class="section return"><dt>Returns</dt><dd>PSW </dd></dl>
+
+</div>
+</div>
+<a id="a08721b2c72b526eeb0a920c70ede8890" name="a08721b2c72b526eeb0a920c70ede8890"></a>
+<h2 class="memtitle">getStackPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> halt::getStackPointer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the Stack Pointer's value. </p><dl class="section return"><dt>Returns</dt><dd>Stack pointer </dd></dl>
+
+</div>
+</div>
+<a id="aa46b657a4b20f6dcec5f489f2e8663b1" name="aa46b657a4b20f6dcec5f489f2e8663b1"></a>
+<h2 class="memtitle">halt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Halt the CPU. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">48</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>{</div>
+<div class="line"><span class="lineno">  123</span>    <span class="comment">// Make sure that I don&#39;t halt forever</span></div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::enableInterrupts</a>();</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>    <span class="keyword">asm</span>(<span class="stringliteral">&quot;halt&quot;</span>::);</div>
+<div class="line"><span class="lineno">  127</span>}</div>
+<div class="ttc" id="aclass_hardware_manager_html_a15f7f248d8f209cd3cd81fc169b93519"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::enableInterrupts</a></div><div class="ttdeci">static void enableInterrupts()</div><div class="ttdoc">Enable interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:152</a></div></div>
+</div>
+</div>
+</div>
+<a id="a00109b1fc5f4118d1a24be2ba059220c" name="a00109b1fc5f4118d1a24be2ba059220c"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the status of the hardware registries. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a64eebe6ecfe85239b0e18f2013a7d001" name="a64eebe6ecfe85239b0e18f2013a7d001"></a>
+<h2 class="memtitle">printStackStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::printStackStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>resumed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the status of the stack. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+    <tr><td class="paramname">resumed</td><td>If true, print only minimum information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2ebcf430415355db7d03ee27fd44e0b8" name="a2ebcf430415355db7d03ee27fd44e0b8"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset hardware registries. </p>
+
+</div>
+</div>
+<a id="a64fd42c9e48ced4badb8e3aa9d0e241c" name="a64fd42c9e48ced4badb8e3aa9d0e241c"></a>
+<h2 class="memtitle">resumeInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::resumeInterrupts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume interrupts. </p>
+
+</div>
+</div>
+<a id="a24f44a6f33d3eba56356a0327fae89cb" name="a24f44a6f33d3eba56356a0327fae89cb"></a>
+<h2 class="memtitle">setInterruptLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::setInterruptLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint8</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the interrupt level. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">level</td><td>Interrupt level </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1437aad453f12a8a3a2d250ab48851e6" name="a1437aad453f12a8a3a2d250ab48851e6"></a>
+<h2 class="memtitle">suspendInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void halt::suspendInterrupts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Suspend interrupts. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a227adb6ae481866dcf7954c86c23b89f" name="a227adb6ae481866dcf7954c86c23b89f"></a>
+<h2 class="memtitle">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> _suspendInterruptRequest __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8h-source/">48</a> of file <a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a3d39baf10a8ca1b139b6134967827112" name="a3d39baf10a8ca1b139b6134967827112"></a>
+<h2 class="memtitle">_hardwareRegisters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a>* const _hardwareRegisters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">77</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

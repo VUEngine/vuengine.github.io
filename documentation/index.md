@@ -16,6 +16,7 @@ To get started, check out the following sections of this documentation.
 - [Basics](/documentation/basics/user-interface/): to get to know the IDE and the most important of its many features.
 - [Language](/documentation/language/introduction/): to learn about Virtual C, our custom C dialect.
 - [User Guide](/documentation/user-guide/introduction/): to learn how to actually develop games with VUEngine Studio and VUEngine, the engine you'll build upon.
+- [API](/documentation/api/classes/): for an API documentation of VUEngine Core
 - [Tutorials](/documentation/tutorials/video-tutorials/): for a different approach to learn working with VUEngine Studio (well... once anything is up there).
 - [FAQ](/documentation/faq/): for an overview of the most frequently asked questions.
 

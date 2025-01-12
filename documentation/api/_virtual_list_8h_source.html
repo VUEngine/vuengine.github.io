@@ -1,0 +1,147 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "VirtualList.h"
+permalink: documentation/api/-virtual-list-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-d79ecfdb20961f17618e14e822be5eb8/">List</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">VirtualList.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-virtual-list-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef VIRTUAL_LIST_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define VIRTUAL_LIST_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-object-8h/">Object.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-virtual-node-8h/">VirtualNode.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-list/">   29</a></span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-virtual-list/">VirtualList</a> : <a class="code hl_class" href="/documentation/api/class-object/">Object</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-list/">   34</a></span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-list/">   37</a></span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_variable" href="/documentation/api/class-virtual-list/">tail</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">constructor</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">destructor</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="/documentation/api/class-virtual-list/">front</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="/documentation/api/class-virtual-list/">back</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">begin</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">end</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">find</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">getDataIndex</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">getNode</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> index);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">getNodeIndex</a>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="/documentation/api/class-virtual-list/">getDataAtIndex</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> index);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">getCount</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">pushFront</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">pushBack</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">insertAfter</a>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node, <span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-list/">insertBefore</a>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node, <span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="/documentation/api/class-virtual-list/">popFront</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="/documentation/api/class-virtual-list/">popBack</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">removeNode</a>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">removeData</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> data);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">reverse</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">copy</a>(<a class="code hl_class" href="/documentation/api/class-virtual-list/">VirtualList</a> sourceList);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">clear</a>();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-list/">deleteData</a>();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="/documentation/api/-object-8h/">Object.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_virtual_node_8h_html"><div class="ttname"><a href="/documentation/api/-virtual-node-8h/">VirtualNode.h</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="/documentation/api/class-object/">Object</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8h-source/">Object.h:36</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList</a></div><div class="ttdef"><b>Definition</b> <a href="#l00029">VirtualList.h:30</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a0202dc67b78c8db3e606ac8372eae795"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::insertAfter</a></div><div class="ttdeci">VirtualNode insertAfter(VirtualNode node, const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:283</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a1487f9eba8064068c0db4ea00a51f65a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::end</a></div><div class="ttdeci">VirtualNode end()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:83</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a2932e6b83f74af907a6aa82a55cd77f1"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:37</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a2af2bd06d881b4b40ce4816a62af2fec"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::destructor</a></div><div class="ttdeci">void destructor()</div><div class="ttdoc">Class&#39; destructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:49</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a38ec1057d1bcc94228a1ea9dda1ec118"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::removeNode</a></div><div class="ttdeci">bool removeNode(VirtualNode node)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:450</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a3a89c7adae595c7eb6a0c891c28114dc"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::copy</a></div><div class="ttdeci">void copy(VirtualList sourceList)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:512</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a5298ab3f21c7ee149fd8446228136641"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getNodeIndex</a></div><div class="ttdeci">int32 getNodeIndex(VirtualNode node)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:161</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a59a98da653f1f119a066da8a8c7a2392"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::popFront</a></div><div class="ttdeci">void * popFront()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:376</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a707cc3608ea9e2e8e006c87bf4102f1c"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::tail</a></div><div class="ttdeci">VirtualNode tail</div><div class="ttdoc">List&#39;s last element.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">VirtualList.h:37</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a7b7e820f4bf684d078400ee2e677a918"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getDataIndex</a></div><div class="ttdeci">int32 getDataIndex(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:149</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a88bde60060c7c995e306d6204d328ad0"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::begin</a></div><div class="ttdeci">VirtualNode begin()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:76</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a89e68811bb544a64a2048cb87af667c9"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Remove all the nodes from the list without deleting the data.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:535</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ab48ea1d9735d62d4f88aada4c5f73346"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::popBack</a></div><div class="ttdeci">void * popBack()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:413</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_abd1af49cd1c9051b5421ea452667e3c0"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::front</a></div><div class="ttdeci">void * front()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:62</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac471efc5d19c5e3f0bacb56d5722ce15"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getDataAtIndex</a></div><div class="ttdeci">void * getDataAtIndex(int32 index)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:173</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac8cad22ce419c50c643a89695c4920ab"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::removeData</a></div><div class="ttdeci">bool removeData(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:471</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_acb02e87ebf3f2af19b8f345ab02f202a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::head</a></div><div class="ttdeci">VirtualNode head</div><div class="ttdoc">List&#39;s first node.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">VirtualList.h:34</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ad32db93a827e39f4bd22d37de2a2e0ac"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushFront</a></div><div class="ttdeci">VirtualNode pushFront(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:219</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ad3bb272667d850e5d0ccdf190184e549"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::reverse</a></div><div class="ttdeci">void reverse()</div><div class="ttdoc">Reverse the nodes of the list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:478</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_adf19ddb25dcdc1c1706ddf506c8bc8b2"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::insertBefore</a></div><div class="ttdeci">VirtualNode insertBefore(VirtualNode node, const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:330</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ae330aad1610423a448990e2297657de9"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::find</a></div><div class="ttdeci">VirtualNode find(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:90</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ae8f2c4511ff2aa11ec0e1161ddbb6093"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::back</a></div><div class="ttdeci">void * back()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:69</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_aea135a8481da683f8376b1ddeb2184ca"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a></div><div class="ttdeci">void deleteData()</div><div class="ttdoc">Delete all the data and nodes from the list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:558</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_aef6e3e900c9ede27487e0655f255d9b2"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getNode</a></div><div class="ttdeci">VirtualNode getNode(int32 index)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:101</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_aeff94be006312783be69b6e77a41ae2b"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getCount</a></div><div class="ttdeci">int32 getCount()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:197</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:29</a></div></div>
+</div></div>
+
+
+</div>

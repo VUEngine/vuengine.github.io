@@ -1,0 +1,447 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "TextObjectSprite Class Reference"
+permalink: documentation/api/class-text-object-sprite/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">TextObjectSprite Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for TextObjectSprite:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_text_object_sprite.png" usemap="#TextObjectSprite_map" alt />
+  <map id="TextObjectSprite_map" name="TextObjectSprite_map">
+<area href="/documentation/api/class-object-sprite/" alt="ObjectSprite" shape="rect" coords="0,0,105,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af2a34dec3af7ec3af11fe9b590556c17" id="r_af2a34dec3af7ec3af11fe9b590556c17"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2a34dec3af7ec3af11fe9b590556c17">TextObjectSpriteROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a79c679c4dc5ee681b261518d1298d1a6" id="r_a79c679c4dc5ee681b261518d1298d1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79c679c4dc5ee681b261518d1298d1a6">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec</a> *textObjectSpriteSpec)</td></tr>
+
+<tr class="memitem:a7c617fc06b931ea454e4f964cfd6808a" id="r_a7c617fc06b931ea454e4f964cfd6808a"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c617fc06b931ea454e4f964cfd6808a">doRender</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="/documentation/api/class-sprite/">index</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a74ce6bf0d7f535557e11e3016c8a58ac" id="r_a74ce6bf0d7f535557e11e3016c8a58ac"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74ce6bf0d7f535557e11e3016c8a58ac">text</a></td></tr>
+<tr class="memdesc:a74ce6bf0d7f535557e11e3016c8a58ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the text to display.  <br /></td></tr>
+
+<tr class="memitem:a6b3e78e73db8c67156ae77465a96c1a2" id="r_a6b3e78e73db8c67156ae77465a96c1a2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b3e78e73db8c67156ae77465a96c1a2">font</a></td></tr>
+<tr class="memdesc:a6b3e78e73db8c67156ae77465a96c1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the font name to use.  <br /></td></tr>
+
+<tr class="memitem:aae753ce89937f39b08dd8b8d96ec4ca5" id="r_aae753ce89937f39b08dd8b8d96ec4ca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae753ce89937f39b08dd8b8d96ec4ca5">palette</a></td></tr>
+<tr class="memdesc:aae753ce89937f39b08dd8b8d96ec4ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Palette to apply when rendering the text.  <br /></td></tr>
+
+<tr class="memitem:a631b0f33e76e457a04375d734a08ba4e" id="r_a631b0f33e76e457a04375d734a08ba4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631b0f33e76e457a04375d734a08ba4e">printed</a></td></tr>
+<tr class="memdesc:a631b0f33e76e457a04375d734a08ba4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to avoid printing the text every frame cycle if not necessary.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_object_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_object_sprite')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a></td></tr>
+<tr class="memitem:a51e9cd69c88e230889586b7d828456f2 inherit pub_types_class_object_sprite" id="r_a51e9cd69c88e230889586b7d828456f2"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-object-sprite-spec/">ObjectSpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">ObjectSpriteROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_object_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object_sprite')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a></td></tr>
+<tr class="memitem:a4b23f7ecee9eab66a645d5a8b80157ec inherit pub_methods_class_object_sprite" id="r_a4b23f7ecee9eab66a645d5a8b80157ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-object-sprite-spec/">ObjectSpriteSpec</a> *objectSpriteSpec)</td></tr>
+
+<tr class="memitem:a69cfd2249dac234b6bd81c62d7b9f8f4 inherit pub_methods_class_object_sprite" id="r_a69cfd2249dac234b6bd81c62d7b9f8f4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">registerWithManager</a> ()</td></tr>
+<tr class="memdesc:a69cfd2249dac234b6bd81c62d7b9f8f4 inherit pub_methods_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register this sprite with the appropriate sprites manager.  <br /></td></tr>
+
+<tr class="memitem:aeaae9553943427b1c763839e75ba66de inherit pub_methods_class_object_sprite" id="r_aeaae9553943427b1c763839e75ba66de"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">unregisterWithManager</a> ()</td></tr>
+<tr class="memdesc:aeaae9553943427b1c763839e75ba66de inherit pub_methods_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unegister this sprite with the appropriate sprites manager.  <br /></td></tr>
+
+<tr class="memitem:a3515efab35272315d6484ab3a719e1be inherit pub_methods_class_object_sprite" id="r_a3515efab35272315d6484ab3a719e1be"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">setRotation</a> (const <a class="el" href="/documentation/api/struct-rotation/">Rotation</a> *<a class="el" href="/documentation/api/class-sprite/">rotation</a>)</td></tr>
+
+<tr class="memitem:a060c4847016e624807fcddbf93748894 inherit pub_methods_class_object_sprite" id="r_a060c4847016e624807fcddbf93748894"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">getTotalPixels</a> ()</td></tr>
+
+<tr class="memitem:af83f062bc8676ff06f80cc79c526e706 inherit pub_methods_class_object_sprite" id="r_af83f062bc8676ff06f80cc79c526e706"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">resetTotalObjects</a> ()</td></tr>
+<tr class="memdesc:af83f062bc8676ff06f80cc79c526e706 inherit pub_methods_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the computation of the number of OBJECTs that the sprite uses.  <br /></td></tr>
+
+<tr class="memitem:aa6c5843438d28c3ffb31a5e5e7931e32 inherit pub_methods_class_object_sprite" id="r_aa6c5843438d28c3ffb31a5e5e7931e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">getTotalObjects</a> ()</td></tr>
+
+<tr class="inherit_header pub_attribs_class_object_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object_sprite')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a></td></tr>
+<tr class="memitem:a63120c0107610411649120d54231ce70 inherit pub_attribs_class_object_sprite" id="r_a63120c0107610411649120d54231ce70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">totalObjects</a></td></tr>
+<tr class="memdesc:a63120c0107610411649120d54231ce70 inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of OBJECTs that the sprite uses.  <br /></td></tr>
+
+<tr class="memitem:a4c4ac676f53068e64629ca071f28094c inherit pub_attribs_class_object_sprite" id="r_a4c4ac676f53068e64629ca071f28094c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">objectSpriteContainer</a></td></tr>
+<tr class="memdesc:a4c4ac676f53068e64629ca071f28094c inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-container/">Container</a> that manages this sprite.  <br /></td></tr>
+
+<tr class="memitem:ab6f6fd51cdac185095592be206384bd9 inherit pub_attribs_class_object_sprite" id="r_ab6f6fd51cdac185095592be206384bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-object-texture-source/">ObjectTextureSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">objectTextureSource</a></td></tr>
+<tr class="memdesc:ab6f6fd51cdac185095592be206384bd9 inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-texture/">Texture</a>'s displacement in the map array.  <br /></td></tr>
+
+<tr class="memitem:a25dd92fe6766de4e3c55e351e85e1c8b inherit pub_attribs_class_object_sprite" id="r_a25dd92fe6766de4e3c55e351e85e1c8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">fourthWordValue</a></td></tr>
+<tr class="memdesc:a25dd92fe6766de4e3c55e351e85e1c8b inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache the computed value for the 4th entry of OBJECTs.  <br /></td></tr>
+
+<tr class="memitem:ad7840fa47cb9701312b96464bd9f4312 inherit pub_attribs_class_object_sprite" id="r_ad7840fa47cb9701312b96464bd9f4312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">cols</a></td></tr>
+<tr class="memdesc:ad7840fa47cb9701312b96464bd9f4312 inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the number of cols for the sprite's texture.  <br /></td></tr>
+
+<tr class="memitem:a4801612b7a574c815e89b50465dc93b9 inherit pub_attribs_class_object_sprite" id="r_a4801612b7a574c815e89b50465dc93b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">rows</a></td></tr>
+<tr class="memdesc:a4801612b7a574c815e89b50465dc93b9 inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the number of cols for the sprite's texture.  <br /></td></tr>
+
+<tr class="memitem:ae2c10e25e882f0e9646c25eb0429e63b inherit pub_attribs_class_object_sprite" id="r_ae2c10e25e882f0e9646c25eb0429e63b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">xDisplacementIncrement</a></td></tr>
+<tr class="memdesc:ae2c10e25e882f0e9646c25eb0429e63b inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the x displacamente used to flip horizontally the image.  <br /></td></tr>
+
+<tr class="memitem:a5aced03e66f4757c0b947bb22727319e inherit pub_attribs_class_object_sprite" id="r_a5aced03e66f4757c0b947bb22727319e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">yDisplacementIncrement</a></td></tr>
+<tr class="memdesc:a5aced03e66f4757c0b947bb22727319e inherit pub_attribs_class_object_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of the y displacamente used to flip vertically the image.  <br /></td></tr>
+
+<tr class="memitem:aa7fd452a798ab88b1d8ba7b923b8aebe inherit pub_attribs_class_object_sprite" id="r_aa7fd452a798ab88b1d8ba7b923b8aebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">xDisplacementDelta</a></td></tr>
+
+<tr class="memitem:abebf48a3adc041e57f91388347010a4a inherit pub_attribs_class_object_sprite" id="r_abebf48a3adc041e57f91388347010a4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-sprite/">yDisplacementDelta</a></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-text-object-sprite/">TextObjectSprite</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-sprite/">Sprite</a></p>
+<p>Displays a text in OBJECT space. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">54</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af2a34dec3af7ec3af11fe9b590556c17" name="af2a34dec3af7ec3af11fe9b590556c17"></a>
+<h2 class="memtitle">TextObjectSpriteROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec</a> <a class="el" href="#af2a34dec3af7ec3af11fe9b590556c17">TextObjectSpriteROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-text-object-sprite/">TextObjectSprite</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">43</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a79c679c4dc5ee681b261518d1298d1a6" name="a79c679c4dc5ee681b261518d1298d1a6"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void TextObjectSprite::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>textObjectSpriteSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the sprite attaches to </td></tr>
+    <tr><td class="paramname">textObjectSpriteSpec</td><td>Specification that determines how to configure the sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8c-source/">36</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8c-source/">TextObjectSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{</div>
+<div class="line"><span class="lineno">   38</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   39</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, &amp;textObjectSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-text-object-sprite-spec/">objectSpriteSpec</a>);</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    this-&gt;<a class="code hl_variable" href="#a6b3e78e73db8c67156ae77465a96c1a2">font</a> = textObjectSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-text-object-sprite-spec/">font</a>;</div>
+<div class="line"><span class="lineno">   42</span>    this-&gt;<a class="code hl_variable" href="#a74ce6bf0d7f535557e11e3016c8a58ac">text</a> = textObjectSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-text-object-sprite-spec/">text</a>;</div>
+<div class="line"><span class="lineno">   43</span>    this-&gt;<a class="code hl_variable" href="#aae753ce89937f39b08dd8b8d96ec4ca5">palette</a> = textObjectSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-text-object-sprite-spec/">palette</a> &lt;&lt; 14;</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    this-&gt;<a class="code hl_variable" href="#a631b0f33e76e457a04375d734a08ba4e">printed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-object-sprite/">totalObjects</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a74ce6bf0d7f535557e11e3016c8a58ac">text</a> ? 0 : strlen(this-&gt;<a class="code hl_variable" href="#a74ce6bf0d7f535557e11e3016c8a58ac">text</a>);</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_object_sprite_html_a63120c0107610411649120d54231ce70"><div class="ttname"><a href="/documentation/api/class-object-sprite/">ObjectSprite::totalObjects</a></div><div class="ttdeci">int16 totalObjects</div><div class="ttdoc">The number of OBJECTs that the sprite uses.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:63</a></div></div>
+<div class="ttc" id="aclass_text_object_sprite_html_a631b0f33e76e457a04375d734a08ba4e"><div class="ttname"><a href="#a631b0f33e76e457a04375d734a08ba4e">TextObjectSprite::printed</a></div><div class="ttdeci">bool printed</div><div class="ttdoc">Flag to avoid printing the text every frame cycle if not necessary.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:68</a></div></div>
+<div class="ttc" id="aclass_text_object_sprite_html_a6b3e78e73db8c67156ae77465a96c1a2"><div class="ttname"><a href="#a6b3e78e73db8c67156ae77465a96c1a2">TextObjectSprite::font</a></div><div class="ttdeci">const char * font</div><div class="ttdoc">Pointer to the font name to use.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:62</a></div></div>
+<div class="ttc" id="aclass_text_object_sprite_html_a74ce6bf0d7f535557e11e3016c8a58ac"><div class="ttname"><a href="#a74ce6bf0d7f535557e11e3016c8a58ac">TextObjectSprite::text</a></div><div class="ttdeci">const char * text</div><div class="ttdoc">Pointer to the text to display.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:59</a></div></div>
+<div class="ttc" id="aclass_text_object_sprite_html_aae753ce89937f39b08dd8b8d96ec4ca5"><div class="ttname"><a href="#aae753ce89937f39b08dd8b8d96ec4ca5">TextObjectSprite::palette</a></div><div class="ttdeci">uint16 palette</div><div class="ttdoc">Palette to apply when rendering the text.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:65</a></div></div>
+<div class="ttc" id="astruct_text_object_sprite_spec_html_a4699e270237e6b8a4f29536d27843111"><div class="ttname"><a href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec::text</a></div><div class="ttdeci">const char * text</div><div class="ttdoc">Text.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:31</a></div></div>
+<div class="ttc" id="astruct_text_object_sprite_spec_html_ab32945c6d47de7ed2203a42cad2b88c6"><div class="ttname"><a href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec::objectSpriteSpec</a></div><div class="ttdeci">ObjectSpriteSpec objectSpriteSpec</div><div class="ttdoc">it has a ObjectSprite spec at the beginning</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:28</a></div></div>
+<div class="ttc" id="astruct_text_object_sprite_spec_html_ab9fe6ab253c9f003cd454819fa450d4b"><div class="ttname"><a href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec::font</a></div><div class="ttdeci">const char * font</div><div class="ttdoc">Font.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:34</a></div></div>
+<div class="ttc" id="astruct_text_object_sprite_spec_html_afc63a172db71f64deb5f79f59776e143"><div class="ttname"><a href="/documentation/api/struct-text-object-sprite-spec/">TextObjectSpriteSpec::palette</a></div><div class="ttdeci">uint8 palette</div><div class="ttdoc">Palette.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h:37</a></div></div>
+</div>
+</div>
+</div>
+<a id="a7c617fc06b931ea454e4f964cfd6808a" name="a7c617fc06b931ea454e4f964cfd6808a"></a>
+<h2 class="memtitle">doRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> TextObjectSprite::doRender </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Render the sprite by configuring the DRAM assigned to it by means of the provided index. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">index</td><td>Determines the region of DRAM that this sprite is allowed to configure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index that determines the region of DRAM that this sprite manages </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8c-source/">62</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8c-source/">TextObjectSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>), <span class="stringliteral">&quot;TextObjectSprite::doRender: null texture&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#a631b0f33e76e457a04375d734a08ba4e">printed</a>)</div>
+<div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        TextObjectSprite::out(<span class="keyword">this</span>, <a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>);</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_variable" href="/documentation/api/class-object-sprite/">cols</a> = strlen(this-&gt;<a class="code hl_variable" href="#a74ce6bf0d7f535557e11e3016c8a58ac">text</a>);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment">// TODO: add support for multiline fonts</span></div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_variable" href="/documentation/api/class-object-sprite/">rows</a> = 1;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> xDirection = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> &amp; 0x2000 ? -1 : 1;</div>
+<div class="line"><span class="lineno">   77</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> yDirection = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> &amp; 0x1000 ? -1 : 1;</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">position</a>.x - this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfWidth</a> * xDirection + this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">displacement</a>.x - (<a class="code hl_define" href="/documentation/api/-constants-8h/">__LEFT</a> == xDirection ? <a class="code hl_define" href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_FLIP_X_DISPLACEMENT</a> : 0);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <span class="comment">// TODO: the halfHeight should be calculted based on the font&#39;s height</span></div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y = this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">position</a>.y - this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">halfHeight</a> * yDirection + this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">displacement</a>.y - (<a class="code hl_define" href="/documentation/api/-constants-8h/">__UP</a> == yDirection ? <a class="code hl_define" href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_FLIP_Y_DISPLACEMENT</a> : 0);</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="comment">//FontData* fontData = Printing::getFontByName(this-&gt;font);</span></div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> i = 0;</div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> secondWordValue = (this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> &amp; <a class="code hl_define" href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_CHAR_SHOW_MASK</a>) | ((this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">position</a>.parallax + this-&gt;displacement.parallax) &amp; ~<a class="code hl_define" href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_CHAR_SHOW_MASK</a>);</div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> <a class="code hl_variable" href="/documentation/api/class-object-sprite/">fourthWordValue</a> = (this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">head</a> &amp; 0x3000);</div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">ObjectAttributes</a>* objectPointer = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">for</span>(; i &lt; <a class="code hl_variable" href="/documentation/api/class-object-sprite/">rows</a>; i++)</div>
+<div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="comment">// TODO: Account for multiline characters</span></div>
+<div class="line"><span class="lineno">   94</span>        <span class="comment">//int32 outputY = y + (i &lt;&lt; 3) * yDirection;</span></div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> outputY = y;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span>((<span class="keywordtype">unsigned</span>)(outputY - _cameraFrustum-&gt;y0 + 4) &gt; (<span class="keywordtype">unsigned</span>)(_cameraFrustum-&gt;y1 - _cameraFrustum-&gt;y0))</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> j = 0;</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">for</span>(; j &lt; <a class="code hl_variable" href="/documentation/api/class-object-sprite/">cols</a>; j++)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> objectIndex = <a class="code hl_variable" href="/documentation/api/class-sprite/">index</a> + j;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>                objectPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_objectAttributesCache</a>[objectIndex];</div>
+<div class="line"><span class="lineno">  105</span>                objectPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-object-attributes/">head</a> = <a class="code hl_define" href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_CHAR_HIDE_MASK</a>;</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> j = 0;</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">for</span>(; j &lt; <a class="code hl_variable" href="/documentation/api/class-object-sprite/">cols</a>; j++)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> objectIndex = <a class="code hl_variable" href="/documentation/api/class-sprite/">index</a> + j;</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>            <span class="comment">// TODO: Account for character&#39;s size</span></div>
+<div class="line"><span class="lineno">  118</span><span class="comment">//          int32 outputX = x + (j * fontData-&gt;fontSpec-&gt;fontSize.x) * xDirection;</span></div>
+<div class="line"><span class="lineno">  119</span>            <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> outputX = x + (j * 8) * xDirection;</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>            <span class="comment">// Add 8 to the calculation to avoid char&#39;s cut off when scrolling hide the object if outside</span></div>
+<div class="line"><span class="lineno">  122</span>            <span class="comment">// Screen&#39;s bounds</span></div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span>((<span class="keywordtype">unsigned</span>)(outputX - _cameraFrustum-&gt;x0 + 4) &gt; (<span class="keywordtype">unsigned</span>)(_cameraFrustum-&gt;x1 - _cameraFrustum-&gt;x0))</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                objectPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-object-attributes/">head</a> = <a class="code hl_define" href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_CHAR_HIDE_MASK</a>;</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>            objectPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_objectAttributesCache</a>[objectIndex];</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>            objectPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-object-attributes/">jx</a> = outputX;</div>
+<div class="line"><span class="lineno">  132</span>            objectPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-object-attributes/">head</a> = secondWordValue;</div>
+<div class="line"><span class="lineno">  133</span>            objectPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-object-attributes/">jy</a> = outputY;</div>
+<div class="line"><span class="lineno">  134</span>            objectPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-object-attributes/">tile</a> |= <a class="code hl_variable" href="/documentation/api/class-object-sprite/">fourthWordValue</a>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>;</div>
+<div class="line"><span class="lineno">  139</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a41d27532849c6ddd0e6b9d8bfd630017"><div class="ttname"><a href="/documentation/api/-constants-8h/">__LEFT</a></div><div class="ttdeci">#define __LEFT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:145</a></div></div>
+<div class="ttc" id="a_constants_8h_html_aed9f8798bfe5cc31fac96f00cbd3c95b"><div class="ttname"><a href="/documentation/api/-constants-8h/">__UP</a></div><div class="ttdeci">#define __UP</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:147</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_object_sprite_8h_html_a124a6604ad4b73809fc43cb1f3fcc9bc"><div class="ttname"><a href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_FLIP_Y_DISPLACEMENT</a></div><div class="ttdeci">#define __OBJECT_SPRITE_FLIP_Y_DISPLACEMENT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:27</a></div></div>
+<div class="ttc" id="a_object_sprite_8h_html_a4d6e91b5dfaf49eb892dadcbb39f593a"><div class="ttname"><a href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_CHAR_SHOW_MASK</a></div><div class="ttdeci">#define __OBJECT_SPRITE_CHAR_SHOW_MASK</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:23</a></div></div>
+<div class="ttc" id="a_object_sprite_8h_html_a9bc0b4eaf6ecfd6ff14e9ab39105d37f"><div class="ttname"><a href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_CHAR_HIDE_MASK</a></div><div class="ttdeci">#define __OBJECT_SPRITE_CHAR_HIDE_MASK</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:24</a></div></div>
+<div class="ttc" id="a_object_sprite_8h_html_aa04a93416c8066d9a71950df56a4af76"><div class="ttname"><a href="/documentation/api/-object-sprite-8h/">__OBJECT_SPRITE_FLIP_X_DISPLACEMENT</a></div><div class="ttdeci">#define __OBJECT_SPRITE_FLIP_X_DISPLACEMENT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:26</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ab47b021b85ee45d0efede77efb2c66d0"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">ObjectAttributes</a></div><div class="ttdeci">struct ObjectAttributes ObjectAttributes</div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ac6631f5e10c7e10c2d06d42b753020c5"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">_objectAttributesCache</a></div><div class="ttdeci">ObjectAttributes _objectAttributesCache[__TOTAL_OBJECTS]</div></div>
+<div class="ttc" id="aclass_object_sprite_html_a25dd92fe6766de4e3c55e351e85e1c8b"><div class="ttname"><a href="/documentation/api/class-object-sprite/">ObjectSprite::fourthWordValue</a></div><div class="ttdeci">uint16 fourthWordValue</div><div class="ttdoc">Cache the computed value for the 4th entry of OBJECTs.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:74</a></div></div>
+<div class="ttc" id="aclass_object_sprite_html_a4801612b7a574c815e89b50465dc93b9"><div class="ttname"><a href="/documentation/api/class-object-sprite/">ObjectSprite::rows</a></div><div class="ttdeci">uint8 rows</div><div class="ttdoc">Cache of the number of cols for the sprite&#39;s texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:80</a></div></div>
+<div class="ttc" id="aclass_object_sprite_html_ad7840fa47cb9701312b96464bd9f4312"><div class="ttname"><a href="/documentation/api/class-object-sprite/">ObjectSprite::cols</a></div><div class="ttdeci">uint8 cols</div><div class="ttdoc">Cache of the number of cols for the sprite&#39;s texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-sprite-8h-source/">ObjectSprite.h:77</a></div></div>
+<div class="ttc" id="aclass_sprite_html_a23671d52da0111ab08cab587e53e39c3"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::halfWidth</a></div><div class="ttdeci">int16 halfWidth</div><div class="ttdoc">Cache of the texture&#39;s half width.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:84</a></div></div>
+<div class="ttc" id="aclass_sprite_html_a99ef22c192ee7c6a6cbff3c12e457805"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::halfHeight</a></div><div class="ttdeci">int16 halfHeight</div><div class="ttdoc">Cache of the texture&#39;s half height.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:87</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aa4978b284ebaae7225869d238dcb32cb"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::texture</a></div><div class="ttdeci">Texture texture</div><div class="ttdoc">Texture to display.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:90</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aaef43fd36e71fe32ddd70a0a5b1f88a4"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::displacement</a></div><div class="ttdeci">PixelVector displacement</div><div class="ttdoc">Displacement added to the sprite&#39;s position.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:68</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ab0b07fc114d06a143184727cfa6de561"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::head</a></div><div class="ttdeci">uint16 head</div><div class="ttdoc">Head flags for DRAM entries.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:81</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ac56d109f8f1fca3a6b8669be46fc1d1b"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::index</a></div><div class="ttdeci">int16 index</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:75</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ad973d742f323cbd172e809cc75e83189"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::position</a></div><div class="ttdeci">PixelVector position</div><div class="ttdoc">Position cache.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:65</a></div></div>
+<div class="ttc" id="astruct_object_attributes_html_a0615bbd3088797fe3d658d8b1701be14"><div class="ttname"><a href="/documentation/api/struct-object-attributes/">ObjectAttributes::tile</a></div><div class="ttdeci">int16 tile</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:171</a></div></div>
+<div class="ttc" id="astruct_object_attributes_html_a1677efcf2aba650865c4979c74501c75"><div class="ttname"><a href="/documentation/api/struct-object-attributes/">ObjectAttributes::jx</a></div><div class="ttdeci">int16 jx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:168</a></div></div>
+<div class="ttc" id="astruct_object_attributes_html_a65cf6ead0ad095b0fe098ae795d82d4e"><div class="ttname"><a href="/documentation/api/struct-object-attributes/">ObjectAttributes::jy</a></div><div class="ttdeci">int16 jy</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:170</a></div></div>
+<div class="ttc" id="astruct_object_attributes_html_aa06f5a4877d4f299ab94aad912a65fe8"><div class="ttname"><a href="/documentation/api/struct-object-attributes/">ObjectAttributes::head</a></div><div class="ttdeci">int16 head</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:169</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6b3e78e73db8c67156ae77465a96c1a2" name="a6b3e78e73db8c67156ae77465a96c1a2"></a>
+<h2 class="memtitle">font</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const char* TextObjectSprite::font</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the font name to use. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">62</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>.</p>
+
+</div>
+</div>
+<a id="aae753ce89937f39b08dd8b8d96ec4ca5" name="aae753ce89937f39b08dd8b8d96ec4ca5"></a>
+<h2 class="memtitle">palette</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> TextObjectSprite::palette</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Palette to apply when rendering the text. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">65</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>.</p>
+
+</div>
+</div>
+<a id="a631b0f33e76e457a04375d734a08ba4e" name="a631b0f33e76e457a04375d734a08ba4e"></a>
+<h2 class="memtitle">printed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> TextObjectSprite::printed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to avoid printing the text every frame cycle if not necessary. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">68</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>.</p>
+
+</div>
+</div>
+<a id="a74ce6bf0d7f535557e11e3016c8a58ac" name="a74ce6bf0d7f535557e11e3016c8a58ac"></a>
+<h2 class="memtitle">text</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const char* TextObjectSprite::text</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the text to display. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">59</a> of file <a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Graphics/2d/Sprites/Object/<a class="el" href="/documentation/api/-text-object-sprite-8h-source/">TextObjectSprite.h</a></li>
+<li>VUEngine-Core/source/Component/Graphics/2d/Sprites/Object/<a class="el" href="/documentation/api/-text-object-sprite-8c-source/">TextObjectSprite.c</a></li>
+</ul>
+</div>
+
+
+</div>

@@ -1,0 +1,2446 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "SoundTrack.h File Reference"
+permalink: documentation/api/-sound-track-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3d07431c7dde6b0936df213ca850c7ff/">Sound</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">SoundTrack.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-object-8h-source/">Object.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-sound-track-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-sound-track-keyframe/">SoundTrackKeyframe</a></td></tr>
+
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a></td></tr>
+
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4c163708785e8d1307953505e1f9b21d" id="r_a4c163708785e8d1307953505e1f9b21d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c163708785e8d1307953505e1f9b21d">__MAXIMUM_VOLUME</a>&#160;&#160;&#160;0xF</td></tr>
+
+<tr class="memitem:a32760b6cba424cf3ea6357f5a133ddec" id="r_a32760b6cba424cf3ea6357f5a133ddec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32760b6cba424cf3ea6357f5a133ddec">C_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a8028172f830a00215e1e2411af0f89eb" id="r_a8028172f830a00215e1e2411af0f89eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8028172f830a00215e1e2411af0f89eb">CS0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ac645a96969f762c1636ef0a4923d461e" id="r_ac645a96969f762c1636ef0a4923d461e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac645a96969f762c1636ef0a4923d461e">D_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ae968eb788cf881de0245dc1905c4b70f" id="r_ae968eb788cf881de0245dc1905c4b70f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae968eb788cf881de0245dc1905c4b70f">DS0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:af5ca871f7144e74bbce6cdecb754accd" id="r_af5ca871f7144e74bbce6cdecb754accd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5ca871f7144e74bbce6cdecb754accd">E_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a59caba0f9aad81c6d2e6465b7380089f" id="r_a59caba0f9aad81c6d2e6465b7380089f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59caba0f9aad81c6d2e6465b7380089f">F_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a4212b62205939b746f05184dc0b65c62" id="r_a4212b62205939b746f05184dc0b65c62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4212b62205939b746f05184dc0b65c62">FS0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ac703da9f2a9751f635b8153bd6ec2b63" id="r_ac703da9f2a9751f635b8153bd6ec2b63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac703da9f2a9751f635b8153bd6ec2b63">G_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a3547c69793eb36540810e8f9394c5a9c" id="r_a3547c69793eb36540810e8f9394c5a9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3547c69793eb36540810e8f9394c5a9c">GS0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a97c5e88dc990d06880997390ec1c4f14" id="r_a97c5e88dc990d06880997390ec1c4f14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97c5e88dc990d06880997390ec1c4f14">A_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ac7f91d81b380cca1e459761347c6ba77" id="r_ac7f91d81b380cca1e459761347c6ba77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7f91d81b380cca1e459761347c6ba77">AS0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:afee3b79e74eab7e64cf6b8519f31a293" id="r_afee3b79e74eab7e64cf6b8519f31a293"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee3b79e74eab7e64cf6b8519f31a293">B_0</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a6a1247f50df9b4c773a116a7cfd7b0cb" id="r_a6a1247f50df9b4c773a116a7cfd7b0cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a1247f50df9b4c773a116a7cfd7b0cb">C_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:afc3c191d4a580107456963e1286b3d42" id="r_afc3c191d4a580107456963e1286b3d42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc3c191d4a580107456963e1286b3d42">CS1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ab31d832d82bef7f1c6df989c3040a216" id="r_ab31d832d82bef7f1c6df989c3040a216"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31d832d82bef7f1c6df989c3040a216">D_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a13de9a5cf550b533a7436e4aeb2ee3c4" id="r_a13de9a5cf550b533a7436e4aeb2ee3c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13de9a5cf550b533a7436e4aeb2ee3c4">DS1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ae380c7a09aeee58129cbdd83ac19482a" id="r_ae380c7a09aeee58129cbdd83ac19482a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae380c7a09aeee58129cbdd83ac19482a">E_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a435f756795e3454fe3e181d5434515ca" id="r_a435f756795e3454fe3e181d5434515ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a435f756795e3454fe3e181d5434515ca">F_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ab9f706a9dd6d19fdec39497df5f8819b" id="r_ab9f706a9dd6d19fdec39497df5f8819b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f706a9dd6d19fdec39497df5f8819b">FS1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a761fc582c4880846dbbde122597bfabc" id="r_a761fc582c4880846dbbde122597bfabc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a761fc582c4880846dbbde122597bfabc">G_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a0f7212aefd9a1cb2402a48de45c452d1" id="r_a0f7212aefd9a1cb2402a48de45c452d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f7212aefd9a1cb2402a48de45c452d1">GS1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a3846181cf670f578e43772faa4bd3f75" id="r_a3846181cf670f578e43772faa4bd3f75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3846181cf670f578e43772faa4bd3f75">A_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:af1ff96d6b69338d926bef11faa405cf7" id="r_af1ff96d6b69338d926bef11faa405cf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1ff96d6b69338d926bef11faa405cf7">AS1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a463f798baeb150f22f55d67ed19b382c" id="r_a463f798baeb150f22f55d67ed19b382c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a463f798baeb150f22f55d67ed19b382c">B_1</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a7bdc09f21f2074c6d8b75893c5d7216d" id="r_a7bdc09f21f2074c6d8b75893c5d7216d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bdc09f21f2074c6d8b75893c5d7216d">C_2</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a3e759404ee1066f529adc98fab60ff21" id="r_a3e759404ee1066f529adc98fab60ff21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e759404ee1066f529adc98fab60ff21">CS2</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a6b9fc4d1f3b726959596f71e0e5bbe06" id="r_a6b9fc4d1f3b726959596f71e0e5bbe06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b9fc4d1f3b726959596f71e0e5bbe06">D_2</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ab121c2e05411ef3dd0eccb189ac7b88e" id="r_ab121c2e05411ef3dd0eccb189ac7b88e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab121c2e05411ef3dd0eccb189ac7b88e">DS2</a>&#160;&#160;&#160;0x27</td></tr>
+
+<tr class="memitem:a99256e4e284d2dba4ebafbee1680786b" id="r_a99256e4e284d2dba4ebafbee1680786b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99256e4e284d2dba4ebafbee1680786b">E_2</a>&#160;&#160;&#160;0x98</td></tr>
+
+<tr class="memitem:af0d28d590ed60c797d6caec15ceccdd0" id="r_af0d28d590ed60c797d6caec15ceccdd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0d28d590ed60c797d6caec15ceccdd0">F_2</a>&#160;&#160;&#160;0x102</td></tr>
+
+<tr class="memitem:a8d6ebe4f8636e59ae31bf94c5ccf1142" id="r_a8d6ebe4f8636e59ae31bf94c5ccf1142"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d6ebe4f8636e59ae31bf94c5ccf1142">FS2</a>&#160;&#160;&#160;0x167</td></tr>
+
+<tr class="memitem:a33c48bf8f577e4d63de43b232cca2119" id="r_a33c48bf8f577e4d63de43b232cca2119"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33c48bf8f577e4d63de43b232cca2119">G_2</a>&#160;&#160;&#160;0x1C6</td></tr>
+
+<tr class="memitem:a9a3b7528adab34a4f1ee47b9e5142bca" id="r_a9a3b7528adab34a4f1ee47b9e5142bca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a3b7528adab34a4f1ee47b9e5142bca">GS2</a>&#160;&#160;&#160;0x21F</td></tr>
+
+<tr class="memitem:a01e92799f99fb681f6db217e5fcce84d" id="r_a01e92799f99fb681f6db217e5fcce84d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01e92799f99fb681f6db217e5fcce84d">A_2</a>&#160;&#160;&#160;0x274</td></tr>
+
+<tr class="memitem:a29dd91765ee8fbfa6a2edfe924854799" id="r_a29dd91765ee8fbfa6a2edfe924854799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29dd91765ee8fbfa6a2edfe924854799">AS2</a>&#160;&#160;&#160;0x2C3</td></tr>
+
+<tr class="memitem:a49ca5808c60d484da75d3c8fb65881c4" id="r_a49ca5808c60d484da75d3c8fb65881c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49ca5808c60d484da75d3c8fb65881c4">B_2</a>&#160;&#160;&#160;0x30F</td></tr>
+
+<tr class="memitem:ab84f41f617f7004cb93cc27999c490e1" id="r_ab84f41f617f7004cb93cc27999c490e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab84f41f617f7004cb93cc27999c490e1">C_3</a>&#160;&#160;&#160;0x356</td></tr>
+
+<tr class="memitem:aa7b5a8fb9c4dba926d34a4e0f02dff63" id="r_aa7b5a8fb9c4dba926d34a4e0f02dff63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7b5a8fb9c4dba926d34a4e0f02dff63">CS3</a>&#160;&#160;&#160;0x399</td></tr>
+
+<tr class="memitem:a1d003907e9c6c3d9532ba99e3e8a1219" id="r_a1d003907e9c6c3d9532ba99e3e8a1219"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d003907e9c6c3d9532ba99e3e8a1219">D_3</a>&#160;&#160;&#160;0x3D8</td></tr>
+
+<tr class="memitem:abb2543c6b8c507a9034ce65b83a7f464" id="r_abb2543c6b8c507a9034ce65b83a7f464"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2543c6b8c507a9034ce65b83a7f464">DS3</a>&#160;&#160;&#160;0x414</td></tr>
+
+<tr class="memitem:a54aa391ca059e933375bb993f14714a5" id="r_a54aa391ca059e933375bb993f14714a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54aa391ca059e933375bb993f14714a5">E_3</a>&#160;&#160;&#160;0x44C</td></tr>
+
+<tr class="memitem:a8f409cf3682b3db2d1d48ae947e8ca71" id="r_a8f409cf3682b3db2d1d48ae947e8ca71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f409cf3682b3db2d1d48ae947e8ca71">F_3</a>&#160;&#160;&#160;0x481</td></tr>
+
+<tr class="memitem:ac90f957f5ee0efad2f1e7658f440ede8" id="r_ac90f957f5ee0efad2f1e7658f440ede8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac90f957f5ee0efad2f1e7658f440ede8">FS3</a>&#160;&#160;&#160;0x4B3</td></tr>
+
+<tr class="memitem:a9127ea80f6b4a1b7e3a78156b9681f57" id="r_a9127ea80f6b4a1b7e3a78156b9681f57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9127ea80f6b4a1b7e3a78156b9681f57">G_3</a>&#160;&#160;&#160;0x4E3</td></tr>
+
+<tr class="memitem:a8ff0a275545cdb618ecac6d6e4239db7" id="r_a8ff0a275545cdb618ecac6d6e4239db7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ff0a275545cdb618ecac6d6e4239db7">GS3</a>&#160;&#160;&#160;0x510</td></tr>
+
+<tr class="memitem:a304db09cca37e303ccb2af2b5e669b84" id="r_a304db09cca37e303ccb2af2b5e669b84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a304db09cca37e303ccb2af2b5e669b84">A_3</a>&#160;&#160;&#160;0x53A</td></tr>
+
+<tr class="memitem:a3ed004224d72334cdd86ed109d1884ca" id="r_a3ed004224d72334cdd86ed109d1884ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ed004224d72334cdd86ed109d1884ca">AS3</a>&#160;&#160;&#160;0x562</td></tr>
+
+<tr class="memitem:aadb600dad99889cd1ac4019648c23b4c" id="r_aadb600dad99889cd1ac4019648c23b4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadb600dad99889cd1ac4019648c23b4c">B_3</a>&#160;&#160;&#160;0x587</td></tr>
+
+<tr class="memitem:affc7d86d86dc6a7875a46f7f7d1f5308" id="r_affc7d86d86dc6a7875a46f7f7d1f5308"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affc7d86d86dc6a7875a46f7f7d1f5308">C_4</a>&#160;&#160;&#160;0x5AB</td></tr>
+
+<tr class="memitem:ac61464a9640f75e89764202d5774ea6f" id="r_ac61464a9640f75e89764202d5774ea6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac61464a9640f75e89764202d5774ea6f">CS4</a>&#160;&#160;&#160;0x5CC</td></tr>
+
+<tr class="memitem:a5ae41a0a71076b891a7a2e5a2e6530c5" id="r_a5ae41a0a71076b891a7a2e5a2e6530c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ae41a0a71076b891a7a2e5a2e6530c5">D_4</a>&#160;&#160;&#160;0x5EC</td></tr>
+
+<tr class="memitem:ac10acfaf788d074341e5d79527bd82bd" id="r_ac10acfaf788d074341e5d79527bd82bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac10acfaf788d074341e5d79527bd82bd">DS4</a>&#160;&#160;&#160;0x60B</td></tr>
+
+<tr class="memitem:a7f720c5acdddfe9fba1f1de2f640c198" id="r_a7f720c5acdddfe9fba1f1de2f640c198"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f720c5acdddfe9fba1f1de2f640c198">E_4</a>&#160;&#160;&#160;0x626</td></tr>
+
+<tr class="memitem:a7db10cdc8b1ff4a1880528ac1cb12686" id="r_a7db10cdc8b1ff4a1880528ac1cb12686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7db10cdc8b1ff4a1880528ac1cb12686">F_4</a>&#160;&#160;&#160;0x640</td></tr>
+
+<tr class="memitem:a4e0fc031c33884eb98190cce89434968" id="r_a4e0fc031c33884eb98190cce89434968"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e0fc031c33884eb98190cce89434968">FS4</a>&#160;&#160;&#160;0x659</td></tr>
+
+<tr class="memitem:a8ef41a13bb5beec555bd42628742f4b2" id="r_a8ef41a13bb5beec555bd42628742f4b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ef41a13bb5beec555bd42628742f4b2">G_4</a>&#160;&#160;&#160;0x672</td></tr>
+
+<tr class="memitem:a5a94e74b473a0a36c42259855e3b18a8" id="r_a5a94e74b473a0a36c42259855e3b18a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a94e74b473a0a36c42259855e3b18a8">GS4</a>&#160;&#160;&#160;0x688</td></tr>
+
+<tr class="memitem:a45c10761257fe9b986909363bec442a7" id="r_a45c10761257fe9b986909363bec442a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c10761257fe9b986909363bec442a7">A_4</a>&#160;&#160;&#160;0x69D</td></tr>
+
+<tr class="memitem:a8239ad1c27a77489560801fd0c6f7635" id="r_a8239ad1c27a77489560801fd0c6f7635"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8239ad1c27a77489560801fd0c6f7635">AS4</a>&#160;&#160;&#160;0x6B1</td></tr>
+
+<tr class="memitem:aa39f42c3e6fe99764c21a0cb0cf49ba0" id="r_aa39f42c3e6fe99764c21a0cb0cf49ba0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa39f42c3e6fe99764c21a0cb0cf49ba0">B_4</a>&#160;&#160;&#160;0x6C4</td></tr>
+
+<tr class="memitem:a478a193edbf892ab53da8d656a73417c" id="r_a478a193edbf892ab53da8d656a73417c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a478a193edbf892ab53da8d656a73417c">C_5</a>&#160;&#160;&#160;0x6D5</td></tr>
+
+<tr class="memitem:a4d47fc38b83dc3e81f6075313cb8e8b2" id="r_a4d47fc38b83dc3e81f6075313cb8e8b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d47fc38b83dc3e81f6075313cb8e8b2">CS5</a>&#160;&#160;&#160;0x6E6</td></tr>
+
+<tr class="memitem:a9dfa2b67599fe1872e595e03164aa741" id="r_a9dfa2b67599fe1872e595e03164aa741"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dfa2b67599fe1872e595e03164aa741">D_5</a>&#160;&#160;&#160;0x6F6</td></tr>
+
+<tr class="memitem:aff45911af416824b7b1876032e6ab64f" id="r_aff45911af416824b7b1876032e6ab64f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff45911af416824b7b1876032e6ab64f">DS5</a>&#160;&#160;&#160;0x705</td></tr>
+
+<tr class="memitem:a3fccfb77ab3cf54564748bd62bd6736e" id="r_a3fccfb77ab3cf54564748bd62bd6736e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fccfb77ab3cf54564748bd62bd6736e">E_5</a>&#160;&#160;&#160;0x713</td></tr>
+
+<tr class="memitem:adc62e34d3d434791472398628ae91f16" id="r_adc62e34d3d434791472398628ae91f16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc62e34d3d434791472398628ae91f16">F_5</a>&#160;&#160;&#160;0x720</td></tr>
+
+<tr class="memitem:a469974f47e2dce4307ab5e18da3838f4" id="r_a469974f47e2dce4307ab5e18da3838f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a469974f47e2dce4307ab5e18da3838f4">FS5</a>&#160;&#160;&#160;0x72D</td></tr>
+
+<tr class="memitem:a47abf2a5fb019367e3d802356ddb6418" id="r_a47abf2a5fb019367e3d802356ddb6418"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47abf2a5fb019367e3d802356ddb6418">G_5</a>&#160;&#160;&#160;0x739</td></tr>
+
+<tr class="memitem:acf85bd8d489ab93a818e0e8c79dd28c3" id="r_acf85bd8d489ab93a818e0e8c79dd28c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf85bd8d489ab93a818e0e8c79dd28c3">GS5</a>&#160;&#160;&#160;0x744</td></tr>
+
+<tr class="memitem:a887914d18ffe3a53d244a4ed20173230" id="r_a887914d18ffe3a53d244a4ed20173230"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a887914d18ffe3a53d244a4ed20173230">A_5</a>&#160;&#160;&#160;0x74E</td></tr>
+
+<tr class="memitem:a313e572a433869588109e569c39e544e" id="r_a313e572a433869588109e569c39e544e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a313e572a433869588109e569c39e544e">AS5</a>&#160;&#160;&#160;0x758</td></tr>
+
+<tr class="memitem:aaa74cfe6d9adf3e13ec3d00f4d29ec6b" id="r_aaa74cfe6d9adf3e13ec3d00f4d29ec6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa74cfe6d9adf3e13ec3d00f4d29ec6b">B_5</a>&#160;&#160;&#160;0x762</td></tr>
+
+<tr class="memitem:a15607ea9b14704d4448bfed4c23c0869" id="r_a15607ea9b14704d4448bfed4c23c0869"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15607ea9b14704d4448bfed4c23c0869">C_6</a>&#160;&#160;&#160;0x76B</td></tr>
+
+<tr class="memitem:a9cf7186015f5a77e4796eee416867ab3" id="r_a9cf7186015f5a77e4796eee416867ab3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cf7186015f5a77e4796eee416867ab3">CS6</a>&#160;&#160;&#160;0x773</td></tr>
+
+<tr class="memitem:ac7f23aeccbe0b5305fed7b2aa97fab0d" id="r_ac7f23aeccbe0b5305fed7b2aa97fab0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7f23aeccbe0b5305fed7b2aa97fab0d">D_6</a>&#160;&#160;&#160;0x77B</td></tr>
+
+<tr class="memitem:a44e482336254e743edaf62af1ad9fba8" id="r_a44e482336254e743edaf62af1ad9fba8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44e482336254e743edaf62af1ad9fba8">DS6</a>&#160;&#160;&#160;0x782</td></tr>
+
+<tr class="memitem:ae89f3a73d18003b089144a481e8acfc6" id="r_ae89f3a73d18003b089144a481e8acfc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae89f3a73d18003b089144a481e8acfc6">E_6</a>&#160;&#160;&#160;0x78A</td></tr>
+
+<tr class="memitem:ae2c99833f0529c30cacd5229aad81125" id="r_ae2c99833f0529c30cacd5229aad81125"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2c99833f0529c30cacd5229aad81125">F_6</a>&#160;&#160;&#160;0x790</td></tr>
+
+<tr class="memitem:a016c2199530d3393b4e255b0aad3456d" id="r_a016c2199530d3393b4e255b0aad3456d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a016c2199530d3393b4e255b0aad3456d">FS6</a>&#160;&#160;&#160;0x796</td></tr>
+
+<tr class="memitem:adb83e887398531866124d9e690525dd5" id="r_adb83e887398531866124d9e690525dd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb83e887398531866124d9e690525dd5">G_6</a>&#160;&#160;&#160;0x79C</td></tr>
+
+<tr class="memitem:a764f0d47e544aac0686460a2c4de5681" id="r_a764f0d47e544aac0686460a2c4de5681"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a764f0d47e544aac0686460a2c4de5681">GS6</a>&#160;&#160;&#160;0x7A2</td></tr>
+
+<tr class="memitem:a3aecea5c9f54f0637fa6388056e90db7" id="r_a3aecea5c9f54f0637fa6388056e90db7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aecea5c9f54f0637fa6388056e90db7">A_6</a>&#160;&#160;&#160;0x7A8</td></tr>
+
+<tr class="memitem:a8f30717590a8d55732dd65d1ad4fc9f2" id="r_a8f30717590a8d55732dd65d1ad4fc9f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f30717590a8d55732dd65d1ad4fc9f2">AS6</a>&#160;&#160;&#160;0x7AC</td></tr>
+
+<tr class="memitem:a8e1678e365084c503a0ef22257cc70e4" id="r_a8e1678e365084c503a0ef22257cc70e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e1678e365084c503a0ef22257cc70e4">B_6</a>&#160;&#160;&#160;0x7B1</td></tr>
+
+<tr class="memitem:a5333a37b798faee5b42200e376e30a8f" id="r_a5333a37b798faee5b42200e376e30a8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5333a37b798faee5b42200e376e30a8f">C_7</a>&#160;&#160;&#160;0x7B5</td></tr>
+
+<tr class="memitem:a92de6c3a5fad380a69d67671987822b1" id="r_a92de6c3a5fad380a69d67671987822b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92de6c3a5fad380a69d67671987822b1">CS7</a>&#160;&#160;&#160;0x7BA</td></tr>
+
+<tr class="memitem:aae7c342dd5d7d42ccf979deec2d954c7" id="r_aae7c342dd5d7d42ccf979deec2d954c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae7c342dd5d7d42ccf979deec2d954c7">D_7</a>&#160;&#160;&#160;0x7BD</td></tr>
+
+<tr class="memitem:adbc600f6efae5925093ee883738fe3ed" id="r_adbc600f6efae5925093ee883738fe3ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbc600f6efae5925093ee883738fe3ed">DS7</a>&#160;&#160;&#160;0x7C1</td></tr>
+
+<tr class="memitem:a3895c41725bcc84e6060194ff938a568" id="r_a3895c41725bcc84e6060194ff938a568"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3895c41725bcc84e6060194ff938a568">E_7</a>&#160;&#160;&#160;0x7C5</td></tr>
+
+<tr class="memitem:a177007ee38c6d2ad8a462e4296b56244" id="r_a177007ee38c6d2ad8a462e4296b56244"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a177007ee38c6d2ad8a462e4296b56244">F_7</a>&#160;&#160;&#160;0x7C8</td></tr>
+
+<tr class="memitem:a80cedc1045a1033cadfcb99dba2fd39e" id="r_a80cedc1045a1033cadfcb99dba2fd39e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80cedc1045a1033cadfcb99dba2fd39e">FS7</a>&#160;&#160;&#160;0x7CB</td></tr>
+
+<tr class="memitem:a9f3cc81ef9f4f7ef994cc21bac43443f" id="r_a9f3cc81ef9f4f7ef994cc21bac43443f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f3cc81ef9f4f7ef994cc21bac43443f">G_7</a>&#160;&#160;&#160;0x7CE</td></tr>
+
+<tr class="memitem:ad94175b4f70f3cc7f69425dd54827e94" id="r_ad94175b4f70f3cc7f69425dd54827e94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad94175b4f70f3cc7f69425dd54827e94">GS7</a>&#160;&#160;&#160;0x7D1</td></tr>
+
+<tr class="memitem:a791303a6261d488e8db7198ec87bbdf1" id="r_a791303a6261d488e8db7198ec87bbdf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a791303a6261d488e8db7198ec87bbdf1">A_7</a>&#160;&#160;&#160;0x7D4</td></tr>
+
+<tr class="memitem:a42cc4ae30541016c30cd57a0d71c10ff" id="r_a42cc4ae30541016c30cd57a0d71c10ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42cc4ae30541016c30cd57a0d71c10ff">AS7</a>&#160;&#160;&#160;0x7D6</td></tr>
+
+<tr class="memitem:a3ae499176edd17ad51d03efa5b013199" id="r_a3ae499176edd17ad51d03efa5b013199"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae499176edd17ad51d03efa5b013199">B_7</a>&#160;&#160;&#160;0x7D8</td></tr>
+
+<tr class="memitem:aa7ed4df52be910ca6d5dc8eb2d52cffd" id="r_aa7ed4df52be910ca6d5dc8eb2d52cffd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7ed4df52be910ca6d5dc8eb2d52cffd">C_8</a>&#160;&#160;&#160;0x7DB</td></tr>
+
+<tr class="memitem:a083623175b34340b14359a57c5107232" id="r_a083623175b34340b14359a57c5107232"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a083623175b34340b14359a57c5107232">CS8</a>&#160;&#160;&#160;0x7DD</td></tr>
+
+<tr class="memitem:a68e24d80290a8cfdfbf82b8a9b4b7ee8" id="r_a68e24d80290a8cfdfbf82b8a9b4b7ee8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68e24d80290a8cfdfbf82b8a9b4b7ee8">D_8</a>&#160;&#160;&#160;0x7DF</td></tr>
+
+<tr class="memitem:a92d1137a5fbced28aa8a360e7c582331" id="r_a92d1137a5fbced28aa8a360e7c582331"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92d1137a5fbced28aa8a360e7c582331">DS8</a>&#160;&#160;&#160;0x7E1</td></tr>
+
+<tr class="memitem:a5e583197e773e846869428de3866d1f6" id="r_a5e583197e773e846869428de3866d1f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e583197e773e846869428de3866d1f6">E_8</a>&#160;&#160;&#160;0x7E2</td></tr>
+
+<tr class="memitem:a746a5dc770f29d218377bf82d53a405d" id="r_a746a5dc770f29d218377bf82d53a405d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a746a5dc770f29d218377bf82d53a405d">F_8</a>&#160;&#160;&#160;0x7E4</td></tr>
+
+<tr class="memitem:ae3352c11851000f16946177a4f91c679" id="r_ae3352c11851000f16946177a4f91c679"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3352c11851000f16946177a4f91c679">FS8</a>&#160;&#160;&#160;0x7E6</td></tr>
+
+<tr class="memitem:abe7a87a946492c1c54f6bffd8b4c8007" id="r_abe7a87a946492c1c54f6bffd8b4c8007"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe7a87a946492c1c54f6bffd8b4c8007">G_8</a>&#160;&#160;&#160;0x7E7</td></tr>
+
+<tr class="memitem:a9bcc77758c742a9785eed805c40a965a" id="r_a9bcc77758c742a9785eed805c40a965a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bcc77758c742a9785eed805c40a965a">GS8</a>&#160;&#160;&#160;0x7E8</td></tr>
+
+<tr class="memitem:a928ac1513feaf4fef228e358936a9cc2" id="r_a928ac1513feaf4fef228e358936a9cc2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928ac1513feaf4fef228e358936a9cc2">A_8</a>&#160;&#160;&#160;0x7EA</td></tr>
+
+<tr class="memitem:a5544a622ef1ee578850602716d9ab368" id="r_a5544a622ef1ee578850602716d9ab368"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5544a622ef1ee578850602716d9ab368">AS8</a>&#160;&#160;&#160;0x7EB</td></tr>
+
+<tr class="memitem:a733c35b4be97fa56ed6aa85fff2b0e2f" id="r_a733c35b4be97fa56ed6aa85fff2b0e2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a733c35b4be97fa56ed6aa85fff2b0e2f">B_8</a>&#160;&#160;&#160;0x7EC</td></tr>
+
+<tr class="memitem:a664859e61bd1abfe1cd2b35025d20a03" id="r_a664859e61bd1abfe1cd2b35025d20a03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a664859e61bd1abfe1cd2b35025d20a03">C_9</a>&#160;&#160;&#160;0x7ED</td></tr>
+
+<tr class="memitem:a92aa931a4af27f5c05af032534c960a8" id="r_a92aa931a4af27f5c05af032534c960a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92aa931a4af27f5c05af032534c960a8">CS9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:aa79df4db4b281d66f7a3d5b1475922c2" id="r_aa79df4db4b281d66f7a3d5b1475922c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa79df4db4b281d66f7a3d5b1475922c2">D_9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a44761a8d4f485a2bf93bf8331e49ec31" id="r_a44761a8d4f485a2bf93bf8331e49ec31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44761a8d4f485a2bf93bf8331e49ec31">DS9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ade7e732054ddcd0971247d4d4a63a8f2" id="r_ade7e732054ddcd0971247d4d4a63a8f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade7e732054ddcd0971247d4d4a63a8f2">E_9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a595ccf4674f4cea3175b56efedb26d33" id="r_a595ccf4674f4cea3175b56efedb26d33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a595ccf4674f4cea3175b56efedb26d33">F_9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a6e166876c1f20402dcccb95292916311" id="r_a6e166876c1f20402dcccb95292916311"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e166876c1f20402dcccb95292916311">FS9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a6da5489efb3756ae09e7bb7bc87a98d0" id="r_a6da5489efb3756ae09e7bb7bc87a98d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6da5489efb3756ae09e7bb7bc87a98d0">G_9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a3581629818a0e818369d89bfcd9903c1" id="r_a3581629818a0e818369d89bfcd9903c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3581629818a0e818369d89bfcd9903c1">GS9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a66f4cfd8d8c08deb4f82e3112265e4e3" id="r_a66f4cfd8d8c08deb4f82e3112265e4e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66f4cfd8d8c08deb4f82e3112265e4e3">A_9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a4d1a6f38ef6a2e2981373f890637993b" id="r_a4d1a6f38ef6a2e2981373f890637993b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d1a6f38ef6a2e2981373f890637993b">AS9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a81c1cf3b95943a5842138dad99b9cd3f" id="r_a81c1cf3b95943a5842138dad99b9cd3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c1cf3b95943a5842138dad99b9cd3f">B_9</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a0865f0879ea021f74fd489bf59faf31f" id="r_a0865f0879ea021f74fd489bf59faf31f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0865f0879ea021f74fd489bf59faf31f">C_10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a0d56ad8731ae2e957a1f7b9085ec1fa8" id="r_a0d56ad8731ae2e957a1f7b9085ec1fa8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d56ad8731ae2e957a1f7b9085ec1fa8">CS10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a22f0ac2fd70de9057c7955b165986dd1" id="r_a22f0ac2fd70de9057c7955b165986dd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22f0ac2fd70de9057c7955b165986dd1">D_10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a3898d90ba9f6c9b51956a151334b1eee" id="r_a3898d90ba9f6c9b51956a151334b1eee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3898d90ba9f6c9b51956a151334b1eee">DS10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:aa640a410abe93b371fa17e4509e2f8a3" id="r_aa640a410abe93b371fa17e4509e2f8a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa640a410abe93b371fa17e4509e2f8a3">E_10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:ad2bbc602185324b0cde9903d4fb1f0cc" id="r_ad2bbc602185324b0cde9903d4fb1f0cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2bbc602185324b0cde9903d4fb1f0cc">F_10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a7386dbf754db33b32f109ab25b1a0f64" id="r_a7386dbf754db33b32f109ab25b1a0f64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7386dbf754db33b32f109ab25b1a0f64">FS10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:a8feae110be2bae361b2f5b84a53b00aa" id="r_a8feae110be2bae361b2f5b84a53b00aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8feae110be2bae361b2f5b84a53b00aa">G_10</a>&#160;&#160;&#160;0x00</td></tr>
+
+<tr class="memitem:abc79ac40465e3479d745652e28d98c60" id="r_abc79ac40465e3479d745652e28d98c60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc79ac40465e3479d745652e28d98c60">MINIMUM_AUDIBLE_NOTE</a>&#160;&#160;&#160;<a class="el" href="#ab121c2e05411ef3dd0eccb189ac7b88e">DS2</a></td></tr>
+
+<tr class="memitem:a98b60871dacb10124b4abf61ebeec0cc" id="r_a98b60871dacb10124b4abf61ebeec0cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98b60871dacb10124b4abf61ebeec0cc">MAXIMUM_AUDIBLE_NOTE</a>&#160;&#160;&#160;<a class="el" href="#a68e24d80290a8cfdfbf82b8a9b4b7ee8">D_8</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a105ba7d74fdc0474081533231189072d" id="r_a105ba7d74fdc0474081533231189072d"><td class="memItemLeft" align="right" valign="top">typedef struct SoundTrackKeyframe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105ba7d74fdc0474081533231189072d">SoundTrackKeyframe</a></td></tr>
+
+<tr class="memitem:a6cb7e8797228d3550df950061741e353" id="r_a6cb7e8797228d3550df950061741e353"><td class="memItemLeft" align="right" valign="top">typedef struct SoundTrackSpec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cb7e8797228d3550df950061741e353">SoundTrackSpec</a></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a4c163708785e8d1307953505e1f9b21d" name="a4c163708785e8d1307953505e1f9b21d"></a>
+<h2 class="memtitle">__MAXIMUM_VOLUME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __MAXIMUM_VOLUME&#160;&#160;&#160;0xF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">23</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a97c5e88dc990d06880997390ec1c4f14" name="a97c5e88dc990d06880997390ec1c4f14"></a>
+<h2 class="memtitle">A_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">34</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3846181cf670f578e43772faa4bd3f75" name="a3846181cf670f578e43772faa4bd3f75"></a>
+<h2 class="memtitle">A_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">46</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a01e92799f99fb681f6db217e5fcce84d" name="a01e92799f99fb681f6db217e5fcce84d"></a>
+<h2 class="memtitle">A_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_2&#160;&#160;&#160;0x274</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">59</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a304db09cca37e303ccb2af2b5e669b84" name="a304db09cca37e303ccb2af2b5e669b84"></a>
+<h2 class="memtitle">A_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_3&#160;&#160;&#160;0x53A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">71</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a45c10761257fe9b986909363bec442a7" name="a45c10761257fe9b986909363bec442a7"></a>
+<h2 class="memtitle">A_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_4&#160;&#160;&#160;0x69D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">83</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a887914d18ffe3a53d244a4ed20173230" name="a887914d18ffe3a53d244a4ed20173230"></a>
+<h2 class="memtitle">A_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_5&#160;&#160;&#160;0x74E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">95</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3aecea5c9f54f0637fa6388056e90db7" name="a3aecea5c9f54f0637fa6388056e90db7"></a>
+<h2 class="memtitle">A_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_6&#160;&#160;&#160;0x7A8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">107</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a791303a6261d488e8db7198ec87bbdf1" name="a791303a6261d488e8db7198ec87bbdf1"></a>
+<h2 class="memtitle">A_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_7&#160;&#160;&#160;0x7D4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">119</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a928ac1513feaf4fef228e358936a9cc2" name="a928ac1513feaf4fef228e358936a9cc2"></a>
+<h2 class="memtitle">A_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_8&#160;&#160;&#160;0x7EA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">133</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a66f4cfd8d8c08deb4f82e3112265e4e3" name="a66f4cfd8d8c08deb4f82e3112265e4e3"></a>
+<h2 class="memtitle">A_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define A_9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">145</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac7f91d81b380cca1e459761347c6ba77" name="ac7f91d81b380cca1e459761347c6ba77"></a>
+<h2 class="memtitle">AS0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">35</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="af1ff96d6b69338d926bef11faa405cf7" name="af1ff96d6b69338d926bef11faa405cf7"></a>
+<h2 class="memtitle">AS1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">47</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a29dd91765ee8fbfa6a2edfe924854799" name="a29dd91765ee8fbfa6a2edfe924854799"></a>
+<h2 class="memtitle">AS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS2&#160;&#160;&#160;0x2C3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">60</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3ed004224d72334cdd86ed109d1884ca" name="a3ed004224d72334cdd86ed109d1884ca"></a>
+<h2 class="memtitle">AS3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS3&#160;&#160;&#160;0x562</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">72</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8239ad1c27a77489560801fd0c6f7635" name="a8239ad1c27a77489560801fd0c6f7635"></a>
+<h2 class="memtitle">AS4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS4&#160;&#160;&#160;0x6B1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">84</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a313e572a433869588109e569c39e544e" name="a313e572a433869588109e569c39e544e"></a>
+<h2 class="memtitle">AS5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS5&#160;&#160;&#160;0x758</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">96</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f30717590a8d55732dd65d1ad4fc9f2" name="a8f30717590a8d55732dd65d1ad4fc9f2"></a>
+<h2 class="memtitle">AS6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS6&#160;&#160;&#160;0x7AC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">108</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a42cc4ae30541016c30cd57a0d71c10ff" name="a42cc4ae30541016c30cd57a0d71c10ff"></a>
+<h2 class="memtitle">AS7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS7&#160;&#160;&#160;0x7D6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">120</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a5544a622ef1ee578850602716d9ab368" name="a5544a622ef1ee578850602716d9ab368"></a>
+<h2 class="memtitle">AS8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS8&#160;&#160;&#160;0x7EB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">134</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a4d1a6f38ef6a2e2981373f890637993b" name="a4d1a6f38ef6a2e2981373f890637993b"></a>
+<h2 class="memtitle">AS9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define AS9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">146</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="afee3b79e74eab7e64cf6b8519f31a293" name="afee3b79e74eab7e64cf6b8519f31a293"></a>
+<h2 class="memtitle">B_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">36</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a463f798baeb150f22f55d67ed19b382c" name="a463f798baeb150f22f55d67ed19b382c"></a>
+<h2 class="memtitle">B_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">48</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a49ca5808c60d484da75d3c8fb65881c4" name="a49ca5808c60d484da75d3c8fb65881c4"></a>
+<h2 class="memtitle">B_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_2&#160;&#160;&#160;0x30F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">61</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aadb600dad99889cd1ac4019648c23b4c" name="aadb600dad99889cd1ac4019648c23b4c"></a>
+<h2 class="memtitle">B_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_3&#160;&#160;&#160;0x587</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">73</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aa39f42c3e6fe99764c21a0cb0cf49ba0" name="aa39f42c3e6fe99764c21a0cb0cf49ba0"></a>
+<h2 class="memtitle">B_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_4&#160;&#160;&#160;0x6C4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">85</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aaa74cfe6d9adf3e13ec3d00f4d29ec6b" name="aaa74cfe6d9adf3e13ec3d00f4d29ec6b"></a>
+<h2 class="memtitle">B_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_5&#160;&#160;&#160;0x762</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">97</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8e1678e365084c503a0ef22257cc70e4" name="a8e1678e365084c503a0ef22257cc70e4"></a>
+<h2 class="memtitle">B_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_6&#160;&#160;&#160;0x7B1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">109</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3ae499176edd17ad51d03efa5b013199" name="a3ae499176edd17ad51d03efa5b013199"></a>
+<h2 class="memtitle">B_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_7&#160;&#160;&#160;0x7D8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">121</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a733c35b4be97fa56ed6aa85fff2b0e2f" name="a733c35b4be97fa56ed6aa85fff2b0e2f"></a>
+<h2 class="memtitle">B_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_8&#160;&#160;&#160;0x7EC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">135</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a81c1cf3b95943a5842138dad99b9cd3f" name="a81c1cf3b95943a5842138dad99b9cd3f"></a>
+<h2 class="memtitle">B_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define B_9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">147</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a32760b6cba424cf3ea6357f5a133ddec" name="a32760b6cba424cf3ea6357f5a133ddec"></a>
+<h2 class="memtitle">C_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">25</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a6a1247f50df9b4c773a116a7cfd7b0cb" name="a6a1247f50df9b4c773a116a7cfd7b0cb"></a>
+<h2 class="memtitle">C_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">37</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a0865f0879ea021f74fd489bf59faf31f" name="a0865f0879ea021f74fd489bf59faf31f"></a>
+<h2 class="memtitle">C_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">148</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a7bdc09f21f2074c6d8b75893c5d7216d" name="a7bdc09f21f2074c6d8b75893c5d7216d"></a>
+<h2 class="memtitle">C_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_2&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">49</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ab84f41f617f7004cb93cc27999c490e1" name="ab84f41f617f7004cb93cc27999c490e1"></a>
+<h2 class="memtitle">C_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_3&#160;&#160;&#160;0x356</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">62</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="affc7d86d86dc6a7875a46f7f7d1f5308" name="affc7d86d86dc6a7875a46f7f7d1f5308"></a>
+<h2 class="memtitle">C_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_4&#160;&#160;&#160;0x5AB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">74</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a478a193edbf892ab53da8d656a73417c" name="a478a193edbf892ab53da8d656a73417c"></a>
+<h2 class="memtitle">C_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_5&#160;&#160;&#160;0x6D5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">86</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a15607ea9b14704d4448bfed4c23c0869" name="a15607ea9b14704d4448bfed4c23c0869"></a>
+<h2 class="memtitle">C_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_6&#160;&#160;&#160;0x76B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">98</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a5333a37b798faee5b42200e376e30a8f" name="a5333a37b798faee5b42200e376e30a8f"></a>
+<h2 class="memtitle">C_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_7&#160;&#160;&#160;0x7B5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">110</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aa7ed4df52be910ca6d5dc8eb2d52cffd" name="aa7ed4df52be910ca6d5dc8eb2d52cffd"></a>
+<h2 class="memtitle">C_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_8&#160;&#160;&#160;0x7DB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">122</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a664859e61bd1abfe1cd2b35025d20a03" name="a664859e61bd1abfe1cd2b35025d20a03"></a>
+<h2 class="memtitle">C_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define C_9&#160;&#160;&#160;0x7ED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">136</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8028172f830a00215e1e2411af0f89eb" name="a8028172f830a00215e1e2411af0f89eb"></a>
+<h2 class="memtitle">CS0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">26</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="afc3c191d4a580107456963e1286b3d42" name="afc3c191d4a580107456963e1286b3d42"></a>
+<h2 class="memtitle">CS1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">38</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a0d56ad8731ae2e957a1f7b9085ec1fa8" name="a0d56ad8731ae2e957a1f7b9085ec1fa8"></a>
+<h2 class="memtitle">CS10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">149</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3e759404ee1066f529adc98fab60ff21" name="a3e759404ee1066f529adc98fab60ff21"></a>
+<h2 class="memtitle">CS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS2&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">50</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aa7b5a8fb9c4dba926d34a4e0f02dff63" name="aa7b5a8fb9c4dba926d34a4e0f02dff63"></a>
+<h2 class="memtitle">CS3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS3&#160;&#160;&#160;0x399</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">63</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac61464a9640f75e89764202d5774ea6f" name="ac61464a9640f75e89764202d5774ea6f"></a>
+<h2 class="memtitle">CS4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS4&#160;&#160;&#160;0x5CC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">75</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a4d47fc38b83dc3e81f6075313cb8e8b2" name="a4d47fc38b83dc3e81f6075313cb8e8b2"></a>
+<h2 class="memtitle">CS5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS5&#160;&#160;&#160;0x6E6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">87</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a9cf7186015f5a77e4796eee416867ab3" name="a9cf7186015f5a77e4796eee416867ab3"></a>
+<h2 class="memtitle">CS6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS6&#160;&#160;&#160;0x773</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">99</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a92de6c3a5fad380a69d67671987822b1" name="a92de6c3a5fad380a69d67671987822b1"></a>
+<h2 class="memtitle">CS7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS7&#160;&#160;&#160;0x7BA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">111</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a083623175b34340b14359a57c5107232" name="a083623175b34340b14359a57c5107232"></a>
+<h2 class="memtitle">CS8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS8&#160;&#160;&#160;0x7DD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">123</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a92aa931a4af27f5c05af032534c960a8" name="a92aa931a4af27f5c05af032534c960a8"></a>
+<h2 class="memtitle">CS9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define CS9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">137</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac645a96969f762c1636ef0a4923d461e" name="ac645a96969f762c1636ef0a4923d461e"></a>
+<h2 class="memtitle">D_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">27</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ab31d832d82bef7f1c6df989c3040a216" name="ab31d832d82bef7f1c6df989c3040a216"></a>
+<h2 class="memtitle">D_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">39</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a22f0ac2fd70de9057c7955b165986dd1" name="a22f0ac2fd70de9057c7955b165986dd1"></a>
+<h2 class="memtitle">D_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">150</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a6b9fc4d1f3b726959596f71e0e5bbe06" name="a6b9fc4d1f3b726959596f71e0e5bbe06"></a>
+<h2 class="memtitle">D_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_2&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">51</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a1d003907e9c6c3d9532ba99e3e8a1219" name="a1d003907e9c6c3d9532ba99e3e8a1219"></a>
+<h2 class="memtitle">D_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_3&#160;&#160;&#160;0x3D8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">64</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ae41a0a71076b891a7a2e5a2e6530c5" name="a5ae41a0a71076b891a7a2e5a2e6530c5"></a>
+<h2 class="memtitle">D_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_4&#160;&#160;&#160;0x5EC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">76</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a9dfa2b67599fe1872e595e03164aa741" name="a9dfa2b67599fe1872e595e03164aa741"></a>
+<h2 class="memtitle">D_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_5&#160;&#160;&#160;0x6F6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">88</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac7f23aeccbe0b5305fed7b2aa97fab0d" name="ac7f23aeccbe0b5305fed7b2aa97fab0d"></a>
+<h2 class="memtitle">D_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_6&#160;&#160;&#160;0x77B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">100</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aae7c342dd5d7d42ccf979deec2d954c7" name="aae7c342dd5d7d42ccf979deec2d954c7"></a>
+<h2 class="memtitle">D_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_7&#160;&#160;&#160;0x7BD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">112</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a68e24d80290a8cfdfbf82b8a9b4b7ee8" name="a68e24d80290a8cfdfbf82b8a9b4b7ee8"></a>
+<h2 class="memtitle">D_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_8&#160;&#160;&#160;0x7DF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">124</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aa79df4db4b281d66f7a3d5b1475922c2" name="aa79df4db4b281d66f7a3d5b1475922c2"></a>
+<h2 class="memtitle">D_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define D_9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">138</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ae968eb788cf881de0245dc1905c4b70f" name="ae968eb788cf881de0245dc1905c4b70f"></a>
+<h2 class="memtitle">DS0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">28</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a13de9a5cf550b533a7436e4aeb2ee3c4" name="a13de9a5cf550b533a7436e4aeb2ee3c4"></a>
+<h2 class="memtitle">DS1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">40</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3898d90ba9f6c9b51956a151334b1eee" name="a3898d90ba9f6c9b51956a151334b1eee"></a>
+<h2 class="memtitle">DS10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">151</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ab121c2e05411ef3dd0eccb189ac7b88e" name="ab121c2e05411ef3dd0eccb189ac7b88e"></a>
+<h2 class="memtitle">DS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS2&#160;&#160;&#160;0x27</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">53</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="abb2543c6b8c507a9034ce65b83a7f464" name="abb2543c6b8c507a9034ce65b83a7f464"></a>
+<h2 class="memtitle">DS3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS3&#160;&#160;&#160;0x414</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">65</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac10acfaf788d074341e5d79527bd82bd" name="ac10acfaf788d074341e5d79527bd82bd"></a>
+<h2 class="memtitle">DS4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS4&#160;&#160;&#160;0x60B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">77</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aff45911af416824b7b1876032e6ab64f" name="aff45911af416824b7b1876032e6ab64f"></a>
+<h2 class="memtitle">DS5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS5&#160;&#160;&#160;0x705</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">89</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a44e482336254e743edaf62af1ad9fba8" name="a44e482336254e743edaf62af1ad9fba8"></a>
+<h2 class="memtitle">DS6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS6&#160;&#160;&#160;0x782</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">101</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="adbc600f6efae5925093ee883738fe3ed" name="adbc600f6efae5925093ee883738fe3ed"></a>
+<h2 class="memtitle">DS7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS7&#160;&#160;&#160;0x7C1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">113</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a92d1137a5fbced28aa8a360e7c582331" name="a92d1137a5fbced28aa8a360e7c582331"></a>
+<h2 class="memtitle">DS8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS8&#160;&#160;&#160;0x7E1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">127</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a44761a8d4f485a2bf93bf8331e49ec31" name="a44761a8d4f485a2bf93bf8331e49ec31"></a>
+<h2 class="memtitle">DS9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define DS9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">139</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="af5ca871f7144e74bbce6cdecb754accd" name="af5ca871f7144e74bbce6cdecb754accd"></a>
+<h2 class="memtitle">E_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">29</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ae380c7a09aeee58129cbdd83ac19482a" name="ae380c7a09aeee58129cbdd83ac19482a"></a>
+<h2 class="memtitle">E_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">41</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="aa640a410abe93b371fa17e4509e2f8a3" name="aa640a410abe93b371fa17e4509e2f8a3"></a>
+<h2 class="memtitle">E_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">152</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a99256e4e284d2dba4ebafbee1680786b" name="a99256e4e284d2dba4ebafbee1680786b"></a>
+<h2 class="memtitle">E_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_2&#160;&#160;&#160;0x98</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">54</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a54aa391ca059e933375bb993f14714a5" name="a54aa391ca059e933375bb993f14714a5"></a>
+<h2 class="memtitle">E_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_3&#160;&#160;&#160;0x44C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">66</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a7f720c5acdddfe9fba1f1de2f640c198" name="a7f720c5acdddfe9fba1f1de2f640c198"></a>
+<h2 class="memtitle">E_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_4&#160;&#160;&#160;0x626</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">78</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3fccfb77ab3cf54564748bd62bd6736e" name="a3fccfb77ab3cf54564748bd62bd6736e"></a>
+<h2 class="memtitle">E_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_5&#160;&#160;&#160;0x713</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">90</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ae89f3a73d18003b089144a481e8acfc6" name="ae89f3a73d18003b089144a481e8acfc6"></a>
+<h2 class="memtitle">E_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_6&#160;&#160;&#160;0x78A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">102</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3895c41725bcc84e6060194ff938a568" name="a3895c41725bcc84e6060194ff938a568"></a>
+<h2 class="memtitle">E_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_7&#160;&#160;&#160;0x7C5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">114</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a5e583197e773e846869428de3866d1f6" name="a5e583197e773e846869428de3866d1f6"></a>
+<h2 class="memtitle">E_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_8&#160;&#160;&#160;0x7E2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">128</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ade7e732054ddcd0971247d4d4a63a8f2" name="ade7e732054ddcd0971247d4d4a63a8f2"></a>
+<h2 class="memtitle">E_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define E_9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">140</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a59caba0f9aad81c6d2e6465b7380089f" name="a59caba0f9aad81c6d2e6465b7380089f"></a>
+<h2 class="memtitle">F_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">30</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a435f756795e3454fe3e181d5434515ca" name="a435f756795e3454fe3e181d5434515ca"></a>
+<h2 class="memtitle">F_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">42</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ad2bbc602185324b0cde9903d4fb1f0cc" name="ad2bbc602185324b0cde9903d4fb1f0cc"></a>
+<h2 class="memtitle">F_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">153</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="af0d28d590ed60c797d6caec15ceccdd0" name="af0d28d590ed60c797d6caec15ceccdd0"></a>
+<h2 class="memtitle">F_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_2&#160;&#160;&#160;0x102</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">55</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f409cf3682b3db2d1d48ae947e8ca71" name="a8f409cf3682b3db2d1d48ae947e8ca71"></a>
+<h2 class="memtitle">F_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_3&#160;&#160;&#160;0x481</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">67</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a7db10cdc8b1ff4a1880528ac1cb12686" name="a7db10cdc8b1ff4a1880528ac1cb12686"></a>
+<h2 class="memtitle">F_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_4&#160;&#160;&#160;0x640</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">79</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="adc62e34d3d434791472398628ae91f16" name="adc62e34d3d434791472398628ae91f16"></a>
+<h2 class="memtitle">F_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_5&#160;&#160;&#160;0x720</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">91</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ae2c99833f0529c30cacd5229aad81125" name="ae2c99833f0529c30cacd5229aad81125"></a>
+<h2 class="memtitle">F_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_6&#160;&#160;&#160;0x790</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">103</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a177007ee38c6d2ad8a462e4296b56244" name="a177007ee38c6d2ad8a462e4296b56244"></a>
+<h2 class="memtitle">F_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_7&#160;&#160;&#160;0x7C8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">115</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a746a5dc770f29d218377bf82d53a405d" name="a746a5dc770f29d218377bf82d53a405d"></a>
+<h2 class="memtitle">F_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_8&#160;&#160;&#160;0x7E4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">129</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a595ccf4674f4cea3175b56efedb26d33" name="a595ccf4674f4cea3175b56efedb26d33"></a>
+<h2 class="memtitle">F_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define F_9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">141</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a4212b62205939b746f05184dc0b65c62" name="a4212b62205939b746f05184dc0b65c62"></a>
+<h2 class="memtitle">FS0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">31</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ab9f706a9dd6d19fdec39497df5f8819b" name="ab9f706a9dd6d19fdec39497df5f8819b"></a>
+<h2 class="memtitle">FS1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">43</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a7386dbf754db33b32f109ab25b1a0f64" name="a7386dbf754db33b32f109ab25b1a0f64"></a>
+<h2 class="memtitle">FS10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">154</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8d6ebe4f8636e59ae31bf94c5ccf1142" name="a8d6ebe4f8636e59ae31bf94c5ccf1142"></a>
+<h2 class="memtitle">FS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS2&#160;&#160;&#160;0x167</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">56</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac90f957f5ee0efad2f1e7658f440ede8" name="ac90f957f5ee0efad2f1e7658f440ede8"></a>
+<h2 class="memtitle">FS3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS3&#160;&#160;&#160;0x4B3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">68</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a4e0fc031c33884eb98190cce89434968" name="a4e0fc031c33884eb98190cce89434968"></a>
+<h2 class="memtitle">FS4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS4&#160;&#160;&#160;0x659</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">80</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a469974f47e2dce4307ab5e18da3838f4" name="a469974f47e2dce4307ab5e18da3838f4"></a>
+<h2 class="memtitle">FS5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS5&#160;&#160;&#160;0x72D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">92</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a016c2199530d3393b4e255b0aad3456d" name="a016c2199530d3393b4e255b0aad3456d"></a>
+<h2 class="memtitle">FS6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS6&#160;&#160;&#160;0x796</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">104</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a80cedc1045a1033cadfcb99dba2fd39e" name="a80cedc1045a1033cadfcb99dba2fd39e"></a>
+<h2 class="memtitle">FS7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS7&#160;&#160;&#160;0x7CB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">116</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ae3352c11851000f16946177a4f91c679" name="ae3352c11851000f16946177a4f91c679"></a>
+<h2 class="memtitle">FS8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS8&#160;&#160;&#160;0x7E6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">130</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a6e166876c1f20402dcccb95292916311" name="a6e166876c1f20402dcccb95292916311"></a>
+<h2 class="memtitle">FS9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define FS9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">142</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ac703da9f2a9751f635b8153bd6ec2b63" name="ac703da9f2a9751f635b8153bd6ec2b63"></a>
+<h2 class="memtitle">G_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">32</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a761fc582c4880846dbbde122597bfabc" name="a761fc582c4880846dbbde122597bfabc"></a>
+<h2 class="memtitle">G_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">44</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8feae110be2bae361b2f5b84a53b00aa" name="a8feae110be2bae361b2f5b84a53b00aa"></a>
+<h2 class="memtitle">G_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_10&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">155</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a33c48bf8f577e4d63de43b232cca2119" name="a33c48bf8f577e4d63de43b232cca2119"></a>
+<h2 class="memtitle">G_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_2&#160;&#160;&#160;0x1C6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">57</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a9127ea80f6b4a1b7e3a78156b9681f57" name="a9127ea80f6b4a1b7e3a78156b9681f57"></a>
+<h2 class="memtitle">G_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_3&#160;&#160;&#160;0x4E3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">69</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8ef41a13bb5beec555bd42628742f4b2" name="a8ef41a13bb5beec555bd42628742f4b2"></a>
+<h2 class="memtitle">G_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_4&#160;&#160;&#160;0x672</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">81</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a47abf2a5fb019367e3d802356ddb6418" name="a47abf2a5fb019367e3d802356ddb6418"></a>
+<h2 class="memtitle">G_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_5&#160;&#160;&#160;0x739</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">93</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="adb83e887398531866124d9e690525dd5" name="adb83e887398531866124d9e690525dd5"></a>
+<h2 class="memtitle">G_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_6&#160;&#160;&#160;0x79C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">105</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a9f3cc81ef9f4f7ef994cc21bac43443f" name="a9f3cc81ef9f4f7ef994cc21bac43443f"></a>
+<h2 class="memtitle">G_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_7&#160;&#160;&#160;0x7CE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">117</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="abe7a87a946492c1c54f6bffd8b4c8007" name="abe7a87a946492c1c54f6bffd8b4c8007"></a>
+<h2 class="memtitle">G_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_8&#160;&#160;&#160;0x7E7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">131</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a6da5489efb3756ae09e7bb7bc87a98d0" name="a6da5489efb3756ae09e7bb7bc87a98d0"></a>
+<h2 class="memtitle">G_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define G_9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">143</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3547c69793eb36540810e8f9394c5a9c" name="a3547c69793eb36540810e8f9394c5a9c"></a>
+<h2 class="memtitle">GS0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS0&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">33</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f7212aefd9a1cb2402a48de45c452d1" name="a0f7212aefd9a1cb2402a48de45c452d1"></a>
+<h2 class="memtitle">GS1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS1&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">45</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a9a3b7528adab34a4f1ee47b9e5142bca" name="a9a3b7528adab34a4f1ee47b9e5142bca"></a>
+<h2 class="memtitle">GS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS2&#160;&#160;&#160;0x21F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">58</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a8ff0a275545cdb618ecac6d6e4239db7" name="a8ff0a275545cdb618ecac6d6e4239db7"></a>
+<h2 class="memtitle">GS3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS3&#160;&#160;&#160;0x510</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">70</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a5a94e74b473a0a36c42259855e3b18a8" name="a5a94e74b473a0a36c42259855e3b18a8"></a>
+<h2 class="memtitle">GS4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS4&#160;&#160;&#160;0x688</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">82</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="acf85bd8d489ab93a818e0e8c79dd28c3" name="acf85bd8d489ab93a818e0e8c79dd28c3"></a>
+<h2 class="memtitle">GS5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS5&#160;&#160;&#160;0x744</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">94</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a764f0d47e544aac0686460a2c4de5681" name="a764f0d47e544aac0686460a2c4de5681"></a>
+<h2 class="memtitle">GS6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS6&#160;&#160;&#160;0x7A2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">106</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="ad94175b4f70f3cc7f69425dd54827e94" name="ad94175b4f70f3cc7f69425dd54827e94"></a>
+<h2 class="memtitle">GS7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS7&#160;&#160;&#160;0x7D1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">118</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a9bcc77758c742a9785eed805c40a965a" name="a9bcc77758c742a9785eed805c40a965a"></a>
+<h2 class="memtitle">GS8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS8&#160;&#160;&#160;0x7E8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">132</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a3581629818a0e818369d89bfcd9903c1" name="a3581629818a0e818369d89bfcd9903c1"></a>
+<h2 class="memtitle">GS9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define GS9&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">144</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="a98b60871dacb10124b4abf61ebeec0cc" name="a98b60871dacb10124b4abf61ebeec0cc"></a>
+<h2 class="memtitle">MAXIMUM_AUDIBLE_NOTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define MAXIMUM_AUDIBLE_NOTE&#160;&#160;&#160;<a class="el" href="#a68e24d80290a8cfdfbf82b8a9b4b7ee8">D_8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">158</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<a id="abc79ac40465e3479d745652e28d98c60" name="abc79ac40465e3479d745652e28d98c60"></a>
+<h2 class="memtitle">MINIMUM_AUDIBLE_NOTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define MINIMUM_AUDIBLE_NOTE&#160;&#160;&#160;<a class="el" href="#ab121c2e05411ef3dd0eccb189ac7b88e">DS2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8h-source/">157</a> of file <a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a105ba7d74fdc0474081533231189072d" name="a105ba7d74fdc0474081533231189072d"></a>
+<h2 class="memtitle">SoundTrackKeyframe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct SoundTrackKeyframe SoundTrackKeyframe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A sound keyframe </p>
+
+</div>
+</div>
+<a id="a6cb7e8797228d3550df950061741e353" name="a6cb7e8797228d3550df950061741e353"></a>
+<h2 class="memtitle">SoundTrackSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct SoundTrackSpec SoundTrackSpec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-sound/">Sound</a> Track </p>
+
+</div>
+</div>
+</div>
+
+
+</div>

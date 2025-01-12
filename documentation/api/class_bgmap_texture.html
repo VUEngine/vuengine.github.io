@@ -1,0 +1,768 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BgmapTexture Class Reference"
+permalink: documentation/api/class-bgmap-texture/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">BgmapTexture Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for BgmapTexture:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_bgmap_texture.png" usemap="#BgmapTexture_map" alt />
+  <map id="BgmapTexture_map" name="BgmapTexture_map">
+<area href="/documentation/api/class-texture/" alt="Texture" shape="rect" coords="0,0,92,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7b8c0dfdfcb27150a3b88c9ccc6ab07f" id="r_a7b8c0dfdfcb27150a3b88c9ccc6ab07f"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b8c0dfdfcb27150a3b88c9ccc6ab07f">BgmapTextureSpec</a></td></tr>
+
+<tr class="memitem:a831c808be60ac578f8355d38ec885409" id="r_a831c808be60ac578f8355d38ec885409"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="#a7b8c0dfdfcb27150a3b88c9ccc6ab07f">BgmapTextureSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a831c808be60ac578f8355d38ec885409">BgmapTextureROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4e83fd02d139187302f437bacc85d797" id="r_a4e83fd02d139187302f437bacc85d797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e83fd02d139187302f437bacc85d797">constructor</a> (const <a class="el" href="#a7b8c0dfdfcb27150a3b88c9ccc6ab07f">BgmapTextureSpec</a> *bgmapTextureSpec, <a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="/documentation/api/class-texture/">id</a>)</td></tr>
+
+<tr class="memitem:aa61f6bf6ba3d4d1576131d04d9c286fa" id="r_aa61f6bf6ba3d4d1576131d04d9c286fa"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa61f6bf6ba3d4d1576131d04d9c286fa">write</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> maximumTextureRowsToWrite)</td></tr>
+
+<tr class="memitem:a8fa0548176b28467ffb9a1c0e872e40d" id="r_a8fa0548176b28467ffb9a1c0e872e40d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fa0548176b28467ffb9a1c0e872e40d">rewrite</a> ()</td></tr>
+<tr class="memdesc:a8fa0548176b28467ffb9a1c0e872e40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite graphical data to the allocated BGMAP space.  <br /></td></tr>
+
+<tr class="memitem:a126ba9258a393c78140f012f62679329" id="r_a126ba9258a393c78140f012f62679329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a126ba9258a393c78140f012f62679329">setSegment</a> (<a class="el" href="/documentation/api/-types-8h/">int8</a> <a class="el" href="#a68b3eb606cac886ba8e48e309c382fa2">segment</a>)</td></tr>
+
+<tr class="memitem:a4bebeb2306014f29178b0ad6c3575ddc" id="r_a4bebeb2306014f29178b0ad6c3575ddc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bebeb2306014f29178b0ad6c3575ddc">getSegment</a> ()</td></tr>
+
+<tr class="memitem:a0a88059d42d3bc71cf53a0963e6845dd" id="r_a0a88059d42d3bc71cf53a0963e6845dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a88059d42d3bc71cf53a0963e6845dd">setOffsets</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a>, <a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a>)</td></tr>
+
+<tr class="memitem:a89ad2b58248a1a129871278544581fc0" id="r_a89ad2b58248a1a129871278544581fc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ad2b58248a1a129871278544581fc0">getXOffset</a> ()</td></tr>
+
+<tr class="memitem:a7dc941d16ba2c4f81b32dc11c4dd00ae" id="r_a7dc941d16ba2c4f81b32dc11c4dd00ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dc941d16ba2c4f81b32dc11c4dd00ae">getYOffset</a> ()</td></tr>
+
+<tr class="memitem:a7c9cad9737766e6abc74d07c5a461a0f" id="r_a7c9cad9737766e6abc74d07c5a461a0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c9cad9737766e6abc74d07c5a461a0f">setHorizontalFlip</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> value)</td></tr>
+
+<tr class="memitem:ac52fbf20d6177a656258bde63d508039" id="r_ac52fbf20d6177a656258bde63d508039"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52fbf20d6177a656258bde63d508039">setVerticalFlip</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> value)</td></tr>
+
+<tr class="memitem:a621f3983eadc3fc07e8d8d03727f439c" id="r_a621f3983eadc3fc07e8d8d03727f439c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a621f3983eadc3fc07e8d8d03727f439c">getRemainingRowsToBeWritten</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a68b3eb606cac886ba8e48e309c382fa2" id="r_a68b3eb606cac886ba8e48e309c382fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68b3eb606cac886ba8e48e309c382fa2">segment</a></td></tr>
+<tr class="memdesc:a68b3eb606cac886ba8e48e309c382fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGMAP segment where the graphical data is allocated.  <br /></td></tr>
+
+<tr class="memitem:af0f1f19a5dca788c2a2026fb0068a5ca" id="r_af0f1f19a5dca788c2a2026fb0068a5ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a></td></tr>
+<tr class="memdesc:af0f1f19a5dca788c2a2026fb0068a5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remaining rows to be written to graphical memory.  <br /></td></tr>
+
+<tr class="memitem:a01e7873469c63fef01bffaa274d06939" id="r_a01e7873469c63fef01bffaa274d06939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a></td></tr>
+<tr class="memdesc:a01e7873469c63fef01bffaa274d06939"><td class="mdescLeft">&#160;</td><td class="mdescRight">X coordinate in tiles of the graphical data inside BGMAP memory.  <br /></td></tr>
+
+<tr class="memitem:a105c3bec9345bceb247619ffe0ec6255" id="r_a105c3bec9345bceb247619ffe0ec6255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a></td></tr>
+<tr class="memdesc:a105c3bec9345bceb247619ffe0ec6255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y coordinate in tiles of the graphical data inside BGMAP memory.  <br /></td></tr>
+
+<tr class="memitem:a920de22ca8e759e7ba78aec16086e532" id="r_a920de22ca8e759e7ba78aec16086e532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a920de22ca8e759e7ba78aec16086e532">horizontalFlip</a></td></tr>
+<tr class="memdesc:a920de22ca8e759e7ba78aec16086e532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to flip horizontally the texture.  <br /></td></tr>
+
+<tr class="memitem:af033d8dcebd6107263f58a3ab0ade3ff" id="r_af033d8dcebd6107263f58a3ab0ade3ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af033d8dcebd6107263f58a3ab0ade3ff">verticalFlip</a></td></tr>
+<tr class="memdesc:af033d8dcebd6107263f58a3ab0ade3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to flip vertically the texture.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_texture"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_texture')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-texture/">Texture</a></td></tr>
+<tr class="memitem:a69b8a7e4fac8e6ff7238a3e585437db2 inherit pub_types_class_texture" id="r_a69b8a7e4fac8e6ff7238a3e585437db2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">TextureStatus</a> </td></tr>
+
+<tr class="memitem:a381ae6ddcaa4295ada38f9af2434bca7 inherit pub_types_class_texture" id="r_a381ae6ddcaa4295ada38f9af2434bca7"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">TextureROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_texture"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_texture')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-texture/">Texture</a></td></tr>
+<tr class="memitem:a5e496b36d5c8d199fdd45ba979cdcd70 inherit pub_methods_class_texture" id="r_a5e496b36d5c8d199fdd45ba979cdcd70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">constructor</a> (const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="/documentation/api/class-texture/">textureSpec</a>, <a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="/documentation/api/class-texture/">id</a>)</td></tr>
+
+<tr class="memitem:a3d41cea76e60ca9cea1dd3f4eea8541a inherit pub_methods_class_texture" id="r_a3d41cea76e60ca9cea1dd3f4eea8541a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getId</a> ()</td></tr>
+
+<tr class="memitem:a50e620ea5cb09ff3bc58fb6836bfd1c0 inherit pub_methods_class_texture" id="r_a50e620ea5cb09ff3bc58fb6836bfd1c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">setSpec</a> (<a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="/documentation/api/class-texture/">textureSpec</a>)</td></tr>
+
+<tr class="memitem:a310696e565a2ada2a8f74ad0ba7c904d inherit pub_methods_class_texture" id="r_a310696e565a2ada2a8f74ad0ba7c904d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getSpec</a> ()</td></tr>
+
+<tr class="memitem:aadca9e82f62b35bd91bcb24ad3d4400f inherit pub_methods_class_texture" id="r_aadca9e82f62b35bd91bcb24ad3d4400f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-char-set/">CharSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getCharSet</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> loadIfNeeded)</td></tr>
+
+<tr class="memitem:a079927cb1c33abc97f4ec8dbbbf077c8 inherit pub_methods_class_texture" id="r_a079927cb1c33abc97f4ec8dbbbf077c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">increaseUsageCount</a> ()</td></tr>
+<tr class="memdesc:a079927cb1c33abc97f4ec8dbbbf077c8 inherit pub_methods_class_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the usage count.  <br /></td></tr>
+
+<tr class="memitem:a2fc4adcaabfd7fcf9c4f666482ef3695 inherit pub_methods_class_texture" id="r_a2fc4adcaabfd7fcf9c4f666482ef3695"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">decreaseUsageCount</a> ()</td></tr>
+<tr class="memdesc:a2fc4adcaabfd7fcf9c4f666482ef3695 inherit pub_methods_class_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the usage count.  <br /></td></tr>
+
+<tr class="memitem:a1f183c122c054d050943a06054a3176e inherit pub_methods_class_texture" id="r_a1f183c122c054d050943a06054a3176e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getUsageCount</a> ()</td></tr>
+
+<tr class="memitem:a22a9fb2af7f9635e19fcb248f492b149 inherit pub_methods_class_texture" id="r_a22a9fb2af7f9635e19fcb248f492b149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">setPalette</a> (<a class="el" href="/documentation/api/-types-8h/">uint8</a> <a class="el" href="/documentation/api/class-texture/">palette</a>)</td></tr>
+
+<tr class="memitem:a018f3917391d5bbbe1bd724585091175 inherit pub_methods_class_texture" id="r_a018f3917391d5bbbe1bd724585091175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getPalette</a> ()</td></tr>
+
+<tr class="memitem:a911f0cf914b7403d3dd2ce5f642db9ec inherit pub_methods_class_texture" id="r_a911f0cf914b7403d3dd2ce5f642db9ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getNumberOfFrames</a> ()</td></tr>
+
+<tr class="memitem:ae12371078252f1e8004c34aed150af1b inherit pub_methods_class_texture" id="r_ae12371078252f1e8004c34aed150af1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">setFrame</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="/documentation/api/class-texture/">frame</a>)</td></tr>
+
+<tr class="memitem:ae949d7603719c4c32ca2730cc9c654c3 inherit pub_methods_class_texture" id="r_ae949d7603719c4c32ca2730cc9c654c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getFrame</a> ()</td></tr>
+
+<tr class="memitem:aeac775fbaf2cb2eb46494853d656d106 inherit pub_methods_class_texture" id="r_aeac775fbaf2cb2eb46494853d656d106"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getCols</a> ()</td></tr>
+
+<tr class="memitem:abacf43e3820b7b235125641af2540e94 inherit pub_methods_class_texture" id="r_abacf43e3820b7b235125641af2540e94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">getRows</a> ()</td></tr>
+
+<tr class="memitem:a77bfb6084ffcdab6335a103a407ebdd7 inherit pub_methods_class_texture" id="r_a77bfb6084ffcdab6335a103a407ebdd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">isWritten</a> ()</td></tr>
+
+<tr class="memitem:ad7df7f4eccb01575708a2ce99286fda9 inherit pub_methods_class_texture" id="r_ad7df7f4eccb01575708a2ce99286fda9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">isShared</a> ()</td></tr>
+
+<tr class="memitem:a279d3cfa1772245c11cadfd9d6f8d9ae inherit pub_methods_class_texture" id="r_a279d3cfa1772245c11cadfd9d6f8d9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">isSingleFrame</a> ()</td></tr>
+
+<tr class="memitem:a221c597f264e6440c307ca0a521ffee9 inherit pub_methods_class_texture" id="r_a221c597f264e6440c307ca0a521ffee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">isMultiframe</a> ()</td></tr>
+
+<tr class="memitem:a715aea378b07a7e146975e7aaf28b9d2 inherit pub_methods_class_texture" id="r_a715aea378b07a7e146975e7aaf28b9d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">addChar</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePoint, const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:a907fbf05fe35e3e9a6879ae0e00f2aa9 inherit pub_methods_class_texture" id="r_a907fbf05fe35e3e9a6879ae0e00f2aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">putChar</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePoint, const <a class="el" href="/documentation/api/-types-8h/">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:a242a84056e799c85e970ee62888b8bce inherit pub_methods_class_texture" id="r_a242a84056e799c85e970ee62888b8bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">putPixel</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePixel, const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *charSetPixel, <a class="el" href="/documentation/api/-types-8h/">BYTE</a> newPixelColor)</td></tr>
+
+<tr class="memitem:a778ad9d50fd497d65237cd0e1eb785b5 inherit pub_methods_class_texture" id="r_a778ad9d50fd497d65237cd0e1eb785b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-texture/">prepare</a> ()</td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-texture/">Texture</a></p>
+<p>A texture allocated in BGMAP memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">40</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a831c808be60ac578f8355d38ec885409" name="a831c808be60ac578f8355d38ec885409"></a>
+<h2 class="memtitle">BgmapTextureROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="#a7b8c0dfdfcb27150a3b88c9ccc6ab07f">BgmapTextureSpec</a> <a class="el" href="#a831c808be60ac578f8355d38ec885409">BgmapTextureROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">29</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<a id="a7b8c0dfdfcb27150a3b88c9ccc6ab07f" name="a7b8c0dfdfcb27150a3b88c9ccc6ab07f"></a>
+<h2 class="memtitle">BgmapTextureSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> <a class="el" href="#a7b8c0dfdfcb27150a3b88c9ccc6ab07f">BgmapTextureSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a> spec </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">25</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4e83fd02d139187302f437bacc85d797" name="a4e83fd02d139187302f437bacc85d797"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapTexture::constructor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a7b8c0dfdfcb27150a3b88c9ccc6ab07f">BgmapTextureSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>bgmapTextureSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bgmapTextureSpec</td><td>Specification that determines how to configure the texture </td></tr>
+    <tr><td class="paramname">id</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a>'s identificator </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">34</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{</div>
+<div class="line"><span class="lineno">   36</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   37</span>    Base::constructor((<a class="code hl_typedef" href="/documentation/api/-texture-8h/">TextureSpec</a>*)bgmapTextureSpec, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    this-&gt;<a class="code hl_variable" href="#a68b3eb606cac886ba8e48e309c382fa2">segment</a> = -1;</div>
+<div class="line"><span class="lineno">   40</span>    this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a> = 0;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    this-&gt;<a class="code hl_variable" href="#a920de22ca8e759e7ba78aec16086e532">horizontalFlip</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;horizontalFlip;</div>
+<div class="line"><span class="lineno">   43</span>    this-&gt;<a class="code hl_variable" href="#af033d8dcebd6107263f58a3ab0ade3ff">verticalFlip</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;verticalFlip;</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    this-&gt;<a class="code hl_variable" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a> = 0;</div>
+<div class="line"><span class="lineno">   46</span>    this-&gt;<a class="code hl_variable" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a> = 0;</div>
+<div class="line"><span class="lineno">   47</span>}   </div>
+<div class="ttc" id="a_texture_8h_html_aff7079ea46646b6abd7a16af6976797f"><div class="ttname"><a href="/documentation/api/-texture-8h/">TextureSpec</a></div><div class="ttdeci">struct TextureSpec TextureSpec</div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a01e7873469c63fef01bffaa274d06939"><div class="ttname"><a href="#a01e7873469c63fef01bffaa274d06939">BgmapTexture::xOffset</a></div><div class="ttdeci">int16 xOffset</div><div class="ttdoc">X coordinate in tiles of the graphical data inside BGMAP memory.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:51</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a105c3bec9345bceb247619ffe0ec6255"><div class="ttname"><a href="#a105c3bec9345bceb247619ffe0ec6255">BgmapTexture::yOffset</a></div><div class="ttdeci">int16 yOffset</div><div class="ttdoc">Y coordinate in tiles of the graphical data inside BGMAP memory.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:54</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a68b3eb606cac886ba8e48e309c382fa2"><div class="ttname"><a href="#a68b3eb606cac886ba8e48e309c382fa2">BgmapTexture::segment</a></div><div class="ttdeci">int8 segment</div><div class="ttdoc">BGMAP segment where the graphical data is allocated.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:45</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_a920de22ca8e759e7ba78aec16086e532"><div class="ttname"><a href="#a920de22ca8e759e7ba78aec16086e532">BgmapTexture::horizontalFlip</a></div><div class="ttdeci">bool horizontalFlip</div><div class="ttdoc">Flag to flip horizontally the texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:57</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_af033d8dcebd6107263f58a3ab0ade3ff"><div class="ttname"><a href="#af033d8dcebd6107263f58a3ab0ade3ff">BgmapTexture::verticalFlip</a></div><div class="ttdeci">bool verticalFlip</div><div class="ttdoc">Flag to flip vertically the texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:60</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html_af0f1f19a5dca788c2a2026fb0068a5ca"><div class="ttname"><a href="#af0f1f19a5dca788c2a2026fb0068a5ca">BgmapTexture::remainingRowsToBeWritten</a></div><div class="ttdeci">int8 remainingRowsToBeWritten</div><div class="ttdoc">Remaining rows to be written to graphical memory.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:48</a></div></div>
+<div class="ttc" id="aclass_texture_html_aecbd7d299afc30d351fb79ad7ddea283"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::textureSpec</a></div><div class="ttdeci">const TextureSpec * textureSpec</div><div class="ttdoc">Spec used to configure the texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:99</a></div></div>
+</div>
+</div>
+</div>
+<a id="a621f3983eadc3fc07e8d8d03727f439c" name="a621f3983eadc3fc07e8d8d03727f439c"></a>
+<h2 class="memtitle">getRemainingRowsToBeWritten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> BgmapTexture::getRemainingRowsToBeWritten </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the number of remaining rows to be written to graphical memory. </p><dl class="section return"><dt>Returns</dt><dd>Number of remaining rows to be written to graphical memory </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">191</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>{</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a>;</div>
+<div class="line"><span class="lineno">  194</span>}</div>
+</div>
+</div>
+</div>
+<a id="a4bebeb2306014f29178b0ad6c3575ddc" name="a4bebeb2306014f29178b0ad6c3575ddc"></a>
+<h2 class="memtitle">getSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> BgmapTexture::getSegment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retriev the BGMAP segment where the graphical data is allocated. </p><dl class="section return"><dt>Returns</dt><dd>BGMAP segment where the graphical data is allocated </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">124</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>{</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a68b3eb606cac886ba8e48e309c382fa2">segment</a>;</div>
+<div class="line"><span class="lineno">  127</span>}</div>
+</div>
+</div>
+</div>
+<a id="a89ad2b58248a1a129871278544581fc0" name="a89ad2b58248a1a129871278544581fc0"></a>
+<h2 class="memtitle">getXOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapTexture::getXOffset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the X coordinate in tiles of the graphical data inside BGMAP memory. </p><dl class="section return"><dt>Returns</dt><dd>X coordinate in tiles of the graphical data inside BGMAP memory </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">139</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>{</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a>;</div>
+<div class="line"><span class="lineno">  142</span>}</div>
+</div>
+</div>
+</div>
+<a id="a7dc941d16ba2c4f81b32dc11c4dd00ae" name="a7dc941d16ba2c4f81b32dc11c4dd00ae"></a>
+<h2 class="memtitle">getYOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapTexture::getYOffset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the Y coordinate in tiles of the graphical data inside BGMAP memory. </p><dl class="section return"><dt>Returns</dt><dd>Y coordinate in tiles of the graphical data inside BGMAP memory </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">146</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>{</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a>;</div>
+<div class="line"><span class="lineno">  149</span>}</div>
+</div>
+</div>
+</div>
+<a id="a8fa0548176b28467ffb9a1c0e872e40d" name="a8fa0548176b28467ffb9a1c0e872e40d"></a>
+<h2 class="memtitle">rewrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapTexture::rewrite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rewrite graphical data to the allocated BGMAP space. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-texture/">Texture</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">108</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>{</div>
+<div class="line"><span class="lineno">  110</span>    Base::rewrite(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;rows;</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+</div>
+</div>
+</div>
+<a id="a7c9cad9737766e6abc74d07c5a461a0f" name="a7c9cad9737766e6abc74d07c5a461a0f"></a>
+<h2 class="memtitle">setHorizontalFlip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapTexture::setHorizontalFlip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the horizontal flip flag. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td>If true, the texture is flipped horizontally </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">153</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>{   </div>
+<div class="line"><span class="lineno">  155</span>    <span class="comment">// TODO: this is a hack, positioned actors should have a complete transformation</span></div>
+<div class="line"><span class="lineno">  156</span>    <span class="comment">// And the flip flags should be removed from the texture spec</span></div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;horizontalFlip)</div>
+<div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        value = !value;</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a920de22ca8e759e7ba78aec16086e532">horizontalFlip</a> != value)</div>
+<div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_function" href="#a8fa0548176b28467ffb9a1c0e872e40d">BgmapTexture::rewrite</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>    this-&gt;<a class="code hl_variable" href="#a920de22ca8e759e7ba78aec16086e532">horizontalFlip</a> = value;</div>
+<div class="line"><span class="lineno">  168</span>}</div>
+<div class="ttc" id="aclass_bgmap_texture_html_a8fa0548176b28467ffb9a1c0e872e40d"><div class="ttname"><a href="#a8fa0548176b28467ffb9a1c0e872e40d">BgmapTexture::rewrite</a></div><div class="ttdeci">override void rewrite()</div><div class="ttdoc">Rewrite graphical data to the allocated BGMAP space.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:108</a></div></div>
+</div>
+</div>
+</div>
+<a id="a0a88059d42d3bc71cf53a0963e6845dd" name="a0a88059d42d3bc71cf53a0963e6845dd"></a>
+<h2 class="memtitle">setOffsets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapTexture::setOffsets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>xOffset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>yOffset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the coordinates in tiles of the graphical data inside BGMAP memory BGMAP segment where the graphical data is allocated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">xOffset</td><td>X coordinate in tiles of the graphical data inside BGMAP memory </td></tr>
+    <tr><td class="paramname">yOffset</td><td>Y coordinate in tiles of the graphical data inside BGMAP memory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">131</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>{</div>
+<div class="line"><span class="lineno">  133</span>    this-&gt;<a class="code hl_variable" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a> = <a class="code hl_variable" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a>;</div>
+<div class="line"><span class="lineno">  134</span>    this-&gt;<a class="code hl_variable" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a> = <a class="code hl_variable" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a>;</div>
+<div class="line"><span class="lineno">  135</span>}</div>
+</div>
+</div>
+</div>
+<a id="a126ba9258a393c78140f012f62679329" name="a126ba9258a393c78140f012f62679329"></a>
+<h2 class="memtitle">setSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapTexture::setSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int8</a></td>          <td class="paramname"><span class="paramname"><em>segment</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the BGMAP segment where the graphical data is allocated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">segment</td><td>BGMAP segment where the graphical data is allocated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">117</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>    this-&gt;<a class="code hl_variable" href="#a68b3eb606cac886ba8e48e309c382fa2">segment</a> = <a class="code hl_variable" href="#a68b3eb606cac886ba8e48e309c382fa2">segment</a>;</div>
+<div class="line"><span class="lineno">  120</span>}</div>
+</div>
+</div>
+</div>
+<a id="ac52fbf20d6177a656258bde63d508039" name="ac52fbf20d6177a656258bde63d508039"></a>
+<h2 class="memtitle">setVerticalFlip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BgmapTexture::setVerticalFlip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the vertical flip flag. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td>If true, the texture is flipped vertically </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">172</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>{</div>
+<div class="line"><span class="lineno">  174</span>    <span class="comment">// TODO: this is a hack, positioned actors should have a complete transformation</span></div>
+<div class="line"><span class="lineno">  175</span>    <span class="comment">// And the flip flags should be removed from the texture spec</span></div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;verticalFlip)</div>
+<div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        value = !value;</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#af033d8dcebd6107263f58a3ab0ade3ff">verticalFlip</a> != value)</div>
+<div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        <a class="code hl_function" href="#a8fa0548176b28467ffb9a1c0e872e40d">BgmapTexture::rewrite</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    this-&gt;<a class="code hl_variable" href="#af033d8dcebd6107263f58a3ab0ade3ff">verticalFlip</a> = value;</div>
+<div class="line"><span class="lineno">  187</span>}</div>
+</div>
+</div>
+</div>
+<a id="aa61f6bf6ba3d4d1576131d04d9c286fa" name="aa61f6bf6ba3d4d1576131d04d9c286fa"></a>
+<h2 class="memtitle">write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> BgmapTexture::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>maximumTextureRowsToWrite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write graphical data to the allocated BGMAP space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumTextureRowsToWrite</td><td>Number of texture rows to write during this call </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the texture was written; false if it fails </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-texture/">Texture</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">59</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">charSet</a>))</div>
+<div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="comment">// Make sure to force full writing if no char set</span></div>
+<div class="line"><span class="lineno">   64</span>        this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;rows;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>    </div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/class-texture/">status</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">status</a>;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span>(!Base::write(<span class="keyword">this</span>, maximumTextureRowsToWrite))</div>
+<div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span>(0 &gt;= this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a>)</div>
+<div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">textureSpec</a>-&gt;rows;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> charSetOffset = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a>)<a class="code hl_function" href="/documentation/api/class-char-set/">CharSet::getOffset</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">charSet</a>);</div>
+<div class="line"><span class="lineno">   80</span>    </div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="/documentation/api/class-texture/">BgmapTexture::isMultiframe</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        BgmapTexture::writeAllFrames(<span class="keyword">this</span>, maximumTextureRowsToWrite, this-&gt;<a class="code hl_variable" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a>, this-&gt;<a class="code hl_variable" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a>, charSetOffset);</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        BgmapTexture::writeFrame</div>
+<div class="line"><span class="lineno">   88</span>        (</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keyword">this</span>, maximumTextureRowsToWrite, <a class="code hl_enumvalue" href="/documentation/api/-texture-8h/">kTexturePendingWriting &lt; status &amp;&amp; kTextureFrameChanged &gt;</a>= <a class="code hl_variable" href="/documentation/api/class-texture/">status</a>, </div>
+<div class="line"><span class="lineno">   90</span>            this-&gt;<a class="code hl_variable" href="#a01e7873469c63fef01bffaa274d06939">xOffset</a>, this-&gt;<a class="code hl_variable" href="#a105c3bec9345bceb247619ffe0ec6255">yOffset</a>, charSetOffset, 0</div>
+<div class="line"><span class="lineno">   91</span>        );</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-texture-8h/">kTexturePendingRewriting</a> == <a class="code hl_variable" href="/documentation/api/class-texture/">status</a>)</div>
+<div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">status</a> = 0 &gt;= this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a> ? <a class="code hl_enumvalue" href="/documentation/api/-texture-8h/">kTextureWritten</a> : <a class="code hl_enumvalue" href="/documentation/api/-texture-8h/">kTexturePendingRewriting</a>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-texture/">status</a> = 0 &gt;= this-&gt;<a class="code hl_variable" href="#af0f1f19a5dca788c2a2026fb0068a5ca">remainingRowsToBeWritten</a> ? <a class="code hl_enumvalue" href="/documentation/api/-texture-8h/">kTextureWritten</a> : <a class="code hl_enumvalue" href="/documentation/api/-texture-8h/">kTexturePendingWriting</a>;</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="line"><span class="lineno">  102</span>    </div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  104</span>}</div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_texture_8h_html_a1d2db75b563175a31bba4dc569f0831b"><div class="ttname"><a href="/documentation/api/-texture-8h/">kTexturePendingWriting</a></div><div class="ttdeci">@ kTexturePendingWriting</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:33</a></div></div>
+<div class="ttc" id="a_texture_8h_html_a88c1c3bd09bac7a89d6cc7ab9ade8882"><div class="ttname"><a href="/documentation/api/-texture-8h/">kTextureWritten</a></div><div class="ttdeci">@ kTextureWritten</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:37</a></div></div>
+<div class="ttc" id="a_texture_8h_html_adf6253cb906dc9d44961575839682619"><div class="ttname"><a href="/documentation/api/-texture-8h/">kTexturePendingRewriting</a></div><div class="ttdeci">@ kTexturePendingRewriting</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:34</a></div></div>
+<div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
+<div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
+<div class="ttc" id="aclass_char_set_html_a0549ea94e712ba5d9d07c5af35c398eb"><div class="ttname"><a href="/documentation/api/class-char-set/">CharSet::getOffset</a></div><div class="ttdeci">uint16 getOffset()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8c-source/">CharSet.c:139</a></div></div>
+<div class="ttc" id="aclass_texture_html_a221c597f264e6440c307ca0a521ffee9"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::isMultiframe</a></div><div class="ttdeci">bool isMultiframe()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:502</a></div></div>
+<div class="ttc" id="aclass_texture_html_a8d72c05d46e81dfd582f5b4c0c0a5c28"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::status</a></div><div class="ttdeci">uint8 status</div><div class="ttdoc">Writing status flag.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:114</a></div></div>
+<div class="ttc" id="aclass_texture_html_af7fa112527e1022449d30d2ee57e7bb5"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::charSet</a></div><div class="ttdeci">CharSet charSet</div><div class="ttdoc">Char set that holds the pixel data used by the texture.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:96</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a920de22ca8e759e7ba78aec16086e532" name="a920de22ca8e759e7ba78aec16086e532"></a>
+<h2 class="memtitle">horizontalFlip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> BgmapTexture::horizontalFlip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to flip horizontally the texture. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">57</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<a id="af0f1f19a5dca788c2a2026fb0068a5ca" name="af0f1f19a5dca788c2a2026fb0068a5ca"></a>
+<h2 class="memtitle">remainingRowsToBeWritten</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> BgmapTexture::remainingRowsToBeWritten</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remaining rows to be written to graphical memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">48</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<a id="a68b3eb606cac886ba8e48e309c382fa2" name="a68b3eb606cac886ba8e48e309c382fa2"></a>
+<h2 class="memtitle">segment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> BgmapTexture::segment</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BGMAP segment where the graphical data is allocated. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">45</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<a id="af033d8dcebd6107263f58a3ab0ade3ff" name="af033d8dcebd6107263f58a3ab0ade3ff"></a>
+<h2 class="memtitle">verticalFlip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> BgmapTexture::verticalFlip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to flip vertically the texture. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">60</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<a id="a01e7873469c63fef01bffaa274d06939" name="a01e7873469c63fef01bffaa274d06939"></a>
+<h2 class="memtitle">xOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapTexture::xOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>X coordinate in tiles of the graphical data inside BGMAP memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">51</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<a id="a105c3bec9345bceb247619ffe0ec6255" name="a105c3bec9345bceb247619ffe0ec6255"></a>
+<h2 class="memtitle">yOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> BgmapTexture::yOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Y coordinate in tiles of the graphical data inside BGMAP memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">54</a> of file <a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Graphics/2d/Textures/Bgmap/<a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a></li>
+<li>VUEngine-Core/source/Component/Graphics/2d/Textures/Bgmap/<a class="el" href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c</a></li>
+</ul>
+</div>
+
+
+</div>

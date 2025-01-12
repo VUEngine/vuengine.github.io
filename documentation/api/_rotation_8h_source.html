@@ -1,0 +1,298 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Rotation.h"
+permalink: documentation/api/-rotation-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-bacca08c3e1f2556ee67d26834d238bb/">Math</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Rotation.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-rotation-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef ROTATION_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define ROTATION_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-camera-8h/">Camera.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-math-8h/">Math.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-object-8h/">Object.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// FORWARD DECLARATIONS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">   25</a></span><span class="keyword">extern</span> <span class="keyword">const</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a>* _cameraRotation <a class="code hl_variable" href="/documentation/api/-math-8c/">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> : <a class="code hl_class" href="/documentation/api/class-object/">Object</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">   42</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">zero</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">invert</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">clamp</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">getShortestDifferce</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> angleFrom, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> angleTo);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">sum</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">sub</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">intermediate</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">scalarProduct</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> scalar);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">scalarDivision</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> scalar);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">getRelativeToCamera</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">getFromPixelRotation</a>(<a class="code hl_struct" href="/documentation/api/struct-pixel-rotation/">PixelRotation</a> pixelRotation);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">getFromScreenPixelRotation</a>(<a class="code hl_struct" href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation</a> pixelRotation);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">areEqual</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">print</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">// CLASS&#39; STATIC METHODS</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::zero</a>()</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>{</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">return</span> (<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a>){0, 0, 0};</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  133</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::invert</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  136</a></span>        <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a> - rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a> - rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a> - rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  141</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  143</a></span>    <span class="keywordflow">if</span>(0 &gt; <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> += <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a> &lt;= <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  149</a></span>        <a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> -= <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">if</span>(0 &gt; <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> += <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  155</a></span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a> &lt;= <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> -= <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  161</a></span>    <span class="keywordflow">if</span>(0 &gt; <a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> += <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a> &lt;= <a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  167</a></span>        <a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> -= <a class="code hl_define" href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Rotation</a>){__FIXED_EXT_TO_FIXED(<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>), __FIXED_EXT_TO_FIXED(<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>), __FIXED_EXT_TO_FIXED(<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>)};</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  173</a></span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  175</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::getShortestDifferce</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> angleFrom, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> angleTo)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>{</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> rotationDifference = (__FIXED_TO_I(angleTo) - __FIXED_TO_I(angleFrom) + 256 ) % 512 - 256;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span> __I_TO_FIXED(-256 &gt; rotationDifference ? rotationDifference + 512 : rotationDifference);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  179</a></span>}</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="}">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  183</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::sum</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  184</a></span>{</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> + b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> + b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> + b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  189</a></span> </div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  190</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::sub</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>{</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> - b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> - b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> - b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>}</div>
+</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  194</a></span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  197</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::intermediate</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordflow">return</span> (<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a>)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  200</a></span>    {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        (a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> + b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>) &gt;&gt; 1,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        (a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> + b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>) &gt;&gt; 1,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        (a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> + b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>) &gt;&gt; 1</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    };</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="/documentation/api/-rotation-8h/">  206</a></span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  209</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::scalarProduct</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> scalar)</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>{</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(__FIXED_EXT_MULT(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, scalar), __FIXED_EXT_MULT(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, scalar), __FIXED_EXT_MULT(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>, scalar));</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="foldopen" id="foldopen00217" data-start="{" data-end="}">
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  217</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::scalarDivision</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> scalar)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>{</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keywordflow">if</span>(0 != scalar)</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">return</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(__FIXED_EXT_DIV(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>, scalar), __FIXED_EXT_DIV(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>, scalar), __FIXED_EXT_DIV(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>, scalar));</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::zero</a>();</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
+</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="}">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  230</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::getRelativeToCamera</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> rotation)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>{</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> - _cameraRotation-&gt;x, rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> - _cameraRotation-&gt;y, rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> - _cameraRotation-&gt;z);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  237</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::getFromPixelRotation</a>(<a class="code hl_struct" href="/documentation/api/struct-pixel-rotation/">PixelRotation</a> pixelRotation)</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>{</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a>(__I_TO_FIXED_EXT(pixelRotation.<a class="code hl_variable" href="/documentation/api/struct-pixel-rotation/">x</a>), __I_TO_FIXED_EXT(pixelRotation.<a class="code hl_variable" href="/documentation/api/struct-pixel-rotation/">y</a>), __I_TO_FIXED_EXT(pixelRotation.<a class="code hl_variable" href="/documentation/api/struct-pixel-rotation/">z</a>));</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="foldopen" id="foldopen00244" data-start="{" data-end="}">
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  244</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::getFromScreenPixelRotation</a>(<a class="code hl_struct" href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation</a> screenPixelRotation)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>{</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::clamp</a></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        (</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            __I_TO_FIXED_EXT(screenPixelRotation.<a class="code hl_variable" href="/documentation/api/struct-screen-pixel-rotation/">x</a>), __I_TO_FIXED_EXT(screenPixelRotation.<a class="code hl_variable" href="/documentation/api/struct-screen-pixel-rotation/">y</a>), __I_TO_FIXED_EXT(screenPixelRotation.<a class="code hl_variable" href="/documentation/api/struct-screen-pixel-rotation/">z</a>)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        );</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="foldopen" id="foldopen00255" data-start="{" data-end="}">
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="/documentation/api/struct-rotation/">  255</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/struct-rotation/">Rotation::areEqual</a>(<a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> a, <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a> b)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>{</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">return</span> a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> == b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> &amp;&amp; a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> == b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> &amp;&amp; a.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> == b.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>}</div>
+</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_camera_8h_html"><div class="ttname"><a href="/documentation/api/-camera-8h/">Camera.h</a></div></div>
+<div class="ttc" id="a_math_8c_html_ae0cbc522db716585cc37eff93f5d0fdf"><div class="ttname"><a href="/documentation/api/-math-8c/">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</a></div><div class="ttdeci">uint32 _seed __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8c-source/">Math.c:28</a></div></div>
+<div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="/documentation/api/-math-8h/">Math.h</a></div></div>
+<div class="ttc" id="a_math_8h_html_a980aa80c8e3439909e09859c5302f09d"><div class="ttname"><a href="/documentation/api/-math-8h/">__FULL_ROTATION_DEGREES</a></div><div class="ttdeci">#define __FULL_ROTATION_DEGREES</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:180</a></div></div>
+<div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="/documentation/api/-object-8h/">Object.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1a50da385ff64683d90ba3832f046a04"><div class="ttname"><a href="/documentation/api/-types-8h/">Rotation</a></div><div class="ttdeci">struct Rotation Rotation</div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_a3b5675e00af046980df12ddb73b0aaca"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_ext_t</a></div><div class="ttdeci">#define fixed_ext_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:47</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="/documentation/api/class-object/">Object</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8h-source/">Object.h:36</a></div></div>
+<div class="ttc" id="astruct_pixel_rotation_html"><div class="ttname"><a href="/documentation/api/struct-pixel-rotation/">PixelRotation</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:167</a></div></div>
+<div class="ttc" id="astruct_pixel_rotation_html_a34e511d68bdfa1a85192f9edb33ef0d8"><div class="ttname"><a href="/documentation/api/struct-pixel-rotation/">PixelRotation::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:171</a></div></div>
+<div class="ttc" id="astruct_pixel_rotation_html_a83cfab9ac526e782565e991044195b69"><div class="ttname"><a href="/documentation/api/struct-pixel-rotation/">PixelRotation::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:173</a></div></div>
+<div class="ttc" id="astruct_pixel_rotation_html_a90763e0a05e7cebce588f7066848f200"><div class="ttname"><a href="/documentation/api/struct-pixel-rotation/">PixelRotation::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:169</a></div></div>
+<div class="ttc" id="astruct_rotation_html"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:153</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a0023143d5f8aa2bb4a3f5b9a334d7d47"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::getShortestDifferce</a></div><div class="ttdeci">static fixed_t getShortestDifferce(fixed_t angleFrom, fixed_t angleTo)</div><div class="ttdef"><b>Definition</b> <a href="#l00175">Rotation.h:175</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a0802f7c0e553acea34ce0b9f43db39b4"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::scalarProduct</a></div><div class="ttdeci">static Rotation scalarProduct(Rotation rotation, int16 scalar)</div><div class="ttdef"><b>Definition</b> <a href="#l00209">Rotation.h:209</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a1e27b62501d49a9a54a770502629e457"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::invert</a></div><div class="ttdeci">static Rotation invert(Rotation rotation)</div><div class="ttdef"><b>Definition</b> <a href="#l00133">Rotation.h:133</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a3b66da1b80cd0574a48efe18f70b1d50"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::intermediate</a></div><div class="ttdeci">static Rotation intermediate(Rotation a, Rotation b)</div><div class="ttdef"><b>Definition</b> <a href="#l00197">Rotation.h:197</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a588c694b4d44d8a6c994dc5b97cc6e72"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:155</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a7aec7790485bf4d193048f8315f7beed"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::zero</a></div><div class="ttdeci">static Rotation zero()</div></div>
+<div class="ttc" id="astruct_rotation_html_a7e237a87976876a779353249a9eea6ea"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::getFromPixelRotation</a></div><div class="ttdeci">static Rotation getFromPixelRotation(PixelRotation pixelRotation)</div><div class="ttdef"><b>Definition</b> <a href="#l00237">Rotation.h:237</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a827eb7a9531d3ddb6c4f9280f59a9e71"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::sum</a></div><div class="ttdeci">static Rotation sum(Rotation a, Rotation b)</div><div class="ttdef"><b>Definition</b> <a href="#l00183">Rotation.h:183</a></div></div>
+<div class="ttc" id="astruct_rotation_html_a8e66a995b825ae4cea5c7c2816040ac3"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::getFromScreenPixelRotation</a></div><div class="ttdeci">static Rotation getFromScreenPixelRotation(ScreenPixelRotation pixelRotation)</div><div class="ttdef"><b>Definition</b> <a href="#l00244">Rotation.h:244</a></div></div>
+<div class="ttc" id="astruct_rotation_html_aacb32f3bc0332ccb4e3c355abc6dfc05"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::scalarDivision</a></div><div class="ttdeci">static Rotation scalarDivision(Rotation rotation, int16 scalar)</div><div class="ttdef"><b>Definition</b> <a href="#l00217">Rotation.h:217</a></div></div>
+<div class="ttc" id="astruct_rotation_html_ab9779f362cf6cefaf564c388e5ac6d1d"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:158</a></div></div>
+<div class="ttc" id="astruct_rotation_html_aba92a77482361df769b75cad8ee99d55"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::getRelativeToCamera</a></div><div class="ttdeci">static Rotation getRelativeToCamera(Rotation rotation)</div><div class="ttdef"><b>Definition</b> <a href="#l00230">Rotation.h:230</a></div></div>
+<div class="ttc" id="astruct_rotation_html_acede6fcd63cc24ef02afba408884bb3a"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::print</a></div><div class="ttdeci">static void print(Rotation rotation, int32 x, int32 y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rotation-8c-source/">Rotation.c:25</a></div></div>
+<div class="ttc" id="astruct_rotation_html_ad80ecd7e8e77de5f29de1a808bd71387"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:161</a></div></div>
+<div class="ttc" id="astruct_rotation_html_ae69eaa957ea5030924179818d12c21e9"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::areEqual</a></div><div class="ttdeci">static bool areEqual(Rotation a, Rotation b)</div><div class="ttdef"><b>Definition</b> <a href="#l00255">Rotation.h:255</a></div></div>
+<div class="ttc" id="astruct_rotation_html_ae956d9d9157dc9e0735124765795b932"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::clamp</a></div><div class="ttdeci">static Rotation clamp(fixed_ext_t x, fixed_ext_t y, fixed_ext_t z)</div><div class="ttdef"><b>Definition</b> <a href="#l00141">Rotation.h:141</a></div></div>
+<div class="ttc" id="astruct_rotation_html_afeea25b8612a2ad805347abf691b3e0e"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::sub</a></div><div class="ttdeci">static Rotation sub(Rotation a, Rotation b)</div><div class="ttdef"><b>Definition</b> <a href="#l00190">Rotation.h:190</a></div></div>
+<div class="ttc" id="astruct_screen_pixel_rotation_html"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:179</a></div></div>
+<div class="ttc" id="astruct_screen_pixel_rotation_html_a46b8d219ccc94503d048482eae8dab6d"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:183</a></div></div>
+<div class="ttc" id="astruct_screen_pixel_rotation_html_aadc20591463378ce8aa7687b788c52a8"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:185</a></div></div>
+<div class="ttc" id="astruct_screen_pixel_rotation_html_aecec3395292bd97c3c199648de736740"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:181</a></div></div>
+</div></div>
+
+
+</div>

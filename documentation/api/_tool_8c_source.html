@@ -1,0 +1,154 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Tool.c"
+permalink: documentation/api/-tool-8c-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f0161508f86f02e19b4cbe084bea137/">Tools</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Tool.c</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-tool-8c/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-printing-8h/">Printing.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="/documentation/api/-tool-8h/">Tool.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// CLASS&#39; DECLARATIONS</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// This is a hack to prevent linker errors when the tools are not enabled.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef __TOOLS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef __SOUND_TEST</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> SoundTest::setVTable(){}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> StageEditor::setVTable(){}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> AnimationInspector::setVTable(){}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> Debug::setVTable(){}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> DebugState::setVTable(){}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> SoundTestState::setVTable(){}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> AnimationInspectorState::setVTable(){}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> StageEditorState::setVTable(){}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#ifndef __ENABLE_PROFILER</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> Profiler::setVTable(){}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// CLASS&#39; PUBLIC METHODS</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="/documentation/api/class-tool/">   50</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-tool/">Tool::constructor</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Base::constructor();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-tool/">stage</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> Tool::destructor()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// Allow a new construct</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    Base::destructor();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="/documentation/api/class-tool/">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-tool/">Tool::setStage</a>(<a class="code hl_class" href="/documentation/api/class-stage/">Stage</a> <a class="code hl_variable" href="/documentation/api/class-tool/">stage</a>)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    this-&gt;stage = <a class="code hl_variable" href="/documentation/api/class-tool/">stage</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="/documentation/api/class-tool/">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-tool/">Tool::dimmGame</a>()</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// Doens&#39;t work that well</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">    _vipRegisters[__GPLT0] = 0x50;</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    _vipRegisters[__GPLT1] = 0x50;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    _vipRegisters[__GPLT2] = 0x50;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    _vipRegisters[__GPLT3] = 0x50;</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    _vipRegisters[__JPLT0] = 0x50;</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">    _vipRegisters[__JPLT1] = 0x50;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">    _vipRegisters[__JPLT2] = 0x50;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">    _vipRegisters[__JPLT3] = 0x50;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment"></span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">    _vipRegisters[0x30 | __PRINTING_PALETTE] = 0x90;</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="/documentation/api/class-tool/">   95</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-tool/">Tool::lightUpGame</a>()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-tool/">stage</a>))</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_function" href="/documentation/api/class-stage/">Stage::configurePalettes</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-tool/">stage</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_printing_8h_html"><div class="ttname"><a href="/documentation/api/-printing-8h/">Printing.h</a></div></div>
+<div class="ttc" id="a_tool_8h_html"><div class="ttname"><a href="/documentation/api/-tool-8h/">Tool.h</a></div></div>
+<div class="ttc" id="aclass_stage_html"><div class="ttname"><a href="/documentation/api/class-stage/">Stage</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-stage-8h-source/">Stage.h:218</a></div></div>
+<div class="ttc" id="aclass_stage_html_afce1e1786343517bfb41fb8218f1f549"><div class="ttname"><a href="/documentation/api/class-stage/">Stage::configurePalettes</a></div><div class="ttdeci">void configurePalettes()</div><div class="ttdoc">Configure the color palettes.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-stage-8c-source/">Stage.c:267</a></div></div>
+<div class="ttc" id="aclass_tool_html_a4b6f592c851158fc7b8c9e95b00a515a"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::stage</a></div><div class="ttdeci">Stage stage</div><div class="ttdoc">The stage to work with.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-tool-8h-source/">Tool.h:34</a></div></div>
+<div class="ttc" id="aclass_tool_html_a4ffd0e3ef179aa26a55d00393d95ef06"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::lightUpGame</a></div><div class="ttdeci">virtual void lightUpGame()</div><div class="ttdoc">Light up the game.</div><div class="ttdef"><b>Definition</b> <a href="#l00095">Tool.c:95</a></div></div>
+<div class="ttc" id="aclass_tool_html_a6f1be44b6c42975d21263b4e6c08ada8"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::setStage</a></div><div class="ttdeci">void setStage(Stage stage)</div><div class="ttdef"><b>Definition</b> <a href="#l00069">Tool.c:69</a></div></div>
+<div class="ttc" id="aclass_tool_html_a7eaed0ada59867630fd5e6e2234691bf"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Tool.c:50</a></div></div>
+<div class="ttc" id="aclass_tool_html_aff4a33b663ea2fa703418f16a0f3afd5"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::dimmGame</a></div><div class="ttdeci">virtual void dimmGame()</div><div class="ttdoc">Dimm down the game.</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Tool.c:76</a></div></div>
+</div></div>
+
+
+</div>

@@ -1,0 +1,349 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Constants.h"
+permalink: documentation/api/-constants-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-17d60db0c5aa74fb253bd46b004ae90e/">General</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Constants.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-constants-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef CONSTANTS_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define CONSTANTS_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-globals-8h/">Globals.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// DATA</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// messages</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   24</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="/documentation/api/-constants-8h/">MessagesTypes</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   26</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageNone</a> = 0,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// General purpose messages</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   29</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageHighFps</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   30</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageActorRemoved</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Keypad massages</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   33</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageKeyPressed</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   34</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageKeyReleased</a>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   35</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageKeyHold</a>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// Communication messages</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   38</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageCheckIfRemoteIsReady</a>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   39</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageLastCommunicationMessage</a>,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Framerate</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   42</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageRestoreFPS</a>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Physics messages</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   45</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageBodyStopped</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   46</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageBodyBounced</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   47</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageBodyStartedMoving</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   48</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageColliderShow</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   49</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageColliderHide</a>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// Actor messages</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   52</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageShow</a>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   53</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageHide</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   54</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageSetTransparency</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Don&#39;t place messages below this</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   57</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageLastEngine</a></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="};">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   60</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="/documentation/api/-constants-8h/">DefaultInGameTypes</a></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   62</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kTypeNone</a> = 0,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   65</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="/documentation/api/-constants-8h/">DefaulCollisionLayers</a></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   67</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kLayerNone</a> = 0,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// MACROS</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// Memory manipulation</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   75</a></span><span class="preprocessor">#define __MEMORY_USED_BLOCK_FLAG                ((uint16)0xFFFF)</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   76</a></span><span class="preprocessor">#define __MEMORY_FREE_BLOCK_FLAG                0x00000000</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// Graphics</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   79</a></span><span class="preprocessor">#define __TRANSPARENCY_NONE                     0</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   80</a></span><span class="preprocessor">#define __TRANSPARENCY_ODD                      1</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   81</a></span><span class="preprocessor">#define __TRANSPARENCY_EVEN                     2</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   83</a></span><span class="preprocessor">#define __NO_RENDER_INDEX                       -1</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   85</a></span><span class="preprocessor">#define __COLOR_BLACK                           0x00</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   86</a></span><span class="preprocessor">#define __COLOR_DARK_RED                        0x01</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   87</a></span><span class="preprocessor">#define __COLOR_MEDIUM_RED                      0x02</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   88</a></span><span class="preprocessor">#define __COLOR_BRIGHT_RED                      0x03</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// Camera half width in pixels</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   91</a></span><span class="preprocessor">#define __HALF_SCREEN_WIDTH                     (__SCREEN_WIDTH &gt;&gt; 1)</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">// Camera half height in pixels</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   94</a></span><span class="preprocessor">#define __HALF_SCREEN_HEIGHT                    (__SCREEN_HEIGHT &gt;&gt; 1)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">// Camera half depth in pixels</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">   97</a></span><span class="preprocessor">#define __HALF_SCREEN_DEPTH                     (__SCREEN_DEPTH &gt;&gt; 1)</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// Camera width in chars</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  100</a></span><span class="preprocessor">#define __SCREEN_WIDTH_IN_CHARS                 (__SCREEN_WIDTH &gt;&gt; 3)</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// Camera height in chars</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  103</a></span><span class="preprocessor">#define __SCREEN_HEIGHT_IN_CHARS                (__SCREEN_HEIGHT &gt;&gt; 3)</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">// Camera depth in chars</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  106</a></span><span class="preprocessor">#define __SCREEN_DEPTH_IN_CHARS                 (__SCREEN_DEPTH &gt;&gt; 3)</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">// Camera half width in chars</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  109</a></span><span class="preprocessor">#define __HALF_SCREEN_WIDTH_IN_CHARS            (__SCREEN_WIDTH &gt;&gt; 4)</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">// Camera half height in chars</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  112</a></span><span class="preprocessor">#define __HALF_SCREEN_HEIGHT_IN_CHARS           (__SCREEN_HEIGHT &gt;&gt; 4)</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">// Camera half depth in chars</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  115</a></span><span class="preprocessor">#define __HALF_SCREEN_DEPTH_IN_CHARS            (__SCREEN_DEPTH &gt;&gt; 4)</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">// Camera half width in meters</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  118</a></span><span class="preprocessor">#define __HALF_SCREEN_WIDTH_METERS              __PIXELS_TO_METERS(__SCREEN_WIDTH &gt;&gt; 1)</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">// Camera half height in meters</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  121</a></span><span class="preprocessor">#define __HALF_SCREEN_HEIGHT_METERS             __PIXELS_TO_METERS(__SCREEN_HEIGHT &gt;&gt; 1)</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">// Camera half depth in meters</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  124</a></span><span class="preprocessor">#define __HALF_SCREEN_DEPTH_METERS              __PIXELS_TO_METERS(__SCREEN_DEPTH &gt;&gt; 1)</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">// Camera&#39;s FOV (128 fix7_9 = 90)</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  127</a></span><span class="preprocessor">#define __CAMERA_FOV_DEGREES                    128</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">// used for exceptions</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  130</a></span><span class="preprocessor">#define __EXCEPTIONS_BGMAP                      0</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  131</a></span><span class="preprocessor">#define __EXCEPTIONS_WORLD                      31</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">// override null spec (because we don&#39;t want to include standard C libraries)</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  134</a></span><span class="preprocessor">#define NULL                                    (void *)0x00000000</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">// axis specs</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  137</a></span><span class="preprocessor">#define __NO_AXIS                               0x00</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  138</a></span><span class="preprocessor">#define __X_AXIS                                0x01</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  139</a></span><span class="preprocessor">#define __Y_AXIS                                0x02</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  140</a></span><span class="preprocessor">#define __Z_AXIS                                0x04</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  141</a></span><span class="preprocessor">#define __ALL_AXIS                              (__X_AXIS | __Y_AXIS | __Z_AXIS)</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  142</a></span><span class="preprocessor">#define __LOCK_AXIS                             (~__ALL_AXIS)</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">// direction</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  145</a></span><span class="preprocessor">#define __LEFT                                  ((int32)-1)</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  146</a></span><span class="preprocessor">#define __RIGHT                                 ((int32)1)</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  147</a></span><span class="preprocessor">#define __UP                                    ((int32)-1)</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  148</a></span><span class="preprocessor">#define __DOWN                                  ((int32)1)</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  149</a></span><span class="preprocessor">#define __NEAR                                  ((int32)-1)</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  150</a></span><span class="preprocessor">#define __FAR                                   ((int32)1)</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">// Transformations</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  153</a></span><span class="preprocessor">#define __VALID_TRANSFORMATION                  0x00</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  154</a></span><span class="preprocessor">#define __NON_TRANSFORMED                       0xFF</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  155</a></span><span class="preprocessor">#define __INVALIDATE_TRANSFORMATION             0x0F</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  156</a></span><span class="preprocessor">#define __INVALIDATE_POSITION                   0x01</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  157</a></span><span class="preprocessor">#define __INVALIDATE_ROTATION                   0x02</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  158</a></span><span class="preprocessor">#define __INVALIDATE_SCALE                      0x04</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  159</a></span><span class="preprocessor">#define __INVALIDATE_PROJECTION                 0x08</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  161</a></span><span class="preprocessor">#define __INHERIT_NONE                          __VALID_TRANSFORMATION</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  162</a></span><span class="preprocessor">#define __INHERIT_TRANSFORMATION                __INVALIDATE_TRANSFORMATION</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  163</a></span><span class="preprocessor">#define __INHERIT_POSITION                      __INVALIDATE_POSITION</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  164</a></span><span class="preprocessor">#define __INHERIT_ROTATION                      __INVALIDATE_ROTATION</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  165</a></span><span class="preprocessor">#define __INHERIT_SCALE                         __INVALIDATE_SCALE</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  167</a></span><span class="preprocessor">#define __MAXIMUM_FPS                           50</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  169</a></span><span class="preprocessor">#define __MILLISECONDS_PER_SECOND               1000</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  170</a></span><span class="preprocessor">#define __MICROSECONDS_PER_MILLISECOND          1000</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  171</a></span><span class="preprocessor">#define __MICROSECONDS_PER_SECOND               (__MILLISECONDS_PER_SECOND * __MICROSECONDS_PER_MILLISECOND)</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  173</a></span><span class="preprocessor">#define __PIXELS_PER_METER                      16</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  174</a></span><span class="preprocessor">#define __METERS_PER_PIXEL                      __F_TO_FIXED(1.0f/(float)__PIXELS_PER_METER)</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  176</a></span><span class="preprocessor">#define __PIXELS_PER_METER_2_POWER              4</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  177</a></span><span class="preprocessor">#define __PIXELS_TO_METERS(pixels)              (fixed_t)((pixels) &lt;&lt; (__FIXED_TO_I_BITS - __PIXELS_PER_METER_2_POWER))</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  178</a></span><span class="preprocessor">#define __REAL_PIXELS_TO_METERS(pixels)         (fixed_t)(__F_TO_FIXED_EXT(pixels) &gt;&gt; __PIXELS_PER_METER_2_POWER)</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  179</a></span><span class="preprocessor">#define __METERS_TO_PIXELS(meters)              (((fixed_ext_t)(meters)) &gt;&gt; (__FIXED_TO_I_BITS - __PIXELS_PER_METER_2_POWER))</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  181</a></span><span class="preprocessor">#define __SCREEN_WIDTH_METERS                   __PIXELS_TO_METERS(__SCREEN_WIDTH)</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  182</a></span><span class="preprocessor">#define __SCREEN_HEIGHT_METERS                  __PIXELS_TO_METERS(__SCREEN_HEIGHT)</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  183</a></span><span class="preprocessor">#define __SCREEN_DEPTH_METERS                   __PIXELS_TO_METERS(__SCREEN_DEPTH)</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  185</a></span><span class="preprocessor">#define __MINIMUM_X_VIEW_DISTANCE_POWER         4</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  186</a></span><span class="preprocessor">#define __MINIMUM_Y_VIEW_DISTANCE_POWER         4</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  188</a></span><span class="preprocessor">#define __HIDE                                  0</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  189</a></span><span class="preprocessor">#define __SHOW_NEXT_FRAME                       1</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  190</a></span><span class="preprocessor">#define __SHOW                                  2</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  192</a></span><span class="preprocessor">#define __STRINGIFY(a)                          __MAKE_STRING(a)</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">// Optimizations</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  195</a></span><span class="preprocessor">#define __LIKELY(expression)                    (__builtin_expect(!!(expression), 1))</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  196</a></span><span class="preprocessor">#define __UNLIKELY(expression)                  (__builtin_expect(!!(expression), 0))</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#ifndef __RELEASE</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  199</a></span><span class="preprocessor">#define __REGISTER_LAST_PROCESS_NAME</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  201</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/-constants-8h/">HardwareManager_printStackStatus</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y, <span class="keywordtype">bool</span> resumed);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  202</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/-constants-8h/">Error_triggerException</a>(<span class="keywordtype">char</span>* message, <span class="keywordtype">char</span>* detail);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="foldopen" id="foldopen00204" data-start="" data-end="">
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  204</a></span><span class="preprocessor">#define __CHECK_STACK_STATUS                                                                            \</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">    extern bool _stackHeadroomViolation;                                                                \</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">    if(!_stackHeadroomViolation)                                                                        \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">    {                                                                                                   \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">        int32 _vuengineStackPointer;                                                                    \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">        asm(&quot; mov sp,%0  &quot;: &quot;=r&quot; (_vuengineStackPointer));                                              \</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">        if((0x05000000 &amp; _vuengineStackPointer) &amp;&amp;                                                      \</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">            _vuengineStackPointer - __STACK_HEADROOM &lt; (int32)&amp;_bssEnd)                                 \</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">        {                                                                                               \</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">            _stackHeadroomViolation = true;                                                             \</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">            </span><span class="comment">/* HardwareManager_printStackStatus(1, 15, false); */</span><span class="preprocessor">                                       \</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">            NM_ASSERT(false, &quot;HardwareManager_checkStack: surpassed headroom boundary!&quot;);               \</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">        }                                                                                               \</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">    #define __CHECK_STACK_STATUS</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="preprocessor">#undef NM_ASSERT</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">#ifndef __RELEASE</span></div>
+<div class="foldopen" id="foldopen00226" data-start="" data-end="">
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  226</a></span><span class="preprocessor">#define NM_ASSERT(Statement, ...)                                                                       \</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">    if(!(Statement) &amp;&amp; !_triggeringException)                                                           \</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">    {                                                                                                   \</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">        _triggeringException = true;                                                                    \</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">        asm(&quot; mov sp,%0  &quot;: &quot;=r&quot; (_vuengineStackPointer));                                              \</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">        asm(&quot; mov lp,%0  &quot;: &quot;=r&quot; (_vuengineLinkPointer));                                               \</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">        </span><span class="comment">/* thrown exception */</span><span class="preprocessor">                                                                          \</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">        Error_triggerException(__MAKE_STRING(__VA_ARGS__), NULL);                                       \</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">    #define NM_ASSERT(Statement, ...)</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">#undef NM_CAST_ASSERT</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">#ifndef __RELEASE</span></div>
+<div class="foldopen" id="foldopen00244" data-start="" data-end="">
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  244</a></span><span class="preprocessor">#define NM_CAST_ASSERT(Statement, ...)                                                                  \</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">    if(!(Statement) &amp;&amp; !_triggeringException)                                                           \</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">    {                                                                                                   \</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="preprocessor">        _triggeringException = true;                                                                    \</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">        </span><span class="comment">/* thrown exception */</span><span class="preprocessor">                                                                          \</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">        Error_triggerException(__MAKE_STRING(__VA_ARGS__), NULL);                                       \</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">    #define NM_CAST_ASSERT(Statement, ...)</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">#undef ASSERT</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">#ifndef __DEBUG</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="/documentation/api/-constants-8h/">  260</a></span><span class="preprocessor">    #define ASSERT(Statement, ...)</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#define ASSERT(Statement, Message)                                                                      \</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">    if(!(Statement) &amp;&amp; !_triggeringException)                                                           \</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="preprocessor">    {                                                                                                   \</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">        _triggeringException = true;                                                                    \</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">        asm(&quot; mov sp,%0  &quot;: &quot;=r&quot; (_vuengineStackPointer));                                              \</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">        asm(&quot; mov lp,%0  &quot;: &quot;=r&quot; (_vuengineLinkPointer));                                               \</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">                                                                                                        \</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">        </span><span class="comment">/* thrown exception */</span><span class="preprocessor">                                                                          \</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">        Error_triggerException(Message, NULL);                                                          \</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">    }</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">    #undef __FORCE_PRINTING_LAYER</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">    #define __FORCE_PRINTING_LAYER</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878"><div class="ttname"><a href="/documentation/api/-constants-8h/">MessagesTypes</a></div><div class="ttdeci">MessagesTypes</div><div class="ttdef"><b>Definition</b> <a href="#l00024">Constants.h:25</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a013d2ac4b10f1dd9ab3789fa3310f9d4"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageLastEngine</a></div><div class="ttdeci">@ kMessageLastEngine</div><div class="ttdef"><b>Definition</b> <a href="#l00057">Constants.h:57</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a05a0928fd0edaf4d6568653dd05646f1"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageLastCommunicationMessage</a></div><div class="ttdeci">@ kMessageLastCommunicationMessage</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Constants.h:39</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a39c5ad051b8df71931b521f3940c1f3b"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageHighFps</a></div><div class="ttdeci">@ kMessageHighFps</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Constants.h:29</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a3ce87e518f5ec4479f6e863a3bf605db"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageColliderShow</a></div><div class="ttdeci">@ kMessageColliderShow</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Constants.h:48</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a3f99888633cc8a042b2f0819f2d98257"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageBodyStopped</a></div><div class="ttdeci">@ kMessageBodyStopped</div><div class="ttdef"><b>Definition</b> <a href="#l00045">Constants.h:45</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a46f90a4cf01c6da235de439c56057a80"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageKeyPressed</a></div><div class="ttdeci">@ kMessageKeyPressed</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Constants.h:33</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a5638a37522b762a37d7f23fed4382512"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageBodyStartedMoving</a></div><div class="ttdeci">@ kMessageBodyStartedMoving</div><div class="ttdef"><b>Definition</b> <a href="#l00047">Constants.h:47</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a6b19360060c1bee62ef91528bd2b15f4"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageRestoreFPS</a></div><div class="ttdeci">@ kMessageRestoreFPS</div><div class="ttdef"><b>Definition</b> <a href="#l00042">Constants.h:42</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a7500733c2d033bacc7f0a5335db8dc54"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageNone</a></div><div class="ttdeci">@ kMessageNone</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Constants.h:26</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a7a0485898c98ec0d9788a9cca47447ee"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageKeyReleased</a></div><div class="ttdeci">@ kMessageKeyReleased</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Constants.h:34</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a7aeee228463e9fb7ed707c680300279f"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageSetTransparency</a></div><div class="ttdeci">@ kMessageSetTransparency</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Constants.h:54</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a7bce08bf4337fa6b4ef90957ec141782"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageBodyBounced</a></div><div class="ttdeci">@ kMessageBodyBounced</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Constants.h:46</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878ab0f754dccdaf25b7438b5fbc7808b884"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageActorRemoved</a></div><div class="ttdeci">@ kMessageActorRemoved</div><div class="ttdef"><b>Definition</b> <a href="#l00030">Constants.h:30</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878ab3b34c4f1ed384ab9695f9f1a1b1603b"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageCheckIfRemoteIsReady</a></div><div class="ttdeci">@ kMessageCheckIfRemoteIsReady</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Constants.h:38</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878ab68146dab88ccc29000f496c683c0815"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageHide</a></div><div class="ttdeci">@ kMessageHide</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Constants.h:53</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878ad52dc0e22430a25e230af9102fcd4143"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageKeyHold</a></div><div class="ttdeci">@ kMessageKeyHold</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Constants.h:35</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878aeff4523bd77c709bf258ec076d9baf09"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageShow</a></div><div class="ttdeci">@ kMessageShow</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Constants.h:52</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878afac0bea2508558d4ceec1abe2d356e6c"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageColliderHide</a></div><div class="ttdeci">@ kMessageColliderHide</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Constants.h:49</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a5f687a596b63a5e014f0637479d3feb6"><div class="ttname"><a href="/documentation/api/-constants-8h/">HardwareManager_printStackStatus</a></div><div class="ttdeci">void HardwareManager_printStackStatus(int32 x, int32 y, bool resumed)</div></div>
+<div class="ttc" id="a_constants_8h_html_a70f64e81c38a3f2b3fe9bb2fb334abbb"><div class="ttname"><a href="/documentation/api/-constants-8h/">DefaultInGameTypes</a></div><div class="ttdeci">DefaultInGameTypes</div><div class="ttdef"><b>Definition</b> <a href="#l00060">Constants.h:61</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a70f64e81c38a3f2b3fe9bb2fb334abbba0e6a0606b8f191240db927d77388382b"><div class="ttname"><a href="/documentation/api/-constants-8h/">kTypeNone</a></div><div class="ttdeci">@ kTypeNone</div><div class="ttdef"><b>Definition</b> <a href="#l00062">Constants.h:62</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a791292c79e5132c21c6f1e29b38c102c"><div class="ttname"><a href="/documentation/api/-constants-8h/">Error_triggerException</a></div><div class="ttdeci">void Error_triggerException(char *message, char *detail)</div></div>
+<div class="ttc" id="a_constants_8h_html_ae12a02225315294df5c70974fb8933d4"><div class="ttname"><a href="/documentation/api/-constants-8h/">DefaulCollisionLayers</a></div><div class="ttdeci">DefaulCollisionLayers</div><div class="ttdef"><b>Definition</b> <a href="#l00065">Constants.h:66</a></div></div>
+<div class="ttc" id="a_constants_8h_html_ae12a02225315294df5c70974fb8933d4a4397c2cec5ca271c51550f00463d39ec"><div class="ttname"><a href="/documentation/api/-constants-8h/">kLayerNone</a></div><div class="ttdeci">@ kLayerNone</div><div class="ttdef"><b>Definition</b> <a href="#l00067">Constants.h:67</a></div></div>
+<div class="ttc" id="a_globals_8h_html"><div class="ttname"><a href="/documentation/api/-globals-8h/">Globals.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+</div></div>
+
+
+</div>

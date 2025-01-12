@@ -1,0 +1,84 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Affine.h"
+permalink: documentation/api/-affine-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-bacca08c3e1f2556ee67d26834d238bb/">Math</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Affine.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-affine-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef AFFINE_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define AFFINE_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-object-8h/">Object.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="/documentation/api/class-affine/">   28</a></span><span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-affine/">Affine</a> : <a class="code hl_class" href="/documentation/api/class-object/">Object</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> <a class="code hl_function" href="/documentation/api/class-affine/">transform</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    (</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> maximumParamTableRowsToComputePerCall, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> param, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> paramTableRow, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> targetHalfWidth, </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> targetHalfHeight, <a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a> mx, <a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a> my, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> halfWidth, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> halfHeight, <span class="keyword">const</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a>* rotation</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    );</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> <a class="code hl_function" href="/documentation/api/class-affine/">rotate</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    (</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> maximumParamTableRowsToComputePerCall, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> param, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> paramTableRow, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> targetHalfWidth, </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> targetHalfHeight, <a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a> mx, <a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a> my, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> halfWidth, <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> halfHeight, <span class="keyword">const</span> <a class="code hl_class" href="/documentation/api/struct-rotation/">Rotation</a>* rotation</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    );  </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="/documentation/api/-object-8h/">Object.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_ac66fcb9aba25c77a18bebf071cac2df2"><div class="ttname"><a href="/documentation/api/-types-8h/">fix13_3</a></div><div class="ttdeci">#define fix13_3</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:39</a></div></div>
+<div class="ttc" id="aclass_affine_html"><div class="ttname"><a href="/documentation/api/class-affine/">Affine</a></div><div class="ttdef"><b>Definition</b> <a href="#l00028">Affine.h:29</a></div></div>
+<div class="ttc" id="aclass_affine_html_aa3e91a2a23e8c48c56074f284c7317ff"><div class="ttname"><a href="/documentation/api/class-affine/">Affine::transform</a></div><div class="ttdeci">static int16 transform(int32 maximumParamTableRowsToComputePerCall, uint32 param, int16 paramTableRow, fixed_t targetHalfWidth, fixed_t targetHalfHeight, fix13_3 mx, fix13_3 my, fixed_t halfWidth, fixed_t halfHeight, const Rotation *rotation)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-affine-8c-source/">Affine.c:32</a></div></div>
+<div class="ttc" id="aclass_affine_html_abf88d6478548d39c0a2934f986d0f0fb"><div class="ttname"><a href="/documentation/api/class-affine/">Affine::rotate</a></div><div class="ttdeci">static int16 rotate(int32 maximumParamTableRowsToComputePerCall, uint32 param, int16 paramTableRow, fixed_t targetHalfWidth, fixed_t targetHalfHeight, fix13_3 mx, fix13_3 my, fixed_t halfWidth, fixed_t halfHeight, const Rotation *rotation)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-affine-8c-source/">Affine.c:270</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="/documentation/api/class-object/">Object</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8h-source/">Object.h:36</a></div></div>
+<div class="ttc" id="astruct_rotation_html"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:153</a></div></div>
+</div></div>
+
+
+</div>

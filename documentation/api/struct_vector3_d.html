@@ -1,0 +1,2161 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Vector3D Class Reference"
+permalink: documentation/api/struct-vector3-d/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Vector3D Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-types-8h-source/">Types.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Vector3D:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../struct_vector3_d.png" usemap="#Vector3D_map" alt />
+  <map id="Vector3D_map" name="Vector3D_map">
+<area href="/documentation/api/class-object/" alt="Object" shape="rect" coords="0,0,66,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adbef144dc47aa8b420dbd81990632888" id="r_adbef144dc47aa8b420dbd81990632888"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbef144dc47aa8b420dbd81990632888">zero</a> ()</td></tr>
+
+<tr class="memitem:a3a3c1023dcc1be3b8d6d2efeb86a8d49" id="r_a3a3c1023dcc1be3b8d6d2efeb86a8d49"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a3c1023dcc1be3b8d6d2efeb86a8d49">unit</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> axis)</td></tr>
+
+<tr class="memitem:ae77f60cf309d9af309041cbec89b2365" id="r_ae77f60cf309d9af309041cbec89b2365"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae77f60cf309d9af309041cbec89b2365">normalize</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector)</td></tr>
+
+<tr class="memitem:ae4283138da56dae82d13c897aea032bb" id="r_ae4283138da56dae82d13c897aea032bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4283138da56dae82d13c897aea032bb">get</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> from, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> to)</td></tr>
+
+<tr class="memitem:a2650ee936687439ed499d1625d065b2e" id="r_a2650ee936687439ed499d1625d065b2e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2650ee936687439ed499d1625d065b2e">sum</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:a4209107ef22edbd8f4ebe343de603e85" id="r_a4209107ef22edbd8f4ebe343de603e85"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4209107ef22edbd8f4ebe343de603e85">sub</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:a1e4858856496a6a82ef7b13b13fb7b29" id="r_a1e4858856496a6a82ef7b13b13fb7b29"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e4858856496a6a82ef7b13b13fb7b29">absolute</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector)</td></tr>
+
+<tr class="memitem:a786c79b3da3dc958e5a61ba2374107f0" id="r_a786c79b3da3dc958e5a61ba2374107f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a786c79b3da3dc958e5a61ba2374107f0">intermediate</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:a8c545887109ff795cb49a40e016e7bd0" id="r_a8c545887109ff795cb49a40e016e7bd0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c545887109ff795cb49a40e016e7bd0">perpendicularXPlane</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/-types-8h/">bool</a> left)</td></tr>
+
+<tr class="memitem:a42d1527a716177a0298fb0eb54a6f426" id="r_a42d1527a716177a0298fb0eb54a6f426"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d1527a716177a0298fb0eb54a6f426">perpendicularYPlane</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/-types-8h/">bool</a> left)</td></tr>
+
+<tr class="memitem:aff5e7293b11a47d3dbd321e916c87279" id="r_aff5e7293b11a47d3dbd321e916c87279"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff5e7293b11a47d3dbd321e916c87279">perpendicularZPlane</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/-types-8h/">bool</a> left)</td></tr>
+
+<tr class="memitem:a6370cdcb1767b45752473a93aef98c20" id="r_a6370cdcb1767b45752473a93aef98c20"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6370cdcb1767b45752473a93aef98c20">scale</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/struct-scale/">Scale</a> scale)</td></tr>
+
+<tr class="memitem:a69069386ecbd50b6f99c3da9f9e06397" id="r_a69069386ecbd50b6f99c3da9f9e06397"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69069386ecbd50b6f99c3da9f9e06397">scalarProduct</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> scalar)</td></tr>
+
+<tr class="memitem:a16a116c565862575f3d2d99ec5324915" id="r_a16a116c565862575f3d2d99ec5324915"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16a116c565862575f3d2d99ec5324915">scalarDivision</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> scalar)</td></tr>
+
+<tr class="memitem:aec9100efb3a3849e9ec606b0f3cf045b" id="r_aec9100efb3a3849e9ec606b0f3cf045b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec9100efb3a3849e9ec606b0f3cf045b">getRelativeToCamera</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector)</td></tr>
+
+<tr class="memitem:a82bb729be6f5f3cd10e1cd58aa7580b8" id="r_a82bb729be6f5f3cd10e1cd58aa7580b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82bb729be6f5f3cd10e1cd58aa7580b8">getPlaneNormal</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorA, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorB, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorC)</td></tr>
+
+<tr class="memitem:a06dc2e199daf0f55d8a1399ed670dc0e" id="r_a06dc2e199daf0f55d8a1399ed670dc0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06dc2e199daf0f55d8a1399ed670dc0e">projectOnto</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> p, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:a89218b1260bd4755d3bd2f8ad0a0a6ad" id="r_a89218b1260bd4755d3bd2f8ad0a0a6ad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89218b1260bd4755d3bd2f8ad0a0a6ad">projectOntoHighPrecision</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> p, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:ad931fcff82a2f302f1520915c38c4ac3" id="r_ad931fcff82a2f302f1520915c38c4ac3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad931fcff82a2f302f1520915c38c4ac3">rotate</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/struct-rotation/">Rotation</a> rotation)</td></tr>
+
+<tr class="memitem:a40f1f6bed34ae13b328768c1598f03a7" id="r_a40f1f6bed34ae13b328768c1598f03a7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40f1f6bed34ae13b328768c1598f03a7">rotateXAxis</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">int16</a> degrees)</td></tr>
+
+<tr class="memitem:a06dc5ec671ae9f9471b07984b0afd785" id="r_a06dc5ec671ae9f9471b07984b0afd785"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06dc5ec671ae9f9471b07984b0afd785">rotateYAxis</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">int16</a> degrees)</td></tr>
+
+<tr class="memitem:ad6930c52dc7cea8fb98caf5c9f5010cc" id="r_ad6930c52dc7cea8fb98caf5c9f5010cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6930c52dc7cea8fb98caf5c9f5010cc">rotateZAxis</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">int16</a> degrees)</td></tr>
+
+<tr class="memitem:a4ec8e651a92dacf84ef75890e2eba8f0" id="r_a4ec8e651a92dacf84ef75890e2eba8f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec8e651a92dacf84ef75890e2eba8f0">getFromVector2D</a> (<a class="el" href="/documentation/api/struct-vector2-d/">Vector2D</a> vector2D, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> <a class="el" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>)</td></tr>
+
+<tr class="memitem:a703f894eab6f37ec6aba29ede41963e3" id="r_a703f894eab6f37ec6aba29ede41963e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a703f894eab6f37ec6aba29ede41963e3">getFromPixelVector</a> (<a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a> pixelVector)</td></tr>
+
+<tr class="memitem:a15e1df827a9245e00200c88a0ca52d17" id="r_a15e1df827a9245e00200c88a0ca52d17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15e1df827a9245e00200c88a0ca52d17">getFromScreenPixelVector</a> (<a class="el" href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector</a> screenPixelVector)</td></tr>
+
+<tr class="memitem:a0530685860b96b65634ce390520a46fe" id="r_a0530685860b96b65634ce390520a46fe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0530685860b96b65634ce390520a46fe">length</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector)</td></tr>
+
+<tr class="memitem:a2af8b4bb2c4117d5775d06dccfbcab20" id="r_a2af8b4bb2c4117d5775d06dccfbcab20"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2af8b4bb2c4117d5775d06dccfbcab20">squareLength</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector)</td></tr>
+
+<tr class="memitem:a6433922cf92389f9f2101e97c3244836" id="r_a6433922cf92389f9f2101e97c3244836"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6433922cf92389f9f2101e97c3244836">lengthProduct</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorA, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorB)</td></tr>
+
+<tr class="memitem:ad8178a229fb98412c78437c1e75b3e01" id="r_ad8178a229fb98412c78437c1e75b3e01"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8178a229fb98412c78437c1e75b3e01">dotProduct</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorA, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorB)</td></tr>
+
+<tr class="memitem:a522c6d18fc6adda5da9515daac3d0a51" id="r_a522c6d18fc6adda5da9515daac3d0a51"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fix19_13</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a522c6d18fc6adda5da9515daac3d0a51">dotProductHighPrecision</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorA, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vectorB)</td></tr>
+
+<tr class="memitem:a04c1d12f9346b45225abba0cc3e17ac6" id="r_a04c1d12f9346b45225abba0cc3e17ac6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c1d12f9346b45225abba0cc3e17ac6">getScale</a> (<a class="el" href="/documentation/api/-types-8h/">fixed_t</a> <a class="el" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, <a class="el" href="/documentation/api/-types-8h/">bool</a> applyScalingMultiplier)</td></tr>
+
+<tr class="memitem:ae34b7a6aee8edd663ecfd7ee601a946a" id="r_ae34b7a6aee8edd663ecfd7ee601a946a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae34b7a6aee8edd663ecfd7ee601a946a">isLeft</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> p)</td></tr>
+
+<tr class="memitem:a3ded6b41e8de8bac7cff27852c0ff7f5" id="r_a3ded6b41e8de8bac7cff27852c0ff7f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ded6b41e8de8bac7cff27852c0ff7f5">isRight</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> p)</td></tr>
+
+<tr class="memitem:ac1078f72b0c1400204d59f4b129481bc" id="r_ac1078f72b0c1400204d59f4b129481bc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1078f72b0c1400204d59f4b129481bc">areEqual</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:a19eaf16609fba52d4b26379f5464a7f0" id="r_a19eaf16609fba52d4b26379f5464a7f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19eaf16609fba52d4b26379f5464a7f0">isValueInRange</a> (<a class="el" href="/documentation/api/-types-8h/">fixed_t</a> number, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> limitA, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> limitB)</td></tr>
+
+<tr class="memitem:a9a813e100bdd43983128e12a9b5cce04" id="r_a9a813e100bdd43983128e12a9b5cce04"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a813e100bdd43983128e12a9b5cce04">isVectorInsideLine</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> p, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> a, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> b)</td></tr>
+
+<tr class="memitem:acada50c7762938a8ca7dbf53404cc806" id="r_acada50c7762938a8ca7dbf53404cc806"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acada50c7762938a8ca7dbf53404cc806">print</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">int32</a> <a class="el" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="el" href="/documentation/api/-types-8h/">int32</a> <a class="el" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)</td></tr>
+
+<tr class="memitem:a1e209b16016154bb166b97c7471b23a9" id="r_a1e209b16016154bb166b97c7471b23a9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e209b16016154bb166b97c7471b23a9">printRaw</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> vector, <a class="el" href="/documentation/api/-types-8h/">int32</a> <a class="el" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="el" href="/documentation/api/-types-8h/">int32</a> <a class="el" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a19e3c14d15181f9bfa6f288c38ff0c3d" id="r_a19e3c14d15181f9bfa6f288c38ff0c3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a></td></tr>
+
+<tr class="memitem:a2576ad88ec1d08cd1fa2b2a3f78d403d" id="r_a2576ad88ec1d08cd1fa2b2a3f78d403d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a></td></tr>
+
+<tr class="memitem:a860a28658ddc9659f7e52d0aad75b4c0" id="r_a860a28658ddc9659f7e52d0aad75b4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object" id="r_a3a3ea4d86b4b946d57464f65a6a42362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
+
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+
+<tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object" id="r_a481b05c1f25b4e686eca17995944bfcc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">vTable</a></td></tr>
+<tr class="memdesc:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the class's virtual table.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
+<p>Implements methods to operate on <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> structs. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-types-8h-source/">98</a> of file <a class="el" href="/documentation/api/-types-8h-source/">Types.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1e4858856496a6a82ef7b13b13fb7b29" name="a1e4858856496a6a82ef7b13b13fb7b29"></a>
+<h2 class="memtitle">absolute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::absolute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the absulte values for the vector's components. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector whose components are all absolute </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">316</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  317</span>{</div>
+<div class="line"><span class="lineno">  318</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  319</span>    {</div>
+<div class="line"><span class="lineno">  320</span>        <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>),</div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>),</div>
+<div class="line"><span class="lineno">  322</span>        <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>)</div>
+<div class="line"><span class="lineno">  323</span>    };</div>
+<div class="line"><span class="lineno">  324</span>}</div>
+<div class="ttc" id="a_math_8h_html_ae06c9230cce66d88216862571f7c687d"><div class="ttname"><a href="/documentation/api/-math-8h/">__ABS</a></div><div class="ttdeci">#define __ABS(number)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:34</a></div></div>
+<div class="ttc" id="a_types_8h_html_ab04f901853123890736948a2ff6bef01"><div class="ttname"><a href="/documentation/api/-types-8h/">Vector3D</a></div><div class="ttdeci">struct Vector3D Vector3D</div></div>
+<div class="ttc" id="astruct_vector3_d_html_a19e3c14d15181f9bfa6f288c38ff0c3d"><div class="ttname"><a href="#a19e3c14d15181f9bfa6f288c38ff0c3d">Vector3D::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:100</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a2576ad88ec1d08cd1fa2b2a3f78d403d"><div class="ttname"><a href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">Vector3D::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:101</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a860a28658ddc9659f7e52d0aad75b4c0"><div class="ttname"><a href="#a860a28658ddc9659f7e52d0aad75b4c0">Vector3D::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:102</a></div></div>
+</div>
+</div>
+</div>
+<a id="ac1078f72b0c1400204d59f4b129481bc" name="ac1078f72b0c1400204d59f4b129481bc"></a>
+<h2 class="memtitle">areEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> Vector3D::areEqual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test if two vectors are equal. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First vector </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if all the components of both vectors are equal; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">792</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  793</span>{</div>
+<div class="line"><span class="lineno">  794</span>    <span class="keywordflow">return</span> a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> == b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> &amp;&amp; a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> == b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> &amp;&amp; a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> == b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  795</span>}</div>
+</div>
+</div>
+</div>
+<a id="ad8178a229fb98412c78437c1e75b3e01" name="ad8178a229fb98412c78437c1e75b3e01"></a>
+<h2 class="memtitle">dotProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a> Vector3D::dotProduct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorB</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the dot product of the provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vectorA</td><td>First vector </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dot product of the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">715</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  716</span>{</div>
+<div class="line"><span class="lineno">  717</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><span class="lineno">  718</span>        __FIXED_EXT_MULT(vectorA.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, vectorB.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) + </div>
+<div class="line"><span class="lineno">  719</span>        __FIXED_EXT_MULT(vectorA.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, vectorB.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) + </div>
+<div class="line"><span class="lineno">  720</span>        __FIXED_EXT_MULT(vectorA.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, vectorB.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  721</span>}</div>
+</div>
+</div>
+</div>
+<a id="a522c6d18fc6adda5da9515daac3d0a51" name="a522c6d18fc6adda5da9515daac3d0a51"></a>
+<h2 class="memtitle">dotProductHighPrecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fix19_13</a> Vector3D::dotProductHighPrecision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorB</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute with higher decimal precision the dot product of the provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vectorA</td><td>First vector </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dot product of the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">725</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  726</span>{</div>
+<div class="line"><span class="lineno">  727</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><span class="lineno">  728</span>        <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_MULT</a>(__FIXED_TO_FIX19_13(vectorA.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), __FIXED_TO_FIX19_13(vectorB.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)) +</div>
+<div class="line"><span class="lineno">  729</span>        <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_MULT</a>(__FIXED_TO_FIX19_13(vectorA.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), __FIXED_TO_FIX19_13(vectorB.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)) +</div>
+<div class="line"><span class="lineno">  730</span>        <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_MULT</a>(__FIXED_TO_FIX19_13(vectorA.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>), (vectorB.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>));</div>
+<div class="line"><span class="lineno">  731</span>}</div>
+<div class="ttc" id="a_math_8h_html_a7926434ad0c0bfa91a9ceb41bb3a7757"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX19_13_MULT</a></div><div class="ttdeci">#define __FIX19_13_MULT(a, b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:156</a></div></div>
+</div>
+</div>
+</div>
+<a id="ae4283138da56dae82d13c897aea032bb" name="ae4283138da56dae82d13c897aea032bb"></a>
+<h2 class="memtitle">get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the difference vector between two provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">from</td><td>Start vector </td></tr>
+    <tr><td class="paramname">to</td><td>End vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Difference vector between the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">295</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  296</span>{</div>
+<div class="line"><span class="lineno">  297</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){to.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - from.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, to.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - from.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, to.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> - from.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>};</div>
+<div class="line"><span class="lineno">  298</span>}</div>
+</div>
+</div>
+</div>
+<a id="a703f894eab6f37ec6aba29ede41963e3" name="a703f894eab6f37ec6aba29ede41963e3"></a>
+<h2 class="memtitle">getFromPixelVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::getFromPixelVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a></td>          <td class="paramname"><span class="paramname"><em>pixelVector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transform the provided vector in pixel coordinates into a normal 3D vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">pixelVector</td><td>Vector to transform </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>3D vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">650</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  651</span>{</div>
+<div class="line"><span class="lineno">  652</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  653</span>    {</div>
+<div class="line"><span class="lineno">  654</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">x</a>),</div>
+<div class="line"><span class="lineno">  655</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">y</a>),</div>
+<div class="line"><span class="lineno">  656</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">z</a>)</div>
+<div class="line"><span class="lineno">  657</span>    };</div>
+<div class="line"><span class="lineno">  658</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a23e8e373f81337a78ab83b09c1559af1"><div class="ttname"><a href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a></div><div class="ttdeci">#define __PIXELS_TO_METERS(pixels)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:177</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_a4c5b9310a31b1340f1ab6b66547d205f"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:117</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_a53271ed835f6eeb53b36f8388fe0538a"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:119</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_ab4289b50ab91c53903e702037f1553fd"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:118</a></div></div>
+</div>
+</div>
+</div>
+<a id="a15e1df827a9245e00200c88a0ca52d17" name="a15e1df827a9245e00200c88a0ca52d17"></a>
+<h2 class="memtitle">getFromScreenPixelVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::getFromScreenPixelVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector</a></td>          <td class="paramname"><span class="paramname"><em>screenPixelVector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transform the provided vector in screen coordinates into a normal 3D vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">screenPixelVector</td><td>Vector to transform </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>3D vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">662</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  663</span>{</div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  665</span>    {</div>
+<div class="line"><span class="lineno">  666</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(screenPixelVector.<a class="code hl_variable" href="/documentation/api/struct-screen-pixel-vector/">x</a>),</div>
+<div class="line"><span class="lineno">  667</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(screenPixelVector.<a class="code hl_variable" href="/documentation/api/struct-screen-pixel-vector/">y</a>),</div>
+<div class="line"><span class="lineno">  668</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(screenPixelVector.<a class="code hl_variable" href="/documentation/api/struct-screen-pixel-vector/">z</a>)</div>
+<div class="line"><span class="lineno">  669</span>    };</div>
+<div class="line"><span class="lineno">  670</span>}</div>
+<div class="ttc" id="astruct_screen_pixel_vector_html_a0adf6533be2e6d15252da9088e0dc3d3"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:129</a></div></div>
+<div class="ttc" id="astruct_screen_pixel_vector_html_a190d322adfff5fa173bfa9ac357d63b1"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:127</a></div></div>
+<div class="ttc" id="astruct_screen_pixel_vector_html_acd3d3904e74f4bbe59186fe931d1208f"><div class="ttname"><a href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:128</a></div></div>
+</div>
+</div>
+</div>
+<a id="a4ec8e651a92dacf84ef75890e2eba8f0" name="a4ec8e651a92dacf84ef75890e2eba8f0"></a>
+<h2 class="memtitle">getFromVector2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::getFromVector2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector2-d/">Vector2D</a></td>          <td class="paramname"><span class="paramname"><em>vector2D</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Extend the provided 2D vector to 3D. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector2D</td><td>2D vector to extend </td></tr>
+    <tr><td class="paramname">z</td><td>Z coordinate for the extended vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Extended vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">643</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  644</span>{</div>
+<div class="line"><span class="lineno">  645</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){vector2D.<a class="code hl_variable" href="/documentation/api/struct-vector2-d/">x</a>, vector2D.<a class="code hl_variable" href="/documentation/api/struct-vector2-d/">y</a>, <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>};</div>
+<div class="line"><span class="lineno">  646</span>}</div>
+<div class="ttc" id="astruct_vector2_d_html_a92fba1a762049563afc027897acfbbcd"><div class="ttname"><a href="/documentation/api/struct-vector2-d/">Vector2D::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:110</a></div></div>
+<div class="ttc" id="astruct_vector2_d_html_a93c14f66b2e5c5342d5db02b3230cd54"><div class="ttname"><a href="/documentation/api/struct-vector2-d/">Vector2D::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:109</a></div></div>
+</div>
+</div>
+</div>
+<a id="a82bb729be6f5f3cd10e1cd58aa7580b8" name="a82bb729be6f5f3cd10e1cd58aa7580b8"></a>
+<h2 class="memtitle">getPlaneNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::getPlaneNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorC</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the normal to the plane defined by the provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vectorA</td><td>Common vector </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Second vector </td></tr>
+    <tr><td class="paramname">vectorC</td><td>Third vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normal vector to the plane defined by AB and AC </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">452</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  453</span>{</div>
+<div class="line"><span class="lineno">  454</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> u =</div>
+<div class="line"><span class="lineno">  455</span>    {</div>
+<div class="line"><span class="lineno">  456</span>        vectorB.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - vectorA.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>,</div>
+<div class="line"><span class="lineno">  457</span>        vectorB.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - vectorA.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>,</div>
+<div class="line"><span class="lineno">  458</span>        vectorB.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> - vectorA.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>,</div>
+<div class="line"><span class="lineno">  459</span>    };</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> v =</div>
+<div class="line"><span class="lineno">  462</span>    {</div>
+<div class="line"><span class="lineno">  463</span>        vectorC.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - vectorA.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>,</div>
+<div class="line"><span class="lineno">  464</span>        vectorC.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - vectorA.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>,</div>
+<div class="line"><span class="lineno">  465</span>        vectorC.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> - vectorA.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>,</div>
+<div class="line"><span class="lineno">  466</span>    };</div>
+<div class="line"><span class="lineno">  467</span> </div>
+<div class="line"><span class="lineno">  468</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  469</span>    {</div>
+<div class="line"><span class="lineno">  470</span>        __FIXED_EXT_TO_FIXED(__FIXED_EXT_MULT(u.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, v.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>) - __FIXED_EXT_MULT(u.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, v.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)),</div>
+<div class="line"><span class="lineno">  471</span>        __FIXED_EXT_TO_FIXED(__FIXED_EXT_MULT(u.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, v.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) - __FIXED_EXT_MULT(u.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, v.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>)),</div>
+<div class="line"><span class="lineno">  472</span>        __FIXED_EXT_TO_FIXED(__FIXED_EXT_MULT(u.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, v.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) - __FIXED_EXT_MULT(u.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, v.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)),</div>
+<div class="line"><span class="lineno">  473</span>    };</div>
+<div class="line"><span class="lineno">  474</span>}</div>
+</div>
+</div>
+</div>
+<a id="aec9100efb3a3849e9ec606b0f3cf045b" name="aec9100efb3a3849e9ec606b0f3cf045b"></a>
+<h2 class="memtitle">getRelativeToCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::getRelativeToCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the vector relative to the camera's position. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to compute the relative vector of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector relative to the camera's position </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">441</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  442</span>{</div>
+<div class="line"><span class="lineno">  443</span>    vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> -= _cameraPosition-&gt;x;</div>
+<div class="line"><span class="lineno">  444</span>    vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> -= _cameraPosition-&gt;y;</div>
+<div class="line"><span class="lineno">  445</span>    vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> -= _cameraPosition-&gt;z;</div>
+<div class="line"><span class="lineno">  446</span> </div>
+<div class="line"><span class="lineno">  447</span>    <span class="keywordflow">return</span> vector;</div>
+<div class="line"><span class="lineno">  448</span>}</div>
+</div>
+</div>
+</div>
+<a id="a04c1d12f9346b45225abba0cc3e17ac6" name="a04c1d12f9346b45225abba0cc3e17ac6"></a>
+<h2 class="memtitle">getScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> Vector3D::getScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>applyScalingMultiplier</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the scale factor for the provided z coordinate. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">z</td><td>Z coordinate </td></tr>
+    <tr><td class="paramname">applyScalingMultiplier</td><td>Flag to determine if the optics' scaling multiplier is applied to the result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Computed scale </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">735</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  736</span>{</div>
+<div class="line"><span class="lineno">  737</span>    <span class="keywordflow">if</span>(0 == _optical-&gt;halfWidth)</div>
+<div class="line"><span class="lineno">  738</span>    {</div>
+<div class="line"><span class="lineno">  739</span>        <span class="keywordflow">return</span> __1I_FIXED;</div>
+<div class="line"><span class="lineno">  740</span>    }</div>
+<div class="line"><span class="lineno">  741</span> </div>
+<div class="line"><span class="lineno">  742</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> projectedWidth = 0;</div>
+<div class="line"><span class="lineno">  743</span> </div>
+<div class="line"><span class="lineno">  744</span>    <span class="keywordflow">if</span>(applyScalingMultiplier)</div>
+<div class="line"><span class="lineno">  745</span>    {</div>
+<div class="line"><span class="lineno">  746</span>        <span class="keywordflow">if</span>(0 == <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + _optical-&gt;halfWidth)</div>
+<div class="line"><span class="lineno">  747</span>        {</div>
+<div class="line"><span class="lineno">  748</span>            <span class="keywordflow">return</span> __1I_FIXED;</div>
+<div class="line"><span class="lineno">  749</span>        }</div>
+<div class="line"><span class="lineno">  750</span> </div>
+<div class="line"><span class="lineno">  751</span>        projectedWidth = </div>
+<div class="line"><span class="lineno">  752</span>            __FIXED_EXT_DIV</div>
+<div class="line"><span class="lineno">  753</span>            (</div>
+<div class="line"><span class="lineno">  754</span>                __FIXED_EXT_MULT(_optical-&gt;halfWidth, _optical-&gt;scalingMultiplier), </div>
+<div class="line"><span class="lineno">  755</span>                <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + _optical-&gt;halfWidth</div>
+<div class="line"><span class="lineno">  756</span>            );</div>
+<div class="line"><span class="lineno">  757</span>    }</div>
+<div class="line"><span class="lineno">  758</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  759</span>    {</div>
+<div class="line"><span class="lineno">  760</span>        <span class="keywordflow">if</span>(0 == <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + _optical-&gt;cameraNearPlane)</div>
+<div class="line"><span class="lineno">  761</span>        {</div>
+<div class="line"><span class="lineno">  762</span>            <span class="keywordflow">return</span> __1I_FIXED;</div>
+<div class="line"><span class="lineno">  763</span>        }</div>
+<div class="line"><span class="lineno">  764</span> </div>
+<div class="line"><span class="lineno">  765</span>        projectedWidth = </div>
+<div class="line"><span class="lineno">  766</span>            __FIXED_EXT_DIV</div>
+<div class="line"><span class="lineno">  767</span>            (</div>
+<div class="line"><span class="lineno">  768</span>                __FIXED_EXT_MULT(_optical-&gt;halfWidth, _optical-&gt;projectionMultiplierHelper), </div>
+<div class="line"><span class="lineno">  769</span>                <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + _optical-&gt;cameraNearPlane</div>
+<div class="line"><span class="lineno">  770</span>            );</div>
+<div class="line"><span class="lineno">  771</span>    }</div>
+<div class="line"><span class="lineno">  772</span> </div>
+<div class="line"><span class="lineno">  773</span>    <span class="keywordflow">return</span> __FIXED_EXT_DIV(projectedWidth, _optical-&gt;halfWidth);</div>
+<div class="line"><span class="lineno">  774</span>}</div>
+<div class="ttc" id="a_types_8h_html_a3b5675e00af046980df12ddb73b0aaca"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_ext_t</a></div><div class="ttdeci">#define fixed_ext_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:47</a></div></div>
+</div>
+</div>
+</div>
+<a id="a786c79b3da3dc958e5a61ba2374107f0" name="a786c79b3da3dc958e5a61ba2374107f0"></a>
+<h2 class="memtitle">intermediate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::intermediate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the intermediate vector between two provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First vector </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Intermediate vector between the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">328</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  329</span>{</div>
+<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  331</span>    {</div>
+<div class="line"><span class="lineno">  332</span>        (a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) &gt;&gt; 1,</div>
+<div class="line"><span class="lineno">  333</span>        (a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) &gt;&gt; 1,</div>
+<div class="line"><span class="lineno">  334</span>        (a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>) &gt;&gt; 1</div>
+<div class="line"><span class="lineno">  335</span>    };</div>
+<div class="line"><span class="lineno">  336</span>}</div>
+</div>
+</div>
+</div>
+<a id="ae34b7a6aee8edd663ecfd7ee601a946a" name="ae34b7a6aee8edd663ecfd7ee601a946a"></a>
+<h2 class="memtitle">isLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> Vector3D::isLeft </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test if the vector point b is to the left of the vector ab. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First vector </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector </td></tr>
+    <tr><td class="paramname">p</td><td>Vector point to test </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if p is to the left of ab; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">778</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  779</span>{</div>
+<div class="line"><span class="lineno">  780</span>    <span class="keywordflow">return</span> 0 &lt; (__FIXED_EXT_MULT((b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), (p.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)) - __FIXED_EXT_MULT((b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), (p.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)));</div>
+<div class="line"><span class="lineno">  781</span>}</div>
+</div>
+</div>
+</div>
+<a id="a3ded6b41e8de8bac7cff27852c0ff7f5" name="a3ded6b41e8de8bac7cff27852c0ff7f5"></a>
+<h2 class="memtitle">isRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> Vector3D::isRight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test if the vector point b is to the right of the vector ab. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First vector </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector </td></tr>
+    <tr><td class="paramname">p</td><td>Vector point to test </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if p is to the right of ab; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">785</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  786</span>{</div>
+<div class="line"><span class="lineno">  787</span>    <span class="keywordflow">return</span> 0 &gt; (__FIXED_EXT_MULT((b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), (p.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)) - __FIXED_EXT_MULT((b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), (p.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)));</div>
+<div class="line"><span class="lineno">  788</span>}</div>
+</div>
+</div>
+</div>
+<a id="a19eaf16609fba52d4b26379f5464a7f0" name="a19eaf16609fba52d4b26379f5464a7f0"></a>
+<h2 class="memtitle">isValueInRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> Vector3D::isValueInRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>limitA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>limitB</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test if a number is within a range. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">number</td><td>Number to test </td></tr>
+    <tr><td class="paramname">limitA</td><td>First limit of the range </td></tr>
+    <tr><td class="paramname">limitB</td><td>Second limit of the range </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if all the provided number is within the provided limits </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">799</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  800</span>{</div>
+<div class="line"><span class="lineno">  801</span>    <span class="keywordflow">if</span>(limitA &lt; limitB)</div>
+<div class="line"><span class="lineno">  802</span>    {</div>
+<div class="line"><span class="lineno">  803</span>        <span class="keywordflow">return</span> (<span class="keywordtype">unsigned</span>)(number - limitA) &lt;= (<span class="keywordtype">unsigned</span>)(limitB - limitA);</div>
+<div class="line"><span class="lineno">  804</span>    }</div>
+<div class="line"><span class="lineno">  805</span> </div>
+<div class="line"><span class="lineno">  806</span>    <span class="keywordflow">return</span> (<span class="keywordtype">unsigned</span>)(number - limitB) &lt;= (<span class="keywordtype">unsigned</span>)(limitA - limitB);</div>
+<div class="line"><span class="lineno">  807</span>}</div>
+</div>
+</div>
+</div>
+<a id="a9a813e100bdd43983128e12a9b5cce04" name="a9a813e100bdd43983128e12a9b5cce04"></a>
+<h2 class="memtitle">isVectorInsideLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> Vector3D::isVectorInsideLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test if vector point p is within the vector ab </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">p</td><td>Vector point to test </td></tr>
+    <tr><td class="paramname">a</td><td>First vector point of the vector onto which to test p </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector point of the vector onto which to test p </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if p lies in ab; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">811</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  812</span>{</div>
+<div class="line"><span class="lineno">  813</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><span class="lineno">  814</span>    (</div>
+<div class="line"><span class="lineno">  815</span>        <a class="code hl_function" href="#a19eaf16609fba52d4b26379f5464a7f0">Vector3D::isValueInRange</a>(vector.x, a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)</div>
+<div class="line"><span class="lineno">  816</span>        &amp;&amp;</div>
+<div class="line"><span class="lineno">  817</span>        <a class="code hl_function" href="#a19eaf16609fba52d4b26379f5464a7f0">Vector3D::isValueInRange</a>(vector.y, a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)</div>
+<div class="line"><span class="lineno">  818</span>        &amp;&amp;</div>
+<div class="line"><span class="lineno">  819</span>        <a class="code hl_function" href="#a19eaf16609fba52d4b26379f5464a7f0">Vector3D::isValueInRange</a>(vector.z, a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>)</div>
+<div class="line"><span class="lineno">  820</span>    );</div>
+<div class="line"><span class="lineno">  821</span>}</div>
+<div class="ttc" id="astruct_vector3_d_html_a19eaf16609fba52d4b26379f5464a7f0"><div class="ttname"><a href="#a19eaf16609fba52d4b26379f5464a7f0">Vector3D::isValueInRange</a></div><div class="ttdeci">static bool isValueInRange(fixed_t number, fixed_t limitA, fixed_t limitB)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:799</a></div></div>
+</div>
+</div>
+</div>
+<a id="a0530685860b96b65634ce390520a46fe" name="a0530685860b96b65634ce390520a46fe"></a>
+<h2 class="memtitle">length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> Vector3D::length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the length of the provided vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to compute the length of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Length of the provided vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">674</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  675</span>{</div>
+<div class="line"><span class="lineno">  676</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> lengthSquare = </div>
+<div class="line"><span class="lineno">  677</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) + </div>
+<div class="line"><span class="lineno">  678</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) + </div>
+<div class="line"><span class="lineno">  679</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  680</span> </div>
+<div class="line"><span class="lineno">  681</span>    <span class="keywordflow">return</span> Math_squareRootFixed(lengthSquare);</div>
+<div class="line"><span class="lineno">  682</span>}</div>
+</div>
+</div>
+</div>
+<a id="a6433922cf92389f9f2101e97c3244836" name="a6433922cf92389f9f2101e97c3244836"></a>
+<h2 class="memtitle">lengthProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> Vector3D::lengthProduct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vectorB</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the product of the lengths of the provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vectorA</td><td>First vector </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Product of the lengths of the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">696</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  697</span>{</div>
+<div class="line"><span class="lineno">  698</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> lengthSquareA = </div>
+<div class="line"><span class="lineno">  699</span>        __FIXED_EXT_MULT(vectorA.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, vectorA.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) + </div>
+<div class="line"><span class="lineno">  700</span>        __FIXED_EXT_MULT(vectorA.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, vectorA.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) + </div>
+<div class="line"><span class="lineno">  701</span>        __FIXED_EXT_MULT(vectorA.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, vectorA.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  702</span> </div>
+<div class="line"><span class="lineno">  703</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> lengthSquareB = </div>
+<div class="line"><span class="lineno">  704</span>        __FIXED_EXT_MULT(vectorB.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, vectorB.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) + </div>
+<div class="line"><span class="lineno">  705</span>        __FIXED_EXT_MULT(vectorB.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, vectorB.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) + </div>
+<div class="line"><span class="lineno">  706</span>        __FIXED_EXT_MULT(vectorB.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, vectorB.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  707</span> </div>
+<div class="line"><span class="lineno">  708</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_function" href="/documentation/api/-scale-8h/">product</a> = __FIXED_EXT_MULT(lengthSquareA, lengthSquareB);</div>
+<div class="line"><span class="lineno">  709</span> </div>
+<div class="line"><span class="lineno">  710</span>    <span class="keywordflow">return</span> Math_squareRootFixed(<a class="code hl_function" href="/documentation/api/-scale-8h/">product</a>);</div>
+<div class="line"><span class="lineno">  711</span>}</div>
+<div class="ttc" id="a_scale_8h_html_a37b09a4d89199b33f6e7a731bd2a5387"><div class="ttname"><a href="/documentation/api/-scale-8h/">product</a></div><div class="ttdeci">static Scale product(Scale a, Scale b)</div></div>
+</div>
+</div>
+</div>
+<a id="ae77f60cf309d9af309041cbec89b2365" name="ae77f60cf309d9af309041cbec89b2365"></a>
+<h2 class="memtitle">normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::normalize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Normalize the provided vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to normalize </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normalized vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">288</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>{</div>
+<div class="line"><span class="lineno">  290</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a16a116c565862575f3d2d99ec5324915">Vector3D::scalarDivision</a>(vector, <a class="code hl_function" href="#a0530685860b96b65634ce390520a46fe">Vector3D::length</a>(vector));</div>
+<div class="line"><span class="lineno">  291</span>}</div>
+<div class="ttc" id="astruct_vector3_d_html_a0530685860b96b65634ce390520a46fe"><div class="ttname"><a href="#a0530685860b96b65634ce390520a46fe">Vector3D::length</a></div><div class="ttdeci">static fixed_t length(Vector3D vector)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:674</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a16a116c565862575f3d2d99ec5324915"><div class="ttname"><a href="#a16a116c565862575f3d2d99ec5324915">Vector3D::scalarDivision</a></div><div class="ttdeci">static Vector3D scalarDivision(Vector3D vector, fixed_t scalar)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:424</a></div></div>
+</div>
+</div>
+</div>
+<a id="a8c545887109ff795cb49a40e016e7bd0" name="a8c545887109ff795cb49a40e016e7bd0"></a>
+<h2 class="memtitle">perpendicularXPlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::perpendicularXPlane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the perpendicular vector to the X plane in the provided direction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>Vector to compute the perpendicular of </td></tr>
+    <tr><td class="paramname">left</td><td>Direction of the perpendicular vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Perpendicular vector to the X plane </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">340</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>{</div>
+<div class="line"><span class="lineno">  342</span>    <span class="keywordflow">if</span>(left)</div>
+<div class="line"><span class="lineno">  343</span>    {</div>
+<div class="line"><span class="lineno">  344</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> aux = a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>;</div>
+<div class="line"><span class="lineno">  345</span>        a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = -a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  346</span>        a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = aux;</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
+<div class="line"><span class="lineno">  348</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  349</span>    {</div>
+<div class="line"><span class="lineno">  350</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> aux = a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>;</div>
+<div class="line"><span class="lineno">  351</span>        a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  352</span>        a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = -aux;</div>
+<div class="line"><span class="lineno">  353</span>    }</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  356</span>}</div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+</div>
+</div>
+</div>
+<a id="a42d1527a716177a0298fb0eb54a6f426" name="a42d1527a716177a0298fb0eb54a6f426"></a>
+<h2 class="memtitle">perpendicularYPlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::perpendicularYPlane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the perpendicular vector to the Y plane in the provided direction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>Vector to compute the perpendicular of </td></tr>
+    <tr><td class="paramname">left</td><td>Direction of the perpendicular vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Perpendicular vector to the Y plane </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">360</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>{</div>
+<div class="line"><span class="lineno">  362</span>    <span class="keywordflow">if</span>(left)</div>
+<div class="line"><span class="lineno">  363</span>    {</div>
+<div class="line"><span class="lineno">  364</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> aux = a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>;</div>
+<div class="line"><span class="lineno">  365</span>        a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = -a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  366</span>        a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = aux;</div>
+<div class="line"><span class="lineno">  367</span>    }</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  369</span>    {</div>
+<div class="line"><span class="lineno">  370</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> aux = a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>;</div>
+<div class="line"><span class="lineno">  371</span>        a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  372</span>        a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = -aux;</div>
+<div class="line"><span class="lineno">  373</span>    }</div>
+<div class="line"><span class="lineno">  374</span> </div>
+<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  376</span>}</div>
+</div>
+</div>
+</div>
+<a id="aff5e7293b11a47d3dbd321e916c87279" name="aff5e7293b11a47d3dbd321e916c87279"></a>
+<h2 class="memtitle">perpendicularZPlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::perpendicularZPlane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the perpendicular vector to the Z plane in the provided direction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>Vector to compute the perpendicular of </td></tr>
+    <tr><td class="paramname">left</td><td>Direction of the perpendicular vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Perpendicular vector to the Z plane </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">380</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  381</span>{</div>
+<div class="line"><span class="lineno">  382</span>    <span class="keywordflow">if</span>(left)</div>
+<div class="line"><span class="lineno">  383</span>    {</div>
+<div class="line"><span class="lineno">  384</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> aux = a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>;</div>
+<div class="line"><span class="lineno">  385</span>        a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = -a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>;</div>
+<div class="line"><span class="lineno">  386</span>        a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = aux;</div>
+<div class="line"><span class="lineno">  387</span>    }</div>
+<div class="line"><span class="lineno">  388</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  389</span>    {</div>
+<div class="line"><span class="lineno">  390</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> aux = a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>;</div>
+<div class="line"><span class="lineno">  391</span>        a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>;</div>
+<div class="line"><span class="lineno">  392</span>        a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = -aux;</div>
+<div class="line"><span class="lineno">  393</span>    }</div>
+<div class="line"><span class="lineno">  394</span> </div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  396</span>}</div>
+</div>
+</div>
+</div>
+<a id="acada50c7762938a8ca7dbf53404cc806" name="acada50c7762938a8ca7dbf53404cc806"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Vector3D::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the vector's components. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to print </td></tr>
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8c-source/">25</a> of file <a class="el" href="/documentation/api/-vector3-d-8c-source/">Vector3D.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;x:    &quot;</span>, <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>);</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;y:    &quot;</span>, <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 1);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;z:    &quot;</span>, <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 2);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_FLOAT</a>(__FIXED_TO_F(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + 2, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>);</div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_FLOAT</a>(__FIXED_TO_F(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + 2, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 1);</div>
+<div class="line"><span class="lineno">   33</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_FLOAT</a>(__FIXED_TO_F(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>), <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + 2, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 2);</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+<div class="ttc" id="a_printing_8h_html_a8c0a26a0e1a5f7d080b8afd7bbaa7ca3"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_FLOAT</a></div><div class="ttdeci">#define PRINT_FLOAT(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:33</a></div></div>
+<div class="ttc" id="a_printing_8h_html_aa3b793bbb3a63f36a0f6470a02eb536a"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_TEXT</a></div><div class="ttdeci">#define PRINT_TEXT(string, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:31</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1e209b16016154bb166b97c7471b23a9" name="a1e209b16016154bb166b97c7471b23a9"></a>
+<h2 class="memtitle">printRaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Vector3D::printRaw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the vector's components without converting the underlying data type. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to print </td></tr>
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8c-source/">40</a> of file <a class="el" href="/documentation/api/-vector3-d-8c-source/">Vector3D.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>{</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;x:    &quot;</span>, <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>);</div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;y:    &quot;</span>, <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 1);</div>
+<div class="line"><span class="lineno">   44</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;z:    &quot;</span>, <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 2);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>((vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + 2, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>);</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>((vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + 2, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 1);</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>((vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>), <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + 2, <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + 2);</div>
+<div class="line"><span class="lineno">   49</span>}</div>
+<div class="ttc" id="a_printing_8h_html_aa442798120532a77d6204683484b9f8e"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_INT</a></div><div class="ttdeci">#define PRINT_INT(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:32</a></div></div>
+</div>
+</div>
+</div>
+<a id="a06dc2e199daf0f55d8a1399ed670dc0e" name="a06dc2e199daf0f55d8a1399ed670dc0e"></a>
+<h2 class="memtitle">projectOnto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::projectOnto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Project the point p onto the vector ab. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">p</td><td>Vector point to project </td></tr>
+    <tr><td class="paramname">a</td><td>First vector point of the vector onto which to project p </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector point of the vector onto which to project p </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Projected vector point </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">478</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  479</span>{</div>
+<div class="line"><span class="lineno">  480</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> ap = <a class="code hl_function" href="#ae4283138da56dae82d13c897aea032bb">Vector3D::get</a>(a, p);</div>
+<div class="line"><span class="lineno">  481</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> ab = <a class="code hl_function" href="#ae4283138da56dae82d13c897aea032bb">Vector3D::get</a>(a, b);</div>
+<div class="line"><span class="lineno">  482</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> dotApAb = <a class="code hl_function" href="#ad8178a229fb98412c78437c1e75b3e01">Vector3D::dotProduct</a>(ap, ab);</div>
+<div class="line"><span class="lineno">  483</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> dotAbAb = <a class="code hl_function" href="#ad8178a229fb98412c78437c1e75b3e01">Vector3D::dotProduct</a>(ab, ab);</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">if</span>(!dotAbAb)</div>
+<div class="line"><span class="lineno">  486</span>    {</div>
+<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">if</span>(a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> == b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)</div>
+<div class="line"><span class="lineno">  488</span>        {</div>
+<div class="line"><span class="lineno">  489</span>            p.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>;</div>
+<div class="line"><span class="lineno">  490</span>        }</div>
+<div class="line"><span class="lineno">  491</span> </div>
+<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">if</span>(a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> == b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)</div>
+<div class="line"><span class="lineno">  493</span>        {</div>
+<div class="line"><span class="lineno">  494</span>            p.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>;</div>
+<div class="line"><span class="lineno">  495</span>        }</div>
+<div class="line"><span class="lineno">  496</span> </div>
+<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">if</span>(a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> == b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>)</div>
+<div class="line"><span class="lineno">  498</span>        {</div>
+<div class="line"><span class="lineno">  499</span>            p.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  500</span>        }</div>
+<div class="line"><span class="lineno">  501</span> </div>
+<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">return</span> p;</div>
+<div class="line"><span class="lineno">  503</span>    }</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> projection =</div>
+<div class="line"><span class="lineno">  506</span>    {</div>
+<div class="line"><span class="lineno">  507</span>        a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + __FIXED_EXT_MULT(__FIXED_TO_FIXED_EXT(ab.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), __FIXED_EXT_DIV(dotApAb, dotAbAb)),</div>
+<div class="line"><span class="lineno">  508</span>        a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + __FIXED_EXT_MULT(__FIXED_TO_FIXED_EXT(ab.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), __FIXED_EXT_DIV(dotApAb, dotAbAb)),</div>
+<div class="line"><span class="lineno">  509</span>        a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + __FIXED_EXT_MULT(__FIXED_TO_FIXED_EXT(ab.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>), __FIXED_EXT_DIV(dotApAb, dotAbAb)),</div>
+<div class="line"><span class="lineno">  510</span>    };</div>
+<div class="line"><span class="lineno">  511</span> </div>
+<div class="line"><span class="lineno">  512</span>    <span class="keywordflow">return</span> projection;</div>
+<div class="line"><span class="lineno">  513</span>}</div>
+<div class="ttc" id="astruct_vector3_d_html_ad8178a229fb98412c78437c1e75b3e01"><div class="ttname"><a href="#ad8178a229fb98412c78437c1e75b3e01">Vector3D::dotProduct</a></div><div class="ttdeci">static fixed_ext_t dotProduct(Vector3D vectorA, Vector3D vectorB)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:715</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ae4283138da56dae82d13c897aea032bb"><div class="ttname"><a href="#ae4283138da56dae82d13c897aea032bb">Vector3D::get</a></div><div class="ttdeci">static Vector3D get(Vector3D from, Vector3D to)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:295</a></div></div>
+</div>
+</div>
+</div>
+<a id="a89218b1260bd4755d3bd2f8ad0a0a6ad" name="a89218b1260bd4755d3bd2f8ad0a0a6ad"></a>
+<h2 class="memtitle">projectOntoHighPrecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::projectOntoHighPrecision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Project the point p onto the vector ab with higher decima precision. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">p</td><td>Vector point to project </td></tr>
+    <tr><td class="paramname">a</td><td>First vector point of the vector onto which to project p </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector point of the vector onto which to project p </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Projected vector point </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">517</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  518</span>{</div>
+<div class="line"><span class="lineno">  519</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> ap = <a class="code hl_function" href="#ae4283138da56dae82d13c897aea032bb">Vector3D::get</a>(a, p);</div>
+<div class="line"><span class="lineno">  520</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> ab = <a class="code hl_function" href="#ae4283138da56dae82d13c897aea032bb">Vector3D::get</a>(a, b);</div>
+<div class="line"><span class="lineno">  521</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a> dotApAb = <a class="code hl_function" href="#a522c6d18fc6adda5da9515daac3d0a51">Vector3D::dotProductHighPrecision</a>(ap, ab);</div>
+<div class="line"><span class="lineno">  522</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a> dotAbAb = <a class="code hl_function" href="#a522c6d18fc6adda5da9515daac3d0a51">Vector3D::dotProductHighPrecision</a>(ab, ab);</div>
+<div class="line"><span class="lineno">  523</span> </div>
+<div class="line"><span class="lineno">  524</span>    <span class="keywordflow">if</span>(!dotAbAb)</div>
+<div class="line"><span class="lineno">  525</span>    {</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">if</span>(a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> == b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>)</div>
+<div class="line"><span class="lineno">  527</span>        {</div>
+<div class="line"><span class="lineno">  528</span>            p.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>;</div>
+<div class="line"><span class="lineno">  529</span>        }</div>
+<div class="line"><span class="lineno">  530</span> </div>
+<div class="line"><span class="lineno">  531</span>        <span class="keywordflow">if</span>(a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> == b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>)</div>
+<div class="line"><span class="lineno">  532</span>        {</div>
+<div class="line"><span class="lineno">  533</span>            p.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>;</div>
+<div class="line"><span class="lineno">  534</span>        }</div>
+<div class="line"><span class="lineno">  535</span> </div>
+<div class="line"><span class="lineno">  536</span>        <span class="keywordflow">if</span>(a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> == b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>)</div>
+<div class="line"><span class="lineno">  537</span>        {</div>
+<div class="line"><span class="lineno">  538</span>            p.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>;</div>
+<div class="line"><span class="lineno">  539</span>        }</div>
+<div class="line"><span class="lineno">  540</span> </div>
+<div class="line"><span class="lineno">  541</span>        <span class="keywordflow">return</span> p;</div>
+<div class="line"><span class="lineno">  542</span>    }</div>
+<div class="line"><span class="lineno">  543</span> </div>
+<div class="line"><span class="lineno">  544</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> projection =</div>
+<div class="line"><span class="lineno">  545</span>    {</div>
+<div class="line"><span class="lineno">  546</span>        a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + __FIX19_13_TO_FIXED</div>
+<div class="line"><span class="lineno">  547</span>                (</div>
+<div class="line"><span class="lineno">  548</span>                <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_MULT</a>(__FIXED_TO_FIX19_13(ab.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>), <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_DIV</a>(dotApAb, dotAbAb))</div>
+<div class="line"><span class="lineno">  549</span>                ),</div>
+<div class="line"><span class="lineno">  550</span>        a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + __FIX19_13_TO_FIXED</div>
+<div class="line"><span class="lineno">  551</span>                (</div>
+<div class="line"><span class="lineno">  552</span>                    <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_MULT</a>(__FIXED_TO_FIX19_13(ab.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>), <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_DIV</a>(dotApAb, dotAbAb))</div>
+<div class="line"><span class="lineno">  553</span>                ),</div>
+<div class="line"><span class="lineno">  554</span>        a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + __FIX19_13_TO_FIXED</div>
+<div class="line"><span class="lineno">  555</span>                (</div>
+<div class="line"><span class="lineno">  556</span>                    <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_MULT</a>(__FIXED_TO_FIX19_13(ab.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>), <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX19_13_DIV</a>(dotApAb, dotAbAb))</div>
+<div class="line"><span class="lineno">  557</span>                ),</div>
+<div class="line"><span class="lineno">  558</span>    };</div>
+<div class="line"><span class="lineno">  559</span> </div>
+<div class="line"><span class="lineno">  560</span>    <span class="keywordflow">return</span> projection;</div>
+<div class="line"><span class="lineno">  561</span>}</div>
+<div class="ttc" id="a_math_8h_html_ac3d937cc6a65f1c755ead5d8e239a75a"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX19_13_DIV</a></div><div class="ttdeci">#define __FIX19_13_DIV(a, b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:166</a></div></div>
+<div class="ttc" id="a_types_8h_html_a9c29323fa432bf4691c90532c0855513"><div class="ttname"><a href="/documentation/api/-types-8h/">fix19_13</a></div><div class="ttdeci">#define fix19_13</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:43</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a522c6d18fc6adda5da9515daac3d0a51"><div class="ttname"><a href="#a522c6d18fc6adda5da9515daac3d0a51">Vector3D::dotProductHighPrecision</a></div><div class="ttdeci">static fix19_13 dotProductHighPrecision(Vector3D vectorA, Vector3D vectorB)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:725</a></div></div>
+</div>
+</div>
+</div>
+<a id="ad931fcff82a2f302f1520915c38c4ac3" name="ad931fcff82a2f302f1520915c38c4ac3"></a>
+<h2 class="memtitle">rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-rotation/">Rotation</a></td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate the vector according to the provided rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to rotate </td></tr>
+    <tr><td class="paramname">rotation</td><td><a class="el" href="/documentation/api/struct-rotation/">Rotation</a> to apply to the vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Rotated vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">565</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  566</span>{</div>
+<div class="line"><span class="lineno">  567</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> result = vector;</div>
+<div class="line"><span class="lineno">  568</span> </div>
+<div class="line"><span class="lineno">  569</span>    <span class="keywordflow">if</span>(0 != rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a>)</div>
+<div class="line"><span class="lineno">  570</span>    {</div>
+<div class="line"><span class="lineno">  571</span>        result = <a class="code hl_function" href="#a40f1f6bed34ae13b328768c1598f03a7">Vector3D::rotateXAxis</a>(result, __FIXED_TO_I(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">x</a> + __05F_FIXED));</div>
+<div class="line"><span class="lineno">  572</span>    }</div>
+<div class="line"><span class="lineno">  573</span> </div>
+<div class="line"><span class="lineno">  574</span>    <span class="keywordflow">if</span>(0 != rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a>)</div>
+<div class="line"><span class="lineno">  575</span>    {</div>
+<div class="line"><span class="lineno">  576</span>        result = <a class="code hl_function" href="#a06dc5ec671ae9f9471b07984b0afd785">Vector3D::rotateYAxis</a>(result, __FIXED_TO_I(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">y</a> + __05F_FIXED));</div>
+<div class="line"><span class="lineno">  577</span>    }</div>
+<div class="line"><span class="lineno">  578</span> </div>
+<div class="line"><span class="lineno">  579</span>    <span class="keywordflow">if</span>(0 != rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a>)</div>
+<div class="line"><span class="lineno">  580</span>    {</div>
+<div class="line"><span class="lineno">  581</span>        result = <a class="code hl_function" href="#ad6930c52dc7cea8fb98caf5c9f5010cc">Vector3D::rotateZAxis</a>(result, __FIXED_TO_I(rotation.<a class="code hl_variable" href="/documentation/api/struct-rotation/">z</a> + __05F_FIXED));</div>
+<div class="line"><span class="lineno">  582</span>    }</div>
+<div class="line"><span class="lineno">  583</span> </div>
+<div class="line"><span class="lineno">  584</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  585</span>}</div>
+<div class="ttc" id="astruct_rotation_html_a588c694b4d44d8a6c994dc5b97cc6e72"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:155</a></div></div>
+<div class="ttc" id="astruct_rotation_html_ab9779f362cf6cefaf564c388e5ac6d1d"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:158</a></div></div>
+<div class="ttc" id="astruct_rotation_html_ad80ecd7e8e77de5f29de1a808bd71387"><div class="ttname"><a href="/documentation/api/struct-rotation/">Rotation::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:161</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a06dc5ec671ae9f9471b07984b0afd785"><div class="ttname"><a href="#a06dc5ec671ae9f9471b07984b0afd785">Vector3D::rotateYAxis</a></div><div class="ttdeci">static Vector3D rotateYAxis(Vector3D vector, int16 degrees)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:607</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a40f1f6bed34ae13b328768c1598f03a7"><div class="ttname"><a href="#a40f1f6bed34ae13b328768c1598f03a7">Vector3D::rotateXAxis</a></div><div class="ttdeci">static Vector3D rotateXAxis(Vector3D vector, int16 degrees)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:589</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ad6930c52dc7cea8fb98caf5c9f5010cc"><div class="ttname"><a href="#ad6930c52dc7cea8fb98caf5c9f5010cc">Vector3D::rotateZAxis</a></div><div class="ttdeci">static Vector3D rotateZAxis(Vector3D vector, int16 degrees)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:625</a></div></div>
+</div>
+</div>
+</div>
+<a id="a40f1f6bed34ae13b328768c1598f03a7" name="a40f1f6bed34ae13b328768c1598f03a7"></a>
+<h2 class="memtitle">rotateXAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::rotateXAxis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>degrees</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate the vector around the X axis. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to rotate </td></tr>
+    <tr><td class="paramname">degrees</td><td>Amount of degrees to rotate the vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Rotated vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">589</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  590</span>{</div>
+<div class="line"><span class="lineno">  591</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> cos = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__COS</a>(degrees));</div>
+<div class="line"><span class="lineno">  592</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> sin = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__SIN</a>(degrees));</div>
+<div class="line"><span class="lineno">  593</span> </div>
+<div class="line"><span class="lineno">  594</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = __FIXED_TO_FIX7_9_EXT(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>);</div>
+<div class="line"><span class="lineno">  595</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = __FIXED_TO_FIX7_9_EXT(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  596</span> </div>
+<div class="line"><span class="lineno">  597</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>) </div>
+<div class="line"><span class="lineno">  598</span>    {</div>
+<div class="line"><span class="lineno">  599</span>        vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>,</div>
+<div class="line"><span class="lineno">  600</span>        __FIX7_9_EXT_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> , cos) - <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> , sin)),</div>
+<div class="line"><span class="lineno">  601</span>        __FIX7_9_EXT_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> , sin) + <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> , cos))</div>
+<div class="line"><span class="lineno">  602</span>    };</div>
+<div class="line"><span class="lineno">  603</span>}</div>
+<div class="ttc" id="a_math_8h_html_a2e76e00c796870c9a3da46a0f7851b78"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a></div><div class="ttdeci">#define __FIX7_9_TO_FIX7_9_EXT(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:117</a></div></div>
+<div class="ttc" id="a_math_8h_html_a63c7af9c5b7fab26a746835ecc2a56d8"><div class="ttname"><a href="/documentation/api/-math-8h/">__COS</a></div><div class="ttdeci">#define __COS(x)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:169</a></div></div>
+<div class="ttc" id="a_math_8h_html_a75956c55e884d60320c5fc65fab69e77"><div class="ttname"><a href="/documentation/api/-math-8h/">__SIN</a></div><div class="ttdeci">#define __SIN(x)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:170</a></div></div>
+<div class="ttc" id="a_math_8h_html_acd62e84792acb1f6f213620462618f93"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a></div><div class="ttdeci">#define __FIX7_9_EXT_MULT(a, b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:150</a></div></div>
+<div class="ttc" id="a_types_8h_html_a4eea86e575cdda60722e9d3ac8e27d42"><div class="ttname"><a href="/documentation/api/-types-8h/">fix7_9_ext</a></div><div class="ttdeci">#define fix7_9_ext</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:38</a></div></div>
+</div>
+</div>
+</div>
+<a id="a06dc5ec671ae9f9471b07984b0afd785" name="a06dc5ec671ae9f9471b07984b0afd785"></a>
+<h2 class="memtitle">rotateYAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::rotateYAxis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>degrees</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate the vector around the Y axis. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to rotate </td></tr>
+    <tr><td class="paramname">degrees</td><td>Amount of degrees to rotate the vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Rotated vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">607</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  608</span>{</div>
+<div class="line"><span class="lineno">  609</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> cos = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__COS</a>(degrees));</div>
+<div class="line"><span class="lineno">  610</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> sin = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__SIN</a>(degrees));</div>
+<div class="line"><span class="lineno">  611</span> </div>
+<div class="line"><span class="lineno">  612</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = __FIXED_TO_FIX7_9_EXT(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>);</div>
+<div class="line"><span class="lineno">  613</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> <a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> = __FIXED_TO_FIX7_9_EXT(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  614</span> </div>
+<div class="line"><span class="lineno">  615</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>) </div>
+<div class="line"><span class="lineno">  616</span>    {</div>
+<div class="line"><span class="lineno">  617</span>        __FIX7_9_EXT_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> , cos) + <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> , sin)),</div>
+<div class="line"><span class="lineno">  618</span>        vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>,</div>
+<div class="line"><span class="lineno">  619</span>        __FIX7_9_EXT_TO_FIXED(-<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> , sin) + <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> , cos))</div>
+<div class="line"><span class="lineno">  620</span>    };</div>
+<div class="line"><span class="lineno">  621</span>}</div>
+</div>
+</div>
+</div>
+<a id="ad6930c52dc7cea8fb98caf5c9f5010cc" name="ad6930c52dc7cea8fb98caf5c9f5010cc"></a>
+<h2 class="memtitle">rotateZAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::rotateZAxis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>degrees</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate the vector around the Z axis. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to rotate </td></tr>
+    <tr><td class="paramname">degrees</td><td>Amount of degrees to rotate the vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Rotated vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">625</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  626</span>{</div>
+<div class="line"><span class="lineno">  627</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> cos = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__COS</a>(degrees));</div>
+<div class="line"><span class="lineno">  628</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> sin = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__SIN</a>(degrees));</div>
+<div class="line"><span class="lineno">  629</span> </div>
+<div class="line"><span class="lineno">  630</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> <a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> = __FIXED_TO_FIX7_9_EXT(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>);</div>
+<div class="line"><span class="lineno">  631</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a> <a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> = __FIXED_TO_FIX7_9_EXT(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>);</div>
+<div class="line"><span class="lineno">  632</span> </div>
+<div class="line"><span class="lineno">  633</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>) </div>
+<div class="line"><span class="lineno">  634</span>    {</div>
+<div class="line"><span class="lineno">  635</span>        __FIX7_9_EXT_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> , cos) - <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> , sin)),</div>
+<div class="line"><span class="lineno">  636</span>        __FIX7_9_EXT_TO_FIXED(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> , sin) + <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> , cos)),</div>
+<div class="line"><span class="lineno">  637</span>        vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a></div>
+<div class="line"><span class="lineno">  638</span>    };</div>
+<div class="line"><span class="lineno">  639</span>}</div>
+</div>
+</div>
+</div>
+<a id="a16a116c565862575f3d2d99ec5324915" name="a16a116c565862575f3d2d99ec5324915"></a>
+<h2 class="memtitle">scalarDivision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::scalarDivision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>scalar</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Apply a scalar division over the vector's components </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to scale </td></tr>
+    <tr><td class="paramname">scalar</td><td>Scalar divisor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Scaled vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">424</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  425</span>{</div>
+<div class="line"><span class="lineno">  426</span>    <span class="keywordflow">if</span>(0 == scalar)</div>
+<div class="line"><span class="lineno">  427</span>    {</div>
+<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#adbef144dc47aa8b420dbd81990632888">Vector3D::zero</a>();</div>
+<div class="line"><span class="lineno">  429</span>    }</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  432</span>    {</div>
+<div class="line"><span class="lineno">  433</span>        __FIXED_DIV(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, scalar), </div>
+<div class="line"><span class="lineno">  434</span>        __FIXED_DIV(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, scalar), </div>
+<div class="line"><span class="lineno">  435</span>        __FIXED_DIV(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, scalar)</div>
+<div class="line"><span class="lineno">  436</span>    };</div>
+<div class="line"><span class="lineno">  437</span>}</div>
+<div class="ttc" id="astruct_vector3_d_html_adbef144dc47aa8b420dbd81990632888"><div class="ttname"><a href="#adbef144dc47aa8b420dbd81990632888">Vector3D::zero</a></div><div class="ttdeci">static Vector3D zero()</div></div>
+</div>
+</div>
+</div>
+<a id="a69069386ecbd50b6f99c3da9f9e06397" name="a69069386ecbd50b6f99c3da9f9e06397"></a>
+<h2 class="memtitle">scalarProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::scalarProduct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>scalar</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Apply a scalar product over the vector's components </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to scale </td></tr>
+    <tr><td class="paramname">scalar</td><td>Scalar to multiply </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Scaled vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">412</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  413</span>{</div>
+<div class="line"><span class="lineno">  414</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  415</span>    {</div>
+<div class="line"><span class="lineno">  416</span>        __FIXED_MULT(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, scalar), </div>
+<div class="line"><span class="lineno">  417</span>        __FIXED_MULT(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, scalar), </div>
+<div class="line"><span class="lineno">  418</span>        __FIXED_MULT(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, scalar)</div>
+<div class="line"><span class="lineno">  419</span>    };</div>
+<div class="line"><span class="lineno">  420</span>}</div>
+</div>
+</div>
+</div>
+<a id="a6370cdcb1767b45752473a93aef98c20" name="a6370cdcb1767b45752473a93aef98c20"></a>
+<h2 class="memtitle">scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-scale/">Scale</a></td>          <td class="paramname"><span class="paramname"><em>scale</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="/documentation/api/struct-scale/">Scale</a> the provided vector's components </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to scale </td></tr>
+    <tr><td class="paramname">scale</td><td><a class="el" href="/documentation/api/struct-scale/">Scale</a> to apply to the vector's components </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Scaled vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">400</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  401</span>{</div>
+<div class="line"><span class="lineno">  402</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  403</span>    {</div>
+<div class="line"><span class="lineno">  404</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, __FIX7_9_TO_FIXED(<a class="code hl_function" href="#a6370cdcb1767b45752473a93aef98c20">scale</a>.x)), </div>
+<div class="line"><span class="lineno">  405</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, __FIX7_9_TO_FIXED(<a class="code hl_function" href="#a6370cdcb1767b45752473a93aef98c20">scale</a>.y)), </div>
+<div class="line"><span class="lineno">  406</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, __FIX7_9_TO_FIXED(<a class="code hl_function" href="#a6370cdcb1767b45752473a93aef98c20">scale</a>.z))</div>
+<div class="line"><span class="lineno">  407</span>    };</div>
+<div class="line"><span class="lineno">  408</span>}</div>
+<div class="ttc" id="astruct_vector3_d_html_a6370cdcb1767b45752473a93aef98c20"><div class="ttname"><a href="#a6370cdcb1767b45752473a93aef98c20">Vector3D::scale</a></div><div class="ttdeci">static Vector3D scale(Vector3D vector, Scale scale)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:400</a></div></div>
+</div>
+</div>
+</div>
+<a id="a2af8b4bb2c4117d5775d06dccfbcab20" name="a2af8b4bb2c4117d5775d06dccfbcab20"></a>
+<h2 class="memtitle">squareLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a> Vector3D::squareLength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the squared length of the provided vector. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vector</td><td>Vector to compute the square length of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Square length of the provided vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">686</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  687</span>{</div>
+<div class="line"><span class="lineno">  688</span>    <span class="keywordflow">return</span> </div>
+<div class="line"><span class="lineno">  689</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, vector.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>) + </div>
+<div class="line"><span class="lineno">  690</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, vector.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>) + </div>
+<div class="line"><span class="lineno">  691</span>        __FIXED_EXT_MULT(vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>, vector.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>);</div>
+<div class="line"><span class="lineno">  692</span>}</div>
+</div>
+</div>
+</div>
+<a id="a4209107ef22edbd8f4ebe343de603e85" name="a4209107ef22edbd8f4ebe343de603e85"></a>
+<h2 class="memtitle">sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the difference vector between two provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>End vector </td></tr>
+    <tr><td class="paramname">b</td><td>Start vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Difference vector between the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">309</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  310</span>{</div>
+<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> - b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> - b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> - b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>};</div>
+<div class="line"><span class="lineno">  312</span>}</div>
+</div>
+</div>
+</div>
+<a id="a2650ee936687439ed499d1625d065b2e" name="a2650ee936687439ed499d1625d065b2e"></a>
+<h2 class="memtitle">sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::sum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the addition vector between other two provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First vector </td></tr>
+    <tr><td class="paramname">b</td><td>Second vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Addition vector between the provided vectors </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">302</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  303</span>{</div>
+<div class="line"><span class="lineno">  304</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){a.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a> + b.<a class="code hl_variable" href="#a19e3c14d15181f9bfa6f288c38ff0c3d">x</a>, a.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a> + b.<a class="code hl_variable" href="#a2576ad88ec1d08cd1fa2b2a3f78d403d">y</a>, a.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a> + b.<a class="code hl_variable" href="#a860a28658ddc9659f7e52d0aad75b4c0">z</a>};</div>
+<div class="line"><span class="lineno">  305</span>}</div>
+</div>
+</div>
+</div>
+<a id="a3a3c1023dcc1be3b8d6d2efeb86a8d49" name="a3a3c1023dcc1be3b8d6d2efeb86a8d49"></a>
+<h2 class="memtitle">unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a unit vector on the provided axis. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">axis</td><td>Axis on which the vector should be (__X_AXIS, __Y_AXIS or __Z_AXIS) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Unit vector on the provided axis </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-vector3-d-8h-source/">276</a> of file <a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>{</div>
+<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>)</div>
+<div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__X_AXIS</a> &amp; axis ? __I_TO_FIXED(1) : 0,</div>
+<div class="line"><span class="lineno">  281</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__Y_AXIS</a> &amp; axis ? __I_TO_FIXED(1) : 0,</div>
+<div class="line"><span class="lineno">  282</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__Z_AXIS</a> &amp; axis ? __I_TO_FIXED(1) : 0</div>
+<div class="line"><span class="lineno">  283</span>    };</div>
+<div class="line"><span class="lineno">  284</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a695ab8ed214379c7f87e637d4303f8e0"><div class="ttname"><a href="/documentation/api/-constants-8h/">__X_AXIS</a></div><div class="ttdeci">#define __X_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:138</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a711d83c721b7ce2d259a09d37edb38ba"><div class="ttname"><a href="/documentation/api/-constants-8h/">__Z_AXIS</a></div><div class="ttdeci">#define __Z_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:140</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a81c7dbcf227132a1d9d8e8b0e80b245a"><div class="ttname"><a href="/documentation/api/-constants-8h/">__Y_AXIS</a></div><div class="ttdeci">#define __Y_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:139</a></div></div>
+</div>
+</div>
+</div>
+<a id="adbef144dc47aa8b420dbd81990632888" name="adbef144dc47aa8b420dbd81990632888"></a>
+<h2 class="memtitle">zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Vector3D::zero </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a vector with all its members initialized to zero. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/struct-pixel/">Pixel</a> vector with all its members initialized to zero </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a19e3c14d15181f9bfa6f288c38ff0c3d" name="a19e3c14d15181f9bfa6f288c38ff0c3d"></a>
+<h2 class="memtitle">x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> Vector3D::x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-types-8h-source/">100</a> of file <a class="el" href="/documentation/api/-types-8h-source/">Types.h</a>.</p>
+
+</div>
+</div>
+<a id="a2576ad88ec1d08cd1fa2b2a3f78d403d" name="a2576ad88ec1d08cd1fa2b2a3f78d403d"></a>
+<h2 class="memtitle">y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> Vector3D::y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-types-8h-source/">101</a> of file <a class="el" href="/documentation/api/-types-8h-source/">Types.h</a>.</p>
+
+</div>
+</div>
+<a id="a860a28658ddc9659f7e52d0aad75b4c0" name="a860a28658ddc9659f7e52d0aad75b4c0"></a>
+<h2 class="memtitle">z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> Vector3D::z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-types-8h-source/">102</a> of file <a class="el" href="/documentation/api/-types-8h-source/">Types.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Base/General/<a class="el" href="/documentation/api/-types-8h-source/">Types.h</a></li>
+<li>VUEngine-Core/source/Base/Math/<a class="el" href="/documentation/api/-vector3-d-8h-source/">Vector3D.h</a></li>
+<li>VUEngine-Core/source/Base/Math/<a class="el" href="/documentation/api/-vector3-d-8c-source/">Vector3D.c</a></li>
+</ul>
+</div>
+
+
+</div>

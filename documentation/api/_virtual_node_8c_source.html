@@ -1,0 +1,130 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "VirtualNode.c"
+permalink: documentation/api/-virtual-node-8c-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-d79ecfdb20961f17618e14e822be5eb8/">List</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">VirtualNode.c</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-virtual-node-8c/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="/documentation/api/-virtual-node-8h/">VirtualNode.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// CLASS&#39; PUBLIC METHODS</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-node/">   22</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-object/">VirtualNode::constructor</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span> <a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    Base::constructor();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Initialize members</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    this-&gt;data = (<span class="keywordtype">void</span>*)<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> VirtualNode::destructor()</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    Base::destructor();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-node/">   43</a></span><span class="keywordtype">void</span>* <a class="code hl_function" href="/documentation/api/class-virtual-node/">VirtualNode::getData</a>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-node/">   50</a></span><a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-node/">VirtualNode::getNext</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-node/">   57</a></span><a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> <a class="code hl_function" href="/documentation/api/class-virtual-node/">VirtualNode::getPrevious</a>()</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="/documentation/api/class-virtual-node/">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-virtual-node/">VirtualNode::swapData</a>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(node))</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span>* auxData = this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a> = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a> = auxData;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_virtual_node_8h_html"><div class="ttname"><a href="/documentation/api/-virtual-node-8h/">VirtualNode.h</a></div></div>
+<div class="ttc" id="aclass_object_html_a3a3ea4d86b4b946d57464f65a6a42362"><div class="ttname"><a href="/documentation/api/class-object/">Object::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8c-source/">Object.c:188</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:29</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a09315e7ddb0d9056cb1fe00e2c39d5ae"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::getData</a></div><div class="ttdeci">void * getData()</div><div class="ttdef"><b>Definition</b> <a href="#l00043">VirtualNode.c:43</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a17f6295b0c1a039ae8b088b43ba5a0a3"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::getPrevious</a></div><div class="ttdeci">VirtualNode getPrevious()</div><div class="ttdef"><b>Definition</b> <a href="#l00057">VirtualNode.c:57</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a2dd261ee8563057540d7f5ca6edf5654"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::data</a></div><div class="ttdeci">void * data</div><div class="ttdoc">Pointer to the data.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:39</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a35e4bbf087f9c75ed620c10b19fedadd"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::getNext</a></div><div class="ttdeci">VirtualNode getNext()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">VirtualNode.c:50</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a85a4aeaea0a4228820713f2c35b2b253"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::swapData</a></div><div class="ttdeci">void swapData(VirtualNode node)</div><div class="ttdef"><b>Definition</b> <a href="#l00064">VirtualNode.c:64</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_ac0163e7c3d9dc40f2e99769228fd1698"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::previous</a></div><div class="ttdeci">VirtualNode previous</div><div class="ttdoc">Pointer to the previous node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:36</a></div></div>
+</div></div>
+
+
+</div>

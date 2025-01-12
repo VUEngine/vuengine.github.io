@@ -1,0 +1,463 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "HardwareManager.c File Reference"
+permalink: documentation/api/-hardware-manager-8c/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-d9d4eb5f564a24519992882a131745ab/">Hardware</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">HardwareManager.c File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-debug-config-8h-source/">DebugConfig.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-timer-manager-8h-source/">TimerManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-utilities-8h-source/">Utilities.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>&quot;</code><br />
+</div>
+<p><a href="/documentation/api/-hardware-manager-8c-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-r-o-m-info/">ROMInfo</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:abf6bb78f744343cb64df93087f934945" id="r_abf6bb78f744343cb64df93087f934945"><td class="memItemLeft" align="right" valign="top">typedef const struct ROMInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf6bb78f744343cb64df93087f934945">ROMInfo</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1004bd0739e0d405bc9642802c7ab281" id="r_a1004bd0739e0d405bc9642802c7ab281"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-r-o-m-info/">ROMInfo</a> romInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1004bd0739e0d405bc9642802c7ab281">__attribute__</a> ((section(&quot;.rominfo&quot;)))</td></tr>
+
+<tr class="memitem:a3ae64d596c85128a0df48e9551086e7e" id="r_a3ae64d596c85128a0df48e9551086e7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _wramSample&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae64d596c85128a0df48e9551086e7e">__attribute__</a> ((section(&quot;.dram_dirty&quot;)))</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a46ed2a36207f0da2857e7ac28f39dc7d" id="r_a46ed2a36207f0da2857e7ac28f39dc7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46ed2a36207f0da2857e7ac28f39dc7d">keyVector</a></td></tr>
+
+<tr class="memitem:ad6c2970e4535f1a695ad32b21762e93b" id="r_ad6c2970e4535f1a695ad32b21762e93b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6c2970e4535f1a695ad32b21762e93b">timVector</a></td></tr>
+
+<tr class="memitem:a576a6fd305a3ef5442bb2bcb2ed1c250" id="r_a576a6fd305a3ef5442bb2bcb2ed1c250"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a576a6fd305a3ef5442bb2bcb2ed1c250">croVector</a></td></tr>
+
+<tr class="memitem:aeefcea1e50d3cd1d1bc503deadb22d21" id="r_aeefcea1e50d3cd1d1bc503deadb22d21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeefcea1e50d3cd1d1bc503deadb22d21">comVector</a></td></tr>
+
+<tr class="memitem:a60534dd5e7b2f596a0b25c675ad18e2d" id="r_a60534dd5e7b2f596a0b25c675ad18e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60534dd5e7b2f596a0b25c675ad18e2d">vipVector</a></td></tr>
+
+<tr class="memitem:aaa1851522b3e22514da6ed4ef6be031a" id="r_aaa1851522b3e22514da6ed4ef6be031a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa1851522b3e22514da6ed4ef6be031a">zeroDivisionVector</a></td></tr>
+
+<tr class="memitem:a31fb47968bbf44b71ba1b47e96ac2549" id="r_a31fb47968bbf44b71ba1b47e96ac2549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31fb47968bbf44b71ba1b47e96ac2549">invalidOpcodeVector</a></td></tr>
+
+<tr class="memitem:a8da72ffdf98a2c412383e2c312568613" id="r_a8da72ffdf98a2c412383e2c312568613"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8da72ffdf98a2c412383e2c312568613">floatingPointVector</a></td></tr>
+
+<tr class="memitem:a18c73d8444697a4af6e0c46aff52b09a" id="r_a18c73d8444697a4af6e0c46aff52b09a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18c73d8444697a4af6e0c46aff52b09a">_dramBssEnd</a></td></tr>
+
+<tr class="memitem:ad1a12ab72fe3e6c6781e5ccb38159e21" id="r_ad1a12ab72fe3e6c6781e5ccb38159e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1a12ab72fe3e6c6781e5ccb38159e21">_dramDataStart</a></td></tr>
+
+<tr class="memitem:a3d39baf10a8ca1b139b6134967827112" id="r_a3d39baf10a8ca1b139b6134967827112"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d39baf10a8ca1b139b6134967827112">_hardwareRegisters</a> = (<a class="el" href="/documentation/api/-types-8h/">uint8</a>*)0x02000000</td></tr>
+
+<tr class="memitem:a9997c74d2a8cf817320031780ac542cc" id="r_a9997c74d2a8cf817320031780ac542cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9997c74d2a8cf817320031780ac542cc">_vuengineLinkPointer</a> = 0</td></tr>
+
+<tr class="memitem:adbd63e73280de2938d2353d2e0976540" id="r_adbd63e73280de2938d2353d2e0976540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd63e73280de2938d2353d2e0976540">_vuengineStackPointer</a> = 0</td></tr>
+
+<tr class="memitem:ad3229dcbf1fbe45dcb2abf667891e93f" id="r_ad3229dcbf1fbe45dcb2abf667891e93f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3229dcbf1fbe45dcb2abf667891e93f">_stackHeadroomViolation</a> = <a class="el" href="/documentation/api/-types-8h/">false</a></td></tr>
+
+<tr class="memitem:a227adb6ae481866dcf7954c86c23b89f" id="r_a227adb6ae481866dcf7954c86c23b89f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a> _enabledInterrupts&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a227adb6ae481866dcf7954c86c23b89f">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</a> = <a class="el" href="/documentation/api/-types-8h/">false</a></td></tr>
+
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="abf6bb78f744343cb64df93087f934945" name="abf6bb78f744343cb64df93087f934945"></a>
+<h2 class="memtitle">ROMInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const struct ROMInfo ROMInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3ae64d596c85128a0df48e9551086e7e" name="a3ae64d596c85128a0df48e9551086e7e"></a>
+<h2 class="memtitle">__attribute__() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _wramSample __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(section(&quot;.dram_dirty&quot;))</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">83</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>{</div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">// Set ROM waiting to 1 cycle</span></div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="#a3d39baf10a8ca1b139b6134967827112">_hardwareRegisters</a>[<a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">__WCR</a>] |= 0x0001;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    <span class="comment">// Check memory map before anything else</span></div>
+<div class="line"><span class="lineno">   98</span>    HardwareManager::checkMemoryMap();</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">//setup timer interrupts</span></div>
+<div class="line"><span class="lineno">  101</span>    HardwareManager::setInterruptVectors();</div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::setInterruptLevel</a>(0);</div>
+<div class="line"><span class="lineno">  103</span>    HardwareManager::setExceptionVectors();</div>
+<div class="line"><span class="lineno">  104</span>}</div>
+<div class="ttc" id="a_hardware_manager_8c_html_a3d39baf10a8ca1b139b6134967827112"><div class="ttname"><a href="#a3d39baf10a8ca1b139b6134967827112">_hardwareRegisters</a></div><div class="ttdeci">uint8 *const _hardwareRegisters</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c:77</a></div></div>
+<div class="ttc" id="a_hardware_manager_8h_html_a3b4ddb29a97e0c82db6c66e1748080f4"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">__WCR</a></div><div class="ttdeci">#define __WCR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:33</a></div></div>
+<div class="ttc" id="aclass_hardware_manager_html_a773977e556c67b4f94bd949fc49d72c6"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::setInterruptLevel</a></div><div class="ttdeci">static void setInterruptLevel(uint8 level)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:131</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1004bd0739e0d405bc9642802c7ab281" name="a1004bd0739e0d405bc9642802c7ab281"></a>
+<h2 class="memtitle">__attribute__() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-r-o-m-info/">ROMInfo</a> romInfo __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(section(&quot;.rominfo&quot;))</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a227adb6ae481866dcf7954c86c23b89f" name="a227adb6ae481866dcf7954c86c23b89f"></a>
+<h2 class="memtitle">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> _suspendInterruptRequest __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE = <a class="el" href="/documentation/api/-types-8h/">false</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">81</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a18c73d8444697a4af6e0c46aff52b09a" name="a18c73d8444697a4af6e0c46aff52b09a"></a>
+<h2 class="memtitle">_dramBssEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _dramBssEnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1a12ab72fe3e6c6781e5ccb38159e21" name="ad1a12ab72fe3e6c6781e5ccb38159e21"></a>
+<h2 class="memtitle">_dramDataStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _dramDataStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d39baf10a8ca1b139b6134967827112" name="a3d39baf10a8ca1b139b6134967827112"></a>
+<h2 class="memtitle">_hardwareRegisters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a>* const _hardwareRegisters = (<a class="el" href="/documentation/api/-types-8h/">uint8</a>*)0x02000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">77</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+
+</div>
+</div>
+<a id="ad3229dcbf1fbe45dcb2abf667891e93f" name="ad3229dcbf1fbe45dcb2abf667891e93f"></a>
+<h2 class="memtitle">_stackHeadroomViolation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> _stackHeadroomViolation = <a class="el" href="/documentation/api/-types-8h/">false</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">80</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a9997c74d2a8cf817320031780ac542cc" name="a9997c74d2a8cf817320031780ac542cc"></a>
+<h2 class="memtitle">_vuengineLinkPointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int32</a> _vuengineLinkPointer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">78</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+
+</div>
+</div>
+<a id="adbd63e73280de2938d2353d2e0976540" name="adbd63e73280de2938d2353d2e0976540"></a>
+<h2 class="memtitle">_vuengineStackPointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int32</a> _vuengineStackPointer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-hardware-manager-8c-source/">79</a> of file <a class="el" href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c</a>.</p>
+
+</div>
+</div>
+<a id="aeefcea1e50d3cd1d1bc503deadb22d21" name="aeefcea1e50d3cd1d1bc503deadb22d21"></a>
+<h2 class="memtitle">comVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> comVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a576a6fd305a3ef5442bb2bcb2ed1c250" name="a576a6fd305a3ef5442bb2bcb2ed1c250"></a>
+<h2 class="memtitle">croVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> croVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8da72ffdf98a2c412383e2c312568613" name="a8da72ffdf98a2c412383e2c312568613"></a>
+<h2 class="memtitle">floatingPointVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> floatingPointVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31fb47968bbf44b71ba1b47e96ac2549" name="a31fb47968bbf44b71ba1b47e96ac2549"></a>
+<h2 class="memtitle">invalidOpcodeVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> invalidOpcodeVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46ed2a36207f0da2857e7ac28f39dc7d" name="a46ed2a36207f0da2857e7ac28f39dc7d"></a>
+<h2 class="memtitle">keyVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> keyVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6c2970e4535f1a695ad32b21762e93b" name="ad6c2970e4535f1a695ad32b21762e93b"></a>
+<h2 class="memtitle">timVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> timVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60534dd5e7b2f596a0b25c675ad18e2d" name="a60534dd5e7b2f596a0b25c675ad18e2d"></a>
+<h2 class="memtitle">vipVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> vipVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa1851522b3e22514da6ed4ef6be031a" name="aaa1851522b3e22514da6ed4ef6be031a"></a>
+<h2 class="memtitle">zeroDivisionVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> zeroDivisionVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div>
+
+
+</div>

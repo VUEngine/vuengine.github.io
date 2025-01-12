@@ -1,0 +1,131 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BgmapAnimatedSprite.c"
+permalink: documentation/api/-bgmap-animated-sprite-8c-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-0b43cc111c2db98ba5ab6fee48cac891/">Graphics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-fc449a153d89a25ee967519a67ef4d17/">2d</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-95689f9233efbe77401534540ee315de/">Sprites</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-f8a3a5e67fc3948ab1381d20a38c3011/">Bgmap</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">BgmapAnimatedSprite.c</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-bgmap-animated-sprite-8c/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-animation-controller-8h/">AnimationController.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-bgmap-texture-8h/">BgmapTexture.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-texture-8h/">Texture.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-v-i-p-manager-8h/">VIPManager.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="/documentation/api/-bgmap-animated-sprite-8h/">BgmapAnimatedSprite.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// CLASS&#39; PUBLIC METHODS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="/documentation/api/class-bgmap-animated-sprite/">   29</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">BgmapAnimatedSprite::constructor</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> <a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-bgmap-animated-sprite-spec/">BgmapAnimatedSpriteSpec</a>* bgmapAnimatedSpriteSpec)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != bgmapAnimatedSpriteSpec, <span class="stringliteral">&quot;BgmapAnimatedSprite::constructor: NULL bgmapAnimatedSpriteSpec&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, &amp;bgmapAnimatedSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-bgmap-animated-sprite-spec/">bgmapSpriteSpec</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="stringliteral">&quot;BgmapAnimatedSprite::constructor: null texture&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="/documentation/api/class-sprite/">BgmapAnimatedSprite::createAnimationController</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">BgmapAnimatedSprite::destructor</a>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    Base::destructor();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="/documentation/api/class-bgmap-animated-sprite/">   51</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-bgmap-animated-sprite/">BgmapAnimatedSprite::updateAnimation</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>), <span class="stringliteral">&quot;BgmapAnimatedSprite::updateAnimation: null animation controller&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>))</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="/documentation/api/class-texture/">Texture::isMultiframe</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>))</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="/documentation/api/class-bgmap-sprite/">BgmapAnimatedSprite::setMultiframe</a>(<span class="keyword">this</span>, <a class="code hl_function" href="/documentation/api/class-animation-controller/">AnimationController::getActualFrameIndex</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="/documentation/api/class-bgmap-sprite/">BgmapAnimatedSprite::invalidateParamTable</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="/documentation/api/class-texture/">Texture::setFrame</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <a class="code hl_function" href="/documentation/api/class-animation-controller/">AnimationController::getActualFrameIndex</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="ttc" id="a_animation_controller_8h_html"><div class="ttname"><a href="/documentation/api/-animation-controller-8h/">AnimationController.h</a></div></div>
+<div class="ttc" id="a_bgmap_animated_sprite_8h_html"><div class="ttname"><a href="/documentation/api/-bgmap-animated-sprite-8h/">BgmapAnimatedSprite.h</a></div></div>
+<div class="ttc" id="a_bgmap_texture_8h_html"><div class="ttname"><a href="/documentation/api/-bgmap-texture-8h/">BgmapTexture.h</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_texture_8h_html"><div class="ttname"><a href="/documentation/api/-texture-8h/">Texture.h</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">VIPManager.h</a></div></div>
+<div class="ttc" id="aclass_animation_controller_html_a73f304860e4e4837e4b4bf6ca2df1d84"><div class="ttname"><a href="/documentation/api/class-animation-controller/">AnimationController::getActualFrameIndex</a></div><div class="ttdeci">int16 getActualFrameIndex()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-controller-8c-source/">AnimationController.c:397</a></div></div>
+<div class="ttc" id="aclass_bgmap_animated_sprite_html_a3561e661c3c33f68306f8f037ccdeea2"><div class="ttname"><a href="/documentation/api/class-bgmap-animated-sprite/">BgmapAnimatedSprite::updateAnimation</a></div><div class="ttdeci">override void updateAnimation()</div><div class="ttdoc">Update the animation.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">BgmapAnimatedSprite.c:51</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_a2b787e87a74d3246426903503a9a6fd2"><div class="ttname"><a href="/documentation/api/class-bgmap-sprite/">BgmapSprite::invalidateParamTable</a></div><div class="ttdeci">void invalidateParamTable()</div><div class="ttdoc">Force the rewrite of the sprite&#39;s param table during the next rendering cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:546</a></div></div>
+<div class="ttc" id="aclass_bgmap_sprite_html_aebfc1b21f694c6451d67fad75121cb8d"><div class="ttname"><a href="/documentation/api/class-bgmap-sprite/">BgmapSprite::setMultiframe</a></div><div class="ttdeci">override void setMultiframe(uint16 frame)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:278</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_ad7d1242145a2893f5609286c58a03535"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::destructor</a></div><div class="ttdeci">void destructor()</div><div class="ttdoc">Class&#39; destructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:50</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aff6e0d9a0ef892fc651d033a590bee8d"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:37</a></div></div>
+<div class="ttc" id="aclass_sprite_html_a8a774e7a40743ad087f708362b9ffbcd"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::createAnimationController</a></div><div class="ttdeci">override void createAnimationController()</div><div class="ttdoc">Create an animation controller for this sprite.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:116</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aa4978b284ebaae7225869d238dcb32cb"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::texture</a></div><div class="ttdeci">Texture texture</div><div class="ttdoc">Texture to display.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:90</a></div></div>
+<div class="ttc" id="aclass_texture_html_a221c597f264e6440c307ca0a521ffee9"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::isMultiframe</a></div><div class="ttdeci">bool isMultiframe()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:502</a></div></div>
+<div class="ttc" id="aclass_texture_html_ae12371078252f1e8004c34aed150af1b"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::setFrame</a></div><div class="ttdeci">void setFrame(uint16 frame)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:434</a></div></div>
+<div class="ttc" id="aclass_visual_component_html_abe32937ea9679c91b334c57167326ca8"><div class="ttname"><a href="/documentation/api/class-visual-component/">VisualComponent::animationController</a></div><div class="ttdeci">AnimationController animationController</div><div class="ttdoc">Animation controller.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:90</a></div></div>
+<div class="ttc" id="astruct_bgmap_animated_sprite_spec_html"><div class="ttname"><a href="/documentation/api/struct-bgmap-animated-sprite-spec/">BgmapAnimatedSpriteSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-animated-sprite-8h-source/">BgmapAnimatedSprite.h:32</a></div></div>
+<div class="ttc" id="astruct_bgmap_animated_sprite_spec_html_add6c78f7d3451f8ca3917c717757151e"><div class="ttname"><a href="/documentation/api/struct-bgmap-animated-sprite-spec/">BgmapAnimatedSpriteSpec::bgmapSpriteSpec</a></div><div class="ttdeci">BgmapSpriteSpec bgmapSpriteSpec</div><div class="ttdoc">it has a Sprite spec at the beginning</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-animated-sprite-8h-source/">BgmapAnimatedSprite.h:34</a></div></div>
+</div></div>
+
+
+</div>

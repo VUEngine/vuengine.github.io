@@ -1,0 +1,889 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BodyManager Class Reference"
+permalink: documentation/api/class-body-manager/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">BodyManager Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for BodyManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_body_manager.png" usemap="#BodyManager_map" alt />
+  <map id="BodyManager_map" name="BodyManager_map">
+<area href="/documentation/api/class-component-manager/" alt="ComponentManager" shape="rect" coords="0,0,126,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afef35b089d3927c483f0affc5eb60230" id="r_afef35b089d3927c483f0affc5eb60230"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afef35b089d3927c483f0affc5eb60230">constructor</a> ()</td></tr>
+<tr class="memdesc:afef35b089d3927c483f0affc5eb60230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:afe00a9d54fcf66a788686dbff44c935b" id="r_afe00a9d54fcf66a788686dbff44c935b"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe00a9d54fcf66a788686dbff44c935b">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *bodySpec)</td></tr>
+
+<tr class="memitem:a6d144e8b0953e993b46602b5f1b0d660" id="r_a6d144e8b0953e993b46602b5f1b0d660"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d144e8b0953e993b46602b5f1b0d660">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-body/">Body</a> body)</td></tr>
+
+<tr class="memitem:aec19042f0d6853bfaf33277901423cbd" id="r_aec19042f0d6853bfaf33277901423cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec19042f0d6853bfaf33277901423cbd">reset</a> ()</td></tr>
+<tr class="memdesc:aec19042f0d6853bfaf33277901423cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:a36bf05436bb33d2049c5d80f935e5030" id="r_a36bf05436bb33d2049c5d80f935e5030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36bf05436bb33d2049c5d80f935e5030">update</a> ()</td></tr>
+<tr class="memdesc:a36bf05436bb33d2049c5d80f935e5030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the registered bodies by advancing the physics simulations.  <br /></td></tr>
+
+<tr class="memitem:a72a52692eb0be20295ecdaa987b3dd20" id="r_a72a52692eb0be20295ecdaa987b3dd20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a52692eb0be20295ecdaa987b3dd20">setTimeScale</a> (<a class="el" href="/documentation/api/-types-8h/">fixed_t</a> <a class="el" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</td></tr>
+
+<tr class="memitem:a408e77dcaea5c17bdd854fb79aded013" id="r_a408e77dcaea5c17bdd854fb79aded013"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a408e77dcaea5c17bdd854fb79aded013">getTimeScale</a> ()</td></tr>
+
+<tr class="memitem:a042ae452183c9cc112c7701bac4629e5" id="r_a042ae452183c9cc112c7701bac4629e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a042ae452183c9cc112c7701bac4629e5">setGravity</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="el" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>)</td></tr>
+
+<tr class="memitem:a46ea20cf3264baa9fc69ce9c8f664241" id="r_a46ea20cf3264baa9fc69ce9c8f664241"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46ea20cf3264baa9fc69ce9c8f664241">getGravity</a> ()</td></tr>
+
+<tr class="memitem:ae68abd81bee042fe7d6e8be64337da2b" id="r_ae68abd81bee042fe7d6e8be64337da2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae68abd81bee042fe7d6e8be64337da2b">setFrictionCoefficient</a> (<a class="el" href="/documentation/api/-types-8h/">fixed_t</a> <a class="el" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a>)</td></tr>
+
+<tr class="memitem:aaf29b8390302aef83c34751831f649f6" id="r_aaf29b8390302aef83c34751831f649f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf29b8390302aef83c34751831f649f6">getFrictionCoefficient</a> ()</td></tr>
+
+<tr class="memitem:a50404d91149d02a5eb1b3d0f31713aab" id="r_a50404d91149d02a5eb1b3d0f31713aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50404d91149d02a5eb1b3d0f31713aab">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a71658a4fa56561b5b34ed7382b800463" id="r_a71658a4fa56561b5b34ed7382b800463"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71658a4fa56561b5b34ed7382b800463">getElapsedTimeStep</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a94878b789f611943ebadb47bb01a3005" id="r_a94878b789f611943ebadb47bb01a3005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94878b789f611943ebadb47bb01a3005">gravity</a></td></tr>
+<tr class="memdesc:a94878b789f611943ebadb47bb01a3005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gravity in the current physical world.  <br /></td></tr>
+
+<tr class="memitem:a662a8e7dbf5ab64ab2a8e1da1c76d13e" id="r_a662a8e7dbf5ab64ab2a8e1da1c76d13e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a></td></tr>
+<tr class="memdesc:a662a8e7dbf5ab64ab2a8e1da1c76d13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction coefficient in the current physical world.  <br /></td></tr>
+
+<tr class="memitem:a844d5137cc359b19327464c6bb8c5353" id="r_a844d5137cc359b19327464c6bb8c5353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a></td></tr>
+<tr class="memdesc:a844d5137cc359b19327464c6bb8c5353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time scale for time step on each call to update.  <br /></td></tr>
+
+<tr class="memitem:a10d1da706204bb6eab370b684d6404c5" id="r_a10d1da706204bb6eab370b684d6404c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a></td></tr>
+<tr class="memdesc:a10d1da706204bb6eab370b684d6404c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cycle of physical simulation during the current second.  <br /></td></tr>
+
+<tr class="memitem:adcd76e06a39c49343959facac13205f4" id="r_adcd76e06a39c49343959facac13205f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a></td></tr>
+<tr class="memdesc:adcd76e06a39c49343959facac13205f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles to skip physical simulations to slow down physics.  <br /></td></tr>
+
+<tr class="memitem:a3d4b3dd281d9cb04334f811136eaf9ff" id="r_a3d4b3dd281d9cb04334f811136eaf9ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a></td></tr>
+<tr class="memdesc:a3d4b3dd281d9cb04334f811136eaf9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of pending cycles to skip until the next physical simulation cycle.  <br /></td></tr>
+
+<tr class="memitem:a018239bfbfb8d25a3abfa3b443abd76d" id="r_a018239bfbfb8d25a3abfa3b443abd76d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018239bfbfb8d25a3abfa3b443abd76d">dirty</a></td></tr>
+<tr class="memdesc:a018239bfbfb8d25a3abfa3b443abd76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, a body is pending destruction.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
+<tr class="memitem:ad32cb84fe38abfddb9908462bc7a54b6 inherit pub_methods_class_component_manager" id="r_ad32cb84fe38abfddb9908462bc7a54b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">constructor</a> ()</td></tr>
+<tr class="memdesc:ad32cb84fe38abfddb9908462bc7a54b6 inherit pub_methods_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ae0ff65057b734a50961ae59028bcbb52 inherit pub_methods_class_component_manager" id="r_ae0ff65057b734a50961ae59028bcbb52"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
+
+<tr class="memitem:a8803e792ebc2bebd2b2a91c3127b91d7 inherit pub_methods_class_component_manager" id="r_a8803e792ebc2bebd2b2a91c3127b91d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:aa5935cd8d552dd8dbcc2bc02f10cc743 inherit pub_methods_class_component_manager" id="r_aa5935cd8d552dd8dbcc2bc02f10cc743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">doGetComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>)</td></tr>
+
+<tr class="memitem:ae13a34663a70fdc54f4c8bf8625a2b68 inherit pub_methods_class_component_manager" id="r_ae13a34663a70fdc54f4c8bf8625a2b68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+
+<tr class="inherit_header pub_static_methods_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
+<tr class="memitem:ab7850e60b0adf3926f04150afba28dd5 inherit pub_static_methods_class_component_manager" id="r_ab7850e60b0adf3926f04150afba28dd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
+
+<tr class="memitem:a4ae69ec984ab68cd9340ca55cd097313 inherit pub_static_methods_class_component_manager" id="r_a4ae69ec984ab68cd9340ca55cd097313"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:a8564a423867320cf75ca685274559424 inherit pub_static_methods_class_component_manager" id="r_a8564a423867320cf75ca685274559424"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
+
+<tr class="memitem:a92e8340427cb4bec7980d97065930a3f inherit pub_static_methods_class_component_manager" id="r_a92e8340427cb4bec7980d97065930a3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType, <a class="el" href="/documentation/api/-types-8h/">int16</a> componentIndex)</td></tr>
+
+<tr class="memitem:ad570cf1d4424c7bb33772b4d8852581c inherit pub_static_methods_class_component_manager" id="r_ad570cf1d4424c7bb33772b4d8852581c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType,...)</td></tr>
+
+<tr class="memitem:afdb9d380597a7ae5e1f4c79a61f018e6 inherit pub_static_methods_class_component_manager" id="r_afdb9d380597a7ae5e1f4c79a61f018e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
+
+<tr class="memitem:a50e0ecbab92db23be791d7feaea1ad7d inherit pub_static_methods_class_component_manager" id="r_a50e0ecbab92db23be791d7feaea1ad7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyCompomentVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
+<tr class="memitem:a86bce556cf2be26d1414b36ecf82ee85 inherit pub_attribs_class_component_manager" id="r_a86bce556cf2be26d1414b36ecf82ee85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">components</a></td></tr>
+<tr class="memdesc:a86bce556cf2be26d1414b36ecf82ee85 inherit pub_attribs_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of components.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></p>
+<p>Manages the physical bodies in the game states. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">38</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afef35b089d3927c483f0affc5eb60230" name="afef35b089d3927c483f0affc5eb60230"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::constructor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class' constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">323</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  324</span>{</div>
+<div class="line"><span class="lineno">  325</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">  326</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>    this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>.x = 0;</div>
+<div class="line"><span class="lineno">  329</span>    this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>.y = 0;</div>
+<div class="line"><span class="lineno">  330</span>    this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>.z = 0;</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>    this-&gt;<a class="code hl_variable" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a> = 0;</div>
+<div class="line"><span class="lineno">  333</span>    this-&gt;<a class="code hl_variable" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a> = 0;</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>    this-&gt;<a class="code hl_variable" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a> = 0;</div>
+<div class="line"><span class="lineno">  336</span>    this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a> = __1I_FIXED;</div>
+<div class="line"><span class="lineno">  337</span>    this-&gt;<a class="code hl_variable" href="#a018239bfbfb8d25a3abfa3b443abd76d">dirty</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  338</span>    this-&gt;<a class="code hl_variable" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a> = 0;</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>    <a class="code hl_function" href="#a72a52692eb0be20295ecdaa987b3dd20">BodyManager::setTimeScale</a>(<span class="keyword">this</span>, __1I_FIXED);</div>
+<div class="line"><span class="lineno">  341</span>}</div>
+<div class="ttc" id="aclass_body_manager_html_a018239bfbfb8d25a3abfa3b443abd76d"><div class="ttname"><a href="#a018239bfbfb8d25a3abfa3b443abd76d">BodyManager::dirty</a></div><div class="ttdeci">bool dirty</div><div class="ttdoc">If true, a body is pending destruction.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:61</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a10d1da706204bb6eab370b684d6404c5"><div class="ttname"><a href="#a10d1da706204bb6eab370b684d6404c5">BodyManager::cycle</a></div><div class="ttdeci">uint8 cycle</div><div class="ttdoc">Cycle of physical simulation during the current second.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:52</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a3d4b3dd281d9cb04334f811136eaf9ff"><div class="ttname"><a href="#a3d4b3dd281d9cb04334f811136eaf9ff">BodyManager::remainingSkipCycles</a></div><div class="ttdeci">uint8 remainingSkipCycles</div><div class="ttdoc">Number of pending cycles to skip until the next physical simulation cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:58</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a662a8e7dbf5ab64ab2a8e1da1c76d13e"><div class="ttname"><a href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">BodyManager::frictionCoefficient</a></div><div class="ttdeci">fixed_t frictionCoefficient</div><div class="ttdoc">Friction coefficient in the current physical world.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:46</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a72a52692eb0be20295ecdaa987b3dd20"><div class="ttname"><a href="#a72a52692eb0be20295ecdaa987b3dd20">BodyManager::setTimeScale</a></div><div class="ttdeci">void setTimeScale(fixed_t timeScale)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8c-source/">BodyManager.c:220</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a844d5137cc359b19327464c6bb8c5353"><div class="ttname"><a href="#a844d5137cc359b19327464c6bb8c5353">BodyManager::timeScale</a></div><div class="ttdeci">fixed_t timeScale</div><div class="ttdoc">Time scale for time step on each call to update.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:49</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a94878b789f611943ebadb47bb01a3005"><div class="ttname"><a href="#a94878b789f611943ebadb47bb01a3005">BodyManager::gravity</a></div><div class="ttdeci">Vector3D gravity</div><div class="ttdoc">Gravity in the current physical world.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:43</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_adcd76e06a39c49343959facac13205f4"><div class="ttname"><a href="#adcd76e06a39c49343959facac13205f4">BodyManager::skipCycles</a></div><div class="ttdeci">uint8 skipCycles</div><div class="ttdoc">Number of cycles to skip physical simulations to slow down physics.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:55</a></div></div>
+</div>
+</div>
+</div>
+<a id="a6d144e8b0953e993b46602b5f1b0d660" name="a6d144e8b0953e993b46602b5f1b0d660"></a>
+<h2 class="memtitle">deinstantiateComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::deinstantiateComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-body/">Body</a></td>          <td class="paramname"><span class="paramname"><em>body</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroy the provided behavior. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the sprite will attach to </td></tr>
+    <tr><td class="paramname">body</td><td><a class="el" href="/documentation/api/class-body/">Body</a> to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">64</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>{</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(body))</div>
+<div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    Base::deinstantiateComponent(<span class="keyword">this</span>, owner, Component::safeCast(body));</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    BodyManager::destroyBody(<span class="keyword">this</span>, body);</div>
+<div class="line"><span class="lineno">   74</span>}</div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+</div>
+</div>
+</div>
+<a id="a71658a4fa56561b5b34ed7382b800463" name="a71658a4fa56561b5b34ed7382b800463"></a>
+<h2 class="memtitle">getElapsedTimeStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> BodyManager::getElapsedTimeStep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the time that passes between each physical simulation step. </p><dl class="section return"><dt>Returns</dt><dd>The time that passes between each physical simulation step </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">37</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-body-manager-8h/">__PHYSICS_TIME_ELAPSED_STEP</a>;</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+<div class="ttc" id="a_body_manager_8h_html_a280c49e9c3775aaf1d1e1d17795d850c"><div class="ttname"><a href="/documentation/api/-body-manager-8h/">__PHYSICS_TIME_ELAPSED_STEP</a></div><div class="ttdeci">#define __PHYSICS_TIME_ELAPSED_STEP</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8h-source/">BodyManager.h:26</a></div></div>
+</div>
+</div>
+</div>
+<a id="aaf29b8390302aef83c34751831f649f6" name="aaf29b8390302aef83c34751831f649f6"></a>
+<h2 class="memtitle">getFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a> BodyManager::getFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the physical world's friction coefficient. </p><dl class="section return"><dt>Returns</dt><dd>Friction coefficient to set in the current physical world </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">283</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>{</div>
+<div class="line"><span class="lineno">  285</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a>;</div>
+<div class="line"><span class="lineno">  286</span>}</div>
+</div>
+</div>
+</div>
+<a id="a46ea20cf3264baa9fc69ce9c8f664241" name="a46ea20cf3264baa9fc69ce9c8f664241"></a>
+<h2 class="memtitle">getGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> BodyManager::getGravity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the physical world's gravity. </p><dl class="section return"><dt>Returns</dt><dd>Gravity in the current physical world </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">269</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>{</div>
+<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>;</div>
+<div class="line"><span class="lineno">  272</span>}</div>
+</div>
+</div>
+</div>
+<a id="a408e77dcaea5c17bdd854fb79aded013" name="a408e77dcaea5c17bdd854fb79aded013"></a>
+<h2 class="memtitle">getTimeScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> BodyManager::getTimeScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the time scale for time step on each call to update. </p><dl class="section return"><dt>Returns</dt><dd>Time scale for time step on each call to update </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">255</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>{</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>;</div>
+<div class="line"><span class="lineno">  258</span>}</div>
+</div>
+</div>
+</div>
+<a id="afe00a9d54fcf66a788686dbff44c935b" name="afe00a9d54fcf66a788686dbff44c935b"></a>
+<h2 class="memtitle">instantiateComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-body/">Body</a> BodyManager::instantiateComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *</td>          <td class="paramname"><span class="paramname"><em>bodySpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a body with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the body will attach to </td></tr>
+    <tr><td class="paramname">bodySpec</td><td>Spec to use to create the body </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Created body </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">50</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == bodySpec)</div>
+<div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    Base::instantiateComponent(<span class="keyword">this</span>, owner, (<a class="code hl_typedef" href="/documentation/api/-component-8h/">ComponentSpec</a>*)bodySpec);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> BodyManager::createBody(<span class="keyword">this</span>, owner, bodySpec);</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="a_component_8h_html_aba34f00fb543cbec11504c4c4fa7e680"><div class="ttname"><a href="/documentation/api/-component-8h/">ComponentSpec</a></div><div class="ttdeci">struct ComponentSpec ComponentSpec</div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+</div>
+</div>
+</div>
+<a id="a50404d91149d02a5eb1b3d0f31713aab" name="a50404d91149d02a5eb1b3d0f31713aab"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the manager's statistics. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">297</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>{</div>
+<div class="line"><span class="lineno">  299</span>    Printing::resetCoordinates();</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>    Printing::text(<span class="stringliteral">&quot;PHYSICS STATUS&quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  302</span>    Printing::text(<span class="stringliteral">&quot;Registered bodies:     &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  303</span>    Printing::int32(<a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::getCount</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component-manager/">components</a>), x + 19, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="/documentation/api/class-component-manager/">components</a>-&gt;head; y &lt; 28 &amp;&amp; NULL != node; y++, node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  306</span>    {</div>
+<div class="line"><span class="lineno">  307</span>        Printing::text(<span class="stringliteral">&quot;                         &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  308</span>        Printing::text(<a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a>((Body::safeCast(node-&gt;data))-&gt;owner), x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  309</span>    }</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>    Printing::text(<span class="stringliteral">&quot;                         &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  312</span>}</div>
+<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
+<div class="ttc" id="a_oop_8h_html_a461079f1d9f6a4903103f18ae3eb0da4"><div class="ttname"><a href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a></div><div class="ttdeci">#define __GET_CLASS_NAME(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:535</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_a86bce556cf2be26d1414b36ecf82ee85"><div class="ttname"><a href="/documentation/api/class-component-manager/">ComponentManager::components</a></div><div class="ttdeci">VirtualList components</div><div class="ttdoc">List of components.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8h-source/">ComponentManager.h:42</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_aeff94be006312783be69b6e77a41ae2b"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getCount</a></div><div class="ttdeci">int32 getCount()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:197</a></div></div>
+</div>
+</div>
+</div>
+<a id="aec19042f0d6853bfaf33277901423cbd" name="aec19042f0d6853bfaf33277901423cbd"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">78</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
+<div class="line"><span class="lineno">   80</span>    this-&gt;<a class="code hl_variable" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a> = 0;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+</div>
+</div>
+</div>
+<a id="ae68abd81bee042fe7d6e8be64337da2b" name="ae68abd81bee042fe7d6e8be64337da2b"></a>
+<h2 class="memtitle">setFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::setFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>frictionCoefficient</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the physical world's friction coefficient. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frictionCoefficient</td><td>Friction coefficient to set in the current physical world </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">276</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>{</div>
+<div class="line"><span class="lineno">  278</span>    this-&gt;<a class="code hl_variable" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a> = <a class="code hl_variable" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a>;</div>
+<div class="line"><span class="lineno">  279</span>}</div>
+</div>
+</div>
+</div>
+<a id="a042ae452183c9cc112c7701bac4629e5" name="a042ae452183c9cc112c7701bac4629e5"></a>
+<h2 class="memtitle">setGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::setGravity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>gravity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the physical world's gravity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">gravity</td><td>Gravity to set in the current physical world </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">262</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>{</div>
+<div class="line"><span class="lineno">  264</span>    this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a> = <a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>;</div>
+<div class="line"><span class="lineno">  265</span>}</div>
+</div>
+</div>
+</div>
+<a id="a72a52692eb0be20295ecdaa987b3dd20" name="a72a52692eb0be20295ecdaa987b3dd20"></a>
+<h2 class="memtitle">setTimeScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::setTimeScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>timeScale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the time scale for time step on each call to update. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">timeScale</td><td>Time scale for time step on each call to update </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">220</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>{</div>
+<div class="line"><span class="lineno">  222</span>    this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a> = <a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>;</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a> &gt; __1I_FIXED)</div>
+<div class="line"><span class="lineno">  225</span>    {</div>
+<div class="line"><span class="lineno">  226</span>        this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a> = __1I_FIXED;</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(0 &gt;= <a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</div>
+<div class="line"><span class="lineno">  229</span>    {</div>
+<div class="line"><span class="lineno">  230</span>        this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a> = __F_TO_FIXED(0.1f);</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    this-&gt;<a class="code hl_variable" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a> = 0;</div>
+<div class="line"><span class="lineno">  234</span>    this-&gt;<a class="code hl_variable" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a> = 0;</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">if</span>(__F_TO_FIXED(0.5f) &lt; this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</div>
+<div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> gameFramesPerSecond = <a class="code hl_define" href="/documentation/api/-config-8h/">__TARGET_FPS</a> / <a class="code hl_define" href="/documentation/api/-config-8h/">__PHYSICS_TIME_ELAPSED_DIVISOR</a>;</div>
+<div class="line"><span class="lineno">  239</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> targetUpdatesPerSecond = __FIXED_MULT(__I_TO_FIXED(gameFramesPerSecond), this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>);</div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> targetSkipsPerSecond = __I_TO_FIXED(gameFramesPerSecond) - targetUpdatesPerSecond;</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span>(targetSkipsPerSecond)</div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            this-&gt;<a class="code hl_variable" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a> = __FIXED_TO_I(__FIXED_DIV(targetUpdatesPerSecond, targetSkipsPerSecond) + __05F_FIXED);</div>
+<div class="line"><span class="lineno">  245</span>        }</div>
+<div class="line"><span class="lineno">  246</span>    }</div>
+<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  248</span>    {</div>
+<div class="line"><span class="lineno">  249</span>        this-&gt;<a class="code hl_variable" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a> = __FIXED_TO_I(__FIXED_DIV(__1I_FIXED, this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>) - __1I_FIXED + __05F_FIXED);</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+<div class="line"><span class="lineno">  251</span>}</div>
+<div class="ttc" id="a_config_8h_html_a7b5d856192e1cc785ac1db005e4ebb9b"><div class="ttname"><a href="/documentation/api/-config-8h/">__TARGET_FPS</a></div><div class="ttdeci">#define __TARGET_FPS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:137</a></div></div>
+<div class="ttc" id="a_config_8h_html_af4fbd68e970d4ef2c2580fb7c7353b64"><div class="ttname"><a href="/documentation/api/-config-8h/">__PHYSICS_TIME_ELAPSED_DIVISOR</a></div><div class="ttdeci">#define __PHYSICS_TIME_ELAPSED_DIVISOR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:308</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+</div>
+</div>
+</div>
+<a id="a36bf05436bb33d2049c5d80f935e5030" name="a36bf05436bb33d2049c5d80f935e5030"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BodyManager::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the registered bodies by advancing the physics simulations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8c-source/">85</a> of file <a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-config-8h/">__TARGET_FPS &lt; ++this-&gt;</a><a class="code hl_variable" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a>)</div>
+<div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        this-&gt;<a class="code hl_variable" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a> = 1;</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span>(__1I_FIXED &gt; this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</div>
+<div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span>(__F_TO_FIXED(0.5f) &lt; this-&gt;<a class="code hl_variable" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span>(++this-&gt;<a class="code hl_variable" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a> &gt; this-&gt;<a class="code hl_variable" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a>)</div>
+<div class="line"><span class="lineno">   97</span>            {</div>
+<div class="line"><span class="lineno">   98</span>                this-&gt;<a class="code hl_variable" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a> = 0;</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  100</span>            }</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span>(++this-&gt;<a class="code hl_variable" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles &lt;= this-&gt;</a><a class="code hl_variable" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a>)</div>
+<div class="line"><span class="lineno">  105</span>            {</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>            this-&gt;<a class="code hl_variable" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a> = 0;</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    this-&gt;<a class="code hl_variable" href="#a018239bfbfb8d25a3abfa3b443abd76d">dirty</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="/documentation/api/class-component-manager/">components</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        nextNode = node-&gt;next;</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_friend" href="/documentation/api/-body-manager-8c/">Body</a> body = Body::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(body), <span class="stringliteral">&quot;BodyManager::update: deleted body&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span>(body-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <span class="comment">// Place in the removed bodies list</span></div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeNode</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component-manager/">components</a>, node);</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>            <span class="keyword">delete</span> body;</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span>(!body-&gt;<a class="code hl_variable" href="/documentation/api/class-body/">awake</a>)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_AXIS</a> != body-&gt;<a class="code hl_variable" href="/documentation/api/class-body/">axisSubjectToGravity</a> &amp;&amp; <a class="code hl_function" href="/documentation/api/class-entity/">Entity::isSubjectToGravity</a>(body-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, this-&gt;gravity))</div>
+<div class="line"><span class="lineno">  138</span>        {</div>
+<div class="line"><span class="lineno">  139</span>            <span class="comment">// Check if necessary to apply gravity</span></div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> movingState = <a class="code hl_function" href="/documentation/api/class-body/">Body::getMovementOnAllAxis</a>(body);</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> gravitySensibleAxis = </div>
+<div class="line"><span class="lineno">  143</span>                body-&gt;<a class="code hl_variable" href="/documentation/api/class-body/">axisSubjectToGravity</a> </div>
+<div class="line"><span class="lineno">  144</span>                &amp; </div>
+<div class="line"><span class="lineno">  145</span>                (</div>
+<div class="line"><span class="lineno">  146</span>                    (<a class="code hl_define" href="/documentation/api/-constants-8h/">__X_AXIS</a> &amp; ~(<a class="code hl_define" href="/documentation/api/-constants-8h/">__X_AXIS</a> &amp; movingState) ) | (<a class="code hl_define" href="/documentation/api/-constants-8h/">__Y_AXIS</a> &amp; ~(<a class="code hl_define" href="/documentation/api/-constants-8h/">__Y_AXIS</a> &amp; movingState)) | </div>
+<div class="line"><span class="lineno">  147</span>                    (<a class="code hl_define" href="/documentation/api/-constants-8h/">__Z_AXIS</a> &amp; ~(<a class="code hl_define" href="/documentation/api/-constants-8h/">__Z_AXIS</a> &amp; movingState))</div>
+<div class="line"><span class="lineno">  148</span>                );</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_AXIS</a> != gravitySensibleAxis)</div>
+<div class="line"><span class="lineno">  151</span>            {</div>
+<div class="line"><span class="lineno">  152</span>                <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> mass = <a class="code hl_function" href="/documentation/api/class-body/">Body::getMass</a>(body);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>                <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> force =</div>
+<div class="line"><span class="lineno">  155</span>                {</div>
+<div class="line"><span class="lineno">  156</span>                    <a class="code hl_define" href="/documentation/api/-constants-8h/">__X_AXIS</a> &amp; gravitySensibleAxis ? __FIXED_MULT(this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>.x, mass) : 0,</div>
+<div class="line"><span class="lineno">  157</span>                    <a class="code hl_define" href="/documentation/api/-constants-8h/">__Y_AXIS</a> &amp; gravitySensibleAxis ? __FIXED_MULT(this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>.y, mass) : 0,</div>
+<div class="line"><span class="lineno">  158</span>                    <a class="code hl_define" href="/documentation/api/-constants-8h/">__Z_AXIS</a> &amp; gravitySensibleAxis ? __FIXED_MULT(this-&gt;<a class="code hl_variable" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>.z, mass) : 0,</div>
+<div class="line"><span class="lineno">  159</span>                };</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>                <a class="code hl_function" href="/documentation/api/class-body/">Body::applyForce</a>(body, &amp;force);</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>        <a class="code hl_function" href="/documentation/api/class-body/">Body::update</a>(body, this-&gt;<a class="code hl_variable" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a>, <a class="code hl_define" href="/documentation/api/-body-manager-8h/">__PHYSICS_TIME_ELAPSED_STEP</a>);</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span><span class="preprocessor">#ifdef __SHOW_PHYSICS_PROFILING</span></div>
+<div class="line"><span class="lineno">  169</span>    <a class="code hl_function" href="#a50404d91149d02a5eb1b3d0f31713aab">BodyManager::print</a>(<span class="keyword">this</span>, 1, 1);</div>
+<div class="line"><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  171</span>}</div>
+<div class="ttc" id="a_body_manager_8c_html_a8858f397a273114ddc1443880bb5540e"><div class="ttname"><a href="/documentation/api/-body-manager-8c/">Body</a></div><div class="ttdeci">friend class Body</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8c-source/">BodyManager.c:26</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a695ab8ed214379c7f87e637d4303f8e0"><div class="ttname"><a href="/documentation/api/-constants-8h/">__X_AXIS</a></div><div class="ttdeci">#define __X_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:138</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a711d83c721b7ce2d259a09d37edb38ba"><div class="ttname"><a href="/documentation/api/-constants-8h/">__Z_AXIS</a></div><div class="ttdeci">#define __Z_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:140</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a81c7dbcf227132a1d9d8e8b0e80b245a"><div class="ttname"><a href="/documentation/api/-constants-8h/">__Y_AXIS</a></div><div class="ttdeci">#define __Y_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:139</a></div></div>
+<div class="ttc" id="a_constants_8h_html_ac6c63c14b193d770003569c6c5336b85"><div class="ttname"><a href="/documentation/api/-constants-8h/">__NO_AXIS</a></div><div class="ttdeci">#define __NO_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:137</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
+<div class="ttc" id="a_types_8h_html_ab04f901853123890736948a2ff6bef01"><div class="ttname"><a href="/documentation/api/-types-8h/">Vector3D</a></div><div class="ttdeci">struct Vector3D Vector3D</div></div>
+<div class="ttc" id="aclass_body_html_a043fdfdd6242aec0d53f8d28c14a8211"><div class="ttname"><a href="/documentation/api/class-body/">Body::getMovementOnAllAxis</a></div><div class="ttdeci">uint16 getMovementOnAllAxis()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:787</a></div></div>
+<div class="ttc" id="aclass_body_html_a3464affc6c598cad7277daf4ba1a5948"><div class="ttname"><a href="/documentation/api/class-body/">Body::update</a></div><div class="ttdeci">void update(uint16 cycle, fix7_9_ext elapsedTime)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:264</a></div></div>
+<div class="ttc" id="aclass_body_html_a469d0b05f586a3f391fc87f345585e4c"><div class="ttname"><a href="/documentation/api/class-body/">Body::awake</a></div><div class="ttdeci">bool awake</div><div class="ttdoc">If not true, the body skips physical simulations.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8h-source/">Body.h:176</a></div></div>
+<div class="ttc" id="aclass_body_html_a543c8d6e605b4ac155a89c7b0ed7b9a5"><div class="ttname"><a href="/documentation/api/class-body/">Body::axisSubjectToGravity</a></div><div class="ttdeci">uint16 axisSubjectToGravity</div><div class="ttdoc">Axises on which the body is subject to gravity.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8h-source/">Body.h:164</a></div></div>
+<div class="ttc" id="aclass_body_html_a7e363ec0f7e1c109d5e7465b653f2e78"><div class="ttname"><a href="/documentation/api/class-body/">Body::applyForce</a></div><div class="ttdeci">uint8 applyForce(const Vector3D *force)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:328</a></div></div>
+<div class="ttc" id="aclass_body_html_adc19c20f271308bd9d7b623ec63f3687"><div class="ttname"><a href="/documentation/api/class-body/">Body::getMass</a></div><div class="ttdeci">fixed_t getMass()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:692</a></div></div>
+<div class="ttc" id="aclass_body_manager_html_a50404d91149d02a5eb1b3d0f31713aab"><div class="ttname"><a href="#a50404d91149d02a5eb1b3d0f31713aab">BodyManager::print</a></div><div class="ttdeci">void print(int32 x, int32 y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-manager-8c-source/">BodyManager.c:297</a></div></div>
+<div class="ttc" id="aclass_component_html_a6635da6105aa4fdf6905707468eb5905"><div class="ttname"><a href="/documentation/api/class-component/">Component::deleteMe</a></div><div class="ttdeci">bool deleteMe</div><div class="ttdoc">Flag to mark the component as pending deletion.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:90</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_entity_html_a12c484e8f4a610ee9694e801a834fd8f"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::isSubjectToGravity</a></div><div class="ttdeci">virtual bool isSubjectToGravity(Vector3D gravity)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:653</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a38ec1057d1bcc94228a1ea9dda1ec118"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::removeNode</a></div><div class="ttdeci">bool removeNode(VirtualNode node)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:450</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a10d1da706204bb6eab370b684d6404c5" name="a10d1da706204bb6eab370b684d6404c5"></a>
+<h2 class="memtitle">cycle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> BodyManager::cycle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cycle of physical simulation during the current second. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">52</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a018239bfbfb8d25a3abfa3b443abd76d" name="a018239bfbfb8d25a3abfa3b443abd76d"></a>
+<h2 class="memtitle">dirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> BodyManager::dirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, a body is pending destruction. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">61</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a662a8e7dbf5ab64ab2a8e1da1c76d13e" name="a662a8e7dbf5ab64ab2a8e1da1c76d13e"></a>
+<h2 class="memtitle">frictionCoefficient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a> BodyManager::frictionCoefficient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Friction coefficient in the current physical world. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">46</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a94878b789f611943ebadb47bb01a3005" name="a94878b789f611943ebadb47bb01a3005"></a>
+<h2 class="memtitle">gravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> BodyManager::gravity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gravity in the current physical world. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">43</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a3d4b3dd281d9cb04334f811136eaf9ff" name="a3d4b3dd281d9cb04334f811136eaf9ff"></a>
+<h2 class="memtitle">remainingSkipCycles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> BodyManager::remainingSkipCycles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of pending cycles to skip until the next physical simulation cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">58</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<a id="adcd76e06a39c49343959facac13205f4" name="adcd76e06a39c49343959facac13205f4"></a>
+<h2 class="memtitle">skipCycles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> BodyManager::skipCycles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of cycles to skip physical simulations to slow down physics. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">55</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a844d5137cc359b19327464c6bb8c5353" name="a844d5137cc359b19327464c6bb8c5353"></a>
+<h2 class="memtitle">timeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a> BodyManager::timeScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Time scale for time step on each call to update. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">49</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Physics/<a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a></li>
+<li>VUEngine-Core/source/Component/Physics/<a class="el" href="/documentation/api/-body-manager-8c-source/">BodyManager.c</a></li>
+</ul>
+</div>
+
+
+</div>

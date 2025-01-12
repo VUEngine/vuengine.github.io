@@ -1,0 +1,414 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Particle.c"
+permalink: documentation/api/-particle-8c-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3fa4c88c779aa4637a3e3b5c6e71f0b0/">Entity</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-ff270f8bb5fc97f3a55954cbd27995f4/">Container</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-80921ad100dbdb2f2da39f693f919bc6/">Actor</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-a1e92b6469034a359f71566856665b36/">ParticleSystem</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-76347532135ef0f8ba3f4466f91690a5/">Particles</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Particle.c</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-particle-8c/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-body-8h/">Body.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-particle-system-8h/">ParticleSystem.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-sprite-8h/">Sprite.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-sprite-manager-8h/">SpriteManager.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-telegram-8h/">Telegram.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-wireframe-8h/">Wireframe.h</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-wireframe-manager-8h/">WireframeManager.h</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="/documentation/api/-particle-8h/">Particle.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// CLASS&#39; MACROS</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="/documentation/api/-particle-8c/">   28</a></span><span class="preprocessor">#define __PARTICLE_VISIBILITY_PADDING   8</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// CLASS&#39; PUBLIC METHODS</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">Particle::constructor</a>(<span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-particle-spec/">ParticleSpec</a>* <a class="code hl_variable" href="/documentation/api/class-particle/">particleSpec</a>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    Base::constructor();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    this-&gt;particleSpec = <a class="code hl_variable" href="/documentation/api/class-particle/">particleSpec</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">lifeSpan</a> = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">expired</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">Particle::destructor</a>()</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    Base::destructor();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">   59</a></span><a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::getInGameType</a>()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">particleSpec</a>-&gt;inGameType;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">   66</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::collisionStarts</a>(<span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-collision-information/">CollisionInformation</a>* collisionInformation)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span>(collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> &amp;&amp; collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a>)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">particleSpec</a>-&gt;onCollisionAnimation)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_function" href="/documentation/api/class-particle/">Particle::playAnimation</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            (</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keyword">this</span>, ((<a class="code hl_struct" href="/documentation/api/struct-particle-spec/">ParticleSpec</a>*)this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">particleSpec</a>)-&gt;animationFunctions, this-&gt;particleSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-particle-spec/">onCollisionAnimation</a></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            );</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> Base::collisionStarts(<span class="keyword">this</span>, collisionInformation);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">   84</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::setup</a></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>(</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-component-spec/">ComponentSpec</a>* visualComponentSpec, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-component-spec/">ComponentSpec</a>* physicsComponentSpec, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-component-spec/">ComponentSpec</a>* colliderComponentSpec, </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> <a class="code hl_variable" href="/documentation/api/class-particle/">lifeSpan</a>, <span class="keyword">const</span> <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a>* position, <span class="keyword">const</span> <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a>* force, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> movementType, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-animation-function/">AnimationFunction</a>** animationFunctions, </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* animationName</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>{</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">expired</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    this-&gt;lifeSpan = <a class="code hl_variable" href="/documentation/api/class-particle/">lifeSpan</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Is this needed? It can be quite heavy.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">// Particle::resetComponents(this);</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != visualComponentSpec)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::removeComponents</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kSpriteComponent</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::removeComponents</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kWireframeComponent</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::addComponent</a>(<span class="keyword">this</span>, visualComponentSpec);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != physicsComponentSpec &amp;&amp; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::removeComponents</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kPhysicsComponent</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a> = Body::safeCast(<a class="code hl_function" href="/documentation/api/class-entity/">Particle::addComponent</a>(<span class="keyword">this</span>, physicsComponentSpec));</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != colliderComponentSpec)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::removeComponents</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kColliderComponent</a>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::addComponent</a>(<span class="keyword">this</span>, colliderComponentSpec);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_function" href="/documentation/api/class-entity/">Particle::registerCollisions</a>(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="/documentation/api/class-particle/">Particle::playAnimation</a>(<span class="keyword">this</span>, animationFunctions, animationName);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>))</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_function" href="/documentation/api/class-body/">Body::setPosition</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>, position, Entity::safeCast(<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">transformation</a>.position = *position;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != force)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span>(0 != force-&gt;<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a> || 0 != force-&gt;<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a> || 0 != force-&gt;<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <a class="code hl_function" href="/documentation/api/class-entity/">Particle::applyForce</a>(<span class="keyword">this</span>, force, movementType);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_function" href="/documentation/api/class-entity/">Particle::show</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::resume</a>(<span class="keyword">const</span> VisualComponentSpec* visualComponentSpec, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-animation-function/">AnimationFunction</a>** animationFunctions, <span class="keyword">const</span> <span class="keywordtype">char</span>* animationName)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_function" href="/documentation/api/class-entity/">Particle::addComponent</a>(<span class="keyword">this</span>, (<a class="code hl_struct" href="/documentation/api/struct-component-spec/">ComponentSpec</a>*)visualComponentSpec);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_function" href="/documentation/api/class-particle/">Particle::playAnimation</a>(<span class="keyword">this</span>, animationFunctions, animationName);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">  147</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::suspend</a>()</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_function" href="/documentation/api/class-entity/">Particle::removeComponents</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kSpriteComponent</a>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_function" href="/documentation/api/class-entity/">Particle::removeComponents</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kWireframeComponent</a>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">  155</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::expire</a>()</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">expired</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_function" href="/documentation/api/class-entity/">Particle::hide</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">  164</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::isVisible</a>()</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>{</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_class" href="/documentation/api/struct-pixel-vector/">PixelVector</a> pixelVector;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> halfWidth = <a class="code hl_define" href="/documentation/api/-particle-8c/">__PARTICLE_VISIBILITY_PADDING</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> halfHeight = <a class="code hl_define" href="/documentation/api/-particle-8c/">__PARTICLE_VISIBILITY_PADDING</a>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> relativeGlobalPosition = </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">transformation</a>.position), *_cameraInvertedRotation);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    pixelVector = <a class="code hl_function" href="/documentation/api/struct-pixel-vector/">PixelVector::projectVector3D</a>(relativeGlobalPosition, <a class="code hl_function" href="/documentation/api/class-optics/">Optics::calculateParallax</a>(relativeGlobalPosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>));</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">// Check x visibility</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">if</span>(pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">x</a> + halfWidth &lt; _cameraFrustum-&gt;x0 || pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">x</a> - halfWidth &gt; _cameraFrustum-&gt;x1)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">// Check y visibility</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">if</span>(pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">y</a> + halfHeight &lt; _cameraFrustum-&gt;y0 || pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">y</a> - halfHeight &gt; _cameraFrustum-&gt;y1)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="comment">// Check z visibility</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">if</span>(pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">z</a> &gt; <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_DEPTH</a> || pixelVector.<a class="code hl_variable" href="/documentation/api/struct-pixel-vector/">z</a> &lt; -(<a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_DEPTH</a> &gt;&gt; 1))</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">  199</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::playAnimation</a>(<span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-animation-function/">AnimationFunction</a>** animationFunctions, <span class="keyword">const</span> <span class="keywordtype">char</span>* animationName)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>{</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_function" href="/documentation/api/class-component-manager/">ComponentManager::propagateCommand</a></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    (</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <a class="code hl_enumvalue" href="/documentation/api/-visual-component-8h/">cVisualComponentCommandPlay</a>, </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        Entity::safeCast(<span class="keyword">this</span>),</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kSpriteComponent</a>, </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        animationFunctions, </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        animationName, </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>, </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    );</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
+</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="/documentation/api/class-particle/">  215</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-particle/">Particle::update</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> elapsedTime, <span class="keywordtype">void</span> (* behavior)(<a class="code hl_class" href="/documentation/api/class-particle/">Particle</a> particle))</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>{</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">if</span>(0 &lt;= this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">lifeSpan</a>)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">lifeSpan</a> -= elapsedTime;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">if</span>(0 &gt; this-&gt;<a class="code hl_variable" href="/documentation/api/class-particle/">lifeSpan</a>)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <a class="code hl_function" href="/documentation/api/class-particle/">Particle::expire</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>))</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <a class="code hl_function" href="/documentation/api/class-body/">Body::stopMovement</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>, <a class="code hl_define" href="/documentation/api/-constants-8h/">__ALL_AXIS</a>);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != behavior)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            behavior(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">// CLASS&#39; PRIVATE METHODS</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-entity/">Particle::applyForce</a>(<span class="keyword">const</span> <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a>* force <a class="code hl_function" href="/documentation/api/-debug-font-spec-8c/">__attribute__</a> ((unused)), <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> movementType <a class="code hl_function" href="/documentation/api/-debug-font-spec-8c/">__attribute__</a> ((unused)))</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>{</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>))</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-body-8h/">__UNIFORM_MOVEMENT</a> == movementType)</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> mass = <a class="code hl_function" href="/documentation/api/class-body/">Body::getMass</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> acceleration =</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            force-&gt;x,</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            force-&gt;y,</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            force-&gt;z</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        };</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">if</span>(mass &amp;&amp; __1I_FIXED != mass)</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a> = __FIXED_DIV(acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a>, mass);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a> = __FIXED_DIV(acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a>, mass);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a> = __FIXED_DIV(acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>, mass);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> velocity =</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a>,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a>,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            acceleration.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        };</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <a class="code hl_function" href="/documentation/api/class-body/">Body::setVelocity</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>, &amp;velocity);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <a class="code hl_function" href="/documentation/api/class-body/">Body::applyForce</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">body</a>, force);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>}</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="ttc" id="a_body_8h_html"><div class="ttname"><a href="/documentation/api/-body-8h/">Body.h</a></div></div>
+<div class="ttc" id="a_body_8h_html_a89ec5bf26cd9129271e148245aac285b"><div class="ttname"><a href="/documentation/api/-body-8h/">__UNIFORM_MOVEMENT</a></div><div class="ttdeci">#define __UNIFORM_MOVEMENT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8h-source/">Body.h:30</a></div></div>
+<div class="ttc" id="a_component_8h_html_a03920f79c8297f836f38aeb8829a1abe"><div class="ttname"><a href="/documentation/api/-component-8h/">kWireframeComponent</a></div><div class="ttdeci">@ kWireframeComponent</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:48</a></div></div>
+<div class="ttc" id="a_component_8h_html_a3a91d3a77d056034535c275bb099fc42"><div class="ttname"><a href="/documentation/api/-component-8h/">kPhysicsComponent</a></div><div class="ttdeci">@ kPhysicsComponent</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:47</a></div></div>
+<div class="ttc" id="a_component_8h_html_abbde69edef2e711a12ca5db9c1bc0c48"><div class="ttname"><a href="/documentation/api/-component-8h/">kColliderComponent</a></div><div class="ttdeci">@ kColliderComponent</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:46</a></div></div>
+<div class="ttc" id="a_component_8h_html_ad7fa0e4e7d96213e0c5c1807e7eebadf"><div class="ttname"><a href="/documentation/api/-component-8h/">kSpriteComponent</a></div><div class="ttdeci">@ kSpriteComponent</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:45</a></div></div>
+<div class="ttc" id="a_config_8h_html_a2599ac0251334176b9b65c4cda7bfb22"><div class="ttname"><a href="/documentation/api/-config-8h/">__SCREEN_DEPTH</a></div><div class="ttdeci">#define __SCREEN_DEPTH</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:102</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a74a09b205d0072921a7ae76d69f9158c"><div class="ttname"><a href="/documentation/api/-constants-8h/">__ALL_AXIS</a></div><div class="ttdeci">#define __ALL_AXIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:141</a></div></div>
+<div class="ttc" id="a_debug_font_spec_8c_html_a23a1ba88ebdb5dd6c36438ad3a6ce4de"><div class="ttname"><a href="/documentation/api/-debug-font-spec-8c/">__attribute__</a></div><div class="ttdeci">const uint32 DebugFontTiles[] __attribute__((aligned(4)))</div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_particle_8c_html_a297b9f75f7d4afbc623d0da56f04c2c8"><div class="ttname"><a href="/documentation/api/-particle-8c/">__PARTICLE_VISIBILITY_PADDING</a></div><div class="ttdeci">#define __PARTICLE_VISIBILITY_PADDING</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Particle.c:28</a></div></div>
+<div class="ttc" id="a_particle_8h_html"><div class="ttname"><a href="/documentation/api/-particle-8h/">Particle.h</a></div></div>
+<div class="ttc" id="a_particle_system_8h_html"><div class="ttname"><a href="/documentation/api/-particle-system-8h/">ParticleSystem.h</a></div></div>
+<div class="ttc" id="a_sprite_8h_html"><div class="ttname"><a href="/documentation/api/-sprite-8h/">Sprite.h</a></div></div>
+<div class="ttc" id="a_sprite_manager_8h_html"><div class="ttname"><a href="/documentation/api/-sprite-manager-8h/">SpriteManager.h</a></div></div>
+<div class="ttc" id="a_telegram_8h_html"><div class="ttname"><a href="/documentation/api/-telegram-8h/">Telegram.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+<div class="ttc" id="a_types_8h_html_ab04f901853123890736948a2ff6bef01"><div class="ttname"><a href="/documentation/api/-types-8h/">Vector3D</a></div><div class="ttdeci">struct Vector3D Vector3D</div></div>
+<div class="ttc" id="a_visual_component_8h_html_a01c3cea737c89705e28871cd60f9fa23"><div class="ttname"><a href="/documentation/api/-visual-component-8h/">cVisualComponentCommandPlay</a></div><div class="ttdeci">@ cVisualComponentCommandPlay</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:39</a></div></div>
+<div class="ttc" id="a_wireframe_8h_html"><div class="ttname"><a href="/documentation/api/-wireframe-8h/">Wireframe.h</a></div></div>
+<div class="ttc" id="a_wireframe_manager_8h_html"><div class="ttname"><a href="/documentation/api/-wireframe-manager-8h/">WireframeManager.h</a></div></div>
+<div class="ttc" id="aclass_body_html_a0a3432f29493ec02cae04df7239de2ec"><div class="ttname"><a href="/documentation/api/class-body/">Body::stopMovement</a></div><div class="ttdeci">uint16 stopMovement(uint16 axis)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:485</a></div></div>
+<div class="ttc" id="aclass_body_html_a6d06654c267811ac1fd4f24612687c4e"><div class="ttname"><a href="/documentation/api/class-body/">Body::setPosition</a></div><div class="ttdeci">void setPosition(const Vector3D *position, Entity caller)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:699</a></div></div>
+<div class="ttc" id="aclass_body_html_a7e363ec0f7e1c109d5e7465b653f2e78"><div class="ttname"><a href="/documentation/api/class-body/">Body::applyForce</a></div><div class="ttdeci">uint8 applyForce(const Vector3D *force)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:328</a></div></div>
+<div class="ttc" id="aclass_body_html_adc19c20f271308bd9d7b623ec63f3687"><div class="ttname"><a href="/documentation/api/class-body/">Body::getMass</a></div><div class="ttdeci">fixed_t getMass()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:692</a></div></div>
+<div class="ttc" id="aclass_body_html_aefd59fb2b7492544cc41e8bfdd33aee4"><div class="ttname"><a href="/documentation/api/class-body/">Body::setVelocity</a></div><div class="ttdeci">void setVelocity(const Vector3D *velocity)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-body-8c-source/">Body.c:532</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_a66848197db33bc9b10cc145181bac7d4"><div class="ttname"><a href="/documentation/api/class-component-manager/">ComponentManager::propagateCommand</a></div><div class="ttdeci">static void propagateCommand(int32 command, Entity owner, uint32 componentType,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:367</a></div></div>
+<div class="ttc" id="aclass_entity_html_a111d61c668ae3b78d88b60c82db8ee00"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::show</a></div><div class="ttdeci">virtual void show()</div><div class="ttdoc">Make this instance visible.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:503</a></div></div>
+<div class="ttc" id="aclass_entity_html_a241d7059a56679c05f6645390321a44e"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::addComponent</a></div><div class="ttdeci">Component addComponent(const ComponentSpec *componentSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:120</a></div></div>
+<div class="ttc" id="aclass_entity_html_a2f6f06971778eb48c43666051201f0c3"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::body</a></div><div class="ttdeci">Body body</div><div class="ttdoc">Body for physics simulations.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:49</a></div></div>
+<div class="ttc" id="aclass_entity_html_a3e2e4b5724aa0a99ec2c71545c50c312"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::registerCollisions</a></div><div class="ttdeci">void registerCollisions(bool activate)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:344</a></div></div>
+<div class="ttc" id="aclass_entity_html_a752393fb51ee62c4b4183231e05b3343"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::hide</a></div><div class="ttdeci">virtual void hide()</div><div class="ttdoc">Make this instance invisible.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:511</a></div></div>
+<div class="ttc" id="aclass_entity_html_aae66d4192d0965d383a6d1ebe11e6e01"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::transformation</a></div><div class="ttdeci">Transformation transformation</div><div class="ttdoc">3D transformation</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:46</a></div></div>
+<div class="ttc" id="aclass_entity_html_ac8d9b85b1ea6fb282dac1e101c506d75"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::removeComponents</a></div><div class="ttdeci">void removeComponents(uint32 componentType)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:141</a></div></div>
+<div class="ttc" id="aclass_entity_html_ad2918531b95eed94370ae7eb661be1ee"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::applyForce</a></div><div class="ttdeci">virtual bool applyForce(const Vector3D *force, bool checkIfCanMove)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:584</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_ad7d1242145a2893f5609286c58a03535"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::destructor</a></div><div class="ttdeci">void destructor()</div><div class="ttdoc">Class&#39; destructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:50</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aff6e0d9a0ef892fc651d033a590bee8d"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:37</a></div></div>
+<div class="ttc" id="aclass_optics_html_aa4b79d94e2d06920f705ccd99bb5ea65"><div class="ttname"><a href="/documentation/api/class-optics/">Optics::calculateParallax</a></div><div class="ttdeci">static int16 calculateParallax(fixed_t z)</div></div>
+<div class="ttc" id="aclass_particle_html"><div class="ttname"><a href="/documentation/api/class-particle/">Particle</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-particle-8h-source/">Particle.h:76</a></div></div>
+<div class="ttc" id="aclass_particle_html_a095cfe0d1f4a1499ce5dfdfff003d354"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdoc">Prepares the particle to become inactive in this state.</div><div class="ttdef"><b>Definition</b> <a href="#l00147">Particle.c:147</a></div></div>
+<div class="ttc" id="aclass_particle_html_a28a301c6d1f08f5b77bd091d79872517"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::isVisible</a></div><div class="ttdeci">bool isVisible()</div><div class="ttdef"><b>Definition</b> <a href="#l00164">Particle.c:164</a></div></div>
+<div class="ttc" id="aclass_particle_html_a325a2acf8bda735367f8402a30f9a59f"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::particleSpec</a></div><div class="ttdeci">const ParticleSpec * particleSpec</div><div class="ttdoc">ParticleSpec used to configure the particle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-particle-8h-source/">Particle.h:86</a></div></div>
+<div class="ttc" id="aclass_particle_html_a5ebe7c0129205cdcb8dfcaff64d1e474"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::getInGameType</a></div><div class="ttdeci">override uint32 getInGameType()</div><div class="ttdef"><b>Definition</b> <a href="#l00059">Particle.c:59</a></div></div>
+<div class="ttc" id="aclass_particle_html_a6bd010e3d7c2cd25b2a5fdd7a50f4086"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::collisionStarts</a></div><div class="ttdeci">override bool collisionStarts(const CollisionInformation *collisionInformation)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">Particle.c:66</a></div></div>
+<div class="ttc" id="aclass_particle_html_aa0e144689fff2d5ff79b132321477bf7"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::resume</a></div><div class="ttdeci">void resume(const VisualComponentSpec *visualComponentSpec, const AnimationFunction **animationFunctions, const char *animationName)</div><div class="ttdef"><b>Definition</b> <a href="#l00139">Particle.c:139</a></div></div>
+<div class="ttc" id="aclass_particle_html_aa6152960bdfeb437d4c472386bac3a50"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::expire</a></div><div class="ttdeci">void expire()</div><div class="ttdoc">Force the particle to expire.</div><div class="ttdef"><b>Definition</b> <a href="#l00155">Particle.c:155</a></div></div>
+<div class="ttc" id="aclass_particle_html_ad34916e29082bfffb90b151ceb89ab0f"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::setup</a></div><div class="ttdeci">void setup(const ComponentSpec *visualComponentSpec, const ComponentSpec *physicsComponentSpec, const ComponentSpec *colliderComponentSpec, int16 lifeSpan, const Vector3D *position, const Vector3D *force, uint32 movementType, const AnimationFunction **animationFunctions, const char *animationName)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">Particle.c:85</a></div></div>
+<div class="ttc" id="aclass_particle_html_aeb22e8c166aa151363e066071289acd5"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::expired</a></div><div class="ttdeci">bool expired</div><div class="ttdoc">If true the particle is set to be destroyed or recycled.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-particle-8h-source/">Particle.h:83</a></div></div>
+<div class="ttc" id="aclass_particle_html_aefcb6319e9107683a16a0ad83046fb46"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::update</a></div><div class="ttdeci">virtual bool update(uint32 elapsedTime, void(*behavior)(Particle particle))</div><div class="ttdef"><b>Definition</b> <a href="#l00215">Particle.c:215</a></div></div>
+<div class="ttc" id="aclass_particle_html_af7b6a5db5b9b56f8b14470867af44395"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::playAnimation</a></div><div class="ttdeci">void playAnimation(const AnimationFunction **animationFunctions, const char *animationName)</div><div class="ttdef"><b>Definition</b> <a href="#l00199">Particle.c:199</a></div></div>
+<div class="ttc" id="aclass_particle_html_afc4faa9faf267cd8d5d9726bf4f99fef"><div class="ttname"><a href="/documentation/api/class-particle/">Particle::lifeSpan</a></div><div class="ttdeci">int16 lifeSpan</div><div class="ttdoc">Remaining life span in milliseconds.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-particle-8h-source/">Particle.h:80</a></div></div>
+<div class="ttc" id="astruct_animation_function_html"><div class="ttname"><a href="/documentation/api/struct-animation-function/">AnimationFunction</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:51</a></div></div>
+<div class="ttc" id="astruct_collision_information_html"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:85</a></div></div>
+<div class="ttc" id="astruct_collision_information_html_a144656768cb5d664d90cbb7b36fcc1bd"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation::otherCollider</a></div><div class="ttdeci">Collider otherCollider</div><div class="ttdoc">Colliding collider.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:90</a></div></div>
+<div class="ttc" id="astruct_collision_information_html_ada5d08b8acced599e7b3f37e7fc2eac9"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation::collider</a></div><div class="ttdeci">Collider collider</div><div class="ttdoc">Collider detecting the collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:87</a></div></div>
+<div class="ttc" id="astruct_component_spec_html"><div class="ttname"><a href="/documentation/api/struct-component-spec/">ComponentSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:58</a></div></div>
+<div class="ttc" id="astruct_particle_spec_html"><div class="ttname"><a href="/documentation/api/struct-particle-spec/">ParticleSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-particle-8h-source/">Particle.h:35</a></div></div>
+<div class="ttc" id="astruct_particle_spec_html_ac1158ef2fd17a6a91e1429053a7add9f"><div class="ttname"><a href="/documentation/api/struct-particle-spec/">ParticleSpec::onCollisionAnimation</a></div><div class="ttdeci">const char * onCollisionAnimation</div><div class="ttdoc">Animation to play upon collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-particle-8h-source/">Particle.h:55</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:116</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_a10253525ce4a2aba4884bf99380b2534"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::projectVector3D</a></div><div class="ttdeci">static PixelVector projectVector3D(Vector3D vector3D, int16 parallax)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-pixel-vector-8h-source/">PixelVector.h:226</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_a4c5b9310a31b1340f1ab6b66547d205f"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:117</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_a53271ed835f6eeb53b36f8388fe0538a"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:119</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_ab4289b50ab91c53903e702037f1553fd"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:118</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:99</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a19e3c14d15181f9bfa6f288c38ff0c3d"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::x</a></div><div class="ttdeci">int16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:100</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a2576ad88ec1d08cd1fa2b2a3f78d403d"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::y</a></div><div class="ttdeci">int16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:101</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a860a28658ddc9659f7e52d0aad75b4c0"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:102</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ad931fcff82a2f302f1520915c38c4ac3"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a></div><div class="ttdeci">static Vector3D rotate(Vector3D vector, Rotation rotation)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:565</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_aec9100efb3a3849e9ec606b0f3cf045b"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a></div><div class="ttdeci">static Vector3D getRelativeToCamera(Vector3D vector)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:441</a></div></div>
+</div></div>
+
+
+</div>

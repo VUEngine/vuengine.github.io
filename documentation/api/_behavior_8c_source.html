@@ -1,0 +1,140 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Behavior.c"
+permalink: documentation/api/-behavior-8c-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-50a76a95c270d8da901755fa74f7e297/">Logic</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Behavior.c</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-behavior-8c/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="/documentation/api/-behavior-8h/">Behavior.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// CLASS&#39; STATIC METHODS</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">static</span> <a class="code hl_class" href="/documentation/api/class-behavior/">Behavior</a> Behavior::create(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> owner, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a>* behaviorSpec)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(behaviorSpec, <span class="stringliteral">&quot;Behavior::create: NULL behavior&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(behaviorSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-behavior-spec/">componentSpec</a>.<a class="code hl_variable" href="/documentation/api/struct-component-spec/">allocator</a>, <span class="stringliteral">&quot;Behavior::create: no behavior allocator&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == behaviorSpec || !behaviorSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-behavior-spec/">componentSpec</a>.<a class="code hl_variable" href="/documentation/api/struct-component-spec/">allocator</a>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">return</span>  ((<a class="code hl_friend" href="/documentation/api/-behavior-manager-8c/">Behavior</a> (*)(<a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Entity</a>, <a class="code hl_typedef" href="/documentation/api/-behavior-8h/">BehaviorSpec</a>**)) behaviorSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-behavior-spec/">componentSpec</a>.<a class="code hl_variable" href="/documentation/api/struct-component-spec/">allocator</a>)(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, (<a class="code hl_typedef" href="/documentation/api/-behavior-8h/">BehaviorSpec</a>**)behaviorSpec);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// CLASS&#39; PUBLIC METHODS</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="/documentation/api/class-behavior/">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">Behavior::constructor</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> <a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a>* behaviorSpec)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, (<span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-component-spec/">ComponentSpec</a>*)&amp;behaviorSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-behavior-spec/">componentSpec</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-behavior/">enabled</a> = behaviorSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-behavior-spec/">enabled</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">Behavior::destructor</a>()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Base::destructor();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="/documentation/api/class-behavior/">   61</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-behavior/">Behavior::enable</a>()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-behavior/">enabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="/documentation/api/class-behavior/">   68</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-behavior/">Behavior::disable</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-behavior/">enabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="/documentation/api/class-behavior/">   75</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-behavior/">Behavior::isEnabled</a>()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="/documentation/api/class-behavior/">enabled</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="ttc" id="a_behavior_8h_html"><div class="ttname"><a href="/documentation/api/-behavior-8h/">Behavior.h</a></div></div>
+<div class="ttc" id="a_behavior_8h_html_a07f0df8a7dcfc01340519178de12eecf"><div class="ttname"><a href="/documentation/api/-behavior-8h/">BehaviorSpec</a></div><div class="ttdeci">struct BehaviorSpec BehaviorSpec</div></div>
+<div class="ttc" id="a_behavior_manager_8c_html_a980806c6b7561a487308fa1904b3be7a"><div class="ttname"><a href="/documentation/api/-behavior-manager-8c/">Behavior</a></div><div class="ttdeci">friend class Behavior</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-manager-8c-source/">BehaviorManager.c:23</a></div></div>
+<div class="ttc" id="a_component_manager_8c_html_a614439ccac0344926adc4c0165d64060"><div class="ttname"><a href="/documentation/api/-component-manager-8c/">Entity</a></div><div class="ttdeci">friend class Entity</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:36</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="aclass_behavior_html"><div class="ttname"><a href="/documentation/api/class-behavior/">Behavior</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:49</a></div></div>
+<div class="ttc" id="aclass_behavior_html_a2eaa49dc5af1fff167c086fa096e69ea"><div class="ttname"><a href="/documentation/api/class-behavior/">Behavior::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdoc">Disable the behavior&#39;s operations.</div><div class="ttdef"><b>Definition</b> <a href="#l00068">Behavior.c:68</a></div></div>
+<div class="ttc" id="aclass_behavior_html_a69139ab38d303ca8dfccae2651c6c9ff"><div class="ttname"><a href="/documentation/api/class-behavior/">Behavior::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdoc">Flag to allow or prohibit the behavior to perform its operations.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:53</a></div></div>
+<div class="ttc" id="aclass_behavior_html_a80efd53ad77e95c7d743f90e7fda90d3"><div class="ttname"><a href="/documentation/api/class-behavior/">Behavior::isEnabled</a></div><div class="ttdeci">bool isEnabled()</div><div class="ttdef"><b>Definition</b> <a href="#l00075">Behavior.c:75</a></div></div>
+<div class="ttc" id="aclass_behavior_html_a85f4111b283802f3a5ef15ba5d21db07"><div class="ttname"><a href="/documentation/api/class-behavior/">Behavior::enable</a></div><div class="ttdeci">void enable()</div><div class="ttdoc">Enable the behavior&#39;s operations.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">Behavior.c:61</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_ad7d1242145a2893f5609286c58a03535"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::destructor</a></div><div class="ttdeci">void destructor()</div><div class="ttdoc">Class&#39; destructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:50</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aff6e0d9a0ef892fc651d033a590bee8d"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:37</a></div></div>
+<div class="ttc" id="astruct_behavior_spec_html"><div class="ttname"><a href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:26</a></div></div>
+<div class="ttc" id="astruct_behavior_spec_html_a6fe02ad2022cb9ed380baf32f8e56704"><div class="ttname"><a href="/documentation/api/struct-behavior-spec/">BehaviorSpec::componentSpec</a></div><div class="ttdeci">ComponentSpec componentSpec</div><div class="ttdoc">Component spec.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:28</a></div></div>
+<div class="ttc" id="astruct_behavior_spec_html_a9361386aca8739106edc54b184bdf99e"><div class="ttname"><a href="/documentation/api/struct-behavior-spec/">BehaviorSpec::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdoc">enabled</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-behavior-8h-source/">Behavior.h:31</a></div></div>
+<div class="ttc" id="astruct_component_spec_html"><div class="ttname"><a href="/documentation/api/struct-component-spec/">ComponentSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:58</a></div></div>
+<div class="ttc" id="astruct_component_spec_html_a6bd025c6bf7787ffef8867dfc842e423"><div class="ttname"><a href="/documentation/api/struct-component-spec/">ComponentSpec::allocator</a></div><div class="ttdeci">AllocatorPointer allocator</div><div class="ttdoc">Class&#39; allocator.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:60</a></div></div>
+</div></div>
+
+
+</div>

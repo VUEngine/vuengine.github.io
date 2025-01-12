@@ -1,0 +1,185 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Sphere.c"
+permalink: documentation/api/-sphere-8c-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-0b43cc111c2db98ba5ab6fee48cac891/">Graphics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-9b5dc6d6c84e647549e3384c96f43374/">3d</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Sphere.c</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-sphere-8c/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-direct-draw-8h/">DirectDraw.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-math-8h/">Math.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-optics-8h/">Optics.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-wireframe-manager-8h/">WireframeManager.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="/documentation/api/-sphere-8h/">Sphere.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// CLASS&#39; PUBLIC METHODS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="/documentation/api/class-sphere/">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">Sphere::constructor</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> <a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-sphere-spec/">SphereSpec</a>* sphereSpec)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, &amp;sphereSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sphere-spec/">wireframeSpec</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">position</a> = <a class="code hl_function" href="/documentation/api/struct-pixel-vector/">PixelVector::zero</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == sphereSpec)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {       </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(8);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">drawCenter</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(sphereSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sphere-spec/">radius</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">drawCenter</a> = sphereSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sphere-spec/">drawCenter</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">scaledRadius</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__METERS_TO_PIXELS</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">Sphere::destructor</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Base::destructor();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="/documentation/api/class-sphere/">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-sphere/">Sphere::render</a>(<a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> relativePosition)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">transformation</a>, <span class="stringliteral">&quot;Sphere::render: NULL transformation&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    relativePosition = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a>(relativePosition, _previousCameraInvertedRotation);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">position</a> = <a class="code hl_function" href="/documentation/api/struct-pixel-vector/">PixelVector::projectVector3D</a>(relativePosition, <a class="code hl_function" href="/documentation/api/class-optics/">Optics::calculateParallax</a>(relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">scaledRadius</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__METERS_TO_PIXELS</a>(__FIXED_MULT(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a>, <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getScale</a>(relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>, <span class="keyword">false</span>)));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="/documentation/api/class-sphere/">   70</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-sphere/">Sphere::draw</a>()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">transformation</a>, <span class="stringliteral">&quot;Sphere::render: NULL transformation&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/class-wireframe/">drawn</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_variable" href="/documentation/api/class-wireframe/">drawn</a> = <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::drawCircle</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">position</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">scaledRadius</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">color</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">bufferIndex</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">interlaced</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">drawCenter</a>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::drawPoint</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">position</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">color</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">bufferIndex</a>, this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">interlaced</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">bufferIndex</a> = !this-&gt;<a class="code hl_variable" href="/documentation/api/class-wireframe/">bufferIndex</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="/documentation/api/class-wireframe/">drawn</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="/documentation/api/class-sphere/">   90</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-sphere/">Sphere::setRadius</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> <a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a>)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    this-&gt;radius = <a class="code hl_define" href="/documentation/api/-math-8h/">__ABS</a>(<a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="/documentation/api/class-sphere/">   97</a></span><a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> <a class="code hl_function" href="/documentation/api/class-sphere/">Sphere::getRadius</a>()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="/documentation/api/class-sphere/">radius</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a23e8e373f81337a78ab83b09c1559af1"><div class="ttname"><a href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a></div><div class="ttdeci">#define __PIXELS_TO_METERS(pixels)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:177</a></div></div>
+<div class="ttc" id="a_constants_8h_html_aaad13a0f4653eccd626f41aec4c2e135"><div class="ttname"><a href="/documentation/api/-constants-8h/">__METERS_TO_PIXELS</a></div><div class="ttdeci">#define __METERS_TO_PIXELS(meters)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:179</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_direct_draw_8h_html"><div class="ttname"><a href="/documentation/api/-direct-draw-8h/">DirectDraw.h</a></div></div>
+<div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="/documentation/api/-math-8h/">Math.h</a></div></div>
+<div class="ttc" id="a_math_8h_html_ae06c9230cce66d88216862571f7c687d"><div class="ttname"><a href="/documentation/api/-math-8h/">__ABS</a></div><div class="ttdeci">#define __ABS(number)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:34</a></div></div>
+<div class="ttc" id="a_optics_8h_html"><div class="ttname"><a href="/documentation/api/-optics-8h/">Optics.h</a></div></div>
+<div class="ttc" id="a_sphere_8h_html"><div class="ttname"><a href="/documentation/api/-sphere-8h/">Sphere.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="a_wireframe_manager_8h_html"><div class="ttname"><a href="/documentation/api/-wireframe-manager-8h/">WireframeManager.h</a></div></div>
+<div class="ttc" id="aclass_component_html_a079d309fbac2b3b2a6be4f7096da3955"><div class="ttname"><a href="/documentation/api/class-component/">Component::transformation</a></div><div class="ttdeci">const Transformation * transformation</div><div class="ttdoc">Pointer to the transformation that the component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:87</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_a647207c75bb4171fd18b064ea1000dd9"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawCircle</a></div><div class="ttdeci">static bool drawCircle(PixelVector center, int16 radius, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:533</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_afc8edefe5659fb5af84e386c253486e2"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawPoint</a></div><div class="ttdeci">static bool drawPoint(PixelVector point, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:268</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_ad7d1242145a2893f5609286c58a03535"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::destructor</a></div><div class="ttdeci">void destructor()</div><div class="ttdoc">Class&#39; destructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:50</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aff6e0d9a0ef892fc651d033a590bee8d"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:37</a></div></div>
+<div class="ttc" id="aclass_optics_html_aa4b79d94e2d06920f705ccd99bb5ea65"><div class="ttname"><a href="/documentation/api/class-optics/">Optics::calculateParallax</a></div><div class="ttdeci">static int16 calculateParallax(fixed_t z)</div></div>
+<div class="ttc" id="aclass_sphere_html_a0887c65aa33217124839d7bf677b5d9f"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::position</a></div><div class="ttdeci">PixelVector position</div><div class="ttdoc">Position at which to draw the wireframe.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:56</a></div></div>
+<div class="ttc" id="aclass_sphere_html_a53d22a9cea0697ff86eb6afea34a1dc7"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::radius</a></div><div class="ttdeci">fixed_t radius</div><div class="ttdoc">Radius of the sphere.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:59</a></div></div>
+<div class="ttc" id="aclass_sphere_html_a6bf8202c382556dad12aaebf6246eb40"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::scaledRadius</a></div><div class="ttdeci">uint16 scaledRadius</div><div class="ttdoc">Used radius of the sphere&#39;s to draw it.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:62</a></div></div>
+<div class="ttc" id="aclass_sphere_html_a88f19752af8939d11df4ec7691ea567f"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::drawCenter</a></div><div class="ttdeci">bool drawCenter</div><div class="ttdoc">Flag to control the drawing of the sphere&#39;s center point.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:65</a></div></div>
+<div class="ttc" id="aclass_sphere_html_a905be7cd09c12c446b528c40c5495956"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::draw</a></div><div class="ttdeci">override bool draw()</div><div class="ttdef"><b>Definition</b> <a href="#l00070">Sphere.c:70</a></div></div>
+<div class="ttc" id="aclass_sphere_html_ac08ac35e2f3e4a9465725cf3314d361e"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::render</a></div><div class="ttdeci">override void render(Vector3D relativePosition)</div><div class="ttdef"><b>Definition</b> <a href="#l00058">Sphere.c:58</a></div></div>
+<div class="ttc" id="aclass_sphere_html_ac25e0c369a944121e904b9a0bd45921d"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::setRadius</a></div><div class="ttdeci">void setRadius(fixed_t radius)</div><div class="ttdef"><b>Definition</b> <a href="#l00090">Sphere.c:90</a></div></div>
+<div class="ttc" id="aclass_sphere_html_af91562a8f7401973f703db2a2e7bace9"><div class="ttname"><a href="/documentation/api/class-sphere/">Sphere::getRadius</a></div><div class="ttdeci">fixed_t getRadius()</div><div class="ttdef"><b>Definition</b> <a href="#l00097">Sphere.c:97</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a2f54e5e55c33867d9dc44d6e91da5452"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::drawn</a></div><div class="ttdeci">bool drawn</div><div class="ttdoc">Flag that indicates that the wireframe has been drawn.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8h-source/">Wireframe.h:79</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a4e9d1cd02cf27ca7c63429c2736b7c57"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::interlaced</a></div><div class="ttdeci">bool interlaced</div><div class="ttdoc">Flag to render the wireframe in interlaced mode.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8h-source/">Wireframe.h:82</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ac83380272ca6e85964a139dfb1547c2e"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::bufferIndex</a></div><div class="ttdeci">uint8 bufferIndex</div><div class="ttdoc">Index of the last frame buffer used in interlaced mode.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8h-source/">Wireframe.h:88</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ad424641cff1511c9c156cd3ede3d04e9"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::color</a></div><div class="ttdeci">uint8 color</div><div class="ttdoc">Color for the wireframe.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8h-source/">Wireframe.h:85</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_a10253525ce4a2aba4884bf99380b2534"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::projectVector3D</a></div><div class="ttdeci">static PixelVector projectVector3D(Vector3D vector3D, int16 parallax)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-pixel-vector-8h-source/">PixelVector.h:226</a></div></div>
+<div class="ttc" id="astruct_pixel_vector_html_ac3f3ec9cb5717b30c7de33e2d5e18226"><div class="ttname"><a href="/documentation/api/struct-pixel-vector/">PixelVector::zero</a></div><div class="ttdeci">static PixelVector zero()</div></div>
+<div class="ttc" id="astruct_sphere_spec_html"><div class="ttname"><a href="/documentation/api/struct-sphere-spec/">SphereSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:26</a></div></div>
+<div class="ttc" id="astruct_sphere_spec_html_a02ce6fed41ad0fc0249c060d330194b0"><div class="ttname"><a href="/documentation/api/struct-sphere-spec/">SphereSpec::drawCenter</a></div><div class="ttdeci">bool drawCenter</div><div class="ttdoc">Flag to control the drawing of the sphere&#39;s center point.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:34</a></div></div>
+<div class="ttc" id="astruct_sphere_spec_html_ac12b958723f30aa1a4b969a97e92432e"><div class="ttname"><a href="/documentation/api/struct-sphere-spec/">SphereSpec::wireframeSpec</a></div><div class="ttdeci">WireframeSpec wireframeSpec</div><div class="ttdoc">Wireframe spec.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:28</a></div></div>
+<div class="ttc" id="astruct_sphere_spec_html_afc5718023c1976706eb960831a14a5be"><div class="ttname"><a href="/documentation/api/struct-sphere-spec/">SphereSpec::radius</a></div><div class="ttdeci">fixed_t radius</div><div class="ttdoc">Radius.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sphere-8h-source/">Sphere.h:31</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:99</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a04c1d12f9346b45225abba0cc3e17ac6"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::getScale</a></div><div class="ttdeci">static fixed_t getScale(fixed_t z, bool applyScalingMultiplier)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:735</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a860a28658ddc9659f7e52d0aad75b4c0"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::z</a></div><div class="ttdeci">int16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:102</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ad931fcff82a2f302f1520915c38c4ac3"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a></div><div class="ttdeci">static Vector3D rotate(Vector3D vector, Rotation rotation)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:565</a></div></div>
+</div></div>
+
+
+</div>

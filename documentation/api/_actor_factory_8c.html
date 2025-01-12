@@ -1,0 +1,158 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ActorFactory.c File Reference"
+permalink: documentation/api/-actor-factory-8c/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3fa4c88c779aa4637a3e3b5c6e71f0b0/">Entity</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-ff270f8bb5fc97f3a55954cbd27995f4/">Container</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-80921ad100dbdb2f2da39f693f919bc6/">Actor</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">ActorFactory.c File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-collider-manager-8h-source/">ColliderManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-debug-config-8h-source/">DebugConfig.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-actor-8h-source/">Actor.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sprite-manager-8h-source/">SpriteManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-virtual-list-8h-source/">VirtualList.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-u-engine-8h-source/">VUEngine.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-wireframe-manager-8h-source/">WireframeManager.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>&quot;</code><br />
+</div>
+<p><a href="/documentation/api/-actor-factory-8c-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a77cacb67e892ee567c574971f4accedc" id="r_a77cacb67e892ee567c574971f4accedc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="/documentation/api/-types-8h/">uint32</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77cacb67e892ee567c574971f4accedc">InstantiationPhase</a>) (void *)</td></tr>
+
+<tr class="memitem:a5ae37c817defa17cf8e20fe966b544c9" id="r_a5ae37c817defa17cf8e20fe966b544c9"><td class="memItemLeft" align="right" valign="top">typedef struct PositionedActorDescription&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ae37c817defa17cf8e20fe966b544c9">PositionedActorDescription</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3cd6b675a7508dd747ba9bb6e3ba0998" id="r_a3cd6b675a7508dd747ba9bb6e3ba0998"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="#a77cacb67e892ee567c574971f4accedc">InstantiationPhase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cd6b675a7508dd747ba9bb6e3ba0998">_instantiationPhases</a> []</td></tr>
+
+<tr class="memitem:a89ec06212aefb439ba56e9fb942e4438" id="r_a89ec06212aefb439ba56e9fb942e4438"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ec06212aefb439ba56e9fb942e4438">_instantiationPhasesCount</a> = sizeof(<a class="el" href="#a3cd6b675a7508dd747ba9bb6e3ba0998">_instantiationPhases</a>) / sizeof(<a class="el" href="#a77cacb67e892ee567c574971f4accedc">InstantiationPhase</a>)</td></tr>
+
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a77cacb67e892ee567c574971f4accedc" name="a77cacb67e892ee567c574971f4accedc"></a>
+<h2 class="memtitle">InstantiationPhase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef <a class="el" href="/documentation/api/-types-8h/">uint32</a>(* InstantiationPhase) (void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">36</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+
+</div>
+</div>
+<a id="a5ae37c817defa17cf8e20fe966b544c9" name="a5ae37c817defa17cf8e20fe966b544c9"></a>
+<h2 class="memtitle">PositionedActorDescription</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct PositionedActorDescription PositionedActorDescription</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a3cd6b675a7508dd747ba9bb6e3ba0998" name="a3cd6b675a7508dd747ba9bb6e3ba0998"></a>
+<h2 class="memtitle">_instantiationPhases</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="#a77cacb67e892ee567c574971f4accedc">InstantiationPhase</a> _instantiationPhases[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">{</div>
+<div class="line">    &amp;<a class="code hl_function" href="/documentation/api/class-actor-factory/">ActorFactory::instantiateActors</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="/documentation/api/class-actor-factory/">ActorFactory::transformActors</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="/documentation/api/class-actor-factory/">ActorFactory::addChildActors</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_actor_factory_html_a12958ad1be2b03fb2500b0f68b7009e0"><div class="ttname"><a href="/documentation/api/class-actor-factory/">ActorFactory::instantiateActors</a></div><div class="ttdeci">uint32 instantiateActors()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:267</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a1d4b3811d67f5ae06deedb4579509624"><div class="ttname"><a href="/documentation/api/class-actor-factory/">ActorFactory::addChildActors</a></div><div class="ttdeci">uint32 addChildActors()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:412</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a88028408951c08d0cddbd87720a24007"><div class="ttname"><a href="/documentation/api/class-actor-factory/">ActorFactory::transformActors</a></div><div class="ttdeci">uint32 transformActors()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:330</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">60</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
+<div class="line"><span class="lineno">   62</span>    &amp;<a class="code hl_function" href="/documentation/api/class-actor-factory/">ActorFactory::instantiateActors</a>,</div>
+<div class="line"><span class="lineno">   63</span>    &amp;<a class="code hl_function" href="/documentation/api/class-actor-factory/">ActorFactory::transformActors</a>,</div>
+<div class="line"><span class="lineno">   64</span>    &amp;<a class="code hl_function" href="/documentation/api/class-actor-factory/">ActorFactory::addChildActors</a></div>
+<div class="line"><span class="lineno">   65</span>};</div>
+</div>
+</div>
+</div>
+<a id="a89ec06212aefb439ba56e9fb942e4438" name="a89ec06212aefb439ba56e9fb942e4438"></a>
+<h2 class="memtitle">_instantiationPhasesCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int32</a> _instantiationPhasesCount = sizeof(<a class="el" href="#a3cd6b675a7508dd747ba9bb6e3ba0998">_instantiationPhases</a>) / sizeof(<a class="el" href="#a77cacb67e892ee567c574971f4accedc">InstantiationPhase</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">67</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

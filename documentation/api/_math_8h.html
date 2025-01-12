@@ -1,0 +1,3302 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Math.h File Reference"
+permalink: documentation/api/-math-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-bacca08c3e1f2556ee67d26834d238bb/">Math</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Math.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-object-8h-source/">Object.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-math-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-math/">Math</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abbc4d41b042048964abf0e55fce3058a" id="r_abbc4d41b042048964abf0e55fce3058a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc4d41b042048964abf0e55fce3058a">__USE_WORDS_SIZE_ABS_FUNCTION</a></td></tr>
+
+<tr class="memitem:ae06c9230cce66d88216862571f7c687d" id="r_ae06c9230cce66d88216862571f7c687d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae06c9230cce66d88216862571f7c687d">__ABS</a>(number)</td></tr>
+
+<tr class="memitem:a7d87e082c29d138533f4c2d7bda73c9c" id="r_a7d87e082c29d138533f4c2d7bda73c9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d87e082c29d138533f4c2d7bda73c9c">__MODULO</a>(n,  m)</td></tr>
+
+<tr class="memitem:aaecce9150856766446dd597a4db7b419" id="r_aaecce9150856766446dd597a4db7b419"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaecce9150856766446dd597a4db7b419">__1I_FIX7_9</a>&#160;&#160;&#160;0x0200</td></tr>
+
+<tr class="memitem:a75ee2d99b79b3f4fd79fa325130f5edf" id="r_a75ee2d99b79b3f4fd79fa325130f5edf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75ee2d99b79b3f4fd79fa325130f5edf">__05F_FIX7_9</a>&#160;&#160;&#160;0x0100</td></tr>
+
+<tr class="memitem:a8966f418fe5a5ae450241c36cbb34950" id="r_a8966f418fe5a5ae450241c36cbb34950"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8966f418fe5a5ae450241c36cbb34950">__1I_FIX7_9_EXT</a>&#160;&#160;&#160;0x00000200</td></tr>
+
+<tr class="memitem:aa1b18a58d102ae98ea9868d58f8f784b" id="r_aa1b18a58d102ae98ea9868d58f8f784b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1b18a58d102ae98ea9868d58f8f784b">__05F_FIX7_9_EXT</a>&#160;&#160;&#160;0x00000100</td></tr>
+
+<tr class="memitem:ae1b19f92fcf6d79cf65f567f4ef7ed3c" id="r_ae1b19f92fcf6d79cf65f567f4ef7ed3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1b19f92fcf6d79cf65f567f4ef7ed3c">__1I_FIX10_6</a>&#160;&#160;&#160;0x0040</td></tr>
+
+<tr class="memitem:acfc84d35c8123976edf16a956d773121" id="r_acfc84d35c8123976edf16a956d773121"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfc84d35c8123976edf16a956d773121">__05F_FIX10_6</a>&#160;&#160;&#160;0x0020</td></tr>
+
+<tr class="memitem:a988677f96cec36f0f3d5fab0b3a53dcc" id="r_a988677f96cec36f0f3d5fab0b3a53dcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a988677f96cec36f0f3d5fab0b3a53dcc">__1I_FIX19_13</a>&#160;&#160;&#160;0x00002000</td></tr>
+
+<tr class="memitem:ad6fb72e89ea5ce327552ac13ae9be82e" id="r_ad6fb72e89ea5ce327552ac13ae9be82e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6fb72e89ea5ce327552ac13ae9be82e">__05F_FIX19_13</a>&#160;&#160;&#160;0x00001000</td></tr>
+
+<tr class="memitem:a8bd9e99cd80a4a81c636fe9edf1ed6a3" id="r_a8bd9e99cd80a4a81c636fe9edf1ed6a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bd9e99cd80a4a81c636fe9edf1ed6a3">__FIX7_9_MAXIMUM_VALUE_TO_I</a>&#160;&#160;&#160;((1 &lt;&lt; (7 - 1)) - 1)</td></tr>
+
+<tr class="memitem:a0ef50552b304a5656dff3fdbb698554b" id="r_a0ef50552b304a5656dff3fdbb698554b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ef50552b304a5656dff3fdbb698554b">__FIX7_9_MAXIMUM_VALUE</a>&#160;&#160;&#160;(<a class="el" href="#a34b8e4452c7e779acbae2d6e08e6ab2f">__I_TO_FIX7_9</a>(<a class="el" href="#a8bd9e99cd80a4a81c636fe9edf1ed6a3">__FIX7_9_MAXIMUM_VALUE_TO_I</a>))</td></tr>
+
+<tr class="memitem:a21685eda75929d8de5b3182e6d678b80" id="r_a21685eda75929d8de5b3182e6d678b80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21685eda75929d8de5b3182e6d678b80">__FIX10_6_MAXIMUM_VALUE_TO_I</a>&#160;&#160;&#160;((1 &lt;&lt; (10 - 1)) - 1)</td></tr>
+
+<tr class="memitem:a175a53594c5f424a44dfec04d419c7e6" id="r_a175a53594c5f424a44dfec04d419c7e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a175a53594c5f424a44dfec04d419c7e6">__FIX10_6_MAXIMUM_VALUE</a>&#160;&#160;&#160;(<a class="el" href="#a6b61997b219a71c2b56f55dc823535bb">__I_TO_FIX10_6</a>(<a class="el" href="#a21685eda75929d8de5b3182e6d678b80">__FIX10_6_MAXIMUM_VALUE_TO_I</a>))</td></tr>
+
+<tr class="memitem:a05d519a5e49b743280017ca6ff288d07" id="r_a05d519a5e49b743280017ca6ff288d07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05d519a5e49b743280017ca6ff288d07">__FIX19_13_MAXIMUM_VALUE_TO_I</a>&#160;&#160;&#160;((1 &lt;&lt; (19 - 1)) - 1)</td></tr>
+
+<tr class="memitem:ae89081fa9752160f491272e74b97bb0f" id="r_ae89081fa9752160f491272e74b97bb0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae89081fa9752160f491272e74b97bb0f">__FIX19_13_MAXIMUM_VALUE</a>&#160;&#160;&#160;(<a class="el" href="#a2c0f408a1e8f4f841cc872897692545a">__I_TO_FIX19_13</a>(<a class="el" href="#a05d519a5e49b743280017ca6ff288d07">__FIX19_13_MAXIMUM_VALUE_TO_I</a>))</td></tr>
+
+<tr class="memitem:afc02233d3307dedc5d01a7c73764f84c" id="r_afc02233d3307dedc5d01a7c73764f84c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc02233d3307dedc5d01a7c73764f84c">__F_ROUND</a>(n)</td></tr>
+
+<tr class="memitem:aada676f033b572a68b80a966beea6f3f" id="r_aada676f033b572a68b80a966beea6f3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aada676f033b572a68b80a966beea6f3f">__F_FLOOR</a>(n)</td></tr>
+
+<tr class="memitem:ae3b69a70dd41a04b356486103f957b1f" id="r_ae3b69a70dd41a04b356486103f957b1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b69a70dd41a04b356486103f957b1f">__F_CEIL</a>(n)</td></tr>
+
+<tr class="memitem:ae8dd2f389a5a4bab608863e16042c3c2" id="r_ae8dd2f389a5a4bab608863e16042c3c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8dd2f389a5a4bab608863e16042c3c2">__F_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:ae759b143746b624d4d9975f05a5f032e" id="r_ae759b143746b624d4d9975f05a5f032e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae759b143746b624d4d9975f05a5f032e">__F_TO_FIX7_9_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a9c3fcf359302900bb89bf99aeedd883f" id="r_a9c3fcf359302900bb89bf99aeedd883f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c3fcf359302900bb89bf99aeedd883f">__F_TO_FIX13_3</a>(n)</td></tr>
+
+<tr class="memitem:af4bfaef02424f79f504c58392e37bb0b" id="r_af4bfaef02424f79f504c58392e37bb0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4bfaef02424f79f504c58392e37bb0b">__F_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:ad76aec338bc208b3ef351520147269ab" id="r_ad76aec338bc208b3ef351520147269ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad76aec338bc208b3ef351520147269ab">__F_TO_FIX10_6_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a59b1ff2d451240a89b0c40b761211344" id="r_a59b1ff2d451240a89b0c40b761211344"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59b1ff2d451240a89b0c40b761211344">__F_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:a23cebae02ed27662b0959fd586d09726" id="r_a23cebae02ed27662b0959fd586d09726"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23cebae02ed27662b0959fd586d09726">__F_TO_FIX17_15</a>(n)</td></tr>
+
+<tr class="memitem:a09f6b35136f686b0f070092860f2f8fd" id="r_a09f6b35136f686b0f070092860f2f8fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09f6b35136f686b0f070092860f2f8fd">__FIX7_9_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:a0bb1865a919ff9fcda2c9ff0818eda03" id="r_a0bb1865a919ff9fcda2c9ff0818eda03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bb1865a919ff9fcda2c9ff0818eda03">__FIX7_9_EXT_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:a91377afba07dafb61221a8a1c9c760b2" id="r_a91377afba07dafb61221a8a1c9c760b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91377afba07dafb61221a8a1c9c760b2">__FIX13_3_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:a2b4ef54e4914ccb5611d7eea29204175" id="r_a2b4ef54e4914ccb5611d7eea29204175"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b4ef54e4914ccb5611d7eea29204175">__FIX10_6_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:a449b2508e2b3f07a0ba7b1837e9ab8ca" id="r_a449b2508e2b3f07a0ba7b1837e9ab8ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a449b2508e2b3f07a0ba7b1837e9ab8ca">__FIX10_6_EXT_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:ad40231a1d1377c43e3e9ebcb8867d6a4" id="r_ad40231a1d1377c43e3e9ebcb8867d6a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad40231a1d1377c43e3e9ebcb8867d6a4">__FIX19_13_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:aa6120c5b863d523eb43657c00a6ee38f" id="r_aa6120c5b863d523eb43657c00a6ee38f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6120c5b863d523eb43657c00a6ee38f">__FIX17_15_TO_F</a>(n)</td></tr>
+
+<tr class="memitem:a34b8e4452c7e779acbae2d6e08e6ab2f" id="r_a34b8e4452c7e779acbae2d6e08e6ab2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34b8e4452c7e779acbae2d6e08e6ab2f">__I_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:a4d370dfe9c18ffb7218b635540fe775c" id="r_a4d370dfe9c18ffb7218b635540fe775c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d370dfe9c18ffb7218b635540fe775c">__I_TO_FIX7_9_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a2a77f83817e5cfaedf4ded3afc32f8d2" id="r_a2a77f83817e5cfaedf4ded3afc32f8d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a77f83817e5cfaedf4ded3afc32f8d2">__I_TO_FIX13_3</a>(n)</td></tr>
+
+<tr class="memitem:a6b61997b219a71c2b56f55dc823535bb" id="r_a6b61997b219a71c2b56f55dc823535bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b61997b219a71c2b56f55dc823535bb">__I_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:a607ce8f225334d02cbfbbaed7563217a" id="r_a607ce8f225334d02cbfbbaed7563217a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a607ce8f225334d02cbfbbaed7563217a">__I_TO_FIX10_6_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a2c0f408a1e8f4f841cc872897692545a" id="r_a2c0f408a1e8f4f841cc872897692545a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c0f408a1e8f4f841cc872897692545a">__I_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:a62fd5fd13058bc2aba73f9e2cc550a2d" id="r_a62fd5fd13058bc2aba73f9e2cc550a2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62fd5fd13058bc2aba73f9e2cc550a2d">__I_TO_FIX17_15</a>(n)</td></tr>
+
+<tr class="memitem:ab0dbae8fb2229866c044ee1c8b733f5e" id="r_ab0dbae8fb2229866c044ee1c8b733f5e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0dbae8fb2229866c044ee1c8b733f5e">__FIX7_9_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:a6d76d840a18a405f8ee73c7181135660" id="r_a6d76d840a18a405f8ee73c7181135660"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d76d840a18a405f8ee73c7181135660">__FIX7_9_EXT_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:ae5b21e2dc43b112be982e78ff8d3a683" id="r_ae5b21e2dc43b112be982e78ff8d3a683"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5b21e2dc43b112be982e78ff8d3a683">__FIX13_3_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:a9183519d28461161010e799f04c03856" id="r_a9183519d28461161010e799f04c03856"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9183519d28461161010e799f04c03856">__FIX10_6_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:a682af0f3e2c07afb8c7188b0322ba20b" id="r_a682af0f3e2c07afb8c7188b0322ba20b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a682af0f3e2c07afb8c7188b0322ba20b">__FIX10_6_EXT_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:ade6df3dd08e864f54e6c80d2b0f1d63e" id="r_ade6df3dd08e864f54e6c80d2b0f1d63e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade6df3dd08e864f54e6c80d2b0f1d63e">__FIX19_13_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:a1e0047696926b0f6d24aeeae5dacb336" id="r_a1e0047696926b0f6d24aeeae5dacb336"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e0047696926b0f6d24aeeae5dacb336">__FIX17_15_TO_I</a>(n)</td></tr>
+
+<tr class="memitem:acf5b85d23eff9981bba8a3e6225438e7" id="r_acf5b85d23eff9981bba8a3e6225438e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf5b85d23eff9981bba8a3e6225438e7">__FIX10_6_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:a3f9e99f92f95a9e90b7908eaa1f8a8f5" id="r_a3f9e99f92f95a9e90b7908eaa1f8a8f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f9e99f92f95a9e90b7908eaa1f8a8f5">__FIX10_6_TO_FIX7_9_EXT</a>(n)</td></tr>
+
+<tr class="memitem:ad9166404ae1e40bfefac627a15e32a76" id="r_ad9166404ae1e40bfefac627a15e32a76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9166404ae1e40bfefac627a15e32a76">__FIX10_6_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:a5af0485e629bf7e926cdc07a8dad300c" id="r_a5af0485e629bf7e926cdc07a8dad300c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5af0485e629bf7e926cdc07a8dad300c">__FIX10_6_TO_FIX13_3</a>(n)</td></tr>
+
+<tr class="memitem:a1f1b96c7094063eb4d907f143553f43c" id="r_a1f1b96c7094063eb4d907f143553f43c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f1b96c7094063eb4d907f143553f43c">__FIX10_6_TO_FIX17_15</a>(n)</td></tr>
+
+<tr class="memitem:a659e667f0fdc990d29a9f3233c21e329" id="r_a659e667f0fdc990d29a9f3233c21e329"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a659e667f0fdc990d29a9f3233c21e329">__FIX10_6_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:aa69b05e1a24c39f5396b840128a7c1e3" id="r_aa69b05e1a24c39f5396b840128a7c1e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa69b05e1a24c39f5396b840128a7c1e3">__FIX10_6_TO_FIX10_6_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a9c6b52cdb175e9810f2d60039386a2f6" id="r_a9c6b52cdb175e9810f2d60039386a2f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6b52cdb175e9810f2d60039386a2f6">__FIX10_6_EXT_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:a7494ccb2cd36ff99fbb72598129452d9" id="r_a7494ccb2cd36ff99fbb72598129452d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7494ccb2cd36ff99fbb72598129452d9">__FIX10_6_EXT_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:ad2f7d13e8591beeceda403134cd69fe7" id="r_ad2f7d13e8591beeceda403134cd69fe7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2f7d13e8591beeceda403134cd69fe7">__FIX7_9_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:a30ac98a1f8ac1bd5bed317bc9b4b0995" id="r_a30ac98a1f8ac1bd5bed317bc9b4b0995"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30ac98a1f8ac1bd5bed317bc9b4b0995">__FIX7_9_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:aeb6cd98fc2a2cd2842d5cfac7c224465" id="r_aeb6cd98fc2a2cd2842d5cfac7c224465"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb6cd98fc2a2cd2842d5cfac7c224465">__FIX7_9_TO_FIX17_15</a>(n)</td></tr>
+
+<tr class="memitem:ab5754f2f2cac30ef8832d935fecea48e" id="r_ab5754f2f2cac30ef8832d935fecea48e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5754f2f2cac30ef8832d935fecea48e">__FIX7_9_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:a2e76e00c796870c9a3da46a0f7851b78" id="r_a2e76e00c796870c9a3da46a0f7851b78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e76e00c796870c9a3da46a0f7851b78">__FIX7_9_TO_FIX7_9_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a0a561dc3e230487641e9906a7e11568d" id="r_a0a561dc3e230487641e9906a7e11568d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a561dc3e230487641e9906a7e11568d">__FIX7_9_TO_FIX13_3</a>(n)</td></tr>
+
+<tr class="memitem:aed065400705fe2204a6cd258272bbeb2" id="r_aed065400705fe2204a6cd258272bbeb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed065400705fe2204a6cd258272bbeb2">__FIX7_9_EXT_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:a3aebe909ef1f5e058fc6ef9d114ba7a6" id="r_a3aebe909ef1f5e058fc6ef9d114ba7a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aebe909ef1f5e058fc6ef9d114ba7a6">__FIX7_9_EXT_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:a39022d85cf8655f58cc61b142667b9ce" id="r_a39022d85cf8655f58cc61b142667b9ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39022d85cf8655f58cc61b142667b9ce">__FIX7_9_EXT_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:af1af1d280706eff8aef2ff9525fa0367" id="r_af1af1d280706eff8aef2ff9525fa0367"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1af1d280706eff8aef2ff9525fa0367">__FIX13_3_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:aac4c53b8db00db7b2891cc750d927e4e" id="r_aac4c53b8db00db7b2891cc750d927e4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac4c53b8db00db7b2891cc750d927e4e">__FIX13_3_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:ace6c022a525c819b0eeefe240b26ca0f" id="r_ace6c022a525c819b0eeefe240b26ca0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace6c022a525c819b0eeefe240b26ca0f">__FIX13_3_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:ad16a5daaebe7f5b8a4c645d6940bb8e9" id="r_ad16a5daaebe7f5b8a4c645d6940bb8e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16a5daaebe7f5b8a4c645d6940bb8e9">__FIX19_13_TO_FIX7_9</a>(n)</td></tr>
+
+<tr class="memitem:a11fa836623985e331e083c197efbb401" id="r_a11fa836623985e331e083c197efbb401"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11fa836623985e331e083c197efbb401">__FIX19_13_TO_FIX10_6</a>(n)</td></tr>
+
+<tr class="memitem:ac9ba8f867ca102b1d8ee3984bb3ce707" id="r_ac9ba8f867ca102b1d8ee3984bb3ce707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9ba8f867ca102b1d8ee3984bb3ce707">__FIX19_13_TO_FIX10_6_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a93e4db95ecd90b2ae34c0a87b0b493db" id="r_a93e4db95ecd90b2ae34c0a87b0b493db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93e4db95ecd90b2ae34c0a87b0b493db">__FIX19_13_TO_FIX13_3</a>(n)</td></tr>
+
+<tr class="memitem:a21eb33b199e5304fdf85730a9fd69647" id="r_a21eb33b199e5304fdf85730a9fd69647"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21eb33b199e5304fdf85730a9fd69647">__FIX19_13_TO_FIX17_15</a>(n)</td></tr>
+
+<tr class="memitem:a51b82ae60ada89da22251f05a96f78f1" id="r_a51b82ae60ada89da22251f05a96f78f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51b82ae60ada89da22251f05a96f78f1">__FIX19_13_TO_FIX19_13</a>(n)</td></tr>
+
+<tr class="memitem:a775dffc0be88998d79748b2b456edc7d" id="r_a775dffc0be88998d79748b2b456edc7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a775dffc0be88998d79748b2b456edc7d">__FIX19_13_TO_FIX7_9_EXT</a>(n)</td></tr>
+
+<tr class="memitem:a061c7ff7af8530254569b67b69555188" id="r_a061c7ff7af8530254569b67b69555188"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a061c7ff7af8530254569b67b69555188">__FIX7_9_INT_PART</a>(n)</td></tr>
+
+<tr class="memitem:ae4a141a278e0eb365403c9db128aca87" id="r_ae4a141a278e0eb365403c9db128aca87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a141a278e0eb365403c9db128aca87">__FIX13_3_INT_PART</a>(n)</td></tr>
+
+<tr class="memitem:abf7a6c82fcb37e9fad3c67912d7e01ac" id="r_abf7a6c82fcb37e9fad3c67912d7e01ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf7a6c82fcb37e9fad3c67912d7e01ac">__FIX10_6_INT_PART</a>(n)</td></tr>
+
+<tr class="memitem:a858f1140966ac2abfd725aa820df83b2" id="r_a858f1140966ac2abfd725aa820df83b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a858f1140966ac2abfd725aa820df83b2">__FIX19_13_INT_PART</a>(n)</td></tr>
+
+<tr class="memitem:a18c6251676cc7817b8fa858ee59e776b" id="r_a18c6251676cc7817b8fa858ee59e776b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18c6251676cc7817b8fa858ee59e776b">__FIX7_9_FRAC</a>(n)</td></tr>
+
+<tr class="memitem:a67ad612389cb6193b13fb73f94e9ada8" id="r_a67ad612389cb6193b13fb73f94e9ada8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67ad612389cb6193b13fb73f94e9ada8">__FIX13_3_FRAC</a>(n)</td></tr>
+
+<tr class="memitem:a9e6d42e078904059087e72ba53d1f4ae" id="r_a9e6d42e078904059087e72ba53d1f4ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e6d42e078904059087e72ba53d1f4ae">__FIX10_6_FRAC</a>(n)</td></tr>
+
+<tr class="memitem:a267279226ec844aab6e64ca9697d9470" id="r_a267279226ec844aab6e64ca9697d9470"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a267279226ec844aab6e64ca9697d9470">__FIX19_13_FRAC</a>(n)</td></tr>
+
+<tr class="memitem:a07ecb6966c54d1d4c8e158f148bf54af" id="r_a07ecb6966c54d1d4c8e158f148bf54af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ecb6966c54d1d4c8e158f148bf54af">__FIX7_9_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:acd62e84792acb1f6f213620462618f93" id="r_acd62e84792acb1f6f213620462618f93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd62e84792acb1f6f213620462618f93">__FIX7_9_EXT_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:ab3e79396a7ca40961a968ee367fcce2a" id="r_ab3e79396a7ca40961a968ee367fcce2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3e79396a7ca40961a968ee367fcce2a">__FIX7_9_EXT_MULT_ROUND</a>(a,  b)</td></tr>
+
+<tr class="memitem:ad49ca785ca81b205af0460802568fde9" id="r_ad49ca785ca81b205af0460802568fde9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad49ca785ca81b205af0460802568fde9">__FIX13_3_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:a2261eb2d309b8a77818244397231091a" id="r_a2261eb2d309b8a77818244397231091a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2261eb2d309b8a77818244397231091a">__FIX10_6_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:ad8248cbce80976cd8e257282ef2bc740" id="r_ad8248cbce80976cd8e257282ef2bc740"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8248cbce80976cd8e257282ef2bc740">__FIX10_6_EXT_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:a389927d974d15b3a7d3cce7b52b6fa91" id="r_a389927d974d15b3a7d3cce7b52b6fa91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a389927d974d15b3a7d3cce7b52b6fa91">__FIX10_6_EXT_MULT_ROUND</a>(a,  b)</td></tr>
+
+<tr class="memitem:a7926434ad0c0bfa91a9ceb41bb3a7757" id="r_a7926434ad0c0bfa91a9ceb41bb3a7757"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7926434ad0c0bfa91a9ceb41bb3a7757">__FIX19_13_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:a012e9cf27ce6618cc4c34b9509a702a7" id="r_a012e9cf27ce6618cc4c34b9509a702a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a012e9cf27ce6618cc4c34b9509a702a7">__FIX19_13_MULT_ROUND</a>(a,  b)</td></tr>
+
+<tr class="memitem:a411d7b65669c85b5069eec60a46cd197" id="r_a411d7b65669c85b5069eec60a46cd197"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411d7b65669c85b5069eec60a46cd197">__FIX17_15_MULT</a>(a,  b)</td></tr>
+
+<tr class="memitem:a11cf9408799ddd30251e25c7d14e09a1" id="r_a11cf9408799ddd30251e25c7d14e09a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11cf9408799ddd30251e25c7d14e09a1">__FIX7_9_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:a9b0b8346fead85f7c33d071f41b172fe" id="r_a9b0b8346fead85f7c33d071f41b172fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b0b8346fead85f7c33d071f41b172fe">__FIX7_9_EXT_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:aa938cf688cc9dce703d79f7b02d5c990" id="r_aa938cf688cc9dce703d79f7b02d5c990"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa938cf688cc9dce703d79f7b02d5c990">__FIX13_3_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:a4f7e1e2ca3306f25a83bad1a14c9b457" id="r_a4f7e1e2ca3306f25a83bad1a14c9b457"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f7e1e2ca3306f25a83bad1a14c9b457">__FIX10_6_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:a8baba8510f9c316fc2317c9541599708" id="r_a8baba8510f9c316fc2317c9541599708"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8baba8510f9c316fc2317c9541599708">__FIX10_6_EXT_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:ac3d937cc6a65f1c755ead5d8e239a75a" id="r_ac3d937cc6a65f1c755ead5d8e239a75a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3d937cc6a65f1c755ead5d8e239a75a">__FIX19_13_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:a905de5094322e92456ee4f2dc190495d" id="r_a905de5094322e92456ee4f2dc190495d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a905de5094322e92456ee4f2dc190495d">__FIX17_15_DIV</a>(a,  b)</td></tr>
+
+<tr class="memitem:a63c7af9c5b7fab26a746835ecc2a56d8" id="r_a63c7af9c5b7fab26a746835ecc2a56d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63c7af9c5b7fab26a746835ecc2a56d8">__COS</a>(x)</td></tr>
+
+<tr class="memitem:a75956c55e884d60320c5fc65fab69e77" id="r_a75956c55e884d60320c5fc65fab69e77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75956c55e884d60320c5fc65fab69e77">__SIN</a>(x)</td></tr>
+
+<tr class="memitem:aad1ed36ee89469ea8da73045e87e10d4" id="r_aad1ed36ee89469ea8da73045e87e10d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad1ed36ee89469ea8da73045e87e10d4">__COSF</a>(x)</td></tr>
+
+<tr class="memitem:af9f582e65324fa0c42fd3ea5f718d832" id="r_af9f582e65324fa0c42fd3ea5f718d832"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9f582e65324fa0c42fd3ea5f718d832">__SINF</a>(x)</td></tr>
+
+<tr class="memitem:ae5376d6ab335330a7d0d44cfb077e117" id="r_ae5376d6ab335330a7d0d44cfb077e117"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a>&#160;&#160;&#160;(512)</td></tr>
+
+<tr class="memitem:a305ec3fce7b75443d3383fe3e57fa58b" id="r_a305ec3fce7b75443d3383fe3e57fa58b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a305ec3fce7b75443d3383fe3e57fa58b">__SIN_LUT_ENTRIES_2_POWER</a>&#160;&#160;&#160;(9)</td></tr>
+
+<tr class="memitem:a15192782eca2f5753b541155da1bcfd7" id="r_a15192782eca2f5753b541155da1bcfd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15192782eca2f5753b541155da1bcfd7">__QUARTER_ROTATION_DEGREES</a>&#160;&#160;&#160;__I_TO_FIXED((signed)(<a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a> &gt;&gt; 2))</td></tr>
+
+<tr class="memitem:a59366f5985341efabf56541755407cf5" id="r_a59366f5985341efabf56541755407cf5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59366f5985341efabf56541755407cf5">__HALF_ROTATION_DEGREES</a>&#160;&#160;&#160;((signed)__I_TO_FIXED(<a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a> &gt;&gt; 1))</td></tr>
+
+<tr class="memitem:a980aa80c8e3439909e09859c5302f09d" id="r_a980aa80c8e3439909e09859c5302f09d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a980aa80c8e3439909e09859c5302f09d">__FULL_ROTATION_DEGREES</a>&#160;&#160;&#160;((signed)__I_TO_FIXED_EXT(<a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a>))</td></tr>
+
+<tr class="memitem:aa33ff6d4da546c008051dc099478d779" id="r_aa33ff6d4da546c008051dc099478d779"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa33ff6d4da546c008051dc099478d779">__FIXED_SQUARE</a>(n)</td></tr>
+
+<tr class="memitem:acf5de1d0a83c5b3125c14eaa4427a950" id="r_acf5de1d0a83c5b3125c14eaa4427a950"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf5de1d0a83c5b3125c14eaa4427a950">__F_SQUARE_ROOT_OF_2</a>&#160;&#160;&#160;(1.47f)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ace270e0525435f1f0f76989d003e1ff3" id="r_ace270e0525435f1f0f76989d003e1ff3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace270e0525435f1f0f76989d003e1ff3">abs</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a>)</td></tr>
+
+<tr class="memitem:a0430bdfe4bb6120a3151784af934f0dc" id="r_a0430bdfe4bb6120a3151784af934f0dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0430bdfe4bb6120a3151784af934f0dc">fabsf</a> (<a class="el" href="/documentation/api/-printing-8h/">float</a>)</td></tr>
+
+<tr class="memitem:a0dbbb7c6bdf31285cfe30873fb6d38ae" id="r_a0dbbb7c6bdf31285cfe30873fb6d38ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dbbb7c6bdf31285cfe30873fb6d38ae">floor</a> (<a class="el" href="/documentation/api/-printing-8h/">float</a> number)</td></tr>
+
+<tr class="memitem:ad877e00f9a3065a586127955ac0b63c1" id="r_ad877e00f9a3065a586127955ac0b63c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad877e00f9a3065a586127955ac0b63c1">min</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> a, <a class="el" href="/documentation/api/-types-8h/">int32</a> b)</td></tr>
+
+<tr class="memitem:a5faf511969d9d5a8b130c69a9599ce76" id="r_a5faf511969d9d5a8b130c69a9599ce76"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5faf511969d9d5a8b130c69a9599ce76">max</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> a, <a class="el" href="/documentation/api/-types-8h/">int32</a> b)</td></tr>
+
+<tr class="memitem:a0770a62ee12d9be99c014920583703ba" id="r_a0770a62ee12d9be99c014920583703ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0770a62ee12d9be99c014920583703ba">squareRoot</a> (<a class="el" href="/documentation/api/-printing-8h/">float</a> radicand)</td></tr>
+
+<tr class="memitem:aa6b25ffe32cdc88654163fd88dd589b1" id="r_aa6b25ffe32cdc88654163fd88dd589b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6b25ffe32cdc88654163fd88dd589b1">squareRootFixed</a> (<a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a> radicand)</td></tr>
+
+<tr class="memitem:a44a489ca4e158d79078301e80afda586" id="r_a44a489ca4e158d79078301e80afda586"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44a489ca4e158d79078301e80afda586">randomSeed</a> ()</td></tr>
+
+<tr class="memitem:a2d207355667a8014487a8e9f82da3f4a" id="r_a2d207355667a8014487a8e9f82da3f4a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d207355667a8014487a8e9f82da3f4a">random</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> seed, <a class="el" href="/documentation/api/-types-8h/">int32</a> range)</td></tr>
+
+<tr class="memitem:a105c6b0d9572adbed5e0f3733854153f" id="r_a105c6b0d9572adbed5e0f3733854153f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105c6b0d9572adbed5e0f3733854153f">haveEqualSign</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> a, <a class="el" href="/documentation/api/-types-8h/">int32</a> b)</td></tr>
+
+<tr class="memitem:aea8a8e3de20bfcc2557181416a37ccdf" id="r_aea8a8e3de20bfcc2557181416a37ccdf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea8a8e3de20bfcc2557181416a37ccdf">getDigitsCount</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> number)</td></tr>
+
+<tr class="memitem:a3e18f6de7e497df490e4f466ab748fda" id="r_a3e18f6de7e497df490e4f466ab748fda"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e18f6de7e497df490e4f466ab748fda">resetRandomSeed</a> ()</td></tr>
+<tr class="memdesc:a3e18f6de7e497df490e4f466ab748fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the internal random seed.  <br /></td></tr>
+
+<tr class="memitem:a8111ec9c2c01cbb1f57c07ba1c9b4c2d" id="r_a8111ec9c2c01cbb1f57c07ba1c9b4c2d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8111ec9c2c01cbb1f57c07ba1c9b4c2d">intInfinity</a> ()</td></tr>
+
+<tr class="memitem:a0666307b4ba5ed294f847760b1c506c9" id="r_a0666307b4ba5ed294f847760b1c506c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0666307b4ba5ed294f847760b1c506c9">fixedInfinity</a> ()</td></tr>
+
+<tr class="memitem:a4f50e85fe5846f2a206d9160de4c5c76" id="r_a4f50e85fe5846f2a206d9160de4c5c76"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f50e85fe5846f2a206d9160de4c5c76">fixed_extInfinity</a> ()</td></tr>
+
+<tr class="memitem:a2bcbf9f7648b7ce2b1f17a48f9c0f843" id="r_a2bcbf9f7648b7ce2b1f17a48f9c0f843"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bcbf9f7648b7ce2b1f17a48f9c0f843">aSin</a> (<a class="el" href="/documentation/api/-types-8h/">fix7_9</a> sin)</td></tr>
+
+<tr class="memitem:ad80289849c8586cd49bd48ac7d883415" id="r_ad80289849c8586cd49bd48ac7d883415"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad80289849c8586cd49bd48ac7d883415">getAngle</a> (<a class="el" href="/documentation/api/-types-8h/">fix7_9</a> x, <a class="el" href="/documentation/api/-types-8h/">fix7_9</a> y)</td></tr>
+
+<tr class="memitem:af28596ccce3985c5bff903fec4368f26" id="r_af28596ccce3985c5bff903fec4368f26"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af28596ccce3985c5bff903fec4368f26">power</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> base, <a class="el" href="/documentation/api/-types-8h/">int32</a> power)</td></tr>
+
+<tr class="memitem:afe8b86f98799a1629228111d284d2d09" id="r_afe8b86f98799a1629228111d284d2d09"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe8b86f98799a1629228111d284d2d09">powerFast</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> base, <a class="el" href="/documentation/api/-types-8h/">int32</a> <a class="el" href="#af28596ccce3985c5bff903fec4368f26">power</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab1a879e13434aed11eca61a859104f49" id="r_ab1a879e13434aed11eca61a859104f49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _seed&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1a879e13434aed11eca61a859104f49">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</a></td></tr>
+
+<tr class="memitem:aa9cc3e59a64f37a80cc4b9c1e953debb" id="r_aa9cc3e59a64f37a80cc4b9c1e953debb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9cc3e59a64f37a80cc4b9c1e953debb">_sinLut</a> []</td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="acfc84d35c8123976edf16a956d773121" name="acfc84d35c8123976edf16a956d773121"></a>
+<h2 class="memtitle">__05F_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __05F_FIX10_6&#160;&#160;&#160;0x0020</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">52</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6fb72e89ea5ce327552ac13ae9be82e" name="ad6fb72e89ea5ce327552ac13ae9be82e"></a>
+<h2 class="memtitle">__05F_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __05F_FIX19_13&#160;&#160;&#160;0x00001000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">54</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a75ee2d99b79b3f4fd79fa325130f5edf" name="a75ee2d99b79b3f4fd79fa325130f5edf"></a>
+<h2 class="memtitle">__05F_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __05F_FIX7_9&#160;&#160;&#160;0x0100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">48</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa1b18a58d102ae98ea9868d58f8f784b" name="aa1b18a58d102ae98ea9868d58f8f784b"></a>
+<h2 class="memtitle">__05F_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __05F_FIX7_9_EXT&#160;&#160;&#160;0x00000100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">50</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1b19f92fcf6d79cf65f567f4ef7ed3c" name="ae1b19f92fcf6d79cf65f567f4ef7ed3c"></a>
+<h2 class="memtitle">__1I_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __1I_FIX10_6&#160;&#160;&#160;0x0040</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">51</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a988677f96cec36f0f3d5fab0b3a53dcc" name="a988677f96cec36f0f3d5fab0b3a53dcc"></a>
+<h2 class="memtitle">__1I_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __1I_FIX19_13&#160;&#160;&#160;0x00002000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">53</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aaecce9150856766446dd597a4db7b419" name="aaecce9150856766446dd597a4db7b419"></a>
+<h2 class="memtitle">__1I_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __1I_FIX7_9&#160;&#160;&#160;0x0200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">47</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a8966f418fe5a5ae450241c36cbb34950" name="a8966f418fe5a5ae450241c36cbb34950"></a>
+<h2 class="memtitle">__1I_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __1I_FIX7_9_EXT&#160;&#160;&#160;0x00000200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">49</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae06c9230cce66d88216862571f7c687d" name="ae06c9230cce66d88216862571f7c687d"></a>
+<h2 class="memtitle">__ABS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __ABS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>number</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((number) + ((number) &gt;&gt; 31)) ^ ((number) &gt;&gt; 31))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">34</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a63c7af9c5b7fab26a746835ecc2a56d8" name="a63c7af9c5b7fab26a746835ecc2a56d8"></a>
+<h2 class="memtitle">__COS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __COS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="/documentation/api/-math-8c/">_sinLut</a>[(128 - (x)) &amp; 0x1FF]</div>
+<div class="ttc" id="a_math_8c_html_aa9cc3e59a64f37a80cc4b9c1e953debb"><div class="ttname"><a href="/documentation/api/-math-8c/">_sinLut</a></div><div class="ttdeci">const int16 _sinLut[]</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8c-source/">Math.c:31</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">169</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aad1ed36ee89469ea8da73045e87e10d4" name="aad1ed36ee89469ea8da73045e87e10d4"></a>
+<h2 class="memtitle">__COSF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __COSF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a09f6b35136f686b0f070092860f2f8fd">__FIX7_9_TO_F</a>(<a class="code hl_define" href="#a63c7af9c5b7fab26a746835ecc2a56d8">__COS</a>(x))</div>
+<div class="ttc" id="a_math_8h_html_a09f6b35136f686b0f070092860f2f8fd"><div class="ttname"><a href="#a09f6b35136f686b0f070092860f2f8fd">__FIX7_9_TO_F</a></div><div class="ttdeci">#define __FIX7_9_TO_F(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:78</a></div></div>
+<div class="ttc" id="a_math_8h_html_a63c7af9c5b7fab26a746835ecc2a56d8"><div class="ttname"><a href="#a63c7af9c5b7fab26a746835ecc2a56d8">__COS</a></div><div class="ttdeci">#define __COS(x)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:169</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">172</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae3b69a70dd41a04b356486103f957b1f" name="ae3b69a70dd41a04b356486103f957b1f"></a>
+<h2 class="memtitle">__F_CEIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_CEIL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)((n) + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">67</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aada676f033b572a68b80a966beea6f3f" name="aada676f033b572a68b80a966beea6f3f"></a>
+<h2 class="memtitle">__F_FLOOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_FLOOR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)((n) - 0.5f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">66</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="afc02233d3307dedc5d01a7c73764f84c" name="afc02233d3307dedc5d01a7c73764f84c"></a>
+<h2 class="memtitle">__F_ROUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_ROUND</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)((n) + 0.5f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">65</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="acf5de1d0a83c5b3125c14eaa4427a950" name="acf5de1d0a83c5b3125c14eaa4427a950"></a>
+<h2 class="memtitle">__F_SQUARE_ROOT_OF_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_SQUARE_ROOT_OF_2&#160;&#160;&#160;(1.47f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">315</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="af4bfaef02424f79f504c58392e37bb0b" name="af4bfaef02424f79f504c58392e37bb0b"></a>
+<h2 class="memtitle">__F_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n)    * 64.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_a60122db939b468521cc9d72cd01945f9"><div class="ttname"><a href="/documentation/api/-types-8h/">fix10_6</a></div><div class="ttdeci">#define fix10_6</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:41</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">73</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad76aec338bc208b3ef351520147269ab" name="ad76aec338bc208b3ef351520147269ab"></a>
+<h2 class="memtitle">__F_TO_FIX10_6_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX10_6_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((n)    * 64.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_aa8f9ca842ee195bf3810593c164253a8"><div class="ttname"><a href="/documentation/api/-types-8h/">fix10_6_ext</a></div><div class="ttdeci">#define fix10_6_ext</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:42</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">74</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a9c3fcf359302900bb89bf99aeedd883f" name="a9c3fcf359302900bb89bf99aeedd883f"></a>
+<h2 class="memtitle">__F_TO_FIX13_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX13_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((n)    * 8.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_ac66fcb9aba25c77a18bebf071cac2df2"><div class="ttname"><a href="/documentation/api/-types-8h/">fix13_3</a></div><div class="ttdeci">#define fix13_3</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:39</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">72</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a23cebae02ed27662b0959fd586d09726" name="a23cebae02ed27662b0959fd586d09726"></a>
+<h2 class="memtitle">__F_TO_FIX17_15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX17_15</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      ((n)    * 32768.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_a60e560a99874fbcc8ed1ff0ed59ce3f4"><div class="ttname"><a href="/documentation/api/-types-8h/">fix17_15</a></div><div class="ttdeci">#define fix17_15</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:44</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">76</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a59b1ff2d451240a89b0c40b761211344" name="a59b1ff2d451240a89b0c40b761211344"></a>
+<h2 class="memtitle">__F_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n)    * 8192.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_a9c29323fa432bf4691c90532c0855513"><div class="ttname"><a href="/documentation/api/-types-8h/">fix19_13</a></div><div class="ttdeci">#define fix19_13</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:43</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">75</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae8dd2f389a5a4bab608863e16042c3c2" name="ae8dd2f389a5a4bab608863e16042c3c2"></a>
+<h2 class="memtitle">__F_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n)    * 512.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_adbf2a4e3e76406df6176d7822cf25357"><div class="ttname"><a href="/documentation/api/-types-8h/">fix7_9</a></div><div class="ttdeci">#define fix7_9</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:37</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">70</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae759b143746b624d4d9975f05a5f032e" name="ae759b143746b624d4d9975f05a5f032e"></a>
+<h2 class="memtitle">__F_TO_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __F_TO_FIX7_9_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((n)    * 512.0f + 0.5f)</div>
+<div class="ttc" id="a_types_8h_html_a4eea86e575cdda60722e9d3ac8e27d42"><div class="ttname"><a href="/documentation/api/-types-8h/">fix7_9_ext</a></div><div class="ttdeci">#define fix7_9_ext</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:38</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">71</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a4f7e1e2ca3306f25a83bad1a14c9b457" name="a4f7e1e2ca3306f25a83bad1a14c9b457"></a>
+<h2 class="memtitle">__FIX10_6_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) &lt;&lt; 6) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b)))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">164</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a8baba8510f9c316fc2317c9541599708" name="a8baba8510f9c316fc2317c9541599708"></a>
+<h2 class="memtitle">__FIX10_6_EXT_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) &lt;&lt; 6) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b)))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">165</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad8248cbce80976cd8e257282ef2bc740" name="ad8248cbce80976cd8e257282ef2bc740"></a>
+<h2 class="memtitle">__FIX10_6_EXT_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) &gt;&gt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">154</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a389927d974d15b3a7d3cce7b52b6fa91" name="a389927d974d15b3a7d3cce7b52b6fa91"></a>
+<h2 class="memtitle">__FIX10_6_EXT_MULT_ROUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_MULT_ROUND</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) / (1 &lt;&lt; 6))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">155</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a449b2508e2b3f07a0ba7b1837e9ab8ca" name="a449b2508e2b3f07a0ba7b1837e9ab8ca"></a>
+<h2 class="memtitle">__FIX10_6_EXT_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 64.0f)</div>
+<div class="ttc" id="a_printing_8h_html_a51b8d5cf5427dcbeb82a969807df845f"><div class="ttname"><a href="/documentation/api/-printing-8h/">float</a></div><div class="ttdeci">static void float(float value, uint8 x, uint8 y, int32 precision, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:326</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">82</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a9c6b52cdb175e9810f2d60039386a2f6" name="a9c6b52cdb175e9810f2d60039386a2f6"></a>
+<h2 class="memtitle">__FIX10_6_EXT_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">110</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a7494ccb2cd36ff99fbb72598129452d9" name="a7494ccb2cd36ff99fbb72598129452d9"></a>
+<h2 class="memtitle">__FIX10_6_EXT_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n) &lt;&lt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">111</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a682af0f3e2c07afb8c7188b0322ba20b" name="a682af0f3e2c07afb8c7188b0322ba20b"></a>
+<h2 class="memtitle">__FIX10_6_EXT_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_EXT_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)            ((n) &gt;&gt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">99</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a9e6d42e078904059087e72ba53d1f4ae" name="a9e6d42e078904059087e72ba53d1f4ae"></a>
+<h2 class="memtitle">__FIX10_6_FRAC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_FRAC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)n)    &amp; 0x003F)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">144</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="abf7a6c82fcb37e9fad3c67912d7e01ac" name="abf7a6c82fcb37e9fad3c67912d7e01ac"></a>
+<h2 class="memtitle">__FIX10_6_INT_PART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_INT_PART</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)n)    &amp; 0xFFC0)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">138</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a175a53594c5f424a44dfec04d419c7e6" name="a175a53594c5f424a44dfec04d419c7e6"></a>
+<h2 class="memtitle">__FIX10_6_MAXIMUM_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_MAXIMUM_VALUE&#160;&#160;&#160;(<a class="el" href="#a6b61997b219a71c2b56f55dc823535bb">__I_TO_FIX10_6</a>(<a class="el" href="#a21685eda75929d8de5b3182e6d678b80">__FIX10_6_MAXIMUM_VALUE_TO_I</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">60</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a21685eda75929d8de5b3182e6d678b80" name="a21685eda75929d8de5b3182e6d678b80"></a>
+<h2 class="memtitle">__FIX10_6_MAXIMUM_VALUE_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_MAXIMUM_VALUE_TO_I&#160;&#160;&#160;((1 &lt;&lt; (10 - 1)) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">59</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a2261eb2d309b8a77818244397231091a" name="a2261eb2d309b8a77818244397231091a"></a>
+<h2 class="memtitle">__FIX10_6_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) &gt;&gt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">153</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a2b4ef54e4914ccb5611d7eea29204175" name="a2b4ef54e4914ccb5611d7eea29204175"></a>
+<h2 class="memtitle">__FIX10_6_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 64.0f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">81</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9166404ae1e40bfefac627a15e32a76" name="ad9166404ae1e40bfefac627a15e32a76"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">105</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa69b05e1a24c39f5396b840128a7c1e3" name="aa69b05e1a24c39f5396b840128a7c1e3"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX10_6_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX10_6_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">109</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a5af0485e629bf7e926cdc07a8dad300c" name="a5af0485e629bf7e926cdc07a8dad300c"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX13_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX13_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((n) &gt;&gt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">106</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a1f1b96c7094063eb4d907f143553f43c" name="a1f1b96c7094063eb4d907f143553f43c"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX17_15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX17_15</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      (((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)n) &lt;&lt; 9)</div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">107</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a659e667f0fdc990d29a9f3233c21e329" name="a659e667f0fdc990d29a9f3233c21e329"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n) &lt;&lt; 7)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">108</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="acf5b85d23eff9981bba8a3e6225438e7" name="acf5b85d23eff9981bba8a3e6225438e7"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n) &lt;&lt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">103</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a3f9e99f92f95a9e90b7908eaa1f8a8f5" name="a3f9e99f92f95a9e90b7908eaa1f8a8f5"></a>
+<h2 class="memtitle">__FIX10_6_TO_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_FIX7_9_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((n) &lt;&lt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">104</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a9183519d28461161010e799f04c03856" name="a9183519d28461161010e799f04c03856"></a>
+<h2 class="memtitle">__FIX10_6_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX10_6_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)            ((n) &gt;&gt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">98</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa938cf688cc9dce703d79f7b02d5c990" name="aa938cf688cc9dce703d79f7b02d5c990"></a>
+<h2 class="memtitle">__FIX13_3_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) &lt;&lt; 3) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b)))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">163</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a67ad612389cb6193b13fb73f94e9ada8" name="a67ad612389cb6193b13fb73f94e9ada8"></a>
+<h2 class="memtitle">__FIX13_3_FRAC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_FRAC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)n)    &amp; 0x0007)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">143</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae4a141a278e0eb365403c9db128aca87" name="ae4a141a278e0eb365403c9db128aca87"></a>
+<h2 class="memtitle">__FIX13_3_INT_PART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_INT_PART</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)n)    &amp; 0xFFF8)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">137</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad49ca785ca81b205af0460802568fde9" name="ad49ca785ca81b205af0460802568fde9"></a>
+<h2 class="memtitle">__FIX13_3_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) &gt;&gt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">152</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a91377afba07dafb61221a8a1c9c760b2" name="a91377afba07dafb61221a8a1c9c760b2"></a>
+<h2 class="memtitle">__FIX13_3_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 8.0f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">80</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aac4c53b8db00db7b2891cc750d927e4e" name="aac4c53b8db00db7b2891cc750d927e4e"></a>
+<h2 class="memtitle">__FIX13_3_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n) &lt;&lt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">124</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ace6c022a525c819b0eeefe240b26ca0f" name="ace6c022a525c819b0eeefe240b26ca0f"></a>
+<h2 class="memtitle">__FIX13_3_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n) &lt;&lt; 10)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">125</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="af1af1d280706eff8aef2ff9525fa0367" name="af1af1d280706eff8aef2ff9525fa0367"></a>
+<h2 class="memtitle">__FIX13_3_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n) &lt;&lt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">123</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae5b21e2dc43b112be982e78ff8d3a683" name="ae5b21e2dc43b112be982e78ff8d3a683"></a>
+<h2 class="memtitle">__FIX13_3_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX13_3_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a>)            ((n) &gt;&gt; 3)</div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">97</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a905de5094322e92456ee4f2dc190495d" name="a905de5094322e92456ee4f2dc190495d"></a>
+<h2 class="memtitle">__FIX17_15_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX17_15_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(a)) &lt;&lt; 15) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(b)))</div>
+<div class="ttc" id="a_types_8h_html_a87dc1c46a17e3ee6037afdb6aef76632"><div class="ttname"><a href="/documentation/api/-types-8h/">int64</a></div><div class="ttdeci">signed long long int64</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:26</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">167</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a411d7b65669c85b5069eec60a46cd197" name="a411d7b65669c85b5069eec60a46cd197"></a>
+<h2 class="memtitle">__FIX17_15_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX17_15_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(b))) &gt;&gt; 15)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">158</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa6120c5b863d523eb43657c00a6ee38f" name="aa6120c5b863d523eb43657c00a6ee38f"></a>
+<h2 class="memtitle">__FIX17_15_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX17_15_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 32768.0f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">84</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a1e0047696926b0f6d24aeeae5dacb336" name="a1e0047696926b0f6d24aeeae5dacb336"></a>
+<h2 class="memtitle">__FIX17_15_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX17_15_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)            ((n) &gt;&gt; 15)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">101</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ac3d937cc6a65f1c755ead5d8e239a75a" name="ac3d937cc6a65f1c755ead5d8e239a75a"></a>
+<h2 class="memtitle">__FIX19_13_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(a)) &lt;&lt; 13) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(b)))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">166</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a267279226ec844aab6e64ca9697d9470" name="a267279226ec844aab6e64ca9697d9470"></a>
+<h2 class="memtitle">__FIX19_13_FRAC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_FRAC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)n)  &amp; 0x00001FFF)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">145</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a858f1140966ac2abfd725aa820df83b2" name="a858f1140966ac2abfd725aa820df83b2"></a>
+<h2 class="memtitle">__FIX19_13_INT_PART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_INT_PART</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)n)  &amp; 0xFFFFE000)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">139</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae89081fa9752160f491272e74b97bb0f" name="ae89081fa9752160f491272e74b97bb0f"></a>
+<h2 class="memtitle">__FIX19_13_MAXIMUM_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_MAXIMUM_VALUE&#160;&#160;&#160;(<a class="el" href="#a2c0f408a1e8f4f841cc872897692545a">__I_TO_FIX19_13</a>(<a class="el" href="#a05d519a5e49b743280017ca6ff288d07">__FIX19_13_MAXIMUM_VALUE_TO_I</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">62</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a05d519a5e49b743280017ca6ff288d07" name="a05d519a5e49b743280017ca6ff288d07"></a>
+<h2 class="memtitle">__FIX19_13_MAXIMUM_VALUE_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_MAXIMUM_VALUE_TO_I&#160;&#160;&#160;((1 &lt;&lt; (19 - 1)) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">61</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a7926434ad0c0bfa91a9ceb41bb3a7757" name="a7926434ad0c0bfa91a9ceb41bb3a7757"></a>
+<h2 class="memtitle">__FIX19_13_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(b))) &gt;&gt; 13)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">156</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a012e9cf27ce6618cc4c34b9509a702a7" name="a012e9cf27ce6618cc4c34b9509a702a7"></a>
+<h2 class="memtitle">__FIX19_13_MULT_ROUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_MULT_ROUND</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int64</a>)(b))) / (1 &lt;&lt; 13))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">157</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad40231a1d1377c43e3e9ebcb8867d6a4" name="ad40231a1d1377c43e3e9ebcb8867d6a4"></a>
+<h2 class="memtitle">__FIX19_13_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 8192.0f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">83</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a11fa836623985e331e083c197efbb401" name="a11fa836623985e331e083c197efbb401"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n) &gt;&gt; 7)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">128</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ac9ba8f867ca102b1d8ee3984bb3ce707" name="ac9ba8f867ca102b1d8ee3984bb3ce707"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX10_6_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX10_6_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((n) &gt;&gt; 7)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">129</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a93e4db95ecd90b2ae34c0a87b0b493db" name="a93e4db95ecd90b2ae34c0a87b0b493db"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX13_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX13_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((n) &gt;&gt; 10)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">130</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a21eb33b199e5304fdf85730a9fd69647" name="a21eb33b199e5304fdf85730a9fd69647"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX17_15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX17_15</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      ((n) &lt;&lt; 2)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">131</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a51b82ae60ada89da22251f05a96f78f1" name="a51b82ae60ada89da22251f05a96f78f1"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">132</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad16a5daaebe7f5b8a4c645d6940bb8e9" name="ad16a5daaebe7f5b8a4c645d6940bb8e9"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n) &gt;&gt; 4)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">127</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a775dffc0be88998d79748b2b456edc7d" name="a775dffc0be88998d79748b2b456edc7d"></a>
+<h2 class="memtitle">__FIX19_13_TO_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_FIX7_9_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((n) &gt;&gt; 4)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">133</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ade6df3dd08e864f54e6c80d2b0f1d63e" name="ade6df3dd08e864f54e6c80d2b0f1d63e"></a>
+<h2 class="memtitle">__FIX19_13_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX19_13_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)            ((n) &gt;&gt; 13)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">100</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a11cf9408799ddd30251e25c7d14e09a1" name="a11cf9408799ddd30251e25c7d14e09a1"></a>
+<h2 class="memtitle">__FIX7_9_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) &lt;&lt; 9) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b)))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">161</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b0b8346fead85f7c33d071f41b172fe" name="a9b0b8346fead85f7c33d071f41b172fe"></a>
+<h2 class="memtitle">__FIX7_9_EXT_DIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_DIV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) &lt;&lt; 9) / ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b)))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">162</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="acd62e84792acb1f6f213620462618f93" name="acd62e84792acb1f6f213620462618f93"></a>
+<h2 class="memtitle">__FIX7_9_EXT_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) &gt;&gt; 9)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">150</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ab3e79396a7ca40961a968ee367fcce2a" name="ab3e79396a7ca40961a968ee367fcce2a"></a>
+<h2 class="memtitle">__FIX7_9_EXT_MULT_ROUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_MULT_ROUND</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) / (1 &lt;&lt; 9))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">151</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a0bb1865a919ff9fcda2c9ff0818eda03" name="a0bb1865a919ff9fcda2c9ff0818eda03"></a>
+<h2 class="memtitle">__FIX7_9_EXT_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 512.0f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">79</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a3aebe909ef1f5e058fc6ef9d114ba7a6" name="a3aebe909ef1f5e058fc6ef9d114ba7a6"></a>
+<h2 class="memtitle">__FIX7_9_EXT_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n) &gt;&gt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">120</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a39022d85cf8655f58cc61b142667b9ce" name="a39022d85cf8655f58cc61b142667b9ce"></a>
+<h2 class="memtitle">__FIX7_9_EXT_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n) &lt;&lt; 4)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">121</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aed065400705fe2204a6cd258272bbeb2" name="aed065400705fe2204a6cd258272bbeb2"></a>
+<h2 class="memtitle">__FIX7_9_EXT_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">119</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a6d76d840a18a405f8ee73c7181135660" name="a6d76d840a18a405f8ee73c7181135660"></a>
+<h2 class="memtitle">__FIX7_9_EXT_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_EXT_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)            ((n) &gt;&gt; 9)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">96</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a18c6251676cc7817b8fa858ee59e776b" name="a18c6251676cc7817b8fa858ee59e776b"></a>
+<h2 class="memtitle">__FIX7_9_FRAC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_FRAC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)n)  &amp; 0x01FF)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">142</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a061c7ff7af8530254569b67b69555188" name="a061c7ff7af8530254569b67b69555188"></a>
+<h2 class="memtitle">__FIX7_9_INT_PART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_INT_PART</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)n)  &amp; 0xFE00)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">136</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a0ef50552b304a5656dff3fdbb698554b" name="a0ef50552b304a5656dff3fdbb698554b"></a>
+<h2 class="memtitle">__FIX7_9_MAXIMUM_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_MAXIMUM_VALUE&#160;&#160;&#160;(<a class="el" href="#a34b8e4452c7e779acbae2d6e08e6ab2f">__I_TO_FIX7_9</a>(<a class="el" href="#a8bd9e99cd80a4a81c636fe9edf1ed6a3">__FIX7_9_MAXIMUM_VALUE_TO_I</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">58</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a8bd9e99cd80a4a81c636fe9edf1ed6a3" name="a8bd9e99cd80a4a81c636fe9edf1ed6a3"></a>
+<h2 class="memtitle">__FIX7_9_MAXIMUM_VALUE_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_MAXIMUM_VALUE_TO_I&#160;&#160;&#160;((1 &lt;&lt; (7 - 1)) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">57</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a07ecb6966c54d1d4c8e158f148bf54af" name="a07ecb6966c54d1d4c8e158f148bf54af"></a>
+<h2 class="memtitle">__FIX7_9_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_MULT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(a)) * ((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)(b))) &gt;&gt; 9)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">149</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a09f6b35136f686b0f070092860f2f8fd" name="a09f6b35136f686b0f070092860f2f8fd"></a>
+<h2 class="memtitle">__FIX7_9_TO_F</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_F</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)((n) / 512.0f)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">78</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a30ac98a1f8ac1bd5bed317bc9b4b0995" name="a30ac98a1f8ac1bd5bed317bc9b4b0995"></a>
+<h2 class="memtitle">__FIX7_9_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n) &gt;&gt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">114</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a0a561dc3e230487641e9906a7e11568d" name="a0a561dc3e230487641e9906a7e11568d"></a>
+<h2 class="memtitle">__FIX7_9_TO_FIX13_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_FIX13_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((n) &gt;&gt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">118</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb6cd98fc2a2cd2842d5cfac7c224465" name="aeb6cd98fc2a2cd2842d5cfac7c224465"></a>
+<h2 class="memtitle">__FIX7_9_TO_FIX17_15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_FIX17_15</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      ((n) &lt;&lt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">115</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ab5754f2f2cac30ef8832d935fecea48e" name="ab5754f2f2cac30ef8832d935fecea48e"></a>
+<h2 class="memtitle">__FIX7_9_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n) &lt;&lt; 4)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">116</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ad2f7d13e8591beeceda403134cd69fe7" name="ad2f7d13e8591beeceda403134cd69fe7"></a>
+<h2 class="memtitle">__FIX7_9_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">113</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a2e76e00c796870c9a3da46a0f7851b78" name="a2e76e00c796870c9a3da46a0f7851b78"></a>
+<h2 class="memtitle">__FIX7_9_TO_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_FIX7_9_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((n))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">117</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ab0dbae8fb2229866c044ee1c8b733f5e" name="ab0dbae8fb2229866c044ee1c8b733f5e"></a>
+<h2 class="memtitle">__FIX7_9_TO_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIX7_9_TO_I</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a>)            ((n) &gt;&gt; 9)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">95</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa33ff6d4da546c008051dc099478d779" name="aa33ff6d4da546c008051dc099478d779"></a>
+<h2 class="memtitle">__FIXED_SQUARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FIXED_SQUARE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">__FIXED_EXT_MULT(n, n)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">314</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a980aa80c8e3439909e09859c5302f09d" name="a980aa80c8e3439909e09859c5302f09d"></a>
+<h2 class="memtitle">__FULL_ROTATION_DEGREES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FULL_ROTATION_DEGREES&#160;&#160;&#160;((signed)__I_TO_FIXED_EXT(<a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">180</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a59366f5985341efabf56541755407cf5" name="a59366f5985341efabf56541755407cf5"></a>
+<h2 class="memtitle">__HALF_ROTATION_DEGREES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __HALF_ROTATION_DEGREES&#160;&#160;&#160;((signed)__I_TO_FIXED(<a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a> &gt;&gt; 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">179</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a6b61997b219a71c2b56f55dc823535bb" name="a6b61997b219a71c2b56f55dc823535bb"></a>
+<h2 class="memtitle">__I_TO_FIX10_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX10_6</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6</a>)        ((n) &lt;&lt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">90</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a607ce8f225334d02cbfbbaed7563217a" name="a607ce8f225334d02cbfbbaed7563217a"></a>
+<h2 class="memtitle">__I_TO_FIX10_6_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX10_6_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix10_6_ext</a>)    ((n) &lt;&lt; 6)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">91</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a2a77f83817e5cfaedf4ded3afc32f8d2" name="a2a77f83817e5cfaedf4ded3afc32f8d2"></a>
+<h2 class="memtitle">__I_TO_FIX13_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX13_3</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix13_3</a>)        ((n) &lt;&lt; 3)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">89</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a62fd5fd13058bc2aba73f9e2cc550a2d" name="a62fd5fd13058bc2aba73f9e2cc550a2d"></a>
+<h2 class="memtitle">__I_TO_FIX17_15</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX17_15</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix17_15</a>)      ((n) &lt;&lt; 15)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">93</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a2c0f408a1e8f4f841cc872897692545a" name="a2c0f408a1e8f4f841cc872897692545a"></a>
+<h2 class="memtitle">__I_TO_FIX19_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX19_13</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix19_13</a>)      ((n) &lt;&lt; 13)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">92</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a34b8e4452c7e779acbae2d6e08e6ab2f" name="a34b8e4452c7e779acbae2d6e08e6ab2f"></a>
+<h2 class="memtitle">__I_TO_FIX7_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX7_9</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9</a>)      ((n) &lt;&lt; 9)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">87</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a4d370dfe9c18ffb7218b635540fe775c" name="a4d370dfe9c18ffb7218b635540fe775c"></a>
+<h2 class="memtitle">__I_TO_FIX7_9_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __I_TO_FIX7_9_EXT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="/documentation/api/-types-8h/">fix7_9_ext</a>)  ((n) &lt;&lt; 9)</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">88</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a7d87e082c29d138533f4c2d7bda73c9c" name="a7d87e082c29d138533f4c2d7bda73c9c"></a>
+<h2 class="memtitle">__MODULO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __MODULO</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((n) &amp; ((m) - 1))</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">44</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a15192782eca2f5753b541155da1bcfd7" name="a15192782eca2f5753b541155da1bcfd7"></a>
+<h2 class="memtitle">__QUARTER_ROTATION_DEGREES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __QUARTER_ROTATION_DEGREES&#160;&#160;&#160;__I_TO_FIXED((signed)(<a class="el" href="#ae5376d6ab335330a7d0d44cfb077e117">__SIN_LUT_ENTRIES</a> &gt;&gt; 2))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">178</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a75956c55e884d60320c5fc65fab69e77" name="a75956c55e884d60320c5fc65fab69e77"></a>
+<h2 class="memtitle">__SIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SIN</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="/documentation/api/-math-8c/">_sinLut</a>[(x) &amp; 0x1FF]</div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">170</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="ae5376d6ab335330a7d0d44cfb077e117" name="ae5376d6ab335330a7d0d44cfb077e117"></a>
+<h2 class="memtitle">__SIN_LUT_ENTRIES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SIN_LUT_ENTRIES&#160;&#160;&#160;(512)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">176</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="a305ec3fce7b75443d3383fe3e57fa58b" name="a305ec3fce7b75443d3383fe3e57fa58b"></a>
+<h2 class="memtitle">__SIN_LUT_ENTRIES_2_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SIN_LUT_ENTRIES_2_POWER&#160;&#160;&#160;(9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">177</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="af9f582e65324fa0c42fd3ea5f718d832" name="af9f582e65324fa0c42fd3ea5f718d832"></a>
+<h2 class="memtitle">__SINF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SINF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a09f6b35136f686b0f070092860f2f8fd">__FIX7_9_TO_F</a>(<a class="code hl_define" href="#a75956c55e884d60320c5fc65fab69e77">__SIN</a>(x))</div>
+<div class="ttc" id="a_math_8h_html_a75956c55e884d60320c5fc65fab69e77"><div class="ttname"><a href="#a75956c55e884d60320c5fc65fab69e77">__SIN</a></div><div class="ttdeci">#define __SIN(x)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:170</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">173</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="abbc4d41b042048964abf0e55fce3058a" name="abbc4d41b042048964abf0e55fce3058a"></a>
+<h2 class="memtitle">__USE_WORDS_SIZE_ABS_FUNCTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __USE_WORDS_SIZE_ABS_FUNCTION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">32</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ace270e0525435f1f0f76989d003e1ff3" name="ace270e0525435f1f0f76989d003e1ff3"></a>
+<h2 class="memtitle">abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>number</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the absolute value of number. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">number</td><td>Input number to compute the absolute value of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Absolute value of the provided number </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">182</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  429</span>{</div>
+<div class="line"><span class="lineno">  430</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> result = 0;</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>    <span class="keyword">asm</span></div>
+<div class="line"><span class="lineno">  433</span>    (</div>
+<div class="line"><span class="lineno">  434</span>        <span class="stringliteral">&quot;ldsr   %1, 31  \n\t&quot;</span>   \</div>
+<div class="line"><span class="lineno">  435</span>        <span class="stringliteral">&quot;stsr   31, %0  \n\t&quot;</span></div>
+<div class="line"><span class="lineno">  436</span>        : <span class="stringliteral">&quot;=r&quot;</span> (result)</div>
+<div class="line"><span class="lineno">  437</span>        : <span class="stringliteral">&quot;r&quot;</span> (number)</div>
+<div class="line"><span class="lineno">  438</span>        :</div>
+<div class="line"><span class="lineno">  439</span>    );</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  442</span>}</div>
+</div>
+</div>
+</div>
+<a id="a2bcbf9f7648b7ce2b1f17a48f9c0f843" name="a2bcbf9f7648b7ce2b1f17a48f9c0f843"></a>
+<h2 class="memtitle">aSin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::aSin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fix7_9</a></td>          <td class="paramname"><span class="paramname"><em>sin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the arc sin of the provided sin. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">sin</td><td>sin value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Arcsin of the provided sin value </dd></dl>
+
+</div>
+</div>
+<a id="a0430bdfe4bb6120a3151784af934f0dc" name="a0430bdfe4bb6120a3151784af934f0dc"></a>
+<h2 class="memtitle">fabsf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">float</a> fabsf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-printing-8h/">float</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f50e85fe5846f2a206d9160de4c5c76" name="a4f50e85fe5846f2a206d9160de4c5c76"></a>
+<h2 class="memtitle">fixed_extInfinity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a> abs::fixed_extInfinity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the maximum number for the fixed_ext_t data type. </p><dl class="section return"><dt>Returns</dt><dd>Maximum positive value for the fixed_ext_t data type </dd></dl>
+
+</div>
+</div>
+<a id="a0666307b4ba5ed294f847760b1c506c9" name="a0666307b4ba5ed294f847760b1c506c9"></a>
+<h2 class="memtitle">fixedInfinity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> abs::fixedInfinity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the maximum number for the fixed_t data type. </p><dl class="section return"><dt>Returns</dt><dd>Maximum positive value for the fixed_t data type </dd></dl>
+
+</div>
+</div>
+<a id="a0dbbb7c6bdf31285cfe30873fb6d38ae" name="a0dbbb7c6bdf31285cfe30873fb6d38ae"></a>
+<h2 class="memtitle">floor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-printing-8h/">float</a> abs::floor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-printing-8h/">float</a></td>          <td class="paramname"><span class="paramname"><em>number</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Round down the provided number. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">number</td><td>Input number to round down </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integral part of the provided number </dd></dl>
+
+</div>
+</div>
+<a id="ad80289849c8586cd49bd48ac7d883415" name="ad80289849c8586cd49bd48ac7d883415"></a>
+<h2 class="memtitle">getAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::getAngle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fix7_9</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fix7_9</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the angle between (0, 0) and (x, y). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>X coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Angle in degrees (0-512) </dd></dl>
+
+</div>
+</div>
+<a id="aea8a8e3de20bfcc2557181416a37ccdf" name="aea8a8e3de20bfcc2557181416a37ccdf"></a>
+<h2 class="memtitle">getDigitsCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::getDigitsCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>number</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the number of digits that the provided number has. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">number</td><td>Number to compute the digits of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of digits of the provided number </dd></dl>
+
+</div>
+</div>
+<a id="a105c6b0d9572adbed5e0f3733854153f" name="a105c6b0d9572adbed5e0f3733854153f"></a>
+<h2 class="memtitle">haveEqualSign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::haveEqualSign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the provided numbers have equal sign. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First number </td></tr>
+    <tr><td class="paramname">b</td><td>Second number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the provided numbers have equal sign; false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a8111ec9c2c01cbb1f57c07ba1c9b4c2d" name="a8111ec9c2c01cbb1f57c07ba1c9b4c2d"></a>
+<h2 class="memtitle">intInfinity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::intInfinity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the maximum number for the <a class="el" href="/documentation/api/-types-8h/">int32</a> data type. </p><dl class="section return"><dt>Returns</dt><dd>Maximum positive value for the <a class="el" href="/documentation/api/-types-8h/">int32</a> data type </dd></dl>
+
+</div>
+</div>
+<a id="a5faf511969d9d5a8b130c69a9599ce76" name="a5faf511969d9d5a8b130c69a9599ce76"></a>
+<h2 class="memtitle">max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the maximum number between two numbers. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First number </td></tr>
+    <tr><td class="paramname">b</td><td>Second number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Maximum number between those provided </dd></dl>
+
+</div>
+</div>
+<a id="ad877e00f9a3065a586127955ac0b63c1" name="ad877e00f9a3065a586127955ac0b63c1"></a>
+<h2 class="memtitle">min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::min </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the minimum number between two numbers. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">a</td><td>First number </td></tr>
+    <tr><td class="paramname">b</td><td>Second number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Minimum number between those provided </dd></dl>
+
+</div>
+</div>
+<a id="af28596ccce3985c5bff903fec4368f26" name="af28596ccce3985c5bff903fec4368f26"></a>
+<h2 class="memtitle">power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::power </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>power</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the power for the provided base. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">base</td><td>Base </td></tr>
+    <tr><td class="paramname">power</td><td>Power </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Base elevated to the provided power </dd></dl>
+
+</div>
+</div>
+<a id="afe8b86f98799a1629228111d284d2d09" name="afe8b86f98799a1629228111d284d2d09"></a>
+<h2 class="memtitle">powerFast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::powerFast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>power</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the power for the provided base. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">base</td><td>Base </td></tr>
+    <tr><td class="paramname">power</td><td>Power </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Base elevated to the provided power </dd></dl>
+
+</div>
+</div>
+<a id="a2d207355667a8014487a8e9f82da3f4a" name="a2d207355667a8014487a8e9f82da3f4a"></a>
+<h2 class="memtitle">random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> abs::random </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>seed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>range</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute a pseudo random number from the seed in the provided range. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">seed</td><td>Random seed </td></tr>
+    <tr><td class="paramname">range</td><td>Range for the generated pseudo random number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The square root of the provided number </dd></dl>
+
+</div>
+</div>
+<a id="a44a489ca4e158d79078301e80afda586" name="a44a489ca4e158d79078301e80afda586"></a>
+<h2 class="memtitle">randomSeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">uint32</a> abs::randomSeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve a random seed (algorithm taken from <a href="/documentation/api/watch?v=RzEjqJHW-NU/">https://www.youtube.com/watch?v=RzEjqJHW-NU</a>). </p><dl class="section return"><dt>Returns</dt><dd>Random seed </dd></dl>
+
+</div>
+</div>
+<a id="a3e18f6de7e497df490e4f466ab748fda" name="a3e18f6de7e497df490e4f466ab748fda"></a>
+<h2 class="memtitle">resetRandomSeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void abs::resetRandomSeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the internal random seed. </p>
+
+</div>
+</div>
+<a id="a0770a62ee12d9be99c014920583703ba" name="a0770a62ee12d9be99c014920583703ba"></a>
+<h2 class="memtitle">squareRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-printing-8h/">float</a> abs::squareRoot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-printing-8h/">float</a></td>          <td class="paramname"><span class="paramname"><em>radicand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the square root of the provided number (alrogithm takem from the DOOM's engine). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">radicand</td><td>Number to compute the square root of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The square root of the provided number </dd></dl>
+
+</div>
+</div>
+<a id="aa6b25ffe32cdc88654163fd88dd589b1" name="aa6b25ffe32cdc88654163fd88dd589b1"></a>
+<h2 class="memtitle">squareRootFixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> abs::squareRootFixed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_ext_t</a></td>          <td class="paramname"><span class="paramname"><em>radicand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the square root of the provided number (alrogithm takem from the DOOM's engine). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">radicand</td><td>Number to compute the square root of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The square root of the provided number </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ab1a879e13434aed11eca61a859104f49" name="ab1a879e13434aed11eca61a859104f49"></a>
+<h2 class="memtitle">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _gameRandomSeed __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8h-source/">26</a> of file <a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>.</p>
+
+</div>
+</div>
+<a id="aa9cc3e59a64f37a80cc4b9c1e953debb" name="aa9cc3e59a64f37a80cc4b9c1e953debb"></a>
+<h2 class="memtitle">_sinLut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/-types-8h/">int16</a> _sinLut[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-math-8c-source/">31</a> of file <a class="el" href="/documentation/api/-math-8c-source/">Math.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{</div>
+<div class="line"><span class="lineno">   33</span>   0,    6,   12,   18,   25,   31,   37,   43, <span class="comment">//1</span></div>
+<div class="line"><span class="lineno">   34</span>  50,   56,   62,   68,   75,   81,   87,   93, <span class="comment">//2</span></div>
+<div class="line"><span class="lineno">   35</span>  99,  106,  112,  118,  124,  130,  136,  142, <span class="comment">//3</span></div>
+<div class="line"><span class="lineno">   36</span> 148,  154,  160,  166,  172,  178,  184,  190, <span class="comment">//4</span></div>
+<div class="line"><span class="lineno">   37</span> 195,  201,  207,  213,  218,  224,  230,  235, <span class="comment">//5</span></div>
+<div class="line"><span class="lineno">   38</span> 241,  246,  252,  257,  263,  268,  273,  279, <span class="comment">//6</span></div>
+<div class="line"><span class="lineno">   39</span> 284,  289,  294,  299,  304,  310,  314,  319, <span class="comment">//7</span></div>
+<div class="line"><span class="lineno">   40</span> 324,  329,  334,  339,  343,  348,  353,  357, <span class="comment">//8</span></div>
+<div class="line"><span class="lineno">   41</span> 362,  366,  370,  375,  379,  383,  387,  391, <span class="comment">//9</span></div>
+<div class="line"><span class="lineno">   42</span> 395,  399,  403,  407,  411,  414,  418,  422, <span class="comment">//10</span></div>
+<div class="line"><span class="lineno">   43</span> 425,  429,  432,  435,  439,  442,  445,  448, <span class="comment">//11</span></div>
+<div class="line"><span class="lineno">   44</span> 451,  454,  457,  460,  462,  465,  468,  470, <span class="comment">//12</span></div>
+<div class="line"><span class="lineno">   45</span> 473,  475,  477,  479,  482,  484,  486,  488, <span class="comment">//13</span></div>
+<div class="line"><span class="lineno">   46</span> 489,  491,  493,  495,  496,  498,  499,  500, <span class="comment">//14</span></div>
+<div class="line"><span class="lineno">   47</span> 502,  503,  504,  505,  506,  507,  508,  508, <span class="comment">//15</span></div>
+<div class="line"><span class="lineno">   48</span> 509,  510,  510,  511,  511,  511,  511,  511, <span class="comment">//16</span></div>
+<div class="line"><span class="lineno">   49</span> 512,  511,  511,  511,  511,  511,  510,  510, <span class="comment">//17</span></div>
+<div class="line"><span class="lineno">   50</span> 509,  508,  508,  507,  506,  505,  504,  503, <span class="comment">//18</span></div>
+<div class="line"><span class="lineno">   51</span> 502,  500,  499,  498,  496,  495,  493,  491, <span class="comment">//19</span></div>
+<div class="line"><span class="lineno">   52</span> 489,  488,  486,  484,  482,  479,  477,  475, <span class="comment">//20</span></div>
+<div class="line"><span class="lineno">   53</span> 473,  470,  468,  465,  462,  460,  457,  454, <span class="comment">//21</span></div>
+<div class="line"><span class="lineno">   54</span> 451,  448,  445,  442,  439,  435,  432,  429, <span class="comment">//22</span></div>
+<div class="line"><span class="lineno">   55</span> 425,  422,  418,  414,  411,  407,  403,  399, <span class="comment">//23</span></div>
+<div class="line"><span class="lineno">   56</span> 395,  391,  387,  383,  379,  375,  370,  366, <span class="comment">//24</span></div>
+<div class="line"><span class="lineno">   57</span> 362,  357,  353,  348,  343,  339,  334,  329, <span class="comment">//25</span></div>
+<div class="line"><span class="lineno">   58</span> 324,  319,  314,  310,  304,  299,  294,  289, <span class="comment">//26</span></div>
+<div class="line"><span class="lineno">   59</span> 284,  279,  273,  268,  263,  257,  252,  246, <span class="comment">//27</span></div>
+<div class="line"><span class="lineno">   60</span> 241,  235,  230,  224,  218,  213,  207,  201, <span class="comment">//28</span></div>
+<div class="line"><span class="lineno">   61</span> 195,  190,  184,  178,  172,  166,  160,  154, <span class="comment">//29</span></div>
+<div class="line"><span class="lineno">   62</span> 148,  142,  136,  130,  124,  118,  112,  106, <span class="comment">//30</span></div>
+<div class="line"><span class="lineno">   63</span>  99,   93,   87,   81,   75,   68,   62,   56, <span class="comment">//31</span></div>
+<div class="line"><span class="lineno">   64</span>  50,   43,   37,   31,   25,   18,   12,    6, <span class="comment">//32</span></div>
+<div class="line"><span class="lineno">   65</span>   0,   -6,  -12,  -18,  -25,  -31,  -37,  -43, <span class="comment">//33</span></div>
+<div class="line"><span class="lineno">   66</span> -50,  -56,  -62,  -68,  -75,  -81,  -87,  -93, <span class="comment">//34</span></div>
+<div class="line"><span class="lineno">   67</span> -99, -106, -112, -118, -124, -130, -136, -142, <span class="comment">//35</span></div>
+<div class="line"><span class="lineno">   68</span>-148, -154, -160, -166, -172, -178, -184, -190, <span class="comment">//36</span></div>
+<div class="line"><span class="lineno">   69</span>-195, -201, -207, -213, -218, -224, -230, -235, <span class="comment">//37</span></div>
+<div class="line"><span class="lineno">   70</span>-241, -246, -252, -257, -263, -268, -273, -279, <span class="comment">//38</span></div>
+<div class="line"><span class="lineno">   71</span>-284, -289, -294, -299, -305, -310, -315, -319, <span class="comment">//39</span></div>
+<div class="line"><span class="lineno">   72</span>-324, -329, -334, -339, -343, -348, -353, -357, <span class="comment">//40</span></div>
+<div class="line"><span class="lineno">   73</span>-362, -366, -370, -375, -379, -383, -387, -391, <span class="comment">//41</span></div>
+<div class="line"><span class="lineno">   74</span>-395, -399, -403, -407, -411, -414, -418, -422, <span class="comment">//42</span></div>
+<div class="line"><span class="lineno">   75</span>-425, -429, -432, -435, -439, -442, -445, -448, <span class="comment">//43</span></div>
+<div class="line"><span class="lineno">   76</span>-451, -454, -457, -460, -462, -465, -468, -470, <span class="comment">//44</span></div>
+<div class="line"><span class="lineno">   77</span>-473, -475, -477, -479, -482, -484, -486, -488, <span class="comment">//45</span></div>
+<div class="line"><span class="lineno">   78</span>-489, -491, -493, -495, -496, -498, -499, -500, <span class="comment">//46</span></div>
+<div class="line"><span class="lineno">   79</span>-502, -503, -504, -505, -506, -507, -508, -508, <span class="comment">//47</span></div>
+<div class="line"><span class="lineno">   80</span>-509, -510, -510, -511, -511, -511, -511, -511, <span class="comment">//48</span></div>
+<div class="line"><span class="lineno">   81</span>-512, -511, -511, -511, -511, -511, -510, -510, <span class="comment">//49</span></div>
+<div class="line"><span class="lineno">   82</span>-509, -508, -508, -507, -506, -505, -504, -503, <span class="comment">//50</span></div>
+<div class="line"><span class="lineno">   83</span>-502, -500, -499, -498, -496, -495, -493, -491, <span class="comment">//51</span></div>
+<div class="line"><span class="lineno">   84</span>-489, -488, -486, -484, -482, -479, -477, -475, <span class="comment">//52</span></div>
+<div class="line"><span class="lineno">   85</span>-473, -470, -468, -465, -462, -460, -457, -454, <span class="comment">//53</span></div>
+<div class="line"><span class="lineno">   86</span>-451, -448, -445, -442, -439, -435, -432, -429, <span class="comment">//54</span></div>
+<div class="line"><span class="lineno">   87</span>-425, -422, -418, -414, -411, -407, -403, -399, <span class="comment">//55</span></div>
+<div class="line"><span class="lineno">   88</span>-395, -391, -387, -383, -379, -375, -370, -366, <span class="comment">//56</span></div>
+<div class="line"><span class="lineno">   89</span>-362, -357, -353, -348, -343, -339, -334, -329, <span class="comment">//57</span></div>
+<div class="line"><span class="lineno">   90</span>-324, -319, -314, -310, -304, -299, -294, -289, <span class="comment">//58</span></div>
+<div class="line"><span class="lineno">   91</span>-284, -279, -273, -268, -263, -257, -252, -246, <span class="comment">//59</span></div>
+<div class="line"><span class="lineno">   92</span>-241, -235, -230, -224, -218, -213, -207, -201, <span class="comment">//60</span></div>
+<div class="line"><span class="lineno">   93</span>-195, -190, -184, -178, -172, -166, -160, -154, <span class="comment">//61</span></div>
+<div class="line"><span class="lineno">   94</span>-148, -142, -136, -130, -124, -118, -112, -106, <span class="comment">//62</span></div>
+<div class="line"><span class="lineno">   95</span> -99,  -93,  -87,  -81,  -75,  -68,  -62,  -56, <span class="comment">//63</span></div>
+<div class="line"><span class="lineno">   96</span> -50,  -43,  -37,  -31,  -25,  -18,  -12,   -6  <span class="comment">//64</span></div>
+<div class="line"><span class="lineno">   97</span>};</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>

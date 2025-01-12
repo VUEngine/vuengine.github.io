@@ -1,0 +1,264 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "FrameBlendBgmapSprite Class Reference"
+permalink: documentation/api/class-frame-blend-bgmap-sprite/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">FrameBlendBgmapSprite Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for FrameBlendBgmapSprite:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_frame_blend_bgmap_sprite.png" usemap="#FrameBlendBgmapSprite_map" alt />
+  <map id="FrameBlendBgmapSprite_map" name="FrameBlendBgmapSprite_map">
+<area href="/documentation/api/class-bgmap-sprite/" alt="BgmapSprite" shape="rect" coords="0,0,151,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac8262ab7b94c86769b492962140e0d51" id="r_ac8262ab7b94c86769b492962140e0d51"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-frame-blend-bgmap-sprite-spec/">FrameBlendBgmapSpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8262ab7b94c86769b492962140e0d51">FrameBlendBgmapSpriteROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0c3ea5ac4382f71fd7cdd38081d80ea2" id="r_a0c3ea5ac4382f71fd7cdd38081d80ea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c3ea5ac4382f71fd7cdd38081d80ea2">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-frame-blend-bgmap-sprite-spec/">FrameBlendBgmapSpriteSpec</a> *frameBlendBgmapSpriteSpec)</td></tr>
+
+<tr class="memitem:ad16facef81227188d61b395a4e0e0b36" id="r_ad16facef81227188d61b395a4e0e0b36"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16facef81227188d61b395a4e0e0b36">doRender</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="/documentation/api/class-sprite/">index</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac2b9faffe3378e9c227407a3c9df9795" id="r_ac2b9faffe3378e9c227407a3c9df9795"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2b9faffe3378e9c227407a3c9df9795">actualFrame</a></td></tr>
+<tr class="memdesc:ac2b9faffe3378e9c227407a3c9df9795"><td class="mdescLeft">&#160;</td><td class="mdescRight">The frame to show during the game cycle.  <br /></td></tr>
+
+<tr class="inherit_header pub_attribs_class_bgmap_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_bgmap_sprite')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></td></tr>
+<tr class="memitem:a0105216691cb468b59490d4abb66878b inherit pub_attribs_class_bgmap_sprite" id="r_a0105216691cb468b59490d4abb66878b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">paramTableRow</a></td></tr>
+<tr class="memdesc:a0105216691cb468b59490d4abb66878b inherit pub_attribs_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset that keeps track of where to continue writing in param table.  <br /></td></tr>
+
+<tr class="memitem:a40d500c6236679abdf351e5c6b506275 inherit pub_attribs_class_bgmap_sprite" id="r_a40d500c6236679abdf351e5c6b506275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">param</a></td></tr>
+
+<tr class="memitem:a28dc37ee0352dd3ff921c035bded8bff inherit pub_attribs_class_bgmap_sprite" id="r_a28dc37ee0352dd3ff921c035bded8bff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-bgmap-sprite-8h/">ParamTableEffectMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">applyParamTableEffect</a></td></tr>
+<tr class="memdesc:a28dc37ee0352dd3ff921c035bded8bff inherit pub_attribs_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to function that implements the param table based effects.  <br /></td></tr>
+
+<tr class="memitem:ab233ec12eb20fb5df4ed3afb589e78ca inherit pub_attribs_class_bgmap_sprite" id="r_ab233ec12eb20fb5df4ed3afb589e78ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-bgmap-texture-source/">BgmapTextureSource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">bgmapTextureSource</a></td></tr>
+<tr class="memdesc:ab233ec12eb20fb5df4ed3afb589e78ca inherit pub_attribs_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-texture/">Texture</a>'s configuration in BGMAP space.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_bgmap_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_bgmap_sprite')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></td></tr>
+<tr class="memitem:a9d3835d41f46f9e802c9981d9c0ae4e0 inherit pub_types_class_bgmap_sprite" id="r_a9d3835d41f46f9e802c9981d9c0ae4e0"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSpriteROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_bgmap_sprite"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_bgmap_sprite')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></td></tr>
+<tr class="memitem:a39e03bb327a11ae87d86a06133a0ae95 inherit pub_methods_class_bgmap_sprite" id="r_a39e03bb327a11ae87d86a06133a0ae95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-bgmap-sprite-spec/">BgmapSpriteSpec</a> *bgmapSpriteSpec)</td></tr>
+
+<tr class="memitem:a9fb6fe7f99905bf4b1fd893c84065941 inherit pub_methods_class_bgmap_sprite" id="r_a9fb6fe7f99905bf4b1fd893c84065941"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">registerWithManager</a> ()</td></tr>
+<tr class="memdesc:a9fb6fe7f99905bf4b1fd893c84065941 inherit pub_methods_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register this sprite with the appropriate sprites manager.  <br /></td></tr>
+
+<tr class="memitem:a3be1af71dd45c81b97544c64f1522022 inherit pub_methods_class_bgmap_sprite" id="r_a3be1af71dd45c81b97544c64f1522022"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">unregisterWithManager</a> ()</td></tr>
+<tr class="memdesc:a3be1af71dd45c81b97544c64f1522022 inherit pub_methods_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unegister this sprite with the appropriate sprites manager.  <br /></td></tr>
+
+<tr class="memitem:aa802cf980b2c5c7f8c705e22a9d96bc2 inherit pub_methods_class_bgmap_sprite" id="r_aa802cf980b2c5c7f8c705e22a9d96bc2"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">hasSpecialEffects</a> ()</td></tr>
+
+<tr class="memitem:a3279842a5eef6a15179a34a01fe8824b inherit pub_methods_class_bgmap_sprite" id="r_a3279842a5eef6a15179a34a01fe8824b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">processEffects</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> maximumParamTableRowsToComputePerCall)</td></tr>
+
+<tr class="memitem:aebfc1b21f694c6451d67fad75121cb8d inherit pub_methods_class_bgmap_sprite" id="r_aebfc1b21f694c6451d67fad75121cb8d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">setMultiframe</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> frame)</td></tr>
+
+<tr class="memitem:a30c7f2d9ac4da2bea4d6dab0cffc0036 inherit pub_methods_class_bgmap_sprite" id="r_a30c7f2d9ac4da2bea4d6dab0cffc0036"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">setRotation</a> (const <a class="el" href="/documentation/api/struct-rotation/">Rotation</a> *<a class="el" href="/documentation/api/class-sprite/">rotation</a>)</td></tr>
+
+<tr class="memitem:a3e34643b5f5b53391d6d97ac940e5aee inherit pub_methods_class_bgmap_sprite" id="r_a3e34643b5f5b53391d6d97ac940e5aee"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">setScale</a> (const <a class="el" href="/documentation/api/struct-pixel-scale/">PixelScale</a> *<a class="el" href="/documentation/api/class-sprite/">scale</a>)</td></tr>
+
+<tr class="memitem:a22cc595117cd06d06d373df4290dcca7 inherit pub_methods_class_bgmap_sprite" id="r_a22cc595117cd06d06d373df4290dcca7"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">getTotalPixels</a> ()</td></tr>
+
+<tr class="memitem:af18b1902c5246f803bc72326fc94783f inherit pub_methods_class_bgmap_sprite" id="r_af18b1902c5246f803bc72326fc94783f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">configureTexture</a> ()</td></tr>
+<tr class="memdesc:af18b1902c5246f803bc72326fc94783f inherit pub_methods_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the sprite's texture.  <br /></td></tr>
+
+<tr class="memitem:a7a19673b49dcf58bc017d0d8fa358851 inherit pub_methods_class_bgmap_sprite" id="r_a7a19673b49dcf58bc017d0d8fa358851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">setMode</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> display, <a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="/documentation/api/-printing-8h/">mode</a>)</td></tr>
+
+<tr class="memitem:aa665a3e3c8bf78f989bcb4011bbad489 inherit pub_methods_class_bgmap_sprite" id="r_aa665a3e3c8bf78f989bcb4011bbad489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">setParam</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/class-bgmap-sprite/">param</a>)</td></tr>
+
+<tr class="memitem:a563df721ebecc380c00c4850d2d9b716 inherit pub_methods_class_bgmap_sprite" id="r_a563df721ebecc380c00c4850d2d9b716"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">getParam</a> ()</td></tr>
+
+<tr class="memitem:a09176d91242a19949329b5fe84b39746 inherit pub_methods_class_bgmap_sprite" id="r_a09176d91242a19949329b5fe84b39746"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">getParamTableRow</a> ()</td></tr>
+
+<tr class="memitem:a2b787e87a74d3246426903503a9a6fd2 inherit pub_methods_class_bgmap_sprite" id="r_a2b787e87a74d3246426903503a9a6fd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">invalidateParamTable</a> ()</td></tr>
+<tr class="memdesc:a2b787e87a74d3246426903503a9a6fd2 inherit pub_methods_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the rewrite of the sprite's param table during the next rendering cycle.  <br /></td></tr>
+
+<tr class="memitem:abcfffd7086549124f21207e3e7845dcd inherit pub_methods_class_bgmap_sprite" id="r_abcfffd7086549124f21207e3e7845dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">onTextureRewritten</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer)</td></tr>
+
+<tr class="memitem:a62dfb12e34d2dc9e3fa05186970c8f54 inherit pub_methods_class_bgmap_sprite" id="r_a62dfb12e34d2dc9e3fa05186970c8f54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">applyAffineTransformations</a> ()</td></tr>
+<tr class="memdesc:a62dfb12e34d2dc9e3fa05186970c8f54 inherit pub_methods_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start rewriting the sprite's param table for affine transformations.  <br /></td></tr>
+
+<tr class="memitem:a30a82f966319ce76cc4c5303d577d9b1 inherit pub_methods_class_bgmap_sprite" id="r_a30a82f966319ce76cc4c5303d577d9b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-bgmap-sprite/">applyHbiasEffects</a> ()</td></tr>
+<tr class="memdesc:a30a82f966319ce76cc4c5303d577d9b1 inherit pub_methods_class_bgmap_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start rewriting the sprite's param table for hbias effects.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-frame-blend-bgmap-sprite/">FrameBlendBgmapSprite</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></p>
+<p>Blends two frames of animation into a single one to achieve hi color images with a single sprite. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">45</a> of file <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ac8262ab7b94c86769b492962140e0d51" name="ac8262ab7b94c86769b492962140e0d51"></a>
+<h2 class="memtitle">FrameBlendBgmapSpriteROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-frame-blend-bgmap-sprite-spec/">FrameBlendBgmapSpriteSpec</a> <a class="el" href="#ac8262ab7b94c86769b492962140e0d51">FrameBlendBgmapSpriteROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-frame-blend-bgmap-sprite/">FrameBlendBgmapSprite</a> spec that is stored in ROM. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">34</a> of file <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c3ea5ac4382f71fd7cdd38081d80ea2" name="a0c3ea5ac4382f71fd7cdd38081d80ea2"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void FrameBlendBgmapSprite::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-frame-blend-bgmap-sprite-spec/">FrameBlendBgmapSpriteSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>frameBlendBgmapSpriteSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the sprite attaches to </td></tr>
+    <tr><td class="paramname">frameBlendBgmapSpriteSpec</td><td>Specification that determines how to configure the sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8c-source/">35</a> of file <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8c-source/">FrameBlendBgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{</div>
+<div class="line"><span class="lineno">   37</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   38</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, &amp;frameBlendBgmapSpriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-frame-blend-bgmap-sprite-spec/">bgmapSpriteSpec</a>);</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    this-&gt;<a class="code hl_variable" href="#ac2b9faffe3378e9c227407a3c9df9795">actualFrame</a> = 0;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-sprite/">texture</a>, <span class="stringliteral">&quot;FrameBlendBgmapSprite::constructor: null texture&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_frame_blend_bgmap_sprite_html_ac2b9faffe3378e9c227407a3c9df9795"><div class="ttname"><a href="#ac2b9faffe3378e9c227407a3c9df9795">FrameBlendBgmapSprite::actualFrame</a></div><div class="ttdeci">uint8 actualFrame</div><div class="ttdoc">The frame to show during the game cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h:48</a></div></div>
+<div class="ttc" id="aclass_sprite_html_aa4978b284ebaae7225869d238dcb32cb"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::texture</a></div><div class="ttdeci">Texture texture</div><div class="ttdoc">Texture to display.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:90</a></div></div>
+<div class="ttc" id="astruct_frame_blend_bgmap_sprite_spec_html_aa4a41aa39ee0ad51ed76bbb09b23f636"><div class="ttname"><a href="/documentation/api/struct-frame-blend-bgmap-sprite-spec/">FrameBlendBgmapSpriteSpec::bgmapSpriteSpec</a></div><div class="ttdeci">BgmapSpriteSpec bgmapSpriteSpec</div><div class="ttdoc">it has a Sprite spec at the beginning</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h:28</a></div></div>
+</div>
+</div>
+</div>
+<a id="ad16facef81227188d61b395a4e0e0b36" name="ad16facef81227188d61b395a4e0e0b36"></a>
+<h2 class="memtitle">doRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int16</a> FrameBlendBgmapSprite::doRender </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Render the sprite by configuring the DRAM assigned to it by means of the provided index. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">index</td><td>Determines the region of DRAM that this sprite is allowed to configure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index that determines the region of DRAM that this sprite manages </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8c-source/">55</a> of file <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8c-source/">FrameBlendBgmapSprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
+<div class="line"><span class="lineno">   57</span>    this-&gt;<a class="code hl_variable" href="#ac2b9faffe3378e9c227407a3c9df9795">actualFrame</a> = 0 == this-&gt;<a class="code hl_variable" href="#ac2b9faffe3378e9c227407a3c9df9795">actualFrame</a> ? 1 : 0;</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_function" href="/documentation/api/class-bgmap-sprite/">FrameBlendBgmapSprite::setMultiframe</a>(<span class="keyword">this</span>, this-&gt;<a class="code hl_variable" href="#ac2b9faffe3378e9c227407a3c9df9795">actualFrame</a>);</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> Base::doRender(<span class="keyword">this</span>, <a class="code hl_variable" href="/documentation/api/class-sprite/">index</a>);</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="aclass_bgmap_sprite_html_aebfc1b21f694c6451d67fad75121cb8d"><div class="ttname"><a href="/documentation/api/class-bgmap-sprite/">BgmapSprite::setMultiframe</a></div><div class="ttdeci">override void setMultiframe(uint16 frame)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:278</a></div></div>
+<div class="ttc" id="aclass_sprite_html_ac56d109f8f1fca3a6b8669be46fc1d1b"><div class="ttname"><a href="/documentation/api/class-sprite/">Sprite::index</a></div><div class="ttdeci">int16 index</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8h-source/">Sprite.h:75</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac2b9faffe3378e9c227407a3c9df9795" name="ac2b9faffe3378e9c227407a3c9df9795"></a>
+<h2 class="memtitle">actualFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> FrameBlendBgmapSprite::actualFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The frame to show during the game cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">48</a> of file <a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Graphics/2d/Sprites/Bgmap/<a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8h-source/">FrameBlendBgmapSprite.h</a></li>
+<li>VUEngine-Core/source/Component/Graphics/2d/Sprites/Bgmap/<a class="el" href="/documentation/api/-frame-blend-bgmap-sprite-8c-source/">FrameBlendBgmapSprite.c</a></li>
+</ul>
+</div>
+
+
+</div>

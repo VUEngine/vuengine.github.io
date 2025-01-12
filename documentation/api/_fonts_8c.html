@@ -1,0 +1,79 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Fonts.c File Reference"
+permalink: documentation/api/-fonts-8c/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3fee8f5c6e6fc4537fcea0b0588a493a/">assets</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Fonts.c File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-fonts-8h-source/">Fonts.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-fonts-8c-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a78008dd57abca892961b71050d62ee84" id="r_a78008dd57abca892961b71050d62ee84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-font-spec/">FontSpec</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78008dd57abca892961b71050d62ee84">_fonts</a> []</td></tr>
+
+</table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a78008dd57abca892961b71050d62ee84" name="a78008dd57abca892961b71050d62ee84"></a>
+<h2 class="memtitle">_fonts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-font-spec/">FontSpec</a>* const _fonts[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">{</div>
+<div class="line">    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-default-font-spec-8c/">DefaultFontSpec</a>,</div>
+<div class="line">    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-profiler-font-spec-8c/">ProfilerFontSpec</a>,</div>
+<div class="line">    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-debug-font-spec-8c/">DebugFontSpec</a>,</div>
+<div class="line">    </div>
+<div class="line">    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
+<div class="line">}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_debug_font_spec_8c_html_aae3c2540aea1084ab500b91e04130a93"><div class="ttname"><a href="/documentation/api/-debug-font-spec-8c/">DebugFontSpec</a></div><div class="ttdeci">FontROMSpec DebugFontSpec</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-debug-font-spec-8c-source/">DebugFontSpec.c:65</a></div></div>
+<div class="ttc" id="a_default_font_spec_8c_html_a72bb15842c17ba452dd84eba09b4c4f6"><div class="ttname"><a href="/documentation/api/-default-font-spec-8c/">DefaultFontSpec</a></div><div class="ttdeci">FontROMSpec DefaultFontSpec</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-default-font-spec-8c-source/">DefaultFontSpec.c:170</a></div></div>
+<div class="ttc" id="a_profiler_font_spec_8c_html_a099410e12f1c8f11c07921f654e4fa5a"><div class="ttname"><a href="/documentation/api/-profiler-font-spec-8c/">ProfilerFontSpec</a></div><div class="ttdeci">FontROMSpec ProfilerFontSpec</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-profiler-font-spec-8c-source/">ProfilerFontSpec.c:65</a></div></div>
+<div class="ttc" id="astruct_font_spec_html"><div class="ttname"><a href="/documentation/api/struct-font-spec/">FontSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:131</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-fonts-8c-source/">15</a> of file <a class="el" href="/documentation/api/-fonts-8c-source/">Fonts.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-default-font-spec-8c/">DefaultFontSpec</a>,</div>
+<div class="line"><span class="lineno">   18</span>    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-profiler-font-spec-8c/">ProfilerFontSpec</a>,</div>
+<div class="line"><span class="lineno">   19</span>    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-debug-font-spec-8c/">DebugFontSpec</a>,</div>
+<div class="line"><span class="lineno">   20</span>    </div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
+<div class="line"><span class="lineno">   22</span>}</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>

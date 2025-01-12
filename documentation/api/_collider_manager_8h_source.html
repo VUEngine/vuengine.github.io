@@ -1,0 +1,122 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ColliderManager.h"
+permalink: documentation/api/-collider-manager-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3d59fd1310cba71f74cd42cf97b49f36/">Physics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-698fa324242060d8a4cd9ec45684df0d/">Collision</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">ColliderManager.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-collider-manager-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef COLLIDER_MANAGER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define COLLIDER_MANAGER_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-collider-8h/">Collider.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-component-manager-8h/">ComponentManager.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// FORWARD DECLARATIONS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="/documentation/api/-collider-manager-8h/">   24</a></span><span class="preprocessor">#define __COLLISION_ALL_LAYERS      0x7FFFFFFF</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// CLASS&#39; MACROS</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-entity/">Entity</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-clock/">Clock</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="/documentation/api/class-collider-manager/">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-collider-manager/">ColliderManager</a> : <a class="code hl_class" href="/documentation/api/class-component-manager/">ComponentManager</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="/documentation/api/class-collider-manager/">   47</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/class-collider-manager/">checkCollidersOutOfCameraRange</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="/documentation/api/class-collider-manager/">   50</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/class-collider-manager/">dirty</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">constructor</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">override</span> <a class="code hl_class" href="/documentation/api/class-collider/">Collider</a> <a class="code hl_function" href="/documentation/api/class-collider-manager/">instantiateComponent</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> owner, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-collider-spec/">ColliderSpec</a>* colliderSpec);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">deinstantiateComponent</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> owner, <a class="code hl_class" href="/documentation/api/class-collider/">Collider</a> collider);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">reset</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">purgeDestroyedColliders</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_function" href="/documentation/api/class-collider-manager/">update</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">setCheckCollidersOutOfCameraRange</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">showColliders</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">hideColliders</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-collider-manager/">print</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_collider_8h_html"><div class="ttname"><a href="/documentation/api/-collider-8h/">Collider.h</a></div></div>
+<div class="ttc" id="a_component_manager_8h_html"><div class="ttname"><a href="/documentation/api/-component-manager-8h/">ComponentManager.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="aclass_clock_html"><div class="ttname"><a href="/documentation/api/class-clock/">Clock</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8h-source/">Clock.h:41</a></div></div>
+<div class="ttc" id="aclass_collider_html"><div class="ttname"><a href="/documentation/api/class-collider/">Collider</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:181</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00042">ColliderManager.h:43</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a048894c8b894f19a41e4ea5f857f9cdd"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::print</a></div><div class="ttdeci">void print(int32 x, int32 y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:331</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a19fb0d090143e16ed84476e509515d21"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::showColliders</a></div><div class="ttdeci">void showColliders()</div><div class="ttdoc">Make the colliders visible by the usage of wireframes.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:310</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a2a8c073ebec3864f53f02acffccf1dbd"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::update</a></div><div class="ttdeci">uint32 update()</div><div class="ttdoc">Update colliders and test collisions.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:125</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a57ee29ae96de211f9d5ac5eae08a9bbe"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::setCheckCollidersOutOfCameraRange</a></div><div class="ttdeci">void setCheckCollidersOutOfCameraRange(bool value)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:303</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a734e52cf72b2b347e3bfc3ee2276248d"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::instantiateComponent</a></div><div class="ttdeci">override Collider instantiateComponent(Entity owner, const ColliderSpec *colliderSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:58</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a81cece5d3ec101b0492446a8310a7813"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::purgeDestroyedColliders</a></div><div class="ttdeci">void purgeDestroyedColliders()</div><div class="ttdoc">Purge destroyed colliders.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:106</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_a930e00670747611e57c553e4ec3ba1c5"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::dirty</a></div><div class="ttdeci">bool dirty</div><div class="ttdoc">If true, the list of registered colliders was modified in the mist of processing collisions.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">ColliderManager.h:50</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_ab0af5c9b207a0bf8867571ff10d548e5"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::checkCollidersOutOfCameraRange</a></div><div class="ttdeci">bool checkCollidersOutOfCameraRange</div><div class="ttdoc">If false, colliders out of camera&#39;s range are culled of from collision testing.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">ColliderManager.h:47</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_ab3302fa08ce4f747dfde1b2fe5eaad2c"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the manager&#39;s state.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:86</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_aec73db4d20d63fd40b87de7c493bfaa0"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:372</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_af9788e758570b6e3a236271b5c4326d2"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::hideColliders</a></div><div class="ttdeci">void hideColliders()</div><div class="ttdoc">Make the colliders invisible by hiding their wireframes.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:320</a></div></div>
+<div class="ttc" id="aclass_collider_manager_html_afee54a7aa37ea55eada5b9a16df6623c"><div class="ttname"><a href="/documentation/api/class-collider-manager/">ColliderManager::deinstantiateComponent</a></div><div class="ttdeci">override void deinstantiateComponent(Entity owner, Collider collider)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-manager-8c-source/">ColliderManager.c:72</a></div></div>
+<div class="ttc" id="aclass_component_manager_html"><div class="ttname"><a href="/documentation/api/class-component-manager/">ComponentManager</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8h-source/">ComponentManager.h:38</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:140</a></div></div>
+</div></div>
+
+
+</div>

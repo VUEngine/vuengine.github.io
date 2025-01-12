@@ -1,0 +1,309 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "DirectDraw.c File Reference"
+permalink: documentation/api/-direct-draw-8c/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-0b43cc111c2db98ba5ab6fee48cac891/">Graphics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-9b5dc6d6c84e647549e3384c96f43374/">3d</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">DirectDraw.c File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-camera-8h-source/">Camera.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-debug-config-8h-source/">DebugConfig.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="/documentation/api/-direct-draw-8h-source/">DirectDraw.h</a>&quot;</code><br />
+</div>
+<p><a href="/documentation/api/-direct-draw-8c-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-custom-camera-frustum/">CustomCameraFrustum</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a249d97e478023e0a28e8b631ce1929fa" id="r_a249d97e478023e0a28e8b631ce1929fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a249d97e478023e0a28e8b631ce1929fa">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS</a>&#160;&#160;&#160;10000</td></tr>
+
+<tr class="memitem:a2eb97c8d36f8127f662295dc798e3ad3" id="r_a2eb97c8d36f8127f662295dc798e3ad3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eb97c8d36f8127f662295dc798e3ad3">__DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS</a>&#160;&#160;&#160;1000</td></tr>
+
+<tr class="memitem:aad4987c184b377b22d18294e8e884061" id="r_aad4987c184b377b22d18294e8e884061"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4987c184b377b22d18294e8e884061">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_OVERHEAD</a>&#160;&#160;&#160;100</td></tr>
+
+<tr class="memitem:a8f06e3975788e2356a3c7ac5aac6e2d9" id="r_a8f06e3975788e2356a3c7ac5aac6e2d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f06e3975788e2356a3c7ac5aac6e2d9">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_RECOVERY</a>&#160;&#160;&#160;100</td></tr>
+
+<tr class="memitem:ad5d7b338f85237012cbc4d136a680cce" id="r_ad5d7b338f85237012cbc4d136a680cce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5d7b338f85237012cbc4d136a680cce">__FRAME_BUFFER_SIDE_BIT_INDEX</a>&#160;&#160;&#160;16</td></tr>
+
+<tr class="memitem:af48eb0e72c284c0a61c8b0eb98312a9c" id="r_af48eb0e72c284c0a61c8b0eb98312a9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48eb0e72c284c0a61c8b0eb98312a9c">__FRAME_BUFFER_SIDE_BIT</a>&#160;&#160;&#160;<a class="el" href="/documentation/api/-v-i-p-manager-8h/">__RIGHT_FRAME_BUFFER_0</a></td></tr>
+
+<tr class="memitem:ae9ae86909fd2141aab33681254a8ff55" id="r_ae9ae86909fd2141aab33681254a8ff55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9ae86909fd2141aab33681254a8ff55">__FLIP_FRAME_BUFFER_SIDE_BIT</a>(a)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac416528624a8f6b66986bb7f964c146a" id="r_ac416528624a8f6b66986bb7f964c146a"><td class="memItemLeft" align="right" valign="top">typedef struct CustomCameraFrustum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac416528624a8f6b66986bb7f964c146a">CustomCameraFrustum</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a3c549f1f60214542953ca7bc59a7eb21" id="r_a3c549f1f60214542953ca7bc59a7eb21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c549f1f60214542953ca7bc59a7eb21">DirectDrawLineShrinkingResult</a> { <a class="el" href="#a3c549f1f60214542953ca7bc59a7eb21a4d286afbf5501d619e96d846feaac7a1">kDirectDrawLineShrinkingInvalid</a> = 0
+, <a class="el" href="#a3c549f1f60214542953ca7bc59a7eb21a58e7e62695f6d75a9d484428c77d0a42">kDirectDrawLineShrinkingNone</a>
+, <a class="el" href="#a3c549f1f60214542953ca7bc59a7eb21a2bc4b7b982da18aa1ab09e378e0b99b8">kDirectDrawLineShrinkingSafe</a>
+, <a class="el" href="#a3c549f1f60214542953ca7bc59a7eb21a209a8f3299cf5c44a0b59c3f85ae4da2">kDirectDrawLineShrinkingUnsafe</a>
+ }</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afc9c0a9d8f1711ddefcadbbe645bfbc8" id="r_afc9c0a9d8f1711ddefcadbbe645bfbc8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a> _frustum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc9c0a9d8f1711ddefcadbbe645bfbc8">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</a> = <a class="el" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a></td></tr>
+
+<tr class="memitem:a093f18b8a2eaa366c2f4eb377e6e10b9" id="r_a093f18b8a2eaa366c2f4eb377e6e10b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a093f18b8a2eaa366c2f4eb377e6e10b9">_frustumWidthExtended</a> = <a class="el" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a> &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER</td></tr>
+
+<tr class="memitem:a1b51c8a555c027d01bc32c5fe4b47c78" id="r_a1b51c8a555c027d01bc32c5fe4b47c78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b51c8a555c027d01bc32c5fe4b47c78">_frustumHeightExtended</a> = <a class="el" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a> &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER</td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a249d97e478023e0a28e8b631ce1929fa" name="a249d97e478023e0a28e8b631ce1929fa"></a>
+<h2 class="memtitle">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS&#160;&#160;&#160;10000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">25</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="aad4987c184b377b22d18294e8e884061" name="aad4987c184b377b22d18294e8e884061"></a>
+<h2 class="memtitle">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_OVERHEAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_OVERHEAD&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">27</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="a8f06e3975788e2356a3c7ac5aac6e2d9" name="a8f06e3975788e2356a3c7ac5aac6e2d9"></a>
+<h2 class="memtitle">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_RECOVERY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_RECOVERY&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">28</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="a2eb97c8d36f8127f662295dc798e3ad3" name="a2eb97c8d36f8127f662295dc798e3ad3"></a>
+<h2 class="memtitle">__DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">26</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="ae9ae86909fd2141aab33681254a8ff55" name="ae9ae86909fd2141aab33681254a8ff55"></a>
+<h2 class="memtitle">__FLIP_FRAME_BUFFER_SIDE_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FLIP_FRAME_BUFFER_SIDE_BIT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">a ^= <a class="code hl_define" href="#af48eb0e72c284c0a61c8b0eb98312a9c">__FRAME_BUFFER_SIDE_BIT</a></div>
+<div class="ttc" id="a_direct_draw_8c_html_af48eb0e72c284c0a61c8b0eb98312a9c"><div class="ttname"><a href="#af48eb0e72c284c0a61c8b0eb98312a9c">__FRAME_BUFFER_SIDE_BIT</a></div><div class="ttdeci">#define __FRAME_BUFFER_SIDE_BIT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:30</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">31</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="af48eb0e72c284c0a61c8b0eb98312a9c" name="af48eb0e72c284c0a61c8b0eb98312a9c"></a>
+<h2 class="memtitle">__FRAME_BUFFER_SIDE_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FRAME_BUFFER_SIDE_BIT&#160;&#160;&#160;<a class="el" href="/documentation/api/-v-i-p-manager-8h/">__RIGHT_FRAME_BUFFER_0</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">30</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="ad5d7b338f85237012cbc4d136a680cce" name="ad5d7b338f85237012cbc4d136a680cce"></a>
+<h2 class="memtitle">__FRAME_BUFFER_SIDE_BIT_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __FRAME_BUFFER_SIDE_BIT_INDEX&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">29</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ac416528624a8f6b66986bb7f964c146a" name="ac416528624a8f6b66986bb7f964c146a"></a>
+<h2 class="memtitle">CustomCameraFrustum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct CustomCameraFrustum CustomCameraFrustum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a3c549f1f60214542953ca7bc59a7eb21" name="a3c549f1f60214542953ca7bc59a7eb21"></a>
+<h2 class="memtitle">DirectDrawLineShrinkingResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a3c549f1f60214542953ca7bc59a7eb21">DirectDrawLineShrinkingResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable table">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3c549f1f60214542953ca7bc59a7eb21a4d286afbf5501d619e96d846feaac7a1" name="a3c549f1f60214542953ca7bc59a7eb21a4d286afbf5501d619e96d846feaac7a1"></a>kDirectDrawLineShrinkingInvalid&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3c549f1f60214542953ca7bc59a7eb21a58e7e62695f6d75a9d484428c77d0a42" name="a3c549f1f60214542953ca7bc59a7eb21a58e7e62695f6d75a9d484428c77d0a42"></a>kDirectDrawLineShrinkingNone&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3c549f1f60214542953ca7bc59a7eb21a2bc4b7b982da18aa1ab09e378e0b99b8" name="a3c549f1f60214542953ca7bc59a7eb21a2bc4b7b982da18aa1ab09e378e0b99b8"></a>kDirectDrawLineShrinkingSafe&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3c549f1f60214542953ca7bc59a7eb21a209a8f3299cf5c44a0b59c3f85ae4da2" name="a3c549f1f60214542953ca7bc59a7eb21a209a8f3299cf5c44a0b59c3f85ae4da2"></a>kDirectDrawLineShrinkingUnsafe&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">37</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_enumvalue" href="#a3c549f1f60214542953ca7bc59a7eb21a4d286afbf5501d619e96d846feaac7a1">kDirectDrawLineShrinkingInvalid</a> = 0,</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_enumvalue" href="#a3c549f1f60214542953ca7bc59a7eb21a58e7e62695f6d75a9d484428c77d0a42">kDirectDrawLineShrinkingNone</a>,</div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_enumvalue" href="#a3c549f1f60214542953ca7bc59a7eb21a2bc4b7b982da18aa1ab09e378e0b99b8">kDirectDrawLineShrinkingSafe</a>,</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_enumvalue" href="#a3c549f1f60214542953ca7bc59a7eb21a209a8f3299cf5c44a0b59c3f85ae4da2">kDirectDrawLineShrinkingUnsafe</a></div>
+<div class="line"><span class="lineno">   43</span>};</div>
+<div class="ttc" id="a_direct_draw_8c_html_a3c549f1f60214542953ca7bc59a7eb21a209a8f3299cf5c44a0b59c3f85ae4da2"><div class="ttname"><a href="#a3c549f1f60214542953ca7bc59a7eb21a209a8f3299cf5c44a0b59c3f85ae4da2">kDirectDrawLineShrinkingUnsafe</a></div><div class="ttdeci">@ kDirectDrawLineShrinkingUnsafe</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:42</a></div></div>
+<div class="ttc" id="a_direct_draw_8c_html_a3c549f1f60214542953ca7bc59a7eb21a2bc4b7b982da18aa1ab09e378e0b99b8"><div class="ttname"><a href="#a3c549f1f60214542953ca7bc59a7eb21a2bc4b7b982da18aa1ab09e378e0b99b8">kDirectDrawLineShrinkingSafe</a></div><div class="ttdeci">@ kDirectDrawLineShrinkingSafe</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:41</a></div></div>
+<div class="ttc" id="a_direct_draw_8c_html_a3c549f1f60214542953ca7bc59a7eb21a4d286afbf5501d619e96d846feaac7a1"><div class="ttname"><a href="#a3c549f1f60214542953ca7bc59a7eb21a4d286afbf5501d619e96d846feaac7a1">kDirectDrawLineShrinkingInvalid</a></div><div class="ttdeci">@ kDirectDrawLineShrinkingInvalid</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:39</a></div></div>
+<div class="ttc" id="a_direct_draw_8c_html_a3c549f1f60214542953ca7bc59a7eb21a58e7e62695f6d75a9d484428c77d0a42"><div class="ttname"><a href="#a3c549f1f60214542953ca7bc59a7eb21a58e7e62695f6d75a9d484428c77d0a42">kDirectDrawLineShrinkingNone</a></div><div class="ttdeci">@ kDirectDrawLineShrinkingNone</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c:40</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="afc9c0a9d8f1711ddefcadbbe645bfbc8" name="afc9c0a9d8f1711ddefcadbbe645bfbc8"></a>
+<h2 class="memtitle">__INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> _frustumDepth __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE = <a class="el" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">59</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="a1b51c8a555c027d01bc32c5fe4b47c78" name="a1b51c8a555c027d01bc32c5fe4b47c78"></a>
+<h2 class="memtitle">_frustumHeightExtended</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> _frustumHeightExtended = <a class="el" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a> &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">65</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+<a id="a093f18b8a2eaa366c2f4eb377e6e10b9" name="a093f18b8a2eaa366c2f4eb377e6e10b9"></a>
+<h2 class="memtitle">_frustumWidthExtended</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> _frustumWidthExtended = <a class="el" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a> &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-direct-draw-8c-source/">64</a> of file <a class="el" href="/documentation/api/-direct-draw-8c-source/">DirectDraw.c</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

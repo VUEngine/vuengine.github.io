@@ -1,0 +1,730 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BgmapTextureManager.h File Reference"
+permalink: documentation/api/-bgmap-texture-manager-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-0b43cc111c2db98ba5ab6fee48cac891/">Graphics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-fc449a153d89a25ee967519a67ef4d17/">2d</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-da2cd61cfcf44bf4db313db146779451/">Textures</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-08ae1c192fc9f770b161f6a45189c67a/">Bgmap</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">BgmapTextureManager.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-object-8h-source/">Object.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-bgmap-texture-manager-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a59e69c7ec1a913eb59326eee86f68fca" id="r_a59e69c7ec1a913eb59326eee86f68fca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e69c7ec1a913eb59326eee86f68fca">OffsetIndex</a> { <br />
+&#160;&#160;<a class="el" href="#a59e69c7ec1a913eb59326eee86f68fcaa66d3e9d48184e4dad5c68a55b607c6fc">kXOffset</a> = 0
+, <a class="el" href="#a59e69c7ec1a913eb59326eee86f68fcaa193c1d56d5e57769e41dab70458126ea">kYOffset</a>
+, <a class="el" href="#a59e69c7ec1a913eb59326eee86f68fcaacf0aeae10e4182b78c87502923e0ccac">kCols</a>
+, <a class="el" href="#a59e69c7ec1a913eb59326eee86f68fcaa860c54f609066623b8a28cf1464594c8">kRows</a>
+, <br />
+&#160;&#160;<a class="el" href="#a59e69c7ec1a913eb59326eee86f68fcaa4298848470cdb8ad3766b804b59fa0c4">kBgmapSegment</a>
+<br />
+ }</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab9d3f06dc4ef871fad50465095b5ea32" id="r_ab9d3f06dc4ef871fad50465095b5ea32"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d3f06dc4ef871fad50465095b5ea32">reset</a> ()</td></tr>
+<tr class="memdesc:ab9d3f06dc4ef871fad50465095b5ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:a18b39b5241320faa61bf7c8f20d472b3" id="r_a18b39b5241320faa61bf7c8f20d472b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18b39b5241320faa61bf7c8f20d472b3">clearBgmapSegment</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> segment)</td></tr>
+
+<tr class="memitem:a1147285bb592b524d3d28296fda9f78f" id="r_a1147285bb592b524d3d28296fda9f78f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1147285bb592b524d3d28296fda9f78f">configure</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-param-table-manager-8h/">paramTableBase</a>)</td></tr>
+
+<tr class="memitem:a5dd47d96e5717a34f8d2869b14e782c9" id="r_a5dd47d96e5717a34f8d2869b14e782c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dd47d96e5717a34f8d2869b14e782c9">getAvailableBgmapSegmentsForTextures</a> ()</td></tr>
+
+<tr class="memitem:a487cb871903e8abdd690e13616d43202" id="r_a487cb871903e8abdd690e13616d43202"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a487cb871903e8abdd690e13616d43202">getPrintingBgmapSegment</a> ()</td></tr>
+
+<tr class="memitem:a3d6b2c97a5e8b722e7135e432b8dc6ce" id="r_a3d6b2c97a5e8b722e7135e432b8dc6ce"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d6b2c97a5e8b722e7135e432b8dc6ce">loadTextures</a> (const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> **textureSpecs)</td></tr>
+
+<tr class="memitem:a4e939728d8446d56ef972861d04e52f7" id="r_a4e939728d8446d56ef972861d04e52f7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e939728d8446d56ef972861d04e52f7">getTexture</a> (BgmapTextureSpec *bgmapTextureSpec, <a class="el" href="/documentation/api/-types-8h/">int16</a> minimumSegment, <a class="el" href="/documentation/api/-types-8h/">bool</a> mustLiveAtEvenSegment, <a class="el" href="/documentation/api/-types-8h/">uint32</a> scValue)</td></tr>
+
+<tr class="memitem:a5b69c3afe5451447d3ab3d9397908e0a" id="r_a5b69c3afe5451447d3ab3d9397908e0a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b69c3afe5451447d3ab3d9397908e0a">releaseTexture</a> (<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a> bgmapTexture)</td></tr>
+
+<tr class="memitem:ad6d35a4d2bf3f4b681c292e810191e17" id="r_ad6d35a4d2bf3f4b681c292e810191e17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6d35a4d2bf3f4b681c292e810191e17">getXOffset</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> id)</td></tr>
+
+<tr class="memitem:a6ba723ef8f06513716d38c06dc39bacd" id="r_a6ba723ef8f06513716d38c06dc39bacd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ba723ef8f06513716d38c06dc39bacd">getYOffset</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> id)</td></tr>
+
+<tr class="memitem:aa94e45017bae233a8b757ea066d1dc21" id="r_aa94e45017bae233a8b757ea066d1dc21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94e45017bae233a8b757ea066d1dc21">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a48836f1d07e1c8a952ef0f95d5094b7a" id="r_a48836f1d07e1c8a952ef0f95d5094b7a"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48836f1d07e1c8a952ef0f95d5094b7a">BgmapTextureManager</a></td></tr>
+
+<tr class="memitem:aaf344e6d305783febaf6bb0370ab850a" id="r_aaf344e6d305783febaf6bb0370ab850a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf344e6d305783febaf6bb0370ab850a">usedTiles</a> [<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>]</td></tr>
+<tr class="memdesc:aaf344e6d305783febaf6bb0370ab850a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used tiles per BGMAP segment.  <br /></td></tr>
+
+<tr class="memitem:a22d560ff2868e389dc4b44b7c7db5001" id="r_a22d560ff2868e389dc4b44b7c7db5001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22d560ff2868e389dc4b44b7c7db5001">xOffset</a> [<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="/documentation/api/-config-8h/">__NUM_BGMAPS_PER_SEGMENT</a>]</td></tr>
+<tr class="memdesc:a22d560ff2868e389dc4b44b7c7db5001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start X coordinate of free space in each BGMAP segment.  <br /></td></tr>
+
+<tr class="memitem:a73157efb84ea97ed35e4e3f7eb22216c" id="r_a73157efb84ea97ed35e4e3f7eb22216c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73157efb84ea97ed35e4e3f7eb22216c">yOffset</a> [<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="/documentation/api/-config-8h/">__NUM_BGMAPS_PER_SEGMENT</a>]</td></tr>
+<tr class="memdesc:a73157efb84ea97ed35e4e3f7eb22216c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start Y coordinate of free space in each BGMAP segment.  <br /></td></tr>
+
+<tr class="memitem:acd501debc05be740df5e6c2ca2caa8a6" id="r_acd501debc05be740df5e6c2ca2caa8a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd501debc05be740df5e6c2ca2caa8a6">offset</a> [<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a> *<a class="el" href="/documentation/api/-config-8h/">__NUM_BGMAPS_PER_SEGMENT</a>][4]</td></tr>
+<tr class="memdesc:acd501debc05be740df5e6c2ca2caa8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multidimensional array to keep track of the offsets for each allocated texture.  <br /></td></tr>
+
+<tr class="memitem:ad30593b9c2ecdb77652a2c44fffd254d" id="r_ad30593b9c2ecdb77652a2c44fffd254d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad30593b9c2ecdb77652a2c44fffd254d">availableBgmapSegmentsForTextures</a></td></tr>
+<tr class="memdesc:ad30593b9c2ecdb77652a2c44fffd254d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of available BGMAP segments for texture allocation.  <br /></td></tr>
+
+<tr class="memitem:a625a02eaf360e53ff23b313cd6097b80" id="r_a625a02eaf360e53ff23b313cd6097b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a625a02eaf360e53ff23b313cd6097b80">printingBgmapSegment</a></td></tr>
+<tr class="memdesc:a625a02eaf360e53ff23b313cd6097b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGMAP segment available for printing.  <br /></td></tr>
+
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a59e69c7ec1a913eb59326eee86f68fca" name="a59e69c7ec1a913eb59326eee86f68fca"></a>
+<h2 class="memtitle">OffsetIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a59e69c7ec1a913eb59326eee86f68fca">OffsetIndex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable table">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a59e69c7ec1a913eb59326eee86f68fcaa66d3e9d48184e4dad5c68a55b607c6fc" name="a59e69c7ec1a913eb59326eee86f68fcaa66d3e9d48184e4dad5c68a55b607c6fc"></a>kXOffset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59e69c7ec1a913eb59326eee86f68fcaa193c1d56d5e57769e41dab70458126ea" name="a59e69c7ec1a913eb59326eee86f68fcaa193c1d56d5e57769e41dab70458126ea"></a>kYOffset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59e69c7ec1a913eb59326eee86f68fcaacf0aeae10e4182b78c87502923e0ccac" name="a59e69c7ec1a913eb59326eee86f68fcaacf0aeae10e4182b78c87502923e0ccac"></a>kCols&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59e69c7ec1a913eb59326eee86f68fcaa860c54f609066623b8a28cf1464594c8" name="a59e69c7ec1a913eb59326eee86f68fcaa860c54f609066623b8a28cf1464594c8"></a>kRows&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a59e69c7ec1a913eb59326eee86f68fcaa4298848470cdb8ad3766b804b59fa0c4" name="a59e69c7ec1a913eb59326eee86f68fcaa4298848470cdb8ad3766b804b59fa0c4"></a>kBgmapSegment&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">24</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="#a59e69c7ec1a913eb59326eee86f68fcaa66d3e9d48184e4dad5c68a55b607c6fc">kXOffset</a> = 0,</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="#a59e69c7ec1a913eb59326eee86f68fcaa193c1d56d5e57769e41dab70458126ea">kYOffset</a>,</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="#a59e69c7ec1a913eb59326eee86f68fcaacf0aeae10e4182b78c87502923e0ccac">kCols</a>,</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_enumvalue" href="#a59e69c7ec1a913eb59326eee86f68fcaa860c54f609066623b8a28cf1464594c8">kRows</a>,</div>
+<div class="line"><span class="lineno">   30</span>    <a class="code hl_enumvalue" href="#a59e69c7ec1a913eb59326eee86f68fcaa4298848470cdb8ad3766b804b59fa0c4">kBgmapSegment</a></div>
+<div class="line"><span class="lineno">   31</span>};</div>
+<div class="ttc" id="a_bgmap_texture_manager_8h_html_a59e69c7ec1a913eb59326eee86f68fcaa193c1d56d5e57769e41dab70458126ea"><div class="ttname"><a href="#a59e69c7ec1a913eb59326eee86f68fcaa193c1d56d5e57769e41dab70458126ea">kYOffset</a></div><div class="ttdeci">@ kYOffset</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h:27</a></div></div>
+<div class="ttc" id="a_bgmap_texture_manager_8h_html_a59e69c7ec1a913eb59326eee86f68fcaa4298848470cdb8ad3766b804b59fa0c4"><div class="ttname"><a href="#a59e69c7ec1a913eb59326eee86f68fcaa4298848470cdb8ad3766b804b59fa0c4">kBgmapSegment</a></div><div class="ttdeci">@ kBgmapSegment</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h:30</a></div></div>
+<div class="ttc" id="a_bgmap_texture_manager_8h_html_a59e69c7ec1a913eb59326eee86f68fcaa66d3e9d48184e4dad5c68a55b607c6fc"><div class="ttname"><a href="#a59e69c7ec1a913eb59326eee86f68fcaa66d3e9d48184e4dad5c68a55b607c6fc">kXOffset</a></div><div class="ttdeci">@ kXOffset</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h:26</a></div></div>
+<div class="ttc" id="a_bgmap_texture_manager_8h_html_a59e69c7ec1a913eb59326eee86f68fcaa860c54f609066623b8a28cf1464594c8"><div class="ttname"><a href="#a59e69c7ec1a913eb59326eee86f68fcaa860c54f609066623b8a28cf1464594c8">kRows</a></div><div class="ttdeci">@ kRows</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h:29</a></div></div>
+<div class="ttc" id="a_bgmap_texture_manager_8h_html_a59e69c7ec1a913eb59326eee86f68fcaacf0aeae10e4182b78c87502923e0ccac"><div class="ttname"><a href="#a59e69c7ec1a913eb59326eee86f68fcaacf0aeae10e4182b78c87502923e0ccac">kCols</a></div><div class="ttdeci">@ kCols</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h:28</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a18b39b5241320faa61bf7c8f20d472b3" name="a18b39b5241320faa61bf7c8f20d472b3"></a>
+<h2 class="memtitle">clearBgmapSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void BgmapTextureManager::clearBgmapSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>segment</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clear the data in the BGMAP spaced defined by the provided segment. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">segment</td><td>Index of the BGMAP segment to clear </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">78</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_function" href="/documentation/api/class-mem/">Mem::clear</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BGMAP_SEGMENT</a>(segment), 64 * 64 * 2);</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+<div class="ttc" id="a_types_8h_html_a47bd55d8c6a9b45db1ac0957cee2a82d"><div class="ttname"><a href="/documentation/api/-types-8h/">BYTE</a></div><div class="ttdeci">uint8 BYTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:28</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a48cbcb60f316279c9caeef2595b07832"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__BGMAP_SEGMENT</a></div><div class="ttdeci">#define __BGMAP_SEGMENT(b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:108</a></div></div>
+<div class="ttc" id="aclass_mem_html_a30862ac6658411a2d4c7c883a8d8dae4"><div class="ttname"><a href="/documentation/api/class-mem/">Mem::clear</a></div><div class="ttdeci">static void clear(BYTE *destination, uint32 numberOfBYTES)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-mem-8c-source/">Mem.c:28</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1147285bb592b524d3d28296fda9f78f" name="a1147285bb592b524d3d28296fda9f78f"></a>
+<h2 class="memtitle">configure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void configure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>paramTableBase</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the number of available BGMAP segments for texture allocation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">paramTableBase</td><td>Displacement in bytes to keep track of the start address of param table space </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5dd47d96e5717a34f8d2869b14e782c9" name="a5dd47d96e5717a34f8d2869b14e782c9"></a>
+<h2 class="memtitle">getAvailableBgmapSegmentsForTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int8</a> BgmapTextureManager::getAvailableBgmapSegmentsForTextures </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the number of available BGMAP segments to allocate textures. </p><dl class="section return"><dt>Returns</dt><dd>Number of available BGMAP segments to allocate textures </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">103</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_variable" href="#a48836f1d07e1c8a952ef0f95d5094b7a">BgmapTextureManager</a> bgmapTextureManager = BgmapTextureManager::getInstance();</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">return</span> bgmapTextureManager-&gt;availableBgmapSegmentsForTextures;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
+<div class="ttc" id="a_bgmap_texture_manager_8h_html_a48836f1d07e1c8a952ef0f95d5094b7a"><div class="ttname"><a href="#a48836f1d07e1c8a952ef0f95d5094b7a">BgmapTextureManager</a></div><div class="ttdeci">singleton !class BgmapTextureManager</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h:45</a></div></div>
+</div>
+</div>
+</div>
+<a id="a487cb871903e8abdd690e13616d43202" name="a487cb871903e8abdd690e13616d43202"></a>
+<h2 class="memtitle">getPrintingBgmapSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int8</a> BgmapTextureManager::getPrintingBgmapSegment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the number of the BGMAP segment available for printing. </p><dl class="section return"><dt>Returns</dt><dd>Number of the BGMAP segment available for printing </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">112</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>{</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_variable" href="#a48836f1d07e1c8a952ef0f95d5094b7a">BgmapTextureManager</a> bgmapTextureManager = BgmapTextureManager::getInstance();</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">return</span> bgmapTextureManager-&gt;printingBgmapSegment;</div>
+<div class="line"><span class="lineno">  117</span>}</div>
+</div>
+</div>
+</div>
+<a id="a4e939728d8446d56ef972861d04e52f7" name="a4e939728d8446d56ef972861d04e52f7"></a>
+<h2 class="memtitle">getTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a> getTexture </td>
+          <td>(</td>
+          <td class="paramtype">BgmapTextureSpec *</td>          <td class="paramname"><span class="paramname"><em>bgmapTextureSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>minimumSegment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>mustLiveAtEvenSegment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>scValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve a texture initialized with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bgmapTextureSpec</td><td>Spec to use to initilize the desired texture </td></tr>
+    <tr><td class="paramname">minimumSegment</td><td>Minimum BGMAP segment where to allocate the texture </td></tr>
+    <tr><td class="paramname">mustLiveAtEvenSegment</td><td>Required BGMAP segment where to allocate the texture </td></tr>
+    <tr><td class="paramname">scValue</td><td>SC configuration value for multi segment textures </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-texture/">Texture</a> initialized with the provided spec </dd></dl>
+
+</div>
+</div>
+<a id="ad6d35a4d2bf3f4b681c292e810191e17" name="ad6d35a4d2bf3f4b681c292e810191e17"></a>
+<h2 class="memtitle">getXOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int16</a> getXOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the X coordinate in BGMAP space for the texture ID provided. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">id</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a>'s id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>X coordinate in BGMAP space for the texture ID provided </dd></dl>
+
+</div>
+</div>
+<a id="a6ba723ef8f06513716d38c06dc39bacd" name="a6ba723ef8f06513716d38c06dc39bacd"></a>
+<h2 class="memtitle">getYOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int16</a> getYOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the Y coordinate in BGMAP space for the texture ID provided. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">id</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a>'s id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Y coordinate in BGMAP space for the texture ID provided </dd></dl>
+
+</div>
+</div>
+<a id="a3d6b2c97a5e8b722e7135e432b8dc6ce" name="a3d6b2c97a5e8b722e7135e432b8dc6ce"></a>
+<h2 class="memtitle">loadTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void BgmapTextureManager::loadTextures </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> **</td>          <td class="paramname"><span class="paramname"><em>textureSpecs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Load textures in function of the provided array of specs. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">textureSpecs</td><td>Array of texture specs in function of which to load textures </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">121</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>{</div>
+<div class="line"><span class="lineno">  123</span>    <span class="comment">// Textures</span></div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != textureSpecs)</div>
+<div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_class" href="/documentation/api/class-virtual-list/">VirtualList</a> sortedTextureSpecs = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-bgmap-texture-manager-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_class" href="/documentation/api/class-virtual-list/">VirtualList</a> preloadedTextures = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-bgmap-texture-manager-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != textureSpecs[i]; i++)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == textureSpecs[i]-&gt;charSetSpec)</div>
+<div class="line"><span class="lineno">  132</span>            {</div>
+<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>            </div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span></div>
+<div class="line"><span class="lineno">  137</span>            (</div>
+<div class="line"><span class="lineno">  138</span>                textureSpecs[i]-&gt;recyclable </div>
+<div class="line"><span class="lineno">  139</span>                || </div>
+<div class="line"><span class="lineno">  140</span>                (</div>
+<div class="line"><span class="lineno">  141</span>                    textureSpecs[i]-&gt;charSetSpec-&gt;shared</div>
+<div class="line"><span class="lineno">  142</span>                )</div>
+<div class="line"><span class="lineno">  143</span>            )</div>
+<div class="line"><span class="lineno">  144</span>            {</div>
+<div class="line"><span class="lineno">  145</span>                <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">for</span>(node = sortedTextureSpecs-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  148</span>                {</div>
+<div class="line"><span class="lineno">  149</span>                    <a class="code hl_struct" href="/documentation/api/struct-texture-spec/">TextureSpec</a>* sortedTextureSpec = (<a class="code hl_struct" href="/documentation/api/struct-texture-spec/">TextureSpec</a>*)node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>                    <span class="keywordflow">if</span>(textureSpecs[i] == sortedTextureSpec)</div>
+<div class="line"><span class="lineno">  152</span>                    {</div>
+<div class="line"><span class="lineno">  153</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  154</span>                    }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>                    <span class="keywordflow">if</span>(textureSpecs[i]-&gt;rows &lt; sortedTextureSpec-&gt;rows)</div>
+<div class="line"><span class="lineno">  157</span>                    {</div>
+<div class="line"><span class="lineno">  158</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  159</span>                    }</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>                    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::insertBefore</a>(sortedTextureSpecs, node, textureSpecs[i]);</div>
+<div class="line"><span class="lineno">  162</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  163</span>                }</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == node)</div>
+<div class="line"><span class="lineno">  166</span>                {</div>
+<div class="line"><span class="lineno">  167</span>                    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(sortedTextureSpecs, textureSpecs[i]);</div>
+<div class="line"><span class="lineno">  168</span>                }</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>        <span class="comment">// Must not release the texture just after loading them so</span></div>
+<div class="line"><span class="lineno">  173</span>        <span class="comment">// The recyclable ones are not recycled immediately</span></div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">for</span>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = sortedTextureSpecs-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            <a class="code hl_struct" href="/documentation/api/struct-texture-spec/">TextureSpec</a>* textureSpec = (<a class="code hl_struct" href="/documentation/api/struct-texture-spec/">TextureSpec</a>*)node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_class" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a> bgmapTexture = BgmapTextureManager::getTexture(textureSpec, 0, <span class="keyword">false</span>, <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_1x1</a>);</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(bgmapTexture), <span class="stringliteral">&quot;BgmapTextureManager::loadTextures: failed to load bgmapTexture&quot;</span>);</div>
+<div class="line"><span class="lineno">  181</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(preloadedTextures, bgmapTexture);</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>        <span class="keyword">delete</span> sortedTextureSpecs;</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">for</span>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::begin</a>(preloadedTextures); <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            BgmapTextureManager::releaseTexture(BgmapTexture::safeCast(node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>));</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">delete</span> preloadedTextures;</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
+<div class="line"><span class="lineno">  193</span>}</div>
+<div class="ttc" id="a_bgmap_texture_manager_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-bgmap-texture-manager-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c:28</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a421ca709c25fc4249c7eec6b6cb725d0"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_1x1</a></div><div class="ttdeci">#define __WORLD_1x1</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:123</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_html"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8h-source/">BgmapTexture.h:41</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:30</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_a88bde60060c7c995e306d6204d328ad0"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::begin</a></div><div class="ttdeci">VirtualNode begin()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:76</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_acb02e87ebf3f2af19b8f345ab02f202a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::head</a></div><div class="ttdeci">VirtualNode head</div><div class="ttdoc">List&#39;s first node.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:34</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_adf19ddb25dcdc1c1706ddf506c8bc8b2"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::insertBefore</a></div><div class="ttdeci">VirtualNode insertBefore(VirtualNode node, const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:330</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:29</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a2dd261ee8563057540d7f5ca6edf5654"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::data</a></div><div class="ttdeci">void * data</div><div class="ttdoc">Pointer to the data.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:39</a></div></div>
+<div class="ttc" id="astruct_texture_spec_html"><div class="ttname"><a href="/documentation/api/struct-texture-spec/">TextureSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:44</a></div></div>
+</div>
+</div>
+</div>
+<a id="aa94e45017bae233a8b757ea066d1dc21" name="aa94e45017bae233a8b757ea066d1dc21"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the manager's status. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b69c3afe5451447d3ab3d9397908e0a" name="a5b69c3afe5451447d3ab3d9397908e0a"></a>
+<h2 class="memtitle">releaseTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void releaseTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></td>          <td class="paramname"><span class="paramname"><em>bgmapTexture</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Release a texture. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bgmapTexture</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a> to release </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab9d3f06dc4ef871fad50465095b5ea32" name="ab9d3f06dc4ef871fad50465095b5ea32"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ad30593b9c2ecdb77652a2c44fffd254d" name="ad30593b9c2ecdb77652a2c44fffd254d"></a>
+<h2 class="memtitle">availableBgmapSegmentsForTextures</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> availableBgmapSegmentsForTextures</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of available BGMAP segments for texture allocation. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">60</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a48836f1d07e1c8a952ef0f95d5094b7a" name="a48836f1d07e1c8a952ef0f95d5094b7a"></a>
+<h2 class="memtitle">BgmapTextureManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">singleton !class BgmapTextureManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class BgmapTextureManager</p>
+<p>Inherits from <a class="el" href="/documentation/api/class-texture/">Texture</a></p>
+<p>Allocates BGMAP space for textures. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">42</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+<a id="acd501debc05be740df5e6c2ca2caa8a6" name="acd501debc05be740df5e6c2ca2caa8a6"></a>
+<h2 class="memtitle">offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> offset[<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a> *<a class="el" href="/documentation/api/-config-8h/">__NUM_BGMAPS_PER_SEGMENT</a>][4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multidimensional array to keep track of the offsets for each allocated texture. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">57</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a625a02eaf360e53ff23b313cd6097b80" name="a625a02eaf360e53ff23b313cd6097b80"></a>
+<h2 class="memtitle">printingBgmapSegment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> printingBgmapSegment</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BGMAP segment available for printing. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">63</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aaf344e6d305783febaf6bb0370ab850a" name="aaf344e6d305783febaf6bb0370ab850a"></a>
+<h2 class="memtitle">usedTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> usedTiles[<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used tiles per BGMAP segment. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">48</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a22d560ff2868e389dc4b44b7c7db5001" name="a22d560ff2868e389dc4b44b7c7db5001"></a>
+<h2 class="memtitle">xOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> xOffset[<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="/documentation/api/-config-8h/">__NUM_BGMAPS_PER_SEGMENT</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start X coordinate of free space in each BGMAP segment. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">51</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a73157efb84ea97ed35e4e3f7eb22216c" name="a73157efb84ea97ed35e4e3f7eb22216c"></a>
+<h2 class="memtitle">yOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int8</a> yOffset[<a class="el" href="/documentation/api/-config-8h/">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="/documentation/api/-config-8h/">__NUM_BGMAPS_PER_SEGMENT</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start Y coordinate of free space in each BGMAP segment. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">54</a> of file <a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

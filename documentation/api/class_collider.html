@@ -1,0 +1,1541 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Collider Class Reference"
+permalink: documentation/api/class-collider/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Collider Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Collider:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_collider.png" usemap="#Collider_map" alt />
+  <map id="Collider_map" name="Collider_map">
+<area href="/documentation/api/class-component/" alt="Component" shape="rect" coords="85,0,160,24" />
+<area href="/documentation/api/class-ball/" alt="Ball" shape="rect" coords="0,112,75,136" />
+<area href="/documentation/api/class-box/" alt="Box" shape="rect" coords="85,112,160,136" />
+<area href="/documentation/api/class-line-field/" alt="LineField" shape="rect" coords="170,112,245,136" />
+<area href="/documentation/api/class-inverse-box/" alt="InverseBox" shape="rect" coords="85,168,160,192" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:afa53873975943a015e3dbe1683696ac4" id="r_afa53873975943a015e3dbe1683696ac4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa53873975943a015e3dbe1683696ac4">CollisionResult</a> </td></tr>
+
+<tr class="memitem:acb64310d4a061637083550a348805661" id="r_acb64310d4a061637083550a348805661"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb64310d4a061637083550a348805661">ColliderClassIndexes</a> </td></tr>
+
+<tr class="memitem:a310bfcf60d1aac1cb1a0ed5ce50a507b" id="r_a310bfcf60d1aac1cb1a0ed5ce50a507b"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310bfcf60d1aac1cb1a0ed5ce50a507b">ColliderROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac548a82a926cfaf623396e55bce032a6" id="r_ac548a82a926cfaf623396e55bce032a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac548a82a926cfaf623396e55bce032a6">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> *colliderSpec)</td></tr>
+<tr class="memdesc:ac548a82a926cfaf623396e55bce032a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:addc8ed5e9582775300ecdb84a2a600c3" id="r_addc8ed5e9582775300ecdb84a2a600c3"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addc8ed5e9582775300ecdb84a2a600c3">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="memitem:ae95ac8a217edda6210c9331e1e68c7f6" id="r_ae95ac8a217edda6210c9331e1e68c7f6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae95ac8a217edda6210c9331e1e68c7f6">handleCommand</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> command, va_list args)</td></tr>
+
+<tr class="memitem:a9d460f03e9fcaf210a835d3ad38679b9" id="r_a9d460f03e9fcaf210a835d3ad38679b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d460f03e9fcaf210a835d3ad38679b9">enable</a> ()</td></tr>
+<tr class="memdesc:a9d460f03e9fcaf210a835d3ad38679b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the collider for collision checks.  <br /></td></tr>
+
+<tr class="memitem:afc38e30271187b1b58898ca2120f112d" id="r_afc38e30271187b1b58898ca2120f112d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc38e30271187b1b58898ca2120f112d">disable</a> ()</td></tr>
+<tr class="memdesc:afc38e30271187b1b58898ca2120f112d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the collider for collision checks.  <br /></td></tr>
+
+<tr class="memitem:a0d7ed508ddc7050c7e52d5f6f73d1305" id="r_a0d7ed508ddc7050c7e52d5f6f73d1305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d7ed508ddc7050c7e52d5f6f73d1305">setLayers</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#a78772d53fc7b082419ccfcc2a0509e2d">layers</a>)</td></tr>
+
+<tr class="memitem:ab5f5c72ae3df1608cc17e49d248bbe71" id="r_ab5f5c72ae3df1608cc17e49d248bbe71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5f5c72ae3df1608cc17e49d248bbe71">getLayers</a> ()</td></tr>
+
+<tr class="memitem:a01cbe20dbc711a5baaadbd66d958692c" id="r_a01cbe20dbc711a5baaadbd66d958692c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01cbe20dbc711a5baaadbd66d958692c">setLayersToIgnore</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#aa59fe6197674d817278e13ba220365f3">layersToIgnore</a>)</td></tr>
+
+<tr class="memitem:a6e3f34e1ae362430c50c0494948ed136" id="r_a6e3f34e1ae362430c50c0494948ed136"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e3f34e1ae362430c50c0494948ed136">getLayersToIgnore</a> ()</td></tr>
+
+<tr class="memitem:a190c1b3e21dfc4a4860fb3c253938f2a" id="r_a190c1b3e21dfc4a4860fb3c253938f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a190c1b3e21dfc4a4860fb3c253938f2a">checkCollisions</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> checkCollisions)</td></tr>
+
+<tr class="memitem:a646aec0bdda5a94a0642a5ee280e7943" id="r_a646aec0bdda5a94a0642a5ee280e7943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a646aec0bdda5a94a0642a5ee280e7943">registerCollisions</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> registerCollisions)</td></tr>
+
+<tr class="memitem:af66280d9c0a9b8af81223fea5bb19814" id="r_af66280d9c0a9b8af81223fea5bb19814"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#afa53873975943a015e3dbe1683696ac4">CollisionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af66280d9c0a9b8af81223fea5bb19814">collides</a> (<a class="el" href="/documentation/api/class-collider/">Collider</a> collider)</td></tr>
+
+<tr class="memitem:aa869bd3e5c35f8a8308c16b6e27903a4" id="r_aa869bd3e5c35f8a8308c16b6e27903a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa869bd3e5c35f8a8308c16b6e27903a4">resolveCollision</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:ac563d51027ef94c04e31ea0be2009a7b" id="r_ac563d51027ef94c04e31ea0be2009a7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac563d51027ef94c04e31ea0be2009a7b">canMoveTowards</a> (<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> displacement)</td></tr>
+
+<tr class="memitem:a9273e3c9b4dc2e89f474bd21d87ca708" id="r_a9273e3c9b4dc2e89f474bd21d87ca708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9273e3c9b4dc2e89f474bd21d87ca708">discardCollisions</a> ()</td></tr>
+<tr class="memdesc:a9273e3c9b4dc2e89f474bd21d87ca708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard any registered collision.  <br /></td></tr>
+
+<tr class="memitem:a8451d024bae7255fb8148a32249f1ddb" id="r_a8451d024bae7255fb8148a32249f1ddb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8451d024bae7255fb8148a32249f1ddb">getCollidingFrictionCoefficient</a> ()</td></tr>
+
+<tr class="memitem:a9e4e0c27de7dd700a84f470dcfb6d774" id="r_a9e4e0c27de7dd700a84f470dcfb6d774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e4e0c27de7dd700a84f470dcfb6d774">show</a> ()</td></tr>
+<tr class="memdesc:a9e4e0c27de7dd700a84f470dcfb6d774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the collider.  <br /></td></tr>
+
+<tr class="memitem:a01a0bb18fb69c75fa71e929dfa385c0d" id="r_a01a0bb18fb69c75fa71e929dfa385c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a0bb18fb69c75fa71e929dfa385c0d">hide</a> ()</td></tr>
+<tr class="memdesc:a01a0bb18fb69c75fa71e929dfa385c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the collider.  <br /></td></tr>
+
+<tr class="memitem:aebbe95a8c2872f85cb3a1aa82d92500a" id="r_aebbe95a8c2872f85cb3a1aa82d92500a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebbe95a8c2872f85cb3a1aa82d92500a">resize</a> (<a class="el" href="/documentation/api/-types-8h/">fixed_t</a> sizeDelta)</td></tr>
+
+<tr class="memitem:a64b9f4bbcebe13931a5edc95c98cb9ae" id="r_a64b9f4bbcebe13931a5edc95c98cb9ae"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b9f4bbcebe13931a5edc95c98cb9ae">getNormal</a> ()</td></tr>
+
+<tr class="memitem:ab1cdbcbf712ecb48726c1bb1aa03f2a9" id="r_ab1cdbcbf712ecb48726c1bb1aa03f2a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1cdbcbf712ecb48726c1bb1aa03f2a9">configureWireframe</a> ()=0</td></tr>
+<tr class="memdesc:ab1cdbcbf712ecb48726c1bb1aa03f2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the wireframe used to show the collider.  <br /></td></tr>
+
+<tr class="memitem:a24ac61385beadb3e7fe8675f918641a2" id="r_a24ac61385beadb3e7fe8675f918641a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24ac61385beadb3e7fe8675f918641a2">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a0118d492500f883fd4c9919e1284ed19" id="r_a0118d492500f883fd4c9919e1284ed19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0118d492500f883fd4c9919e1284ed19">position</a></td></tr>
+<tr class="memdesc:a0118d492500f883fd4c9919e1284ed19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displaced position.  <br /></td></tr>
+
+<tr class="memitem:ac9c942d35dd8aa4db4209478b3f7f803" id="r_ac9c942d35dd8aa4db4209478b3f7f803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a></td></tr>
+<tr class="memdesc:ac9c942d35dd8aa4db4209478b3f7f803"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of colliding colliders.  <br /></td></tr>
+
+<tr class="memitem:a78772d53fc7b082419ccfcc2a0509e2d" id="r_a78772d53fc7b082419ccfcc2a0509e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78772d53fc7b082419ccfcc2a0509e2d">layers</a></td></tr>
+<tr class="memdesc:a78772d53fc7b082419ccfcc2a0509e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layers on which this collider live.  <br /></td></tr>
+
+<tr class="memitem:aa59fe6197674d817278e13ba220365f3" id="r_aa59fe6197674d817278e13ba220365f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa59fe6197674d817278e13ba220365f3">layersToIgnore</a></td></tr>
+<tr class="memdesc:aa59fe6197674d817278e13ba220365f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layers to ignore when checking for collisions.  <br /></td></tr>
+
+<tr class="memitem:af7c8e9085485a2ed45d355b13369b00b" id="r_af7c8e9085485a2ed45d355b13369b00b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a></td></tr>
+<tr class="memdesc:af7c8e9085485a2ed45d355b13369b00b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-wireframe/">Wireframe</a> to make the collider visible (mainly for debugging purposes)  <br /></td></tr>
+
+<tr class="memitem:a11223e6c48173abf89f353d3fc256f59" id="r_a11223e6c48173abf89f353d3fc256f59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11223e6c48173abf89f353d3fc256f59">enabled</a></td></tr>
+<tr class="memdesc:a11223e6c48173abf89f353d3fc256f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">If false, it is ignored in all callision checks.  <br /></td></tr>
+
+<tr class="memitem:a946c1f2c55e29da882a88a5b82a17731" id="r_a946c1f2c55e29da882a88a5b82a17731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a946c1f2c55e29da882a88a5b82a17731">checkForCollisions</a></td></tr>
+<tr class="memdesc:a946c1f2c55e29da882a88a5b82a17731"><td class="mdescLeft">&#160;</td><td class="mdescRight">If false, it doesn't check collision against other colliders.  <br /></td></tr>
+
+<tr class="memitem:a00440e32dc4014c85b3572b67a368e91" id="r_a00440e32dc4014c85b3572b67a368e91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00440e32dc4014c85b3572b67a368e91">registerCollisions</a></td></tr>
+<tr class="memdesc:a00440e32dc4014c85b3572b67a368e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, it registers other colliders when a collision arises.  <br /></td></tr>
+
+<tr class="memitem:ad8ed2f7368675f6dbde1b491193981de" id="r_ad8ed2f7368675f6dbde1b491193981de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ed2f7368675f6dbde1b491193981de">classIndex</a></td></tr>
+<tr class="memdesc:ad8ed2f7368675f6dbde1b491193981de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class index to avoid using __GET_CAST when checking for collisions.  <br /></td></tr>
+
+<tr class="memitem:aaf7d8c65d76f08b4dfa8ae9b34a5a239" id="r_aaf7d8c65d76f08b4dfa8ae9b34a5a239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf7d8c65d76f08b4dfa8ae9b34a5a239">invalidPosition</a></td></tr>
+<tr class="memdesc:aaf7d8c65d76f08b4dfa8ae9b34a5a239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to force the computation of the collider's position.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_component')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-component/">Component</a></td></tr>
+<tr class="memitem:aaae35aa887053415ab42210fd2354c6c inherit pub_types_class_component" id="r_aaae35aa887053415ab42210fd2354c6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">ComponentCommands</a> </td></tr>
+
+<tr class="memitem:a463f6accfd16254f18a653e9b42a3d8f inherit pub_types_class_component" id="r_a463f6accfd16254f18a653e9b42a3d8f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">ComponentTypes</a> </td></tr>
+
+<tr class="inherit_header pub_methods_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_component')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-component/">Component</a></td></tr>
+<tr class="memitem:a28bad0ff044a24a480e90333664bb736 inherit pub_methods_class_component" id="r_a28bad0ff044a24a480e90333664bb736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *<a class="el" href="/documentation/api/class-component/">componentSpec</a>)</td></tr>
+
+<tr class="memitem:aa363223965ab4fde75e7bb8cd3fa31a5 inherit pub_methods_class_component" id="r_aa363223965ab4fde75e7bb8cd3fa31a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">destructor</a> ()</td></tr>
+<tr class="memdesc:aa363223965ab4fde75e7bb8cd3fa31a5 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:a10a34c37c647a2eb17d35a52e99637f4 inherit pub_methods_class_component" id="r_a10a34c37c647a2eb17d35a52e99637f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getSpec</a> ()</td></tr>
+
+<tr class="memitem:a25e761bb96d00c1983a60baa175c8a46 inherit pub_methods_class_component" id="r_a25e761bb96d00c1983a60baa175c8a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-entity/">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getOwner</a> ()</td></tr>
+<tr class="memdesc:a25e761bb96d00c1983a60baa175c8a46 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the collider's owner.  <br /></td></tr>
+
+<tr class="memitem:abd743f9cb05a07df8d21ec9ab2556bf6 inherit pub_methods_class_component" id="r_abd743f9cb05a07df8d21ec9ab2556bf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getType</a> ()</td></tr>
+
+<tr class="memitem:a23569737a5b0c64882e2ab8124385154 inherit pub_methods_class_component" id="r_a23569737a5b0c64882e2ab8124385154"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getRightBox</a> ()</td></tr>
+
+<tr class="inherit_header pub_attribs_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_component')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-component/">Component</a></td></tr>
+<tr class="memitem:aca4d3c4346e10579e0dce15d2deb2a22 inherit pub_attribs_class_component" id="r_aca4d3c4346e10579e0dce15d2deb2a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-entity/">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">owner</a></td></tr>
+<tr class="memdesc:aca4d3c4346e10579e0dce15d2deb2a22 inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-object/">Object</a> to which this component attaches to.  <br /></td></tr>
+
+<tr class="memitem:ada6fd2c1a873fe14efcc7db63d7a5d7e inherit pub_attribs_class_component" id="r_ada6fd2c1a873fe14efcc7db63d7a5d7e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">componentSpec</a></td></tr>
+<tr class="memdesc:ada6fd2c1a873fe14efcc7db63d7a5d7e inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the spec that defines how to initialize the component.  <br /></td></tr>
+
+<tr class="memitem:a079d309fbac2b3b2a6be4f7096da3955 inherit pub_attribs_class_component" id="r_a079d309fbac2b3b2a6be4f7096da3955"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">transformation</a></td></tr>
+<tr class="memdesc:a079d309fbac2b3b2a6be4f7096da3955 inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the transformation that the component attaches to.  <br /></td></tr>
+
+<tr class="memitem:a6635da6105aa4fdf6905707468eb5905 inherit pub_attribs_class_component" id="r_a6635da6105aa4fdf6905707468eb5905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">deleteMe</a></td></tr>
+<tr class="memdesc:a6635da6105aa4fdf6905707468eb5905 inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark the component as pending deletion.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-collider/">Collider</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-component/">Component</a></p>
+<p>Checks collisions against other colliders. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">180</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a310bfcf60d1aac1cb1a0ed5ce50a507b" name="a310bfcf60d1aac1cb1a0ed5ce50a507b"></a>
+<h2 class="memtitle">ColliderROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> <a class="el" href="#a310bfcf60d1aac1cb1a0ed5ce50a507b">ColliderROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">169</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="acb64310d4a061637083550a348805661" name="acb64310d4a061637083550a348805661"></a>
+<h2 class="memtitle">ColliderClassIndexes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#acb64310d4a061637083550a348805661">ColliderClassIndexes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Possible types of a colliders </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">62</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kColliderBallIndex</a> = 0,</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kColliderBoxIndex</a>,</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kColliderInverseBoxIndex</a>,</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kColliderLineFieldIndex</a>,</div>
+<div class="line"><span class="lineno">   68</span>};</div>
+<div class="ttc" id="a_collider_8h_html_a30719ab5f27d97b1000b6ce7edc3e1ed"><div class="ttname"><a href="/documentation/api/-collider-8h/">kColliderBoxIndex</a></div><div class="ttdeci">@ kColliderBoxIndex</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:65</a></div></div>
+<div class="ttc" id="a_collider_8h_html_aa9b6d8d398d3db9789fea940779bd869"><div class="ttname"><a href="/documentation/api/-collider-8h/">kColliderBallIndex</a></div><div class="ttdeci">@ kColliderBallIndex</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:64</a></div></div>
+<div class="ttc" id="a_collider_8h_html_aeed061ea34925c9ce9c3dcb21b5a79d2"><div class="ttname"><a href="/documentation/api/-collider-8h/">kColliderLineFieldIndex</a></div><div class="ttdeci">@ kColliderLineFieldIndex</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:67</a></div></div>
+<div class="ttc" id="a_collider_8h_html_af775af57fee9bec32fef73c34bf28aa2"><div class="ttname"><a href="/documentation/api/-collider-8h/">kColliderInverseBoxIndex</a></div><div class="ttdeci">@ kColliderInverseBoxIndex</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:66</a></div></div>
+</div>
+</div>
+</div>
+<a id="afa53873975943a015e3dbe1683696ac4" name="afa53873975943a015e3dbe1683696ac4"></a>
+<h2 class="memtitle">CollisionResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#afa53873975943a015e3dbe1683696ac4">CollisionResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="/documentation/api/struct-collision/">Collision</a> events </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">51</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
+<div class="line"><span class="lineno">   53</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kNoCollision</a> = 0,</div>
+<div class="line"><span class="lineno">   54</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionStarts</a>,</div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionPersists</a>,</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionEnds</a>,</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>} <a class="code hl_enumeration" href="#afa53873975943a015e3dbe1683696ac4">CollisionResult</a>;</div>
+<div class="ttc" id="a_collider_8h_html_a2bfe45a00c152d3e231704f4e2f0585b"><div class="ttname"><a href="/documentation/api/-collider-8h/">kCollisionEnds</a></div><div class="ttdeci">@ kCollisionEnds</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:56</a></div></div>
+<div class="ttc" id="a_collider_8h_html_a6b351a73d7576853e26e6e1822b7767e"><div class="ttname"><a href="/documentation/api/-collider-8h/">kCollisionPersists</a></div><div class="ttdeci">@ kCollisionPersists</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:55</a></div></div>
+<div class="ttc" id="a_collider_8h_html_abe5c690b520125b1d6a887468da4bc40"><div class="ttname"><a href="/documentation/api/-collider-8h/">kNoCollision</a></div><div class="ttdeci">@ kNoCollision</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:53</a></div></div>
+<div class="ttc" id="a_collider_8h_html_ae23437ce0d1fdc32df02e2d254cf0003"><div class="ttname"><a href="/documentation/api/-collider-8h/">kCollisionStarts</a></div><div class="ttdeci">@ kCollisionStarts</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:54</a></div></div>
+<div class="ttc" id="aclass_collider_html_afa53873975943a015e3dbe1683696ac4"><div class="ttname"><a href="#afa53873975943a015e3dbe1683696ac4">Collider::CollisionResult</a></div><div class="ttdeci">CollisionResult</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:52</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac563d51027ef94c04e31ea0be2009a7b" name="ac563d51027ef94c04e31ea0be2009a7b"></a>
+<h2 class="memtitle">canMoveTowards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> Collider::canMoveTowards </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>displacement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if there is some collider blocking in the provided direction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">displacement</td><td>Vector towards which to check if it is possible to move the owner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if there is no collision when moving the collider and increasing its size </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">389</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  390</span>{</div>
+<div class="line"><span class="lineno">  391</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a> || <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>-&gt;head)</div>
+<div class="line"><span class="lineno">  392</span>    {</div>
+<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  394</span>    }</div>
+<div class="line"><span class="lineno">  395</span> </div>
+<div class="line"><span class="lineno">  396</span>    <span class="keywordtype">bool</span> canMove = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  397</span> </div>
+<div class="line"><span class="lineno">  398</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> normalizedDisplacement = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::normalize</a>(displacement);</div>
+<div class="line"><span class="lineno">  399</span> </div>
+<div class="line"><span class="lineno">  400</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>-&gt;head; canMove &amp;&amp; node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  401</span>    {</div>
+<div class="line"><span class="lineno">  402</span>        <a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>* otherColliderRegistry = (<a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>*)node-&gt;data;</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(otherColliderRegistry), <span class="stringliteral">&quot;Collider::canMoveTowards: dead otherColliderRegistry&quot;</span>);</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">if</span>(otherColliderRegistry-&gt;isImpenetrable)</div>
+<div class="line"><span class="lineno">  407</span>        {</div>
+<div class="line"><span class="lineno">  408</span>            <span class="comment">// Check if solution is valid</span></div>
+<div class="line"><span class="lineno">  409</span>            <span class="keywordflow">if</span>(otherColliderRegistry-&gt;solutionVector.magnitude)</div>
+<div class="line"><span class="lineno">  410</span>            {</div>
+<div class="line"><span class="lineno">  411</span>                <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> cosAngle = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::dotProduct</a>(otherColliderRegistry-&gt;solutionVector.direction, normalizedDisplacement);</div>
+<div class="line"><span class="lineno">  412</span>                canMove &amp;= -(__1I_FIXED - __COLLIDER_ANGLE_TO_PREVENT_DISPLACEMENT) &lt; cosAngle;</div>
+<div class="line"><span class="lineno">  413</span>            }</div>
+<div class="line"><span class="lineno">  414</span>        }</div>
+<div class="line"><span class="lineno">  415</span>    }</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>    <span class="comment">// Not colliding anymore</span></div>
+<div class="line"><span class="lineno">  418</span>    <span class="keywordflow">return</span> canMove;</div>
+<div class="line"><span class="lineno">  419</span>}</div>
+<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
+<div class="ttc" id="a_collider_8h_html_acab9fb07cd494c9c322a848370da4af4"><div class="ttname"><a href="/documentation/api/-collider-8h/">OtherColliderRegistry</a></div><div class="ttdeci">struct OtherColliderRegistry OtherColliderRegistry</div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="a_types_8h_html_ab04f901853123890736948a2ff6bef01"><div class="ttname"><a href="/documentation/api/-types-8h/">Vector3D</a></div><div class="ttdeci">struct Vector3D Vector3D</div></div>
+<div class="ttc" id="aclass_collider_html_ac9c942d35dd8aa4db4209478b3f7f803"><div class="ttname"><a href="#ac9c942d35dd8aa4db4209478b3f7f803">Collider::otherColliders</a></div><div class="ttdeci">VirtualList otherColliders</div><div class="ttdoc">List of colliding colliders.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:188</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ad8178a229fb98412c78437c1e75b3e01"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::dotProduct</a></div><div class="ttdeci">static fixed_ext_t dotProduct(Vector3D vectorA, Vector3D vectorB)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:715</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_ae77f60cf309d9af309041cbec89b2365"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::normalize</a></div><div class="ttdeci">static Vector3D normalize(Vector3D vector)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:288</a></div></div>
+</div>
+</div>
+</div>
+<a id="a190c1b3e21dfc4a4860fb3c253938f2a" name="a190c1b3e21dfc4a4860fb3c253938f2a"></a>
+<h2 class="memtitle">checkCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::checkCollisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>checkCollisions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Make this collider to test collision against other colliders. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">checkCollisions</td><td>It true, this collider checks collision against others </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">238</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>{</div>
+<div class="line"><span class="lineno">  240</span>    this-&gt;<a class="code hl_variable" href="#a946c1f2c55e29da882a88a5b82a17731">checkForCollisions</a> = <a class="code hl_function" href="#a190c1b3e21dfc4a4860fb3c253938f2a">checkCollisions</a>;</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a190c1b3e21dfc4a4860fb3c253938f2a">checkCollisions</a>)</div>
+<div class="line"><span class="lineno">  243</span>    {</div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_function" href="#a9d460f03e9fcaf210a835d3ad38679b9">Collider::enable</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
+<div class="line"><span class="lineno">  246</span>}</div>
+<div class="ttc" id="aclass_collider_html_a190c1b3e21dfc4a4860fb3c253938f2a"><div class="ttname"><a href="#a190c1b3e21dfc4a4860fb3c253938f2a">Collider::checkCollisions</a></div><div class="ttdeci">void checkCollisions(bool checkCollisions)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:238</a></div></div>
+<div class="ttc" id="aclass_collider_html_a946c1f2c55e29da882a88a5b82a17731"><div class="ttname"><a href="#a946c1f2c55e29da882a88a5b82a17731">Collider::checkForCollisions</a></div><div class="ttdeci">uint8 checkForCollisions</div><div class="ttdoc">If false, it doesn&#39;t check collision against other colliders.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:203</a></div></div>
+<div class="ttc" id="aclass_collider_html_a9d460f03e9fcaf210a835d3ad38679b9"><div class="ttname"><a href="#a9d460f03e9fcaf210a835d3ad38679b9">Collider::enable</a></div><div class="ttdeci">void enable()</div><div class="ttdoc">Enable the collider for collision checks.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:186</a></div></div>
+</div>
+</div>
+</div>
+<a id="af66280d9c0a9b8af81223fea5bb19814" name="af66280d9c0a9b8af81223fea5bb19814"></a>
+<h2 class="memtitle">collides()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="#afa53873975943a015e3dbe1683696ac4">CollisionResult</a> Collider::collides </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-collider/">Collider</a></td>          <td class="paramname"><span class="paramname"><em>collider</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if there is there is a collision with the provided collider. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">collider</td><td><a class="el" href="/documentation/api/class-collider/">Collider</a> to check collision against to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">257</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  258</span>{</div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>))</div>
+<div class="line"><span class="lineno">  260</span>    {</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kNoCollision</a>;</div>
+<div class="line"><span class="lineno">  262</span>    }</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>    <a class="code hl_typedef" href="/documentation/api/-collider-8h/">Collision</a> collision;</div>
+<div class="line"><span class="lineno">  265</span>    collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a> = <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kNoCollision</a>;</div>
+<div class="line"><span class="lineno">  266</span>    collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  267</span>    collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>    <a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>* otherColliderRegistry = Collider::findOtherColliderRegistry(<span class="keyword">this</span>, collider);</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>    <span class="comment">// Test if new collision</span></div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == otherColliderRegistry)</div>
+<div class="line"><span class="lineno">  273</span>    {</div>
+<div class="line"><span class="lineno">  274</span>        <span class="comment">// Check for new overlap</span></div>
+<div class="line"><span class="lineno">  275</span>        <a class="code hl_function" href="/documentation/api/class-collision-tester/">CollisionTester::testOverlaping</a>(<span class="keyword">this</span>, collider, &amp;collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>, 0);</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> &amp;&amp; 0 != collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">solutionVector</a>.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">magnitude</a>)</div>
+<div class="line"><span class="lineno">  278</span>        {</div>
+<div class="line"><span class="lineno">  279</span>            <span class="comment">// New collision</span></div>
+<div class="line"><span class="lineno">  280</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a> = <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionStarts</a>;</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a00440e32dc4014c85b3572b67a368e91">registerCollisions</a>)</div>
+<div class="line"><span class="lineno">  283</span>            {</div>
+<div class="line"><span class="lineno">  284</span>                otherColliderRegistry = </div>
+<div class="line"><span class="lineno">  285</span>                    Collider::registerOtherCollider(<span class="keyword">this</span>, collider, collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">solutionVector</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  286</span>            }</div>
+<div class="line"><span class="lineno">  287</span>        }</div>
+<div class="line"><span class="lineno">  288</span>    }</div>
+<div class="line"><span class="lineno">  289</span>    <span class="comment">// Impenetrable registered colliding colliders require another test</span></div>
+<div class="line"><span class="lineno">  290</span>    <span class="comment">// To determine if I&#39;m not colliding against them anymore</span></div>
+<div class="line"><span class="lineno">  291</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(otherColliderRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-other-collider-registry/">isImpenetrable</a> &amp;&amp; otherColliderRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-other-collider-registry/">solutionVector</a>.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">magnitude</a>)</div>
+<div class="line"><span class="lineno">  292</span>    {</div>
+<div class="line"><span class="lineno">  293</span>        <a class="code hl_function" href="/documentation/api/class-collision-tester/">CollisionTester::testOverlaping</a>(<span class="keyword">this</span>, collider, &amp;collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>, <a class="code hl_define" href="/documentation/api/-collider-8c/">__STILL_COLLIDING_CHECK_SIZE_INCREMENT</a>);</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">if</span></div>
+<div class="line"><span class="lineno">  296</span>        (</div>
+<div class="line"><span class="lineno">  297</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> == <span class="keyword">this</span> </div>
+<div class="line"><span class="lineno">  298</span>            &amp;&amp; </div>
+<div class="line"><span class="lineno">  299</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">solutionVector</a>.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">magnitude</a> &gt;= <a class="code hl_define" href="/documentation/api/-collider-8c/">__STILL_COLLIDING_CHECK_SIZE_INCREMENT</a></div>
+<div class="line"><span class="lineno">  300</span>        )</div>
+<div class="line"><span class="lineno">  301</span>        {</div>
+<div class="line"><span class="lineno">  302</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a> = <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionPersists</a>;</div>
+<div class="line"><span class="lineno">  303</span>        }</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  305</span>        {</div>
+<div class="line"><span class="lineno">  306</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a> = <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionEnds</a>;</div>
+<div class="line"><span class="lineno">  307</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  308</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a> = collider;</div>
+<div class="line"><span class="lineno">  309</span>        }</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
+<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  312</span>    {</div>
+<div class="line"><span class="lineno">  313</span>        <span class="comment">// Otherwise make a normal collision test</span></div>
+<div class="line"><span class="lineno">  314</span>        <a class="code hl_function" href="/documentation/api/class-collision-tester/">CollisionTester::testOverlaping</a>(<span class="keyword">this</span>, collider, &amp;collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>, 0);</div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span>(collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> == <span class="keyword">this</span> &amp;&amp; 0 != collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">solutionVector</a>.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">magnitude</a>)</div>
+<div class="line"><span class="lineno">  317</span>        {</div>
+<div class="line"><span class="lineno">  318</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a> = <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionPersists</a>;</div>
+<div class="line"><span class="lineno">  319</span>        }</div>
+<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  321</span>        {</div>
+<div class="line"><span class="lineno">  322</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a> = <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionEnds</a>;</div>
+<div class="line"><span class="lineno">  323</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  324</span>            collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">collisionInformation</a>.<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a> = collider;</div>
+<div class="line"><span class="lineno">  325</span>        }</div>
+<div class="line"><span class="lineno">  326</span>    }</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">switch</span>(collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a>)</div>
+<div class="line"><span class="lineno">  329</span>    {</div>
+<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionStarts</a>:</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>            Collider::collisionStarts(<span class="keyword">this</span>, &amp;collision);</div>
+<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionPersists</a>:</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>            Collider::collisionPersists(<span class="keyword">this</span>, &amp;collision);</div>
+<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">kCollisionEnds</a>:</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>            Collider::collisionEnds(<span class="keyword">this</span>, &amp;collision);</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  344</span> </div>
+<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  346</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>    <span class="keywordflow">return</span> collision.<a class="code hl_variable" href="/documentation/api/struct-collision/">result</a>;</div>
+<div class="line"><span class="lineno">  350</span>}</div>
+<div class="ttc" id="a_collider_8c_html_a0142ab16edd7a83a264de3150690e0f7"><div class="ttname"><a href="/documentation/api/-collider-8c/">__STILL_COLLIDING_CHECK_SIZE_INCREMENT</a></div><div class="ttdeci">#define __STILL_COLLIDING_CHECK_SIZE_INCREMENT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:38</a></div></div>
+<div class="ttc" id="a_collider_8h_html_af6e3c754867461697327ca2355c0247d"><div class="ttname"><a href="/documentation/api/-collider-8h/">Collision</a></div><div class="ttdeci">struct Collision Collision</div></div>
+<div class="ttc" id="aclass_collider_html_a00440e32dc4014c85b3572b67a368e91"><div class="ttname"><a href="#a00440e32dc4014c85b3572b67a368e91">Collider::registerCollisions</a></div><div class="ttdeci">bool registerCollisions</div><div class="ttdoc">If true, it registers other colliders when a collision arises.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:206</a></div></div>
+<div class="ttc" id="aclass_collision_tester_html_aa320a593e3d9f7c086491ea3ce7e9c97"><div class="ttname"><a href="/documentation/api/class-collision-tester/">CollisionTester::testOverlaping</a></div><div class="ttdeci">static void testOverlaping(Collider requesterCollider, Collider otherCollider, CollisionInformation *collisionInformation, fixed_t sizeDelta)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collision-tester-8c-source/">CollisionTester.c:38</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="astruct_collision_html_a2a529efe404af8a34efb600d620236c3"><div class="ttname"><a href="/documentation/api/struct-collision/">Collision::result</a></div><div class="ttdeci">CollisionResult result</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:119</a></div></div>
+<div class="ttc" id="astruct_collision_html_a82e2f12df03e56046d2088d3af273077"><div class="ttname"><a href="/documentation/api/struct-collision/">Collision::collisionInformation</a></div><div class="ttdeci">CollisionInformation collisionInformation</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:120</a></div></div>
+<div class="ttc" id="astruct_collision_information_html_a144656768cb5d664d90cbb7b36fcc1bd"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation::otherCollider</a></div><div class="ttdeci">Collider otherCollider</div><div class="ttdoc">Colliding collider.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:90</a></div></div>
+<div class="ttc" id="astruct_collision_information_html_a3f803e61648d9b436381283f5799dae6"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation::solutionVector</a></div><div class="ttdeci">SolutionVector solutionVector</div><div class="ttdoc">Vector to solve the collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:93</a></div></div>
+<div class="ttc" id="astruct_collision_information_html_ada5d08b8acced599e7b3f37e7fc2eac9"><div class="ttname"><a href="/documentation/api/struct-collision-information/">CollisionInformation::collider</a></div><div class="ttdeci">Collider collider</div><div class="ttdoc">Collider detecting the collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:87</a></div></div>
+<div class="ttc" id="astruct_other_collider_registry_html_a2bcfb6c1d0697e2abc704b4cbb6dc6b4"><div class="ttname"><a href="/documentation/api/struct-other-collider-registry/">OtherColliderRegistry::solutionVector</a></div><div class="ttdeci">SolutionVector solutionVector</div><div class="ttdoc">Collision solution vector.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:105</a></div></div>
+<div class="ttc" id="astruct_other_collider_registry_html_a9d6af45a4d11f3ce41c6e5028dc36241"><div class="ttname"><a href="/documentation/api/struct-other-collider-registry/">OtherColliderRegistry::isImpenetrable</a></div><div class="ttdeci">bool isImpenetrable</div><div class="ttdoc">Raised when the collider solves the collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:111</a></div></div>
+<div class="ttc" id="astruct_solution_vector_html_aadc1246f8f835731057f4b2e1b4f18bd"><div class="ttname"><a href="/documentation/api/struct-solution-vector/">SolutionVector::magnitude</a></div><div class="ttdeci">fixed_t magnitude</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:78</a></div></div>
+</div>
+</div>
+</div>
+<a id="ab1cdbcbf712ecb48726c1bb1aa03f2a9" name="ab1cdbcbf712ecb48726c1bb1aa03f2a9"></a>
+<h2 class="memtitle">configureWireframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">virtual void Collider::configureWireframe </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configure the wireframe used to show the collider. </p>
+
+<p>Implemented in <a class="el" href="/documentation/api/class-ball/">Ball</a>, <a class="el" href="/documentation/api/class-box/">Box</a>, and <a class="el" href="/documentation/api/class-line-field/">LineField</a>.</p>
+
+</div>
+</div>
+<a id="ac548a82a926cfaf623396e55bce032a6" name="ac548a82a926cfaf623396e55bce032a6"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>colliderSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class' constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">46</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   49</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, (<span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/-component-8h/">ComponentSpec</a>*)&amp;colliderSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-collider-spec/">componentSpec</a>);</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment">// Not setup yet</span></div>
+<div class="line"><span class="lineno">   52</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   53</span>    this-&gt;<a class="code hl_variable" href="#a11223e6c48173abf89f353d3fc256f59">enabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment">// Set flag</span></div>
+<div class="line"><span class="lineno">   58</span>    this-&gt;<a class="code hl_variable" href="#a946c1f2c55e29da882a88a5b82a17731">checkForCollisions</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   59</span>    this-&gt;<a class="code hl_variable" href="#a78772d53fc7b082419ccfcc2a0509e2d">layers</a> = colliderSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-collider-spec/">layers</a>;</div>
+<div class="line"><span class="lineno">   60</span>    this-&gt;<a class="code hl_variable" href="#aa59fe6197674d817278e13ba220365f3">layersToIgnore</a> = colliderSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-collider-spec/">layersToIgnore</a>;</div>
+<div class="line"><span class="lineno">   61</span>    this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   62</span>    this-&gt;<a class="code hl_variable" href="#a00440e32dc4014c85b3572b67a368e91">registerCollisions</a> = colliderSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-collider-spec/">checkForCollisions</a>;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    this-&gt;<a class="code hl_variable" href="#a0118d492500f883fd4c9919e1284ed19">position</a> = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::sum</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">transformation</a>-&gt;position, <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getFromPixelVector</a>(colliderSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-collider-spec/">displacement</a>));</div>
+<div class="line"><span class="lineno">   65</span>    this-&gt;<a class="code hl_variable" href="#aaf7d8c65d76f08b4dfa8ae9b34a5a239">invalidPosition</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   66</span>}</div>
+<div class="ttc" id="a_component_8h_html_aba34f00fb543cbec11504c4c4fa7e680"><div class="ttname"><a href="/documentation/api/-component-8h/">ComponentSpec</a></div><div class="ttdeci">struct ComponentSpec ComponentSpec</div></div>
+<div class="ttc" id="aclass_collider_html_a0118d492500f883fd4c9919e1284ed19"><div class="ttname"><a href="#a0118d492500f883fd4c9919e1284ed19">Collider::position</a></div><div class="ttdeci">Vector3D position</div><div class="ttdoc">Displaced position.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:185</a></div></div>
+<div class="ttc" id="aclass_collider_html_a11223e6c48173abf89f353d3fc256f59"><div class="ttname"><a href="#a11223e6c48173abf89f353d3fc256f59">Collider::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdoc">If false, it is ignored in all callision checks.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:200</a></div></div>
+<div class="ttc" id="aclass_collider_html_a78772d53fc7b082419ccfcc2a0509e2d"><div class="ttname"><a href="#a78772d53fc7b082419ccfcc2a0509e2d">Collider::layers</a></div><div class="ttdeci">uint32 layers</div><div class="ttdoc">Layers on which this collider live.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:191</a></div></div>
+<div class="ttc" id="aclass_collider_html_aa59fe6197674d817278e13ba220365f3"><div class="ttname"><a href="#aa59fe6197674d817278e13ba220365f3">Collider::layersToIgnore</a></div><div class="ttdeci">uint32 layersToIgnore</div><div class="ttdoc">Layers to ignore when checking for collisions.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:194</a></div></div>
+<div class="ttc" id="aclass_collider_html_aaf7d8c65d76f08b4dfa8ae9b34a5a239"><div class="ttname"><a href="#aaf7d8c65d76f08b4dfa8ae9b34a5a239">Collider::invalidPosition</a></div><div class="ttdeci">bool invalidPosition</div><div class="ttdoc">Flag to force the computation of the collider&#39;s position.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:212</a></div></div>
+<div class="ttc" id="aclass_collider_html_af7c8e9085485a2ed45d355b13369b00b"><div class="ttname"><a href="#af7c8e9085485a2ed45d355b13369b00b">Collider::wireframe</a></div><div class="ttdeci">Wireframe wireframe</div><div class="ttdoc">Wireframe to make the collider visible (mainly for debugging purposes)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:197</a></div></div>
+<div class="ttc" id="aclass_component_html_a079d309fbac2b3b2a6be4f7096da3955"><div class="ttname"><a href="/documentation/api/class-component/">Component::transformation</a></div><div class="ttdeci">const Transformation * transformation</div><div class="ttdoc">Pointer to the transformation that the component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:87</a></div></div>
+<div class="ttc" id="aclass_component_html_a6635da6105aa4fdf6905707468eb5905"><div class="ttname"><a href="/documentation/api/class-component/">Component::deleteMe</a></div><div class="ttdeci">bool deleteMe</div><div class="ttdoc">Flag to mark the component as pending deletion.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:90</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html_a3bbd031e07152168b27e6c5f6cff42f4"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec::layersToIgnore</a></div><div class="ttdeci">uint32 layersToIgnore</div><div class="ttdoc">Layers to ignore when checking for collisions.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:163</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html_a84d513dce2cd211fde95ee180bbee2de"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec::componentSpec</a></div><div class="ttdeci">ComponentSpec componentSpec</div><div class="ttdoc">Component spec.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:142</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html_a871359cc29499dd079a648cea8e32a6f"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec::displacement</a></div><div class="ttdeci">PixelVector displacement</div><div class="ttdoc">Displacement modifier.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:148</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html_aac8413e099063300df448236ab8a12e7"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec::checkForCollisions</a></div><div class="ttdeci">bool checkForCollisions</div><div class="ttdoc">If true this collider checks for collisions against other colliders.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:157</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html_aeae142a096d311460ba9ea757bfddd43"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec::layers</a></div><div class="ttdeci">uint32 layers</div><div class="ttdoc">Layers in which I live.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:160</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a2650ee936687439ed499d1625d065b2e"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::sum</a></div><div class="ttdeci">static Vector3D sum(Vector3D a, Vector3D b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:302</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a703f894eab6f37ec6aba29ede41963e3"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::getFromPixelVector</a></div><div class="ttdeci">static Vector3D getFromPixelVector(PixelVector pixelVector)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:650</a></div></div>
+</div>
+</div>
+</div>
+<a id="afc38e30271187b1b58898ca2120f112d" name="afc38e30271187b1b58898ca2120f112d"></a>
+<h2 class="memtitle">disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::disable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable the collider for collision checks. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">198</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>{</div>
+<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a11223e6c48173abf89f353d3fc256f59">enabled</a>)</div>
+<div class="line"><span class="lineno">  201</span>    {</div>
+<div class="line"><span class="lineno">  202</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">Collider::fireEvent</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventColliderChanged</a>);</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+<div class="line"><span class="lineno">  204</span>    </div>
+<div class="line"><span class="lineno">  205</span>    this-&gt;<a class="code hl_variable" href="#a11223e6c48173abf89f353d3fc256f59">enabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  206</span>}</div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a6db1ef1ee8e90ee99e4d9570942f329e"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventColliderChanged</a></div><div class="ttdeci">@ kEventColliderChanged</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:32</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa7bddc5d7ebb22d3d3cd7537786c4b27"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::fireEvent</a></div><div class="ttdeci">void fireEvent(uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:286</a></div></div>
+</div>
+</div>
+</div>
+<a id="a9273e3c9b4dc2e89f474bd21d87ca708" name="a9273e3c9b4dc2e89f474bd21d87ca708"></a>
+<h2 class="memtitle">discardCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::discardCollisions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Discard any registered collision. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">423</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  424</span>{</div>
+<div class="line"><span class="lineno">  425</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>)</div>
+<div class="line"><span class="lineno">  426</span>    {</div>
+<div class="line"><span class="lineno">  427</span>        <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>-&gt;head;</div>
+<div class="line"><span class="lineno">  428</span> </div>
+<div class="line"><span class="lineno">  429</span>        <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  430</span>        {</div>
+<div class="line"><span class="lineno">  431</span>            <a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>* otherColliderRegistry = (<a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>*)node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><span class="lineno">  432</span> </div>
+<div class="line"><span class="lineno">  433</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(otherColliderRegistry), <span class="stringliteral">&quot;Collider::reset: dead otherColliderRegistry&quot;</span>);</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(otherColliderRegistry-&gt;collider))</div>
+<div class="line"><span class="lineno">  436</span>            {</div>
+<div class="line"><span class="lineno">  437</span>                <a class="code hl_function" href="/documentation/api/class-listener-object/">Collider::removeEventListener</a></div>
+<div class="line"><span class="lineno">  438</span>                (</div>
+<div class="line"><span class="lineno">  439</span>                    otherColliderRegistry-&gt;collider, ListenerObject::safeCast(<span class="keyword">this</span>), (<a class="code hl_typedef" href="/documentation/api/class-listener-object/">EventListener</a>)Collider::onOtherColliderChanged, </div>
+<div class="line"><span class="lineno">  440</span>                    <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventColliderDeleted</a></div>
+<div class="line"><span class="lineno">  441</span>                );</div>
+<div class="line"><span class="lineno">  442</span>                </div>
+<div class="line"><span class="lineno">  443</span>                <a class="code hl_function" href="/documentation/api/class-listener-object/">Collider::removeEventListener</a></div>
+<div class="line"><span class="lineno">  444</span>                (</div>
+<div class="line"><span class="lineno">  445</span>                    otherColliderRegistry-&gt;collider, ListenerObject::safeCast(<span class="keyword">this</span>), (<a class="code hl_typedef" href="/documentation/api/class-listener-object/">EventListener</a>)Collider::onOtherColliderChanged, </div>
+<div class="line"><span class="lineno">  446</span>                    <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventColliderChanged</a></div>
+<div class="line"><span class="lineno">  447</span>                );</div>
+<div class="line"><span class="lineno">  448</span>            }</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>            <span class="keyword">delete</span> otherColliderRegistry;</div>
+<div class="line"><span class="lineno">  451</span>        }</div>
+<div class="line"><span class="lineno">  452</span> </div>
+<div class="line"><span class="lineno">  453</span>        <span class="keyword">delete</span> this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>;</div>
+<div class="line"><span class="lineno">  454</span>        this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  455</span>    }</div>
+<div class="line"><span class="lineno">  456</span>}</div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a57fed25e8a4e322c6e1809eb003a4179"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventColliderDeleted</a></div><div class="ttdeci">@ kEventColliderDeleted</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:31</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_a2a08be5bc263fa301ef555d27eb62fb3"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::EventListener</a></div><div class="ttdeci">bool(* EventListener)(ListenerObject, ListenerObject)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:32</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_ace4fdcff88c182d1a52be1f479f77ca5"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::removeEventListener</a></div><div class="ttdeci">void removeEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:100</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a2dd261ee8563057540d7f5ca6edf5654"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::data</a></div><div class="ttdeci">void * data</div><div class="ttdoc">Pointer to the data.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:39</a></div></div>
+</div>
+</div>
+</div>
+<a id="a9d460f03e9fcaf210a835d3ad38679b9" name="a9d460f03e9fcaf210a835d3ad38679b9"></a>
+<h2 class="memtitle">enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::enable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable the collider for collision checks. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">186</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>{</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#a11223e6c48173abf89f353d3fc256f59">enabled</a>)</div>
+<div class="line"><span class="lineno">  189</span>    {</div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">Collider::fireEvent</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventColliderChanged</a>);</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="line"><span class="lineno">  192</span>    </div>
+<div class="line"><span class="lineno">  193</span>    this-&gt;<a class="code hl_variable" href="#a11223e6c48173abf89f353d3fc256f59">enabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  194</span>}</div>
+</div>
+</div>
+</div>
+<a id="a8451d024bae7255fb8148a32249f1ddb" name="a8451d024bae7255fb8148a32249f1ddb"></a>
+<h2 class="memtitle">getCollidingFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a> Collider::getCollidingFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the total friction of colliding colliders. </p><dl class="section return"><dt>Returns</dt><dd>The sum of friction coefficients of the colliders colliding's owners </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">460</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  461</span>{</div>
+<div class="line"><span class="lineno">  462</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>)</div>
+<div class="line"><span class="lineno">  463</span>    {</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  465</span>    }</div>
+<div class="line"><span class="lineno">  466</span> </div>
+<div class="line"><span class="lineno">  467</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> totalFrictionCoefficient = 0;</div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>-&gt;head;</div>
+<div class="line"><span class="lineno">  470</span> </div>
+<div class="line"><span class="lineno">  471</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  472</span>    {</div>
+<div class="line"><span class="lineno">  473</span>        <a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>* otherColliderRegistry = (<a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>*)node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
+<div class="line"><span class="lineno">  474</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(otherColliderRegistry), <span class="stringliteral">&quot;Collider::getCollidingFriction: dead otherColliderRegistry&quot;</span>);</div>
+<div class="line"><span class="lineno">  475</span> </div>
+<div class="line"><span class="lineno">  476</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(otherColliderRegistry-&gt;collider, <span class="stringliteral">&quot;Collider::getCollidingFriction: null otherCollider&quot;</span>);</div>
+<div class="line"><span class="lineno">  477</span> </div>
+<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(otherColliderRegistry-&gt;collider-&gt;owner))</div>
+<div class="line"><span class="lineno">  479</span>        {</div>
+<div class="line"><span class="lineno">  480</span>            totalFrictionCoefficient += otherColliderRegistry-&gt;frictionCoefficient;</div>
+<div class="line"><span class="lineno">  481</span>        }</div>
+<div class="line"><span class="lineno">  482</span>    }</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>    <span class="keywordflow">return</span> totalFrictionCoefficient;</div>
+<div class="line"><span class="lineno">  485</span>}</div>
+</div>
+</div>
+</div>
+<a id="ab5f5c72ae3df1608cc17e49d248bbe71" name="ab5f5c72ae3df1608cc17e49d248bbe71"></a>
+<h2 class="memtitle">getLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> Collider::getLayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the layers in which this collider lives. </p><dl class="section return"><dt>Returns</dt><dd>Layers in which the collider must live </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">217</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>{</div>
+<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a78772d53fc7b082419ccfcc2a0509e2d">layers</a>;</div>
+<div class="line"><span class="lineno">  220</span>}</div>
+</div>
+</div>
+</div>
+<a id="a6e3f34e1ae362430c50c0494948ed136" name="a6e3f34e1ae362430c50c0494948ed136"></a>
+<h2 class="memtitle">getLayersToIgnore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> Collider::getLayersToIgnore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the layers in which live colliders to ignore when testing collisions. </p><dl class="section return"><dt>Returns</dt><dd>Layers to ignore when checking collisions </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">231</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>{</div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#aa59fe6197674d817278e13ba220365f3">layersToIgnore</a>;</div>
+<div class="line"><span class="lineno">  234</span>}</div>
+</div>
+</div>
+</div>
+<a id="a64b9f4bbcebe13931a5edc95c98cb9ae" name="a64b9f4bbcebe13931a5edc95c98cb9ae"></a>
+<h2 class="memtitle">getNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Collider::getNormal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the normal to the collider. </p><dl class="section return"><dt>Returns</dt><dd>Normal to the collider </dd></dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-line-field/">LineField</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">524</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  525</span>{</div>
+<div class="line"><span class="lineno">  526</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::zero</a>();</div>
+<div class="line"><span class="lineno">  527</span>}</div>
+<div class="ttc" id="astruct_vector3_d_html_adbef144dc47aa8b420dbd81990632888"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::zero</a></div><div class="ttdeci">static Vector3D zero()</div></div>
+</div>
+</div>
+</div>
+<a id="ae95ac8a217edda6210c9331e1e68c7f6" name="ae95ac8a217edda6210c9331e1e68c7f6"></a>
+<h2 class="memtitle">handleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::handleCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle a command. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">command</td><td>Command to handle </td></tr>
+    <tr><td class="paramname">args</td><td>Variable arguments list depending on the command to handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-component/">Component</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">138</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">switch</span>(command)</div>
+<div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">cComponentCommandReset</a>:</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_function" href="#a9273e3c9b4dc2e89f474bd21d87ca708">Collider::discardCollisions</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  146</span>            </div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">cColliderComponentCommandShow</a>:</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>            <a class="code hl_function" href="#a9e4e0c27de7dd700a84f470dcfb6d774">Collider::show</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">cColliderComponentCommandHide</a>:</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>            <a class="code hl_function" href="#a01a0bb18fb69c75fa71e929dfa385c0d">Collider::hide</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">cColliderComponentCommandCheckCollisions</a>:</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>            <a class="code hl_function" href="#a190c1b3e21dfc4a4860fb3c253938f2a">Collider::checkCollisions</a>(<span class="keyword">this</span>, (<span class="keywordtype">bool</span>)va_arg(args, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>));</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">cColliderComponentCommandRegisterCollisions</a>:</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="#a00440e32dc4014c85b3572b67a368e91">Collider::registerCollisions</a>(<span class="keyword">this</span>, (<span class="keywordtype">bool</span>)va_arg(args, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>));</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">cColliderComponentCommandSetLayers</a>:</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_function" href="#a0d7ed508ddc7050c7e52d5f6f73d1305">Collider::setLayers</a>(<span class="keyword">this</span>, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)va_arg(args, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>));</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-collider-8h/">cColliderComponentCommandSetLayersToIgnore</a>:</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>            <a class="code hl_function" href="#a01cbe20dbc711a5baaadbd66d958692c">Collider::setLayersToIgnore</a>(<span class="keyword">this</span>, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)va_arg(args, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>));</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>            Base::handleCommand(<span class="keyword">this</span>, command, args);</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="line"><span class="lineno">  182</span>}</div>
+<div class="ttc" id="a_collider_8h_html_ac7e64c11ee4a8302439bcbf861bbce94a04a95d664469b293ac324d509d4a2a8a"><div class="ttname"><a href="/documentation/api/-collider-8h/">cColliderComponentCommandSetLayersToIgnore</a></div><div class="ttdeci">@ cColliderComponentCommandSetLayersToIgnore</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:46</a></div></div>
+<div class="ttc" id="a_collider_8h_html_ac7e64c11ee4a8302439bcbf861bbce94a0e6a01cefeb519ddfa1e3f33b774e6fa"><div class="ttname"><a href="/documentation/api/-collider-8h/">cColliderComponentCommandShow</a></div><div class="ttdeci">@ cColliderComponentCommandShow</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:41</a></div></div>
+<div class="ttc" id="a_collider_8h_html_ac7e64c11ee4a8302439bcbf861bbce94a5b65e6fc05aeac0b12b6e1c6df3010c9"><div class="ttname"><a href="/documentation/api/-collider-8h/">cColliderComponentCommandSetLayers</a></div><div class="ttdeci">@ cColliderComponentCommandSetLayers</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:45</a></div></div>
+<div class="ttc" id="a_collider_8h_html_ac7e64c11ee4a8302439bcbf861bbce94a716a154809454db037f050b24681412f"><div class="ttname"><a href="/documentation/api/-collider-8h/">cColliderComponentCommandCheckCollisions</a></div><div class="ttdeci">@ cColliderComponentCommandCheckCollisions</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:43</a></div></div>
+<div class="ttc" id="a_collider_8h_html_ac7e64c11ee4a8302439bcbf861bbce94a7e562534bf155e987381fa5afec9c2f5"><div class="ttname"><a href="/documentation/api/-collider-8h/">cColliderComponentCommandRegisterCollisions</a></div><div class="ttdeci">@ cColliderComponentCommandRegisterCollisions</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:44</a></div></div>
+<div class="ttc" id="a_collider_8h_html_ac7e64c11ee4a8302439bcbf861bbce94ab2567bc1d6be8ff61ceb109372aadc2e"><div class="ttname"><a href="/documentation/api/-collider-8h/">cColliderComponentCommandHide</a></div><div class="ttdeci">@ cColliderComponentCommandHide</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:42</a></div></div>
+<div class="ttc" id="a_component_8h_html_a2d8ff7e1dfee445759b589fad8c4bc52"><div class="ttname"><a href="/documentation/api/-component-8h/">cComponentCommandReset</a></div><div class="ttdeci">@ cComponentCommandReset</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:37</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="aclass_collider_html_a01a0bb18fb69c75fa71e929dfa385c0d"><div class="ttname"><a href="#a01a0bb18fb69c75fa71e929dfa385c0d">Collider::hide</a></div><div class="ttdeci">void hide()</div><div class="ttdoc">Hide the collider.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:506</a></div></div>
+<div class="ttc" id="aclass_collider_html_a01cbe20dbc711a5baaadbd66d958692c"><div class="ttname"><a href="#a01cbe20dbc711a5baaadbd66d958692c">Collider::setLayersToIgnore</a></div><div class="ttdeci">void setLayersToIgnore(uint32 layersToIgnore)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:224</a></div></div>
+<div class="ttc" id="aclass_collider_html_a0d7ed508ddc7050c7e52d5f6f73d1305"><div class="ttname"><a href="#a0d7ed508ddc7050c7e52d5f6f73d1305">Collider::setLayers</a></div><div class="ttdeci">void setLayers(uint32 layers)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:210</a></div></div>
+<div class="ttc" id="aclass_collider_html_a9273e3c9b4dc2e89f474bd21d87ca708"><div class="ttname"><a href="#a9273e3c9b4dc2e89f474bd21d87ca708">Collider::discardCollisions</a></div><div class="ttdeci">void discardCollisions()</div><div class="ttdoc">Discard any registered collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:423</a></div></div>
+<div class="ttc" id="aclass_collider_html_a9e4e0c27de7dd700a84f470dcfb6d774"><div class="ttname"><a href="#a9e4e0c27de7dd700a84f470dcfb6d774">Collider::show</a></div><div class="ttdeci">void show()</div><div class="ttdoc">Show the collider.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8c-source/">Collider.c:489</a></div></div>
+</div>
+</div>
+</div>
+<a id="addc8ed5e9582775300ecdb84a2a600c3" name="addc8ed5e9582775300ecdb84a2a600c3"></a>
+<h2 class="memtitle">handleMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> Collider::handleMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-telegram/">Telegram</a></td>          <td class="paramname"><span class="paramname"><em>telegram</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process a <a class="el" href="/documentation/api/class-telegram/">Telegram</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">telegram</td><td><a class="el" href="/documentation/api/class-telegram/">Telegram</a> to process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="/documentation/api/class-telegram/">Telegram</a> was processed </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">118</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>{</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">switch</span>(<a class="code hl_function" href="/documentation/api/class-telegram/">Telegram::getMessage</a>(telegram))</div>
+<div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageColliderShow</a>:</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>            <a class="code hl_function" href="#a9e4e0c27de7dd700a84f470dcfb6d774">Collider::show</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageColliderHide</a>:</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="#a01a0bb18fb69c75fa71e929dfa385c0d">Collider::hide</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878a3ce87e518f5ec4479f6e863a3bf605db"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageColliderShow</a></div><div class="ttdeci">@ kMessageColliderShow</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:48</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878afac0bea2508558d4ceec1abe2d356e6c"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageColliderHide</a></div><div class="ttdeci">@ kMessageColliderHide</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:49</a></div></div>
+<div class="ttc" id="aclass_telegram_html_a3ccd8f44ef33c7fdd6a8cd488a509a8e"><div class="ttname"><a href="/documentation/api/class-telegram/">Telegram::getMessage</a></div><div class="ttdeci">int32 getMessage()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-telegram-8c-source/">Telegram.c:64</a></div></div>
+</div>
+</div>
+</div>
+<a id="a01a0bb18fb69c75fa71e929dfa385c0d" name="a01a0bb18fb69c75fa71e929dfa385c0d"></a>
+<h2 class="memtitle">hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::hide </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hide the collider. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">506</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  507</span>{</div>
+<div class="line"><span class="lineno">  508</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>))</div>
+<div class="line"><span class="lineno">  509</span>    {</div>
+<div class="line"><span class="lineno">  510</span>        <a class="code hl_function" href="/documentation/api/class-wireframe-manager/">WireframeManager::unregisterWireframe</a>(this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>);</div>
+<div class="line"><span class="lineno">  511</span> </div>
+<div class="line"><span class="lineno">  512</span>        <span class="keyword">delete</span> this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>;</div>
+<div class="line"><span class="lineno">  513</span>        this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  514</span>    }</div>
+<div class="line"><span class="lineno">  515</span>}</div>
+<div class="ttc" id="aclass_wireframe_manager_html_a05355a396da464d1631c78f9c6af6c3a"><div class="ttname"><a href="/documentation/api/class-wireframe-manager/">WireframeManager::unregisterWireframe</a></div><div class="ttdeci">static bool unregisterWireframe(Wireframe wireframe)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-manager-8c-source/">WireframeManager.c:251</a></div></div>
+</div>
+</div>
+</div>
+<a id="a24ac61385beadb3e7fe8675f918641a2" name="a24ac61385beadb3e7fe8675f918641a2"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print collider's state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-ball/">Ball</a>, <a class="el" href="/documentation/api/class-box/">Box</a>, and <a class="el" href="/documentation/api/class-line-field/">LineField</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">532</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  533</span>{</div>
+<div class="line"><span class="lineno">  534</span>    Printing::text(<span class="stringliteral">&quot;SHAPE &quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  535</span>    Printing::text(<span class="stringliteral">&quot;Owner:            &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  536</span>    Printing::text(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a> ? <a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>) : <span class="stringliteral">&quot;No owner&quot;</span>, x + 7, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  537</span>    Printing::hex((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, x + 7, y++, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>    Printing::text(<span class="stringliteral">&quot;Colliding colliders:            &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  540</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a> ? <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::getCount</a>(this-&gt;<a class="code hl_variable" href="#ac9c942d35dd8aa4db4209478b3f7f803">otherColliders</a>) : 0, x + 21, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  541</span>    Printing::text(<span class="stringliteral">&quot;Impenetrable colliders:            &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  542</span>    Printing::int32(Collider::getNumberOfImpenetrableOtherColliders(<span class="keyword">this</span>), x + 21, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  543</span>}</div>
+<div class="ttc" id="a_oop_8h_html_a461079f1d9f6a4903103f18ae3eb0da4"><div class="ttname"><a href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a></div><div class="ttdeci">#define __GET_CLASS_NAME(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:535</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_aeff94be006312783be69b6e77a41ae2b"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getCount</a></div><div class="ttdeci">int32 getCount()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:197</a></div></div>
+</div>
+</div>
+</div>
+<a id="a646aec0bdda5a94a0642a5ee280e7943" name="a646aec0bdda5a94a0642a5ee280e7943"></a>
+<h2 class="memtitle">registerCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::registerCollisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>registerCollisions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Keep track of colliding colliders to detect when collisions exit. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">registerCollisions</td><td>If true, colliding colliders are registered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebbe95a8c2872f85cb3a1aa82d92500a" name="aebbe95a8c2872f85cb3a1aa82d92500a"></a>
+<h2 class="memtitle">resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>sizeDelta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resize the colliders add the provided increment. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">sizeDelta</td><td>Delta to add to the collider's size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-ball/">Ball</a>, and <a class="el" href="/documentation/api/class-box/">Box</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">519</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  520</span>{}</div>
+</div>
+</div>
+</div>
+<a id="aa869bd3e5c35f8a8308c16b6e27903a4" name="aa869bd3e5c35f8a8308c16b6e27903a4"></a>
+<h2 class="memtitle">resolveCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::resolveCollision </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *</td>          <td class="paramname"><span class="paramname"><em>collisionInformation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resolve a collision by moving the owner to a position where the collision ceases. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">collisionInformation</td><td>Information struct about the collision to resolve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">354</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  355</span>{</div>
+<div class="line"><span class="lineno">  356</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a>, <span class="stringliteral">&quot;Collider::resolveCollision: null collider&quot;</span>);</div>
+<div class="line"><span class="lineno">  357</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a>, <span class="stringliteral">&quot;Collider::resolveCollision: null collidingActors&quot;</span>);</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>))</div>
+<div class="line"><span class="lineno">  360</span>    {</div>
+<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  362</span>    }</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>    <a class="code hl_typedef" href="/documentation/api/-collider-8h/">SolutionVector</a> solutionVector = collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">solutionVector</a>;</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>    <span class="keywordflow">if</span>(collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">collider</a> == <span class="keyword">this</span> &amp;&amp; solutionVector.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">magnitude</a>)</div>
+<div class="line"><span class="lineno">  367</span>    {</div>
+<div class="line"><span class="lineno">  368</span>        Collider::displaceOwner(<span class="keyword">this</span>, <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::scalarProduct</a>(solutionVector.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">direction</a>, solutionVector.<a class="code hl_variable" href="/documentation/api/struct-solution-vector/">magnitude</a>));</div>
+<div class="line"><span class="lineno">  369</span> </div>
+<div class="line"><span class="lineno">  370</span>        <span class="comment">// Need to invalidate solution vectors for other colliding colliders</span></div>
+<div class="line"><span class="lineno">  371</span>        <span class="comment">//Collider::checkPreviousCollisions(this, collisionInformation-&gt;otherCollider);</span></div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a00440e32dc4014c85b3572b67a368e91">registerCollisions</a>)</div>
+<div class="line"><span class="lineno">  374</span>        {</div>
+<div class="line"><span class="lineno">  375</span>            <a class="code hl_typedef" href="/documentation/api/-collider-8h/">OtherColliderRegistry</a>* otherColliderRegistry = </div>
+<div class="line"><span class="lineno">  376</span>                Collider::registerOtherCollider</div>
+<div class="line"><span class="lineno">  377</span>                (</div>
+<div class="line"><span class="lineno">  378</span>                    <span class="keyword">this</span>, collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a>, collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">solutionVector</a>, <span class="keyword">true</span></div>
+<div class="line"><span class="lineno">  379</span>                );</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(otherColliderRegistry), <span class="stringliteral">&quot;Collider::resolveCollision: dead otherColliderRegistry&quot;</span>);</div>
+<div class="line"><span class="lineno">  382</span>            otherColliderRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-other-collider-registry/">frictionCoefficient</a> =  <a class="code hl_function" href="/documentation/api/class-entity/">Entity::getFrictionCoefficient</a>(collisionInformation-&gt;<a class="code hl_variable" href="/documentation/api/struct-collision-information/">otherCollider</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>);</div>
+<div class="line"><span class="lineno">  383</span>        }</div>
+<div class="line"><span class="lineno">  384</span>    }</div>
+<div class="line"><span class="lineno">  385</span>}</div>
+<div class="ttc" id="a_collider_8h_html_a0765fa162d100fa1ff3d4e3cbc92d647"><div class="ttname"><a href="/documentation/api/-collider-8h/">SolutionVector</a></div><div class="ttdeci">struct SolutionVector SolutionVector</div></div>
+<div class="ttc" id="aclass_entity_html_af63c24fa234f1d77d5ca5b965432fa4b"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::getFrictionCoefficient</a></div><div class="ttdeci">fixed_t getFrictionCoefficient()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:311</a></div></div>
+<div class="ttc" id="astruct_other_collider_registry_html_a30f2972d041da8cba57eb541eb9fc5dd"><div class="ttname"><a href="/documentation/api/struct-other-collider-registry/">OtherColliderRegistry::frictionCoefficient</a></div><div class="ttdeci">fixed_t frictionCoefficient</div><div class="ttdoc">Friction coeficient of the colliding collider&#39;s owner.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:108</a></div></div>
+<div class="ttc" id="astruct_solution_vector_html_adbe3b373142f27ee98aefff23b4ad38f"><div class="ttname"><a href="/documentation/api/struct-solution-vector/">SolutionVector::direction</a></div><div class="ttdeci">Vector3D direction</div><div class="ttdoc">Direction of vector to solve the collision.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:75</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html_a69069386ecbd50b6f99c3da9f9e06397"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D::scalarProduct</a></div><div class="ttdeci">static Vector3D scalarProduct(Vector3D vector, fixed_t scalar)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-vector3-d-8h-source/">Vector3D.h:412</a></div></div>
+</div>
+</div>
+</div>
+<a id="a0d7ed508ddc7050c7e52d5f6f73d1305" name="a0d7ed508ddc7050c7e52d5f6f73d1305"></a>
+<h2 class="memtitle">setLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::setLayers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>layers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the layers in which this collider lives. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">layers</td><td>Layers in which the collider must live </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">210</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>{</div>
+<div class="line"><span class="lineno">  212</span>    this-&gt;<a class="code hl_variable" href="#a78772d53fc7b082419ccfcc2a0509e2d">layers</a> = <a class="code hl_variable" href="#a78772d53fc7b082419ccfcc2a0509e2d">layers</a>;</div>
+<div class="line"><span class="lineno">  213</span>}</div>
+</div>
+</div>
+</div>
+<a id="a01cbe20dbc711a5baaadbd66d958692c" name="a01cbe20dbc711a5baaadbd66d958692c"></a>
+<h2 class="memtitle">setLayersToIgnore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::setLayersToIgnore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>layersToIgnore</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the layers in which live colliders to ignore when testing collisions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">layersToIgnore</td><td>Layers to ignore when checking collisions </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">224</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>{</div>
+<div class="line"><span class="lineno">  226</span>    this-&gt;<a class="code hl_variable" href="#aa59fe6197674d817278e13ba220365f3">layersToIgnore</a> = <a class="code hl_variable" href="#aa59fe6197674d817278e13ba220365f3">layersToIgnore</a>;</div>
+<div class="line"><span class="lineno">  227</span>}</div>
+</div>
+</div>
+</div>
+<a id="a9e4e0c27de7dd700a84f470dcfb6d774" name="a9e4e0c27de7dd700a84f470dcfb6d774"></a>
+<h2 class="memtitle">show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::show </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the collider. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8c-source/">489</a> of file <a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>{</div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>))</div>
+<div class="line"><span class="lineno">  492</span>    {</div>
+<div class="line"><span class="lineno">  493</span>        <a class="code hl_function" href="#ab1cdbcbf712ecb48726c1bb1aa03f2a9">Collider::configureWireframe</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  494</span> </div>
+<div class="line"><span class="lineno">  495</span>        <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>))</div>
+<div class="line"><span class="lineno">  496</span>        {</div>
+<div class="line"><span class="lineno">  497</span>            <a class="code hl_function" href="/documentation/api/class-wireframe-manager/">WireframeManager::registerWireframe</a>(this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>);</div>
+<div class="line"><span class="lineno">  498</span> </div>
+<div class="line"><span class="lineno">  499</span>            <a class="code hl_variable" href="/documentation/api/class-visual-component/">Wireframe::show</a>(this-&gt;<a class="code hl_variable" href="#af7c8e9085485a2ed45d355b13369b00b">wireframe</a>);</div>
+<div class="line"><span class="lineno">  500</span>        }</div>
+<div class="line"><span class="lineno">  501</span>    }</div>
+<div class="line"><span class="lineno">  502</span>}</div>
+<div class="ttc" id="aclass_collider_html_ab1cdbcbf712ecb48726c1bb1aa03f2a9"><div class="ttname"><a href="#ab1cdbcbf712ecb48726c1bb1aa03f2a9">Collider::configureWireframe</a></div><div class="ttdeci">virtual void configureWireframe()=0</div><div class="ttdoc">Configure the wireframe used to show the collider.</div></div>
+<div class="ttc" id="aclass_visual_component_html_ae666f83fa86525a20e1f120d4d2ee740"><div class="ttname"><a href="/documentation/api/class-visual-component/">VisualComponent::show</a></div><div class="ttdeci">uint8 show</div><div class="ttdoc">Show state flag (__HIDE, __SHOW_NEXT_FRAME, __SHOW)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:96</a></div></div>
+<div class="ttc" id="aclass_wireframe_manager_html_ac2289bd27ff21d50bbc5450f967f3b11"><div class="ttname"><a href="/documentation/api/class-wireframe-manager/">WireframeManager::registerWireframe</a></div><div class="ttdeci">static bool registerWireframe(Wireframe wireframe)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-manager-8c-source/">WireframeManager.c:226</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a946c1f2c55e29da882a88a5b82a17731" name="a946c1f2c55e29da882a88a5b82a17731"></a>
+<h2 class="memtitle">checkForCollisions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> Collider::checkForCollisions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If false, it doesn't check collision against other colliders. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">203</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="ad8ed2f7368675f6dbde1b491193981de" name="ad8ed2f7368675f6dbde1b491193981de"></a>
+<h2 class="memtitle">classIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> Collider::classIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class index to avoid using __GET_CAST when checking for collisions. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">209</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="a11223e6c48173abf89f353d3fc256f59" name="a11223e6c48173abf89f353d3fc256f59"></a>
+<h2 class="memtitle">enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> Collider::enabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If false, it is ignored in all callision checks. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">200</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="aaf7d8c65d76f08b4dfa8ae9b34a5a239" name="aaf7d8c65d76f08b4dfa8ae9b34a5a239"></a>
+<h2 class="memtitle">invalidPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> Collider::invalidPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to force the computation of the collider's position. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">212</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="a78772d53fc7b082419ccfcc2a0509e2d" name="a78772d53fc7b082419ccfcc2a0509e2d"></a>
+<h2 class="memtitle">layers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> Collider::layers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Layers on which this collider live. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">191</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="aa59fe6197674d817278e13ba220365f3" name="aa59fe6197674d817278e13ba220365f3"></a>
+<h2 class="memtitle">layersToIgnore</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> Collider::layersToIgnore</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Layers to ignore when checking for collisions. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">194</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="ac9c942d35dd8aa4db4209478b3f7f803" name="ac9c942d35dd8aa4db4209478b3f7f803"></a>
+<h2 class="memtitle">otherColliders</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> Collider::otherColliders</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of colliding colliders. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">188</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="a0118d492500f883fd4c9919e1284ed19" name="a0118d492500f883fd4c9919e1284ed19"></a>
+<h2 class="memtitle">position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> Collider::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displaced position. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">185</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="a00440e32dc4014c85b3572b67a368e91" name="a00440e32dc4014c85b3572b67a368e91"></a>
+<h2 class="memtitle">registerCollisions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Collider::registerCollisions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, it registers other colliders when a collision arises. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">206</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<a id="af7c8e9085485a2ed45d355b13369b00b" name="af7c8e9085485a2ed45d355b13369b00b"></a>
+<h2 class="memtitle">wireframe</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-wireframe/">Wireframe</a> Collider::wireframe</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-wireframe/">Wireframe</a> to make the collider visible (mainly for debugging purposes) </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-collider-8h-source/">197</a> of file <a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Physics/Collision/Collider/<a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a></li>
+<li>VUEngine-Core/source/Component/Physics/Collision/Collider/<a class="el" href="/documentation/api/-collider-8c-source/">Collider.c</a></li>
+</ul>
+</div>
+
+
+</div>

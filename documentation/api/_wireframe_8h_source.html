@@ -1,0 +1,149 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Wireframe.h"
+permalink: documentation/api/-wireframe-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-0b43cc111c2db98ba5ab6fee48cac891/">Graphics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-9b5dc6d6c84e647549e3384c96f43374/">3d</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Wireframe.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-wireframe-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef WIREFRAME_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define WIREFRAME_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-visual-component-8h/">VisualComponent.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// FORWARD DECLARATIONS</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-virtual-list/">VirtualList</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// CLASS&#39; MACROS</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="/documentation/api/-wireframe-8h/">   29</a></span><span class="preprocessor">#define __WIREFRAME_MAXIMUM_SQUARE_DISTANCE_TO_CAMERA                           __FIXED_EXT_INFINITY</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// CLASS&#39; DATA</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="/documentation/api/struct-wireframe-spec/">   37</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="/documentation/api/struct-wireframe-spec/">   40</a></span>    VisualComponentSpec <a class="code hl_variable" href="/documentation/api/struct-wireframe-spec/">visualComponentSpec</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="/documentation/api/struct-wireframe-spec/">   43</a></span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_variable" href="/documentation/api/struct-wireframe-spec/">displacement</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="/documentation/api/struct-wireframe-spec/">   46</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/struct-wireframe-spec/">color</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="/documentation/api/struct-wireframe-spec/">   50</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/struct-wireframe-spec/">transparency</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="/documentation/api/struct-wireframe-spec/">   53</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/struct-wireframe-spec/">interlaced</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="/documentation/api/-wireframe-8h/">   55</a></span>} <a class="code hl_struct" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a>;</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   59</a></span><span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a> <a class="code hl_typedef" href="/documentation/api/class-wireframe/">WireframeROMSpec</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   70</a></span>abstract <span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-wireframe/">Wireframe</a> : <a class="code hl_class" href="/documentation/api/class-visual-component/">VisualComponent</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   73</a></span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_variable" href="/documentation/api/class-wireframe/">displacement</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   76</a></span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> <a class="code hl_variable" href="/documentation/api/class-wireframe/">squaredDistanceToCamera</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   79</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/class-wireframe/">drawn</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   82</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/class-wireframe/">interlaced</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   85</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/class-wireframe/">color</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">   88</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/class-wireframe/">bufferIndex</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">constructor</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> <a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a>* wireframeSpec);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-wireframe/">setDisplacement</a>(<a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_variable" href="/documentation/api/class-wireframe/">displacement</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-wireframe/">isVisible</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-wireframe/">prepareForRender</a>(<a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a>* relativePosition);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="code hl_function" href="/documentation/api/class-wireframe/">getVertices</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-wireframe/">render</a>(<a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> relativePosition);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="/documentation/api/class-wireframe/">  119</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-wireframe/">draw</a>() = 0;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_types_8h_html_a3b5675e00af046980df12ddb73b0aaca"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_ext_t</a></div><div class="ttdeci">#define fixed_ext_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:47</a></div></div>
+<div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
+<div class="ttc" id="a_visual_component_8h_html"><div class="ttname"><a href="/documentation/api/-visual-component-8h/">VisualComponent.h</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aff6e0d9a0ef892fc651d033a590bee8d"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:37</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:30</a></div></div>
+<div class="ttc" id="aclass_visual_component_html"><div class="ttname"><a href="/documentation/api/class-visual-component/">VisualComponent</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:86</a></div></div>
+<div class="ttc" id="aclass_wireframe_html"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe</a></div><div class="ttdef"><b>Definition</b> <a href="#l00070">Wireframe.h:71</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a1024ff27393813c4f0622d1355921608"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::prepareForRender</a></div><div class="ttdeci">bool prepareForRender(Vector3D *relativePosition)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8c-source/">Wireframe.c:87</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a21b00018462ec2977eb1ae20e7da847b"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::isVisible</a></div><div class="ttdeci">bool isVisible()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8c-source/">Wireframe.c:80</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a25095825727df57e3cf3995cbb34b5c4"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::WireframeROMSpec</a></div><div class="ttdeci">const WireframeSpec WireframeROMSpec</div><div class="ttdef"><b>Definition</b> <a href="#l00059">Wireframe.h:59</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a2f54e5e55c33867d9dc44d6e91da5452"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::drawn</a></div><div class="ttdeci">bool drawn</div><div class="ttdoc">Flag that indicates that the wireframe has been drawn.</div><div class="ttdef"><b>Definition</b> <a href="#l00079">Wireframe.h:79</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a4e9d1cd02cf27ca7c63429c2736b7c57"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::interlaced</a></div><div class="ttdeci">bool interlaced</div><div class="ttdoc">Flag to render the wireframe in interlaced mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00082">Wireframe.h:82</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_a6e3040ed7ac3cc5dbbdb98a6bc8afcdd"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::render</a></div><div class="ttdeci">virtual void render(Vector3D relativePosition)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8c-source/">Wireframe.c:202</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ab0ce66b05b34a0545318b1bfa4ed3538"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::squaredDistanceToCamera</a></div><div class="ttdeci">fixed_ext_t squaredDistanceToCamera</div><div class="ttdoc">Wireframe&#39;s squared distance to the camera&#39;s position.</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Wireframe.h:76</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ab239f265f38d595cc5b2781c715a4869"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::setDisplacement</a></div><div class="ttdeci">void setDisplacement(Vector3D displacement)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8c-source/">Wireframe.c:73</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ac5113268aee4f6b9a3d9326aeac02edb"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::getVertices</a></div><div class="ttdeci">virtual VirtualList getVertices()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-wireframe-8c-source/">Wireframe.c:195</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ac83380272ca6e85964a139dfb1547c2e"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::bufferIndex</a></div><div class="ttdeci">uint8 bufferIndex</div><div class="ttdoc">Index of the last frame buffer used in interlaced mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00088">Wireframe.h:88</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ad424641cff1511c9c156cd3ede3d04e9"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::color</a></div><div class="ttdeci">uint8 color</div><div class="ttdoc">Color for the wireframe.</div><div class="ttdef"><b>Definition</b> <a href="#l00085">Wireframe.h:85</a></div></div>
+<div class="ttc" id="aclass_wireframe_html_ad581bff8f6197c9d5ed4b8994a5752bd"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::draw</a></div><div class="ttdeci">virtual bool draw()=0</div></div>
+<div class="ttc" id="aclass_wireframe_html_aecdd021bc2036f2b1d6158137e1a4cc6"><div class="ttname"><a href="/documentation/api/class-wireframe/">Wireframe::displacement</a></div><div class="ttdeci">Vector3D displacement</div><div class="ttdoc">Displacement relative to the owner&#39;s spatial position.</div><div class="ttdef"><b>Definition</b> <a href="#l00073">Wireframe.h:73</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:99</a></div></div>
+<div class="ttc" id="astruct_wireframe_spec_html"><div class="ttname"><a href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a></div><div class="ttdef"><b>Definition</b> <a href="#l00037">Wireframe.h:38</a></div></div>
+<div class="ttc" id="astruct_wireframe_spec_html_a1369a35a23b7e6cf602c9f952b3feb07"><div class="ttname"><a href="/documentation/api/struct-wireframe-spec/">WireframeSpec::color</a></div><div class="ttdeci">uint8 color</div><div class="ttdoc">Color for the wireframe.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Wireframe.h:46</a></div></div>
+<div class="ttc" id="astruct_wireframe_spec_html_a5f1205de947ac42f75ede52421c00297"><div class="ttname"><a href="/documentation/api/struct-wireframe-spec/">WireframeSpec::transparency</a></div><div class="ttdeci">uint8 transparency</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Wireframe.h:50</a></div></div>
+<div class="ttc" id="astruct_wireframe_spec_html_a6d3274aabd9b9b46a4b5445670cb1956"><div class="ttname"><a href="/documentation/api/struct-wireframe-spec/">WireframeSpec::displacement</a></div><div class="ttdeci">Vector3D displacement</div><div class="ttdoc">Displacement relative to the owner&#39;s spatial position.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Wireframe.h:43</a></div></div>
+<div class="ttc" id="astruct_wireframe_spec_html_a6ef7b8561046948f443f96b7538a1b00"><div class="ttname"><a href="/documentation/api/struct-wireframe-spec/">WireframeSpec::visualComponentSpec</a></div><div class="ttdeci">VisualComponentSpec visualComponentSpec</div><div class="ttdoc">Component spec.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Wireframe.h:40</a></div></div>
+<div class="ttc" id="astruct_wireframe_spec_html_af0fe28245561e6c7920a2776e016c025"><div class="ttname"><a href="/documentation/api/struct-wireframe-spec/">WireframeSpec::interlaced</a></div><div class="ttdeci">bool interlaced</div><div class="ttdoc">Flag to render the wireframe in interlaced mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Wireframe.h:53</a></div></div>
+</div></div>
+
+
+</div>

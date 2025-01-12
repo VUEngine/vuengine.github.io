@@ -1,0 +1,147 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Clock.h"
+permalink: documentation/api/-clock-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-ecd25ba49ab1d6748517fdc60d2b8bf2/">Time</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">Clock.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-clock-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef CLOCK_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define CLOCK_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-listener-object-8h/">ListenerObject.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// CLASS&#39; DATA</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="/documentation/api/-clock-8h/">   23</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="/documentation/api/-clock-8h/">ClockPrintPrecision</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="/documentation/api/-clock-8h/">   25</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-clock-8h/">kTimePrecision0</a> = 0,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="/documentation/api/-clock-8h/">   26</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-clock-8h/">kTimePrecision1</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="/documentation/api/-clock-8h/">   27</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-clock-8h/">kTimePrecision2</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="/documentation/api/-clock-8h/">   28</a></span>    <a class="code hl_enumvalue" href="/documentation/api/-clock-8h/">kTimePrecision3</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="/documentation/api/class-clock/">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-clock/">Clock</a> : <a class="code hl_class" href="/documentation/api/class-listener-object/">ListenerObject</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="/documentation/api/class-clock/">   45</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="/documentation/api/class-clock/">milliseconds</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="/documentation/api/class-clock/">   48</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="/documentation/api/class-clock/">previousSecond</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="/documentation/api/class-clock/">   51</a></span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="/documentation/api/class-clock/">previousMinute</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="/documentation/api/class-clock/">   54</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="/documentation/api/class-clock/">paused</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">printTime</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="/documentation/api/class-clock/">milliseconds</a>, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y, <span class="keyword">const</span> <span class="keywordtype">char</span>* font, <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> precision);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">printDeciseconds</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> milliSeconds, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y, <span class="keyword">const</span> <span class="keywordtype">char</span>* font);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">printCentiseconds</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> milliSeconds, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y, <span class="keyword">const</span> <span class="keywordtype">char</span>* font);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">printMilliseconds</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> milliSeconds, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y, <span class="keyword">const</span> <span class="keywordtype">char</span>* font);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">constructor</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">destructor</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">start</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">stop</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">pause</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-clock/">pause</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">reset</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/-frame-rate-8h/">update</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> elapsedMilliseconds);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="/documentation/api/class-clock/">isPaused</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_function" href="/documentation/api/class-clock/">getMilliseconds</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_function" href="/documentation/api/class-clock/">getMinutes</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_function" href="/documentation/api/class-clock/">getSeconds</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-clock/">print</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> col, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> row, <span class="keyword">const</span> <span class="keywordtype">char</span>* font);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_clock_8h_html_a5c0b211b0610ee98b23f9c0e6ec6ea91"><div class="ttname"><a href="/documentation/api/-clock-8h/">ClockPrintPrecision</a></div><div class="ttdeci">ClockPrintPrecision</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Clock.h:24</a></div></div>
+<div class="ttc" id="a_clock_8h_html_a5c0b211b0610ee98b23f9c0e6ec6ea91a4f941db5d3d2e7ffb971c5b0dd41ab7b"><div class="ttname"><a href="/documentation/api/-clock-8h/">kTimePrecision3</a></div><div class="ttdeci">@ kTimePrecision3</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Clock.h:28</a></div></div>
+<div class="ttc" id="a_clock_8h_html_a5c0b211b0610ee98b23f9c0e6ec6ea91a706d96a43d6199a27bc98a400d82cc55"><div class="ttname"><a href="/documentation/api/-clock-8h/">kTimePrecision1</a></div><div class="ttdeci">@ kTimePrecision1</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Clock.h:26</a></div></div>
+<div class="ttc" id="a_clock_8h_html_a5c0b211b0610ee98b23f9c0e6ec6ea91ac7c8705023f1c4858af6087803693b68"><div class="ttname"><a href="/documentation/api/-clock-8h/">kTimePrecision0</a></div><div class="ttdeci">@ kTimePrecision0</div><div class="ttdef"><b>Definition</b> <a href="#l00025">Clock.h:25</a></div></div>
+<div class="ttc" id="a_clock_8h_html_a5c0b211b0610ee98b23f9c0e6ec6ea91ae1f9dc5b62d5afe332f021507e4b63f4"><div class="ttname"><a href="/documentation/api/-clock-8h/">kTimePrecision2</a></div><div class="ttdeci">@ kTimePrecision2</div><div class="ttdef"><b>Definition</b> <a href="#l00027">Clock.h:27</a></div></div>
+<div class="ttc" id="a_frame_rate_8h_html_aa8637a1aae95dd486fb201d7ad124364"><div class="ttname"><a href="/documentation/api/-frame-rate-8h/">update</a></div><div class="ttdeci">static void update()</div><div class="ttdoc">Update the elapsed frames during the current second.</div></div>
+<div class="ttc" id="a_listener_object_8h_html"><div class="ttname"><a href="/documentation/api/-listener-object-8h/">ListenerObject.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="aclass_clock_html"><div class="ttname"><a href="/documentation/api/class-clock/">Clock</a></div><div class="ttdef"><b>Definition</b> <a href="#l00040">Clock.h:41</a></div></div>
+<div class="ttc" id="aclass_clock_html_a0ab5423b0a997aa13d7b6131c46d1358"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the clock&#39;s elapsed time.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:177</a></div></div>
+<div class="ttc" id="aclass_clock_html_a0b77c3e7f33eb7ae0f018e469d96a250"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop the clock.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:162</a></div></div>
+<div class="ttc" id="aclass_clock_html_a1b76ca27c7539725f9a573b6487626d1"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::getMinutes</a></div><div class="ttdeci">uint32 getMinutes()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:243</a></div></div>
+<div class="ttc" id="aclass_clock_html_a27298aeaa30cabaea4110527d1bd9f76"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::printMilliseconds</a></div><div class="ttdeci">static void printMilliseconds(uint32 milliSeconds, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:94</a></div></div>
+<div class="ttc" id="aclass_clock_html_a3b2ccff4bd0f4e27cd09354912e78d67"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::printCentiseconds</a></div><div class="ttdeci">static void printCentiseconds(uint32 milliSeconds, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:76</a></div></div>
+<div class="ttc" id="aclass_clock_html_a83441672437c99e0c84fa6edb5631558"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::milliseconds</a></div><div class="ttdeci">uint32 milliseconds</div><div class="ttdoc">Elapsed time in milliseconds.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">Clock.h:45</a></div></div>
+<div class="ttc" id="aclass_clock_html_a89a3c92061be40c2054af6f047e3b0b7"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::destructor</a></div><div class="ttdeci">void destructor()</div><div class="ttdoc">Class&#39; destructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:143</a></div></div>
+<div class="ttc" id="aclass_clock_html_a8a050959dcff11c85d695989e9099a8c"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Start the clock.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:154</a></div></div>
+<div class="ttc" id="aclass_clock_html_aadcaadd6f727d2ebd1ec3624fcd3ad17"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::paused</a></div><div class="ttdeci">bool paused</div><div class="ttdoc">Flag to signal if the clock is paused or not.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Clock.h:54</a></div></div>
+<div class="ttc" id="aclass_clock_html_ab501e840f2bcff6c0616e5fdc60e1cf0"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::previousSecond</a></div><div class="ttdeci">uint32 previousSecond</div><div class="ttdoc">Previous elapsed second.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Clock.h:48</a></div></div>
+<div class="ttc" id="aclass_clock_html_ab9e73e81712383ef593aa5f975ab05a0"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::printTime</a></div><div class="ttdeci">static void printTime(uint32 milliseconds, int32 x, int32 y, const char *font, uint32 precision)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:27</a></div></div>
+<div class="ttc" id="aclass_clock_html_ac0060affd28f02c4af08aa7123875948"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::isPaused</a></div><div class="ttdeci">bool isPaused()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:222</a></div></div>
+<div class="ttc" id="aclass_clock_html_acd9d4c14ca539adcc8282c2564c4b2ec"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::getMilliseconds</a></div><div class="ttdeci">uint32 getMilliseconds()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:229</a></div></div>
+<div class="ttc" id="aclass_clock_html_ad1515ac8655b8bea42c5ca5d2c95df9e"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::printDeciseconds</a></div><div class="ttdeci">static void printDeciseconds(uint32 milliSeconds, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:66</a></div></div>
+<div class="ttc" id="aclass_clock_html_ae6db393390276512ba0f830829ac26ee"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::print</a></div><div class="ttdeci">void print(int32 col, int32 row, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:250</a></div></div>
+<div class="ttc" id="aclass_clock_html_aee36d74171add9915b4e21f2605f4337"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::pause</a></div><div class="ttdeci">void pause(bool pause)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:170</a></div></div>
+<div class="ttc" id="aclass_clock_html_af0dc3c6b22eb22ef527342124aeeb0a9"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:123</a></div></div>
+<div class="ttc" id="aclass_clock_html_af441ce7dbd6afbe62625083235d85f1a"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::getSeconds</a></div><div class="ttdeci">uint32 getSeconds()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-clock-8c-source/">Clock.c:236</a></div></div>
+<div class="ttc" id="aclass_clock_html_af7a17edca4a8cf351bd68a5c7203e0b5"><div class="ttname"><a href="/documentation/api/class-clock/">Clock::previousMinute</a></div><div class="ttdeci">uint32 previousMinute</div><div class="ttdoc">Previous elapsed minute.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">Clock.h:51</a></div></div>
+<div class="ttc" id="aclass_listener_object_html"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:62</a></div></div>
+</div></div>
+
+
+</div>

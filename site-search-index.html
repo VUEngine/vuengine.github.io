@@ -1,12 +1,18 @@
 ---
 ---
-{ {% for page in site.pages %}
-{% if page.url != '/' and page.url != '/404.html' and page.url != '/site-search-index/' -%}
+{ {%- for page in site.pages -%}
+{%- if
+page.url != '/' and
+page.url != '/404.html' and
+page.url != '/site-search-index/'
+-%}
+{%- unless page.url contains '/documentation/api/' -%}
 "{{ page.url }}": {
 "url": "{{ page.url }}",
 "title": "{% if page.parents %}{{ page.parents }} > {% endif %}{{ page.title }}",
-"content": {{ page.content | strip_html | inspect | replace: '&quot;', '"' | remove: '\n' | remove: '\t' | remove: '`' |
-remove: '**' }}
+"content": {{ page.content | strip_html | replace: '\', '/' | inspect | replace: '&quot;', '"' | remove: '\n' |
+remove: '\t' | remove: '`' | remove: '**' }}
 }{% unless forloop.last %},{% endunless %}
-{% endif -%}
-{% endfor -%} }
+{%- endunless -%}
+{%- endif -%}
+{%- endfor -%} }

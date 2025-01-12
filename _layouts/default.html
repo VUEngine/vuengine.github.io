@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/assets/codicon/codicon.css" />
   <link rel="stylesheet" href="/assets/style.css?{{ site.time | split:' ' | first }}" />
   <link rel="stylesheet" href="/assets/rogue/syntax-base16.monokai.dark.css" />
+  <link rel="stylesheet" href="/assets/doxygen-awesome.css" />
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -41,7 +42,7 @@
       <div class="d-flex flex-column gap-2 flex-lg-row align-items-start justify-content-between">
         <a href="/" class="d-flex align-items-center text-decoration-none">
           <img src="/assets/images/logo.png" width="44" height="44" class="bi me-2" />
-          <span class="fs-2 text-nowrap text-white">
+          <span class="fs-3 text-nowrap text-white">
             <strong>{{ site.title }}</strong>
           </span>
         </a>
@@ -59,7 +60,7 @@
           {% endfor %}
         </ul>
 
-        <div class="col-lg-2 text-end text-nowrap" style="margin-top:6px;">
+        <div class="text-end text-nowrap" style="margin-top:6px;">
           <button type="button" id="siteSearchToggle" class="btn btn-outline-light" aria-label="Search" title="Search"
             data-bs-toggle="modal" data-bs-target="#siteSearch">
             <i class="fa fa-search fa-lg"></i>

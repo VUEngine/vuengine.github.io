@@ -1,0 +1,91 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "OptionsSelector.c File Reference"
+permalink: documentation/api/-options-selector-8c/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f0161508f86f02e19b4cbe084bea137/">Tools</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">OptionsSelector.c File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-actor-8h-source/">Actor.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-animation-coordinator-factory-8h-source/">AnimationCoordinatorFactory.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-ball-8h-source/">Ball.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-body-8h-source/">Body.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-box-8h-source/">Box.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-camera-8h-source/">Camera.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-camera-effect-manager-8h-source/">CameraEffectManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-camera-movement-manager-8h-source/">CameraMovementManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-char-set-manager-8h-source/">CharSetManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-clock-8h-source/">Clock.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-clock-manager-8h-source/">ClockManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-container-8h-source/">Container.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-debug-state-8h-source/">DebugState.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-direct-draw-8h-source/">DirectDraw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-collider-manager-8h-source/">ColliderManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-frame-rate-8h-source/">FrameRate.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-game-state-8h-source/">GameState.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-inverse-box-8h-source/">InverseBox.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-line-field-8h-source/">LineField.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-m-bgmap-sprite-8h-source/">MBgmapSprite.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-mem-8h-source/">Mem.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-message-dispatcher-8h-source/">MessageDispatcher.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-object-texture-8h-source/">ObjectTexture.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-optics-8h-source/">Optics.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-particle-8h-source/">Particle.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-particle-system-8h-source/">ParticleSystem.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-collider-8h-source/">Collider.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sphere-8h-source/">Sphere.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sprite-8h-source/">Sprite.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sprite-manager-8h-source/">SpriteManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-s-r-a-m-manager-8h-source/">SRAMManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-stage-8h-source/">Stage.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-stage-editor-8h-source/">StageEditor.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-stage-editor-state-8h-source/">StageEditorState.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-state-8h-source/">State.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-state-machine-8h-source/">StateMachine.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sound-8h-source/">Sound.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-telegram-8h-source/">Telegram.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-texture-8h-source/">Texture.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-timer-manager-8h-source/">TimerManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-u-i-container-8h-source/">UIContainer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-utilities-8h-source/">Utilities.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-virtual-list-8h-source/">VirtualList.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-u-engine-8h-source/">VUEngine.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-wireframe-8h-source/">Wireframe.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="/documentation/api/-options-selector-8h-source/">OptionsSelector.h</a>&quot;</code><br />
+</div>
+<p><a href="/documentation/api/-options-selector-8c-source/">Go to the source code of this file.</a></p>
+</div>
+
+
+</div>

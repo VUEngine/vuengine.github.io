@@ -1,0 +1,492 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ParamTableManager.h File Reference"
+permalink: documentation/api/-param-table-manager-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-0b43cc111c2db98ba5ab6fee48cac891/">Graphics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-fc449a153d89a25ee967519a67ef4d17/">2d</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-95689f9233efbe77401534540ee315de/">Sprites</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-f8a3a5e67fc3948ab1381d20a38c3011/">Bgmap</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">ParamTableManager.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-affine-8h-source/">Affine.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-object-8h-source/">Object.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-param-table-manager-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-affine-entry/">AffineEntry</a></td></tr>
+
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-fixed-affine-matrix/">FixedAffineMatrix</a></td></tr>
+
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-affine-info/">AffineInfo</a></td></tr>
+
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-hbias-entry/">HbiasEntry</a></td></tr>
+
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-param-table-free-data/">ParamTableFreeData</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad9ac6af7f16bcc2aa67402b99f6a588f" id="r_ad9ac6af7f16bcc2aa67402b99f6a588f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ac6af7f16bcc2aa67402b99f6a588f">__PARAM_TABLE_PADDING</a>&#160;&#160;&#160;8</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:afc6b118d6a9c20b3eb31ba07a4f4b819" id="r_afc6b118d6a9c20b3eb31ba07a4f4b819"><td class="memItemLeft" align="right" valign="top">typedef struct AffineEntry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc6b118d6a9c20b3eb31ba07a4f4b819">AffineEntry</a></td></tr>
+
+<tr class="memitem:a7c8be017cfa23945d5ee0b1b7d50309f" id="r_a7c8be017cfa23945d5ee0b1b7d50309f"><td class="memItemLeft" align="right" valign="top">typedef struct FixedAffineMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c8be017cfa23945d5ee0b1b7d50309f">FixedAffineMatrix</a></td></tr>
+
+<tr class="memitem:a12d30a611f17fe61fb48152654bd1960" id="r_a12d30a611f17fe61fb48152654bd1960"><td class="memItemLeft" align="right" valign="top">typedef struct AffineInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12d30a611f17fe61fb48152654bd1960">AffineInfo</a></td></tr>
+
+<tr class="memitem:a1892889c18255a48a25f3484af4d0bee" id="r_a1892889c18255a48a25f3484af4d0bee"><td class="memItemLeft" align="right" valign="top">typedef struct HbiasEntry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1892889c18255a48a25f3484af4d0bee">HbiasEntry</a></td></tr>
+
+<tr class="memitem:a134cd4a1eb86ab1ffa212be4301ea37c" id="r_a134cd4a1eb86ab1ffa212be4301ea37c"><td class="memItemLeft" align="right" valign="top">typedef struct ParamTableFreeData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a134cd4a1eb86ab1ffa212be4301ea37c">ParamTableFreeData</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab9d3f06dc4ef871fad50465095b5ea32" id="r_ab9d3f06dc4ef871fad50465095b5ea32"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d3f06dc4ef871fad50465095b5ea32">reset</a> ()</td></tr>
+<tr class="memdesc:ab9d3f06dc4ef871fad50465095b5ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the animation coordinator factory's state.  <br /></td></tr>
+
+<tr class="memitem:a92b38c3f7f735d7471ff131b27f7f54d" id="r_a92b38c3f7f735d7471ff131b27f7f54d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92b38c3f7f735d7471ff131b27f7f54d">configure</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> availableBgmapSegmentsForParamTable)</td></tr>
+
+<tr class="memitem:abc3f9beb358211ca9ed5aa12058226fb" id="r_abc3f9beb358211ca9ed5aa12058226fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc3f9beb358211ca9ed5aa12058226fb">allocate</a> (<a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a> bgmapSprite)</td></tr>
+
+<tr class="memitem:ad65b125e06c67c84fc76f3f6221d0829" id="r_ad65b125e06c67c84fc76f3f6221d0829"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad65b125e06c67c84fc76f3f6221d0829">free</a> (<a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a> bgmapSprite)</td></tr>
+
+<tr class="memitem:a4505aa45106143b9b68c994cfa0715cf" id="r_a4505aa45106143b9b68c994cfa0715cf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4505aa45106143b9b68c994cfa0715cf">defragment</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> deferred)</td></tr>
+
+<tr class="memitem:aa94e45017bae233a8b757ea066d1dc21" id="r_aa94e45017bae233a8b757ea066d1dc21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94e45017bae233a8b757ea066d1dc21">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aaacdf0555bef7a48150bee62dde9250f" id="r_aaacdf0555bef7a48150bee62dde9250f"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaacdf0555bef7a48150bee62dde9250f">ParamTableManager</a></td></tr>
+
+<tr class="memitem:ad90c5b635d4c5484fa4e7f2bf72bb0fa" id="r_ad90c5b635d4c5484fa4e7f2bf72bb0fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad90c5b635d4c5484fa4e7f2bf72bb0fa">usedBytes</a></td></tr>
+<tr class="memdesc:ad90c5b635d4c5484fa4e7f2bf72bb0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of used bytes.  <br /></td></tr>
+
+<tr class="memitem:a40d7fb1e2c4e96870222fef9b1c5cba9" id="r_a40d7fb1e2c4e96870222fef9b1c5cba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40d7fb1e2c4e96870222fef9b1c5cba9">bgmapSprites</a></td></tr>
+<tr class="memdesc:a40d7fb1e2c4e96870222fef9b1c5cba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of sprites with allocated param tables.  <br /></td></tr>
+
+<tr class="memitem:a7ac9551696bf9140e27e8ea9e5b03a04" id="r_a7ac9551696bf9140e27e8ea9e5b03a04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-param-table-free-data/">ParamTableFreeData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ac9551696bf9140e27e8ea9e5b03a04">paramTableFreeData</a></td></tr>
+<tr class="memdesc:a7ac9551696bf9140e27e8ea9e5b03a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct used to keep track of the next free block in param table space.  <br /></td></tr>
+
+<tr class="memitem:a06e5aa9833dd65bb02f6880f55a6c405" id="r_a06e5aa9833dd65bb02f6880f55a6c405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06e5aa9833dd65bb02f6880f55a6c405">previouslyMovedBgmapSprite</a></td></tr>
+
+<tr class="memitem:a61dfd9e4559263303ad398c768c9886e" id="r_a61dfd9e4559263303ad398c768c9886e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61dfd9e4559263303ad398c768c9886e">paramTableBase</a></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad9ac6af7f16bcc2aa67402b99f6a588f" name="ad9ac6af7f16bcc2aa67402b99f6a588f"></a>
+<h2 class="memtitle">__PARAM_TABLE_PADDING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __PARAM_TABLE_PADDING&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">31</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="afc6b118d6a9c20b3eb31ba07a4f4b819" name="afc6b118d6a9c20b3eb31ba07a4f4b819"></a>
+<h2 class="memtitle">AffineEntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct AffineEntry AffineEntry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An <a class="el" href="/documentation/api/class-affine/">Affine</a> entry in param table space </p>
+
+</div>
+</div>
+<a id="a12d30a611f17fe61fb48152654bd1960" name="a12d30a611f17fe61fb48152654bd1960"></a>
+<h2 class="memtitle">AffineInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct AffineInfo AffineInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="/documentation/api/class-affine/">Affine</a> Info </p>
+
+</div>
+</div>
+<a id="a7c8be017cfa23945d5ee0b1b7d50309f" name="a7c8be017cfa23945d5ee0b1b7d50309f"></a>
+<h2 class="memtitle">FixedAffineMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct FixedAffineMatrix FixedAffineMatrix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A Fixed <a class="el" href="/documentation/api/class-affine/">Affine</a> Matrix </p>
+
+</div>
+</div>
+<a id="a1892889c18255a48a25f3484af4d0bee" name="a1892889c18255a48a25f3484af4d0bee"></a>
+<h2 class="memtitle">HbiasEntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct HbiasEntry HbiasEntry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An Hbias Entry </p>
+
+</div>
+</div>
+<a id="a134cd4a1eb86ab1ffa212be4301ea37c" name="a134cd4a1eb86ab1ffa212be4301ea37c"></a>
+<h2 class="memtitle">ParamTableFreeData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct ParamTableFreeData ParamTableFreeData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Param Table Free Data </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="abc3f9beb358211ca9ed5aa12058226fb" name="abc3f9beb358211ca9ed5aa12058226fb"></a>
+<h2 class="memtitle">allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">uint32</a> allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></td>          <td class="paramname"><span class="paramname"><em>bgmapSprite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocate a param table for the provided sprite </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bgmapSprite</td><td><a class="el" href="/documentation/api/class-sprite/">Sprite</a> for which a param table will be allocated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92b38c3f7f735d7471ff131b27f7f54d" name="a92b38c3f7f735d7471ff131b27f7f54d"></a>
+<h2 class="memtitle">configure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">uint32</a> configure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>availableBgmapSegmentsForParamTable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the param table displacement in bytes used to keep track of the start address of param table space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">availableBgmapSegmentsForParamTable</td><td>Number of available BGMAP segments for the param tables </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Displacement in bytes to keep track of the start address of param table space </dd></dl>
+
+</div>
+</div>
+<a id="a4505aa45106143b9b68c994cfa0715cf" name="a4505aa45106143b9b68c994cfa0715cf"></a>
+<h2 class="memtitle">defragment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void defragment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>deferred</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Defragment param table space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">deferred</td><td>Flag to defragment param table memory over time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad65b125e06c67c84fc76f3f6221d0829" name="ad65b125e06c67c84fc76f3f6221d0829"></a>
+<h2 class="memtitle">free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></td>          <td class="paramname"><span class="paramname"><em>bgmapSprite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Free the param table allocated for the provided sprite. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bgmapSprite</td><td><a class="el" href="/documentation/api/class-sprite/">Sprite</a> whose param table has to be freed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa94e45017bae233a8b757ea066d1dc21" name="aa94e45017bae233a8b757ea066d1dc21"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the information about param table space usage. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab9d3f06dc4ef871fad50465095b5ea32" name="ab9d3f06dc4ef871fad50465095b5ea32"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the animation coordinator factory's state. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a40d7fb1e2c4e96870222fef9b1c5cba9" name="a40d7fb1e2c4e96870222fef9b1c5cba9"></a>
+<h2 class="memtitle">bgmapSprites</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> bgmapSprites</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of sprites with allocated param tables. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">114</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a61dfd9e4559263303ad398c768c9886e" name="a61dfd9e4559263303ad398c768c9886e"></a>
+<h2 class="memtitle">paramTableBase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> paramTableBase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">124</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a7ac9551696bf9140e27e8ea9e5b03a04" name="a7ac9551696bf9140e27e8ea9e5b03a04"></a>
+<h2 class="memtitle">paramTableFreeData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-param-table-free-data/">ParamTableFreeData</a> paramTableFreeData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Struct used to keep track of the next free block in param table space. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">117</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aaacdf0555bef7a48150bee62dde9250f" name="aaacdf0555bef7a48150bee62dde9250f"></a>
+<h2 class="memtitle">ParamTableManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">singleton !class ParamTableManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class ParamTableManager</p>
+<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
+<p>Manages param table space allocating and releasing blocks in it. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">103</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a06e5aa9833dd65bb02f6880f55a6c405" name="a06e5aa9833dd65bb02f6880f55a6c405"></a>
+<h2 class="memtitle">previouslyMovedBgmapSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a> previouslyMovedBgmapSprite</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cache of the last sprite whose param table was moved during the defragmentation of param table space </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">121</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ad90c5b635d4c5484fa4e7f2bf72bb0fa" name="ad90c5b635d4c5484fa4e7f2bf72bb0fa"></a>
+<h2 class="memtitle">usedBytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> usedBytes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of used bytes. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-param-table-manager-8h-source/">111</a> of file <a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

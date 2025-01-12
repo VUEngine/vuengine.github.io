@@ -1,0 +1,756 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ActorFactory Class Reference"
+permalink: documentation/api/class-actor-factory/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">ActorFactory Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ActorFactory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_actor_factory.png" usemap="#ActorFactory_map" alt />
+  <map id="ActorFactory_map" name="ActorFactory_map">
+<area href="/documentation/api/class-object/" alt="Object" shape="rect" coords="0,0,87,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af12531ead0d9b12a08ec84641fcf61d5" id="r_af12531ead0d9b12a08ec84641fcf61d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af12531ead0d9b12a08ec84641fcf61d5">constructor</a> ()</td></tr>
+<tr class="memdesc:af12531ead0d9b12a08ec84641fcf61d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a5caf8d086e58a3b6cb28e7998a6dbc62" id="r_a5caf8d086e58a3b6cb28e7998a6dbc62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5caf8d086e58a3b6cb28e7998a6dbc62">spawnActor</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *positionedActor, <a class="el" href="/documentation/api/class-container/">Container</a> parent, EventListener callback, <a class="el" href="/documentation/api/-types-8h/">int16</a> internalId)</td></tr>
+
+<tr class="memitem:a968a98cdfa63b96670271f1f0d06834a" id="r_a968a98cdfa63b96670271f1f0d06834a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a968a98cdfa63b96670271f1f0d06834a">createNextActor</a> ()</td></tr>
+
+<tr class="memitem:a1a97d6de64264658bd170a3be238b0be" id="r_a1a97d6de64264658bd170a3be238b0be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a97d6de64264658bd170a3be238b0be">hasActorsPending</a> ()</td></tr>
+
+<tr class="memitem:a974bc5c650eabd6f6585d59e63de9cc3" id="r_a974bc5c650eabd6f6585d59e63de9cc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a974bc5c650eabd6f6585d59e63de9cc3">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aeac8dfa0289f7bf0bcf0c5ed026a1cd8" id="r_aeac8dfa0289f7bf0bcf0c5ed026a1cd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a></td></tr>
+<tr class="memdesc:aeac8dfa0289f7bf0bcf0c5ed026a1cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of actors pending instantiation.  <br /></td></tr>
+
+<tr class="memitem:a8d4029069141c3dc59b74d844b0e7af5" id="r_a8d4029069141c3dc59b74d844b0e7af5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a></td></tr>
+<tr class="memdesc:a8d4029069141c3dc59b74d844b0e7af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of actors pending transformation.  <br /></td></tr>
+
+<tr class="memitem:a394cfe289f53d51827c1150785ace330" id="r_a394cfe289f53d51827c1150785ace330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a></td></tr>
+<tr class="memdesc:a394cfe289f53d51827c1150785ace330"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of actors pending being added to their parent.  <br /></td></tr>
+
+<tr class="memitem:af777f28a6abc3b68b78f12428c49d7e4" id="r_af777f28a6abc3b68b78f12428c49d7e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af777f28a6abc3b68b78f12428c49d7e4">spawnedActors</a></td></tr>
+<tr class="memdesc:af777f28a6abc3b68b78f12428c49d7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of actors that have been completely instantianted and configured.  <br /></td></tr>
+
+<tr class="memitem:a8f5469bba7ad23822a1e25a3c39de233" id="r_a8f5469bba7ad23822a1e25a3c39de233"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a12958ad1be2b03fb2500b0f68b7009e0" id="r_a12958ad1be2b03fb2500b0f68b7009e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12958ad1be2b03fb2500b0f68b7009e0">instantiateActors</a> ()</td></tr>
+
+<tr class="memitem:a88028408951c08d0cddbd87720a24007" id="r_a88028408951c08d0cddbd87720a24007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88028408951c08d0cddbd87720a24007">transformActors</a> ()</td></tr>
+
+<tr class="memitem:a1d4b3811d67f5ae06deedb4579509624" id="r_a1d4b3811d67f5ae06deedb4579509624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d4b3811d67f5ae06deedb4579509624">addChildActors</a> ()</td></tr>
+
+<tr class="inherit_header pub_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object" id="r_a3a3ea4d86b4b946d57464f65a6a42362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
+
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object" id="r_a481b05c1f25b4e686eca17995944bfcc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">vTable</a></td></tr>
+<tr class="memdesc:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the class's virtual table.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-actor-factory/">ActorFactory</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
+<p>Implements a factory that creates actors over time. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8h-source/">43</a> of file <a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1d4b3811d67f5ae06deedb4579509624" name="a1d4b3811d67f5ae06deedb4579509624"></a>
+<h2 class="memtitle">addChildActors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> ActorFactory::addChildActors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">412</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  413</span>{</div>
+<div class="line"><span class="lineno">  414</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a>-&gt;head)</div>
+<div class="line"><span class="lineno">  415</span>    {</div>
+<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a>;</div>
+<div class="line"><span class="lineno">  417</span>    }</div>
+<div class="line"><span class="lineno">  418</span> </div>
+<div class="line"><span class="lineno">  419</span>    <a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>* positionedActorDescription = (<a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>*)this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a>-&gt;head-&gt;data;</div>
+<div class="line"><span class="lineno">  420</span> </div>
+<div class="line"><span class="lineno">  421</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;parent))</div>
+<div class="line"><span class="lineno">  422</span>    {</div>
+<div class="line"><span class="lineno">  423</span>        <span class="keywordflow">if</span>(!positionedActorDescription-&gt;graphicsSynchronized)</div>
+<div class="line"><span class="lineno">  424</span>        {</div>
+<div class="line"><span class="lineno">  425</span>            <a class="code hl_function" href="/documentation/api/class-actor/">Actor::calculateSize</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  426</span>            <a class="code hl_function" href="/documentation/api/class-container/">Actor::invalidateTransformation</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  427</span>            positionedActorDescription-&gt;graphicsSynchronized = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  428</span> </div>
+<div class="line"><span class="lineno">  429</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a>;</div>
+<div class="line"><span class="lineno">  430</span>        }</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>        ActorFactory <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a> = <a class="code hl_function" href="/documentation/api/class-actor/">Actor::getActorFactory</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  433</span> </div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a> || <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a> == <a class="code hl_function" href="#a1d4b3811d67f5ae06deedb4579509624">ActorFactory::addChildActors</a>(<a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a>))</div>
+<div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;parent), <span class="stringliteral">&quot;ActorFactory::addChildActors: deleted parent&quot;</span>);</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>            <span class="comment">// Must add the child to its parent before making it ready</span></div>
+<div class="line"><span class="lineno">  439</span>            <a class="code hl_function" href="/documentation/api/class-container/">Container::addChild</a>(positionedActorDescription-&gt;parent, Container::safeCast(positionedActorDescription-&gt;actor));</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(this-&gt;<a class="code hl_variable" href="#af777f28a6abc3b68b78f12428c49d7e4">spawnedActors</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  442</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeData</a>(this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a>;</div>
+<div class="line"><span class="lineno">  445</span>        }</div>
+<div class="line"><span class="lineno">  446</span> </div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a>;</div>
+<div class="line"><span class="lineno">  448</span>    }</div>
+<div class="line"><span class="lineno">  449</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  450</span>    {</div>
+<div class="line"><span class="lineno">  451</span>        <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeData</a>(this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  452</span> </div>
+<div class="line"><span class="lineno">  453</span>        <span class="comment">// Don&#39;t need to delete the created actor since the parent takes care of that at this point</span></div>
+<div class="line"><span class="lineno">  454</span> </div>
+<div class="line"><span class="lineno">  455</span>        <span class="keyword">delete</span> positionedActorDescription;</div>
+<div class="line"><span class="lineno">  456</span>    }</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a>;</div>
+<div class="line"><span class="lineno">  459</span>}</div>
+<div class="ttc" id="a_actor_8h_html_aae1ad9f013b56a854677edb2085d74cc"><div class="ttname"><a href="/documentation/api/-actor-8h/">actorFactory</a></div><div class="ttdeci">ActorFactory actorFactory</div><div class="ttdoc">Factory to create this actor&#39;s children.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8h-source/">Actor.h:324</a></div></div>
+<div class="ttc" id="a_actor_factory_8c_html_a5ae37c817defa17cf8e20fe966b544c9"><div class="ttname"><a href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a></div><div class="ttdeci">struct PositionedActorDescription PositionedActorDescription</div></div>
+<div class="ttc" id="a_actor_factory_8h_html_a10cdb2949e46676ff5eca7e6351aa4f3"><div class="ttname"><a href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a></div><div class="ttdeci">#define __LIST_EMPTY</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:31</a></div></div>
+<div class="ttc" id="a_actor_factory_8h_html_acf3f788e24e63b20da2bba05b2d327e1"><div class="ttname"><a href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a></div><div class="ttdeci">#define __ACTOR_PROCESSED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:32</a></div></div>
+<div class="ttc" id="a_actor_factory_8h_html_aec07a85412f5c2be95d6d2107fc7485e"><div class="ttname"><a href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a></div><div class="ttdeci">#define __ACTOR_PENDING_PROCESSING</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:30</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a1d4b3811d67f5ae06deedb4579509624"><div class="ttname"><a href="#a1d4b3811d67f5ae06deedb4579509624">ActorFactory::addChildActors</a></div><div class="ttdeci">uint32 addChildActors()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:412</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a394cfe289f53d51827c1150785ace330"><div class="ttname"><a href="#a394cfe289f53d51827c1150785ace330">ActorFactory::actorsToAddAsChildren</a></div><div class="ttdeci">VirtualList actorsToAddAsChildren</div><div class="ttdoc">List of actors pending being added to their parent.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:54</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_af777f28a6abc3b68b78f12428c49d7e4"><div class="ttname"><a href="#af777f28a6abc3b68b78f12428c49d7e4">ActorFactory::spawnedActors</a></div><div class="ttdeci">VirtualList spawnedActors</div><div class="ttdoc">List of actors that have been completely instantianted and configured.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:57</a></div></div>
+<div class="ttc" id="aclass_actor_html_a1dedd41032b7c330c4e8c81174df0e0c"><div class="ttname"><a href="/documentation/api/class-actor/">Actor::calculateSize</a></div><div class="ttdeci">override void calculateSize()</div><div class="ttdoc">Configure the actor&#39;s size.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8c-source/">Actor.c:627</a></div></div>
+<div class="ttc" id="aclass_actor_html_a85cefb202b759fef2b6424d7d73f0de2"><div class="ttname"><a href="/documentation/api/class-actor/">Actor::getActorFactory</a></div><div class="ttdeci">ActorFactory getActorFactory()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8c-source/">Actor.c:547</a></div></div>
+<div class="ttc" id="aclass_container_html_a72cec2aef0379cafbed4ecceedcdd630"><div class="ttname"><a href="/documentation/api/class-container/">Container::invalidateTransformation</a></div><div class="ttdeci">void invalidateTransformation()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-container-8c-source/">Container.c:694</a></div></div>
+<div class="ttc" id="aclass_container_html_a8ba750b307df289fa6ead4cb27245e01"><div class="ttname"><a href="/documentation/api/class-container/">Container::addChild</a></div><div class="ttdeci">void addChild(Container child)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-container-8c-source/">Container.c:419</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac8cad22ce419c50c643a89695c4920ab"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::removeData</a></div><div class="ttdeci">bool removeData(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:471</a></div></div>
+</div>
+</div>
+</div>
+<a id="af12531ead0d9b12a08ec84641fcf61d5" name="af12531ead0d9b12a08ec84641fcf61d5"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ActorFactory::constructor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class' constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">75</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   78</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">   81</span>    this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">   82</span>    this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">   83</span>    this-&gt;<a class="code hl_variable" href="#af777f28a6abc3b68b78f12428c49d7e4">spawnedActors</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a> = 0;</div>
+<div class="line"><span class="lineno">   86</span>}</div>
+<div class="ttc" id="a_authenticator_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:24</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a8d4029069141c3dc59b74d844b0e7af5"><div class="ttname"><a href="#a8d4029069141c3dc59b74d844b0e7af5">ActorFactory::actorsToTransform</a></div><div class="ttdeci">VirtualList actorsToTransform</div><div class="ttdoc">List of actors pending transformation.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:51</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a8f5469bba7ad23822a1e25a3c39de233"><div class="ttname"><a href="#a8f5469bba7ad23822a1e25a3c39de233">ActorFactory::instantiationPhase</a></div><div class="ttdeci">int32 instantiationPhase</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:61</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_aeac8dfa0289f7bf0bcf0c5ed026a1cd8"><div class="ttname"><a href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">ActorFactory::actorsToInstantiate</a></div><div class="ttdeci">VirtualList actorsToInstantiate</div><div class="ttdoc">List of actors pending instantiation.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h:48</a></div></div>
+</div>
+</div>
+</div>
+<a id="a968a98cdfa63b96670271f1f0d06834a" name="a968a98cdfa63b96670271f1f0d06834a"></a>
+<h2 class="memtitle">createNextActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> ActorFactory::createNextActor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create the next queued actor. </p><dl class="section return"><dt>Returns</dt><dd>False if there are no actors pending instantiation; true otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">185</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>{</div>
+<div class="line"><span class="lineno">  187</span>    ActorFactory::cleanUp(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a> &gt;= <a class="code hl_variable" href="/documentation/api/-actor-factory-8c/">_instantiationPhasesCount</a>)</div>
+<div class="line"><span class="lineno">  190</span>    {</div>
+<div class="line"><span class="lineno">  191</span>        this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a> = 0;</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> result = <a class="code hl_variable" href="/documentation/api/-actor-factory-8c/">_instantiationPhases</a>[this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a>](<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> counter = <a class="code hl_variable" href="/documentation/api/-actor-factory-8c/">_instantiationPhasesCount</a>;</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>    <span class="keywordflow">while</span>(<a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a> == result)</div>
+<div class="line"><span class="lineno">  199</span>    {</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">if</span>(!--counter)</div>
+<div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  203</span>        }</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>        this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a>++;</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a> &gt;= <a class="code hl_variable" href="/documentation/api/-actor-factory-8c/">_instantiationPhasesCount</a>)</div>
+<div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a> = 0;</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>        result = <a class="code hl_variable" href="/documentation/api/-actor-factory-8c/">_instantiationPhases</a>[this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a>](<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>    this-&gt;<a class="code hl_variable" href="#a8f5469bba7ad23822a1e25a3c39de233">instantiationPhase</a> += <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a> != result ? 1 : 0;</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a> != result;</div>
+<div class="line"><span class="lineno">  218</span>}</div>
+<div class="ttc" id="a_actor_factory_8c_html_a3cd6b675a7508dd747ba9bb6e3ba0998"><div class="ttname"><a href="/documentation/api/-actor-factory-8c/">_instantiationPhases</a></div><div class="ttdeci">static const InstantiationPhase _instantiationPhases[]</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:60</a></div></div>
+<div class="ttc" id="a_actor_factory_8c_html_a89ec06212aefb439ba56e9fb942e4438"><div class="ttname"><a href="/documentation/api/-actor-factory-8c/">_instantiationPhasesCount</a></div><div class="ttdeci">static int32 _instantiationPhasesCount</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:67</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1a97d6de64264658bd170a3be238b0be" name="a1a97d6de64264658bd170a3be238b0be"></a>
+<h2 class="memtitle">hasActorsPending()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> ActorFactory::hasActorsPending </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if there are actors pending instantiation. </p><dl class="section return"><dt>Returns</dt><dd>True if there are actors pending instantiation; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">222</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>{</div>
+<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a>-&gt;head ||</div>
+<div class="line"><span class="lineno">  225</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a>-&gt;head ||</div>
+<div class="line"><span class="lineno">  226</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a>-&gt;head;</div>
+<div class="line"><span class="lineno">  227</span>}</div>
+</div>
+</div>
+</div>
+<a id="a12958ad1be2b03fb2500b0f68b7009e0" name="a12958ad1be2b03fb2500b0f68b7009e0"></a>
+<h2 class="memtitle">instantiateActors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> ActorFactory::instantiateActors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>These are not meant to be called externally. They are declared here because of the preprocessor's limitations for forward declarations in source files. Don't call these. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">267</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  268</span>{</div>
+<div class="line"><span class="lineno">  269</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(<span class="keyword">this</span>, <span class="stringliteral">&quot;ActorFactory::spawnActors: null spawnActors&quot;</span>);</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a>-&gt;head)</div>
+<div class="line"><span class="lineno">  272</span>    {</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a>;</div>
+<div class="line"><span class="lineno">  274</span>    }</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>    <a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>* positionedActorDescription = (<a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>*)this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a>-&gt;head-&gt;data;</div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;parent))</div>
+<div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;actor))</div>
+<div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            ActorFactory <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a> = <a class="code hl_function" href="/documentation/api/class-actor/">Actor::getActorFactory</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a> || <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a> == <a class="code hl_function" href="#a12958ad1be2b03fb2500b0f68b7009e0">ActorFactory::instantiateActors</a>(<a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a>))</div>
+<div class="line"><span class="lineno">  285</span>            {</div>
+<div class="line"><span class="lineno">  286</span>                <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  287</span>                <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeData</a>(this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a>;</div>
+<div class="line"><span class="lineno">  290</span>            }</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a>;</div>
+<div class="line"><span class="lineno">  293</span>        }</div>
+<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  295</span>        {</div>
+<div class="line"><span class="lineno">  296</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription), <span class="stringliteral">&quot;ActorFactory::spawnActors: deleted positionedActorDescription&quot;</span>);</div>
+<div class="line"><span class="lineno">  297</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != positionedActorDescription-&gt;positionedActor, <span class="stringliteral">&quot;ActorFactory::spawnActors: null positionedActor&quot;</span>);</div>
+<div class="line"><span class="lineno">  298</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != positionedActorDescription-&gt;positionedActor-&gt;actorSpec, <span class="stringliteral">&quot;ActorFactory::spawnActors: null spec&quot;</span>);</div>
+<div class="line"><span class="lineno">  299</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a></div>
+<div class="line"><span class="lineno">  300</span>            (</div>
+<div class="line"><span class="lineno">  301</span>                <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != positionedActorDescription-&gt;positionedActor-&gt;actorSpec-&gt;allocator, </div>
+<div class="line"><span class="lineno">  302</span>                <span class="stringliteral">&quot;ActorFactory::spawnActors: no allocator defined&quot;</span></div>
+<div class="line"><span class="lineno">  303</span>            );</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>            positionedActorDescription-&gt;actor = </div>
+<div class="line"><span class="lineno">  306</span>                <a class="code hl_function" href="/documentation/api/class-actor/">Actor::createActorDeferred</a>(positionedActorDescription-&gt;positionedActor, positionedActorDescription-&gt;internalId);</div>
+<div class="line"><span class="lineno">  307</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(positionedActorDescription-&gt;actor, <span class="stringliteral">&quot;ActorFactory::spawnActors: actor not loaded&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;actor) &amp;&amp; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != positionedActorDescription-&gt;callback)</div>
+<div class="line"><span class="lineno">  310</span>            {</div>
+<div class="line"><span class="lineno">  311</span>                <a class="code hl_function" href="/documentation/api/class-listener-object/">Actor::addEventListener</a></div>
+<div class="line"><span class="lineno">  312</span>                (</div>
+<div class="line"><span class="lineno">  313</span>                    positionedActorDescription-&gt;actor, ListenerObject::safeCast(positionedActorDescription-&gt;parent), </div>
+<div class="line"><span class="lineno">  314</span>                    positionedActorDescription-&gt;callback, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventActorLoaded</a></div>
+<div class="line"><span class="lineno">  315</span>                );</div>
+<div class="line"><span class="lineno">  316</span>            }</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  320</span>    {</div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeData</a>(this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keyword">delete</span> positionedActorDescription;</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a>;</div>
+<div class="line"><span class="lineno">  326</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a63a84314de35bc1a8a0604b6088148ff"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventActorLoaded</a></div><div class="ttdeci">@ kEventActorLoaded</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:29</a></div></div>
+<div class="ttc" id="aclass_actor_factory_html_a12958ad1be2b03fb2500b0f68b7009e0"><div class="ttname"><a href="#a12958ad1be2b03fb2500b0f68b7009e0">ActorFactory::instantiateActors</a></div><div class="ttdeci">uint32 instantiateActors()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:267</a></div></div>
+<div class="ttc" id="aclass_actor_html_a2357ab6e51b8a79bc28931e4c5a53a17"><div class="ttname"><a href="/documentation/api/class-actor/">Actor::createActorDeferred</a></div><div class="ttdeci">static Actor createActorDeferred(const PositionedActor *const positionedActor, int16 internalId)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8c-source/">Actor.c:86</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa44d2f3fc00a88658f64cac1c02b47f7"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::addEventListener</a></div><div class="ttdeci">void addEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:64</a></div></div>
+</div>
+</div>
+</div>
+<a id="a974bc5c650eabd6f6585d59e63de9cc3" name="a974bc5c650eabd6f6585d59e63de9cc3"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ActorFactory::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the factory's state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5caf8d086e58a3b6cb28e7998a6dbc62" name="a5caf8d086e58a3b6cb28e7998a6dbc62"></a>
+<h2 class="memtitle">spawnActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ActorFactory::spawnActor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *</td>          <td class="paramname"><span class="paramname"><em>positionedActor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-container/">Container</a></td>          <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventListener</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int16</a></td>          <td class="paramname"><span class="paramname"><em>internalId</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new actor instance and configure it with the provided arguments. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">positionedActor</td><td>Struct that defines which actor spec to use to configure the new actor and the spatial information about where and how to positione it </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent of the new actor instance </td></tr>
+    <tr><td class="paramname">callback</td><td>Callback to inform the parent when the new actor is ready </td></tr>
+    <tr><td class="paramname">internalId</td><td>ID to keep track internally of the new instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">161</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>{</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == positionedActor || <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == parent)</div>
+<div class="line"><span class="lineno">  164</span>    {</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>    <a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>* positionedActorDescription = <span class="keyword">new</span> <a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>;</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">positionedActor</a> = positionedActor;</div>
+<div class="line"><span class="lineno">  171</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">parent</a> = parent;</div>
+<div class="line"><span class="lineno">  172</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">actor</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  173</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">callback</a> = callback;</div>
+<div class="line"><span class="lineno">  174</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">internalId</a> = internalId;</div>
+<div class="line"><span class="lineno">  175</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">transformed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  176</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">graphicsSynchronized</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  177</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">componentsCreated</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  178</span>    positionedActorDescription-&gt;<a class="code hl_variable" href="/documentation/api/struct-positioned-actor-description/">componentIndex</a> = 0;</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(this-&gt;<a class="code hl_variable" href="#aeac8dfa0289f7bf0bcf0c5ed026a1cd8">actorsToInstantiate</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  181</span>}</div>
+<div class="ttc" id="astruct_positioned_actor_description_html_a4c4a789f3a6e82ca219f861c95ea163f"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::callback</a></div><div class="ttdeci">EventListener callback</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:44</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_a67bc2d31b1f595b26e7f7274d0f55ee8"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::componentIndex</a></div><div class="ttdeci">uint8 componentIndex</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:46</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_a75a5b46dee52f88eabe7637056a094d3"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::parent</a></div><div class="ttdeci">Container parent</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:42</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_aace13e6d0fb36975e9f57492c28d2681"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::componentsCreated</a></div><div class="ttdeci">bool componentsCreated</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:47</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_aad5497fd8cb5ebe3006cac744cadc18e"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::internalId</a></div><div class="ttdeci">int16 internalId</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:45</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_ab64258bfe70dea07802e177a23d6f411"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::transformed</a></div><div class="ttdeci">bool transformed</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:51</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_ae266a1d3b545c2139a7f94bd4cd2bb7c"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::graphicsSynchronized</a></div><div class="ttdeci">bool graphicsSynchronized</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:52</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_aed4b842d393bdebb4a50b112ff045665"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::actor</a></div><div class="ttdeci">Actor actor</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:43</a></div></div>
+<div class="ttc" id="astruct_positioned_actor_description_html_af7181363a9a79634bfb727e008e8a79d"><div class="ttname"><a href="/documentation/api/struct-positioned-actor-description/">PositionedActorDescription::positionedActor</a></div><div class="ttdeci">const PositionedActor * positionedActor</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:41</a></div></div>
+</div>
+</div>
+</div>
+<a id="a88028408951c08d0cddbd87720a24007" name="a88028408951c08d0cddbd87720a24007"></a>
+<h2 class="memtitle">transformActors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> ActorFactory::transformActors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8c-source/">330</a> of file <a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  331</span>{</div>
+<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a>-&gt;head)</div>
+<div class="line"><span class="lineno">  333</span>    {</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a>;</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>    <a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>* positionedActorDescription = (<a class="code hl_typedef" href="/documentation/api/-actor-factory-8c/">PositionedActorDescription</a>*)this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a>-&gt;head-&gt;data;</div>
+<div class="line"><span class="lineno">  338</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(positionedActorDescription-&gt;actor, <span class="stringliteral">&quot;ActorFactory::transformActors: null actor&quot;</span>);</div>
+<div class="line"><span class="lineno">  339</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(positionedActorDescription-&gt;parent, <span class="stringliteral">&quot;ActorFactory::transformActors: null parent&quot;</span>);</div>
+<div class="line"><span class="lineno">  340</span> </div>
+<div class="line"><span class="lineno">  341</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;parent))</div>
+<div class="line"><span class="lineno">  342</span>    {</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">if</span>(!positionedActorDescription-&gt;transformed)</div>
+<div class="line"><span class="lineno">  344</span>        {</div>
+<div class="line"><span class="lineno">  345</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">Transformation</a>* environmentTransform = <a class="code hl_function" href="/documentation/api/class-entity/">Actor::getTransformation</a>(positionedActorDescription-&gt;parent);</div>
+<div class="line"><span class="lineno">  346</span>            <a class="code hl_function" href="/documentation/api/class-container/">Actor::invalidateTransformation</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  347</span>            <a class="code hl_variable" href="/documentation/api/class-container/">Actor::transform</a>(positionedActorDescription-&gt;actor, environmentTransform, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>            positionedActorDescription-&gt;transformed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a>;</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">if</span>(!positionedActorDescription-&gt;componentsCreated)</div>
+<div class="line"><span class="lineno">  355</span>        {</div>
+<div class="line"><span class="lineno">  356</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/-actor-8h/">ActorSpec</a>* <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorSpec</a> = <a class="code hl_function" href="/documentation/api/class-actor/">Actor::getSpec</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  357</span>            </div>
+<div class="line"><span class="lineno">  358</span>            <span class="keywordflow">if</span></div>
+<div class="line"><span class="lineno">  359</span>            (</div>
+<div class="line"><span class="lineno">  360</span>                <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorSpec</a> &amp;&amp; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-actor-spec/">componentSpecs</a> &amp;&amp; </div>
+<div class="line"><span class="lineno">  361</span>                <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-actor-spec/">componentSpecs</a>[positionedActorDescription-&gt;componentIndex]</div>
+<div class="line"><span class="lineno">  362</span>            )</div>
+<div class="line"><span class="lineno">  363</span>            {</div>
+<div class="line"><span class="lineno">  364</span>                <span class="keywordtype">bool</span> createdComponent = </div>
+<div class="line"><span class="lineno">  365</span>                    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_function" href="/documentation/api/class-entity/">Actor::addComponent</a></div>
+<div class="line"><span class="lineno">  366</span>                    (</div>
+<div class="line"><span class="lineno">  367</span>                        positionedActorDescription-&gt;actor, </div>
+<div class="line"><span class="lineno">  368</span>                        (<a class="code hl_typedef" href="/documentation/api/-component-8h/">ComponentSpec</a>*)<a class="code hl_variable" href="/documentation/api/-actor-8h/">actorSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-actor-spec/">componentSpecs</a>[positionedActorDescription-&gt;componentIndex]</div>
+<div class="line"><span class="lineno">  369</span>                    );</div>
+<div class="line"><span class="lineno">  370</span>                    </div>
+<div class="line"><span class="lineno">  371</span>                positionedActorDescription-&gt;componentIndex++;</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>                <span class="keywordflow">if</span>(createdComponent)</div>
+<div class="line"><span class="lineno">  374</span>                {</div>
+<div class="line"><span class="lineno">  375</span>                    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a>;</div>
+<div class="line"><span class="lineno">  376</span>                }</div>
+<div class="line"><span class="lineno">  377</span>            }</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>            positionedActorDescription-&gt;componentsCreated = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  380</span>            positionedActorDescription-&gt;componentIndex = 0;</div>
+<div class="line"><span class="lineno">  381</span>        }</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>        ActorFactory <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a> = <a class="code hl_function" href="/documentation/api/class-actor/">Actor::getActorFactory</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a> || <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__LIST_EMPTY</a> == <a class="code hl_function" href="#a88028408951c08d0cddbd87720a24007">ActorFactory::transformActors</a>(<a class="code hl_variable" href="/documentation/api/-actor-8h/">actorFactory</a>))</div>
+<div class="line"><span class="lineno">  386</span>        {</div>
+<div class="line"><span class="lineno">  387</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(this-&gt;<a class="code hl_variable" href="#a394cfe289f53d51827c1150785ace330">actorsToAddAsChildren</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  388</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeData</a>(this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  389</span> </div>
+<div class="line"><span class="lineno">  390</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a>;</div>
+<div class="line"><span class="lineno">  391</span>        }</div>
+<div class="line"><span class="lineno">  392</span> </div>
+<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PENDING_PROCESSING</a>;</div>
+<div class="line"><span class="lineno">  394</span>    }</div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  396</span>    {</div>
+<div class="line"><span class="lineno">  397</span>        <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::removeData</a>(this-&gt;<a class="code hl_variable" href="#a8d4029069141c3dc59b74d844b0e7af5">actorsToTransform</a>, positionedActorDescription);</div>
+<div class="line"><span class="lineno">  398</span> </div>
+<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(positionedActorDescription-&gt;actor))</div>
+<div class="line"><span class="lineno">  400</span>        {</div>
+<div class="line"><span class="lineno">  401</span>            <a class="code hl_function" href="/documentation/api/class-container/">Actor::deleteMyself</a>(positionedActorDescription-&gt;actor);</div>
+<div class="line"><span class="lineno">  402</span>        }</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>        <span class="keyword">delete</span> positionedActorDescription;</div>
+<div class="line"><span class="lineno">  405</span>    }</div>
+<div class="line"><span class="lineno">  406</span> </div>
+<div class="line"><span class="lineno">  407</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-actor-factory-8h/">__ACTOR_PROCESSED</a>;</div>
+<div class="line"><span class="lineno">  408</span>}</div>
+<div class="ttc" id="a_actor_8h_html_ac2acbdbf129249d8df0293d1645c11ec"><div class="ttname"><a href="/documentation/api/-actor-8h/">ActorSpec</a></div><div class="ttdeci">struct ActorSpec ActorSpec</div></div>
+<div class="ttc" id="a_actor_8h_html_ae92757974ada7aaff909b58e245bf575"><div class="ttname"><a href="/documentation/api/-actor-8h/">actorSpec</a></div><div class="ttdeci">const ActorSpec * actorSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the actor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8h-source/">Actor.h:327</a></div></div>
+<div class="ttc" id="a_component_8h_html_aba34f00fb543cbec11504c4c4fa7e680"><div class="ttname"><a href="/documentation/api/-component-8h/">ComponentSpec</a></div><div class="ttdeci">struct ComponentSpec ComponentSpec</div></div>
+<div class="ttc" id="a_types_8h_html_a5c5a44a39a590824449786b4905c74dd"><div class="ttname"><a href="/documentation/api/-types-8h/">Transformation</a></div><div class="ttdeci">struct Transformation Transformation</div></div>
+<div class="ttc" id="aclass_actor_factory_html_a88028408951c08d0cddbd87720a24007"><div class="ttname"><a href="#a88028408951c08d0cddbd87720a24007">ActorFactory::transformActors</a></div><div class="ttdeci">uint32 transformActors()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c:330</a></div></div>
+<div class="ttc" id="aclass_actor_html_ae6ca498ad9335d6a922f5282d97e6177"><div class="ttname"><a href="/documentation/api/class-actor/">Actor::getSpec</a></div><div class="ttdeci">const ActorSpec * getSpec()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8c-source/">Actor.c:540</a></div></div>
+<div class="ttc" id="aclass_container_html_a520d819e3ccdd849e6d0cb215a44c666"><div class="ttname"><a href="/documentation/api/class-container/">Container::deleteMyself</a></div><div class="ttdeci">void deleteMyself()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-container-8c-source/">Container.c:344</a></div></div>
+<div class="ttc" id="aclass_container_html_abe28887890f45f3274a09f3e3a21b13f"><div class="ttname"><a href="/documentation/api/class-container/">Container::transform</a></div><div class="ttdeci">bool transform</div><div class="ttdoc">Flag to allow/prohibit calls to the transform method.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-container-8h-source/">Container.h:67</a></div></div>
+<div class="ttc" id="aclass_entity_html_a241d7059a56679c05f6645390321a44e"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::addComponent</a></div><div class="ttdeci">Component addComponent(const ComponentSpec *componentSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:120</a></div></div>
+<div class="ttc" id="aclass_entity_html_adab7ec0e927c7c5ddcc218434469c4b5"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::getTransformation</a></div><div class="ttdeci">const Transformation * getTransformation()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:183</a></div></div>
+<div class="ttc" id="astruct_actor_spec_html_ab783ab4061f5f61dd6223656c4bd00d9"><div class="ttname"><a href="/documentation/api/struct-actor-spec/">ActorSpec::componentSpecs</a></div><div class="ttdeci">ComponentSpec ** componentSpecs</div><div class="ttdoc">Component specs.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-actor-8h-source/">Actor.h:41</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a394cfe289f53d51827c1150785ace330" name="a394cfe289f53d51827c1150785ace330"></a>
+<h2 class="memtitle">actorsToAddAsChildren</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> ActorFactory::actorsToAddAsChildren</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of actors pending being added to their parent. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8h-source/">54</a> of file <a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>.</p>
+
+</div>
+</div>
+<a id="aeac8dfa0289f7bf0bcf0c5ed026a1cd8" name="aeac8dfa0289f7bf0bcf0c5ed026a1cd8"></a>
+<h2 class="memtitle">actorsToInstantiate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> ActorFactory::actorsToInstantiate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of actors pending instantiation. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8h-source/">48</a> of file <a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>.</p>
+
+</div>
+</div>
+<a id="a8d4029069141c3dc59b74d844b0e7af5" name="a8d4029069141c3dc59b74d844b0e7af5"></a>
+<h2 class="memtitle">actorsToTransform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> ActorFactory::actorsToTransform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of actors pending transformation. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8h-source/">51</a> of file <a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f5469bba7ad23822a1e25a3c39de233" name="a8f5469bba7ad23822a1e25a3c39de233"></a>
+<h2 class="memtitle">instantiationPhase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int32</a> ActorFactory::instantiationPhase</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Index of the current phase to process for the instantiation and configuration of actors </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8h-source/">61</a> of file <a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>.</p>
+
+</div>
+</div>
+<a id="af777f28a6abc3b68b78f12428c49d7e4" name="af777f28a6abc3b68b78f12428c49d7e4"></a>
+<h2 class="memtitle">spawnedActors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> ActorFactory::spawnedActors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of actors that have been completely instantianted and configured. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-actor-factory-8h-source/">57</a> of file <a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Entity/Container/Actor/<a class="el" href="/documentation/api/-actor-factory-8h-source/">ActorFactory.h</a></li>
+<li>VUEngine-Core/source/Entity/Container/Actor/<a class="el" href="/documentation/api/-actor-factory-8c-source/">ActorFactory.c</a></li>
+</ul>
+</div>
+
+
+</div>

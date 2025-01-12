@@ -1,0 +1,500 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ToolState Class Reference"
+permalink: documentation/api/class-tool-state/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">ToolState Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-tool-state-8h-source/">ToolState.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ToolState:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_tool_state.png" usemap="#ToolState_map" alt />
+  <map id="ToolState_map" name="ToolState_map">
+<area href="/documentation/api/class-game-state/" alt="GameState" shape="rect" coords="235,0,382,24" />
+<area href="/documentation/api/class-animation-inspector-state/" alt="AnimationInspectorState" shape="rect" coords="0,112,147,136" />
+<area href="/documentation/api/class-debug-state/" alt="DebugState" shape="rect" coords="157,112,304,136" />
+<area href="/documentation/api/class-sound-test-state/" alt="SoundTestState" shape="rect" coords="314,112,461,136" />
+<area href="/documentation/api/class-stage-editor-state/" alt="StageEditorState" shape="rect" coords="471,112,618,136" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aae998fe130a802d562b01e3c79e1283a" id="r_aae998fe130a802d562b01e3c79e1283a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae998fe130a802d562b01e3c79e1283a">constructor</a> ()</td></tr>
+<tr class="memdesc:aae998fe130a802d562b01e3c79e1283a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:add6dcf9daccc39fcf24c006c1fcdd6ac" id="r_add6dcf9daccc39fcf24c006c1fcdd6ac"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6dcf9daccc39fcf24c006c1fcdd6ac">enter</a> (void *owner)</td></tr>
+
+<tr class="memitem:a3c57f1961529674f41e1deec787659c1" id="r_a3c57f1961529674f41e1deec787659c1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c57f1961529674f41e1deec787659c1">execute</a> (void *owner)</td></tr>
+
+<tr class="memitem:ae1226abe229f0478007c104316f9ce4d" id="r_ae1226abe229f0478007c104316f9ce4d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1226abe229f0478007c104316f9ce4d">exit</a> (void *owner)</td></tr>
+
+<tr class="memitem:aa039c28572a0155f620553625c12844a" id="r_aa039c28572a0155f620553625c12844a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa039c28572a0155f620553625c12844a">processUserInput</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *<a class="el" href="/documentation/api/-keypad-manager-8h/">userInput</a>)</td></tr>
+
+<tr class="memitem:a8a856db4b794d803839b44b7c30a30ca" id="r_a8a856db4b794d803839b44b7c30a30ca"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a856db4b794d803839b44b7c30a30ca">stream</a> ()</td></tr>
+
+<tr class="memitem:aa332d6aae5453f232d4671ee79229183" id="r_aa332d6aae5453f232d4671ee79229183"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa332d6aae5453f232d4671ee79229183">isKeyCombination</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *<a class="el" href="/documentation/api/-keypad-manager-8h/">userInput</a>)=0</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a493145dca3f0bad674d82483406c5841" id="r_a493145dca3f0bad674d82483406c5841"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-tool/">Tool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a493145dca3f0bad674d82483406c5841">tool</a></td></tr>
+<tr class="memdesc:a493145dca3f0bad674d82483406c5841"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tool that the state uses.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_game_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_state')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-game-state/">GameState</a></td></tr>
+<tr class="memitem:ac2c5fceb1201a48d407896c9d3534f5c inherit pub_methods_class_game_state" id="r_ac2c5fceb1201a48d407896c9d3534f5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">constructor</a> ()</td></tr>
+<tr class="memdesc:ac2c5fceb1201a48d407896c9d3534f5c inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a1084502432b9356606438d17034b4759 inherit pub_methods_class_game_state" id="r_a1084502432b9356606438d17034b4759"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="memitem:acd5b3ffbf3c1278e48821bf4a58df835 inherit pub_methods_class_game_state" id="r_acd5b3ffbf3c1278e48821bf4a58df835"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">suspend</a> (void *owner)</td></tr>
+
+<tr class="memitem:ad18693efd025b847b0516eb90bc6af7a inherit pub_methods_class_game_state" id="r_ad18693efd025b847b0516eb90bc6af7a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">resume</a> (void *owner)</td></tr>
+
+<tr class="memitem:a104b8113b6e7d3259f766a4c02d0231d inherit pub_methods_class_game_state" id="r_a104b8113b6e7d3259f766a4c02d0231d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processMessage</a> (void *owner, <a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="memitem:a21c34ca6b7c7bf1e1a9fcae27db60573 inherit pub_methods_class_game_state" id="r_a21c34ca6b7c7bf1e1a9fcae27db60573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">configureStage</a> (<a class="el" href="/documentation/api/struct-stage-spec/">StageSpec</a> *stageSpec, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> positionedActorsToIgnore)</td></tr>
+
+<tr class="memitem:a23551e76251919dc709b8fdc5e148ab3 inherit pub_methods_class_game_state" id="r_a23551e76251919dc709b8fdc5e148ab3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-u-i-container/">UIContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getUIContainer</a> ()</td></tr>
+
+<tr class="memitem:ad638f5fb85d5aded1e0e4638371bf1cf inherit pub_methods_class_game_state" id="r_ad638f5fb85d5aded1e0e4638371bf1cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-stage/">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getStage</a> ()</td></tr>
+
+<tr class="memitem:ae0afcddbe70fed962563aedb8892a5d1 inherit pub_methods_class_game_state" id="r_ae0afcddbe70fed962563aedb8892a5d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getBodyManager</a> ()</td></tr>
+
+<tr class="memitem:af7259fef0a92f26b185ab194b265e30b inherit pub_methods_class_game_state" id="r_af7259fef0a92f26b185ab194b265e30b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getColliderManager</a> ()</td></tr>
+
+<tr class="memitem:abb10b46f2513cbc1ae8d74796c6db7df inherit pub_methods_class_game_state" id="r_abb10b46f2513cbc1ae8d74796c6db7df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getLogicsClock</a> ()</td></tr>
+
+<tr class="memitem:aa212e6a934b8923e1022961d828e990c inherit pub_methods_class_game_state" id="r_aa212e6a934b8923e1022961d828e990c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getMessagingClock</a> ()</td></tr>
+
+<tr class="memitem:afd5ebecd75f029cb88cbbd142da5761e inherit pub_methods_class_game_state" id="r_afd5ebecd75f029cb88cbbd142da5761e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getAnimationsClock</a> ()</td></tr>
+
+<tr class="memitem:a74164cc1ec1f3b8dce71b7b70523d748 inherit pub_methods_class_game_state" id="r_a74164cc1ec1f3b8dce71b7b70523d748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getPhysicsClock</a> ()</td></tr>
+
+<tr class="memitem:a64496380da6f6f164b5890233b9ebbfd inherit pub_methods_class_game_state" id="r_a64496380da6f6f164b5890233b9ebbfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startClocks</a> ()</td></tr>
+<tr class="memdesc:a64496380da6f6f164b5890233b9ebbfd inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start all the clocks.  <br /></td></tr>
+
+<tr class="memitem:a377c35d2a84a822f4eddf3d25b68551d inherit pub_methods_class_game_state" id="r_a377c35d2a84a822f4eddf3d25b68551d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseClocks</a> ()</td></tr>
+<tr class="memdesc:a377c35d2a84a822f4eddf3d25b68551d inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause all the clocks.  <br /></td></tr>
+
+<tr class="memitem:a8a7183c7b40ecf0e2132a2d631955717 inherit pub_methods_class_game_state" id="r_a8a7183c7b40ecf0e2132a2d631955717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseClocks</a> ()</td></tr>
+<tr class="memdesc:a8a7183c7b40ecf0e2132a2d631955717 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause all the clocks.  <br /></td></tr>
+
+<tr class="memitem:acc936a857d930027bc3c674ffb312788 inherit pub_methods_class_game_state" id="r_acc936a857d930027bc3c674ffb312788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stopClocks</a> ()</td></tr>
+<tr class="memdesc:acc936a857d930027bc3c674ffb312788 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all the clocks.  <br /></td></tr>
+
+<tr class="memitem:ae816f38876b11964ded412d5250c6b3a inherit pub_methods_class_game_state" id="r_ae816f38876b11964ded412d5250c6b3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startLogics</a> ()</td></tr>
+<tr class="memdesc:ae816f38876b11964ded412d5250c6b3a inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for logics.  <br /></td></tr>
+
+<tr class="memitem:a6cb166cbd09067f621518bb164dedabc inherit pub_methods_class_game_state" id="r_a6cb166cbd09067f621518bb164dedabc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseLogics</a> ()</td></tr>
+<tr class="memdesc:a6cb166cbd09067f621518bb164dedabc inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for logics.  <br /></td></tr>
+
+<tr class="memitem:a90a493e84b03ebfe40e4a6ffc2b64316 inherit pub_methods_class_game_state" id="r_a90a493e84b03ebfe40e4a6ffc2b64316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseLogics</a> ()</td></tr>
+<tr class="memdesc:a90a493e84b03ebfe40e4a6ffc2b64316 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for logics.  <br /></td></tr>
+
+<tr class="memitem:a2709e6704a61143d9b62e2dc399b2c94 inherit pub_methods_class_game_state" id="r_a2709e6704a61143d9b62e2dc399b2c94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startMessaging</a> ()</td></tr>
+<tr class="memdesc:a2709e6704a61143d9b62e2dc399b2c94 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for delayed messages.  <br /></td></tr>
+
+<tr class="memitem:ab7ff5e372a77559f349db054f89fcdf9 inherit pub_methods_class_game_state" id="r_ab7ff5e372a77559f349db054f89fcdf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseMessaging</a> ()</td></tr>
+<tr class="memdesc:ab7ff5e372a77559f349db054f89fcdf9 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for delayed messages.  <br /></td></tr>
+
+<tr class="memitem:af354b139436674d30edb323780052a5f inherit pub_methods_class_game_state" id="r_af354b139436674d30edb323780052a5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseMessaging</a> ()</td></tr>
+<tr class="memdesc:af354b139436674d30edb323780052a5f inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for delayed messages.  <br /></td></tr>
+
+<tr class="memitem:aa09f85722c0a08209f5b10ce97898656 inherit pub_methods_class_game_state" id="r_aa09f85722c0a08209f5b10ce97898656"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startAnimations</a> ()</td></tr>
+<tr class="memdesc:aa09f85722c0a08209f5b10ce97898656 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for animations.  <br /></td></tr>
+
+<tr class="memitem:a45544cf873107505c9143382a1718364 inherit pub_methods_class_game_state" id="r_a45544cf873107505c9143382a1718364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseAnimations</a> ()</td></tr>
+<tr class="memdesc:a45544cf873107505c9143382a1718364 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for animations.  <br /></td></tr>
+
+<tr class="memitem:acdb523cbacf933386d5abfba117707c0 inherit pub_methods_class_game_state" id="r_acdb523cbacf933386d5abfba117707c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseAnimations</a> ()</td></tr>
+<tr class="memdesc:acdb523cbacf933386d5abfba117707c0 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for animations.  <br /></td></tr>
+
+<tr class="memitem:a401689dac569e8bc461f495146fa0429 inherit pub_methods_class_game_state" id="r_a401689dac569e8bc461f495146fa0429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startPhysics</a> ()</td></tr>
+<tr class="memdesc:a401689dac569e8bc461f495146fa0429 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for physics simulations.  <br /></td></tr>
+
+<tr class="memitem:aff74ba9e7a45ab44944960476526387c inherit pub_methods_class_game_state" id="r_aff74ba9e7a45ab44944960476526387c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pausePhysics</a> ()</td></tr>
+<tr class="memdesc:aff74ba9e7a45ab44944960476526387c inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for physics simulations.  <br /></td></tr>
+
+<tr class="memitem:a6c4ea60c535efe369521ace6e843ef15 inherit pub_methods_class_game_state" id="r_a6c4ea60c535efe369521ace6e843ef15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpausePhysics</a> ()</td></tr>
+<tr class="memdesc:a6c4ea60c535efe369521ace6e843ef15 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for physics simulations.  <br /></td></tr>
+
+<tr class="memitem:a3e84f0c8972b0b5bdaec53b132d7c70e inherit pub_methods_class_game_state" id="r_a3e84f0c8972b0b5bdaec53b132d7c70e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">transform</a> ()</td></tr>
+<tr class="memdesc:a3e84f0c8972b0b5bdaec53b132d7c70e inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the stage's children' global transformations.  <br /></td></tr>
+
+<tr class="memitem:aa40c9cf71f87d8f88967edb02ac7b64b inherit pub_methods_class_game_state" id="r_aa40c9cf71f87d8f88967edb02ac7b64b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">transformUI</a> ()</td></tr>
+<tr class="memdesc:aa40c9cf71f87d8f88967edb02ac7b64b inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the UI's children' global transformations.  <br /></td></tr>
+
+<tr class="memitem:ac2d7b76a5572a1531f5ba3d35950425d inherit pub_methods_class_game_state" id="r_ac2d7b76a5572a1531f5ba3d35950425d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">simulatePhysics</a> ()</td></tr>
+<tr class="memdesc:ac2d7b76a5572a1531f5ba3d35950425d inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue physics simulations.  <br /></td></tr>
+
+<tr class="memitem:a402d05e9ae69748a92cef0f4ec901601 inherit pub_methods_class_game_state" id="r_a402d05e9ae69748a92cef0f4ec901601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processCollisions</a> ()</td></tr>
+<tr class="memdesc:a402d05e9ae69748a92cef0f4ec901601 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test and process collisions./.  <br /></td></tr>
+
+<tr class="memitem:a32e7ce3a2fe4de842e72beedddcef522 inherit pub_methods_class_game_state" id="r_a32e7ce3a2fe4de842e72beedddcef522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">propagateMessage</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> message)</td></tr>
+
+<tr class="memitem:a8bf288798fc36598d7d6c47b764b7ff5 inherit pub_methods_class_game_state" id="r_a8bf288798fc36598d7d6c47b764b7ff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">propagateString</a> (const char *string)</td></tr>
+
+<tr class="memitem:a70d2e075d2ed029139ae2b253ab75123 inherit pub_methods_class_game_state" id="r_a70d2e075d2ed029139ae2b253ab75123"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-actor/">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getActorByName</a> (const char *actorName)</td></tr>
+
+<tr class="memitem:a8a25bd5c5f65c27ce0f41c4c560bfc9e inherit pub_methods_class_game_state" id="r_a8a25bd5c5f65c27ce0f41c4c560bfc9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">showActorWithName</a> (const char *actorName)</td></tr>
+
+<tr class="memitem:aabd979542e6424b21af93400a816cb92 inherit pub_methods_class_game_state" id="r_aabd979542e6424b21af93400a816cb92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">hideActorWithName</a> (const char *actorName)</td></tr>
+
+<tr class="memitem:adef9cc38489ed56819e798343aa51b31 inherit pub_methods_class_game_state" id="r_adef9cc38489ed56819e798343aa51b31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">changeFramerate</a> (<a class="el" href="/documentation/api/-types-8h/">int16</a> <a class="el" href="/documentation/api/-frame-rate-8h/">targetFPS</a>, <a class="el" href="/documentation/api/-types-8h/">int32</a> duration)</td></tr>
+
+<tr class="memitem:a9db08b3681ac1c59c9146bcd6d9d7e69 inherit pub_methods_class_game_state" id="r_a9db08b3681ac1c59c9146bcd6d9d7e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">streamAll</a> ()</td></tr>
+<tr class="memdesc:a9db08b3681ac1c59c9146bcd6d9d7e69 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force to completely stream in and out actors and to initialize all.  <br /></td></tr>
+
+<tr class="memitem:a37b0d716878be7b5a715c677a7afc67d inherit pub_methods_class_game_state" id="r_a37b0d716878be7b5a715c677a7afc67d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">isVersusMode</a> ()</td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-tool-state/">ToolState</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-game-state/">GameState</a></p>
+<p>Defines an interface for game states that uses various debug tools. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8h-source/">36</a> of file <a class="el" href="/documentation/api/-tool-state-8h-source/">ToolState.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aae998fe130a802d562b01e3c79e1283a" name="aae998fe130a802d562b01e3c79e1283a"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::constructor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class' constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8c-source/">26</a> of file <a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{</div>
+<div class="line"><span class="lineno">   28</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   29</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="aclass_tool_state_html_a493145dca3f0bad674d82483406c5841"><div class="ttname"><a href="#a493145dca3f0bad674d82483406c5841">ToolState::tool</a></div><div class="ttdeci">Tool tool</div><div class="ttdoc">The tool that the state uses.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-tool-state-8h-source/">ToolState.h:39</a></div></div>
+</div>
+</div>
+</div>
+<a id="add6dcf9daccc39fcf24c006c1fcdd6ac" name="add6dcf9daccc39fcf24c006c1fcdd6ac"></a>
+<h2 class="memtitle">enter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::enter </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepares the object to enter this state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is entering in this state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8c-source/">46</a> of file <a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>    Base::enter(<span class="keyword">this</span>, owner);</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="/documentation/api/class-game-state/">GameState::pauseClocks</a>(GameState::safeCast(VUEngine::getPreviousState()));</div>
+<div class="line"><span class="lineno">   50</span>    <a class="code hl_function" href="/documentation/api/class-game-state/">GameState::startClocks</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    this-&gt;<a class="code hl_function" href="#a8a856db4b794d803839b44b7c30a30ca">stream</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   53</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-game-state/">transform</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-game-state/">updatePhysics</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   55</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-game-state/">processCollisions</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>))</div>
+<div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="/documentation/api/class-tool/">Tool::setStage</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>, <a class="code hl_function" href="/documentation/api/class-game-state/">GameState::getStage</a>(GameState::safeCast(VUEngine::getPreviousState())));</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="/documentation/api/class-tool/">Tool::show</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="aclass_game_state_html_a377c35d2a84a822f4eddf3d25b68551d"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::pauseClocks</a></div><div class="ttdeci">void pauseClocks()</div><div class="ttdoc">Pause all the clocks.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8c-source/">GameState.c:378</a></div></div>
+<div class="ttc" id="aclass_game_state_html_a54eca6dd40ec6c55068110e095b2aed8"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::transform</a></div><div class="ttdeci">bool transform</div><div class="ttdoc">Flags to enable or disable the transformations.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8h-source/">GameState.h:72</a></div></div>
+<div class="ttc" id="aclass_game_state_html_a5e0e98cddc6a8058abc0be98d1c670ee"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::processCollisions</a></div><div class="ttdeci">bool processCollisions</div><div class="ttdoc">Flags to enable or disable the collision detection and processing.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8h-source/">GameState.h:78</a></div></div>
+<div class="ttc" id="aclass_game_state_html_a5e4243126f54caa4b5cdf03f1250fc0c"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::updatePhysics</a></div><div class="ttdeci">bool updatePhysics</div><div class="ttdoc">Flags to enable or disable the physical simulations.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8h-source/">GameState.h:75</a></div></div>
+<div class="ttc" id="aclass_game_state_html_a64496380da6f6f164b5890233b9ebbfd"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::startClocks</a></div><div class="ttdeci">void startClocks()</div><div class="ttdoc">Start all the clocks.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8c-source/">GameState.c:368</a></div></div>
+<div class="ttc" id="aclass_game_state_html_ad638f5fb85d5aded1e0e4638371bf1cf"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::getStage</a></div><div class="ttdeci">Stage getStage()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8c-source/">GameState.c:309</a></div></div>
+<div class="ttc" id="aclass_tool_html_a6f1be44b6c42975d21263b4e6c08ada8"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::setStage</a></div><div class="ttdeci">void setStage(Stage stage)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-tool-8c-source/">Tool.c:69</a></div></div>
+<div class="ttc" id="aclass_tool_html_ae4fccc3f937a74590fb16a303d8e8999"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::show</a></div><div class="ttdeci">virtual void show()=0</div><div class="ttdoc">Show the tool.</div></div>
+<div class="ttc" id="aclass_tool_state_html_a8a856db4b794d803839b44b7c30a30ca"><div class="ttname"><a href="#a8a856db4b794d803839b44b7c30a30ca">ToolState::stream</a></div><div class="ttdeci">override bool stream()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-tool-state-8c-source/">ToolState.c:99</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3c57f1961529674f41e1deec787659c1" name="a3c57f1961529674f41e1deec787659c1"></a>
+<h2 class="memtitle">execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::execute </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Updates the object in this state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is in this state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8c-source/">66</a> of file <a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>{</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>))</div>
+<div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_function" href="/documentation/api/class-tool/">Tool::update</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+<div class="ttc" id="aclass_tool_html_ac7c4c30b4718852e095a26e9665ecb08"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::update</a></div><div class="ttdeci">virtual void update()=0</div><div class="ttdoc">Update the tool&#39;s state.</div></div>
+</div>
+</div>
+</div>
+<a id="ae1226abe229f0478007c104316f9ce4d" name="ae1226abe229f0478007c104316f9ce4d"></a>
+<h2 class="memtitle">exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::exit </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepares the object to exit this state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is exiting this state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8c-source/">76</a> of file <a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>{</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>))</div>
+<div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_function" href="/documentation/api/class-tool/">Tool::hide</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>);</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_function" href="/documentation/api/class-game-state/">GameState::unpauseClocks</a>(GameState::safeCast(VUEngine::getPreviousState()));</div>
+<div class="line"><span class="lineno">   84</span>    Base::exit(<span class="keyword">this</span>, owner);</div>
+<div class="line"><span class="lineno">   85</span>}</div>
+<div class="ttc" id="aclass_game_state_html_a8a7183c7b40ecf0e2132a2d631955717"><div class="ttname"><a href="/documentation/api/class-game-state/">GameState::unpauseClocks</a></div><div class="ttdeci">void unpauseClocks()</div><div class="ttdoc">Unpause all the clocks.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-game-state-8c-source/">GameState.c:388</a></div></div>
+<div class="ttc" id="aclass_tool_html_a919f8272ce78d0377f99e8ba9b64f8a7"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::hide</a></div><div class="ttdeci">virtual void hide()=0</div><div class="ttdoc">Hide the tool.</div></div>
+</div>
+</div>
+</div>
+<a id="aa332d6aae5453f232d4671ee79229183" name="aa332d6aae5453f232d4671ee79229183"></a>
+<h2 class="memtitle">isKeyCombination()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a> ToolState::isKeyCombination </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *</td>          <td class="paramname"><span class="paramname"><em>userInput</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the provided user input unlocks the tool managed by this state. </p><dl class="section return"><dt>Returns</dt><dd>True if the input matches the combination defined by the state </dd></dl>
+
+<p>Implemented in <a class="el" href="/documentation/api/class-animation-inspector-state/">AnimationInspectorState</a>, <a class="el" href="/documentation/api/class-debug-state/">DebugState</a>, <a class="el" href="/documentation/api/class-sound-test-state/">SoundTestState</a>, and <a class="el" href="/documentation/api/class-stage-editor-state/">StageEditorState</a>.</p>
+
+</div>
+</div>
+<a id="aa039c28572a0155f620553625c12844a" name="aa039c28572a0155f620553625c12844a"></a>
+<h2 class="memtitle">processUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::processUserInput </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *</td>          <td class="paramname"><span class="paramname"><em>userInput</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process the provided user input. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">userInput</td><td>Struct with the current user input information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8c-source/">89</a> of file <a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>{</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>))</div>
+<div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="/documentation/api/class-tool/">Tool::processUserInput</a>(this-&gt;<a class="code hl_variable" href="#a493145dca3f0bad674d82483406c5841">tool</a>, <a class="code hl_variable" href="/documentation/api/-keypad-manager-8h/">userInput</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-user-input/">releasedKey</a>);</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span>}</div>
+<div class="ttc" id="a_keypad_manager_8h_html_a54b536a35cc9ae7d120b2e7f56e9effb"><div class="ttname"><a href="/documentation/api/-keypad-manager-8h/">userInput</a></div><div class="ttdeci">UserInput userInput</div><div class="ttdoc">Struct that holds the user&#39;s input during the last game frame.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:112</a></div></div>
+<div class="ttc" id="aclass_tool_html_ac206bfee6a8e933ccb5d8a3fe5afbbd7"><div class="ttname"><a href="/documentation/api/class-tool/">Tool::processUserInput</a></div><div class="ttdeci">virtual void processUserInput(uint16 pressedKey)=0</div></div>
+<div class="ttc" id="astruct_user_input_html_ae4a3542d026b2885ec8068e8f1a35398"><div class="ttname"><a href="/documentation/api/struct-user-input/">UserInput::releasedKey</a></div><div class="ttdeci">uint16 releasedKey</div><div class="ttdoc">Released key(s) just in the last cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:75</a></div></div>
+</div>
+</div>
+</div>
+<a id="a8a856db4b794d803839b44b7c30a30ca" name="a8a856db4b794d803839b44b7c30a30ca"></a>
+<h2 class="memtitle">stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> ToolState::stream </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stream in or out the stage actors within or outside the camera's range. </p><dl class="section return"><dt>Returns</dt><dd>True if at least some actor was streamed in or out </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8c-source/">99</a> of file <a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  102</span>}</div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a493145dca3f0bad674d82483406c5841" name="a493145dca3f0bad674d82483406c5841"></a>
+<h2 class="memtitle">tool</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-tool/">Tool</a> ToolState::tool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The tool that the state uses. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-tool-state-8h-source/">39</a> of file <a class="el" href="/documentation/api/-tool-state-8h-source/">ToolState.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/State/GameState/ToolStates/<a class="el" href="/documentation/api/-tool-state-8h-source/">ToolState.h</a></li>
+<li>VUEngine-Core/source/State/GameState/ToolStates/<a class="el" href="/documentation/api/-tool-state-8c-source/">ToolState.c</a></li>
+</ul>
+</div>
+
+
+</div>

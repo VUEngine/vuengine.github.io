@@ -1,0 +1,123 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "SRAMManager.c File Reference"
+permalink: documentation/api/-s-r-a-m-manager-8c/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-d9d4eb5f564a24519992882a131745ab/">Hardware</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">SRAMManager.c File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="/documentation/api/-s-r-a-m-manager-8h-source/">SRAMManager.h</a>&quot;</code><br />
+</div>
+<p><a href="/documentation/api/-s-r-a-m-manager-8c-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9b30b728725c268ba042f2a465f4212a" id="r_a9b30b728725c268ba042f2a465f4212a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b30b728725c268ba042f2a465f4212a">__SRAM_ACCESS_DELAY</a>&#160;&#160;&#160;200</td></tr>
+
+<tr class="memitem:a946cb35ed26672fb34d4c4de1f2d503b" id="r_a946cb35ed26672fb34d4c4de1f2d503b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a946cb35ed26672fb34d4c4de1f2d503b">__SRAM_DUMMY_READ_CYCLES</a>&#160;&#160;&#160;8</td></tr>
+
+<tr class="memitem:a90a9e3365c1daf2be5d9c751ba0f9889" id="r_a90a9e3365c1daf2be5d9c751ba0f9889"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a9e3365c1daf2be5d9c751ba0f9889">__SRAM_DUMMY_READ_LENGTH</a>&#160;&#160;&#160;100</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac48a3806bf276de61b1a7d8b59f85969" id="r_ac48a3806bf276de61b1a7d8b59f85969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac48a3806bf276de61b1a7d8b59f85969">_sramBssEnd</a></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9b30b728725c268ba042f2a465f4212a" name="a9b30b728725c268ba042f2a465f4212a"></a>
+<h2 class="memtitle">__SRAM_ACCESS_DELAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SRAM_ACCESS_DELAY&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-s-r-a-m-manager-8c-source/">26</a> of file <a class="el" href="/documentation/api/-s-r-a-m-manager-8c-source/">SRAMManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a946cb35ed26672fb34d4c4de1f2d503b" name="a946cb35ed26672fb34d4c4de1f2d503b"></a>
+<h2 class="memtitle">__SRAM_DUMMY_READ_CYCLES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SRAM_DUMMY_READ_CYCLES&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-s-r-a-m-manager-8c-source/">27</a> of file <a class="el" href="/documentation/api/-s-r-a-m-manager-8c-source/">SRAMManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a90a9e3365c1daf2be5d9c751ba0f9889" name="a90a9e3365c1daf2be5d9c751ba0f9889"></a>
+<h2 class="memtitle">__SRAM_DUMMY_READ_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SRAM_DUMMY_READ_LENGTH&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-s-r-a-m-manager-8c-source/">28</a> of file <a class="el" href="/documentation/api/-s-r-a-m-manager-8c-source/">SRAMManager.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ac48a3806bf276de61b1a7d8b59f85969" name="ac48a3806bf276de61b1a7d8b59f85969"></a>
+<h2 class="memtitle">_sramBssEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> _sramBssEnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div>
+
+
+</div>

@@ -1,0 +1,96 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Size.h File Reference"
+permalink: documentation/api/-size-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-2f752e723c99ee546f6731fed3bab5b6/">Base</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-bacca08c3e1f2556ee67d26834d238bb/">Math</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Size.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-object-8h-source/">Object.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-math-8h-source/">Math.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-size-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-size/">Size</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac7aadd56147401dc2ae1923d86bcc6c0" id="r_ac7aadd56147401dc2ae1923d86bcc6c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-size/">Size</a> <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7aadd56147401dc2ae1923d86bcc6c0">getFromPixelSize</a> (<a class="el" href="/documentation/api/struct-pixel-size/">PixelSize</a> pixelSize)</td></tr>
+
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac7aadd56147401dc2ae1923d86bcc6c0" name="ac7aadd56147401dc2ae1923d86bcc6c0"></a>
+<h2 class="memtitle">getFromPixelSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-size/">Size</a> getFromPixelSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-pixel-size/">PixelSize</a></td>          <td class="paramname"><span class="paramname"><em>pixelSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert a <a class="el" href="/documentation/api/struct-pixel-size/">PixelSize</a> struct to a <a class="el" href="/documentation/api/struct-size/">Size</a> one. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">pixelSize</td><td><a class="el" href="/documentation/api/struct-pixel-size/">PixelSize</a> struct to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/struct-size/">Size</a> struct </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-size-8h-source/">1</a> of file <a class="el" href="/documentation/api/-size-8h-source/">Size.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>{</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">return</span> (<a class="code hl_class" href="/documentation/api/struct-size/">Size</a>)</div>
+<div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(pixelSize.<a class="code hl_variable" href="/documentation/api/struct-pixel-size/">x</a>),</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(pixelSize.<a class="code hl_variable" href="/documentation/api/struct-pixel-size/">y</a>),</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(pixelSize.<a class="code hl_variable" href="/documentation/api/struct-pixel-size/">z</a>)</div>
+<div class="line"><span class="lineno">   52</span>    };</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a23e8e373f81337a78ab83b09c1559af1"><div class="ttname"><a href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a></div><div class="ttdeci">#define __PIXELS_TO_METERS(pixels)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:177</a></div></div>
+<div class="ttc" id="astruct_pixel_size_html_a8e9c17677746eccee38bec5d599bf966"><div class="ttname"><a href="/documentation/api/struct-pixel-size/">PixelSize::x</a></div><div class="ttdeci">uint16 x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:91</a></div></div>
+<div class="ttc" id="astruct_pixel_size_html_abc9af249545e2de196bece99f11df438"><div class="ttname"><a href="/documentation/api/struct-pixel-size/">PixelSize::y</a></div><div class="ttdeci">uint16 y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:92</a></div></div>
+<div class="ttc" id="astruct_pixel_size_html_ae8589c0bfd78a1cd95d7dae1e39fff2d"><div class="ttname"><a href="/documentation/api/struct-pixel-size/">PixelSize::z</a></div><div class="ttdeci">uint16 z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:93</a></div></div>
+<div class="ttc" id="astruct_size_html"><div class="ttname"><a href="/documentation/api/struct-size/">Size</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:81</a></div></div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>

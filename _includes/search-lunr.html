@@ -9,7 +9,7 @@
     const resultsContainer = document.getElementById('lunrsearchresults');
     if (term && idx) {
       resultsContainer.innerHTML = resultsContainer.innerHTML;
-      const results = idx.search('*' + term + '*');
+      const results = idx.search('*' + term + '*').splice(0, 20);
       resultsLength = results.length;
       active = -1;
       if (resultsLength > 0) {
@@ -41,7 +41,7 @@
 
           resultsContainer.innerHTML =
             resultsContainer.innerHTML +
-            '<a href="' + url + '" class="list-group-item d-flex gap-3" onmouseover="setActive(' + i + ')">' +
+            '<a href="' + url + '" class="list-group-item d-flex gap-3" onmousemove="setActive(' + i + ', false)">' +
             '<span class="icon"><i class="' + icon + '"></i></span>' +
             '<span class="page flex-grow-1 d-flex flex-column">' +
             '<span class="snippet text-nowrap">' + context + '</span>' +
@@ -59,12 +59,14 @@
     return false;
   }
 
-  setActive = id => {
+  setActive = (id, scrollIntoView) => {
     active = Math.min(Math.max(id, 0), resultsLength - 1);
     document.querySelectorAll('#lunrsearchresults > a').forEach((result, i) => {
       if (i === active) {
         result.classList.add('active');
-        result.scrollIntoView(false);
+        if (scrollIntoView) {
+          result.scrollIntoView(false);
+        }
       } else {
         result.classList.remove('active');
       }
@@ -83,18 +85,20 @@
       e.preventDefault();
       document.getElementById('siteSearchToggle').click();
     } else if (e.key === 'ArrowUp') {
-      setActive(active - 1);
+      setActive(active - 1, true);
     } else if (e.key === 'ArrowDown') {
-      setActive(active + 1);
+      setActive(active + 1, true);
     } else if (e.key === 'Enter') {
       navigateToActive();
     }
   }
 
   document.getElementById('siteSearch').addEventListener('shown.bs.modal', async () => {
-    document.getElementById('lunrsearch').focus();
+    const searchInput = document.getElementById('lunrsearch');
+    const resultsContainer = document.getElementById('lunrsearchresults');
 
     if (!documents) {
+      searchInput.setAttribute('disabled', 'disabled');
       const response = await fetch('/site-search-index/');
       documents = await response.json();
       idx = lunr(function () {
@@ -104,7 +108,11 @@
         Object.values(documents).forEach(doc => {
           this.add(doc)
         }, this)
+        searchInput.removeAttribute('disabled');
+        searchInput.focus();
       });
+    } else {
+      searchInput.focus();
     }
   });
 </script>

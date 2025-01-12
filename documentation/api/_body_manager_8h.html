@@ -1,0 +1,76 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "BodyManager.h File Reference"
+permalink: documentation/api/-body-manager-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3d59fd1310cba71f74cd42cf97b49f36/">Physics</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">BodyManager.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-body-8h-source/">Body.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-component-manager-8h-source/">ComponentManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-entity-8h-source/">Entity.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-clock-8h-source/">Clock.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-body-manager-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-body-manager/">BodyManager</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a280c49e9c3775aaf1d1e1d17795d850c" id="r_a280c49e9c3775aaf1d1e1d17795d850c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a280c49e9c3775aaf1d1e1d17795d850c">__PHYSICS_TIME_ELAPSED_STEP</a></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a280c49e9c3775aaf1d1e1d17795d850c" name="a280c49e9c3775aaf1d1e1d17795d850c"></a>
+<h2 class="memtitle">__PHYSICS_TIME_ELAPSED_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __PHYSICS_TIME_ELAPSED_STEP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                            <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_DIV</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__1I_FIX7_9_EXT</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_DIV</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-config-8h/">__TARGET_FPS</a>), \</div>
+<div class="line">                                            <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a>(<a class="code hl_define" href="/documentation/api/-config-8h/">__PHYSICS_TIME_ELAPSED_DIVISOR</a>)))</div>
+<div class="ttc" id="a_config_8h_html_a7b5d856192e1cc785ac1db005e4ebb9b"><div class="ttname"><a href="/documentation/api/-config-8h/">__TARGET_FPS</a></div><div class="ttdeci">#define __TARGET_FPS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:137</a></div></div>
+<div class="ttc" id="a_config_8h_html_af4fbd68e970d4ef2c2580fb7c7353b64"><div class="ttname"><a href="/documentation/api/-config-8h/">__PHYSICS_TIME_ELAPSED_DIVISOR</a></div><div class="ttdeci">#define __PHYSICS_TIME_ELAPSED_DIVISOR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:308</a></div></div>
+<div class="ttc" id="a_math_8h_html_a4d370dfe9c18ffb7218b635540fe775c"><div class="ttname"><a href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a></div><div class="ttdeci">#define __I_TO_FIX7_9_EXT(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:88</a></div></div>
+<div class="ttc" id="a_math_8h_html_a8966f418fe5a5ae450241c36cbb34950"><div class="ttname"><a href="/documentation/api/-math-8h/">__1I_FIX7_9_EXT</a></div><div class="ttdeci">#define __1I_FIX7_9_EXT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:49</a></div></div>
+<div class="ttc" id="a_math_8h_html_a9b0b8346fead85f7c33d071f41b172fe"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX7_9_EXT_DIV</a></div><div class="ttdeci">#define __FIX7_9_EXT_DIV(a, b)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:162</a></div></div>
+</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-body-manager-8h-source/">26</a> of file <a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span><span class="preprocessor">#define __PHYSICS_TIME_ELAPSED_STEP         __FIX7_9_EXT_DIV(__1I_FIX7_9_EXT, __FIX7_9_EXT_DIV(__I_TO_FIX7_9_EXT(__TARGET_FPS), \</span></div>
+<div class="line"><span class="lineno">   27</span><span class="preprocessor">                                            __I_TO_FIX7_9_EXT(__PHYSICS_TIME_ELAPSED_DIVISOR)))</span></div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>

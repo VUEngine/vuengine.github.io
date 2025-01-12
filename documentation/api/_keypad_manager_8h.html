@@ -1,0 +1,1293 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "KeypadManager.h File Reference"
+permalink: documentation/api/-keypad-manager-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-d9d4eb5f564a24519992882a131745ab/">Hardware</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">KeypadManager.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-listener-object-8h-source/">ListenerObject.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-keypad-manager-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-user-input/">UserInput</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a49e8cca9d488720735000994b2cb7e53" id="r_a49e8cca9d488720735000994b2cb7e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49e8cca9d488720735000994b2cb7e53">__S_INTDIS</a>&#160;&#160;&#160;0x80</td></tr>
+
+<tr class="memitem:a9a031b110557535b042a5a38d9a199c4" id="r_a9a031b110557535b042a5a38d9a199c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a031b110557535b042a5a38d9a199c4">__S_SW</a>&#160;&#160;&#160;0x20</td></tr>
+
+<tr class="memitem:aafc477e2a97601b64500b97eff846bd8" id="r_aafc477e2a97601b64500b97eff846bd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc477e2a97601b64500b97eff846bd8">__S_SWCK</a>&#160;&#160;&#160;0x10</td></tr>
+
+<tr class="memitem:a0a80d1ff679ffefef3fbf2ff972b9f86" id="r_a0a80d1ff679ffefef3fbf2ff972b9f86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a80d1ff679ffefef3fbf2ff972b9f86">__S_HW</a>&#160;&#160;&#160;0x04</td></tr>
+
+<tr class="memitem:aaa7f404af9538b61fbe6f875d189f304" id="r_aaa7f404af9538b61fbe6f875d189f304"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa7f404af9538b61fbe6f875d189f304">__S_STAT</a>&#160;&#160;&#160;0x02</td></tr>
+
+<tr class="memitem:af83666c1ab0f18c638134b7bbfb1b1d1" id="r_af83666c1ab0f18c638134b7bbfb1b1d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83666c1ab0f18c638134b7bbfb1b1d1">__S_HWDIS</a>&#160;&#160;&#160;0x01</td></tr>
+
+<tr class="memitem:aee8c86ae690bb66506d00d8884883767" id="r_aee8c86ae690bb66506d00d8884883767"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>&#160;&#160;&#160;0x000</td></tr>
+
+<tr class="memitem:ae00adb6956a8b899ced027dcdcef2a6d" id="r_ae00adb6956a8b899ced027dcdcef2a6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae00adb6956a8b899ced027dcdcef2a6d">K_PWR</a>&#160;&#160;&#160;0x0001</td></tr>
+
+<tr class="memitem:abb2521224968c3108e7ad5f9c5f9ac5c" id="r_abb2521224968c3108e7ad5f9c5f9ac5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2521224968c3108e7ad5f9c5f9ac5c">K_SGN</a>&#160;&#160;&#160;0x0002</td></tr>
+
+<tr class="memitem:a76a28d0e66bda21347030a2ad69ff086" id="r_a76a28d0e66bda21347030a2ad69ff086"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76a28d0e66bda21347030a2ad69ff086">K_A</a>&#160;&#160;&#160;0x0004</td></tr>
+
+<tr class="memitem:a73bafe212f4c3da58fea7ffdf1a69d73" id="r_a73bafe212f4c3da58fea7ffdf1a69d73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73bafe212f4c3da58fea7ffdf1a69d73">K_B</a>&#160;&#160;&#160;0x0008</td></tr>
+
+<tr class="memitem:a799220b761810b6e5816f30f66658e83" id="r_a799220b761810b6e5816f30f66658e83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a799220b761810b6e5816f30f66658e83">K_RT</a>&#160;&#160;&#160;0x0010</td></tr>
+
+<tr class="memitem:ae21fa6d2443aa7843ea33fe5e14e4fb9" id="r_ae21fa6d2443aa7843ea33fe5e14e4fb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae21fa6d2443aa7843ea33fe5e14e4fb9">K_LT</a>&#160;&#160;&#160;0x0020</td></tr>
+
+<tr class="memitem:ac8144b2d9eb00c3855307b88a06d2f7d" id="r_ac8144b2d9eb00c3855307b88a06d2f7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8144b2d9eb00c3855307b88a06d2f7d">K_RU</a>&#160;&#160;&#160;0x0040</td></tr>
+
+<tr class="memitem:a6b7a2ed25b8e47ae2c8d0a3175769f45" id="r_a6b7a2ed25b8e47ae2c8d0a3175769f45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b7a2ed25b8e47ae2c8d0a3175769f45">K_RR</a>&#160;&#160;&#160;0x0080</td></tr>
+
+<tr class="memitem:a256727a287432e85a2853ed910ddcdb1" id="r_a256727a287432e85a2853ed910ddcdb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a256727a287432e85a2853ed910ddcdb1">K_LR</a>&#160;&#160;&#160;0x0100</td></tr>
+
+<tr class="memitem:a9bcd345e8b4066cfa03dd33d54830c1d" id="r_a9bcd345e8b4066cfa03dd33d54830c1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bcd345e8b4066cfa03dd33d54830c1d">K_LL</a>&#160;&#160;&#160;0x0200</td></tr>
+
+<tr class="memitem:a6fb1b0ed3b0114fc650c67d2d184f47f" id="r_a6fb1b0ed3b0114fc650c67d2d184f47f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fb1b0ed3b0114fc650c67d2d184f47f">K_LD</a>&#160;&#160;&#160;0x0400</td></tr>
+
+<tr class="memitem:a3bcadfdace857ed81ce310eb578f311e" id="r_a3bcadfdace857ed81ce310eb578f311e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcadfdace857ed81ce310eb578f311e">K_LU</a>&#160;&#160;&#160;0x0800</td></tr>
+
+<tr class="memitem:a9d63a732e682e7b6bd3f03efd77e09f2" id="r_a9d63a732e682e7b6bd3f03efd77e09f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d63a732e682e7b6bd3f03efd77e09f2">K_STA</a>&#160;&#160;&#160;0x1000</td></tr>
+
+<tr class="memitem:a06334ffd827ccad3f6a758b82535163e" id="r_a06334ffd827ccad3f6a758b82535163e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06334ffd827ccad3f6a758b82535163e">K_SEL</a>&#160;&#160;&#160;0x2000</td></tr>
+
+<tr class="memitem:a960f52f595fc2ea31b7ffffa22781434" id="r_a960f52f595fc2ea31b7ffffa22781434"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a960f52f595fc2ea31b7ffffa22781434">K_RL</a>&#160;&#160;&#160;0x4000</td></tr>
+
+<tr class="memitem:a4a80c0ddb4f32c6f21035f1a7fe84c32" id="r_a4a80c0ddb4f32c6f21035f1a7fe84c32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a80c0ddb4f32c6f21035f1a7fe84c32">K_RD</a>&#160;&#160;&#160;0x8000</td></tr>
+
+<tr class="memitem:ac627cc4c3da16be4b74f0a4ab036a603" id="r_ac627cc4c3da16be4b74f0a4ab036a603"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac627cc4c3da16be4b74f0a4ab036a603">K_ANY</a>&#160;&#160;&#160;0xFFFC</td></tr>
+
+<tr class="memitem:af923bf021ee5e3bf8d71c948da0151b1" id="r_af923bf021ee5e3bf8d71c948da0151b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af923bf021ee5e3bf8d71c948da0151b1">K_BTNS</a>&#160;&#160;&#160;0x303C</td></tr>
+
+<tr class="memitem:a52d9081be244031dd5b5b4141fe7ebc3" id="r_a52d9081be244031dd5b5b4141fe7ebc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52d9081be244031dd5b5b4141fe7ebc3">K_PADS</a>&#160;&#160;&#160;0xCFC0</td></tr>
+
+<tr class="memitem:aad5e62a15285ae4e25b5c6b5b343366b" id="r_aad5e62a15285ae4e25b5c6b5b343366b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5e62a15285ae4e25b5c6b5b343366b">K_LPAD</a>&#160;&#160;&#160;0x0F00</td></tr>
+
+<tr class="memitem:a44e052513cfcebb1845d19f70041f17b" id="r_a44e052513cfcebb1845d19f70041f17b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44e052513cfcebb1845d19f70041f17b">K_RPAD</a>&#160;&#160;&#160;0xC0C0</td></tr>
+
+<tr class="memitem:a09500fdfd4514f39b6d32a69bbd1d8f2" id="r_a09500fdfd4514f39b6d32a69bbd1d8f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09500fdfd4514f39b6d32a69bbd1d8f2">__KEY_NONE</a>&#160;&#160;&#160;0x0000</td></tr>
+
+<tr class="memitem:a5e07251b878c4c3ed258ffd5d9f96fa8" id="r_a5e07251b878c4c3ed258ffd5d9f96fa8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e07251b878c4c3ed258ffd5d9f96fa8">__KEY_PRESSED</a>&#160;&#160;&#160;0x0001</td></tr>
+
+<tr class="memitem:af6937592b849786a4f26869d3f4f8eb7" id="r_af6937592b849786a4f26869d3f4f8eb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6937592b849786a4f26869d3f4f8eb7">__KEY_RELEASED</a>&#160;&#160;&#160;0x0010</td></tr>
+
+<tr class="memitem:a2652ac5049ead1869aabfca33561d6a5" id="r_a2652ac5049ead1869aabfca33561d6a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2652ac5049ead1869aabfca33561d6a5">__KEY_HOLD</a>&#160;&#160;&#160;0x0100</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:adaf3925d035962d6fd197f17d0069d0d" id="r_adaf3925d035962d6fd197f17d0069d0d"><td class="memItemLeft" align="right" valign="top">typedef struct UserInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf3925d035962d6fd197f17d0069d0d">UserInput</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a58b338d169e4745e724533c8d4599bbe" id="r_a58b338d169e4745e724533c8d4599bbe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b338d169e4745e724533c8d4599bbe">registerEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, EventListener callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a37a63659f86c863b00229252591b762c" id="r_a37a63659f86c863b00229252591b762c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37a63659f86c863b00229252591b762c">unregisterEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, EventListener callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:afd48c4fe243511bcd1ba689881d187df" id="r_afd48c4fe243511bcd1ba689881d187df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd48c4fe243511bcd1ba689881d187df">interruptHandler</a> ()</td></tr>
+<tr class="memdesc:afd48c4fe243511bcd1ba689881d187df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt handler for keypad's interrupts.  <br /></td></tr>
+
+<tr class="memitem:ab9d3f06dc4ef871fad50465095b5ea32" id="r_ab9d3f06dc4ef871fad50465095b5ea32"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d3f06dc4ef871fad50465095b5ea32">reset</a> ()</td></tr>
+<tr class="memdesc:ab9d3f06dc4ef871fad50465095b5ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:a0a87bc76d9e423caf9fa05c72764f88e" id="r_a0a87bc76d9e423caf9fa05c72764f88e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a87bc76d9e423caf9fa05c72764f88e">enable</a> ()</td></tr>
+<tr class="memdesc:a0a87bc76d9e423caf9fa05c72764f88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable user input.  <br /></td></tr>
+
+<tr class="memitem:a003afeeaf2020c2a9fac925d4b01711c" id="r_a003afeeaf2020c2a9fac925d4b01711c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a003afeeaf2020c2a9fac925d4b01711c">disable</a> ()</td></tr>
+<tr class="memdesc:a003afeeaf2020c2a9fac925d4b01711c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable user input.  <br /></td></tr>
+
+<tr class="memitem:a8934d41bb93ccd3e47fa764673093f01" id="r_a8934d41bb93ccd3e47fa764673093f01"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8934d41bb93ccd3e47fa764673093f01">isEnabled</a> ()</td></tr>
+
+<tr class="memitem:aced80f3e5c784cb734a797a599c84ab6" id="r_aced80f3e5c784cb734a797a599c84ab6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-user-input/">UserInput</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aced80f3e5c784cb734a797a599c84ab6">readUserInput</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> waitForStableReading)</td></tr>
+
+<tr class="memitem:a1747514a0fec86b3ae73a89b77174484" id="r_a1747514a0fec86b3ae73a89b77174484"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1747514a0fec86b3ae73a89b77174484">enableDummyKey</a> ()</td></tr>
+<tr class="memdesc:a1747514a0fec86b3ae73a89b77174484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the dummy key to force user input processing.  <br /></td></tr>
+
+<tr class="memitem:aab8c4ea41478e3cbc331a3f130043bc1" id="r_aab8c4ea41478e3cbc331a3f130043bc1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab8c4ea41478e3cbc331a3f130043bc1">disableDummyKey</a> ()</td></tr>
+<tr class="memdesc:aab8c4ea41478e3cbc331a3f130043bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the dummy key to not enforce user input processing.  <br /></td></tr>
+
+<tr class="memitem:a77373051e414b6b5b118f6178e270512" id="r_a77373051e414b6b5b118f6178e270512"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77373051e414b6b5b118f6178e270512">registerInput</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> inputToRegister)</td></tr>
+
+<tr class="memitem:adcc594fea9bde20a9e7bcba50562125a" id="r_adcc594fea9bde20a9e7bcba50562125a"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcc594fea9bde20a9e7bcba50562125a">getAccumulatedUserInput</a> ()</td></tr>
+
+<tr class="memitem:aa94e45017bae233a8b757ea066d1dc21" id="r_aa94e45017bae233a8b757ea066d1dc21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94e45017bae233a8b757ea066d1dc21">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aadc427b231261d256393a6d195899f53" id="r_aadc427b231261d256393a6d195899f53"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadc427b231261d256393a6d195899f53">KeypadManager</a></td></tr>
+
+<tr class="memitem:a54b536a35cc9ae7d120b2e7f56e9effb" id="r_a54b536a35cc9ae7d120b2e7f56e9effb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-user-input/">UserInput</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b536a35cc9ae7d120b2e7f56e9effb">userInput</a></td></tr>
+<tr class="memdesc:a54b536a35cc9ae7d120b2e7f56e9effb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct that holds the user's input during the last game frame.  <br /></td></tr>
+
+<tr class="memitem:a9332306842cd36e15e4cd0bdb4d27c69" id="r_a9332306842cd36e15e4cd0bdb4d27c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-user-input/">UserInput</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9332306842cd36e15e4cd0bdb4d27c69">userInputToRegister</a></td></tr>
+<tr class="memdesc:a9332306842cd36e15e4cd0bdb4d27c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to select which inputs to register and which to ignore.  <br /></td></tr>
+
+<tr class="memitem:a8740ba80e30dd75e71d09fa1dcf04f3d" id="r_a8740ba80e30dd75e71d09fa1dcf04f3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8740ba80e30dd75e71d09fa1dcf04f3d">enabled</a></td></tr>
+<tr class="memdesc:a8740ba80e30dd75e71d09fa1dcf04f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to enable/disable the capture of user input.  <br /></td></tr>
+
+<tr class="memitem:a0f927d49068d699dc0d16de50560e070" id="r_a0f927d49068d699dc0d16de50560e070"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f927d49068d699dc0d16de50560e070">reseted</a></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2652ac5049ead1869aabfca33561d6a5" name="a2652ac5049ead1869aabfca33561d6a5"></a>
+<h2 class="memtitle">__KEY_HOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __KEY_HOLD&#160;&#160;&#160;0x0100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">58</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a09500fdfd4514f39b6d32a69bbd1d8f2" name="a09500fdfd4514f39b6d32a69bbd1d8f2"></a>
+<h2 class="memtitle">__KEY_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __KEY_NONE&#160;&#160;&#160;0x0000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">55</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a5e07251b878c4c3ed258ffd5d9f96fa8" name="a5e07251b878c4c3ed258ffd5d9f96fa8"></a>
+<h2 class="memtitle">__KEY_PRESSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __KEY_PRESSED&#160;&#160;&#160;0x0001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">56</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="af6937592b849786a4f26869d3f4f8eb7" name="af6937592b849786a4f26869d3f4f8eb7"></a>
+<h2 class="memtitle">__KEY_RELEASED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __KEY_RELEASED&#160;&#160;&#160;0x0010</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">57</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a0a80d1ff679ffefef3fbf2ff972b9f86" name="a0a80d1ff679ffefef3fbf2ff972b9f86"></a>
+<h2 class="memtitle">__S_HW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __S_HW&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">27</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="af83666c1ab0f18c638134b7bbfb1b1d1" name="af83666c1ab0f18c638134b7bbfb1b1d1"></a>
+<h2 class="memtitle">__S_HWDIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __S_HWDIS&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">29</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a49e8cca9d488720735000994b2cb7e53" name="a49e8cca9d488720735000994b2cb7e53"></a>
+<h2 class="memtitle">__S_INTDIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __S_INTDIS&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">24</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aaa7f404af9538b61fbe6f875d189f304" name="aaa7f404af9538b61fbe6f875d189f304"></a>
+<h2 class="memtitle">__S_STAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __S_STAT&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">28</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a9a031b110557535b042a5a38d9a199c4" name="a9a031b110557535b042a5a38d9a199c4"></a>
+<h2 class="memtitle">__S_SW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __S_SW&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">25</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aafc477e2a97601b64500b97eff846bd8" name="aafc477e2a97601b64500b97eff846bd8"></a>
+<h2 class="memtitle">__S_SWCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __S_SWCK&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">26</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a76a28d0e66bda21347030a2ad69ff086" name="a76a28d0e66bda21347030a2ad69ff086"></a>
+<h2 class="memtitle">K_A</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_A&#160;&#160;&#160;0x0004</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">35</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ac627cc4c3da16be4b74f0a4ab036a603" name="ac627cc4c3da16be4b74f0a4ab036a603"></a>
+<h2 class="memtitle">K_ANY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_ANY&#160;&#160;&#160;0xFFFC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">49</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a73bafe212f4c3da58fea7ffdf1a69d73" name="a73bafe212f4c3da58fea7ffdf1a69d73"></a>
+<h2 class="memtitle">K_B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_B&#160;&#160;&#160;0x0008</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">36</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="af923bf021ee5e3bf8d71c948da0151b1" name="af923bf021ee5e3bf8d71c948da0151b1"></a>
+<h2 class="memtitle">K_BTNS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_BTNS&#160;&#160;&#160;0x303C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">50</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6fb1b0ed3b0114fc650c67d2d184f47f" name="a6fb1b0ed3b0114fc650c67d2d184f47f"></a>
+<h2 class="memtitle">K_LD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_LD&#160;&#160;&#160;0x0400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">43</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a9bcd345e8b4066cfa03dd33d54830c1d" name="a9bcd345e8b4066cfa03dd33d54830c1d"></a>
+<h2 class="memtitle">K_LL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_LL&#160;&#160;&#160;0x0200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">42</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aad5e62a15285ae4e25b5c6b5b343366b" name="aad5e62a15285ae4e25b5c6b5b343366b"></a>
+<h2 class="memtitle">K_LPAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_LPAD&#160;&#160;&#160;0x0F00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">52</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a256727a287432e85a2853ed910ddcdb1" name="a256727a287432e85a2853ed910ddcdb1"></a>
+<h2 class="memtitle">K_LR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_LR&#160;&#160;&#160;0x0100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">41</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ae21fa6d2443aa7843ea33fe5e14e4fb9" name="ae21fa6d2443aa7843ea33fe5e14e4fb9"></a>
+<h2 class="memtitle">K_LT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_LT&#160;&#160;&#160;0x0020</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">38</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a3bcadfdace857ed81ce310eb578f311e" name="a3bcadfdace857ed81ce310eb578f311e"></a>
+<h2 class="memtitle">K_LU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_LU&#160;&#160;&#160;0x0800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">44</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aee8c86ae690bb66506d00d8884883767" name="aee8c86ae690bb66506d00d8884883767"></a>
+<h2 class="memtitle">K_NON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_NON&#160;&#160;&#160;0x000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">32</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a52d9081be244031dd5b5b4141fe7ebc3" name="a52d9081be244031dd5b5b4141fe7ebc3"></a>
+<h2 class="memtitle">K_PADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_PADS&#160;&#160;&#160;0xCFC0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">51</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ae00adb6956a8b899ced027dcdcef2a6d" name="ae00adb6956a8b899ced027dcdcef2a6d"></a>
+<h2 class="memtitle">K_PWR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_PWR&#160;&#160;&#160;0x0001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">33</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a4a80c0ddb4f32c6f21035f1a7fe84c32" name="a4a80c0ddb4f32c6f21035f1a7fe84c32"></a>
+<h2 class="memtitle">K_RD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_RD&#160;&#160;&#160;0x8000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">48</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a960f52f595fc2ea31b7ffffa22781434" name="a960f52f595fc2ea31b7ffffa22781434"></a>
+<h2 class="memtitle">K_RL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_RL&#160;&#160;&#160;0x4000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">47</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a44e052513cfcebb1845d19f70041f17b" name="a44e052513cfcebb1845d19f70041f17b"></a>
+<h2 class="memtitle">K_RPAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_RPAD&#160;&#160;&#160;0xC0C0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">53</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6b7a2ed25b8e47ae2c8d0a3175769f45" name="a6b7a2ed25b8e47ae2c8d0a3175769f45"></a>
+<h2 class="memtitle">K_RR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_RR&#160;&#160;&#160;0x0080</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">40</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a799220b761810b6e5816f30f66658e83" name="a799220b761810b6e5816f30f66658e83"></a>
+<h2 class="memtitle">K_RT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_RT&#160;&#160;&#160;0x0010</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">37</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ac8144b2d9eb00c3855307b88a06d2f7d" name="ac8144b2d9eb00c3855307b88a06d2f7d"></a>
+<h2 class="memtitle">K_RU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_RU&#160;&#160;&#160;0x0040</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">39</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a06334ffd827ccad3f6a758b82535163e" name="a06334ffd827ccad3f6a758b82535163e"></a>
+<h2 class="memtitle">K_SEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_SEL&#160;&#160;&#160;0x2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">46</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="abb2521224968c3108e7ad5f9c5f9ac5c" name="abb2521224968c3108e7ad5f9c5f9ac5c"></a>
+<h2 class="memtitle">K_SGN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_SGN&#160;&#160;&#160;0x0002</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">34</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a9d63a732e682e7b6bd3f03efd77e09f2" name="a9d63a732e682e7b6bd3f03efd77e09f2"></a>
+<h2 class="memtitle">K_STA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define K_STA&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">45</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="adaf3925d035962d6fd197f17d0069d0d" name="adaf3925d035962d6fd197f17d0069d0d"></a>
+<h2 class="memtitle">UserInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef struct UserInput UserInput</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>User's input </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a003afeeaf2020c2a9fac925d4b01711c" name="a003afeeaf2020c2a9fac925d4b01711c"></a>
+<h2 class="memtitle">disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void disable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disable user input. </p>
+
+</div>
+</div>
+<a id="aab8c4ea41478e3cbc331a3f130043bc1" name="aab8c4ea41478e3cbc331a3f130043bc1"></a>
+<h2 class="memtitle">disableDummyKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void KeypadManager::disableDummyKey </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disable the dummy key to not enforce user input processing. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8c-source/">175</a> of file <a class="el" href="/documentation/api/-keypad-manager-8c-source/">KeypadManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>{</div>
+<div class="line"><span class="lineno">  177</span>    <a class="code hl_variable" href="#aadc427b231261d256393a6d195899f53">KeypadManager</a> keypadManager = KeypadManager::getInstance();</div>
+<div class="line"><span class="lineno">  178</span>    </div>
+<div class="line"><span class="lineno">  179</span>    keypadManager-&gt;userInput.dummyKey = <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>;</div>
+<div class="line"><span class="lineno">  180</span>}</div>
+<div class="ttc" id="a_keypad_manager_8h_html_aadc427b231261d256393a6d195899f53"><div class="ttname"><a href="#aadc427b231261d256393a6d195899f53">KeypadManager</a></div><div class="ttdeci">singleton !class KeypadManager</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:109</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_aee8c86ae690bb66506d00d8884883767"><div class="ttname"><a href="#aee8c86ae690bb66506d00d8884883767">K_NON</a></div><div class="ttdeci">#define K_NON</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:32</a></div></div>
+</div>
+</div>
+</div>
+<a id="a0a87bc76d9e423caf9fa05c72764f88e" name="a0a87bc76d9e423caf9fa05c72764f88e"></a>
+<h2 class="memtitle">enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void enable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable user input. </p>
+
+</div>
+</div>
+<a id="a1747514a0fec86b3ae73a89b77174484" name="a1747514a0fec86b3ae73a89b77174484"></a>
+<h2 class="memtitle">enableDummyKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void KeypadManager::enableDummyKey </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable the dummy key to force user input processing. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8c-source/">166</a> of file <a class="el" href="/documentation/api/-keypad-manager-8c-source/">KeypadManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>{</div>
+<div class="line"><span class="lineno">  168</span>    <a class="code hl_variable" href="#aadc427b231261d256393a6d195899f53">KeypadManager</a> keypadManager = KeypadManager::getInstance();</div>
+<div class="line"><span class="lineno">  169</span>    </div>
+<div class="line"><span class="lineno">  170</span>    keypadManager-&gt;userInput.dummyKey = <a class="code hl_define" href="#ac627cc4c3da16be4b74f0a4ab036a603">K_ANY</a>;</div>
+<div class="line"><span class="lineno">  171</span>}</div>
+<div class="ttc" id="a_keypad_manager_8h_html_ac627cc4c3da16be4b74f0a4ab036a603"><div class="ttname"><a href="#ac627cc4c3da16be4b74f0a4ab036a603">K_ANY</a></div><div class="ttdeci">#define K_ANY</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:49</a></div></div>
+</div>
+</div>
+</div>
+<a id="adcc594fea9bde20a9e7bcba50562125a" name="adcc594fea9bde20a9e7bcba50562125a"></a>
+<h2 class="memtitle">getAccumulatedUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static long KeypadManager::getAccumulatedUserInput </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the accumulated sum of user inputs since the start of the program. </p><dl class="section return"><dt>Returns</dt><dd>The mathematical sum of all user's presses. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8c-source/">198</a> of file <a class="el" href="/documentation/api/-keypad-manager-8c-source/">KeypadManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>{</div>
+<div class="line"><span class="lineno">  200</span>    <a class="code hl_variable" href="#aadc427b231261d256393a6d195899f53">KeypadManager</a> keypadManager = KeypadManager::getInstance();</div>
+<div class="line"><span class="lineno">  201</span>    </div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">return</span> keypadManager-&gt;accumulatedUserInput;</div>
+<div class="line"><span class="lineno">  203</span>}</div>
+</div>
+</div>
+</div>
+<a id="afd48c4fe243511bcd1ba689881d187df" name="afd48c4fe243511bcd1ba689881d187df"></a>
+<h2 class="memtitle">interruptHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void interruptHandler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interrupt handler for keypad's interrupts. </p>
+
+</div>
+</div>
+<a id="a8934d41bb93ccd3e47fa764673093f01" name="a8934d41bb93ccd3e47fa764673093f01"></a>
+<h2 class="memtitle">isEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">int32</a> isEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if user input is enabled. </p><dl class="section return"><dt>Returns</dt><dd>True if user input is enabled </dd></dl>
+
+</div>
+</div>
+<a id="aa94e45017bae233a8b757ea066d1dc21" name="aa94e45017bae233a8b757ea066d1dc21"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the last reads of user input. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aced80f3e5c784cb734a797a599c84ab6" name="aced80f3e5c784cb734a797a599c84ab6"></a>
+<h2 class="memtitle">readUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> KeypadManager::readUserInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>waitForStableReading</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the user input during the last game frame </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">waitForStableReading</td><td>If true, wait for reading to be stable (__S_STAT) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>User input struct with the key presses of the last game frame </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8c-source/">104</a> of file <a class="el" href="/documentation/api/-keypad-manager-8c-source/">KeypadManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>{</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_variable" href="#aadc427b231261d256393a6d195899f53">KeypadManager</a> keypadManager = KeypadManager::getInstance();</div>
+<div class="line"><span class="lineno">  107</span>    </div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span>(!waitForStableReading)</div>
+<div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span>(*<a class="code hl_variable" href="/documentation/api/-keypad-manager-8c/">_readingStatus</a> &amp; <a class="code hl_define" href="#aaa7f404af9538b61fbe6f875d189f304">__S_STAT</a>)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> (<a class="code hl_struct" href="/documentation/api/struct-user-input/">UserInput</a>){<a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>, <a class="code hl_define" href="#aee8c86ae690bb66506d00d8884883767">K_NON</a>};</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="comment">// Wait for keypad to stabilize</span></div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">while</span>(*<a class="code hl_variable" href="/documentation/api/-keypad-manager-8c/">_readingStatus</a> &amp; <a class="code hl_define" href="#aaa7f404af9538b61fbe6f875d189f304">__S_STAT</a>);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">// Now read the keys</span></div>
+<div class="line"><span class="lineno">  122</span>    keypadManager-&gt;userInput.allKeys = (((<a class="code hl_variable" href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a>[<a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">__SDHR</a>] &lt;&lt; 8)) | <a class="code hl_variable" href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a>[<a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">__SDLR</a>]);</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    <span class="comment">// Enable next reading cycle</span></div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_variable" href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a>[<a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">__SCR</a>] = (<a class="code hl_define" href="#a49e8cca9d488720735000994b2cb7e53">__S_INTDIS</a> | <a class="code hl_define" href="#a0a80d1ff679ffefef3fbf2ff972b9f86">__S_HW</a>);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    <span class="comment">// Store keys</span></div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span>(0 == keypadManager-&gt;userInput.powerFlag)</div>
+<div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="#ae00adb6956a8b899ced027dcdcef2a6d">K_PWR</a> == (keypadManager-&gt;userInput.allKeys &amp; <a class="code hl_define" href="#ae00adb6956a8b899ced027dcdcef2a6d">K_PWR</a>))</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            KeypadManager::fireEvent(keypadManager, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventKeypadManagerRaisedPowerFlag</a>);</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>            keypadManager-&gt;userInput.powerFlag = keypadManager-&gt;userInput.allKeys &amp; <a class="code hl_define" href="#ae00adb6956a8b899ced027dcdcef2a6d">K_PWR</a>;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    keypadManager-&gt;userInput.allKeys &amp;= <a class="code hl_define" href="#ac627cc4c3da16be4b74f0a4ab036a603">K_ANY</a>;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span>(keypadManager-&gt;reseted)</div>
+<div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        keypadManager-&gt;userInput.pressedKey = 0;</div>
+<div class="line"><span class="lineno">  143</span>        keypadManager-&gt;userInput.releasedKey = 0;</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>        keypadManager-&gt;userInput.pressedKey = KeypadManager::getPressedKey(keypadManager) &amp; keypadManager-&gt;userInputToRegister.pressedKey;</div>
+<div class="line"><span class="lineno">  148</span>        keypadManager-&gt;userInput.releasedKey = KeypadManager::getReleasedKey(keypadManager) &amp; keypadManager-&gt;userInputToRegister.releasedKey;</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    keypadManager-&gt;userInput.holdKey = KeypadManager::getHoldKey(keypadManager) &amp; keypadManager-&gt;userInputToRegister.holdKey;</div>
+<div class="line"><span class="lineno">  152</span>    keypadManager-&gt;userInput.previousKey = keypadManager-&gt;userInput.allKeys;</div>
+<div class="line"><span class="lineno">  153</span>    keypadManager-&gt;userInput.holdKeyDuration = (keypadManager-&gt;userInput.holdKey &amp;&amp; keypadManager-&gt;userInput.holdKey == keypadManager-&gt;userInput.previousKey)</div>
+<div class="line"><span class="lineno">  154</span>        ? keypadManager-&gt;userInput.holdKeyDuration + 1</div>
+<div class="line"><span class="lineno">  155</span>        : 0;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    keypadManager-&gt;accumulatedUserInput += keypadManager-&gt;userInput.allKeys;</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    keypadManager-&gt;reseted = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">return</span> keypadManager-&gt;userInput;</div>
+<div class="line"><span class="lineno">  162</span>}</div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a5252d6bdf7372f1049a6dca8358474fb"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventKeypadManagerRaisedPowerFlag</a></div><div class="ttdeci">@ kEventKeypadManagerRaisedPowerFlag</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:74</a></div></div>
+<div class="ttc" id="a_hardware_manager_8c_html_a3d39baf10a8ca1b139b6134967827112"><div class="ttname"><a href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a></div><div class="ttdeci">uint8 *const _hardwareRegisters</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c:77</a></div></div>
+<div class="ttc" id="a_hardware_manager_8h_html_a5dc04f0fb4cbdc131fd9c6b9c0b831b4"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">__SCR</a></div><div class="ttdeci">#define __SCR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:34</a></div></div>
+<div class="ttc" id="a_hardware_manager_8h_html_ad07141ff8ab422e2e56e5679bbdfb23e"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">__SDLR</a></div><div class="ttdeci">#define __SDLR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:28</a></div></div>
+<div class="ttc" id="a_hardware_manager_8h_html_ad52a1ce5b96506157e1e1cf59309811d"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">__SDHR</a></div><div class="ttdeci">#define __SDHR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:29</a></div></div>
+<div class="ttc" id="a_keypad_manager_8c_html_ac67b85e536b5dea392687a9fdbfc0984"><div class="ttname"><a href="/documentation/api/-keypad-manager-8c/">_readingStatus</a></div><div class="ttdeci">static uint32 volatile  * _readingStatus</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8c-source/">KeypadManager.c:22</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_a0a80d1ff679ffefef3fbf2ff972b9f86"><div class="ttname"><a href="#a0a80d1ff679ffefef3fbf2ff972b9f86">__S_HW</a></div><div class="ttdeci">#define __S_HW</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:27</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_a49e8cca9d488720735000994b2cb7e53"><div class="ttname"><a href="#a49e8cca9d488720735000994b2cb7e53">__S_INTDIS</a></div><div class="ttdeci">#define __S_INTDIS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:24</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_aaa7f404af9538b61fbe6f875d189f304"><div class="ttname"><a href="#aaa7f404af9538b61fbe6f875d189f304">__S_STAT</a></div><div class="ttdeci">#define __S_STAT</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:28</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_ae00adb6956a8b899ced027dcdcef2a6d"><div class="ttname"><a href="#ae00adb6956a8b899ced027dcdcef2a6d">K_PWR</a></div><div class="ttdeci">#define K_PWR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:33</a></div></div>
+<div class="ttc" id="astruct_user_input_html"><div class="ttname"><a href="/documentation/api/struct-user-input/">UserInput</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:67</a></div></div>
+</div>
+</div>
+</div>
+<a id="a58b338d169e4745e724533c8d4599bbe" name="a58b338d169e4745e724533c8d4599bbe"></a>
+<h2 class="memtitle">registerEventListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void registerEventListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>listener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventListener</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>eventCode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register an object that will listen for events. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">listener</td><td><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> that listen for the event </td></tr>
+    <tr><td class="paramname">callback</td><td>EventListener callback for the listener object </td></tr>
+    <tr><td class="paramname">eventCode</td><td><a class="el" href="/documentation/api/struct-event/">Event</a>'s code to listen for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77373051e414b6b5b118f6178e270512" name="a77373051e414b6b5b118f6178e270512"></a>
+<h2 class="memtitle">registerInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void KeypadManager::registerInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>inputToRegister</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register the user input according to the provided flags. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">inputToRegister</td><td>Flags to select which inputs to register and which to ignore </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8c-source/">184</a> of file <a class="el" href="/documentation/api/-keypad-manager-8c-source/">KeypadManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>{</div>
+<div class="line"><span class="lineno">  186</span>    <a class="code hl_variable" href="#aadc427b231261d256393a6d195899f53">KeypadManager</a> keypadManager = KeypadManager::getInstance();</div>
+<div class="line"><span class="lineno">  187</span>    </div>
+<div class="line"><span class="lineno">  188</span><span class="preprocessor">#ifdef __TOOLS</span></div>
+<div class="line"><span class="lineno">  189</span>    inputToRegister = <a class="code hl_define" href="#a5e07251b878c4c3ed258ffd5d9f96fa8">__KEY_PRESSED</a> | <a class="code hl_define" href="#af6937592b849786a4f26869d3f4f8eb7">__KEY_RELEASED</a> | <a class="code hl_define" href="#a2652ac5049ead1869aabfca33561d6a5">__KEY_HOLD</a>;</div>
+<div class="line"><span class="lineno">  190</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  191</span>    keypadManager-&gt;userInputToRegister.pressedKey = <a class="code hl_define" href="#a5e07251b878c4c3ed258ffd5d9f96fa8">__KEY_PRESSED</a> &amp; inputToRegister? 0xFFFF : 0;</div>
+<div class="line"><span class="lineno">  192</span>    keypadManager-&gt;userInputToRegister.releasedKey = <a class="code hl_define" href="#af6937592b849786a4f26869d3f4f8eb7">__KEY_RELEASED</a> &amp; inputToRegister? 0xFFFF : 0;</div>
+<div class="line"><span class="lineno">  193</span>    keypadManager-&gt;userInputToRegister.holdKey = <a class="code hl_define" href="#a2652ac5049ead1869aabfca33561d6a5">__KEY_HOLD</a> &amp; inputToRegister? 0xFFFF : 0;</div>
+<div class="line"><span class="lineno">  194</span>}</div>
+<div class="ttc" id="a_keypad_manager_8h_html_a2652ac5049ead1869aabfca33561d6a5"><div class="ttname"><a href="#a2652ac5049ead1869aabfca33561d6a5">__KEY_HOLD</a></div><div class="ttdeci">#define __KEY_HOLD</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:58</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_a5e07251b878c4c3ed258ffd5d9f96fa8"><div class="ttname"><a href="#a5e07251b878c4c3ed258ffd5d9f96fa8">__KEY_PRESSED</a></div><div class="ttdeci">#define __KEY_PRESSED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:56</a></div></div>
+<div class="ttc" id="a_keypad_manager_8h_html_af6937592b849786a4f26869d3f4f8eb7"><div class="ttname"><a href="#af6937592b849786a4f26869d3f4f8eb7">__KEY_RELEASED</a></div><div class="ttdeci">#define __KEY_RELEASED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h:57</a></div></div>
+</div>
+</div>
+</div>
+<a id="ab9d3f06dc4ef871fad50465095b5ea32" name="ab9d3f06dc4ef871fad50465095b5ea32"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+</div>
+</div>
+<a id="a37a63659f86c863b00229252591b762c" name="a37a63659f86c863b00229252591b762c"></a>
+<h2 class="memtitle">unregisterEventListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void unregisterEventListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>listener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventListener</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>eventCode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remove a specific listener object from the listening to a give code with the provided callback. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">listener</td><td><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> to remove from the list of listeners </td></tr>
+    <tr><td class="paramname">callback</td><td>EventListener callback for the listener object </td></tr>
+    <tr><td class="paramname">eventCode</td><td><a class="el" href="/documentation/api/struct-event/">Event</a>'s code to stop listen for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8740ba80e30dd75e71d09fa1dcf04f3d" name="a8740ba80e30dd75e71d09fa1dcf04f3d"></a>
+<h2 class="memtitle">enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> enabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to enable/disable the capture of user input. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">118</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aadc427b231261d256393a6d195899f53" name="aadc427b231261d256393a6d195899f53"></a>
+<h2 class="memtitle">KeypadManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">singleton !class KeypadManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class KeypadManager</p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages keypad inputs. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">104</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f927d49068d699dc0d16de50560e070" name="a0f927d49068d699dc0d16de50560e070"></a>
+<h2 class="memtitle">reseted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> reseted</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flag to prevent pressed and released keys from being raised when holding buttons while changing game states </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">122</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a54b536a35cc9ae7d120b2e7f56e9effb" name="a54b536a35cc9ae7d120b2e7f56e9effb"></a>
+<h2 class="memtitle">userInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-user-input/">UserInput</a> userInput</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Struct that holds the user's input during the last game frame. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">112</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a9332306842cd36e15e4cd0bdb4d27c69" name="a9332306842cd36e15e4cd0bdb4d27c69"></a>
+<h2 class="memtitle">userInputToRegister</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-user-input/">UserInput</a> userInputToRegister</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flags to select which inputs to register and which to ignore. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-keypad-manager-8h-source/">115</a> of file <a class="el" href="/documentation/api/-keypad-manager-8h-source/">KeypadManager.h</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

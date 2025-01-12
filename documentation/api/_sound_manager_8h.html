@@ -1,0 +1,767 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "SoundManager.h File Reference"
+permalink: documentation/api/-sound-manager-8h/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3d07431c7dde6b0936df213ca850c7ff/">Sound</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">SoundManager.h File Reference</h1></div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-listener-object-8h-source/">ListenerObject.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-sound-8h-source/">Sound.h</a>&gt;</code><br />
+</div>
+<p><a href="/documentation/api/-sound-manager-8h-source/">Go to the source code of this file.</a></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a47c52e1a12947de02fb0cb7af4840d0f" id="r_a47c52e1a12947de02fb0cb7af4840d0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47c52e1a12947de02fb0cb7af4840d0f">__DEFAULT_PCM_HZ</a>&#160;&#160;&#160;8000</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae0d8764867730e186d735dd96ba5b75c" id="r_ae0d8764867730e186d735dd96ba5b75c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0d8764867730e186d735dd96ba5b75c">playSounds</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a>)</td></tr>
+
+<tr class="memitem:ab9d3f06dc4ef871fad50465095b5ea32" id="r_ab9d3f06dc4ef871fad50465095b5ea32"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d3f06dc4ef871fad50465095b5ea32">reset</a> ()</td></tr>
+<tr class="memdesc:ab9d3f06dc4ef871fad50465095b5ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:a7a21fc613541e79bc3a2ca1c4dc74430" id="r_a7a21fc613541e79bc3a2ca1c4dc74430"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a21fc613541e79bc3a2ca1c4dc74430">setPCMTargetPlaybackRefreshRate</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> pcmTargetPlaybackRefreshRate)</td></tr>
+
+<tr class="memitem:a07ac738ffea768419ae7e881547513ba" id="r_a07ac738ffea768419ae7e881547513ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ac738ffea768419ae7e881547513ba">isPlayingSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec)</td></tr>
+
+<tr class="memitem:a9a00237b7b61543d9818dd88aefaeef2" id="r_a9a00237b7b61543d9818dd88aefaeef2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a00237b7b61543d9818dd88aefaeef2">playSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec, const <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> *position, <a class="el" href="/documentation/api/-types-8h/">uint32</a> playbackType, EventListener soundReleaseListener, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a999aa1f1acba7162533e42ada6901adb" id="r_a999aa1f1acba7162533e42ada6901adb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-sound/">Sound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999aa1f1acba7162533e42ada6901adb">getSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec, EventListener soundReleaseListener, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a2d9f93ccd0ef416f9c972148daa3bae0" id="r_a2d9f93ccd0ef416f9c972148daa3bae0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-sound/">Sound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d9f93ccd0ef416f9c972148daa3bae0">findSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec, EventListener soundReleaseListener, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a0cbe6b801a7b14299b2bdc1299390ba1" id="r_a0cbe6b801a7b14299b2bdc1299390ba1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cbe6b801a7b14299b2bdc1299390ba1">muteAllSounds</a> ()</td></tr>
+<tr class="memdesc:a0cbe6b801a7b14299b2bdc1299390ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mute all playing sounds.  <br /></td></tr>
+
+<tr class="memitem:a1422133a2be2cf672700d73fbf49843c" id="r_a1422133a2be2cf672700d73fbf49843c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1422133a2be2cf672700d73fbf49843c">unmuteAllSounds</a> ()</td></tr>
+<tr class="memdesc:a1422133a2be2cf672700d73fbf49843c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmute all playing sounds.  <br /></td></tr>
+
+<tr class="memitem:a27872b140194dc99bc2243393375d0fc" id="r_a27872b140194dc99bc2243393375d0fc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27872b140194dc99bc2243393375d0fc">rewindAllSounds</a> ()</td></tr>
+<tr class="memdesc:a27872b140194dc99bc2243393375d0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewind all playing sounds.  <br /></td></tr>
+
+<tr class="memitem:a3ce1015a9f99d7fac3046f6b78ee9e37" id="r_a3ce1015a9f99d7fac3046f6b78ee9e37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce1015a9f99d7fac3046f6b78ee9e37">stopAllSounds</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> release, <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> **excludedSounds)</td></tr>
+
+<tr class="memitem:a162536ffb5c536f59e6edd74866ec818" id="r_a162536ffb5c536f59e6edd74866ec818"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162536ffb5c536f59e6edd74866ec818">unlock</a> ()</td></tr>
+<tr class="memdesc:a162536ffb5c536f59e6edd74866ec818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow petitions to play or allocate sounds are processed.  <br /></td></tr>
+
+<tr class="memitem:aa94e45017bae233a8b757ea066d1dc21" id="r_aa94e45017bae233a8b757ea066d1dc21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94e45017bae233a8b757ea066d1dc21">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+<tr class="memdesc:aa94e45017bae233a8b757ea066d1dc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the manager's status.  <br /></td></tr>
+
+<tr class="memitem:a8282b6854776da3ff71e4f8d3ae4322f" id="r_a8282b6854776da3ff71e4f8d3ae4322f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8282b6854776da3ff71e4f8d3ae4322f">printPlaybackTime</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+<tr class="memdesc:a8282b6854776da3ff71e4f8d3ae4322f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print playback time of the playing sounds.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab138c5bb7ab6b7a6fe79f5aa4f2330bb" id="r_ab138c5bb7ab6b7a6fe79f5aa4f2330bb"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a></td></tr>
+
+<tr class="memitem:a6695a8f17f42411955a09df1da983a05" id="r_a6695a8f17f42411955a09df1da983a05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6695a8f17f42411955a09df1da983a05">targetPCMUpdates</a></td></tr>
+<tr class="memdesc:a6695a8f17f42411955a09df1da983a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target PCM cycles per game cycle.  <br /></td></tr>
+
+<tr class="memitem:a9863926e23e26ddb194b82b7fc50756a" id="r_a9863926e23e26ddb194b82b7fc50756a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9863926e23e26ddb194b82b7fc50756a">lock</a></td></tr>
+<tr class="memdesc:a9863926e23e26ddb194b82b7fc50756a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If raised, no petitions to play or allocate sounds are processed.  <br /></td></tr>
+
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a47c52e1a12947de02fb0cb7af4840d0f" name="a47c52e1a12947de02fb0cb7af4840d0f"></a>
+<h2 class="memtitle">__DEFAULT_PCM_HZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __DEFAULT_PCM_HZ&#160;&#160;&#160;8000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8h-source/">28</a> of file <a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a2d9f93ccd0ef416f9c972148daa3bae0" name="a2d9f93ccd0ef416f9c972148daa3bae0"></a>
+<h2 class="memtitle">findSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-sound/">Sound</a> SoundManager::findSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventListener</td>          <td class="paramname"><span class="paramname"><em>soundReleaseListener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve a previously allocated sound defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td>Spec that defines the sound to play </td></tr>
+    <tr><td class="paramname">soundReleaseListener</td><td>Callback method for when the sound is released </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">152</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>{</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == soundReleaseListener || <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == scope)</div>
+<div class="line"><span class="lineno">  157</span>    {</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">for</span>(<a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = soundManager-&gt;sounds-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_class" href="/documentation/api/class-sound/">Sound</a> sound = Sound::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(sound))</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">if</span>(soundSpec == sound-&gt;<a class="code hl_variable" href="/documentation/api/class-sound/">soundSpec</a>)</div>
+<div class="line"><span class="lineno">  168</span>            {</div>
+<div class="line"><span class="lineno">  169</span>                <a class="code hl_function" href="/documentation/api/class-listener-object/">Sound::addEventListener</a>(sound, scope, soundReleaseListener, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventSoundReleased</a>);</div>
+<div class="line"><span class="lineno">  170</span>                <span class="keywordflow">return</span> sound;</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  176</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a3492a5b44d5483b2fa83e7011b6abb9d"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventSoundReleased</a></div><div class="ttdeci">@ kEventSoundReleased</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:62</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_sound_manager_8h_html_ab138c5bb7ab6b7a6fe79f5aa4f2330bb"><div class="ttname"><a href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a></div><div class="ttdeci">singleton !class SoundManager</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-manager-8h-source/">SoundManager.h:44</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa44d2f3fc00a88658f64cac1c02b47f7"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::addEventListener</a></div><div class="ttdeci">void addEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:64</a></div></div>
+<div class="ttc" id="aclass_sound_html"><div class="ttname"><a href="/documentation/api/class-sound/">Sound</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:82</a></div></div>
+<div class="ttc" id="aclass_sound_html_ae38feb61079d4dba99cf5b38595b42e1"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::soundSpec</a></div><div class="ttdeci">const SoundSpec * soundSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:86</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:29</a></div></div>
+</div>
+</div>
+</div>
+<a id="a999aa1f1acba7162533e42ada6901adb" name="a999aa1f1acba7162533e42ada6901adb"></a>
+<h2 class="memtitle">getSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-sound/">Sound</a> SoundManager::getSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventListener</td>          <td class="paramname"><span class="paramname"><em>soundReleaseListener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocate sound defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td>Spec that defines the sound to play </td></tr>
+    <tr><td class="paramname">soundReleaseListener</td><td>Callback method for when the sound is released </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">138</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{</div>
+<div class="line"><span class="lineno">  140</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span>(soundManager-&gt;lock || <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == soundReleaseListener || <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == scope)</div>
+<div class="line"><span class="lineno">  143</span>    {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> SoundManager::doGetSound(soundSpec, soundReleaseListener, scope);</div>
+<div class="line"><span class="lineno">  148</span>}</div>
+</div>
+</div>
+</div>
+<a id="a07ac738ffea768419ae7e881547513ba" name="a07ac738ffea768419ae7e881547513ba"></a>
+<h2 class="memtitle">isPlayingSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> SoundManager::isPlayingSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if a sound with the provided spec is playing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td><a class="el" href="/documentation/api/class-sound/">Sound</a> spec to check for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">90</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>{</div>
+<div class="line"><span class="lineno">   92</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = soundManager-&gt;sounds-&gt;head;</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_class" href="/documentation/api/class-sound/">Sound</a> sound = Sound::safeCast(node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>);</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span>(soundSpec == sound-&gt;<a class="code hl_variable" href="/documentation/api/class-sound/">soundSpec</a>)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  107</span>}</div>
+<div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a2dd261ee8563057540d7f5ca6edf5654"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::data</a></div><div class="ttdeci">void * data</div><div class="ttdoc">Pointer to the data.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:39</a></div></div>
+</div>
+</div>
+</div>
+<a id="a0cbe6b801a7b14299b2bdc1299390ba1" name="a0cbe6b801a7b14299b2bdc1299390ba1"></a>
+<h2 class="memtitle">muteAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void SoundManager::muteAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mute all playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">180</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>{</div>
+<div class="line"><span class="lineno">  182</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = soundManager-&gt;sounds-&gt;head;</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  187</span>    {</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_class" href="/documentation/api/class-sound/">Sound</a> sound = Sound::safeCast(node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_function" href="/documentation/api/class-sound/">Sound::mute</a>(sound);</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="line"><span class="lineno">  192</span>}</div>
+<div class="ttc" id="aclass_sound_html_a457a2d84085fd02b3a264f495378346c"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::mute</a></div><div class="ttdeci">void mute()</div><div class="ttdoc">Mute the sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:328</a></div></div>
+</div>
+</div>
+</div>
+<a id="a9a00237b7b61543d9818dd88aefaeef2" name="a9a00237b7b61543d9818dd88aefaeef2"></a>
+<h2 class="memtitle">playSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> SoundManager::playSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>playbackType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventListener</td>          <td class="paramname"><span class="paramname"><em>soundReleaseListener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Play a sound defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td>Spec that defines the sound to play </td></tr>
+    <tr><td class="paramname">position</td><td>Position for spatilly position sound </td></tr>
+    <tr><td class="paramname">playbackType</td><td>How to play the sound </td></tr>
+    <tr><td class="paramname">soundReleaseListener</td><td>Callback method for when the sound is released </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">111</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span>(soundManager-&gt;lock || <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == soundSpec)</div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>    <a class="code hl_class" href="/documentation/api/class-sound/">Sound</a> sound = SoundManager::doGetSound(soundSpec, soundReleaseListener, scope);</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(sound))</div>
+<div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="/documentation/api/class-sound/">Sound::autoReleaseOnFinish</a>(sound, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_function" href="/documentation/api/class-sound/">Sound::play</a>(sound, position, playbackType);</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+<div class="ttc" id="aclass_sound_html_a44a0e325cea53d90a156bd6b60672a80"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::autoReleaseOnFinish</a></div><div class="ttdeci">bool autoReleaseOnFinish</div><div class="ttdoc">If true, the sound is released when playback is complete.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:137</a></div></div>
+<div class="ttc" id="aclass_sound_html_a70097b312319605afa05f6b2e72f4834"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::play</a></div><div class="ttdeci">void play(const Vector3D *position, uint32 playbackType)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:130</a></div></div>
+</div>
+</div>
+</div>
+<a id="ae0d8764867730e186d735dd96ba5b75c" name="ae0d8764867730e186d735dd96ba5b75c"></a>
+<h2 class="memtitle">playSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void playSounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elapsedMicroseconds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Play the allocated sounds. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">elapsedMicroseconds</td><td>Elapsed time between call </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa94e45017bae233a8b757ea066d1dc21" name="aa94e45017bae233a8b757ea066d1dc21"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the manager's status. </p>
+
+</div>
+</div>
+<a id="a8282b6854776da3ff71e4f8d3ae4322f" name="a8282b6854776da3ff71e4f8d3ae4322f"></a>
+<h2 class="memtitle">printPlaybackTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void printPlaybackTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print playback time of the playing sounds. </p>
+
+</div>
+</div>
+<a id="ab9d3f06dc4ef871fad50465095b5ea32" name="ab9d3f06dc4ef871fad50465095b5ea32"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+</div>
+</div>
+<a id="a27872b140194dc99bc2243393375d0fc" name="a27872b140194dc99bc2243393375d0fc"></a>
+<h2 class="memtitle">rewindAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void SoundManager::rewindAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rewind all playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">212</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>{</div>
+<div class="line"><span class="lineno">  214</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = soundManager-&gt;sounds-&gt;head;</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <a class="code hl_class" href="/documentation/api/class-sound/">Sound</a> sound = Sound::safeCast(node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>);</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>        <a class="code hl_function" href="/documentation/api/class-sound/">Sound::rewind</a>(sound);</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
+<div class="line"><span class="lineno">  224</span>}</div>
+<div class="ttc" id="aclass_sound_html_aed907ddbeb22738e517b36c19cabd7ee"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::rewind</a></div><div class="ttdeci">void rewind()</div><div class="ttdoc">Rewind the playack.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:342</a></div></div>
+</div>
+</div>
+</div>
+<a id="a7a21fc613541e79bc3a2ca1c4dc74430" name="a7a21fc613541e79bc3a2ca1c4dc74430"></a>
+<h2 class="memtitle">setPCMTargetPlaybackRefreshRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void setPCMTargetPlaybackRefreshRate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>pcmTargetPlaybackRefreshRate</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the target refresh rate for PCM playback. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">pcmTargetPlaybackRefreshRate</td><td>Target refresh rate for PCM playback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ce1015a9f99d7fac3046f6b78ee9e37" name="a3ce1015a9f99d7fac3046f6b78ee9e37"></a>
+<h2 class="memtitle">stopAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void stopAllSounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>release</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> **</td>          <td class="paramname"><span class="paramname"><em>excludedSounds</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stop all playing sounds. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">release</td><td>If true, sounds are not only stopped but released </td></tr>
+    <tr><td class="paramname">excludedSounds</td><td>Array of sound specs to not stop </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a162536ffb5c536f59e6edd74866ec818" name="a162536ffb5c536f59e6edd74866ec818"></a>
+<h2 class="memtitle">unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void unlock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allow petitions to play or allocate sounds are processed. </p>
+
+</div>
+</div>
+<a id="a1422133a2be2cf672700d73fbf49843c" name="a1422133a2be2cf672700d73fbf49843c"></a>
+<h2 class="memtitle">unmuteAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void SoundManager::unmuteAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unmute all playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8c-source/">196</a> of file <a class="el" href="/documentation/api/-sound-manager-8c-source/">SoundManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>{</div>
+<div class="line"><span class="lineno">  198</span>    <a class="code hl_variable" href="#ab138c5bb7ab6b7a6fe79f5aa4f2330bb">SoundManager</a> soundManager = SoundManager::getInstance();</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>    <a class="code hl_class" href="/documentation/api/class-virtual-node/">VirtualNode</a> node = soundManager-&gt;sounds-&gt;head;</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  203</span>    {</div>
+<div class="line"><span class="lineno">  204</span>        <a class="code hl_class" href="/documentation/api/class-sound/">Sound</a> sound = Sound::safeCast(node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>);</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        <a class="code hl_variable" href="/documentation/api/class-sound/">Sound::unmute</a>(sound);</div>
+<div class="line"><span class="lineno">  207</span>    }</div>
+<div class="line"><span class="lineno">  208</span>}</div>
+<div class="ttc" id="aclass_sound_html_a2041e917a1235a715644e430d01d43a7"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::unmute</a></div><div class="ttdeci">bool unmute</div><div class="ttdoc">If true, sound is not muted.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:134</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9863926e23e26ddb194b82b7fc50756a" name="a9863926e23e26ddb194b82b7fc50756a"></a>
+<h2 class="memtitle">lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void lock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If raised, no petitions to play or allocate sounds are processed. </p>
+<p>Refuse petitions to play or allocate sounds are processed. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8h-source/">50</a> of file <a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ab138c5bb7ab6b7a6fe79f5aa4f2330bb" name="ab138c5bb7ab6b7a6fe79f5aa4f2330bb"></a>
+<h2 class="memtitle">SoundManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">singleton !class SoundManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class SoundManager</p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages the <a class="el" href="/documentation/api/class-sound/">Sound</a> instances. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8h-source/">39</a> of file <a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6695a8f17f42411955a09df1da983a05" name="a6695a8f17f42411955a09df1da983a05"></a>
+<h2 class="memtitle">targetPCMUpdates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> targetPCMUpdates</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Target PCM cycles per game cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-manager-8h-source/">47</a> of file <a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>.</p>
+
+</div>
+</div>
+</div>
+
+
+</div>

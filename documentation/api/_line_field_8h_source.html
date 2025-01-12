@@ -1,0 +1,120 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "LineField.h"
+permalink: documentation/api/-line-field-8h-source/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="/documentation/api/dir-6d24fb6c4d536e24e6c217369568af09/">VUEngine-Core</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-7a646ac0a63833d96d3f7d37995dde0f/">source</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-442ac65133d54a4a80f21564120f3f73/">Component</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-3d59fd1310cba71f74cd42cf97b49f36/">Physics</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-698fa324242060d8a4cd9ec45684df0d/">Collision</a></li><li class="navelem"><a class="el" href="/documentation/api/dir-52cf2840ee42675989b93a82f9f70b49/">Collider</a></li>  </ul>
+</div>
+</div>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><h1 class="title">LineField.h</h1></div>
+</div>
+<div class="contents">
+<a href="/documentation/api/-line-field-8h/">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VUEngine Core</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * © Jorge Eremiev &lt;jorgech3@gmail.com&gt; and Christian Radke &lt;c.radke@posteo.de&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * For the full copyright and license information, please view the LICENSE file</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * that was distributed with this source code.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef LINE_FIELD_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define LINE_FIELD_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-collider-8h/">Collider.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="/documentation/api/-mesh-8h/">Mesh.h</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// CLASS&#39; MACROS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="/documentation/api/-line-field-8h/">   24</a></span><span class="preprocessor">#define __LINE_FIELD_VERTEXES       2</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// CLASS&#39; DECLARATION</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="/documentation/api/class-line-field/">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="/documentation/api/class-line-field/">LineField</a> : <a class="code hl_class" href="/documentation/api/class-collider/">Collider</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="/documentation/api/class-line-field/">   40</a></span>    <a class="code hl_struct" href="/documentation/api/struct-mesh-spec/">MeshSpec</a>* <a class="code hl_variable" href="/documentation/api/class-line-field/">meshSpec</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="/documentation/api/class-line-field/">   43</a></span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_variable" href="/documentation/api/class-line-field/">a</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="/documentation/api/class-line-field/">   46</a></span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_variable" href="/documentation/api/class-line-field/">b</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="/documentation/api/class-line-field/">   49</a></span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_variable" href="/documentation/api/class-line-field/">normal</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="/documentation/api/class-line-field/">   52</a></span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> <a class="code hl_variable" href="/documentation/api/class-line-field/">normalLength</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-listener-object/">constructor</a>(<a class="code hl_class" href="/documentation/api/class-entity/">Entity</a> <a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, <span class="keyword">const</span> <a class="code hl_struct" href="/documentation/api/struct-collider-spec/">ColliderSpec</a>* colliderSpec);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">override</span> <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_function" href="/documentation/api/class-line-field/">getNormal</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-line-field/">configureWireframe</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-line-field/">print</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> y);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-line-field/">displace</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> displacement);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> <a class="code hl_function" href="/documentation/api/class-line-field/">getCenter</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-line-field/">getVertexes</a>(<a class="code hl_class" href="/documentation/api/struct-vector3-d/">Vector3D</a> vertexes[<a class="code hl_define" href="/documentation/api/-line-field-8h/">__LINE_FIELD_VERTEXES</a>]);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-line-field/">setNormalLength</a>(<a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> <a class="code hl_variable" href="/documentation/api/class-line-field/">normalLength</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_collider_8h_html"><div class="ttname"><a href="/documentation/api/-collider-8h/">Collider.h</a></div></div>
+<div class="ttc" id="a_line_field_8h_html_a73fa458b8c6665735e81cb12e1fbab20"><div class="ttname"><a href="/documentation/api/-line-field-8h/">__LINE_FIELD_VERTEXES</a></div><div class="ttdeci">#define __LINE_FIELD_VERTEXES</div><div class="ttdef"><b>Definition</b> <a href="#l00024">LineField.h:24</a></div></div>
+<div class="ttc" id="a_mesh_8h_html"><div class="ttname"><a href="/documentation/api/-mesh-8h/">Mesh.h</a></div></div>
+<div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
+<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="aclass_collider_html"><div class="ttname"><a href="/documentation/api/class-collider/">Collider</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:181</a></div></div>
+<div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
+<div class="ttc" id="aclass_entity_html"><div class="ttname"><a href="/documentation/api/class-entity/">Entity</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:39</a></div></div>
+<div class="ttc" id="aclass_line_field_html"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField</a></div><div class="ttdef"><b>Definition</b> <a href="#l00035">LineField.h:36</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a0b892808b7c0c58e44eeadc0f642f293"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::getNormal</a></div><div class="ttdeci">override Vector3D getNormal()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:84</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a125556ad2e0217c0177948adccb855c8"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::setNormalLength</a></div><div class="ttdeci">void setNormalLength(fixed_t normalLength)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:237</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a13a82bc055a27a39a20723fb6a6052e6"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::normal</a></div><div class="ttdeci">Vector3D normal</div><div class="ttdoc">Normal to the line defined by the points a and b.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">LineField.h:49</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a1b2a1b008f3fdbc2e228de69c40c3de8"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::print</a></div><div class="ttdeci">override void print(int32 x, int32 y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:165</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a1d4cd8ef41334d80bac191da2636c3d1"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::getVertexes</a></div><div class="ttdeci">void getVertexes(Vector3D vertexes[2])</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:218</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a32500ff1f00971ea907c24c2a9f73132"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::displace</a></div><div class="ttdeci">void displace(fixed_t displacement)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:195</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a660be1a5762f8fbbcdb8a5a56baf33ed"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::a</a></div><div class="ttdeci">Vector3D a</div><div class="ttdoc">Extreme of the line that defines the line field.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">LineField.h:43</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a8bf94be34b904f3eeaae235a14181f58"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::configureWireframe</a></div><div class="ttdeci">override void configureWireframe()</div><div class="ttdoc">Configure the wireframe used to show the collider.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:91</a></div></div>
+<div class="ttc" id="aclass_line_field_html_a9fb8814be40f6cdb1a6f617bd025124b"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::normalLength</a></div><div class="ttdeci">fixed_t normalLength</div><div class="ttdoc">Length of the line field&#39;s normal.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">LineField.h:52</a></div></div>
+<div class="ttc" id="aclass_line_field_html_aadd09d046967ebcc14b84a488615543e"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::b</a></div><div class="ttdeci">Vector3D b</div><div class="ttdoc">Extreme of the line that defines the line field.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">LineField.h:46</a></div></div>
+<div class="ttc" id="aclass_line_field_html_af21e35ec778b22553bc08789639a2743"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::getCenter</a></div><div class="ttdeci">Vector3D getCenter()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-line-field-8c-source/">LineField.c:203</a></div></div>
+<div class="ttc" id="aclass_line_field_html_af4c8087f6319cae5d9a8cd820727b091"><div class="ttname"><a href="/documentation/api/class-line-field/">LineField::meshSpec</a></div><div class="ttdeci">MeshSpec * meshSpec</div><div class="ttdoc">Mesh used to draw the collider.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">LineField.h:40</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aff6e0d9a0ef892fc651d033a590bee8d"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:37</a></div></div>
+<div class="ttc" id="astruct_collider_spec_html"><div class="ttname"><a href="/documentation/api/struct-collider-spec/">ColliderSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-collider-8h-source/">Collider.h:140</a></div></div>
+<div class="ttc" id="astruct_mesh_spec_html"><div class="ttname"><a href="/documentation/api/struct-mesh-spec/">MeshSpec</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-mesh-8h-source/">Mesh.h:26</a></div></div>
+<div class="ttc" id="astruct_vector3_d_html"><div class="ttname"><a href="/documentation/api/struct-vector3-d/">Vector3D</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:99</a></div></div>
+</div></div>
+
+
+</div>
