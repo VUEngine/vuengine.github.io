@@ -22,7 +22,7 @@ A `CharSet` represents one or more CHARs and treats them as a single unit. These
 
 Take the following image as an example from which a **CharSetSpec** will be defined:
 
-<a href="/documentation/images/user-guide/graphics/punk-chars.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars.png" width="300" /></a>
+<a href="/documentation/images/user-guide/graphics/punk.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk.png" width="200" /></a> <a href="/documentation/images/user-guide/graphics/punk-chars.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars.png" width="200" /></a>
 
 The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The **Spec** that defines it is the following:
 
