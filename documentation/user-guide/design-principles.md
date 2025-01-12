@@ -175,6 +175,39 @@ Internally, the VUEngine’s core will figure out dynamically where to display w
 
 As another mechanism to facilitate the separation of concerns principle, the engine provides a custom facility for dynamic memory allocation that doesn’t rely on enabling the program’s heap. This, again, helps to avoid hardcoding data within the game’s logic by avoiding the need to know in advance how many objects of any given type are required in any given context.
 
+## Singletons
+
+Singletons are globally accessible. This means that they come with all the attachtments that globally accessible data comes with. And, no top of that, they accessibility makes it very tempting to overuse them and tightly coupling classes that shouldn't really be that tied together.
+
+But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of the Singleton Pattern, like Dependency Injection, come with their own caveats, like lose of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory overhead, VUEngine tries to leverage the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
+
+One of the first methods to protect is the `VUEngine::reset` method, which touches many of the engine's subsystems. To do so, it is decorated with the `secure` keyword:
+
+```cpp
+secure void VUEngine::reset(bool resetSounds)
+{
+    [...]
+}
+```
+
+And then, only itself and `GameState` classes are allowed to call by defining an array of authorized classes and then securing the `VUEngine` class:
+
+```cpp
+const ClassPointer VUEngineAuthorizedClasses[] =
+{
+    typeofclass(GameState),
+    NULL
+};
+```
+
+```cpp
+    VUEngine::secure(&VUEngineAuthorizedClasses);
+```
+
+Notice that it is not necessary to list the `VUEngine` class itself in the list of authorized classes. Implicitly, all secured methods are accessible from their own classes without restrictions.
+
+The safety checks are removed in release builds to prevent these safety checks from impacting the game's performance.
+
 ## Performance
 
 While a game running on VUEngine could never aspire to run as fast as a feature-by-feature equivalent one written in pure assembler, or C for that matter; the complexity of an equivalent program written in these would quickly become unmanageable. In any case, VUEngine aims at good performance, but as any modern generic engine out there, to extract the most of it requires enough knowledge about what it does and specially the flexibility to rewrite parts of it to restrict its range of applicability to specific use cases, in order to gain back the performance loss that generality entails.

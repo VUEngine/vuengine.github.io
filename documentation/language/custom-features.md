@@ -21,7 +21,6 @@ The class modifiers are:
 
 - `abstract`
 - `singleton`
-- `singleton!`
 - `dynamic_singleton`
 - `static`
 - `extension`
@@ -36,7 +35,39 @@ The language implements support to declare classes that can only have a single i
 
 The singleton classes' instances are allocated in the stack.
 
-The `singleton!` modifier makes the class instance inaccessible from the outside by making the `getInstance` method's linkage non global.
+Since singletons are globally accesible, they put at risk the stability of the program by being modifiable from anywhere. So, it is important to have some mechanism to help preventing such modifications if where possible.
+
+The transpiler adds the `secure` keyword to decorate non static methods of singleton classes that should not be called but by specific classes.
+
+```cpp
+secure void SomeSingletonClass::someMethod()
+{
+    [...]
+}
+```
+
+Then, to restrict from were it is legal to call such method, the array must be defined globally in non volatitle memory:
+
+```cpp
+const ClassPointer SomSingletonClassAuthorizedClasses[] =
+{
+    typeofclass(SomeOtherClassA),
+    typeofclass(SomeOtherClassB),
+    NULL
+};
+```
+
+And then, the following method must be called where appropriate:
+
+```cpp
+	SomeSingletonClass::secure(&SomSingletonClassAuthorizedClasses);
+```
+
+If any other class besides those listed in `SomSingletonClassAuthorizedClasses` tries to call `SomeSingletonClass::someMethod`, an exception like the following will be triggered:
+
+         /documentation/images/language/custom-features/singleton-security.png
+<a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="CHAR Inspector"><img src="/documentation/images/language/custom-features/singleton-security.png" width="500" /></a><br/>
+_Illegal access to secure method_
 
 ### Dynamic Singleton classes
 
