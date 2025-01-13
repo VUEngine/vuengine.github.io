@@ -21,9 +21,9 @@ order expose those features in a more friendly manner, we implemented a transpil
 
 ## State Machines
 
-The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a `StateMachine` whose states must inherit from the `GameState` class.
+The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
 
-Any VUEngine based program must provide a `GameState` for the VUEngine instance’s `StateMachine` to enter to in the game’s starting function:
+Any VUEngine based program must provide a [GameState](/documentation/api/class-gamestate/) for the VUEngine instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to in the game’s starting function:
 
 ```cpp
 int32 game(void)
@@ -36,7 +36,7 @@ int32 game(void)
 }
 ```
 
-In the state machine pattern implemented by the engine, the life cycle of any `State` consists of the following events:
+In the state machine pattern implemented by the engine, the life cycle of any [State](/documentation/api/class-state/) consists of the following events:
 
 ```cpp
 /// Prepares the object to enter this state.
@@ -60,13 +60,13 @@ virtual void suspend(void* owner);
 virtual void resume(void* owner);
 ```
 
-Through the life of a program, the `VUEngine` instance will enter different `GameState`s, each representing a screen that is presented to the user for him to interact with.
+Through the life of a program, the [VUEngine](/documentation/api/class-vu-engine/) instance will enter different [GameState](/documentation/api/class-game-state/)s, each representing a screen that is presented to the user for him to interact with.
 
-`StateMachine`s can be used by other classes, they are not exclusive to the `VUEngine` class. `Actor`s, which are used to implement enemies, vehicles, etc., can use `StateMachine`s to define the logic that drives their behavior with custom states that inherit from the generic `State` class.
+[StateMachine](/documentation/api/class-state-machine/)s can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-vu-engine/) class. [Actor](/documentation/api/class-actor/)s, which are used to implement enemies, vehicles, etc., can use [StateMachine](/documentation/api/class-state-machine/)s to define the logic that drives their behavior with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
 
 ## Components
 
-Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, `Entity`, that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of `Component`s can be attached. The following is the complete list of the kind of `Component`s that the engine currently supports:
+Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, [Entity](/documentation/api/class-entity/), that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of [Component](/documentation/api/class-component/)s can be attached. The following is the complete list of the kind of [Component](/documentation/api/class-component/)s that the engine currently supports:
 
 ```cpp
 /// Component types
@@ -84,21 +84,21 @@ enum ComponentTypes
 };
 ```
 
-Each `Component` keeps a reference to the object that it attaches to and takes care of updating its internal state in order to always stay in sync with the state of the relevant properties of its owner. A `Sprite`, for example, computes its position on the screen during the rendering subprocess according to the transformation of its owner.
+Each [Component](/documentation/api/class-component/) keeps a reference to the object that it attaches to and takes care of updating its internal state in order to always stay in sync with the -state of the relevant properties of its owner. A [Sprite](/documentation/api/class-sprite/), for example, computes its position on the screen during the rendering subprocess according to the transformation of its owner.
 
 ## Parenting
 
-In all possible scenarios, the `VUEngine` instance will enter a `GameState` that must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. Such objects are constructed and managed by a `GameState` through an instance of the `Stage` class. All the objects that belong to a `Stage` have to be instances of the `Actor` class. And both, it and the `Stage` class, inherit from the `Container` class, which is a special type of `Entity` that keeps a local transformation relative to that of another `Container` that acts as its parent.
+In all possible scenarios, the [VUEngine](/documentation/api/class-vu-engine/) instance will enter a [GameState](/documentation/api/class-gamestate/) that must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. Such objects are constructed and managed by a [GameState](/documentation/api/class-game-state/) through an instance of the [Stage](/documentation/api/class-stage/) class. All the objects that belong to a [Stage](/documentation/api/class-stage/) have to be instances of the [Actor](/documentation/api/class-actor/) class. And both, it and the [Stage](/documentation/api/class-stage/) class, inherit from the [Container](/documentation/api/class-container/) class, which is a special type of [Entity](/documentation/api/class-entity/) that keeps a local transformation relative to that of another [Container](/documentation/api/class-container/) that acts as its parent.
 
-Parenting allows easy transformation of whole sets of `Actor`s in a `Stage` by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and this happens without having to manually keep track of the buttons’ absolute or global positions.
+Parenting allows easy transformation of whole sets of [Actor](/documentation/api/class-actor/)s in a [Stage](/documentation/api/class-stage/) by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and this happens without having to manually keep track of the buttons’ absolute or global positions.
 
 ## Decoupling
 
-Some of the earliest requirements and goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a `ListenerObject` class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
+Some of the earliest requirements and goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a [ListenerObject](/documentation/api/class-listener-object/) class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
 
-Messages can be sent directly to another `ListenerObject` when the target is known, or they can be propagated through the `Stage`’s children list.
+Messages can be sent directly to another [ListenerObject](/documentation/api/class-listener-object/) when the target is known, or they can be propagated through the [Stage](/documentation/api/class-stage/)’s children list.
 
-A special kind of message, called command, can be propagated to the `Component`s attached to a `Entity`.
+A special kind of message, called command, can be propagated to the [Component](/documentation/api/class-component/)s attached to a [Entity](/documentation/api/class-entity/).
 
 ## Separation of concerns
 
@@ -117,7 +117,7 @@ From those arguments, some are about what to present (from coordinates in BGMAP 
 
 VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently from the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end use. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**s, as a short for “specification”:
 
-The following exemplifies a **Spec** that specifies what to display (a `Texture` to be created and configured according to the provided **TextureSpec**) and how to display it (as a BGMAP WORLD):
+The following exemplifies a **Spec** that specifies what to display (a [Texture](/documentation/api/class-texture/) to be created and configured according to the provided **TextureSpec**) and how to display it (as a BGMAP WORLD):
 
 ```cpp
 BgmapSpriteROMSpec SomeSpriteSpec =
@@ -153,7 +153,7 @@ BgmapSpriteROMSpec SomeSpriteSpec =
 };
 ```
 
-Then, the game programer uses the **Spec** to instantiate an `Sprite` that he can move around, rotate, hide, etc., without having to write code that crosses the line over to the field of hardware management tasks, nor has to go to the assets creator’s land:
+Then, the game programer uses the **Spec** to instantiate an [Sprite](/documentation/api/class-sprite/) that he can move around, rotate, hide, etc., without having to write code that crosses the line over to the field of hardware management tasks, nor has to go to the assets creator’s land:
 
 ```cpp
 extern SpriteSpec SomeSpriteSpec;
@@ -190,7 +190,7 @@ secure void VUEngine::reset(bool resetSounds)
 }
 ```
 
-And a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the `VUEngine` is be passed to `VUEngine::secure`:
+And a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the [VUEngine](/documentation/api/class-vu-engine/) is be passed to `VUEngine::secure`:
 
 ```cpp
 const ClassPointer VUEngineAuthorizedClasses[] =
@@ -204,7 +204,7 @@ const ClassPointer VUEngineAuthorizedClasses[] =
 VUEngine::secure(&VUEngineAuthorizedClasses);
 ```
 
-Notice that it is not necessary to list the `VUEngine` class itself in the list of authorized classes. Implicitly, all secured methods are accessible from their own classes without restrictions.
+Notice that it is not necessary to list the [VUEngine](/documentation/api/class-vu-engine/) class itself in the list of authorized classes. Implicitly, all secured methods are accessible from their own classes without restrictions.
 
 Only the first call to `ClassName::secure` has effect, subsequent calls don't change the security conditions for the class.
 

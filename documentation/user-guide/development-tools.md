@@ -70,7 +70,7 @@ _Sound Test_
 
 ## Profiler
 
-A `Profiler` can be used to help to spot and solve performance bottlenecks by displaying the approximate time in milliseconds that each of the engine's subprocesses take to complete.
+A [Profiler](/documentation/api/class-profiler/) can be used to help to spot and solve performance bottlenecks by displaying the approximate time in milliseconds that each of the engine's subprocesses take to complete.
 
 To enable the profiler, the `__ENABLE_PROFILER` macro must be defined in the game's _Config.h_ header file:
 

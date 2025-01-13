@@ -6,11 +6,11 @@ title: Physics
 
 # Physics
 
-The engine provides basic physics simulations by means of the `Body` component and collisions through various classes of Colliders.
+The engine provides basic physics simulations by means of the [Body](/documentation/api/class-body/) component and collisions through various classes of Colliders.
 
 ## Body
 
-A `Body` is a Component that attaches to a `Entity`. It has basic properties like mass, friction, bounciness, maximum speed and maximum velocity, etc. A `BodySpec` determines how to initialize these properties when instantiating a Body:
+A [Body](/documentation/api/class-body/) is a Component that attaches to a [Entity](/documentation/api/class-entity/). It has basic properties like mass, friction, bounciness, maximum speed and maximum velocity, etc. A [BodySpec](/documentation/api/class-bodyspec/) determines how to initialize these properties when instantiating a Body:
 
 ```cpp
 BodyROMSpec SomeActorBodySpec =
@@ -50,7 +50,7 @@ BodyROMSpec SomeActorBodySpec =
     };
 ```
 
-An `Entity` with a `Body` attached to it will react to forces applied to it:
+An [Entity](/documentation/api/class-entity/) with a [Body](/documentation/api/class-body/) attached to it will react to forces applied to it:
 
 ```cpp
     Vector3D force =
@@ -67,11 +67,11 @@ An `Entity` with a `Body` attached to it will react to forces applied to it:
 
 ## Collider
 
-A `Collider` is a Component that attaches to a `Entity` and is capable of sensing collisions with other `Collider`s and informing its owner about these events.
+A [Collider](/documentation/api/class-collider/) is a Component that attaches to a [Entity](/documentation/api/class-entity/) and is capable of sensing collisions with other [Collider](/documentation/api/class-collider/)s and informing its owner about these events.
 
-The engine provides a few kinds of Colliders: `Ball`s, `Box`es, `LineField`s.
+The engine provides a few kinds of Colliders: [Ball](/documentation/api/class-ball/)s, [Box](/documentation/api/class-box/)es, [LineField](/documentation/api/class-linefield/)s.
 
-The typical `ColliderSpec` looks like the following:
+The typical [ColliderSpec](/documentation/api/class-colliderspec/) looks like the following:
 
 ```cpp
 ColliderROMSpec SomeActorColliderSpec =
@@ -108,11 +108,11 @@ ColliderROMSpec SomeActorColliderSpec =
 };
 ```
 
-In order to reduce the number of collision checks as much as possible, the `Collider` can be configured to be passive: it doesn’t check for collisions itself, but others can still check for collisions against it. Another property used to improve performance is the layers in which a `Collider` logically exists. This, in conjunction with the property that defines layers to ignore when checking for collisions, helps to reduce the number of tests per game cycle. For example, A solid `Particle` might need to bounce when colliding with the floor, but it doesn’t need to test if it collides with an item; in this case, the item’s `Collider` may be set to live in a collision layer that the `Particle`’s collider ignores.
+In order to reduce the number of collision checks as much as possible, the [Collider](/documentation/api/class-collider/) can be configured to be passive: it doesn’t check for collisions itself, but others can still check for collisions against it. Another property used to improve performance is the layers in which a [Collider](/documentation/api/class-collider/) logically exists. This, in conjunction with the property that defines layers to ignore when checking for collisions, helps to reduce the number of tests per game cycle. For example, A solid [Particle](/documentation/api/class-particle/) might need to bounce when colliding with the floor, but it doesn’t need to test if it collides with an item; in this case, the item’s [Collider](/documentation/api/class-collider/) may be set to live in a collision layer that the [Particle](/documentation/api/class-particle/)’s collider ignores.
 
-Besides memory and performance, there are no other limitations with regards to how many `Collider`s can be added to the same `Entity`.
+Besides memory and performance, there are no other limitations with regards to how many [Collider](/documentation/api/class-collider/)s can be added to the same [Entity](/documentation/api/class-entity/).
 
-Collision as processed by overriding the following `Entity`'s methods:
+Collision as processed by overriding the following [Entity](/documentation/api/class-entity/)'s methods:
 
 ```cpp
     /// Process a newly detected collision by one of the component colliders.
@@ -129,7 +129,7 @@ Collision as processed by overriding the following `Entity`'s methods:
     virtual void collisionEnds(const CollisionInformation* collisionInformation);
 ```
 
-The `CollisionInformation` struct holds information about the colliding `Entity`, the collision vector, and the `Collider`s involved in the collision event:
+The [CollisionInformation](/documentation/api/class-collisioninformation/) struct holds information about the colliding [Entity](/documentation/api/class-entity/), the collision vector, and the [Collider](/documentation/api/class-collider/)s involved in the collision event:
 
 ```cpp
 bool SomeActor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))

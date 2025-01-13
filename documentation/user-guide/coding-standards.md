@@ -18,7 +18,7 @@ All the code written by Team VUEngine tries to adhere to the following coding st
 
 - Global variables must be prefixed with an underscore character: `_globalVariable`.
 
-- Global **Spec** names must be declared in StudlyCaps and follow the scheme: `SomeClassSpec`.
+- Global **Spec** names must be declared in StudlyCaps and follow the scheme: **SomeClassSpec**.
 
 - Macros must be declared in all upper case with underscore separators. Engine macros additionally must be prefixed with two underscores: `MACRO_NAME`
 

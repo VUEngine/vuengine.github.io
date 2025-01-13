@@ -6,33 +6,33 @@ title: Stages
 
 # Stages
 
-`Sprite`s already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of `Sprite`s, but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
+[Sprite](/documentation/api/class-sprite/)s already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of [Sprite](/documentation/api/class-sprite/)s, but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
 
-VUEngine implements `Stage`s as collections of a specific type of `Entity`: `Actor`s.
+VUEngine implements [Stage](/documentation/api/class-stage/)s as collections of a specific type of [Entity](/documentation/api/class-entity/): [Actor](/documentation/api/class-actor/)s.
 
 ## Entity
 
-A `Entity` is a `ListenerObject`, so it can send and receive messages and it can listen for and fire events. It adds to it a 3D transformation, which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that transformation. Finally, it supports the attachment of `Component`s to it. `Component`s can be visual components, like `Sprite`s and `Wireframe`s; behavioral components, like steering behaviors; physical components or collision components.
+A [Entity](/documentation/api/class-entity/) is a [ListenerObject](/documentation/api/class-listener-object/), so it can send and receive messages and it can listen for and fire events. It adds to it a 3D transformation, which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that transformation. Finally, it supports the attachment of [Component](/documentation/api/class-component/)s to it. [Component](/documentation/api/class-component/)s can be visual components, like [Sprite](/documentation/api/class-sprite/)s and [Wireframe](/documentation/api/class-wireframe/)s; behavioral components, like steering behaviors; physical components or collision components.
 
-The `Entity` class is abstract, therefore there can not be pure instances of it.
+The [Entity](/documentation/api/class-entity/) class is abstract, therefore there can not be pure instances of it.
 
 ## Container
 
-`Container`s are a special type of `Entity` that implement parenting by adding a local transformation relative to that of a parent `Container`. They are the means by which the engine implements the composite pattern.
+[Container](/documentation/api/class-container/)s are a special type of [Entity](/documentation/api/class-entity/) that implement parenting by adding a local transformation relative to that of a parent [Container](/documentation/api/class-container/). They are the means by which the engine implements the composite pattern.
 
-`Container`s can have children `Container`s, grandchildren `Container`s, grand-grandchildren `Container`s, etc.
+[Container](/documentation/api/class-container/)s can have children [Container](/documentation/api/class-container/)s, grandchildren [Container](/documentation/api/class-container/)s, grand-grandchildren [Container](/documentation/api/class-container/)s, etc.
 
-The engine takes care of keeping up to date the `Container`s’ transformation by concatenating their local transformations to their reference environment, which is the global transformation of the parent `Container`.
+The engine takes care of keeping up to date the [Container](/documentation/api/class-container/)s’ transformation by concatenating their local transformations to their reference environment, which is the global transformation of the parent [Container](/documentation/api/class-container/).
 
-`Container`s can forward or block the flow of logic towards their children. They can propagate messages to them too.
+[Container](/documentation/api/class-container/)s can forward or block the flow of logic towards their children. They can propagate messages to them too.
 
-`Container`s are abstract too. So they are not used nor instantiated directly.
+[Container](/documentation/api/class-container/)s are abstract too. So they are not used nor instantiated directly.
 
 ## Stage
 
-At the root of the hierarchy of `Container`s, sits an instance of the `Stage` class. A `Stage` is the first type of `Container` and `Entity` that can be instantiated. It only allows instances of another specific type of Container as children: `Actor`s. The `Stage` implements the logic to stream in and out `Actor`s and is the proxy through which the `GameState` accesses the `Actor`s in a game level.
+At the root of the hierarchy of [Container](/documentation/api/class-container/)s, sits an instance of the [Stage](/documentation/api/class-stage/) class. A [Stage](/documentation/api/class-stage/) is the first type of [Container](/documentation/api/class-container/) and [Entity](/documentation/api/class-entity/) that can be instantiated. It only allows instances of another specific type of Container as children: [Actor](/documentation/api/class-actor/)s. The [Stage](/documentation/api/class-stage/) implements the logic to stream in and out [Actor](/documentation/api/class-actor/)s and is the proxy through which the [GameState](/documentation/api/class-game-state/) accesses the [Actor](/documentation/api/class-actor/)s in a game level.
 
-Being instantiable, the `Stage` has its own **StageSpec** to initialize it. Among a lot of other things, it has an option array of **ActorSpecs** that define the `Actor`s that will populate the `Stage`:
+Being instantiable, the [Stage](/documentation/api/class-stage/) has its own **StageSpec** to initialize it. Among a lot of other things, it has an option array of **ActorSpecs** that define the [Actor](/documentation/api/class-actor/)s that will populate the [Stage](/documentation/api/class-stage/):
 
 ```cpp
 PositionedActorROMSpec StageActorsSpecs[] =
@@ -123,7 +123,7 @@ StageROMSpec ActorsStageSpec =
 
 ## Actor
 
-`Actor`s are the basic unit of game logic in VUEngine projects. They are special `Container`s that can be streamed in and out of `Stage`s automatically or manually. They are configured by providing an **ActorSpec** that specifies, among other things, which components to attach to it when instantiated:
+[Actor](/documentation/api/class-actor/)s are the basic unit of game logic in VUEngine projects. They are special [Container](/documentation/api/class-container/)s that can be streamed in and out of [Stage](/documentation/api/class-stage/)s automatically or manually. They are configured by providing an **ActorSpec** that specifies, among other things, which components to attach to it when instantiated:
 
 ```cpp
 ComponentSpec* const BoxActorComponentSpecs[] =
@@ -162,9 +162,9 @@ ActorROMSpec BoxActorSpec =
 };
 ```
 
-`Actor`s can be instantiated and added to the `Stage` programmatically, that is to say that it is not mandatory to provide their specs in advance as part of the list of **ActorSpecs** defined in the **StageSpec**.
+[Actor](/documentation/api/class-actor/)s can be instantiated and added to the [Stage](/documentation/api/class-stage/) programmatically, that is to say that it is not mandatory to provide their specs in advance as part of the list of **ActorSpecs** defined in the **StageSpec**.
 
-To add `Actor`s to the `Stage` programmatically, the following method can be used:
+To add [Actor](/documentation/api/class-actor/)s to the [Stage](/documentation/api/class-stage/) programmatically, the following method can be used:
 
 ```cpp
 extern ActorSpec ActorSpec;
@@ -181,7 +181,7 @@ PositionedActor positionedActor =
 Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false);
 ```
 
-`Actor`s can be added dynamically to other `Actor`s too:
+[Actor](/documentation/api/class-actor/)s can be added dynamically to other [Actor](/documentation/api/class-actor/)s too:
 
 ```cpp
 extern ActorSpec ActorSpec;
@@ -202,7 +202,7 @@ PositionedActor positionedActor =
 Actor::spawnChildActor(actor, &positionedActor);
 ```
 
-Just as `Actor`s are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
+Just as [Actor](/documentation/api/class-actor/)s are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
 
 ```cpp
 if(NULL != childActor)
@@ -211,9 +211,9 @@ if(NULL != childActor)
 }
 ```
 
-The game logic should always manipulate `Actor`s and not `Sprite`s, `Texture`s or `CharSets`. There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, `Actor`s are the main citizens in VUEngine based games.
+The game logic should always manipulate [Actor](/documentation/api/class-actor/)s and not [Sprite](/documentation/api/class-sprite/)s, [Texture](/documentation/api/class-texture/)s or [CharSets](/documentation/api/class-charsets/). There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, [Actor](/documentation/api/class-actor/)s are the main citizens in VUEngine based games.
 
-You acquire a direct reference to a newly spawned `Actor` when using the above methods:
+You acquire a direct reference to a newly spawned [Actor](/documentation/api/class-actor/) when using the above methods:
 
 ```cpp
 /*
@@ -227,13 +227,13 @@ You acquire a direct reference to a newly spawned `Actor` when using the above m
     );
 ```
 
-Or you acquire it indirectly if the `Actor` is being added automatically by the `Stage`’s streaming as specified in the **StageSpec**:
+Or you acquire it indirectly if the [Actor](/documentation/api/class-actor/) is being added automatically by the [Stage](/documentation/api/class-stage/)’s streaming as specified in the **StageSpec**:
 
 ```cpp
 Actor childActor = Actor::safeCast(Actor::getChildByName(actor, childActorName, false));
 ```
 
-Then you can move around the `Actor`, rotate it, etc., and all its components will take care of keeping their states in sync with the `Actor`.
+Then you can move around the [Actor](/documentation/api/class-actor/), rotate it, etc., and all its components will take care of keeping their -states in sync with the [Actor](/documentation/api/class-actor/).
 
 ```cpp
 if(!isDeleted(actor))
@@ -253,7 +253,7 @@ if(!isDeleted(actor))
 }
 ```
 
-The `Actor` has helper methods to propagate calls related to animations, like play, pause, stop, etc., to the attached `VisualComponent`s. This class basically facades the interactions to control `Sprite`s’ animations.
+The [Actor](/documentation/api/class-actor/) has helper methods to propagate calls related to animations, like play, pause, stop, etc., to the attached [VisualComponent](/documentation/api/class-visualcomponent/)s. This class basically facades the interactions to control [Sprite](/documentation/api/class-sprite/)s’ animations.
 
 ```cpp
 /// Play the animation with the provided name.
@@ -300,7 +300,7 @@ int16 getActualFrame();
 int32 getNumberOfFrames();
 ```
 
-When you have an `Actor` with a `Body` attached to it, you can apply forces to it to move it using physics simulations:
+When you have an [Actor](/documentation/api/class-actor/) with a [Body](/documentation/api/class-body/) attached to it, you can apply forces to it to move it using physics simulations:
 
 ```cpp
 Vector3D force = Vector3D::zero();
@@ -312,9 +312,9 @@ Actor::applyForce(actor, &force, true);
 
 ## ParticleSystem
 
-`ParticleSystem`s are a specific kind of `Actor` whose purpose is to instantiate a peculiar kind of `Entity`: `Particles`.
+[ParticleSystem](/documentation/api/class-particlesystem/)s are a specific kind of [Actor](/documentation/api/class-actor/) whose purpose is to instantiate a peculiar kind of [Entity](/documentation/api/class-entity/): [Particles](/documentation/api/class-particles/).
 
-As any other `Actor`, components can be attached to `ParticleSystem`s and they have their own Spec that adds a few attributes to control how `Particle`s are generated:
+As any other [Actor](/documentation/api/class-actor/), components can be attached to [ParticleSystem](/documentation/api/class-particlesystem/)s and they have their own Spec that adds a few attributes to control how [Particle](/documentation/api/class-particle/)s are generated:
 
 ```cpp
 ParticleSystemROMSpec SomeParticleSystemNormalSpec =
@@ -374,9 +374,9 @@ ParticleSystemROMSpec SomeParticleSystemNormalSpec =
 
 ## Particle
 
-`Particle`s are a kind of lightweight, reusable `Entity`, that are instantiated by `ParticleSystem`s. They don’t exist in the `Stage` as childs of it, although they can interact with other `Actor`s by means of collisions.
+[Particle](/documentation/api/class-particle/)s are a kind of lightweight, reusable [Entity](/documentation/api/class-entity/), that are instantiated by [ParticleSystem](/documentation/api/class-particlesystem/)s. They don’t exist in the [Stage](/documentation/api/class-stage/) as childs of it, although they can interact with other [Actor](/documentation/api/class-actor/)s by means of collisions.
 
-`Particle`s manage their components in a more specific and constrained way than `Actor`s in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to reduce the overhead of constantly creating and destroying them.
+[Particle](/documentation/api/class-particle/)s manage their components in a more specific and constrained way than [Actor](/documentation/api/class-actor/)s in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to reduce the overhead of constantly creating and destroying them.
 
 ```cpp
 ParticleROMSpec SomeParticleSpec =
@@ -407,4 +407,4 @@ ParticleROMSpec SomeParticleSpec =
 };
 ```
 
-`Particle`s can have physics applied to them and they can even collide with other instances of `Entity` in a `Stage`.
+[Particle](/documentation/api/class-particle/)s can have physics applied to them and they can even collide with other instances of [Entity](/documentation/api/class-entity/) in a [Stage](/documentation/api/class-stage/).

@@ -10,9 +10,9 @@ The engine implements the following mechanisms to avoid the implementation of be
 
 ## Messages
 
-Messages can be `enums` or strings that are sent between objects or propagated through hierarchies of `Actor`s or lists of `Component`s.
+Messages can be `enums` or strings that are sent between objects or propagated through hierarchies of [Actor](/documentation/api/class-actor/)s or lists of [Component](/documentation/api/class-component/)s.
 
-The `ListenerObject` class implements various helper methods to send messages around:
+The [ListenerObject](/documentation/api/class-listener-object/) class implements various helper methods to send messages around:
 
 ```cpp
 /// Send a message to another object.
@@ -29,9 +29,9 @@ void sendMessageTo(ListenerObject receiver, uint32 message, uint32 delay, uint32
 void sendMessageToSelf(uint32 message, uint32 delay, uint32 randomDelay);
 ```
 
-These are useful when, for example, an `Actor` processing a collision needs to inform the colliding `Entity` about it.
+These are useful when, for example, an [Actor](/documentation/api/class-actor/) processing a collision needs to inform the colliding [Entity](/documentation/api/class-entity/) about it.
 
-In the following example, when an `Actor` hits an `Entity` of type `kTypeSomeEntityType`, instead of calling a bespoke method on the colliding object that would depend on its class and would require the inclusion of the header file where it is declared, it can send a message to it:
+In the following example, when an [Actor](/documentation/api/class-actor/) hits an [Entity](/documentation/api/class-entity/) of type `kTypeSomeEntityType`, instead of calling a bespoke method on the colliding object that would depend on its class and would require the inclusion of the header file where it is declared, it can send a message to it:
 
 ```cpp
 bool SomeActor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))
@@ -76,13 +76,13 @@ bool SomeOtherActor::handleMessage(Telegram telegram)
 }
 ```
 
-Messages can be propagated too, instead of being specifically directed to a known `ListenerObject`. Usually, the propagation starts at the `Stage`’s level and is done through the `GameState`’s interface:
+Messages can be propagated too, instead of being specifically directed to a known [ListenerObject](/documentation/api/class-listener-object/). Usually, the propagation starts at the [Stage](/documentation/api/class-stage/)’s level and is done through the [GameState](/documentation/api/class-game-state/)’s interface:
 
 ```cpp
     SomeGameState::propagateMessage(this, kMessageSomeMessage);
 ```
 
-And any interested `Entity` can process the message and let it be forwarded to other instance of `Entity`, but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
+And any interested [Entity](/documentation/api/class-entity/) can process the message and let it be forwarded to other instance of [Entity](/documentation/api/class-entity/), but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
 
 ```cpp
 bool SomeClass::handlePropagatedMessage(int32 message)
@@ -100,7 +100,7 @@ bool SomeClass::handlePropagatedMessage(int32 message)
 }
 ```
 
-Messages that acts as commands can be propagated to the components attaching to an `Entity`:
+Messages that acts as commands can be propagated to the components attaching to an [Entity](/documentation/api/class-entity/):
 
 ```cpp
 void Entity::hide()
@@ -111,9 +111,9 @@ void Entity::hide()
 
 ## Events
 
-`ListenerObject`s can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
+[ListenerObject](/documentation/api/class-listener-object/)s can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
 
-To listen for events, an `EventListener` plus a scope object must be attached to a `ListenerObject`:
+To listen for events, an [EventListener](/documentation/api/class-eventlistener/) plus a scope object must be attached to a [ListenerObject](/documentation/api/class-listener-object/):
 
 ```cpp
 SomeClass::addEventListener
@@ -123,7 +123,7 @@ SomeClass::addEventListener
 );
 ```
 
-An `EventListener` method must return a boolean and receive a `ListenerObject` as the event firer:
+An [EventListener](/documentation/api/class-eventlistener/) method must return a boolean and receive a [ListenerObject](/documentation/api/class-listener-object/) as the event firer:
 
 ```cpp
 bool SomeClass::onSomeInterestingEvent(ListenerObject eventFirer __attribute__ ((unused)))
@@ -135,9 +135,9 @@ bool SomeClass::onSomeInterestingEvent(ListenerObject eventFirer __attribute__ (
 }
 ```
 
-If the `EventListener` returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return `true`.
+If the [EventListener](/documentation/api/class-eventlistener/) returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return `true`.
 
-An event is fired by calling fireEvent on an instance of `ListenerObject`:
+An event is fired by calling fireEvent on an instance of [ListenerObject](/documentation/api/class-listener-object/):
 
 ```cpp
 SomeClass::fireEvent(this, kEventInteresting);
