@@ -190,7 +190,7 @@ secure void VUEngine::reset(bool resetSounds)
 }
 ```
 
-And then, only itself and `GameState` classes are allowed to call by defining an array of authorized classes and then securing the `VUEngine` class:
+And a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the `VUEngine` must be passed to the call of `VUEngine::secure`:
 
 ```cpp
 const ClassPointer VUEngineAuthorizedClasses[] =
@@ -206,7 +206,7 @@ const ClassPointer VUEngineAuthorizedClasses[] =
 
 Notice that it is not necessary to list the `VUEngine` class itself in the list of authorized classes. Implicitly, all secured methods are accessible from their own classes without restrictions.
 
-The safety checks are removed in release builds to prevent these safety checks from impacting the game's performance.
+The safety checks are removed in release builds to prevent these them from impacting the game's performance.
 
 ## Performance
 
