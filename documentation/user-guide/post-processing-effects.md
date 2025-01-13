@@ -40,9 +40,9 @@ A post processing effect function is one with a signature exemplified as follows
 static void wobble(uint32 currentDrawingFrameBufferSet, Entity entity);
 ```
 
-It is possible to pass an `Entity` to the post processing effect so the processed region of the screen can be relative to that object.
+It is possible to pass an [Entity](/documentation/api/class-entity/) to the post processing effect so the processed region of the screen can be relative to that object.
 
-![](/documentation/images/user-guide/post-processing-effects/wobble.png)
+<a href="/documentation/images/user-guide/post-processing-effects/wobble.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/post-processing-effects/wobble.png" width="500"/></a><br>
 _Example of a post-processing effect that adds a full-screen wobble_
 
 ## Performance

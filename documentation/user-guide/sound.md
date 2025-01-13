@@ -6,7 +6,7 @@ title: Sound
 
 # Sound
 
-VUEngine supports two types of sound playback through a common interface: the `Sound` class. A **SoundSpec** specifies, among other properties, a list of `SoundTrack`s to play:
+VUEngine supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTrack](/documentation/api/class-sound-track/) to play:
 
 ```cpp
 SoundTrackROMSpec* const MenuSongSoundTracks[] =
@@ -36,7 +36,7 @@ SoundROMSpec MenuSongSoundSpec =
 };
 ```
 
-A **SoundTrackSpec** determines if the playback reproduces sounds as natively supported by the VirtualBoy’s Virtual Sound Unit (VSU) or Pulse Code Modulation data (PCM).
+A [SoundTrackSpec](/documentation/api/struct-sound-track-spec/) determines if the playback reproduces sounds as natively supported by the Virtual Boy’s Virtual Sound Unit (VSU) or Pulse Code Modulation data (PCM).
 
 ```cpp
 SoundTrackROMSpec MenuSongSoundTrack1 =
@@ -79,7 +79,7 @@ SoundTrackROMSpec MenuSongSoundTrack1 =
 };
 ```
 
-Each **SoundTrackSpec** must provide arrays for all the VSU’s hardware registers:
+Each [SoundTrackSpec](/documentation/api/struct-sound-track-spec/) must provide arrays for all the VSU’s hardware registers:
 
 ```cpp
 /// Sound source mapping
@@ -127,7 +127,7 @@ const SoundTrackKeyframe MenuSongSoundTrack1Keyframes[] =
 
 The VUEngine’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source, instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
 
-To reproduce a sound, a request to the `SoundManager`’s instance can be performed as shown below:
+To reproduce a sound, a request to the [SoundManager](/documentation/api/class-sound-manager/)’s instance can be performed as shown below:
 
 ```cpp
 SoundManager::playSound
@@ -137,7 +137,7 @@ SoundManager::playSound
 );
 ```
 
-A `Sound` can be acquired to control its playback as follows:
+A [Sound](/documentation/api/class-sound/) can be acquired to control its playback as follows:
 
 ```cpp
 extern SoundSpec SampleSoundSpec;
@@ -145,7 +145,7 @@ extern SoundSpec SampleSoundSpec;
 Sound sound = SoundManager::getSound(&SampleSoundSpec, NULL, NULL);
 ```
 
-Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling `Sound::play`:
+Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
 
 ```cpp
 if(!isDeleted(sound))
@@ -154,13 +154,13 @@ if(!isDeleted(sound))
 }
 ```
 
-`Sound`s can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.
+[Sounds](/documentation/api/class-sound/) can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.
 
 ## Timer settings
 
-The engine plays sounds during the timer interrupts, which are controlled by the `TimeManager`. The configuration of the hardware's timer can affect the output sound, this is a pressing fact when playing back PCM sound tracks.
+The engine plays sounds during the timer interrupts, which are controlled by the [TimerManager](/documentation/api/class-timer-manager/). The configuration of the hardware's timer can affect the output sound, this is a pressing fact when playing back PCM sound tracks.
 
-The timer can be configured at any time during the execution of a program, but it is usual to configure it once per `Stage`. In the **StageSpec** there is a field for the timer settings:
+The timer can be configured at any time during the execution of a program, but it is usual to configure it once per [Stage](/documentation/api/class-stage/). In the [StageSpec](/documentation/api/struct-stage-spec/) there is a field for the timer settings:
 
 ```cpp
 /// An Stage Spec
@@ -191,26 +191,131 @@ The resolution corresponds to the hardware's capabilities of ticking at 20 or 10
 
 The target time per interrupt, measured either in milliseconds or in microseconds depending on the value of the target timer per interrupt units attribute (`kMS` or `kUS`), is the disired time interval between interrupts.
 
-Usually, a target timer per interrupt of 5, 10, or even 20 ms is good enough for rich sound effects and songs during gameplay. Depending on the `Stage`, firing more interrupts per second can have a negative impact on the performance of the game.
+Usually, a target timer per interrupt of 5, 10, or even 20 ms is good enough for rich sound effects and songs during gameplay. Depending on the [Stage](/documentation/api/class-stage/), firing more interrupts per second can have a negative impact on the performance of the game.
 
 In the case of PCM playback, a high frequency interrupt triggering is required to achieve acceptable sound playback and to reduce the noise, product of the fact that the VSU is not designed to reproduce such sounds and they are basically hacked together to make them possible on the platform.
 
-The next table shows some general guidance on what is achievable, although the actual results are highly dependent on the load on the `Stage`s complexity:
+The following table shows some general guidance on what is achievable, although the actual results are highly dependent on the load on the [Stage](/documentation/api/class-stage/)'s complexity:
 
-```
-Target       Theoretical      Real          Efective       Real
-  Hz         us/interrupt   us/interrupt   us/interrupt     Hz         Notes
-
-44000             23            -43            -40         43478        Unfeasible
-24000             42            -24            -20         23810        Unfeasible
-16000             63             -3              0         15873        Unfeasible
-11025             91             25             20         10989        Unfeasible
- 9000            111             45             40          9009        Unfeasible
- 8000            125             59             60          8000        Unfeasible
- 7000            143             77             80          6993        Maximum, without animations
- 6000            167            101            100          5988        Achievable in very simple scenes
- 5500            182            116            120          5495        Realistic target
- 5000            200            134            140          5000        Realistic target
- 4500            222            156            160          4505        Realistic target, with some animations
- 4000            250            184            180          4000        Minimum acceptable quality
-```
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">
+        Target Hz
+      </th>
+      <th scope="col">
+        Theoretical us/interrupt
+      </th>
+      <th scope="col">
+        Real us/interrupt
+      </th>
+      <th scope="col">
+        Effective us/interrupt
+      </th>
+      <th scope="col">
+        Real Hz
+      </th>
+      <th scope="col">
+        Notes
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>44000</td>
+        <td>23</td>
+        <td>-43</td>
+        <td>-40</td>
+        <td>43478</td>
+        <td>Unfeasible</td>
+    </tr>
+    <tr>
+        <td>24000</td>
+        <td>42</td>
+        <td>-24</td>
+        <td>-20</td>
+        <td>23810</td>
+        <td>Unfeasible</td>
+    </tr>
+    <tr>
+        <td>16000</td>
+        <td>63</td>
+        <td>-3</td>
+        <td>0</td>
+        <td>15873</td>
+        <td>Unfeasible</td>
+    </tr>
+    <tr>
+        <td>11025</td>
+        <td>91</td>
+        <td>25</td>
+        <td>20</td>
+        <td>10989</td>
+        <td>Unfeasible</td>
+    </tr>
+    <tr>
+        <td>9000</td>
+        <td>111</td>
+        <td>45</td>
+        <td>40</td>
+        <td>9009</td>
+        <td>Unfeasible</td>
+        </tr>
+    <tr>
+        <td>8000</td>
+        <td>125</td>
+        <td>59</td>
+        <td>60</td>
+        <td>8000</td>
+        <td>Unfeasible</td>
+        </tr>
+    <tr>
+        <td>7000</td>
+        <td>143</td>
+        <td>77</td>
+        <td>80</td>
+        <td>6993</td>
+        <td>Maximum, without animations</td>
+        </tr>
+    <tr>
+        <td>6000</td>
+        <td>167</td>
+        <td>101</td>
+        <td>100</td>
+        <td>5988</td>
+        <td>Achievable in very simple scenes</td> 
+        </tr>
+    <tr>
+        <td>5500</td>
+        <td>182</td>
+        <td>116</td>
+        <td>120</td>
+        <td>5495</td>
+        <td>Realistic target</td> 
+        </tr>
+    <tr>
+        <td>5000</td>
+        <td>200</td>
+        <td>134</td>
+        <td>140</td>
+        <td>5000</td>
+        <td>Realistic target</td> 
+        </tr>
+    <tr>
+        <td>4500</td>
+        <td>222</td>
+        <td>156</td>
+        <td>160</td>
+        <td>4505</td>
+        <td>Realistic target, with some animations</td> 
+        </tr>
+    <tr>
+        <td>4000</td>
+        <td>250</td>
+        <td>184</td>
+        <td>180</td>
+        <td>4000</td>
+        <td>Minimum acceptable quality</td> 
+    </tr>
+  </tbody>
+</table>
