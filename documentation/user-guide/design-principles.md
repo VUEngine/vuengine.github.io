@@ -177,11 +177,11 @@ As another mechanism to facilitate the separation of concerns principle, the eng
 
 ## Singletons
 
-Singletons are globally accessible. This means that they come with all the attachtments that globally accessible data comes with. And, no top of that, they accessibility makes it very tempting to overuse them and tightly coupling classes that shouldn't really be that tied together.
+By their onw nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
 
-But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of the Singleton Pattern, like Dependency Injection, come with their own caveats, like lose of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory overhead, VUEngine tries to leverage the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
+But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory and performance overhead, VUEngine tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
 
-One of the first methods to protect is the `VUEngine::reset` method, which touches many of the engine's subsystems. To do so, it is decorated with the `secure` keyword:
+One of the first methods to protect from logically invalid calls is the `VUEngine::reset` method, which touches many of the engine's subsystems. To do so, it is decorated with the `secure` keyword:
 
 ```cpp
 secure void VUEngine::reset(bool resetSounds)
@@ -190,7 +190,7 @@ secure void VUEngine::reset(bool resetSounds)
 }
 ```
 
-And a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the `VUEngine` must be passed to `VUEngine::secure`:
+And a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the `VUEngine` is be passed to `VUEngine::secure`:
 
 ```cpp
 const ClassPointer VUEngineAuthorizedClasses[] =
@@ -205,6 +205,8 @@ VUEngine::secure(&VUEngineAuthorizedClasses);
 ```
 
 Notice that it is not necessary to list the `VUEngine` class itself in the list of authorized classes. Implicitly, all secured methods are accessible from their own classes without restrictions.
+
+Only the first call to `ClassName::secure` has effect, subsequent calls don't change the security conditions for the class.
 
 The safety checks are removed in release builds to prevent them from impacting the game's performance.
 

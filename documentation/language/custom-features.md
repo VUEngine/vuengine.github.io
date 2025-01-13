@@ -69,6 +69,8 @@ If any other class besides those listed in `SomSingletonClassAuthorizedClasses` 
 <a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="CHAR Inspector"><img src="/documentation/images/language/custom-features/singleton-security.png" width="500" /></a><br/>
 _Illegal access to secure method_
 
+There are some limitations due to the fact that globality cannot really be so easily defeated. And this tool doesn't pretend to achieve that. Instead, is is just another tool to provide some aids preventing dangerous code paths when developing programs using Virtual C.
+
 ### Dynamic Singleton classes
 
 These kind of singletons are dynamically allocated, hence not in the stack. Their destruction is optional, but they are usually manually deleted when not necessary to save on memory.
