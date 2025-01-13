@@ -117,7 +117,7 @@ From those arguments, some are about what to present (from coordinates in BGMAP 
 
 VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently from the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end use. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**s, as a short for “specification”:
 
-The following exemplifies a **Spec** that specifies what to display (a [Texture](/documentation/api/class-texture/) to be created and configured according to the provided **TextureSpec**) and how to display it (as a BGMAP WORLD):
+The following exemplifies a **Spec** that specifies what to display (a [Texture](/documentation/api/class-texture/) to be created and configured according to the provided [TextureSpec](/documentation/api/struct-texture-spec/)) and how to display it (as a BGMAP WORLD):
 
 ```cpp
 BgmapSpriteROMSpec SomeSpriteSpec =

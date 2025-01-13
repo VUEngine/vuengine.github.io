@@ -32,7 +32,7 @@ The engine takes care of keeping up to date the [Container](/documentation/api/c
 
 At the root of the hierarchy of [Container](/documentation/api/class-container/)s, sits an instance of the [Stage](/documentation/api/class-stage/) class. A [Stage](/documentation/api/class-stage/) is the first type of [Container](/documentation/api/class-container/) and [Entity](/documentation/api/class-entity/) that can be instantiated. It only allows instances of another specific type of Container as children: [Actor](/documentation/api/class-actor/)s. The [Stage](/documentation/api/class-stage/) implements the logic to stream in and out [Actor](/documentation/api/class-actor/)s and is the proxy through which the [GameState](/documentation/api/class-game-state/) accesses the [Actor](/documentation/api/class-actor/)s in a game level.
 
-Being instantiable, the [Stage](/documentation/api/class-stage/) has its own **StageSpec** to initialize it. Among a lot of other things, it has an option array of **ActorSpecs** that define the [Actor](/documentation/api/class-actor/)s that will populate the [Stage](/documentation/api/class-stage/):
+Being instantiable, the [Stage](/documentation/api/class-stage/) has its own [StageSpec](/documentation/api/struct-stage-spec/) to initialize it. Among a lot of other things, it has an option array of **ActorSpecs** that define the [Actor](/documentation/api/class-actor/)s that will populate the [Stage](/documentation/api/class-stage/):
 
 ```cpp
 PositionedActorROMSpec StageActorsSpecs[] =
@@ -123,7 +123,7 @@ StageROMSpec ActorsStageSpec =
 
 ## Actor
 
-[Actor](/documentation/api/class-actor/)s are the basic unit of game logic in VUEngine projects. They are special [Container](/documentation/api/class-container/)s that can be streamed in and out of [Stage](/documentation/api/class-stage/)s automatically or manually. They are configured by providing an **ActorSpec** that specifies, among other things, which components to attach to it when instantiated:
+[Actor](/documentation/api/class-actor/)s are the basic unit of game logic in VUEngine projects. They are special [Container](/documentation/api/class-container/)s that can be streamed in and out of [Stage](/documentation/api/class-stage/)s automatically or manually. They are configured by providing an [ActorSpec](/documentation/api/struct-actor-spec/) that specifies, among other things, which components to attach to it when instantiated:
 
 ```cpp
 ComponentSpec* const BoxActorComponentSpecs[] =
@@ -162,7 +162,7 @@ ActorROMSpec BoxActorSpec =
 };
 ```
 
-[Actor](/documentation/api/class-actor/)s can be instantiated and added to the [Stage](/documentation/api/class-stage/) programmatically, that is to say that it is not mandatory to provide their specs in advance as part of the list of **ActorSpecs** defined in the **StageSpec**.
+[Actor](/documentation/api/class-actor/)s can be instantiated and added to the [Stage](/documentation/api/class-stage/) programmatically, that is to say that it is not mandatory to provide their specs in advance as part of the list of **ActorSpecs** defined in the [StageSpec](/documentation/api/struct-stage-spec/).
 
 To add [Actor](/documentation/api/class-actor/)s to the [Stage](/documentation/api/class-stage/) programmatically, the following method can be used:
 
@@ -227,7 +227,7 @@ You acquire a direct reference to a newly spawned [Actor](/documentation/api/cla
     );
 ```
 
-Or you acquire it indirectly if the [Actor](/documentation/api/class-actor/) is being added automatically by the [Stage](/documentation/api/class-stage/)’s streaming as specified in the **StageSpec**:
+Or you acquire it indirectly if the [Actor](/documentation/api/class-actor/) is being added automatically by the [Stage](/documentation/api/class-stage/)’s streaming as specified in the [StageSpec](/documentation/api/struct-stage-spec/):
 
 ```cpp
 Actor childActor = Actor::safeCast(Actor::getChildByName(actor, childActorName, false));
