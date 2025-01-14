@@ -265,7 +265,7 @@ The following table shows some general guidance on what is achievable, although 
         <td>8000</td>
         <td>125</td>
         <td>77</td>
-        <td>90</td>
+        <td>80</td>
         <td>8000</td>
         <td>Maximum, without animations</td>
     </tr>
