@@ -8,7 +8,7 @@ title: Game Logic
 
 ## Update
 
-Most likely, any game will run inside an infinite loop that starts after some previous initialization and that only breaks when the program is going to finish. VUEngine games work the same, but the loop where the actual game’s logic runs (not to confuse it with the loop that the engine’s core runs in as part of the cycle that loops over the engine’s subsystems like physics simulations, rendering, etc.) is implemented as an iterative call to the [VUEngine](/documentation/api/class-vu-engine/) instance’s current [GameState](/documentation/api/class-game-state/)’s execute method.
+Most likely, any game will run inside an infinite loop that starts after some previous initialization and that only breaks when the program is going to finish. [VUEngine](https://github.com/VUEngine/VUEngine-Core) games work the same, but the loop where the actual game’s logic runs (not to confuse it with the loop that the engine’s core runs in as part of the cycle that loops over the engine’s subsystems like physics simulations, rendering, etc.) is implemented as an iterative call to the [VUEngine](/documentation/api/class-vu-engine/) instance’s current [GameState](/documentation/api/class-game-state/)’s execute method.
 
 The [GameState](/documentation/api/class-game-state/)’s implementation of the execute method calls `Stage::update` on its [Stage](/documentation/api/class-stage/)’s instance, which in turn forwards that call to its children’s implementation.
 

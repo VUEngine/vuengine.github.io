@@ -10,7 +10,7 @@ The engine has evolved over the years to implement the following patterns:
 
 ## Object Oriented Paradigm
 
-Since the beginning of its development, VUEngine has implemented mechanisms to support the following 3 basic features that Object Oriented Programming proposes:
+Since the beginning of its development, [VUEngine](https://github.com/VUEngine/VUEngine-Core) has implemented mechanisms to support the following 3 basic features that Object Oriented Programming proposes:
 
 - Inheritance
 - Encapsulation
@@ -21,9 +21,9 @@ order expose those features in a more friendly manner, we implemented a transpil
 
 ## State Machines
 
-The core of the engine is the VUEngine singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
+The core of the engine is the [VUEngine](/documentation/api/class-vu-engine/) singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
 
-Any VUEngine based program must provide a [GameState](/documentation/api/class-gamestate/) for the VUEngine instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to in the game’s starting function:
+Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-vu-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to in the game’s starting function:
 
 ```cpp
 int32 game(void)
@@ -115,7 +115,7 @@ vbSetWorld(28, WRLD_ON, 40, -1, 0, 32, 0, 0, 335, 32); // Password
 
 From those arguments, some are about what to present (from coordinates in BGMAP memory space) while others are about where to present that (which WORLD to use and at which screen coordinates). The first is a data concern; the later is a mixture of hardware management and game logic concerns. Neither data related nor hardware related concerns are genuine concerns for the role that the developer adopts when solving a gaming problem. In the above example, the developer is working triple duties: hardware administrator, game programmer and artist / UI or screen designer.
 
-VUEngine’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the VUEngine’s core, who fulfills its duties transparently from the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end user. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**s, as a short for “specification”:
+[VUEngine](https://github.com/VUEngine/VUEngine-Core)’s architectural philosophy is obsessed with the separation of these concerns neatly: the hardware manager role is played by the [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s core, who fulfills its duties transparently from the point of view of the game developer; and the designer duties are restricted to the creation, elsewhere, far away from the game programmer’s code, of the data structures that specify what must be presented to the end user. The latter is achieved by the declaration and instantiation of structs that are used as recipes by the engine to instantiate objects of different classes and to initialize them according to the values specified in the struct’ attributes. We call these structs **Spec**s, as a short for “specification”:
 
 The following exemplifies a **Spec** that specifies what to display (a [Texture](/documentation/api/class-texture/) to be created and configured according to the provided [TextureSpec](/documentation/api/struct-texture-spec/)) and how to display it (as a BGMAP WORLD):
 
@@ -171,7 +171,7 @@ if(!isDeleted(sprite))
 }
 ```
 
-Internally, the VUEngine’s core will figure out dynamically where to display what the programmer has requested to be displayed, while that which has to be displayed has already been defined elsewhere, not by the game programmer, but by the game designer or artist.
+Internally, the [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s core will figure out dynamically where to display what the programmer has requested to be displayed, while that which has to be displayed has already been defined elsewhere, not by the game programmer, but by the game designer or artist.
 
 As another mechanism to facilitate the separation of concerns principle, the engine provides a custom facility for dynamic memory allocation that doesn’t rely on enabling the program’s heap. This, again, helps to avoid hardcoding data within the game’s logic by avoiding the need to know in advance how many objects of any given type are required in any given context.
 
@@ -179,7 +179,7 @@ As another mechanism to facilitate the separation of concerns principle, the eng
 
 By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
 
-But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory and performance overhead, VUEngine tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
+But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory and performance overhead, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
 
 One of the first methods to protect from logically invalid calls is the `VUEngine::reset` method, which touches many of the engine's subsystems. To do so, it is decorated with the `secure` keyword:
 
@@ -212,7 +212,7 @@ The safety checks are removed in release builds to prevent them from impacting t
 
 ## Performance
 
-While a game running on VUEngine could never aspire to run as fast as a feature-by-feature equivalent one written in pure assembler, or C for that matter; the complexity of an equivalent program written in these would quickly become unmanageable. In any case, VUEngine aims at good performance, but as any modern generic engine out there, to extract the most of it requires enough knowledge about what it does and specially the flexibility to rewrite parts of it to restrict its range of applicability to specific use cases, in order to gain back the performance loss that generality entails.
+While a game running on [VUEngine](https://github.com/VUEngine/VUEngine-Core) could never aspire to run as fast as a feature-by-feature equivalent one written in pure assembler, or C for that matter; the complexity of an equivalent program written in these would quickly become unmanageable. In any case, [VUEngine](https://github.com/VUEngine/VUEngine-Core) aims at good performance, but as any modern generic engine out there, to extract the most of it requires enough knowledge about what it does and specially the flexibility to rewrite parts of it to restrict its range of applicability to specific use cases, in order to gain back the performance loss that generality entails.
 
 Some of the strategies that it uses to compensate for the heaviest of its features, like dynamic dispatching of function calls to support polymorphism, the calling cost of hot functions, or the lack of a dedicated arithmetic unit in the Virtual Boy’s CPU, are:
 
@@ -222,7 +222,7 @@ Some of the strategies that it uses to compensate for the heaviest of its featur
 
 ## Safety
 
-To implement some of its OOP features, VUEngine makes extensive use of pointers and casts them aggresively through the code base. This inevitably runs the risk of using invalid pointers. To mitigate that pitfal, the engine provides a few tools and strategies.
+To implement some of its OOP features, [VUEngine](https://github.com/VUEngine/VUEngine-Core) makes extensive use of pointers and casts them aggresively through the code base. This inevitably runs the risk of using invalid pointers. To mitigate that pitfal, the engine provides a few tools and strategies.
 
 ### Safe casting
 

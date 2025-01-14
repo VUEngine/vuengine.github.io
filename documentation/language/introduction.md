@@ -6,7 +6,7 @@ title: Introduction
 
 # Virtual C
 
-Virtual C is the name of a custom C++-like syntax that we developed to support some Object Oriented Programming features in VUEngine.
+Virtual C is the name of a custom C++-like syntax that we developed to support some Object Oriented Programming features in [VUEngine](https://github.com/VUEngine/VUEngine-Core).
 
 It consist of a set of scripts that act together as a transpiler that converts code writen in Virtual C to standard C.
 

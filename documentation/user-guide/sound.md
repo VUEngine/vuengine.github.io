@@ -6,7 +6,7 @@ title: Sound
 
 # Sound
 
-VUEngine supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTracks](/documentation/api/class-sound-track/) to play:
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTracks](/documentation/api/class-sound-track/) to play:
 
 ```cpp
 SoundTrackROMSpec* const MenuSongSoundTracks[] =
@@ -125,7 +125,7 @@ const SoundTrackKeyframe MenuSongSoundTrack1Keyframes[] =
 };
 ```
 
-The VUEngine’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source, instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
+The [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source, instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
 
 To reproduce a sound, a request to the [SoundManager](/documentation/api/class-sound-manager/)’s instance can be performed as shown below:
 

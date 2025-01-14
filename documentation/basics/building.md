@@ -81,7 +81,7 @@ A Build Mode Switch (**I**), which shows the current build mode, can be found in
 
 ## Build Modes
 
-VUEngine can be built in different modes, for different purposes. You can change modes in various ways:
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) can be built in different modes, for different purposes. You can change modes in various ways:
 
 - Via the respective status bar entry (see screenshot above)
 - Via the `Build: Set Build Mode` command
@@ -154,7 +154,7 @@ When a build fails, you can, in the best case, just follow the error messages to
 
 ### Error diagnosis
 
-Since the engine makes heavy use of pointer logic, it is really easy to trigger difficult to find bugs. In order to mitigate this issue, VUEngine provides the following aids:
+Since the engine makes heavy use of pointer logic, it is really easy to trigger difficult to find bugs. In order to mitigate this issue, [VUEngine](https://github.com/VUEngine/VUEngine-Core) provides the following aids:
 
 #### Asserts
 
@@ -174,7 +174,7 @@ ASSERT(__GET_CAST(ClassName, someObject), "ClassName::methodName: Wrong object c
 
 ##### NM_ASSERT
 
-Inserted under any compilation type (NM stands for "non maskable"). This macro is meant to be placed in sensible parts of the code. Here's a few examples of usage in VUEngine:
+Inserted under any compilation type (NM stands for "non maskable"). This macro is meant to be placed in sensible parts of the code. Here's a few examples of usage in [VUEngine](https://github.com/VUEngine/VUEngine-Core):
 
 - **MemoryPool allocation**:
   To let you know that the memory is full, otherwise extremely hard to track bugs occur.

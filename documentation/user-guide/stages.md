@@ -8,7 +8,7 @@ title: Stages
 
 [Sprites](/documentation/api/class-sprite/) already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of [Sprites](/documentation/api/class-sprite/), but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
 
-VUEngine implements [Stages](/documentation/api/class-stage/) as collections of a specific type of [Entity](/documentation/api/class-entity/): [Actors](/documentation/api/class-actor/).
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) implements [Stages](/documentation/api/class-stage/) as collections of a specific type of [Entity](/documentation/api/class-entity/): [Actors](/documentation/api/class-actor/).
 
 ## Entity
 
@@ -123,7 +123,7 @@ StageROMSpec ActorsStageSpec =
 
 ## Actor
 
-[Actors](/documentation/api/class-actor/) are the basic unit of game logic in VUEngine projects. They are special [Containers](/documentation/api/class-container/) that can be streamed in and out of [Stages](/documentation/api/class-stage/) automatically or manually. They are configured by providing an [ActorSpec](/documentation/api/struct-actor-spec/) that specifies, among other things, which components to attach to them when instantiated:
+[Actors](/documentation/api/class-actor/) are the basic unit of game logic in [VUEngine](https://github.com/VUEngine/VUEngine-Core) projects. They are special [Containers](/documentation/api/class-container/) that can be streamed in and out of [Stages](/documentation/api/class-stage/) automatically or manually. They are configured by providing an [ActorSpec](/documentation/api/struct-actor-spec/) that specifies, among other things, which components to attach to them when instantiated:
 
 ```cpp
 ComponentSpec* const BoxActorComponentSpecs[] =
@@ -211,7 +211,7 @@ if(NULL != childActor)
 }
 ```
 
-The game logic should always manipulate [Actors](/documentation/api/class-actor/) and not [Sprites](/documentation/api/class-sprite/), [Textures](/documentation/api/class-texture/) or [CharSets](/documentation/api/class-charsets/). There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, [Actors](/documentation/api/class-actor/) are the main citizens in VUEngine based games.
+The game logic should always manipulate [Actors](/documentation/api/class-actor/) and not [Sprites](/documentation/api/class-sprite/), [Textures](/documentation/api/class-texture/) or [CharSets](/documentation/api/class-charsets/). There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, [Actors](/documentation/api/class-actor/) are the main citizens in [VUEngine](https://github.com/VUEngine/VUEngine-Core) based games.
 
 You acquire a direct reference to a newly spawned [Actor](/documentation/api/class-actor/) when using the above methods:
 

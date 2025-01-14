@@ -6,7 +6,7 @@ title: Graphics
 
 # Graphics
 
-VUEngine now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: [Sprites](/documentation/api/class-sprite/), [Wireframes](/documentation/api/class-wireframe/) and [Printing](/documentation/api/class-printing/).
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: [Sprites](/documentation/api/class-sprite/), [Wireframes](/documentation/api/class-wireframe/) and [Printing](/documentation/api/class-printing/).
 
 [Sprites](/documentation/api/class-sprite/) are the means by which the engine displays 2D images, while [Wireframes](/documentation/api/class-wireframe/) are used to display non textured 3D geometry shapes.
 
@@ -163,7 +163,7 @@ These kind of [Sprites](/documentation/api/class-sprite/) support 3 display mode
 
 #### Affine transformations
 
-Affine transformation effects are supported both in hardware and by VUEngine. The effect to apply to a given [Sprite](/documentation/api/class-sprite/) is determined by the corresponding pointer in the [BgmapSpriteSpec](/documentation/api/struct-bgmap-sprite-spec/). If NULL, the engine applies a default full transformation by calling [Affine::transform](/documentation/api/class-affine/#aa3e91a2a23e8c48c56074f284c7317ff); otherwise, the provided affine function is applied.
+Affine transformation effects are supported both in hardware and by [VUEngine](https://github.com/VUEngine/VUEngine-Core). The effect to apply to a given [Sprite](/documentation/api/class-sprite/) is determined by the corresponding pointer in the [BgmapSpriteSpec](/documentation/api/struct-bgmap-sprite-spec/). If NULL, the engine applies a default full transformation by calling [Affine::transform](/documentation/api/class-affine/#aa3e91a2a23e8c48c56074f284c7317ff); otherwise, the provided affine function is applied.
 
 An affine function must have the following signature:
 
@@ -193,7 +193,7 @@ Factoring in all possible combinations, with this technique it would theoretical
 
 <a href="/documentation/images/user-guide/graphics/7-color-palette.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/7-color-palette.png"/></a>
 
-VUEngine includes a special [Sprite](/documentation/api/class-sprite/), [FrameBlendBgmapSprite](/documentation/api/class-frame-blend-bgmap-sprite/), that supports frame blending out of the box. It takes a [Texture](/documentation/api/class-texture/) that is basically a vertical spritesheet containing two frames of the same image that differ only in pixels that should be blended. Each game frame, the [FrameBlendBgmapSprite](/documentation/api/class-frame-blend-bgmap-sprite/) toggles between displaying the upper or the lower half of the [Texture](/documentation/api/class-texture/) to the user.
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) includes a special [Sprite](/documentation/api/class-sprite/), [FrameBlendBgmapSprite](/documentation/api/class-frame-blend-bgmap-sprite/), that supports frame blending out of the box. It takes a [Texture](/documentation/api/class-texture/) that is basically a vertical spritesheet containing two frames of the same image that differ only in pixels that should be blended. Each game frame, the [FrameBlendBgmapSprite](/documentation/api/class-frame-blend-bgmap-sprite/) toggles between displaying the upper or the lower half of the [Texture](/documentation/api/class-texture/) to the user.
 
 This way, a higher visual fidelity can be achieved on a per-[Sprite](/documentation/api/class-sprite/) basis, at the cost of higher CHAR and BGMAP memory requirements.
 
@@ -287,7 +287,7 @@ if(!isDeleted(wireframe))
 
 ## Printing
 
-VUEngine uses a special [Sprite](/documentation/api/class-sprite/) to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a special [Sprite](/documentation/api/class-sprite/) to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
 
 ```cpp
     /// Print a string.
@@ -339,7 +339,7 @@ To erase all printing, use:
 Printing::clear();
 ```
 
-VUEngine comes with a default font for writing to the printing Layer, but you can replace it with any number of custom fonts.
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) comes with a default font for writing to the printing Layer, but you can replace it with any number of custom fonts.
 
 ## Animations
 

@@ -6,7 +6,7 @@ title: Coding Standards
 
 # Coding Standards
 
-All the code written by Team VUEngine tries to adhere to the following coding standards to ensure a consistent code appearance and high interoperability.
+All the code written by [Team VUEngine](https://www.patreon.com/vuengine) tries to adhere to the following coding standards to ensure a consistent code appearance and high interoperability.
 
 - Tabs of size 4 must be used for indenting.
 

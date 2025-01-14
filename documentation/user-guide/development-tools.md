@@ -6,7 +6,7 @@ title: Development Tools
 
 # Development Tools
 
-VUEngine provides a couple of tools that aim to help to understand how the hardware resources are being used at any moment, to provide a lead on where to look to improve the game’s performance.
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) provides a couple of tools that aim to help to understand how the hardware resources are being used at any moment, to provide a lead on where to look to improve the game’s performance.
 
 In order to make some of them available, the build target must be either “tools” or “debug”.
 Each one is opened through the pressing of a key combination.
