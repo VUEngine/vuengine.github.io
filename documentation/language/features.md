@@ -48,9 +48,9 @@ abstract class Object : Object
 }
 ```
 
-`Object` is abstract, so it cannot be instantiated. And it inherits from itself. It supports RTTI by means of its `getCast` method, which allows to perform safe up and down casting at runtime.
+`Object` is abstract, so it cannot be instantiated. And it inherits from itself. It supports RTTI by means of its `getCast` method, which allows to perform safe up and down castings at runtime.
 
-Any new class must always inherit from the `Object` class, which is done in a similar way that how it is done in C++:
+Any new class must always inherit from the `Object` class or from another class that ultimately inherits from it.
 
 ## Encapsulation
 
@@ -63,4 +63,4 @@ Encapsulation support is implicitly implemented and fixed, in other words, there
 
 Dynamic or late dispatching is achieved by the custom implementation of virtual tables that are configurable at runtime.
 
-Methods that support late dispatching must be declared as `virtual` and they can optionally be pure, following C++ conventions.
+Methods that support late dispatching must be declared as `virtual` and they can optionally be pure, which is achieved following C++ conventions.

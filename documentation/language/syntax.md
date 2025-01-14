@@ -80,7 +80,7 @@ SomeClass::method(someClassInstance, argument1, argument2, ...);
 
 ## Method implementation
 
-All methods implicitly declare a `this` pointer to the object passed as the first argument in non static method invocations:
+Non static methods implicitly declare a `this` pointer to the object passed as the first argument the method's invocation:
 
 ```cpp
 void SomeClass::method(uint32 argument1, uint32 argument2, ...)

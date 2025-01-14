@@ -35,7 +35,7 @@ The language implements support to declare classes that can only have a single i
 
 The singleton classes' instances are allocated in the stack.
 
-Since singletons are globally accesible, they put at risk the stability of the program by being modifiable from anywhere. So, it is important to have some mechanism to help preventing such modifications if where possible.
+Since singletons are globally accesible, they put at risk the stability of the program by being modifiable from anywhere. So, it is important to have some mechanism to help preventing such modifications where possible.
 
 The transpiler adds the `secure` keyword to decorate non static methods of singleton classes that should not be called but by specific classes.
 
@@ -46,7 +46,7 @@ secure void SomeSingletonClass::someMethod()
 }
 ```
 
-Then, to restrict from were it is legal to call such method, the array must be defined globally in non volatitle memory:
+Then, to restrict from were it is legal to call such method, a array of classes must be defined globally in non volatitle memory:
 
 ```cpp
 const ClassPointer SomSingletonClassAuthorizedClasses[] =
@@ -57,23 +57,22 @@ const ClassPointer SomSingletonClassAuthorizedClasses[] =
 };
 ```
 
-And then, the following method must be called where appropriate:
+Finally, the following method must be called where appropriate:
 
 ```cpp
 	SomeSingletonClass::secure(&SomSingletonClassAuthorizedClasses);
 ```
 
-If any other class besides those listed in `SomSingletonClassAuthorizedClasses` tries to call `SomeSingletonClass::someMethod`, an exception like the following will be triggered:
+After `SomeSingletonClass::secure` has been called with a non empty array of classes, if any other class besides those listed in the array tries to call `SomeSingletonClass::someMethod`, an exception like the following will be triggered:
 
-         /documentation/images/language/custom-features/singleton-security.png
-<a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="CHAR Inspector"><img src="/documentation/images/language/custom-features/singleton-security.png" width="500" /></a><br/>
+<a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Illegal method access"><img src="/documentation/images/language/custom-features/singleton-security.png" width="500" /></a><br/>
 _Illegal access to secure method_
 
-There are some limitations due to the fact that globality cannot really be so easily defeated. And this tool doesn't pretend to achieve that. Instead, is is just another tool to provide some aids preventing dangerous code paths when developing programs using Virtual C.
+There are some limitations due to the fact that globality cannot really be so easily defeated. And this contraption doesn't pretend to achieve that. Instead, it only expects to be just a tool to help preventing potentially dangerous code paths when developing programs using Virtual C.
 
 ### Dynamic Singleton classes
 
-These kind of singletons are dynamically allocated, hence not in the stack. Their destruction is optional, but they are usually manually deleted when not necessary to save on memory.
+These kind of singletons are dynamically allocated, hence not in the stack. Their destruction is optional, but they are usually manually deleted when not necessary to save on memory. In every other aspect, they are just like normal singletons.
 
 ### Static classes
 
@@ -113,7 +112,7 @@ extension class SomeClass : SomeBaseClass
 
 ## Class Mutation
 
-Virtual C allows the modification in real time of a class' virtual table by changing the pointers to the virtual methods. This enables the possibility to change the behavior of all the class' instances simultaneously.
+Virtual C allows the modification of a class's behavior during runtime by changing the pointers to the virtual methods. This enables the possibility to change simultaneously the logic that governs of all the instances of the class.
 
 Having a class that declares a `virtual` method or overrides one:
 

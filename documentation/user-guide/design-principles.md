@@ -177,7 +177,7 @@ As another mechanism to facilitate the separation of concerns principle, the eng
 
 ## Singletons
 
-By their onw nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
+By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
 
 But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory and performance overhead, VUEngine tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
 
