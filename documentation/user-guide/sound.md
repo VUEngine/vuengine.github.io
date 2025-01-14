@@ -6,7 +6,7 @@ title: Sound
 
 # Sound
 
-VUEngine supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTrack](/documentation/api/class-sound-track/) to play:
+VUEngine supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTracks](/documentation/api/class-sound-track/) to play:
 
 ```cpp
 SoundTrackROMSpec* const MenuSongSoundTracks[] =
@@ -145,7 +145,7 @@ extern SoundSpec SampleSoundSpec;
 Sound sound = SoundManager::getSound(&SampleSoundSpec, NULL, NULL);
 ```
 
-Sound playback supports spatial positioning through stereo separation if a reference to a transformation is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
+Sound playback supports spatial positioning through stereo separation if a reference to a [Transformation](/documentation/api/struct-transformations/) is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
 
 ```cpp
 if(!isDeleted(sound))
