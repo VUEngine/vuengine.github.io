@@ -67,9 +67,9 @@ An [Entity](/documentation/api/class-entity/) with a [Body](/documentation/api/c
 
 ## Collider
 
-A [Collider](/documentation/api/class-collider/) is a Component that attaches to a [Entity](/documentation/api/class-entity/) and is capable of sensing collisions with other [Collider](/documentation/api/class-collider/)s and informing its owner about these events.
+A [Collider](/documentation/api/class-collider/) is a Component that attaches to a [Entity](/documentation/api/class-entity/) and is capable of sensing collisions with other [Colliders](/documentation/api/class-collider/) and informing its owner about these events.
 
-The engine provides a few kinds of Colliders: [Ball](/documentation/api/class-ball/)s, [Box](/documentation/api/class-box/)es, [LineField](/documentation/api/class-linefield/)s.
+The engine provides a few kinds of Colliders: [Balls](/documentation/api/class-ball/), [Box](/documentation/api/class-box/)es, [LineFields](/documentation/api/class-linefield/).
 
 The typical [ColliderSpec](/documentation/api/class-colliderspec/) looks like the following:
 
@@ -110,7 +110,7 @@ ColliderROMSpec SomeActorColliderSpec =
 
 In order to reduce the number of collision checks as much as possible, the [Collider](/documentation/api/class-collider/) can be configured to be passive: it doesn’t check for collisions itself, but others can still check for collisions against it. Another property used to improve performance is the layers in which a [Collider](/documentation/api/class-collider/) logically exists. This, in conjunction with the property that defines layers to ignore when checking for collisions, helps to reduce the number of tests per game cycle. For example, A solid [Particle](/documentation/api/class-particle/) might need to bounce when colliding with the floor, but it doesn’t need to test if it collides with an item; in this case, the item’s [Collider](/documentation/api/class-collider/) may be set to live in a collision layer that the [Particle](/documentation/api/class-particle/)’s collider ignores.
 
-Besides memory and performance, there are no other limitations with regards to how many [Collider](/documentation/api/class-collider/)s can be added to the same [Entity](/documentation/api/class-entity/).
+Besides memory and performance, there are no other limitations with regards to how many [Colliders](/documentation/api/class-collider/) can be added to the same [Entity](/documentation/api/class-entity/).
 
 Collision as processed by overriding the following [Entity](/documentation/api/class-entity/)'s methods:
 
@@ -129,7 +129,7 @@ Collision as processed by overriding the following [Entity](/documentation/api/c
     virtual void collisionEnds(const CollisionInformation* collisionInformation);
 ```
 
-The [CollisionInformation](/documentation/api/class-collisioninformation/) struct holds information about the colliding [Entity](/documentation/api/class-entity/), the collision vector, and the [Collider](/documentation/api/class-collider/)s involved in the collision event:
+The [CollisionInformation](/documentation/api/class-collisioninformation/) struct holds information about the colliding [Entity](/documentation/api/class-entity/), the collision vector, and the [Colliders](/documentation/api/class-collider/) involved in the collision event:
 
 ```cpp
 bool SomeActor::collisionStarts(const CollisionInformation* collisionInformation __attribute__ ((unused)))

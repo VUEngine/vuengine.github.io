@@ -8,7 +8,7 @@ title: User Input
 
 User input is read by the [KeypadManager](/documentation/api/class-keypadmanager/) class’ instance and the engine takes on the duty of notifying the current [GameState](/documentation/api/class-game-state/) about changes to the user input by calling `GameState::processUserInput`.
 
-In order to react to the actions of the user, the [GameState](/documentation/api/class-game-state/)s that implement the logic of the specific game must provide a custom implementation of the `processUserInput` method.
+In order to react to the actions of the user, the [GameStates](/documentation/api/class-game-state/) that implement the logic of the specific game must provide a custom implementation of the `processUserInput` method.
 
 ```cpp
 void SomeGameState::processUserInput(const UserInput* userInput)

@@ -10,7 +10,7 @@ The engine implements the following mechanisms to avoid the implementation of be
 
 ## Messages
 
-Messages can be `enums` or strings that are sent between objects or propagated through hierarchies of [Actor](/documentation/api/class-actor/)s or lists of [Component](/documentation/api/class-component/)s.
+Messages can be `enums` or strings that are sent between objects or propagated through hierarchies of [Actors](/documentation/api/class-actor/) or lists of [Components](/documentation/api/class-component/).
 
 The [ListenerObject](/documentation/api/class-listener-object/) class implements various helper methods to send messages around:
 
@@ -66,10 +66,10 @@ bool SomeOtherActor::handleMessage(Telegram telegram)
     switch(Telegram::getMessage(telegram))
     {
         case kMessageTouchedBySomeActor:
-            {
-                // Do interesting stuff
-            }
+        {
+            // Do interesting stuff
             break;
+        }
     }
 
     return Base::handleMessage(this, telegram);
@@ -82,7 +82,7 @@ Messages can be propagated too, instead of being specifically directed to a know
     SomeGameState::propagateMessage(this, kMessageSomeMessage);
 ```
 
-And any interested [Entity](/documentation/api/class-entity/) can process the message and let it be forwarded to other instance of [Entity](/documentation/api/class-entity/), but returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
+And any interested [Entity](/documentation/api/class-entity/) can process the message and let it be forwarded to other instance of [Entity](/documentation/api/class-entity/), by returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
 
 ```cpp
 bool SomeClass::handlePropagatedMessage(int32 message)
@@ -90,10 +90,10 @@ bool SomeClass::handlePropagatedMessage(int32 message)
     switch(message)
     {
         case kMessageSomeMessage:
-
+        {
             // Do interesting stuff
-
             break;
+        }
     }
 
     return false;
@@ -111,7 +111,7 @@ void Entity::hide()
 
 ## Events
 
-[ListenerObject](/documentation/api/class-listener-object/)s can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
+[ListenerObjects](/documentation/api/class-listener-object/) can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
 
 To listen for events, an [EventListener](/documentation/api/class-eventlistener/) plus a scope object must be attached to a [ListenerObject](/documentation/api/class-listener-object/):
 
@@ -135,9 +135,9 @@ bool SomeClass::onSomeInterestingEvent(ListenerObject eventFirer __attribute__ (
 }
 ```
 
-If the [EventListener](/documentation/api/class-eventlistener/) returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the function must return `true`.
+If the [EventListener](/documentation/api/class-eventlistener/) returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the method must return `true`.
 
-An event is fired by calling fireEvent on an instance of [ListenerObject](/documentation/api/class-listener-object/):
+An event is fired by calling `fireEvent` on an instance of [ListenerObject](/documentation/api/class-listener-object/):
 
 ```cpp
 SomeClass::fireEvent(this, kEventInteresting);
