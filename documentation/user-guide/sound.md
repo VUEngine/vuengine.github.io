@@ -224,98 +224,98 @@ The following table shows some general guidance on what is achievable, although 
     <tr>
         <td>44000</td>
         <td>23</td>
-        <td>-43</td>
-        <td>-40</td>
+        <td>-25</td>
+        <td>-20</td>
         <td>43478</td>
-        <td>Unfeasible</td>
+        <td>Impossible</td>
     </tr>
     <tr>
         <td>24000</td>
         <td>42</td>
-        <td>-24</td>
-        <td>-20</td>
+        <td>-6</td>
+        <td>0</td>
         <td>23810</td>
-        <td>Unfeasible</td>
+        <td>Impossible</td>
     </tr>
     <tr>
         <td>16000</td>
         <td>63</td>
-        <td>-3</td>
-        <td>0</td>
+        <td>15</td>
+        <td>20</td>
         <td>15873</td>
-        <td>Unfeasible</td>
+        <td>Unfeasible / Not selectable </td>
     </tr>
     <tr>
         <td>11025</td>
         <td>91</td>
-        <td>25</td>
-        <td>20</td>
+        <td>43</td>
+        <td>40</td>
         <td>10989</td>
-        <td>Unfeasible</td>
+        <td>Unfeasible / Crashes</td>
     </tr>
     <tr>
         <td>9000</td>
         <td>111</td>
-        <td>45</td>
-        <td>40</td>
+        <td>63</td>
+        <td>60</td>
         <td>9009</td>
-        <td>Unfeasible</td>
-        </tr>
+        <td>Maximum with an empty stage</td>
+    </tr>
     <tr>
         <td>8000</td>
         <td>125</td>
-        <td>59</td>
-        <td>60</td>
+        <td>77</td>
+        <td>90</td>
         <td>8000</td>
-        <td>Unfeasible</td>
-        </tr>
+        <td>Maximum, without animations</td>
+    </tr>
     <tr>
         <td>7000</td>
         <td>143</td>
-        <td>77</td>
-        <td>80</td>
+        <td>95</td>
+        <td>100</td>
         <td>6993</td>
-        <td>Maximum, without animations</td>
+        <td>Achievable in very simple scenes</td>
         </tr>
     <tr>
         <td>6000</td>
         <td>167</td>
-        <td>101</td>
-        <td>100</td>
+        <td>119</td>
+        <td>120</td>
         <td>5988</td>
-        <td>Achievable in very simple scenes</td> 
+        <td>Realistic target</td> 
         </tr>
     <tr>
         <td>5500</td>
         <td>182</td>
-        <td>116</td>
-        <td>120</td>
+        <td>134</td>
+        <td>140</td>
         <td>5495</td>
         <td>Realistic target</td> 
         </tr>
     <tr>
         <td>5000</td>
         <td>200</td>
-        <td>134</td>
-        <td>140</td>
+        <td>152</td>
+        <td>160</td>
         <td>5000</td>
-        <td>Realistic target</td> 
+        <td>Realistic target, with some animations</td> 
         </tr>
     <tr>
         <td>4500</td>
         <td>222</td>
-        <td>156</td>
-        <td>160</td>
+        <td>174</td>
+        <td>180</td>
         <td>4505</td>
-        <td>Realistic target, with some animations</td> 
+        <td>Minimum acceptable quality</td> 
         </tr>
     <tr>
         <td>4000</td>
         <td>250</td>
-        <td>184</td>
-        <td>180</td>
+        <td>202</td>
+        <td>200</td>
         <td>4000</td>
-        <td>Minimum acceptable quality</td> 
+        <td>Sounds terrible</td> 
     </tr>
   </tbody>
 </table>
