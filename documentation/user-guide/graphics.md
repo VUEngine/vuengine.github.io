@@ -52,7 +52,7 @@ CHAR memory is arranged as a unidimensional array. Visually, it would look like 
 
 <a href="/documentation/images/user-guide/graphics/punk-char-memory.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-char-memory.png" /></a>
 
-In suc an arrangement, the CHARs or tiles of this [CharSets](/documentation/api/class-char-set/) cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the CHARs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the [CharSets](/documentation/api/class-char-set/), are used to provide such bidimensional order. In the engine these are encapsulated in a [Texture](/documentation/api/class-texture/) class.
+In suc an arrangement, the CHARs or tiles of this [CharSet](/documentation/api/class-char-set/) cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the CHARs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the [CharSet](/documentation/api/class-char-set/), are used to provide such bidimensional order. In the engine these are encapsulated in a [Texture](/documentation/api/class-texture/) class.
 
 [Textures](/documentation/api/class-texture/) need their own [TextureSpec](/documentation/api/struct-texture-spec/) to be instantiated and properly initialized. The following corresponds to the Spec for the texture that reconstruct the original image:
 
@@ -90,7 +90,7 @@ TextureROMSpec ActorTextureSpec =
 };
 ```
 
-A [Texture](/documentation/api/class-texture/)’s map has to be loaded in BGMAP memory when it is displayed by a [BgmapSprite](/documentation/api/class-bgmap-sprite/). But graphical memory allocation isn’t required when the graphical data is displayed using a [ObjectSprite](/documentation/api/class-object-sprite/) since it only requires the map array to reference from OBJECT memory the CHARs from the [CharSets](/documentation/api/class-char-set/) in the right bidimensional order.
+A [Texture](/documentation/api/class-texture/)’s map has to be loaded in BGMAP memory when it is displayed by a [BgmapSprite](/documentation/api/class-bgmap-sprite/). But graphical memory allocation isn’t required when the graphical data is displayed using a [ObjectSprite](/documentation/api/class-object-sprite/) since it only requires the map array to reference from OBJECT memory the CHARs from the [CharSet](/documentation/api/class-char-set/) in the right bidimensional order.
 
 Finally, [Textures](/documentation/api/class-texture/) are displayed by [Sprites](/documentation/api/class-sprite/), either from BGMAP memory through a single WORLD, or by rendering each CHAR into OBJECT memory. The following [SpriteSpec](/documentation/api/struct-sprite-spec/) exemplifies the former in reference to the [TextureSpec](/documentation/api/struct-texture-spec/) above:
 
@@ -149,7 +149,7 @@ if(!isDeleted(sprite))
 }
 ```
 
-[CharSets](/documentation/api/class-char-set/) and [Textures](/documentation/api/class-texture/) are reusable, which means that multiple [Textures](/documentation/api/class-texture/) can share the same [CharSets](/documentation/api/class-cha-set/) and that more than one [Sprite](/documentation/api/class-sprite/) can display the same [Texture](/documentation/api/class-texture/). The intricacies of how these relationships are worked out by the engin depend on the allocation type of the [CharSets](/documentation/api/class-char-set/), which in turn depends on animations.
+[CharSets](/documentation/api/class-char-set/) and [Textures](/documentation/api/class-texture/) are reusable, which means that multiple [Textures](/documentation/api/class-texture/) can share the same [CharSet](/documentation/api/class-cha-set/) and that more than one [Sprite](/documentation/api/class-sprite/) can display the same [Texture](/documentation/api/class-texture/). The intricacies of how these relationships are worked out by the engin depend on the allocation type of the [CharSet](/documentation/api/class-char-set/), which in turn depends on animations.
 
 ### BGMAP Sprites
 
@@ -372,15 +372,15 @@ CharSetROMSpec ActorCharsetSpec =
 };
 ```
 
-When requestin a [CharSets](/documentation/api/class-char-set/) by providing a shared [CharSetSpec](/documentation/api/struct-char-set-spec/), the engine will only allocate a [CharSets](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU performance.
+When requesting a [CharSet](/documentation/api/class-char-set/) by providing a shared [CharSetSpec](/documentation/api/struct-char-set-spec/), the engine will only allocate a [CharSet](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU performance.
 
-The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any give moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSets](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame and that all instances will be in sync:
+The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any give moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSet](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame and that all instances will be in sync:
 
 <a href="/documentation/images/user-guide/graphics/punk-chars-shared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" /></a>
 
-Since i would be overkill to play animations on all [Sprites](/documentation/api/class-sprite/) underlyed by a shared [CharSets](/documentation/api/class-char-set/), the engine runs the animations only on the first Sprite.
+Since it would be overkill to play animations on all [Sprites](/documentation/api/class-sprite/) underlyed by a shared [CharSet](/documentation/api/class-char-set/), the engine runs the animations only on the first Sprite.
 
-On th other hand, when using a non-shared [CharSetSpec](/documentation/api/struct-char-set-spec/) to create a [CharSets](/documentation/api/class-char-set/), each request will be served with a new [CharSets](/documentation/ap/class-char-set/) instance. This permits to having different sprites with the same graphics but displaying different frames of animation:
+On th other hand, when using a non-shared [CharSetSpec](/documentation/api/struct-char-set-spec/) to create a [CharSet](/documentation/api/class-char-set/), each request will be served with a new [CharSet](/documentation/ap/class-char-set/) instance. This permits to having different sprites with the same graphics but displaying different frames of animation:
 
 <a href="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" width="500" /></a>
 
@@ -406,7 +406,7 @@ CharSetROMSpec ActorCharsetMultiframeSpec =
 };
 ```
 
-Allocating all frames of animation has a meaning in regards to [Textures](/documentation/api/class-texture/) too. [Textures](/documentation/api/class-texture/) define how to organize the CHARs or tiles of a [CharSets](/documentation/api/class-cha-set/) into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of [ObjectSprite](/documentation/api/class-object-sprite/). But when using BGMAPs with [BgmapSprite](/documentation/api/class-bgmap-sprite/), the [Texture](/documentation/api/class-texture/)’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.
+Allocating all frames of animation has a meaning in regards to [Textures](/documentation/api/class-texture/) too. [Textures](/documentation/api/class-texture/) define how to organize the CHARs or tiles of a [CharSet](/documentation/api/class-cha-set/) into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of [ObjectSprite](/documentation/api/class-object-sprite/). But when using BGMAPs with [BgmapSprite](/documentation/api/class-bgmap-sprite/), the [Texture](/documentation/api/class-texture/)’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.
 
 To load all the maps for all the animation frames of an animation in BGMAP memory, the [TextureSpec](/documentation/api/struct-texture-spec/) must specify the total number of frames:
 
