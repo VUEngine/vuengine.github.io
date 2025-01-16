@@ -32,102 +32,11 @@ permalink: documentation/api/-object-texture-manager-8h/
 </div>
 <p><a href="/documentation/api/-object-texture-manager-8h-source/">Go to the source code of this file.</a></p>
 <table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a8a26589f8509ef26c4e5b0b9cf066aec" id="r_a8a26589f8509ef26c4e5b0b9cf066aec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object-texture/">ObjectTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a26589f8509ef26c4e5b0b9cf066aec">getTexture</a> (ObjectTextureSpec *objectTextureSpec)</td></tr>
-
-<tr class="memitem:a7116b8e6f6c1bc9e112d6061c31cef16" id="r_a7116b8e6f6c1bc9e112d6061c31cef16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7116b8e6f6c1bc9e112d6061c31cef16">releaseTexture</a> (<a class="el" href="/documentation/api/class-object-texture/">ObjectTexture</a> objectTexture)</td></tr>
-
-</table><table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a279c9bd772589c3bf6e9e50adec10899" id="r_a279c9bd772589c3bf6e9e50adec10899"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a279c9bd772589c3bf6e9e50adec10899">ObjectTextureManager</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object-texture-manager/">ObjectTextureManager</a></td></tr>
 
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a8a26589f8509ef26c4e5b0b9cf066aec" name="a8a26589f8509ef26c4e5b0b9cf066aec"></a>
-<h2 class="memtitle">getTexture()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static <a class="el" href="/documentation/api/class-object-texture/">ObjectTexture</a> getTexture </td>
-          <td>(</td>
-          <td class="paramtype">ObjectTextureSpec *</td>          <td class="paramname"><span class="paramname"><em>objectTextureSpec</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Retrieve a texture initialized with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">objectTextureSpec</td><td>Spec to use to initilize the desired texture </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-texture/">Texture</a> initialized with the provided spec </dd></dl>
-
-</div>
-</div>
-<a id="a7116b8e6f6c1bc9e112d6061c31cef16" name="a7116b8e6f6c1bc9e112d6061c31cef16"></a>
-<h2 class="memtitle">releaseTexture()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static void releaseTexture </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/class-object-texture/">ObjectTexture</a></td>          <td class="paramname"><span class="paramname"><em>objectTexture</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Release a texture. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">objectTexture</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a> to release </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a279c9bd772589c3bf6e9e50adec10899" name="a279c9bd772589c3bf6e9e50adec10899"></a>
-<h2 class="memtitle">ObjectTextureManager</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">singleton !class ObjectTextureManager</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Class BgmapTextureManager</p>
-<p>Inherits from <a class="el" href="/documentation/api/class-texture/">Texture</a></p>
-<p>Manages textures for OBJECT space. </p>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-object-texture-manager-8h-source/">29</a> of file <a class="el" href="/documentation/api/-object-texture-manager-8h-source/">ObjectTextureManager.h</a>.</p>
-
-</div>
-</div>
 </div>
 
 

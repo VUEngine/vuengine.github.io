@@ -1,0 +1,524 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "RumbleManager Class Reference"
+permalink: documentation/api/class-rumble-manager/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">RumbleManager Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for RumbleManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_rumble_manager.png" usemap="#RumbleManager_map" alt />
+  <map id="RumbleManager_map" name="RumbleManager_map">
+<area href="/documentation/api/class-object/" alt="Object" shape="rect" coords="0,0,104,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac477981f55382ac4b096af28a306b041" id="r_ac477981f55382ac4b096af28a306b041"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac477981f55382ac4b096af28a306b041">RumbleEffectROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afa349826dbec28c7cf7919e901e68f44" id="r_afa349826dbec28c7cf7919e901e68f44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa349826dbec28c7cf7919e901e68f44">reset</a> ()</td></tr>
+<tr class="memdesc:afa349826dbec28c7cf7919e901e68f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a80730790c242766c0036816c47685f2b" id="r_a80730790c242766c0036816c47685f2b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80730790c242766c0036816c47685f2b">startEffect</a> (const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> *<a class="el" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a>)</td></tr>
+
+<tr class="memitem:a04c932756877d354dbc543aab183f755" id="r_a04c932756877d354dbc543aab183f755"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c932756877d354dbc543aab183f755">stopEffect</a> (const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> *<a class="el" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a>)</td></tr>
+
+<tr class="memitem:ad5399610b305723bc803d45f4ad12f18" id="r_ad5399610b305723bc803d45f4ad12f18"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5399610b305723bc803d45f4ad12f18">setAsync</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> <a class="el" href="#a88f1ac5a1df79918b502a57270da4381">async</a>)</td></tr>
+
+<tr class="memitem:a8b4c31beec1fa30385fc9ef4a469648e" id="r_a8b4c31beec1fa30385fc9ef4a469648e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b4c31beec1fa30385fc9ef4a469648e">setOverridePreviousEffect</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> <a class="el" href="#ad6f53657a0965a52aca7951fbdafd008">overridePreviousEffect</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aaf86df45a497295835dac7fd681c6df2" id="r_aaf86df45a497295835dac7fd681c6df2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf86df45a497295835dac7fd681c6df2">rumbleCommands</a> [10]</td></tr>
+<tr class="memdesc:aaf86df45a497295835dac7fd681c6df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue of commands to broadcast.  <br /></td></tr>
+
+<tr class="memitem:a88f1ac5a1df79918b502a57270da4381" id="r_a88f1ac5a1df79918b502a57270da4381"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88f1ac5a1df79918b502a57270da4381">async</a></td></tr>
+
+<tr class="memitem:ad6f53657a0965a52aca7951fbdafd008" id="r_ad6f53657a0965a52aca7951fbdafd008"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6f53657a0965a52aca7951fbdafd008">overridePreviousEffect</a></td></tr>
+
+<tr class="memitem:a6da0c27337368ae4979733a664b1618f" id="r_a6da0c27337368ae4979733a664b1618f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6da0c27337368ae4979733a664b1618f">rumbleCommandIndex</a></td></tr>
+<tr class="memdesc:a6da0c27337368ae4979733a664b1618f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the command in the queue to broadcast next.  <br /></td></tr>
+
+<tr class="memitem:aceb5592557de31ae993bdf23bce11d1b" id="r_aceb5592557de31ae993bdf23bce11d1b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a></td></tr>
+<tr class="memdesc:aceb5592557de31ae993bdf23bce11d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rumble effect spec being broadcasted.  <br /></td></tr>
+
+<tr class="memitem:aca3325cef425684b14c556649dc94c78" id="r_aca3325cef425684b14c556649dc94c78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3325cef425684b14c556649dc94c78">cachedRumbleEffect</a></td></tr>
+<tr class="memdesc:aca3325cef425684b14c556649dc94c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached rumble effect to prevent broadcasting again previous send commands.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object" id="r_a3a3ea4d86b4b946d57464f65a6a42362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
+
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+
+<tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object" id="r_a481b05c1f25b4e686eca17995944bfcc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">vTable</a></td></tr>
+<tr class="memdesc:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the class's virtual table.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-rumble-manager/">RumbleManager</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
+<p>Manages rumble effects. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">108</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ac477981f55382ac4b096af28a306b041" name="ac477981f55382ac4b096af28a306b041"></a>
+<h2 class="memtitle">RumbleEffectROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> <a class="el" href="#ac477981f55382ac4b096af28a306b041">RumbleEffectROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A RumbleEffect spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">97</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="afa349826dbec28c7cf7919e901e68f44" name="afa349826dbec28c7cf7919e901e68f44"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void RumbleManager::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8c-source/">113</a> of file <a class="el" href="/documentation/api/-rumble-manager-8c-source/">RumbleManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>{</div>
+<div class="line"><span class="lineno">  115</span>    this-&gt;<a class="code hl_variable" href="#a88f1ac5a1df79918b502a57270da4381">async</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  116</span>    this-&gt;<a class="code hl_variable" href="#ad6f53657a0965a52aca7951fbdafd008">overridePreviousEffect</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  117</span>    this-&gt;<a class="code hl_variable" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  118</span>    this-&gt;<a class="code hl_variable" href="#a6da0c27337368ae4979733a664b1618f">rumbleCommandIndex</a> = 0;</div>
+<div class="line"><span class="lineno">  119</span>    this-&gt;<a class="code hl_variable" href="#aca3325cef425684b14c556649dc94c78">cachedRumbleEffect</a>.frequency = 0;</div>
+<div class="line"><span class="lineno">  120</span>    this-&gt;<a class="code hl_variable" href="#aca3325cef425684b14c556649dc94c78">cachedRumbleEffect</a>.sustainPositive = 0;</div>
+<div class="line"><span class="lineno">  121</span>    this-&gt;<a class="code hl_variable" href="#aca3325cef425684b14c556649dc94c78">cachedRumbleEffect</a>.sustainNegative = 0;</div>
+<div class="line"><span class="lineno">  122</span>    this-&gt;<a class="code hl_variable" href="#aca3325cef425684b14c556649dc94c78">cachedRumbleEffect</a>.overdrive = 0;</div>
+<div class="line"><span class="lineno">  123</span>    this-&gt;<a class="code hl_variable" href="#aca3325cef425684b14c556649dc94c78">cachedRumbleEffect</a>.breaking = 0;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> i = 0; i &lt; <a class="code hl_define" href="/documentation/api/-rumble-manager-8h/">__RUMBLE_TOTAL_COMMANDS</a>; i++)</div>
+<div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        this-&gt;<a class="code hl_variable" href="#aaf86df45a497295835dac7fd681c6df2">rumbleCommands</a>[i] = 0;</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+<div class="line"><span class="lineno">  129</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_rumble_manager_8h_html_a1bc13865f581a29023c906d9ce25a63c"><div class="ttname"><a href="/documentation/api/-rumble-manager-8h/">__RUMBLE_TOTAL_COMMANDS</a></div><div class="ttdeci">#define __RUMBLE_TOTAL_COMMANDS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:62</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="aclass_rumble_manager_html_a6da0c27337368ae4979733a664b1618f"><div class="ttname"><a href="#a6da0c27337368ae4979733a664b1618f">RumbleManager::rumbleCommandIndex</a></div><div class="ttdeci">uint8 rumbleCommandIndex</div><div class="ttdoc">Index of the command in the queue to broadcast next.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:124</a></div></div>
+<div class="ttc" id="aclass_rumble_manager_html_a88f1ac5a1df79918b502a57270da4381"><div class="ttname"><a href="#a88f1ac5a1df79918b502a57270da4381">RumbleManager::async</a></div><div class="ttdeci">bool async</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:117</a></div></div>
+<div class="ttc" id="aclass_rumble_manager_html_aaf86df45a497295835dac7fd681c6df2"><div class="ttname"><a href="#aaf86df45a497295835dac7fd681c6df2">RumbleManager::rumbleCommands</a></div><div class="ttdeci">uint8 rumbleCommands[10]</div><div class="ttdoc">Queue of commands to broadcast.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:113</a></div></div>
+<div class="ttc" id="aclass_rumble_manager_html_aca3325cef425684b14c556649dc94c78"><div class="ttname"><a href="#aca3325cef425684b14c556649dc94c78">RumbleManager::cachedRumbleEffect</a></div><div class="ttdeci">RumbleEffectSpec cachedRumbleEffect</div><div class="ttdoc">Cached rumble effect to prevent broadcasting again previous send commands.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:130</a></div></div>
+<div class="ttc" id="aclass_rumble_manager_html_aceb5592557de31ae993bdf23bce11d1b"><div class="ttname"><a href="#aceb5592557de31ae993bdf23bce11d1b">RumbleManager::rumbleEffectSpec</a></div><div class="ttdeci">const RumbleEffectSpec * rumbleEffectSpec</div><div class="ttdoc">Rumble effect spec being broadcasted.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:127</a></div></div>
+<div class="ttc" id="aclass_rumble_manager_html_ad6f53657a0965a52aca7951fbdafd008"><div class="ttname"><a href="#ad6f53657a0965a52aca7951fbdafd008">RumbleManager::overridePreviousEffect</a></div><div class="ttdeci">bool overridePreviousEffect</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h:121</a></div></div>
+</div>
+</div>
+</div>
+<a id="ad5399610b305723bc803d45f4ad12f18" name="ad5399610b305723bc803d45f4ad12f18"></a>
+<h2 class="memtitle">setAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void RumbleManager::setAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>async</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the async flag. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">async</td><td>If true, rumble commands are broadcasted asynchronously </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8c-source/">88</a> of file <a class="el" href="/documentation/api/-rumble-manager-8c-source/">RumbleManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>{</div>
+<div class="line"><span class="lineno">   90</span>    RumbleManager rumbleManager = RumbleManager::getInstance();</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    rumbleManager-&gt;<a class="code hl_variable" href="#a88f1ac5a1df79918b502a57270da4381">async</a> = <a class="code hl_variable" href="#a88f1ac5a1df79918b502a57270da4381">async</a>;</div>
+<div class="line"><span class="lineno">   93</span>    RumbleManager::stopAllEffects(rumbleManager);</div>
+<div class="line"><span class="lineno">   94</span>}</div>
+</div>
+</div>
+</div>
+<a id="a8b4c31beec1fa30385fc9ef4a469648e" name="a8b4c31beec1fa30385fc9ef4a469648e"></a>
+<h2 class="memtitle">setOverridePreviousEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void RumbleManager::setOverridePreviousEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">bool</a></td>          <td class="paramname"><span class="paramname"><em>overridePreviousEffect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the flag to broadcast new effects regardless of if there is a previous queue effect pending broadcasted </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">overridePreviousEffect</td><td>If true, new effects are broadcasted regardless of if there is a queued effect pending broadcasting </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8c-source/">98</a> of file <a class="el" href="/documentation/api/-rumble-manager-8c-source/">RumbleManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>{</div>
+<div class="line"><span class="lineno">  100</span>    RumbleManager rumbleManager = RumbleManager::getInstance();</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    rumbleManager-&gt;<a class="code hl_variable" href="#ad6f53657a0965a52aca7951fbdafd008">overridePreviousEffect</a> = <a class="code hl_variable" href="#ad6f53657a0965a52aca7951fbdafd008">overridePreviousEffect</a>;</div>
+<div class="line"><span class="lineno">  103</span>}</div>
+</div>
+</div>
+</div>
+<a id="a80730790c242766c0036816c47685f2b" name="a80730790c242766c0036816c47685f2b"></a>
+<h2 class="memtitle">startEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void RumbleManager::startEffect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>rumbleEffectSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Start a rumble effect configured with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">rumbleEffectSpec</td><td>Specification of the rumble effect to play </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8c-source/">29</a> of file <a class="el" href="/documentation/api/-rumble-manager-8c-source/">RumbleManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
+<div class="line"><span class="lineno">   31</span>    RumbleManager rumbleManager = RumbleManager::getInstance();</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    rumbleManager-&gt;<a class="code hl_variable" href="#a6da0c27337368ae4979733a664b1618f">rumbleCommandIndex</a> = 0;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">if</span>(!rumbleManager-&gt;<a class="code hl_variable" href="#ad6f53657a0965a52aca7951fbdafd008">overridePreviousEffect</a> &amp;&amp; 0 != rumbleManager-&gt;<a class="code hl_variable" href="#a6da0c27337368ae4979733a664b1618f">rumbleCommandIndex</a>)</div>
+<div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == rumbleEffect)</div>
+<div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span>(rumbleManager-&gt;<a class="code hl_variable" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a> == rumbleEffect)</div>
+<div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span>(rumbleEffect-&gt;stop)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            RumbleManager::stop(rumbleManager);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        RumbleManager::play(rumbleManager);</div>
+<div class="line"><span class="lineno">   53</span>        RumbleManager::execute(rumbleManager);</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    rumbleManager-&gt;<a class="code hl_variable" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a> = rumbleEffect;</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(rumbleEffect-&gt;stop)</div>
+<div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        RumbleManager::stop(rumbleManager);</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    RumbleManager::setFrequency(rumbleManager, rumbleEffect-&gt;frequency);</div>
+<div class="line"><span class="lineno">   65</span>    RumbleManager::setSustainPositive(rumbleManager, rumbleEffect-&gt;sustainPositive);</div>
+<div class="line"><span class="lineno">   66</span>    RumbleManager::setSustainNegative(rumbleManager, rumbleEffect-&gt;sustainNegative);</div>
+<div class="line"><span class="lineno">   67</span>    RumbleManager::setOverdrive(rumbleManager, rumbleEffect-&gt;overdrive);</div>
+<div class="line"><span class="lineno">   68</span>    RumbleManager::setBreak(rumbleManager, rumbleEffect-&gt;breaking);</div>
+<div class="line"><span class="lineno">   69</span>    RumbleManager::setEffect(rumbleManager, rumbleEffect-&gt;effect);</div>
+<div class="line"><span class="lineno">   70</span>    RumbleManager::execute(rumbleManager);</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+</div>
+</div>
+</div>
+<a id="a04c932756877d354dbc543aab183f755" name="a04c932756877d354dbc543aab183f755"></a>
+<h2 class="memtitle">stopEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void RumbleManager::stopEffect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>rumbleEffectSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stop a rumble effect configured with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">rumbleEffectSpec</td><td>Specification of the rumble effect to stop; if NULL, any playing effect is stoped </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8c-source/">75</a> of file <a class="el" href="/documentation/api/-rumble-manager-8c-source/">RumbleManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>    RumbleManager rumbleManager = RumbleManager::getInstance();</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == rumbleEffect || rumbleManager-&gt;<a class="code hl_variable" href="#aceb5592557de31ae993bdf23bce11d1b">rumbleEffectSpec</a> == rumbleEffect)</div>
+<div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        RumbleManager::stop(rumbleManager);</div>
+<div class="line"><span class="lineno">   82</span>        RumbleManager::execute(rumbleManager);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   84</span>}</div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a88f1ac5a1df79918b502a57270da4381" name="a88f1ac5a1df79918b502a57270da4381"></a>
+<h2 class="memtitle">async</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> RumbleManager::async</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determines if the commands are broadcasted asynchronously, defaults to true </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">117</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aca3325cef425684b14c556649dc94c78" name="aca3325cef425684b14c556649dc94c78"></a>
+<h2 class="memtitle">cachedRumbleEffect</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a> RumbleManager::cachedRumbleEffect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cached rumble effect to prevent broadcasting again previous send commands. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">130</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6f53657a0965a52aca7951fbdafd008" name="ad6f53657a0965a52aca7951fbdafd008"></a>
+<h2 class="memtitle">overridePreviousEffect</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> RumbleManager::overridePreviousEffect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determines if the broadcast of new effects should wait or not for a previous queue effect being completedly broadcasted </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">121</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6da0c27337368ae4979733a664b1618f" name="a6da0c27337368ae4979733a664b1618f"></a>
+<h2 class="memtitle">rumbleCommandIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> RumbleManager::rumbleCommandIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Index of the command in the queue to broadcast next. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">124</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aaf86df45a497295835dac7fd681c6df2" name="aaf86df45a497295835dac7fd681c6df2"></a>
+<h2 class="memtitle">rumbleCommands</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint8</a> RumbleManager::rumbleCommands[10]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queue of commands to broadcast. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">113</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aceb5592557de31ae993bdf23bce11d1b" name="aceb5592557de31ae993bdf23bce11d1b"></a>
+<h2 class="memtitle">rumbleEffectSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a>* RumbleManager::rumbleEffectSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rumble effect spec being broadcasted. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-rumble-manager-8h-source/">127</a> of file <a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a></li>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="/documentation/api/-rumble-manager-8c-source/">RumbleManager.c</a></li>
+</ul>
+</div>
+
+
+</div>

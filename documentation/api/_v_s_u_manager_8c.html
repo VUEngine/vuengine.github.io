@@ -29,6 +29,7 @@ permalink: documentation/api/-v-s-u-manager-8c/
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-profiler-8h-source/">Profiler.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-virtual-list-8h-source/">VirtualList.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-wave-forms-8h-source/">WaveForms.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>&quot;</code><br />
@@ -43,9 +44,7 @@ Macros</h2></td></tr>
 
 <tr class="memitem:ac0b9e64faedf630a31820a19506c0e96" id="r_ac0b9e64faedf630a31820a19506c0e96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0b9e64faedf630a31820a19506c0e96">__SSTOP</a>&#160;&#160;&#160;*(<a class="el" href="/documentation/api/-types-8h/">uint8</a>*)0x01000580</td></tr>
 
-<tr class="memitem:a6cf4ba1334bb668fe4e36a60d5b05e9b" id="r_a6cf4ba1334bb668fe4e36a60d5b05e9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cf4ba1334bb668fe4e36a60d5b05e9b">__SOUND_WRAPPER_STOP_SOUND</a>&#160;&#160;&#160;0x21</td></tr>
-
-<tr class="memitem:a4c163708785e8d1307953505e1f9b21d" id="r_a4c163708785e8d1307953505e1f9b21d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c163708785e8d1307953505e1f9b21d">__MAXIMUM_VOLUME</a>&#160;&#160;&#160;0xF</td></tr>
+<tr class="memitem:a6cf4ba1334bb668fe4e36a60d5b05e9b" id="r_a6cf4ba1334bb668fe4e36a60d5b05e9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cf4ba1334bb668fe4e36a60d5b05e9b">__SOUND_WRAPPER_STOP_SOUND</a>&#160;&#160;&#160;0x20</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -54,22 +53,6 @@ Variables</h2></td></tr>
 
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a4c163708785e8d1307953505e1f9b21d" name="a4c163708785e8d1307953505e1f9b21d"></a>
-<h2 class="memtitle">__MAXIMUM_VOLUME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">#define __MAXIMUM_VOLUME&#160;&#160;&#160;0xF</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">36</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
-
-</div>
-</div>
 <a id="af2420774daed822df896a2937d473864" name="af2420774daed822df896a2937d473864"></a>
 <h2 class="memtitle">__MODULATION_DATA</h2>
 
@@ -82,7 +65,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">33</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">34</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -93,12 +76,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname">#define __SOUND_WRAPPER_STOP_SOUND&#160;&#160;&#160;0x21</td>
+          <td class="memname">#define __SOUND_WRAPPER_STOP_SOUND&#160;&#160;&#160;0x20</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">35</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">36</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -114,7 +97,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">34</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">35</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -135,7 +118,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a>*)(0x01000000 + (n * 128))</div>
 <div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
 </div>
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">32</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">33</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
 
 </div>
 </div>

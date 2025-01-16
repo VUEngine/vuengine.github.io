@@ -29,11 +29,11 @@ permalink: documentation/api/-communication-manager-8c/
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-debug-config-8h-source/">DebugConfig.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-mem-8h-source/">Mem.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="/documentation/api/-message-dispatcher-8h-source/">MessageDispatcher.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-profiler-8h-source/">Profiler.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-telegram-8h-source/">Telegram.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-v-u-engine-8h-source/">VUEngine.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>&quot;</code><br />
 </div>
 <p><a href="/documentation/api/-communication-manager-8c-source/">Go to the source code of this file.</a></p>
@@ -92,7 +92,7 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab80aad835d162788b0ab7e4910f9c227" id="r_ab80aad835d162788b0ab7e4910f9c227"><td class="memItemLeft" align="right" valign="top">static volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab80aad835d162788b0ab7e4910f9c227">_communicationRegisters</a> = (<a class="el" href="/documentation/api/-types-8h/">uint8</a>*)0x02000000</td></tr>
+<tr class="memitem:ab80aad835d162788b0ab7e4910f9c227" id="r_ab80aad835d162788b0ab7e4910f9c227"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab80aad835d162788b0ab7e4910f9c227">_communicationRegisters</a> = (<a class="el" href="/documentation/api/-types-8h/">uint8</a>*)0x02000000</td></tr>
 
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -410,19 +410,11 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* _communicationRegisters = (<a class="el" href="/documentation/api/-types-8h/">uint8</a>*)0x02000000</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">52</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>

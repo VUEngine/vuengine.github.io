@@ -22,9 +22,14 @@ permalink: documentation/api/functions-g/
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>gameFrameDuration&#160;:&#160;<a class="el" href="/documentation/api/class-v-i-p-manager/">VIPManager</a></li>
+<li>gameFrameStarted()&#160;:&#160;<a class="el" href="/documentation/api/class-frame-rate/">FrameRate</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
+<li>gameFrameStarts&#160;:&#160;<a class="el" href="/documentation/api/class-frame-rate/">FrameRate</a></li>
 <li>gameID&#160;:&#160;<a class="el" href="/documentation/api/struct-r-o-m-info/">ROMInfo</a></li>
+<li>gameState&#160;:&#160;<a class="el" href="/documentation/api/class-stage/">Stage</a></li>
 <li>geDisplacement()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
 <li>get()&#160;:&#160;<a class="el" href="/documentation/api/class-char-set/">CharSet</a>, <a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>, <a class="el" href="/documentation/api/class-texture/">Texture</a>, <a class="el" href="/documentation/api/struct-vector2-d/">Vector2D</a>, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></li>
+<li>getAccumulatedUserInput()&#160;:&#160;<a class="el" href="/documentation/api/class-keypad-manager/">KeypadManager</a></li>
 <li>getActorByName()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
 <li>getActorFactory()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a></li>
 <li>getActualFrame()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a>, <a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a></li>
@@ -33,24 +38,26 @@ permalink: documentation/api/functions-g/
 <li>getAnimationController()&#160;:&#160;<a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a></li>
 <li>getAnimationCoordinator()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></li>
 <li>getAnimationsClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getAvailableBgmapSegmentsForTextures()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager</a></li>
 <li>getAxisForSynchronizationWithBody()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
 <li>getAxisSubjectToGravity()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
 <li>getBody()&#160;:&#160;<a class="el" href="/documentation/api/class-entity/">Entity</a></li>
-<li>getBodyManager()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getBodyManager()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getBounciness()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getCameraEffectManager()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
 <li>getCameraFrustum()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
 <li>getCameraMovementManager()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
 <li>getCast()&#160;:&#160;<a class="el" href="/documentation/api/class-object/">Object</a></li>
 <li>getCenter()&#160;:&#160;<a class="el" href="/documentation/api/class-line-field/">LineField</a></li>
-<li>getCharSet()&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
+<li>getCharSet()&#160;:&#160;<a class="el" href="/documentation/api/class-char-set-manager/">CharSetManager</a>, <a class="el" href="/documentation/api/class-texture/">Texture</a></li>
 <li>getCharSetSpec()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a></li>
 <li>getChildAtPosition()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getChildById()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getChildByName()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getChildren()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getChildrenCount()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
-<li>getColliderManager()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getClock()&#160;:&#160;<a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
+<li>getColliderManager()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getCollidersLayers()&#160;:&#160;<a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getCollidersLayersToIgnore()&#160;:&#160;<a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getCollidingFrictionCoefficient()&#160;:&#160;<a class="el" href="/documentation/api/class-collider/">Collider</a></li>
@@ -61,7 +68,9 @@ permalink: documentation/api/functions-g/
 <li>getComponentsOfClass()&#160;:&#160;<a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getCoordinator()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-coordinator-factory/">AnimationCoordinatorFactory</a></li>
 <li>getCount()&#160;:&#160;<a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>, <a class="el" href="/documentation/api/class-virtual-circular-list/">VirtualCircularList</a>, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a></li>
-<li>getCurrentState()&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a></li>
+<li>getCurrentInterrupt()&#160;:&#160;<a class="el" href="/documentation/api/class-v-i-p-manager/">VIPManager</a></li>
+<li>getCurrentState()&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
+<li>getCurrentTimerCounter()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
 <li>getData()&#160;:&#160;<a class="el" href="/documentation/api/class-virtual-node/">VirtualNode</a></li>
 <li>getDataAtIndex()&#160;:&#160;<a class="el" href="/documentation/api/class-virtual-circular-list/">VirtualCircularList</a>, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a></li>
 <li>getDataIndex()&#160;:&#160;<a class="el" href="/documentation/api/class-virtual-circular-list/">VirtualCircularList</a>, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a></li>
@@ -71,6 +80,7 @@ permalink: documentation/api/functions-g/
 <li>getDirection()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getDisplacedPosition()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getDisplacement()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
+<li>getDrawingStrategy()&#160;:&#160;<a class="el" href="/documentation/api/class-v-i-p-manager/">VIPManager</a></li>
 <li>getEffectiveHead()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getEffectiveHeight()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getEffectiveMP()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
@@ -80,11 +90,13 @@ permalink: documentation/api/functions-g/
 <li>getEffectiveWidth()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getEffectiveX()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getEffectiveY()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
+<li>getElapsedMilliseconds()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
 <li>getElapsedTicksPercentaje()&#160;:&#160;<a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a></li>
 <li>getElapsedTimeStep()&#160;:&#160;<a class="el" href="/documentation/api/class-body-manager/">BodyManager</a></li>
 <li>getExtraInfo()&#160;:&#160;<a class="el" href="/documentation/api/class-telegram/">Telegram</a></li>
 <li>getFocusActor()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a>, <a class="el" href="/documentation/api/class-camera-movement-manager/">CameraMovementManager</a></li>
 <li>getFocusActorPositionDisplacement()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a>, <a class="el" href="/documentation/api/class-camera-movement-manager/">CameraMovementManager</a></li>
+<li>getFontByName()&#160;:&#160;<a class="el" href="/documentation/api/class-printing/">Printing</a></li>
 <li>getFrame()&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
 <li>getFrameDuration()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a>, <a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a></li>
 <li>getFrameDurationDecrement()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></li>
@@ -102,6 +114,7 @@ permalink: documentation/api/functions-g/
 <li>getFromVector2D()&#160;:&#160;<a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></li>
 <li>getFromVector3D()&#160;:&#160;<a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>, <a class="el" href="/documentation/api/struct-vector2-d/">Vector2D</a></li>
 <li>getFrustum()&#160;:&#160;<a class="el" href="/documentation/api/class-direct-draw/">DirectDraw</a></li>
+<li>getGameFrameDuration()&#160;:&#160;<a class="el" href="/documentation/api/class-v-i-p-manager/">VIPManager</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getGravity()&#160;:&#160;<a class="el" href="/documentation/api/class-body-manager/">BodyManager</a></li>
 <li>getHalfHeight()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getHalfWidth()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
@@ -110,7 +123,6 @@ permalink: documentation/api/functions-g/
 <li>getId()&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
 <li>getIndex()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getInGameType()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/class-particle/">Particle</a></li>
-<li>getInstance()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-inspector/">AnimationInspector</a>, <a class="el" href="/documentation/api/class-animation-inspector-state/">AnimationInspectorState</a>, <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a>, <a class="el" href="/documentation/api/class-camera-effect-manager/">CameraEffectManager</a>, <a class="el" href="/documentation/api/class-camera-movement-manager/">CameraMovementManager</a>, <a class="el" href="/documentation/api/class-debug/">Debug</a>, <a class="el" href="/documentation/api/class-debug-state/">DebugState</a>, <a class="el" href="/documentation/api/class-sound-test/">SoundTest</a>, <a class="el" href="/documentation/api/class-sound-test-state/">SoundTestState</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, <a class="el" href="/documentation/api/class-stage-editor/">StageEditor</a>, <a class="el" href="/documentation/api/class-stage-editor-state/">StageEditorState</a>, <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a></li>
 <li>getInternalId()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getLastCameraDisplacement()&#160;:&#160;<a class="el" href="/documentation/api/class-camera-movement-manager/">CameraMovementManager</a></li>
 <li>getLastDisplacement()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
@@ -120,16 +132,20 @@ permalink: documentation/api/functions-g/
 <li>getLocalPosition()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getLocalRotation()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getLocalScale()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
-<li>getLogicsClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getLogicsClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getLoop()&#160;:&#160;<a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a></li>
+<li>getManager()&#160;:&#160;<a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
+<li>getManagerClass()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>, <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getMass()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
 <li>getMaximumParamTableRowsToComputePerCall()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a></li>
 <li>getMaximumSpeed()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getMaximumVelocity()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
 <li>getMessage()&#160;:&#160;<a class="el" href="/documentation/api/class-telegram/">Telegram</a></li>
-<li>getMessagingClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getMessagingClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getMilliseconds()&#160;:&#160;<a class="el" href="/documentation/api/class-clock/">Clock</a></li>
+<li>getMinimumTimePerInterruptStep()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
 <li>getMinutes()&#160;:&#160;<a class="el" href="/documentation/api/class-clock/">Clock</a></li>
+<li>getMode()&#160;:&#160;<a class="el" href="/documentation/api/class-v-s-u-manager/">VSUManager</a></li>
 <li>getMovementOnAllAxis()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
 <li>getName()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
 <li>getNext()&#160;:&#160;<a class="el" href="/documentation/api/class-virtual-node/">VirtualNode</a></li>
@@ -152,47 +168,68 @@ permalink: documentation/api/functions-g/
 <li>getParam()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></li>
 <li>getParamTableRow()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a></li>
 <li>getParent()&#160;:&#160;<a class="el" href="/documentation/api/class-container/">Container</a></li>
-<li>getPhysicsClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getPhysicsClock()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getPlaneNormal()&#160;:&#160;<a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></li>
 <li>getPlayingAnimationFunction()&#160;:&#160;<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></li>
 <li>getPlayingAnimationName()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a>, <a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a></li>
 <li>getPosition()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-camera/">Camera</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getPrevious()&#160;:&#160;<a class="el" href="/documentation/api/class-virtual-node/">VirtualNode</a></li>
-<li>getPreviousState()&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a></li>
+<li>getPreviousState()&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
+<li>getPrintingBgmapSegment()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager</a></li>
+<li>getProcessName()&#160;:&#160;<a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getPSW()&#160;:&#160;<a class="el" href="/documentation/api/class-hardware-manager/">HardwareManager</a></li>
 <li>getRadius()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/class-sphere/">Sphere</a></li>
+<li>getReceivedData()&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
+<li>getReceivedMessage()&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
 <li>getReceiver()&#160;:&#160;<a class="el" href="/documentation/api/class-telegram/">Telegram</a></li>
 <li>getRelativeToCamera()&#160;:&#160;<a class="el" href="/documentation/api/struct-pixel-vector/">PixelVector</a>, <a class="el" href="/documentation/api/struct-rotation/">Rotation</a>, <a class="el" href="/documentation/api/struct-vector2-d/">Vector2D</a>, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></li>
 <li>getRemainingRowsToBeWritten()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></li>
+<li>getResolution()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
+<li>getResolutionInUS()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
 <li>getRightBox()&#160;:&#160;<a class="el" href="/documentation/api/class-component/">Component</a>, <a class="el" href="/documentation/api/class-mesh/">Mesh</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getRightBoxFromSpec()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-mesh/">Mesh</a></li>
 <li>getRotation()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getRows()&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
+<li>getSaveDataManager()&#160;:&#160;<a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getScale()&#160;:&#160;<a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/struct-vector2-d/">Vector2D</a>, <a class="el" href="/documentation/api/struct-vector3-d/">Vector3D</a></li>
 <li>getSeconds()&#160;:&#160;<a class="el" href="/documentation/api/class-clock/">Clock</a></li>
 <li>getSegment()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></li>
 <li>getSelectedOption()&#160;:&#160;<a class="el" href="/documentation/api/class-options-selector/">OptionsSelector</a></li>
 <li>getSender()&#160;:&#160;<a class="el" href="/documentation/api/class-telegram/">Telegram</a></li>
+<li>getSentData()&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
+<li>getSentMessage()&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
 <li>getShortestDifferce()&#160;:&#160;<a class="el" href="/documentation/api/struct-rotation/">Rotation</a></li>
+<li>getSound()&#160;:&#160;<a class="el" href="/documentation/api/class-sound-manager/">SoundManager</a></li>
 <li>getSounds()&#160;:&#160;<a class="el" href="/documentation/api/class-stage/">Stage</a></li>
 <li>getSpec()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-char-set/">CharSet</a>, <a class="el" href="/documentation/api/class-component/">Component</a>, <a class="el" href="/documentation/api/class-stage/">Stage</a>, <a class="el" href="/documentation/api/class-texture/">Texture</a></li>
 <li>getSpeed()&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/class-sound/">Sound</a></li>
 <li>getSpriteAtIndex()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a></li>
+<li>getSpriteIndex()&#160;:&#160;<a class="el" href="/documentation/api/class-printing/">Printing</a></li>
 <li>getStackPointer()&#160;:&#160;<a class="el" href="/documentation/api/class-hardware-manager/">HardwareManager</a></li>
 <li>getStackSize()&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a></li>
-<li>getStage()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
+<li>getStage()&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>getStageActorDescriptions()&#160;:&#160;<a class="el" href="/documentation/api/class-stage/">Stage</a></li>
 <li>getStageSize()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
 <li>getStateStack()&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a></li>
-<li>getTexture()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
+<li>getTargetTimePerInterrupt()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
+<li>getTargetTimePerInterruptInMS()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
+<li>getTargetTimePerInterruptInUS()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
+<li>getTargetTimePerInterruptUnits()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
+<li>getTextSize()&#160;:&#160;<a class="el" href="/documentation/api/class-printing/">Printing</a></li>
+<li>getTexture()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager</a>, <a class="el" href="/documentation/api/class-object-texture-manager/">ObjectTextureManager</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getTexturesMaximumRowsToWrite()&#160;:&#160;<a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a></li>
 <li>getTicks()&#160;:&#160;<a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a></li>
+<li>getTimerCounter()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
 <li>getTimeScale()&#160;:&#160;<a class="el" href="/documentation/api/class-body-manager/">BodyManager</a></li>
+<li>getTotalCharSets()&#160;:&#160;<a class="el" href="/documentation/api/class-char-set-manager/">CharSetManager</a></li>
 <li>getTotalCols()&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
+<li>getTotalElapsedMilliseconds()&#160;:&#160;<a class="el" href="/documentation/api/class-timer-manager/">TimerManager</a></li>
+<li>getTotalFreeChars()&#160;:&#160;<a class="el" href="/documentation/api/class-char-set-manager/">CharSetManager</a></li>
 <li>getTotalObjects()&#160;:&#160;<a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a></li>
 <li>getTotalPixels()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>, <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a></li>
 <li>getTotalPlaybackMilliseconds()&#160;:&#160;<a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a></li>
 <li>getTotalRows()&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
+<li>getTotalUsedChars()&#160;:&#160;<a class="el" href="/documentation/api/class-char-set-manager/">CharSetManager</a></li>
 <li>getTotalUsedObjects()&#160;:&#160;<a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a></li>
 <li>getTransformation()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a></li>
 <li>getTransformationFlags()&#160;:&#160;<a class="el" href="/documentation/api/class-camera/">Camera</a></li>
@@ -205,8 +242,11 @@ permalink: documentation/api/functions-g/
 <li>getVertices()&#160;:&#160;<a class="el" href="/documentation/api/class-mesh/">Mesh</a>, <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></li>
 <li>getVTable()&#160;:&#160;<a class="el" href="/documentation/api/class-object/">Object</a></li>
 <li>getWidth()&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a></li>
-<li>getXOffset()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></li>
-<li>getYOffset()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></li>
+<li>getWorldCoordinatesP()&#160;:&#160;<a class="el" href="/documentation/api/class-printing/">Printing</a></li>
+<li>getWorldCoordinatesX()&#160;:&#160;<a class="el" href="/documentation/api/class-printing/">Printing</a></li>
+<li>getWorldCoordinatesY()&#160;:&#160;<a class="el" href="/documentation/api/class-printing/">Printing</a></li>
+<li>getXOffset()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>, <a class="el" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager</a></li>
+<li>getYOffset()&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>, <a class="el" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager</a></li>
 <li>gp&#160;:&#160;<a class="el" href="/documentation/api/struct-world-attributes/">WorldAttributes</a></li>
 <li>gplt0&#160;:&#160;<a class="el" href="/documentation/api/struct-palette-config-1-1-bgmap/">PaletteConfig::Bgmap</a></li>
 <li>gplt1&#160;:&#160;<a class="el" href="/documentation/api/struct-palette-config-1-1-bgmap/">PaletteConfig::Bgmap</a></li>

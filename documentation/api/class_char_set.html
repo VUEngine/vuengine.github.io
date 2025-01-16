@@ -80,7 +80,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7ef17b525c1318fe4f1dadecb306775" id="r_ad7ef17b525c1318fe4f1dadecb306775"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-char-set/">CharSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ef17b525c1318fe4f1dadecb306775">get</a> (const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *<a class="el" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>)</td></tr>
 
-<tr class="memitem:a1e405442cf275f8d9de1c3af0edc78a0" id="r_a1e405442cf275f8d9de1c3af0edc78a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e405442cf275f8d9de1c3af0edc78a0">release</a> (<a class="el" href="/documentation/api/class-char-set/">CharSet</a> charSet)</td></tr>
+<tr class="memitem:a231a2ec95453f28df57c5dc4e24f4ee2" id="r_a231a2ec95453f28df57c5dc4e24f4ee2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a231a2ec95453f28df57c5dc4e24f4ee2">release</a> (<a class="el" href="/documentation/api/class-char-set/">CharSet</a> charSet)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -335,8 +335,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
 <div class="line"><span class="lineno">   32</span>    }</div>
 <div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> CharSetManager::getCharSet(<a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>);</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/class-char-set-manager/">CharSetManager::getCharSet</a>(CharSetManager::getInstance(), <a class="code hl_variable" href="#ad451d042daed7d193b7cd6e9fd21917c">charSetSpec</a>);</div>
 <div class="line"><span class="lineno">   35</span>}</div>
+<div class="ttc" id="aclass_char_set_manager_html_a70d5b6c0df10a21daf575cc5f175faa4"><div class="ttname"><a href="/documentation/api/class-char-set-manager/">CharSetManager::getCharSet</a></div><div class="ttdeci">CharSet getCharSet(const CharSetSpec *charSetSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-manager-8c-source/">CharSetManager.c:62</a></div></div>
 </div>
 </div>
 </div>
@@ -601,7 +602,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  213</span>    }</div>
 <div class="line"><span class="lineno">  214</span>}</div>
 <div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="a_types_8h_html_a47bd55d8c6a9b45db1ac0957cee2a82d"><div class="ttname"><a href="/documentation/api/-types-8h/">BYTE</a></div><div class="ttdeci">uint8 BYTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:28</a></div></div>
 <div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
 <div class="ttc" id="aclass_mem_html_a0fbf4262123ef0e88d06c2e56b01b152"><div class="ttname"><a href="/documentation/api/class-mem/">Mem::copyBYTE</a></div><div class="ttdeci">static void copyBYTE(BYTE *destination, const BYTE *source, uint32 numberOfBYTES)</div></div>
@@ -610,7 +611,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 </div>
-<a id="a1e405442cf275f8d9de1c3af0edc78a0" name="a1e405442cf275f8d9de1c3af0edc78a0"></a>
+<a id="a231a2ec95453f28df57c5dc4e24f4ee2" name="a231a2ec95453f28df57c5dc4e24f4ee2"></a>
 <h2 class="memtitle">release()</h2>
 
 <div class="memitem">
@@ -620,7 +621,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void CharSet::release </td>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">bool</a> CharSet::release </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-char-set/">CharSet</a></td>          <td class="paramname"><span class="paramname"><em>charSet</em></span></td><td>)</td>
           <td></td>
@@ -638,11 +639,13 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the char set is successfully deleted; false otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-char-set-8c-source/">39</a> of file <a class="el" href="/documentation/api/-char-set-8c-source/">CharSet.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
-<div class="line"><span class="lineno">   41</span>    CharSetManager::releaseCharSet(charSet);</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="/documentation/api/class-char-set-manager/">CharSetManager::releaseCharSet</a>(CharSetManager::getInstance(), charSet);</div>
 <div class="line"><span class="lineno">   42</span>}</div>
+<div class="ttc" id="aclass_char_set_manager_html_aaecbdd5c7d09b42db33564407cce4f64"><div class="ttname"><a href="/documentation/api/class-char-set-manager/">CharSetManager::releaseCharSet</a></div><div class="ttdeci">bool releaseCharSet(CharSet charSet)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-manager-8c-source/">CharSetManager.c:96</a></div></div>
 </div>
 </div>
 </div>

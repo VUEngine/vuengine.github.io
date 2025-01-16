@@ -68,11 +68,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6882dfb0ed2786248898b1236fc978d" id="r_aa6882dfb0ed2786248898b1236fc978d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6882dfb0ed2786248898b1236fc978d">rewind</a> ()</td></tr>
 <tr class="memdesc:aa6882dfb0ed2786248898b1236fc978d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewind the track.  <br /></td></tr>
 
-<tr class="memitem:a6f4d4e5efa57ef122aaa57fe68c33a28" id="r_a6f4d4e5efa57ef122aaa57fe68c33a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f4d4e5efa57ef122aaa57fe68c33a28">update</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a>, <a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>, <a class="el" href="/documentation/api/-types-8h/">fix7_9_ext</a> tickStep, <a class="el" href="/documentation/api/-types-8h/">fix7_9_ext</a> targetTimerResolutionFactor, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> leftVolumeFactor, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> rightVolumeFactor, <a class="el" href="/documentation/api/-types-8h/">int8</a> volumeReduction, <a class="el" href="/documentation/api/-types-8h/">uint8</a> volumenScalePower, <a class="el" href="/documentation/api/-types-8h/">uint16</a> frequencyDelta)</td></tr>
+<tr class="memitem:a6f4d4e5efa57ef122aaa57fe68c33a28" id="r_a6f4d4e5efa57ef122aaa57fe68c33a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f4d4e5efa57ef122aaa57fe68c33a28">update</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> elapsedMicroseconds, <a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>, <a class="el" href="/documentation/api/-types-8h/">fix7_9_ext</a> tickStep, <a class="el" href="/documentation/api/-types-8h/">fix7_9_ext</a> targetTimerResolutionFactor, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> leftVolumeFactor, <a class="el" href="/documentation/api/-types-8h/">fixed_t</a> rightVolumeFactor, <a class="el" href="/documentation/api/-types-8h/">int8</a> volumeReduction, <a class="el" href="/documentation/api/-types-8h/">uint8</a> volumenScalePower, <a class="el" href="/documentation/api/-types-8h/">uint16</a> frequencyDelta)</td></tr>
 
 <tr class="memitem:a7ce8aa2c2964fa1a9a168ec636492e2b" id="r_a7ce8aa2c2964fa1a9a168ec636492e2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ce8aa2c2964fa1a9a168ec636492e2b">getTicks</a> ()</td></tr>
 
-<tr class="memitem:a15bf98695b8fd700e81fac2557041097" id="r_a15bf98695b8fd700e81fac2557041097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15bf98695b8fd700e81fac2557041097">getElapsedTicksPercentaje</a> ()</td></tr>
+<tr class="memitem:a15bf98695b8fd700e81fac2557041097" id="r_a15bf98695b8fd700e81fac2557041097"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15bf98695b8fd700e81fac2557041097">getElapsedTicksPercentaje</a> ()</td></tr>
 
 <tr class="memitem:a082e4a1ce7f759ff1c1d55f54448f748" id="r_a082e4a1ce7f759ff1c1d55f54448f748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082e4a1ce7f759ff1c1d55f54448f748">getTotalPlaybackMilliseconds</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> targetTimerResolutionUS)</td></tr>
 
@@ -261,25 +261,25 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">193</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>{</div>
-<div class="line"><span class="lineno">  195</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
-<div class="line"><span class="lineno">  196</span>    Base::constructor();</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>    this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a> = <a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>;</div>
-<div class="line"><span class="lineno">  199</span>    this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a> = this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;samples;</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">191</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>{</div>
+<div class="line"><span class="lineno">  193</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">  194</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>    this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a> = <a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>;</div>
+<div class="line"><span class="lineno">  197</span>    this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a> = this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;samples;</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>    SoundTrack::reset(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>    SoundTrack::reset(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  202</span> </div>
-<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a>)</div>
-<div class="line"><span class="lineno">  204</span>    {</div>
-<div class="line"><span class="lineno">  205</span>        SoundTrack::computeLength(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
-<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  208</span>    {</div>
-<div class="line"><span class="lineno">  209</span>        this-&gt;<a class="code hl_variable" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a> = this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a> = this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;samples;</div>
-<div class="line"><span class="lineno">  210</span>    }</div>
-<div class="line"><span class="lineno">  211</span>}</div>
+<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a>)</div>
+<div class="line"><span class="lineno">  202</span>    {</div>
+<div class="line"><span class="lineno">  203</span>        SoundTrack::computeLength(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  204</span>    }</div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>        this-&gt;<a class="code hl_variable" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a> = this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a> = this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;samples;</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="line"><span class="lineno">  209</span>}</div>
 <div class="ttc" id="aclass_sound_track_html_a14d897136b729166623c873e3efc11bb"><div class="ttname"><a href="#a14d897136b729166623c873e3efc11bb">SoundTrack::samples</a></div><div class="ttdeci">uint32 samples</div><div class="ttdoc">Channel&#39;s effective length.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:265</a></div></div>
 <div class="ttc" id="aclass_sound_track_html_a259d9c7906c7baba29adc42d0d0addc6"><div class="ttname"><a href="#a259d9c7906c7baba29adc42d0d0addc6">SoundTrack::soundTrackSpec</a></div><div class="ttdeci">const SoundTrackSpec * soundTrackSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the soundtrack.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:262</a></div></div>
 <div class="ttc" id="aclass_sound_track_html_aee3f5fee69e9adec192932773ff6ac0f"><div class="ttname"><a href="#aee3f5fee69e9adec192932773ff6ac0f">SoundTrack::ticks</a></div><div class="ttdeci">uint32 ticks</div><div class="ttdoc">Total number of ticks.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:295</a></div></div>
@@ -293,7 +293,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">float</a> SoundTrack::getElapsedTicksPercentaje </td>
+          <td class="memname">float SoundTrack::getElapsedTicksPercentaje </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -302,15 +302,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the sound track's percentage of elapsed ticks. </p><dl class="section return"><dt>Returns</dt><dd>Percentaje of elapsed ticks </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">157</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
-<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a>)</div>
-<div class="line"><span class="lineno">  160</span>    {</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this-&gt;<a class="code hl_variable" href="#a0acc26209cb105b8729ba65ed331f67f">cursor</a> / this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a>;</div>
-<div class="line"><span class="lineno">  165</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">155</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a>)</div>
+<div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)this-&gt;<a class="code hl_variable" href="#a0acc26209cb105b8729ba65ed331f67f">cursor</a> / this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a>;</div>
+<div class="line"><span class="lineno">  163</span>}</div>
 <div class="ttc" id="aclass_sound_track_html_a0acc26209cb105b8729ba65ed331f67f"><div class="ttname"><a href="#a0acc26209cb105b8729ba65ed331f67f">SoundTrack::cursor</a></div><div class="ttdeci">uint32 cursor</div><div class="ttdoc">Position within the sound track.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:268</a></div></div>
 </div>
 </div>
@@ -331,10 +331,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the sound track's total ticks. </p><dl class="section return"><dt>Returns</dt><dd>Total number of ticks </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">150</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>{</div>
-<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a>;</div>
-<div class="line"><span class="lineno">  153</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">148</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>{</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a>;</div>
+<div class="line"><span class="lineno">  151</span>}</div>
 </div>
 </div>
 </div>
@@ -360,23 +360,23 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The total time of playback in milliseconds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">169</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>{</div>
-<div class="line"><span class="lineno">  171</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalPlaybackMilliseconds = 0;</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
-<div class="line"><span class="lineno">  174</span>    {</div>
-<div class="line"><span class="lineno">  175</span>        totalPlaybackMilliseconds = (this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a> * <a class="code hl_define" href="/documentation/api/-constants-8h/">__MICROSECONDS_PER_MILLISECOND</a>) / <a class="code hl_variable" href="/documentation/api/-sound-track-8c/">_pcmTargetPlaybackRefreshRate</a>;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackNative</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
-<div class="line"><span class="lineno">  178</span>    {</div>
-<div class="line"><span class="lineno">  179</span>        totalPlaybackMilliseconds = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)((<span class="keywordtype">long</span>)this-&gt;<a class="code hl_variable" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a> * targetTimerResolutionUS / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MICROSECONDS_PER_MILLISECOND</a>);</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">return</span> totalPlaybackMilliseconds;</div>
-<div class="line"><span class="lineno">  183</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">167</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>{</div>
+<div class="line"><span class="lineno">  169</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalPlaybackMilliseconds = 0;</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
+<div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        totalPlaybackMilliseconds = (this-&gt;<a class="code hl_variable" href="#a14d897136b729166623c873e3efc11bb">samples</a> * <a class="code hl_define" href="/documentation/api/-constants-8h/">__MICROSECONDS_PER_MILLISECOND</a>) / <a class="code hl_variable" href="/documentation/api/-sound-track-8c/">_pcmTargetPlaybackRefreshRate</a>;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackNative</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
+<div class="line"><span class="lineno">  176</span>    {</div>
+<div class="line"><span class="lineno">  177</span>        totalPlaybackMilliseconds = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)((<span class="keywordtype">long</span>)this-&gt;<a class="code hl_variable" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a> * targetTimerResolutionUS / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MICROSECONDS_PER_MILLISECOND</a>);</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span> totalPlaybackMilliseconds;</div>
+<div class="line"><span class="lineno">  181</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a86967e015d5a0930fc0c1e163fae50e3"><div class="ttname"><a href="/documentation/api/-constants-8h/">__MICROSECONDS_PER_MILLISECOND</a></div><div class="ttdeci">#define __MICROSECONDS_PER_MILLISECOND</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:170</a></div></div>
-<div class="ttc" id="a_sound_track_8c_html_abcae6311d7aa3f4f1f80f14b857b59cc"><div class="ttname"><a href="/documentation/api/-sound-track-8c/">_pcmTargetPlaybackRefreshRate</a></div><div class="ttdeci">static uint16 _pcmTargetPlaybackRefreshRate</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:30</a></div></div>
+<div class="ttc" id="a_sound_track_8c_html_abcae6311d7aa3f4f1f80f14b857b59cc"><div class="ttname"><a href="/documentation/api/-sound-track-8c/">_pcmTargetPlaybackRefreshRate</a></div><div class="ttdeci">static uint16 _pcmTargetPlaybackRefreshRate</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:26</a></div></div>
 <div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
 </div>
 </div>
@@ -398,8 +398,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Pause the playback. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">76</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">72</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="/documentation/api/class-v-s-u-manager/">VSUManager::stopSoundSourcesUsedBy</a>(Object::safeCast(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+<div class="ttc" id="aclass_v_s_u_manager_html_a445ca968154732e1f8247950a67cd89f"><div class="ttname"><a href="/documentation/api/class-v-s-u-manager/">VSUManager::stopSoundSourcesUsedBy</a></div><div class="ttdeci">static void stopSoundSourcesUsedBy(Object requester)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c:77</a></div></div>
 </div>
 </div>
 </div>
@@ -420,8 +423,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Resume the output of sound. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">91</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">89</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>{}</div>
 </div>
 </div>
 </div>
@@ -442,27 +445,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Rewind the track. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">96</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a>)</div>
-<div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>        this-&gt;<a class="code hl_variable" href="#a0acc26209cb105b8729ba65ed331f67f">cursor</a> = 0;</div>
-<div class="line"><span class="lineno">  101</span>        this-&gt;<a class="code hl_variable" href="#a5ec02bfc36fd9bf766b39d9d2d061f57">cursorSxINT</a> = 0;</div>
-<div class="line"><span class="lineno">  102</span>        this-&gt;<a class="code hl_variable" href="#a48a2a359bad00a025fa0ee34faa36d33">cursorSxLRV</a> = 0;</div>
-<div class="line"><span class="lineno">  103</span>        this-&gt;<a class="code hl_variable" href="#ae68c08a1d2c73ce83cfea1f4e0862201">cursorSxFQ</a> = 0;</div>
-<div class="line"><span class="lineno">  104</span>        this-&gt;<a class="code hl_variable" href="#a3c3d13f62b1739bb89814a1466345aa3">cursorSxEV0</a> = 0;</div>
-<div class="line"><span class="lineno">  105</span>        this-&gt;<a class="code hl_variable" href="#a09fc7f3fc21519e0a24d043afa90d156">cursorSxEV1</a> = 0;</div>
-<div class="line"><span class="lineno">  106</span>        this-&gt;<a class="code hl_variable" href="#a12a4916d060f28abe35c54c7799b404c">cursorSxRAM</a> = 0;</div>
-<div class="line"><span class="lineno">  107</span>        this-&gt;<a class="code hl_variable" href="#af3d83b506a8bf6b49f63cd64f67ddf20">cursorSxSWP</a> = 0;</div>
-<div class="line"><span class="lineno">  108</span>        this-&gt;<a class="code hl_variable" href="#af0064dec7b4b2ad442f513d9e0ed3aa0">cursorSxMOD</a> = 0;</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>        this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        SoundTrack::reset(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-<div class="line"><span class="lineno">  116</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">94</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>{</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a>)</div>
+<div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        this-&gt;<a class="code hl_variable" href="#a0acc26209cb105b8729ba65ed331f67f">cursor</a> = 0;</div>
+<div class="line"><span class="lineno">   99</span>        this-&gt;<a class="code hl_variable" href="#a5ec02bfc36fd9bf766b39d9d2d061f57">cursorSxINT</a> = 0;</div>
+<div class="line"><span class="lineno">  100</span>        this-&gt;<a class="code hl_variable" href="#a48a2a359bad00a025fa0ee34faa36d33">cursorSxLRV</a> = 0;</div>
+<div class="line"><span class="lineno">  101</span>        this-&gt;<a class="code hl_variable" href="#ae68c08a1d2c73ce83cfea1f4e0862201">cursorSxFQ</a> = 0;</div>
+<div class="line"><span class="lineno">  102</span>        this-&gt;<a class="code hl_variable" href="#a3c3d13f62b1739bb89814a1466345aa3">cursorSxEV0</a> = 0;</div>
+<div class="line"><span class="lineno">  103</span>        this-&gt;<a class="code hl_variable" href="#a09fc7f3fc21519e0a24d043afa90d156">cursorSxEV1</a> = 0;</div>
+<div class="line"><span class="lineno">  104</span>        this-&gt;<a class="code hl_variable" href="#a12a4916d060f28abe35c54c7799b404c">cursorSxRAM</a> = 0;</div>
+<div class="line"><span class="lineno">  105</span>        this-&gt;<a class="code hl_variable" href="#af3d83b506a8bf6b49f63cd64f67ddf20">cursorSxSWP</a> = 0;</div>
+<div class="line"><span class="lineno">  106</span>        this-&gt;<a class="code hl_variable" href="#af0064dec7b4b2ad442f513d9e0ed3aa0">cursorSxMOD</a> = 0;</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        SoundTrack::reset(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="line"><span class="lineno">  114</span>}</div>
 <div class="ttc" id="aclass_sound_track_html_a09fc7f3fc21519e0a24d043afa90d156"><div class="ttname"><a href="#a09fc7f3fc21519e0a24d043afa90d156">SoundTrack::cursorSxEV1</a></div><div class="ttdeci">uint32 cursorSxEV1</div><div class="ttdoc">SxEV1 cursor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:283</a></div></div>
 <div class="ttc" id="aclass_sound_track_html_a12a4916d060f28abe35c54c7799b404c"><div class="ttname"><a href="#a12a4916d060f28abe35c54c7799b404c">SoundTrack::cursorSxRAM</a></div><div class="ttdeci">uint32 cursorSxRAM</div><div class="ttdoc">SxRAM cursor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:286</a></div></div>
 <div class="ttc" id="aclass_sound_track_html_a3c3d13f62b1739bb89814a1466345aa3"><div class="ttname"><a href="#a3c3d13f62b1739bb89814a1466345aa3">SoundTrack::cursorSxEV0</a></div><div class="ttdeci">uint32 cursorSxEV0</div><div class="ttdoc">SxEV0 cursor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8h-source/">SoundTrack.h:280</a></div></div>
@@ -504,10 +507,10 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">38</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
-<div class="line"><span class="lineno">   40</span>    <a class="code hl_variable" href="/documentation/api/-sound-track-8c/">_pcmTargetPlaybackRefreshRate</a> = pcmTargetPlaybackRefreshRate;</div>
-<div class="line"><span class="lineno">   41</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">34</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{</div>
+<div class="line"><span class="lineno">   36</span>    <a class="code hl_variable" href="/documentation/api/-sound-track-8c/">_pcmTargetPlaybackRefreshRate</a> = pcmTargetPlaybackRefreshRate;</div>
+<div class="line"><span class="lineno">   37</span>}</div>
 </div>
 </div>
 </div>
@@ -532,19 +535,20 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">51</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">if</span>(!wasPaused)</div>
-<div class="line"><span class="lineno">   54</span>    {</div>
-<div class="line"><span class="lineno">   55</span>        SoundTrack::reset(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
-<div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        VSUManager::setMode(<a class="code hl_enumvalue" href="/documentation/api/-v-s-u-manager-8h/">kPlaybackPCM</a>);</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="line"><span class="lineno">   62</span>}</div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">kPlaybackPCM</a></div><div class="ttdeci">@ kPlaybackPCM</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">47</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span>(!wasPaused)</div>
+<div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        SoundTrack::reset(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
+<div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="/documentation/api/class-v-s-u-manager/">VSUManager::setMode</a>(VSUManager::getInstance(), <a class="code hl_enumvalue" href="/documentation/api/-v-s-u-manager-8h/">kPlaybackPCM</a>);</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>}</div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_a6e09413c199eb66f48aba8ddcf0feeaf"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">kPlaybackPCM</a></div><div class="ttdeci">@ kPlaybackPCM</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:50</a></div></div>
+<div class="ttc" id="aclass_v_s_u_manager_html_a00ab294ee778035465982d10b74487ca"><div class="ttname"><a href="/documentation/api/class-v-s-u-manager/">VSUManager::setMode</a></div><div class="ttdeci">void setMode(uint32 playbackMode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c:191</a></div></div>
 </div>
 </div>
 </div>
@@ -565,14 +569,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Stop the playback. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">66</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>{</div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
-<div class="line"><span class="lineno">   69</span>    {</div>
-<div class="line"><span class="lineno">   70</span>        VSUManager::setMode(<a class="code hl_enumvalue" href="/documentation/api/-v-s-u-manager-8h/">kPlaybackNative</a>);</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="line"><span class="lineno">   72</span>}</div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">kPlaybackNative</a></div><div class="ttdeci">@ kPlaybackNative</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">62</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
+<div class="line"><span class="lineno">   65</span>    {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_function" href="/documentation/api/class-v-s-u-manager/">VSUManager::setMode</a>(VSUManager::getInstance(), <a class="code hl_enumvalue" href="/documentation/api/-v-s-u-manager-8h/">kPlaybackNative</a>);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_af81890d3ad091b437d5f741f8ac29de8"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">kPlaybackNative</a></div><div class="ttdeci">@ kPlaybackNative</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:49</a></div></div>
 </div>
 </div>
 </div>
@@ -593,8 +597,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Suspend the output of sound. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">86</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">84</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>{}</div>
 </div>
 </div>
 </div>
@@ -615,8 +619,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Unpause the playback. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">81</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">79</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>{}</div>
 </div>
 </div>
 </div>
@@ -689,31 +693,30 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the playback is complete; false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">120</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>{</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a>)</div>
-<div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
-<div class="line"><span class="lineno">  132</span>    {</div>
-<div class="line"><span class="lineno">  133</span>        this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a> = SoundTrack::updatePCM(<span class="keyword">this</span>, <a class="code hl_variable" href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a>, <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>, volumeReduction);</div>
-<div class="line"><span class="lineno">  134</span>    }</div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackNative</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
-<div class="line"><span class="lineno">  136</span>    {</div>
-<div class="line"><span class="lineno">  137</span>        this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a> = </div>
-<div class="line"><span class="lineno">  138</span>            SoundTrack::updateNative</div>
-<div class="line"><span class="lineno">  139</span>            (</div>
-<div class="line"><span class="lineno">  140</span>                <span class="keyword">this</span>, tickStep, targetTimerResolutionFactor, leftVolumeFactor, rightVolumeFactor, volumeReduction, </div>
-<div class="line"><span class="lineno">  141</span>                volumenScalePower, frequencyDelta</div>
-<div class="line"><span class="lineno">  142</span>            );</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a>;</div>
-<div class="line"><span class="lineno">  146</span>}</div>
-<div class="ttc" id="a_timer_manager_8h_html_a7fbe280444975b504b551c61244e82af"><div class="ttname"><a href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a></div><div class="ttdeci">uint32 elapsedMicroseconds</div><div class="ttdoc">Elapsed microseconds.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-timer-manager-8h-source/">TimerManager.h:83</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a6695a8f17f42411955a09df1da983a05"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a></div><div class="ttdeci">uint32 targetPCMUpdates</div><div class="ttdoc">Target PCM cycles per game cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:173</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-track-8c-source/">118</a> of file <a class="el" href="/documentation/api/-sound-track-8c-source/">SoundTrack.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a>)</div>
+<div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-track-8h/">kTrackPCM</a> == this-&gt;<a class="code hl_variable" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>-&gt;trackType)</div>
+<div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a> = SoundTrack::updatePCM(<span class="keyword">this</span>, elapsedMicroseconds, <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>, volumeReduction);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">else</span> <span class="comment">/*if(kTrackNative == this-&gt;soundTrackSpec-&gt;trackType)*/</span></div>
+<div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a> = </div>
+<div class="line"><span class="lineno">  136</span>            SoundTrack::updateNative</div>
+<div class="line"><span class="lineno">  137</span>            (</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keyword">this</span>, tickStep, targetTimerResolutionFactor, leftVolumeFactor, rightVolumeFactor, volumeReduction, </div>
+<div class="line"><span class="lineno">  139</span>                volumenScalePower, frequencyDelta</div>
+<div class="line"><span class="lineno">  140</span>            );</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a>;</div>
+<div class="line"><span class="lineno">  144</span>}</div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_a6695a8f17f42411955a09df1da983a05"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a></div><div class="ttdeci">uint32 targetPCMUpdates</div><div class="ttdoc">Target PCM cycles per game cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:262</a></div></div>
 </div>
 </div>
 </div>

@@ -35,12 +35,12 @@ Inheritance diagram for AnimationCoordinatorFactory:</div>
   </map>
 </div></div>
 <table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aea7bf09acd0e6442269f0e37630b9709" id="r_aea7bf09acd0e6442269f0e37630b9709"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea7bf09acd0e6442269f0e37630b9709">reset</a> ()</td></tr>
-<tr class="memdesc:aea7bf09acd0e6442269f0e37630b9709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the animation coordinator factory's state.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0458579f4bee52bfd2d8c81bfd1952b7" id="r_a0458579f4bee52bfd2d8c81bfd1952b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0458579f4bee52bfd2d8c81bfd1952b7">reset</a> ()</td></tr>
+<tr class="memdesc:a0458579f4bee52bfd2d8c81bfd1952b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the animation coordinator factory's state.  <br /></td></tr>
 
-<tr class="memitem:a05e079dc44fba81cfe176c9d6e89ec9d" id="r_a05e079dc44fba81cfe176c9d6e89ec9d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05e079dc44fba81cfe176c9d6e89ec9d">getCoordinator</a> (<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a> animationController, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope, const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *charSetSpec)</td></tr>
+<tr class="memitem:aaf4a3410af1379276f2bb88db3f7d49e" id="r_aaf4a3410af1379276f2bb88db3f7d49e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf4a3410af1379276f2bb88db3f7d49e">getCoordinator</a> (<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a> animationController, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope, const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *charSetSpec)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -74,17 +74,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-animation-coordinator-factory-8h-source/">37</a> of file <a class="el" href="/documentation/api/-animation-coordinator-factory-8h-source/">AnimationCoordinatorFactory.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a05e079dc44fba81cfe176c9d6e89ec9d" name="a05e079dc44fba81cfe176c9d6e89ec9d"></a>
+<a id="aaf4a3410af1379276f2bb88db3f7d49e" name="aaf4a3410af1379276f2bb88db3f7d49e"></a>
 <h2 class="memtitle">getCoordinator()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static <a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a> AnimationCoordinatorFactory::getCoordinator </td>
+          <td class="memname"><a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a> AnimationCoordinatorFactory::getCoordinator </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></td>          <td class="paramname"><span class="paramname"><em>animationController</em></span>, </td>
         </tr>
@@ -99,11 +96,6 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramtype">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetSpec</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Get an animation coordinator. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
@@ -114,84 +106,70 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>ClockManager singleton </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-clock-manager/">ClockManager</a> singleton </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-animation-coordinator-factory-8c-source/">44</a> of file <a class="el" href="/documentation/api/-animation-coordinator-factory-8c-source/">AnimationCoordinatorFactory.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
-<div class="line"><span class="lineno">   46</span>    AnimationCoordinatorFactory animationCoordinatorFactory = AnimationCoordinatorFactory::getInstance();</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != charSetSpec, <span class="stringliteral">&quot;AnimationCoordinatorFactory::getCoordinator: null charSetSpec&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != charSetSpec &amp;&amp; charSetSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-char-set-spec/">shared</a>)</div>
-<div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="comment">// Try to find an already created coordinator</span></div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = animationCoordinatorFactory-&gt;<a class="code hl_variable" href="#a3cfc352673f5aaea9997d4ddec7a85d4">animationCoordinators</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            AnimationCoordinator animationCoordinator = AnimationCoordinator::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::getCharSetSpec</a>(animationCoordinator) == charSetSpec)</div>
-<div class="line"><span class="lineno">   58</span>            {</div>
-<div class="line"><span class="lineno">   59</span>                <a class="code hl_function" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::addAnimationController</a>(animationCoordinator, animationController);</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">return</span> animationCoordinator;</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        AnimationCoordinator animationCoordinator = <span class="keyword">new</span> AnimationCoordinator(charSetSpec, scope);</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>        <span class="comment">// Create a new coordinator</span></div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_function" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::addAnimationController</a>(animationCoordinator, animationController);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(animationCoordinatorFactory-&gt;<a class="code hl_variable" href="#a3cfc352673f5aaea9997d4ddec7a85d4">animationCoordinators</a>, animationCoordinator);</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> animationCoordinator;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">   75</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-animation-coordinator-factory-8c-source/">42</a> of file <a class="el" href="/documentation/api/-animation-coordinator-factory-8c-source/">AnimationCoordinatorFactory.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != charSetSpec, <span class="stringliteral">&quot;AnimationCoordinatorFactory::getCoordinator: null charSetSpec&quot;</span>);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != charSetSpec &amp;&amp; charSetSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-char-set-spec/">shared</a>)</div>
+<div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="comment">// Try to find an already created coordinator</span></div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a3cfc352673f5aaea9997d4ddec7a85d4">animationCoordinators</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            AnimationCoordinator animationCoordinator = AnimationCoordinator::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::getCharSetSpec</a>(animationCoordinator) == charSetSpec)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                <a class="code hl_function" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::addAnimationController</a>(animationCoordinator, animationController);</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">return</span> animationCoordinator;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        AnimationCoordinator animationCoordinator = <span class="keyword">new</span> AnimationCoordinator(charSetSpec, scope);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>        <span class="comment">// Create a new coordinator</span></div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::addAnimationController</a>(animationCoordinator, animationController);</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(this-&gt;<a class="code hl_variable" href="#a3cfc352673f5aaea9997d4ddec7a85d4">animationCoordinators</a>, animationCoordinator);</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> animationCoordinator;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   71</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
 <div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_virtual_circular_list_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:29</a></div></div>
 <div class="ttc" id="aclass_animation_coordinator_factory_html_a3cfc352673f5aaea9997d4ddec7a85d4"><div class="ttname"><a href="#a3cfc352673f5aaea9997d4ddec7a85d4">AnimationCoordinatorFactory::animationCoordinators</a></div><div class="ttdeci">VirtualList animationCoordinators</div><div class="ttdoc">List of instances of animation coordinators.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-coordinator-factory-8h-source/">AnimationCoordinatorFactory.h:42</a></div></div>
 <div class="ttc" id="aclass_animation_coordinator_html_aa0db1770bc22c6606a9e978f5bc83a89"><div class="ttname"><a href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::getCharSetSpec</a></div><div class="ttdeci">const CharSetSpec * getCharSetSpec()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-coordinator-8c-source/">AnimationCoordinator.c:144</a></div></div>
 <div class="ttc" id="aclass_animation_coordinator_html_ab7bee197f82daa22af6fcd1fda56ea62"><div class="ttname"><a href="/documentation/api/class-animation-coordinator/">AnimationCoordinator::addAnimationController</a></div><div class="ttdeci">void addAnimationController(AnimationController animationController)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-coordinator-8c-source/">AnimationCoordinator.c:95</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
-<div class="ttc" id="aclass_virtual_list_html_acb02e87ebf3f2af19b8f345ab02f202a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::head</a></div><div class="ttdeci">VirtualNode head</div><div class="ttdoc">List&#39;s first node.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:34</a></div></div>
-<div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
 <div class="ttc" id="astruct_char_set_spec_html_a0d24e7458e0a03fba8bf2a47d9ae1122"><div class="ttname"><a href="/documentation/api/struct-char-set-spec/">CharSetSpec::shared</a></div><div class="ttdeci">bool shared</div><div class="ttdoc">Whether the char set is shared or not.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-char-set-8h-source/">CharSet.h:53</a></div></div>
 </div>
 </div>
 </div>
-<a id="aea7bf09acd0e6442269f0e37630b9709" name="aea7bf09acd0e6442269f0e37630b9709"></a>
+<a id="a0458579f4bee52bfd2d8c81bfd1952b7" name="a0458579f4bee52bfd2d8c81bfd1952b7"></a>
 <h2 class="memtitle">reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void AnimationCoordinatorFactory::reset </td>
+          <td class="memname">void AnimationCoordinatorFactory::reset </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Reset the animation coordinator factory's state. </p>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-animation-coordinator-factory-8c-source/">35</a> of file <a class="el" href="/documentation/api/-animation-coordinator-factory-8c-source/">AnimationCoordinatorFactory.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>{</div>
-<div class="line"><span class="lineno">   37</span>    AnimationCoordinatorFactory animationCoordinatorFactory = AnimationCoordinatorFactory::getInstance();</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a>(animationCoordinatorFactory-&gt;<a class="code hl_variable" href="#a3cfc352673f5aaea9997d4ddec7a85d4">animationCoordinators</a>);</div>
-<div class="line"><span class="lineno">   40</span>}</div>
+<div class="line"><span class="lineno">   37</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a>(this-&gt;<a class="code hl_variable" href="#a3cfc352673f5aaea9997d4ddec7a85d4">animationCoordinators</a>);</div>
+<div class="line"><span class="lineno">   38</span>}</div>
 <div class="ttc" id="aclass_virtual_list_html_aea135a8481da683f8376b1ddeb2184ca"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a></div><div class="ttdeci">void deleteData()</div><div class="ttdoc">Delete all the data and nodes from the list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:558</a></div></div>
 </div>
 </div>

@@ -41,13 +41,8 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:ad1b6d19bc20939962ef46f600c63eb11" id="r_ad1b6d19bc20939962ef46f600c63eb11"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1b6d19bc20939962ef46f600c63eb11">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-behavior/">Behavior</a> behavior)</td></tr>
 
-</table><table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab284a8afaf7e9248ca63be90b61bea91" id="r_ab284a8afaf7e9248ca63be90b61bea91"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab284a8afaf7e9248ca63be90b61bea91">getInstance</a> ()</td></tr>
-
-<tr class="memitem:abb9ce3dd84eef95ecca8cb1763118cf0" id="r_abb9ce3dd84eef95ecca8cb1763118cf0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb9ce3dd84eef95ecca8cb1763118cf0">reset</a> ()</td></tr>
-<tr class="memdesc:abb9ce3dd84eef95ecca8cb1763118cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+<tr class="memitem:a3eefac8010d23bed6e629406906c2fef" id="r_a3eefac8010d23bed6e629406906c2fef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eefac8010d23bed6e629406906c2fef">reset</a> ()</td></tr>
+<tr class="memdesc:a3eefac8010d23bed6e629406906c2fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -76,6 +71,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
 
 <tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a123ea126f5ba13de211c4dffced1137e inherit pub_static_methods_class_component_manager" id="r_a123ea126f5ba13de211c4dffced1137e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
+
+<tr class="memitem:a1c09750f44f3f93cc9039fe65d561065 inherit pub_static_methods_class_component_manager" id="r_a1c09750f44f3f93cc9039fe65d561065"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
 <tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType, <a class="el" href="/documentation/api/-types-8h/">int16</a> componentIndex)</td></tr>
 
@@ -150,32 +149,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 </div>
-<a id="ab284a8afaf7e9248ca63be90b61bea91" name="ab284a8afaf7e9248ca63be90b61bea91"></a>
-<h2 class="memtitle">getInstance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a> BehaviorManager::getInstance </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Method to retrieve the singleton instance </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a> singleton </dd></dl>
-
-</div>
-</div>
 <a id="ad4f2d9ed88d818848b0c04253bf3fa44" name="ad4f2d9ed88d818848b0c04253bf3fa44"></a>
 <h2 class="memtitle">instantiateComponent()</h2>
 
@@ -227,35 +200,27 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 </div>
-<a id="abb9ce3dd84eef95ecca8cb1763118cf0" name="abb9ce3dd84eef95ecca8cb1763118cf0"></a>
+<a id="a3eefac8010d23bed6e629406906c2fef" name="a3eefac8010d23bed6e629406906c2fef"></a>
 <h2 class="memtitle">reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void BehaviorManager::reset </td>
+          <td class="memname">secure void BehaviorManager::reset </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Reset the manager's state. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-behavior-manager-8c-source/">71</a> of file <a class="el" href="/documentation/api/-behavior-manager-8c-source/">BehaviorManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>{   </div>
-<div class="line"><span class="lineno">   73</span>    BehaviorManager::cleanUp();</div>
-<div class="line"><span class="lineno">   74</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-behavior-manager-8c-source/">65</a> of file <a class="el" href="/documentation/api/-behavior-manager-8c-source/">BehaviorManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>{   </div>
+<div class="line"><span class="lineno">   67</span>    BehaviorManager::cleanUp(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   68</span>}</div>
 </div>
 </div>
 </div>

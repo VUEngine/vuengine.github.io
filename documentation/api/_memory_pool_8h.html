@@ -31,6 +31,11 @@ permalink: documentation/api/-memory-pool-8h/
 </div>
 <p><a href="/documentation/api/-memory-pool-8h-source/">Go to the source code of this file.</a></p>
 <table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-memory-pool/">MemoryPool</a></td></tr>
+
+</table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad01cc6b46da36e1cf599b6e8a59f8f33" id="r_ad01cc6b46da36e1cf599b6e8a59f8f33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad01cc6b46da36e1cf599b6e8a59f8f33">__BLOCK_DEFINITION</a>(BlockSize,  Elements)</td></tr>
@@ -44,28 +49,6 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>
 , <a class="el" href="#a9460c54c82ac613f1b8b17777285ae36a73a6c332c0b39801aa153392339ab9c8">eLastFreeBlock</a>
  }</td></tr>
-
-</table><table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aa9aeb2e652c8e7008ee9372fd6e6b8a8" id="r_aa9aeb2e652c8e7008ee9372fd6e6b8a8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9aeb2e652c8e7008ee9372fd6e6b8a8">allocate</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> numBytes)</td></tr>
-
-<tr class="memitem:a6841496a2be41b05eec37ba9b42948b4" id="r_a6841496a2be41b05eec37ba9b42948b4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6841496a2be41b05eec37ba9b42948b4">free</a> (<a class="el" href="/documentation/api/-types-8h/">BYTE</a> *object)</td></tr>
-
-<tr class="memitem:a2e3957286cef5517274649353b8bd08e" id="r_a2e3957286cef5517274649353b8bd08e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e3957286cef5517274649353b8bd08e">printResumedUsage</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
-
-<tr class="memitem:a5e4c81e73e49a4252f8f7acf48dfdaac" id="r_a5e4c81e73e49a4252f8f7acf48dfdaac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e4c81e73e49a4252f8f7acf48dfdaac">printDetailedUsage</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
-
-</table><table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ac86672f9ad384a8a5ed83cb761793cec" id="r_ac86672f9ad384a8a5ed83cb761793cec"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac86672f9ad384a8a5ed83cb761793cec">MemoryPool</a></td></tr>
-
-<tr class="memitem:a63aef3f464a1f8ab738e106315637d8a" id="r_a63aef3f464a1f8ab738e106315637d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63aef3f464a1f8ab738e106315637d8a">poolSizes</a> [<a class="el" href="/documentation/api/-config-8h/">__MEMORY_POOLS</a>][2]</td></tr>
-<tr class="memdesc:a63aef3f464a1f8ab738e106315637d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping of memory pools to their block and total size.  <br /></td></tr>
-
-<tr class="memitem:a46987f99318f424b893620466e75c52f" id="r_a46987f99318f424b893620466e75c52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46987f99318f424b893620466e75c52f">poolLastFreeBlock</a> [<a class="el" href="/documentation/api/-config-8h/">__MEMORY_POOLS</a>]</td></tr>
-<tr class="memdesc:a46987f99318f424b893620466e75c52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of pointers to the last free block found in each pool to accelerate the next search.  <br /></td></tr>
 
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -111,20 +94,20 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    memoryPool-&gt;poolLocation[pool] = &amp;memoryPool-&gt;pool ## BlockSize ## B[0];                            \</div>
-<div class="line">    memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a">ePoolSize</a>] = <span class="keyword">sizeof</span>(memoryPool-&gt;pool ## BlockSize ## B);               \</div>
-<div class="line">    memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>] = BlockSize;                                              \</div>
-<div class="line">    memoryPool-&gt;poolLastFreeBlock[pool] = &amp;memoryPool-&gt;poolLocation[pool][0];                           \</div>
+<b>Value:</b><div class="fragment"><div class="line">    this-&gt;poolLocation[pool] = &amp;this-&gt;pool ## BlockSize ## B[0];                                        \</div>
+<div class="line">    this-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a">ePoolSize</a>] = <span class="keyword">sizeof</span>(this-&gt;pool ## BlockSize ## B);                           \</div>
+<div class="line">    this-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>] = BlockSize;                                                        \</div>
+<div class="line">    this-&gt;poolLastFreeBlock[pool] = &amp;this-&gt;poolLocation[pool][0];                                       \</div>
 <div class="line">    pool++;                                                                                             \</div>
 <div class="ttc" id="a_memory_pool_8h_html_a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a"><div class="ttname"><a href="#a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a">ePoolSize</a></div><div class="ttdeci">@ ePoolSize</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h:40</a></div></div>
 <div class="ttc" id="a_memory_pool_8h_html_a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4"><div class="ttname"><a href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a></div><div class="ttdeci">@ eBlockSize</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h:41</a></div></div>
 </div>
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-memory-pool-8h-source/">27</a> of file <a class="el" href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   27</span><span class="preprocessor">#define __SET_MEMORY_POOL_ARRAY(BlockSize)                                                              \</span></div>
-<div class="line"><span class="lineno">   28</span><span class="preprocessor">    memoryPool-&gt;poolLocation[pool] = &amp;memoryPool-&gt;pool ## BlockSize ## B[0];                            \</span></div>
-<div class="line"><span class="lineno">   29</span><span class="preprocessor">    memoryPool-&gt;poolSizes[pool][ePoolSize] = sizeof(memoryPool-&gt;pool ## BlockSize ## B);                \</span></div>
-<div class="line"><span class="lineno">   30</span><span class="preprocessor">    memoryPool-&gt;poolSizes[pool][eBlockSize] = BlockSize;                                                \</span></div>
-<div class="line"><span class="lineno">   31</span><span class="preprocessor">    memoryPool-&gt;poolLastFreeBlock[pool] = &amp;memoryPool-&gt;poolLocation[pool][0];                           \</span></div>
+<div class="line"><span class="lineno">   28</span><span class="preprocessor">    this-&gt;poolLocation[pool] = &amp;this-&gt;pool ## BlockSize ## B[0];                                        \</span></div>
+<div class="line"><span class="lineno">   29</span><span class="preprocessor">    this-&gt;poolSizes[pool][ePoolSize] = sizeof(this-&gt;pool ## BlockSize ## B);                            \</span></div>
+<div class="line"><span class="lineno">   30</span><span class="preprocessor">    this-&gt;poolSizes[pool][eBlockSize] = BlockSize;                                                      \</span></div>
+<div class="line"><span class="lineno">   31</span><span class="preprocessor">    this-&gt;poolLastFreeBlock[pool] = &amp;this-&gt;poolLocation[pool][0];                                       \</span></div>
 <div class="line"><span class="lineno">   32</span><span class="preprocessor">    pool++;                                                                                             \</span></div>
 <div class="line"><span class="lineno">   33</span><span class="preprocessor"></span> </div>
 </div>
@@ -156,317 +139,6 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   43</span>};</div>
 <div class="ttc" id="a_memory_pool_8h_html_a9460c54c82ac613f1b8b17777285ae36a73a6c332c0b39801aa153392339ab9c8"><div class="ttname"><a href="#a9460c54c82ac613f1b8b17777285ae36a73a6c332c0b39801aa153392339ab9c8">eLastFreeBlock</a></div><div class="ttdeci">@ eLastFreeBlock</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h:42</a></div></div>
 </div>
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aa9aeb2e652c8e7008ee9372fd6e6b8a8" name="aa9aeb2e652c8e7008ee9372fd6e6b8a8"></a>
-<h2 class="memtitle">allocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">BYTE</a> * allocate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>numBytes</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Allocate a block big enough to hold the provided amount of bytes. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">numBytes</td><td>Total number of bytes to allocate </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated block </dd></dl>
-
-</div>
-</div>
-<a id="a6841496a2be41b05eec37ba9b42948b4" name="a6841496a2be41b05eec37ba9b42948b4"></a>
-<h2 class="memtitle">free()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static void free </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">BYTE</a> *</td>          <td class="paramname"><span class="paramname"><em>object</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Free the memory block in which the provided object was allocated. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">object</td><td>Pointer to the memory block to free </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5e4c81e73e49a4252f8f7acf48dfdaac" name="a5e4c81e73e49a4252f8f7acf48dfdaac"></a>
-<h2 class="memtitle">printDetailedUsage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static void MemoryPool::printDetailedUsage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Print all the details of the memory usage. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
-    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-memory-pool-8c-source/">393</a> of file <a class="el" href="/documentation/api/-memory-pool-8c-source/">MemoryPool.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  394</span>{</div>
-<div class="line"><span class="lineno">  395</span>    <a class="code hl_variable" href="#ac86672f9ad384a8a5ed83cb761793cec">MemoryPool</a> memoryPool = MemoryPool::getInstance();</div>
-<div class="line"><span class="lineno">  396</span> </div>
-<div class="line"><span class="lineno">  397</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> i;</div>
-<div class="line"><span class="lineno">  398</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalUsedBlocks = 0;</div>
-<div class="line"><span class="lineno">  399</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalUsedBytes = 0;</div>
-<div class="line"><span class="lineno">  400</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> pool;</div>
-<div class="line"><span class="lineno">  401</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> displacement = 0;</div>
-<div class="line"><span class="lineno">  402</span> </div>
-<div class="line"><span class="lineno">  403</span>    </div>
-<div class="line"><span class="lineno">  404</span> </div>
-<div class="line"><span class="lineno">  405</span>    Printing::resetCoordinates();</div>
-<div class="line"><span class="lineno">  406</span> </div>
-<div class="line"><span class="lineno">  407</span>    Printing::text(<span class="stringliteral">&quot;MEMORY POOLS STATUS&quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  408</span> </div>
-<div class="line"><span class="lineno">  409</span>    Printing::text(<span class="stringliteral">&quot;Pool Free Used&quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  410</span>    Printing::text(<span class="stringliteral">&quot;\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08&quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  411</span> </div>
-<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">for</span>(pool = 0; pool &lt; <a class="code hl_define" href="/documentation/api/-config-8h/">__MEMORY_POOLS</a>; pool++)</div>
-<div class="line"><span class="lineno">  413</span>    {</div>
-<div class="line"><span class="lineno">  414</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalBlocks = memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a">ePoolSize</a>] / memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>];</div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">for</span>(displacement = 0, i = 0, totalUsedBlocks = 0 ; i &lt; totalBlocks; i++, displacement += memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>])</div>
-<div class="line"><span class="lineno">  416</span>        {</div>
-<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">if</span>(*((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>*)&amp;memoryPool-&gt;poolLocation[pool][displacement]))</div>
-<div class="line"><span class="lineno">  418</span>            {</div>
-<div class="line"><span class="lineno">  419</span>                totalUsedBlocks++;</div>
-<div class="line"><span class="lineno">  420</span>            }</div>
-<div class="line"><span class="lineno">  421</span>        }</div>
-<div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>        totalUsedBytes += totalUsedBlocks * memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>];</div>
-<div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>        Printing::text(<span class="stringliteral">&quot;                  &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  426</span>        Printing::int32(memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>],  x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  427</span>        Printing::int32(memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a">ePoolSize</a>] / memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>] - totalUsedBlocks, x + 5, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  428</span>        Printing::int32(totalUsedBlocks, x + 10, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> usedBlocksPercentage = (100 * totalUsedBlocks) / totalBlocks;</div>
-<div class="line"><span class="lineno">  431</span>        Printing::int32(usedBlocksPercentage, x + 17 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(usedBlocksPercentage), y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  432</span>        Printing::text(<span class="stringliteral">&quot;% &quot;</span>, x + 17, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  433</span> </div>
-<div class="line"><span class="lineno">  434</span>        totalUsedBlocks = 0 ;</div>
-<div class="line"><span class="lineno">  435</span>    }</div>
-<div class="line"><span class="lineno">  436</span> </div>
-<div class="line"><span class="lineno">  437</span>    ++y;</div>
-<div class="line"><span class="lineno">  438</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> poolSize = MemoryPool::getPoolSize(memoryPool);</div>
-<div class="line"><span class="lineno">  439</span>    Printing::text(<span class="stringliteral">&quot;Pool size: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  440</span>    Printing::int32(poolSize, x + 18 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(poolSize), y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  441</span> </div>
-<div class="line"><span class="lineno">  442</span>    Printing::text(<span class="stringliteral">&quot;Pool usage: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  443</span>    Printing::int32(totalUsedBytes, x + 18 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(totalUsedBytes), y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  444</span> </div>
-<div class="line"><span class="lineno">  445</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> usedBytesPercentage = (100 * totalUsedBytes) / poolSize;</div>
-<div class="line"><span class="lineno">  446</span>    Printing::int32(usedBytesPercentage, x + 17 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(usedBytesPercentage), y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  447</span>    Printing::text(<span class="stringliteral">&quot;% &quot;</span>, x + 17, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  448</span>}</div>
-<div class="ttc" id="a_config_8h_html_a422f141338d93bbc6e9f4e122b5e7771"><div class="ttname"><a href="/documentation/api/-config-8h/">__MEMORY_POOLS</a></div><div class="ttdeci">#define __MEMORY_POOLS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:172</a></div></div>
-<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
-<div class="ttc" id="a_memory_pool_8h_html_ac86672f9ad384a8a5ed83cb761793cec"><div class="ttname"><a href="#ac86672f9ad384a8a5ed83cb761793cec">MemoryPool</a></div><div class="ttdeci">singleton !class MemoryPool</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h:62</a></div></div>
-<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
-<div class="ttc" id="aclass_math_html_a5b7a5dfe4c89232a209e10e7c8fce067"><div class="ttname"><a href="/documentation/api/class-math/">Math::getDigitsCount</a></div><div class="ttdeci">static int32 getDigitsCount(int32 number)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:544</a></div></div>
-</div>
-</div>
-</div>
-<a id="a2e3957286cef5517274649353b8bd08e" name="a2e3957286cef5517274649353b8bd08e"></a>
-<h2 class="memtitle">printResumedUsage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static void MemoryPool::printResumedUsage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Print a resume of the memory usage. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
-    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-memory-pool-8c-source/">334</a> of file <a class="el" href="/documentation/api/-memory-pool-8c-source/">MemoryPool.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  335</span>{</div>
-<div class="line"><span class="lineno">  336</span>    <a class="code hl_variable" href="#ac86672f9ad384a8a5ed83cb761793cec">MemoryPool</a> memoryPool = MemoryPool::getInstance();</div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> originalY = y;</div>
-<div class="line"><span class="lineno">  339</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> i;</div>
-<div class="line"><span class="lineno">  340</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalUsedBlocks = 0;</div>
-<div class="line"><span class="lineno">  341</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalUsedBytes = 0;</div>
-<div class="line"><span class="lineno">  342</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> pool;</div>
-<div class="line"><span class="lineno">  343</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> displacement = 0;</div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>    </div>
-<div class="line"><span class="lineno">  346</span> </div>
-<div class="line"><span class="lineno">  347</span>    Printing::resetCoordinates();</div>
-<div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>    Printing::text(<span class="stringliteral">&quot;MEMORY:&quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  350</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> poolSize = MemoryPool::getPoolSize();</div>
-<div class="line"><span class="lineno">  351</span>    Printing::text(<span class="stringliteral">&quot;Total: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  352</span>    Printing::int32(poolSize, x + 12 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(poolSize), y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">for</span>(y += 2, pool = 0; pool &lt; <a class="code hl_define" href="/documentation/api/-config-8h/">__MEMORY_POOLS</a>; pool++)</div>
-<div class="line"><span class="lineno">  355</span>    {</div>
-<div class="line"><span class="lineno">  356</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> totalBlocks = memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36a88ce3a53309cdb01c45e32f06657649a">ePoolSize</a>] / memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>];</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">for</span>(displacement = 0, i = 0, totalUsedBlocks = 0 ; i &lt; totalBlocks; i++, displacement += memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>])</div>
-<div class="line"><span class="lineno">  358</span>        {</div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">if</span>(memoryPool-&gt;poolLocation[pool][displacement])</div>
-<div class="line"><span class="lineno">  360</span>            {</div>
-<div class="line"><span class="lineno">  361</span>                totalUsedBlocks++;</div>
-<div class="line"><span class="lineno">  362</span>            }</div>
-<div class="line"><span class="lineno">  363</span>        }</div>
-<div class="line"><span class="lineno">  364</span> </div>
-<div class="line"><span class="lineno">  365</span>        totalUsedBytes += totalUsedBlocks * memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>];</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> usedBlocksPercentage = (100 * totalUsedBlocks) / totalBlocks;</div>
-<div class="line"><span class="lineno">  368</span> </div>
-<div class="line"><span class="lineno">  369</span>        Printing::text(<span class="stringliteral">&quot;           &quot;</span>, x, originalY + 3 + pool, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  370</span> </div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-config-8h/">__MEMORY_POOL_WARNING_THRESHOLD</a> &lt; usedBlocksPercentage)</div>
-<div class="line"><span class="lineno">  372</span>        {</div>
-<div class="line"><span class="lineno">  373</span>            Printing::int32(memoryPool-&gt;poolSizes[pool][<a class="code hl_enumvalue" href="#a9460c54c82ac613f1b8b17777285ae36ac2e5b8f3a24174d561fac137ab3b48a4">eBlockSize</a>], x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  374</span>            Printing::int32(usedBlocksPercentage, x + 7 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(usedBlocksPercentage), y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  375</span>            Printing::text(<span class="stringliteral">&quot;% &quot;</span>, x + 7, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  376</span>        }</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>        totalUsedBlocks = 0 ;</div>
-<div class="line"><span class="lineno">  379</span>    }</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>    y = originalY;</div>
-<div class="line"><span class="lineno">  382</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> usedBytesPercentage = (100 * totalUsedBytes) / poolSize;</div>
-<div class="line"><span class="lineno">  383</span>    Printing::int32(usedBytesPercentage, x + 11 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(usedBytesPercentage), y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  384</span>    Printing::text(<span class="stringliteral">&quot;% &quot;</span>, x + 11, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  385</span>    Printing::text(<span class="stringliteral">&quot;Used: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  386</span>    Printing::int32(totalUsedBytes, x + 12 - <a class="code hl_function" href="/documentation/api/class-math/">Math::getDigitsCount</a>(totalUsedBytes), y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  387</span>}</div>
-<div class="ttc" id="a_config_8h_html_a3452d651dba0e39504324336713f2847"><div class="ttname"><a href="/documentation/api/-config-8h/">__MEMORY_POOL_WARNING_THRESHOLD</a></div><div class="ttdeci">#define __MEMORY_POOL_WARNING_THRESHOLD</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:203</a></div></div>
-</div>
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ac86672f9ad384a8a5ed83cb761793cec" name="ac86672f9ad384a8a5ed83cb761793cec"></a>
-<h2 class="memtitle">MemoryPool</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">singleton !class MemoryPool</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Class MemoryPool</p>
-<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
-<p>Implements a memory pool for dynamic object allocation. </p>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-memory-pool-8h-source/">54</a> of file <a class="el" href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h</a>.</p>
-
-</div>
-</div>
-<a id="a46987f99318f424b893620466e75c52f" name="a46987f99318f424b893620466e75c52f"></a>
-<h2 class="memtitle">poolLastFreeBlock</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">BYTE</a>* poolLastFreeBlock[<a class="el" href="/documentation/api/-config-8h/">__MEMORY_POOLS</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Array of pointers to the last free block found in each pool to accelerate the next search. </p>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-memory-pool-8h-source/">68</a> of file <a class="el" href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h</a>.</p>
-
-</div>
-</div>
-<a id="a63aef3f464a1f8ab738e106315637d8a" name="a63aef3f464a1f8ab738e106315637d8a"></a>
-<h2 class="memtitle">poolSizes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> poolSizes[<a class="el" href="/documentation/api/-config-8h/">__MEMORY_POOLS</a>][2]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mapping of memory pools to their block and total size. </p>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-memory-pool-8h-source/">65</a> of file <a class="el" href="/documentation/api/-memory-pool-8h-source/">MemoryPool.h</a>.</p>
-
 </div>
 </div>
 </div>

@@ -197,9 +197,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  538</span>    {</div>
 <div class="line"><span class="lineno">  539</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  540</span> </div>
-<div class="line"><span class="lineno">  541</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node;)</div>
+<div class="line"><span class="lineno">  541</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node;)</div>
 <div class="line"><span class="lineno">  542</span>        {</div>
-<div class="line"><span class="lineno">  543</span>            <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> aux = node;</div>
+<div class="line"><span class="lineno">  543</span>            <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> aux = node;</div>
 <div class="line"><span class="lineno">  544</span> </div>
 <div class="line"><span class="lineno">  545</span>            node = node-&gt;next;</div>
 <div class="line"><span class="lineno">  546</span> </div>
@@ -211,7 +211,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  552</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::resumeInterrupts</a>();</div>
 <div class="line"><span class="lineno">  553</span>    }</div>
 <div class="line"><span class="lineno">  554</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
+<div class="ttc" id="a_virtual_circular_list_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:29</a></div></div>
 <div class="ttc" id="aclass_hardware_manager_html_a4bf64bd4af05f96de863c0aa103b6e9e"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a></div><div class="ttdeci">static void suspendInterrupts()</div><div class="ttdoc">Suspend interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:195</a></div></div>
 <div class="ttc" id="aclass_hardware_manager_html_af5ffa43804c808e35bb4a22bd25a9d10"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::resumeInterrupts</a></div><div class="ttdeci">static void resumeInterrupts()</div><div class="ttdoc">Resume interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:180</a></div></div>
 </div>
@@ -273,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  515</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> counter = 0;</div>
 <div class="line"><span class="lineno">  516</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  517</span> </div>
-<div class="line"><span class="lineno">  518</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = sourceList-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  518</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = sourceList-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  519</span> </div>
 <div class="line"><span class="lineno">  520</span>    <a class="code hl_function" href="#a89e68811bb544a64a2048cb87af667c9">VirtualList::clear</a>(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  521</span> </div>
@@ -288,7 +288,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  530</span>    }</div>
 <div class="line"><span class="lineno">  531</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a809ce9bb8d8cd5a99237124f8a32ffd2"><div class="ttname"><a href="/documentation/api/-constants-8h/">ASSERT</a></div><div class="ttdeci">#define ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:260</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="a_virtual_circular_list_8c_html_a8b58add2a6666882591e2401801615bb"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">LIST_MAX_SIZE</a></div><div class="ttdeci">#define LIST_MAX_SIZE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:23</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_a89e68811bb544a64a2048cb87af667c9"><div class="ttname"><a href="#a89e68811bb544a64a2048cb87af667c9">VirtualList::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Remove all the nodes from the list without deleting the data.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:535</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="#ac238c95ec36c31ae7e8f1c0412ba8be3">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
@@ -320,11 +320,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  561</span>    {</div>
 <div class="line"><span class="lineno">  562</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  563</span> </div>
-<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node;)</div>
+<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node;)</div>
 <div class="line"><span class="lineno">  565</span>        {</div>
 <div class="line"><span class="lineno">  566</span>            <span class="keyword">delete</span> node-&gt;data;</div>
 <div class="line"><span class="lineno">  567</span> </div>
-<div class="line"><span class="lineno">  568</span>            <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> aux = node;</div>
+<div class="line"><span class="lineno">  568</span>            <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> aux = node;</div>
 <div class="line"><span class="lineno">  569</span> </div>
 <div class="line"><span class="lineno">  570</span>            node = node-&gt;next;</div>
 <div class="line"><span class="lineno">  571</span> </div>
@@ -424,7 +424,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-virtual-list-8c-source/">90</a> of file <a class="el" href="/documentation/api/-virtual-list-8c-source/">VirtualList.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   91</span>{</div>
-<div class="line"><span class="lineno">   92</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">   92</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">   93</span>    </div>
 <div class="line"><span class="lineno">   94</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node &amp;&amp; node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a> != (<span class="keywordtype">void</span>*)data; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>);</div>
 <div class="line"><span class="lineno">   95</span> </div>
@@ -476,7 +476,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  198</span>{</div>
 <div class="line"><span class="lineno">  199</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> counter = 0;</div>
 <div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  201</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  202</span> </div>
 <div class="line"><span class="lineno">  203</span>    <span class="keywordflow">while</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node)</div>
 <div class="line"><span class="lineno">  204</span>    {</div>
@@ -518,7 +518,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-virtual-list-8c-source/">173</a> of file <a class="el" href="/documentation/api/-virtual-list-8c-source/">VirtualList.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  174</span>{</div>
-<div class="line"><span class="lineno">  175</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  175</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  176</span> </div>
 <div class="line"><span class="lineno">  177</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> counter = 0;</div>
 <div class="line"><span class="lineno">  178</span> </div>
@@ -564,7 +564,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-virtual-list-8c-source/">149</a> of file <a class="el" href="/documentation/api/-virtual-list-8c-source/">VirtualList.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  150</span>{</div>
-<div class="line"><span class="lineno">  151</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  151</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  152</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> position = 0;</div>
 <div class="line"><span class="lineno">  153</span> </div>
 <div class="line"><span class="lineno">  154</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node &amp;&amp; node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a> != (<span class="keywordtype">void</span>*)data; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>, position++);</div>
@@ -602,7 +602,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  104</span> </div>
 <div class="line"><span class="lineno">  105</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> listSize = <a class="code hl_function" href="#aeff94be006312783be69b6e77a41ae2b">VirtualList::getCount</a>(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  108</span> </div>
 <div class="line"><span class="lineno">  109</span>    <span class="comment">// If not null head</span></div>
 <div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node)</div>
@@ -669,7 +669,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-virtual-list-8c-source/">161</a> of file <a class="el" href="/documentation/api/-virtual-list-8c-source/">VirtualList.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  162</span>{</div>
-<div class="line"><span class="lineno">  163</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> currentNode = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> currentNode = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  164</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> position = 0;</div>
 <div class="line"><span class="lineno">  165</span> </div>
 <div class="line"><span class="lineno">  166</span>    <span class="keywordflow">for</span>(; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node &amp;&amp; currentNode &amp;&amp; currentNode != node; currentNode = currentNode-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>, position++);</div>
@@ -715,7 +715,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  289</span> </div>
 <div class="line"><span class="lineno">  290</span>    <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  291</span> </div>
-<div class="line"><span class="lineno">  292</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> newNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  292</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> newNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
 <div class="line"><span class="lineno">  293</span> </div>
 <div class="line"><span class="lineno">  294</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == node || node == this-&gt;<a class="code hl_variable" href="#a707cc3608ea9e2e8e006c87bf4102f1c">tail</a>)</div>
 <div class="line"><span class="lineno">  295</span>    {</div>
@@ -725,7 +725,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  299</span>    }</div>
 <div class="line"><span class="lineno">  300</span>    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  301</span>    {</div>
-<div class="line"><span class="lineno">  302</span>        newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a>(data);</div>
+<div class="line"><span class="lineno">  302</span>        newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a>(data);</div>
 <div class="line"><span class="lineno">  303</span> </div>
 <div class="line"><span class="lineno">  304</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == newNode)</div>
 <div class="line"><span class="lineno">  305</span>        {</div>
@@ -790,7 +790,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  336</span> </div>
 <div class="line"><span class="lineno">  337</span>    <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> newNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  339</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> newNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
 <div class="line"><span class="lineno">  340</span> </div>
 <div class="line"><span class="lineno">  341</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == node || node == this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>)</div>
 <div class="line"><span class="lineno">  342</span>    {</div>
@@ -800,7 +800,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  346</span>    }</div>
 <div class="line"><span class="lineno">  347</span>    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  348</span>    {</div>
-<div class="line"><span class="lineno">  349</span>        newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a>(data);</div>
+<div class="line"><span class="lineno">  349</span>        newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a>(data);</div>
 <div class="line"><span class="lineno">  350</span> </div>
 <div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == newNode)</div>
 <div class="line"><span class="lineno">  352</span>        {</div>
@@ -851,7 +851,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  417</span>    <span class="comment">// If tail isn&#39;t null</span></div>
 <div class="line"><span class="lineno">  418</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a707cc3608ea9e2e8e006c87bf4102f1c">tail</a>)</div>
 <div class="line"><span class="lineno">  419</span>    {</div>
-<div class="line"><span class="lineno">  420</span>        <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a707cc3608ea9e2e8e006c87bf4102f1c">tail</a>;</div>
+<div class="line"><span class="lineno">  420</span>        <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a707cc3608ea9e2e8e006c87bf4102f1c">tail</a>;</div>
 <div class="line"><span class="lineno">  421</span>        <span class="keywordtype">void</span>* data = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
 <div class="line"><span class="lineno">  422</span> </div>
 <div class="line"><span class="lineno">  423</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a>)</div>
@@ -904,7 +904,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  380</span>    <span class="comment">// If head isn&#39;t null</span></div>
 <div class="line"><span class="lineno">  381</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>)</div>
 <div class="line"><span class="lineno">  382</span>    {</div>
-<div class="line"><span class="lineno">  383</span>        <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  383</span>        <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
 <div class="line"><span class="lineno">  384</span>        <span class="keywordtype">void</span>* data = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">data</a>;</div>
 <div class="line"><span class="lineno">  385</span> </div>
 <div class="line"><span class="lineno">  386</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
@@ -958,7 +958,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-virtual-list-8c-source/">251</a> of file <a class="el" href="/documentation/api/-virtual-list-8c-source/">VirtualList.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  252</span>{</div>
-<div class="line"><span class="lineno">  253</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a>(data);</div>
+<div class="line"><span class="lineno">  253</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a>(data);</div>
 <div class="line"><span class="lineno">  254</span> </div>
 <div class="line"><span class="lineno">  255</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(data, <span class="stringliteral">&quot;VirtualList::pushBack: null data&quot;</span>);</div>
 <div class="line"><span class="lineno">  256</span> </div>
@@ -1012,7 +1012,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-virtual-list-8c-source/">219</a> of file <a class="el" href="/documentation/api/-virtual-list-8c-source/">VirtualList.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  220</span>{</div>
-<div class="line"><span class="lineno">  221</span>    <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a>(data);</div>
+<div class="line"><span class="lineno">  221</span>    <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> newNode = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a>(data);</div>
 <div class="line"><span class="lineno">  222</span> </div>
 <div class="line"><span class="lineno">  223</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">ASSERT</a>(data, <span class="stringliteral">&quot;VirtualList::pushFront: null data&quot;</span>);</div>
 <div class="line"><span class="lineno">  224</span> </div>
@@ -1138,12 +1138,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  481</span> </div>
 <div class="line"><span class="lineno">  482</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a> &amp;&amp; this-&gt;<a class="code hl_variable" href="#a707cc3608ea9e2e8e006c87bf4102f1c">tail</a> != this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>)</div>
 <div class="line"><span class="lineno">  483</span>    {</div>
-<div class="line"><span class="lineno">  484</span>        <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
-<div class="line"><span class="lineno">  485</span>        <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> nextNode = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
+<div class="line"><span class="lineno">  484</span>        <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#acb02e87ebf3f2af19b8f345ab02f202a">head</a>;</div>
+<div class="line"><span class="lineno">  485</span>        <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> nextNode = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
 <div class="line"><span class="lineno">  486</span> </div>
 <div class="line"><span class="lineno">  487</span>        <span class="keywordflow">do</span></div>
 <div class="line"><span class="lineno">  488</span>        {</div>
-<div class="line"><span class="lineno">  489</span>            <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> helper = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
+<div class="line"><span class="lineno">  489</span>            <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> helper = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
 <div class="line"><span class="lineno">  490</span>            node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a> = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a>;</div>
 <div class="line"><span class="lineno">  491</span>            node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a> = helper;</div>
 <div class="line"><span class="lineno">  492</span> </div>
@@ -1152,7 +1152,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  495</span>        }</div>
 <div class="line"><span class="lineno">  496</span>        <span class="keywordflow">while</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != nextNode);</div>
 <div class="line"><span class="lineno">  497</span> </div>
-<div class="line"><span class="lineno">  498</span>        <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> helper = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
+<div class="line"><span class="lineno">  498</span>        <a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> helper = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>;</div>
 <div class="line"><span class="lineno">  499</span>        node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a> = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a>;</div>
 <div class="line"><span class="lineno">  500</span>        node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">previous</a> = helper;</div>
 <div class="line"><span class="lineno">  501</span> </div>

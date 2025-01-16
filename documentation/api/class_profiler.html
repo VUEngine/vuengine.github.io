@@ -49,7 +49,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e620d65f116f83988e29334597bcb01" id="r_a5e620d65f116f83988e29334597bcb01"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e620d65f116f83988e29334597bcb01">end</a> ()</td></tr>
 <tr class="memdesc:a5e620d65f116f83988e29334597bcb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">End the current profiling cycle.  <br /></td></tr>
 
-<tr class="memitem:a639048ee640223054c4a20d9ca978d51" id="r_a639048ee640223054c4a20d9ca978d51"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a639048ee640223054c4a20d9ca978d51">lap</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> lapType, const char *<a class="el" href="/documentation/api/-v-u-engine-8h/">processName</a>)</td></tr>
+<tr class="memitem:a639048ee640223054c4a20d9ca978d51" id="r_a639048ee640223054c4a20d9ca978d51"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a639048ee640223054c4a20d9ca978d51">lap</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> lapType, const char *processName)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -57,11 +57,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:abf5f84da93b41e80feb8f2c9ede71d5f" id="r_abf5f84da93b41e80feb8f2c9ede71d5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf5f84da93b41e80feb8f2c9ede71d5f">laps</a></td></tr>
 <tr class="memdesc:abf5f84da93b41e80feb8f2c9ede71d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Laps during the current profiling cycle.  <br /></td></tr>
 
-<tr class="memitem:af4a5b19c5f44bc8a8d536de74ee55193" id="r_af4a5b19c5f44bc8a8d536de74ee55193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4a5b19c5f44bc8a8d536de74ee55193">timeProportion</a></td></tr>
+<tr class="memitem:af4a5b19c5f44bc8a8d536de74ee55193" id="r_af4a5b19c5f44bc8a8d536de74ee55193"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4a5b19c5f44bc8a8d536de74ee55193">timeProportion</a></td></tr>
 
-<tr class="memitem:ac0dde066d308a158379eda642f02d3dd" id="r_ac0dde066d308a158379eda642f02d3dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dde066d308a158379eda642f02d3dd">lastCycleTotalTime</a></td></tr>
+<tr class="memitem:ac0dde066d308a158379eda642f02d3dd" id="r_ac0dde066d308a158379eda642f02d3dd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dde066d308a158379eda642f02d3dd">lastCycleTotalTime</a></td></tr>
 
-<tr class="memitem:a117d575e9c1665df010f8d2b3df1c61c" id="r_a117d575e9c1665df010f8d2b3df1c61c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a117d575e9c1665df010f8d2b3df1c61c">totalTime</a></td></tr>
+<tr class="memitem:a117d575e9c1665df010f8d2b3df1c61c" id="r_a117d575e9c1665df010f8d2b3df1c61c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a117d575e9c1665df010f8d2b3df1c61c">totalTime</a></td></tr>
 
 <tr class="memitem:ac72c028ce487ff31be76671460debac3" id="r_ac72c028ce487ff31be76671460debac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac72c028ce487ff31be76671460debac3">interruptFlags</a></td></tr>
 
@@ -422,7 +422,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">float</a> Profiler::lastCycleTotalTime</td>
+          <td class="memname">float Profiler::lastCycleTotalTime</td>
         </tr>
       </table>
   </td>
@@ -638,7 +638,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">float</a> Profiler::timeProportion</td>
+          <td class="memname">float Profiler::timeProportion</td>
         </tr>
       </table>
   </td>
@@ -686,7 +686,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">float</a> Profiler::totalTime</td>
+          <td class="memname">float Profiler::totalTime</td>
         </tr>
       </table>
   </td>

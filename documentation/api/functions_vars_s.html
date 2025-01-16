@@ -23,6 +23,7 @@ permalink: documentation/api/functions-vars-s/
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>samples&#160;:&#160;<a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a>, <a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a></li>
+<li>saveDataManager&#160;:&#160;<a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>scale&#160;:&#160;<a class="el" href="/documentation/api/struct-affine-info/">AffineInfo</a>, <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a>, <a class="el" href="/documentation/api/class-sprite/">Sprite</a>, <a class="el" href="/documentation/api/struct-transformation/">Transformation</a></li>
 <li>scaledLength&#160;:&#160;<a class="el" href="/documentation/api/class-asterisk/">Asterisk</a></li>
 <li>scaledRadius&#160;:&#160;<a class="el" href="/documentation/api/class-sphere/">Sphere</a></li>
@@ -30,14 +31,16 @@ permalink: documentation/api/functions-vars-s/
 <li>scalingMultiplier&#160;:&#160;<a class="el" href="/documentation/api/struct-optical/">Optical</a></li>
 <li>scope&#160;:&#160;<a class="el" href="/documentation/api/struct-actor-loading-listener/">ActorLoadingListener</a>, <a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a>, <a class="el" href="/documentation/api/struct-option/">Option</a></li>
 <li>scValue&#160;:&#160;<a class="el" href="/documentation/api/struct-m-bgmap-sprite-spec/">MBgmapSpriteSpec</a></li>
+<li>seconds&#160;:&#160;<a class="el" href="/documentation/api/class-frame-rate/">FrameRate</a></li>
 <li>segment&#160;:&#160;<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a></li>
 <li>segments&#160;:&#160;<a class="el" href="/documentation/api/class-mesh/">Mesh</a>, <a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a></li>
 <li>selfDestroyWhenDone&#160;:&#160;<a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a></li>
 <li>sender&#160;:&#160;<a class="el" href="/documentation/api/class-telegram/">Telegram</a></li>
 <li>sendMessages&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
+<li>sentData&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
 <li>shared&#160;:&#160;<a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a></li>
 <li>show&#160;:&#160;<a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a></li>
-<li>size&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a></li>
+<li>size&#160;:&#160;<a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-param-table-manager/">ParamTableManager</a></li>
 <li>skipCycles&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a></li>
 <li>skipedCycles&#160;:&#160;<a class="el" href="/documentation/api/class-body/">Body</a></li>
 <li>skipFrames&#160;:&#160;<a class="el" href="/documentation/api/class-profiler/">Profiler</a></li>
@@ -46,11 +49,12 @@ permalink: documentation/api/functions-vars-s/
 <li>sortingSpriteNode&#160;:&#160;<a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a></li>
 <li>sound&#160;:&#160;<a class="el" href="/documentation/api/class-sound-test/">SoundTest</a>, <a class="el" href="/documentation/api/struct-stage-spec/">StageSpec</a></li>
 <li>soundIndex&#160;:&#160;<a class="el" href="/documentation/api/class-sound-test/">SoundTest</a></li>
-<li>sounds&#160;:&#160;<a class="el" href="/documentation/api/class-stage/">Stage</a>, <a class="el" href="/documentation/api/struct-stage-spec-1-1-assets/">StageSpec::Assets</a></li>
+<li>sounds&#160;:&#160;<a class="el" href="/documentation/api/class-sound-manager/">SoundManager</a>, <a class="el" href="/documentation/api/class-stage/">Stage</a>, <a class="el" href="/documentation/api/struct-stage-spec-1-1-assets/">StageSpec::Assets</a></li>
 <li>soundSpec&#160;:&#160;<a class="el" href="/documentation/api/class-sound/">Sound</a></li>
 <li>soundTracks&#160;:&#160;<a class="el" href="/documentation/api/class-sound/">Sound</a></li>
 <li>soundTrackSpec&#160;:&#160;<a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a></li>
 <li>soundTrackSpecs&#160;:&#160;<a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a></li>
+<li>spaceAddress&#160;:&#160;<a class="el" href="/documentation/api/class-s-r-a-m-manager/">SRAMManager</a></li>
 <li>spacer&#160;:&#160;<a class="el" href="/documentation/api/struct-affine-entry/">AffineEntry</a>, <a class="el" href="/documentation/api/struct-world-attributes/">WorldAttributes</a></li>
 <li>spacer1&#160;:&#160;<a class="el" href="/documentation/api/struct-v-s-u-sound-source/">VSUSoundSource</a></li>
 <li>spacer2&#160;:&#160;<a class="el" href="/documentation/api/struct-v-s-u-sound-source/">VSUSoundSource</a></li>
@@ -82,11 +86,13 @@ permalink: documentation/api/functions-vars-s/
 <li>started&#160;:&#160;<a class="el" href="/documentation/api/class-profiler/">Profiler</a></li>
 <li>startingANewEffect&#160;:&#160;<a class="el" href="/documentation/api/class-camera-effect-manager/">CameraEffectManager</a></li>
 <li>state&#160;:&#160;<a class="el" href="/documentation/api/class-animation-inspector/">AnimationInspector</a>, <a class="el" href="/documentation/api/class-sound/">Sound</a>, <a class="el" href="/documentation/api/class-stage-editor/">StageEditor</a></li>
+<li>stateMachine&#160;:&#160;<a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 <li>stateStack&#160;:&#160;<a class="el" href="/documentation/api/class-state-machine/">StateMachine</a></li>
-<li>status&#160;:&#160;<a class="el" href="/documentation/api/class-texture/">Texture</a></li>
+<li>status&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a>, <a class="el" href="/documentation/api/class-texture/">Texture</a></li>
 <li>stop&#160;:&#160;<a class="el" href="/documentation/api/struct-rumble-effect-spec/">RumbleEffectSpec</a></li>
 <li>stopDrawing&#160;:&#160;<a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a></li>
 <li>stopRendering&#160;:&#160;<a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a></li>
+<li>stopwatchs&#160;:&#160;<a class="el" href="/documentation/api/class-stopwatch-manager/">StopwatchManager</a></li>
 <li>stream&#160;:&#160;<a class="el" href="/documentation/api/class-game-state/">GameState</a></li>
 <li>streaming&#160;:&#160;<a class="el" href="/documentation/api/struct-stage-spec/">StageSpec</a></li>
 <li>streamingAmplitude&#160;:&#160;<a class="el" href="/documentation/api/class-stage/">Stage</a>, <a class="el" href="/documentation/api/struct-stage-spec-1-1-streaming/">StageSpec::Streaming</a></li>
@@ -106,6 +112,9 @@ permalink: documentation/api/functions-vars-s/
 <li>SxMOD&#160;:&#160;<a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a>, <a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a></li>
 <li>SxRAM&#160;:&#160;<a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a>, <a class="el" href="/documentation/api/struct-v-s-u-sound-source/">VSUSoundSource</a>, <a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a></li>
 <li>SxSWP&#160;:&#160;<a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a>, <a class="el" href="/documentation/api/struct-v-s-u-sound-source/">VSUSoundSource</a>, <a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a></li>
+<li>syncReceivedByte&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
+<li>syncSentByte&#160;:&#160;<a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></li>
+<li>syncToVIP&#160;:&#160;<a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a></li>
 </ul>
 </div>
 

@@ -1104,184 +1104,178 @@ permalink: documentation/api/-direct-draw-8c-source/
 <div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span> </div>
 <div class="foldopen" id="foldopen01081" data-start="{" data-end="}">
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1081</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::reset</a>()</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1081</a></span>secure <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::reset</a>()</div>
 <div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>{</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    <a class="code hl_class" href="/documentation/api/class-direct-draw/">DirectDraw</a> directDraw = DirectDraw::getInstance();</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS</a>;</div>
 <div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span> </div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>    directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS</a>;</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>    <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::setFrustum</a>((<a class="code hl_struct" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a>)</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>    {</div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>        0, 0, 0, <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a> - 1, <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a> - 1, 8191</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    });</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>}</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>    <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::setFrustum</a>(<span class="keyword">this</span>, (<a class="code hl_struct" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a>)</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>    {</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>        0, 0, 0, <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a> - 1, <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a> - 1, 8191</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>    });</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>}</div>
 </div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span> </div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
 <div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span> </div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
-<div class="foldopen" id="foldopen01095" data-start="{" data-end="}">
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1095</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::preparteToDraw</a>()</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>{</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>    <a class="code hl_class" href="/documentation/api/class-direct-draw/">DirectDraw</a> directDraw = DirectDraw::getInstance();</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span> </div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span><span class="preprocessor">#ifdef __SHOW_DIRECT_DRAWING_PROFILING</span></div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> counter = 0;</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span> </div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-config-8h/">__TARGET_FPS</a> &lt;= counter++)</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>    {</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>        <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::print</a>(1, 1);</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>        counter = 0;</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>    }</div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span><span class="preprocessor">#endif</span></div>
+<div class="foldopen" id="foldopen01093" data-start="{" data-end="}">
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1093</a></span>secure <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::preparteToDraw</a>()</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>{</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span><span class="preprocessor">#ifdef __SHOW_DIRECT_DRAWING_PROFILING</span></div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> counter = 0;</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span> </div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-config-8h/">__TARGET_FPS</a> &lt;= counter++)</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    {</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>        <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::print</a>(1, 1);</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>        counter = 0;</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    }</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span> </div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter &lt;= this-&gt;</a><a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>)</div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>    {</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>        this-&gt;maximumPixelsToDraw += <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_RECOVERY</a>;</div>
 <div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span> </div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>    <span class="keywordflow">if</span>(directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> &lt;= directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>)</div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>    {</div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>        directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> += <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_RECOVERY</a>;</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span> </div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS &lt; directDraw-&gt;</a><a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>)</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>        {</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>            directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS</a>;</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>        }</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>    }</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span> </div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>    directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> = 0;</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>}</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS &lt; this-&gt;</a><a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>)</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>        {</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>            this-&gt;maximumPixelsToDraw = <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS</a>;</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>        }</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>    }</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span> </div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> = 0;</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>}</div>
 </div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span> </div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span> </div>
-<div class="foldopen" id="foldopen01124" data-start="{" data-end="}">
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1124</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::setFrustum</a>(<a class="code hl_struct" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a> frustum)</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>{</div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> &gt;= <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a>)</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>    {</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> = <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a> - 1;</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>    }</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span> </div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a> &gt;= <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a>)</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    {</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a> = <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a> - 1;</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>    }</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span> </div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    <span class="comment">// 9: 2&#39;s power equal to the math type fixed_t</span></div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a> &gt; (1 &lt;&lt; (9 + <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_PER_METER_2_POWER</a>)))</div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    {</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a> = 1;</div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>    }</div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span> </div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x0</a> &gt; frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a>)</div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    {</div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x0</a> = frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> - 1;</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>    }</div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span> </div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y0</a> &gt; frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a>)</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    {</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y0</a> = frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a> - 1;</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>    }</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span> </div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z0</a> &gt; frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a>)</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    {</div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z0</a> = frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a> - 1;</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    }</div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span> </div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>    _frustum = frustum;</div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>    _frustumWidth = _frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> &gt; _frustum.x0 ? _frustum.x1 - _frustum.x0 : _frustum.x0 - _frustum.x1;</div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>    _frustumHeight = _frustum.y1 &gt; _frustum.y0 ? _frustum.y1 - _frustum.y0 : _frustum.y0 - _frustum.y1;</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>    _frustumDepth = _frustum.z1 &gt; _frustum.z0 ? _frustum.z1 - _frustum.z0 : _frustum.z0 - _frustum.z1;</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span> </div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    <a class="code hl_variable" href="/documentation/api/-direct-draw-8c/">_frustumWidthExtended</a> = _frustumWidth &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER;</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    <a class="code hl_variable" href="/documentation/api/-direct-draw-8c/">_frustumHeightExtended</a> = _frustumHeight &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER;</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span> </div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>    _frustumFixedPoint = (<a class="code hl_struct" href="/documentation/api/struct-custom-camera-frustum/">CustomCameraFrustum</a>)</div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>    {</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        __I_TO_FIXED_EXT(_frustum.x0), __I_TO_FIXED_EXT(_frustum.y0), __I_TO_FIXED_EXT(_frustum.z0),</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>        __I_TO_FIXED_EXT(_frustum.x1), __I_TO_FIXED_EXT(_frustum.y1), __I_TO_FIXED_EXT(_frustum.z1),</div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>    };</div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>}</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span> </div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span> </div>
+<div class="foldopen" id="foldopen01120" data-start="{" data-end="}">
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1120</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::setFrustum</a>(<a class="code hl_struct" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a> frustum)</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>{</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> &gt;= <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a>)</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>    {</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> = <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_WIDTH</a> - 1;</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>    }</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span> </div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a> &gt;= <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a>)</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>    {</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a> = <a class="code hl_define" href="/documentation/api/-config-8h/">__SCREEN_HEIGHT</a> - 1;</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    }</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    <span class="comment">// 9: 2&#39;s power equal to the math type fixed_t</span></div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a> &gt; (1 &lt;&lt; (9 + <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_PER_METER_2_POWER</a>)))</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>    {</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a> = 1;</div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    }</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span> </div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x0</a> &gt; frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a>)</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>    {</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x0</a> = frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> - 1;</div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>    }</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span> </div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y0</a> &gt; frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a>)</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>    {</div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y0</a> = frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">y1</a> - 1;</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    }</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span> </div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <span class="keywordflow">if</span>(frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z0</a> &gt; frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a>)</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>    {</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>        frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z0</a> = frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">z1</a> - 1;</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>    }</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span> </div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    _frustum = frustum;</div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    _frustumWidth = _frustum.<a class="code hl_variable" href="/documentation/api/struct-camera-frustum/">x1</a> &gt; _frustum.x0 ? _frustum.x1 - _frustum.x0 : _frustum.x0 - _frustum.x1;</div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    _frustumHeight = _frustum.y1 &gt; _frustum.y0 ? _frustum.y1 - _frustum.y0 : _frustum.y0 - _frustum.y1;</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    _frustumDepth = _frustum.z1 &gt; _frustum.z0 ? _frustum.z1 - _frustum.z0 : _frustum.z0 - _frustum.z1;</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span> </div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>    <a class="code hl_variable" href="/documentation/api/-direct-draw-8c/">_frustumWidthExtended</a> = _frustumWidth &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER;</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>    <a class="code hl_variable" href="/documentation/api/-direct-draw-8c/">_frustumHeightExtended</a> = _frustumHeight &lt;&lt; __DIRECT_DRAW_FRUSTUM_EXTENSION_POWER;</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span> </div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    _frustumFixedPoint = (<a class="code hl_struct" href="/documentation/api/struct-custom-camera-frustum/">CustomCameraFrustum</a>)</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    {</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>        __I_TO_FIXED_EXT(_frustum.x0), __I_TO_FIXED_EXT(_frustum.y0), __I_TO_FIXED_EXT(_frustum.z0),</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>        __I_TO_FIXED_EXT(_frustum.x1), __I_TO_FIXED_EXT(_frustum.y1), __I_TO_FIXED_EXT(_frustum.z1),</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>    };</div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>}</div>
 </div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span> </div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span> </div>
-<div class="foldopen" id="foldopen01174" data-start="{" data-end="}">
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1174</a></span><span class="keyword">static</span> <a class="code hl_struct" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::getFrustum</a>()</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>{</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>    <span class="keywordflow">return</span> _frustum;</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>}</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span> </div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span> </div>
+<div class="foldopen" id="foldopen01170" data-start="{" data-end="}">
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1170</a></span><a class="code hl_struct" href="/documentation/api/struct-camera-frustum/">CameraFrustum</a> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::getFrustum</a>()</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>{</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>    <span class="keywordflow">return</span> _frustum;</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>}</div>
 </div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span> </div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span><span class="preprocessor">#ifndef __SHIPPING</span></div>
-<div class="foldopen" id="foldopen01182" data-start="{" data-end="}">
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1182</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::print</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> y)</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>{</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    <a class="code hl_class" href="/documentation/api/class-direct-draw/">DirectDraw</a> directDraw = DirectDraw::getInstance();</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span> </div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>    Printing::text(<span class="stringliteral">&quot;DIRECT DRAW&quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>    y++;</div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>    Printing::text(<span class="stringliteral">&quot;Drawn pixels:      &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>    Printing::int32(directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a>, x + 14, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>    Printing::text(<span class="stringliteral">&quot;Max. pixels:       &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>    Printing::int32(directDraw-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>, x + 14, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>}</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span> </div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span> </div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span><span class="preprocessor">#ifndef __SHIPPING</span></div>
+<div class="foldopen" id="foldopen01178" data-start="{" data-end="}">
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"><a class="line" href="/documentation/api/class-direct-draw/"> 1178</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::print</a>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> x, <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> y)</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>{</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;DIRECT DRAW&quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    y++;</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Drawn pixels:      &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a>, x + 14, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Max. pixels:       &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>, x + 14, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>}</div>
 </div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span> </div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span> </div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span><span class="comment">// CLASS&#39; PRIVATE METHODS</span></div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
 <div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span> </div>
 <div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
 <div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span> </div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span><span class="comment">// CLASS&#39; PRIVATE METHODS</span></div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span> </div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span> </div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-object/">DirectDraw::constructor</a>()</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>{</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>    Base::constructor();</div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span> </div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> = 0;</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = 0;</div>
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span> </div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>    <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::reset</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span> </div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    VIPManager::registerEventListener</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    (</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>        ListenerObject::safeCast(<span class="keyword">this</span>), (EventListener)DirectDraw::onVIPManagerGAMESTARTDuringXPEND, </div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>        <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventVIPManagerGAMESTARTDuringXPEND</a></div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>    );</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>}</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span> </div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span> </div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span><span class="keywordtype">void</span> DirectDraw::destructor()</div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>{</div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    VIPManager::unregisterEventListener</div>
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    (</div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>        ListenerObject::safeCast(<span class="keyword">this</span>), (EventListener)DirectDraw::onVIPManagerGAMESTARTDuringXPEND, </div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventVIPManagerGAMESTARTDuringXPEND</a></div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    );</div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span> </div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>    <span class="comment">// Allow a new construct</span></div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    Base::destructor();</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>}</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-object/">DirectDraw::constructor</a>()</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>{</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>    Base::constructor();</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span> </div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> = 0;</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = 0;</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span> </div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>    <a class="code hl_function" href="/documentation/api/class-direct-draw/">DirectDraw::reset</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>    <a class="code hl_function" href="/documentation/api/class-listener-object/">VIPManager::addEventListener</a></div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    (</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>        VIPManager::getInstance(), ListenerObject::safeCast(<span class="keyword">this</span>), (EventListener)DirectDraw::onVIPManagerGAMESTARTDuringXPEND, </div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>        <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventVIPManagerGAMESTARTDuringXPEND</a></div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>    );</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>}</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span> </div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span> </div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span><span class="keywordtype">void</span> DirectDraw::destructor()</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>{</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    <a class="code hl_function" href="/documentation/api/class-listener-object/">VIPManager::removeEventListener</a></div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    (</div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>        VIPManager::getInstance(), ListenerObject::safeCast(<span class="keyword">this</span>), (EventListener)DirectDraw::onVIPManagerGAMESTARTDuringXPEND, </div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>        <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventVIPManagerGAMESTARTDuringXPEND</a></div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>    );</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span> </div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    <span class="comment">// Allow a new construct</span></div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>    Base::destructor();</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>}</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span> </div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span> </div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span><span class="keywordtype">bool</span> DirectDraw::onVIPManagerGAMESTARTDuringXPEND(<a class="code hl_class" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer <a class="code hl_function" href="/documentation/api/-debug-font-spec-8c/">__attribute__</a> ((unused)))</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>{</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> - <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_OVERHEAD</a>;</div>
 <div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span> </div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span> </div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span><span class="keywordtype">bool</span> DirectDraw::onVIPManagerGAMESTARTDuringXPEND(<a class="code hl_class" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer <a class="code hl_function" href="/documentation/api/-debug-font-spec-8c/">__attribute__</a> ((unused)))</div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>{</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">drawnPixelsCounter</a> - <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MAXIMUM_NUMBER_OF_PIXELS_OVERHEAD</a>;</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span> </div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS</a> &gt; this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>)</div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>    {</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS</a>;</div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>    }</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span> </div>
-<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>}</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span> </div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS</a> &gt; this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a>)</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>    {</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-direct-draw/">maximumPixelsToDraw</a> = <a class="code hl_define" href="/documentation/api/-direct-draw-8c/">__DIRECT_DRAW_MINIMUM_NUMBER_OF_PIXELS</a>;</div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    }</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span> </div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>}</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span> </div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span><span class="comment">//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</span></div>
 <div class="ttc" id="a_camera_8h_html"><div class="ttname"><a href="/documentation/api/-camera-8h/">Camera.h</a></div></div>
 <div class="ttc" id="a_config_8h_html_a2599ac0251334176b9b65c4cda7bfb22"><div class="ttname"><a href="/documentation/api/-config-8h/">__SCREEN_DEPTH</a></div><div class="ttdeci">#define __SCREEN_DEPTH</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:102</a></div></div>
 <div class="ttc" id="a_config_8h_html_a7b5d856192e1cc785ac1db005e4ebb9b"><div class="ttname"><a href="/documentation/api/-config-8h/">__TARGET_FPS</a></div><div class="ttdeci">#define __TARGET_FPS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:137</a></div></div>
@@ -1315,31 +1309,35 @@ permalink: documentation/api/-direct-draw-8c-source/
 <div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
 <div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
 <div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="a_types_8h_html_a3b5675e00af046980df12ddb73b0aaca"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_ext_t</a></div><div class="ttdeci">#define fixed_ext_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:47</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="a_types_8h_html_a47bd55d8c6a9b45db1ac0957cee2a82d"><div class="ttname"><a href="/documentation/api/-types-8h/">BYTE</a></div><div class="ttdeci">uint8 BYTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:28</a></div></div>
 <div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
 <div class="ttc" id="a_v_i_p_manager_8h_html"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">VIPManager.h</a></div></div>
 <div class="ttc" id="a_v_i_p_manager_8h_html_a649c917cde8e0897109833ca32497867"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__RIGHT_FRAME_BUFFER_0</a></div><div class="ttdeci">#define __RIGHT_FRAME_BUFFER_0</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:99</a></div></div>
 <div class="ttc" id="a_v_i_p_manager_8h_html_ac62ba73215d959cd30bb4b48c2a49b36"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__LEFT_FRAME_BUFFER_0</a></div><div class="ttdeci">#define __LEFT_FRAME_BUFFER_0</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:97</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8h-source/">DirectDraw.h:35</a></div></div>
-<div class="ttc" id="aclass_direct_draw_html_a0cfb41af01213b94ec86aba383d1d749"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::setFrustum</a></div><div class="ttdeci">static void setFrustum(CameraFrustum frustum)</div><div class="ttdef"><b>Definition</b> <a href="#l01124">DirectDraw.c:1124</a></div></div>
-<div class="ttc" id="aclass_direct_draw_html_a0ef257801e2e35633eadc12c3315e226"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdoc">Reset the manager&#39;s state.</div><div class="ttdef"><b>Definition</b> <a href="#l01081">DirectDraw.c:1081</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_a22a8d72e3b7272262978df2686ababac"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawnPixelsCounter</a></div><div class="ttdeci">uint16 drawnPixelsCounter</div><div class="ttdoc">Number of pixels drawn during the current cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8h-source/">DirectDraw.h:39</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_a2b2c256b431bc69a807433ecb0195280"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawCross</a></div><div class="ttdeci">static bool drawCross(PixelVector center, int16 length, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00751">DirectDraw.c:751</a></div></div>
-<div class="ttc" id="aclass_direct_draw_html_a34d30ca1d8cf61e11d73970d8b674d40"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::preparteToDraw</a></div><div class="ttdeci">static void preparteToDraw()</div><div class="ttdoc">Prepare the manager to start drawing to the frame buffers.</div><div class="ttdef"><b>Definition</b> <a href="#l01095">DirectDraw.c:1095</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_a45b87dc83e227b32b8420aedda6f3af1"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::maximumPixelsToDraw</a></div><div class="ttdeci">uint16 maximumPixelsToDraw</div><div class="ttdoc">Maximum number of pixels to draw during each cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-direct-draw-8h-source/">DirectDraw.h:42</a></div></div>
-<div class="ttc" id="aclass_direct_draw_html_a4abc9243947ce3c961574539681d2d24"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::getFrustum</a></div><div class="ttdeci">static CameraFrustum getFrustum()</div><div class="ttdef"><b>Definition</b> <a href="#l01174">DirectDraw.c:1174</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_a579ab6a6791060fe2a318ee42a6d7117"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::print</a></div><div class="ttdeci">void print(int16 x, int16 y)</div><div class="ttdef"><b>Definition</b> <a href="#l01178">DirectDraw.c:1178</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_a647207c75bb4171fd18b064ea1000dd9"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawCircle</a></div><div class="ttdeci">static bool drawCircle(PixelVector center, int16 radius, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00533">DirectDraw.c:533</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_a8530bad820e9f63604e8abb2be4329f2"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawSolidRhumbus</a></div><div class="ttdeci">static bool drawSolidRhumbus(PixelVector center, int16 radius, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00842">DirectDraw.c:842</a></div></div>
-<div class="ttc" id="aclass_direct_draw_html_a952891a3924d4306d874f1e19dc668a3"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::print</a></div><div class="ttdeci">static void print(int16 x, int16 y)</div><div class="ttdef"><b>Definition</b> <a href="#l01182">DirectDraw.c:1182</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_a9418296b881bdfe6d4a1109cbb68bd37"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the manager&#39;s state.</div><div class="ttdef"><b>Definition</b> <a href="#l01081">DirectDraw.c:1081</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_a99d2debc4ecdcea55e0fa424a88710eb"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::getFrustum</a></div><div class="ttdeci">CameraFrustum getFrustum()</div><div class="ttdef"><b>Definition</b> <a href="#l01170">DirectDraw.c:1170</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_aa2dcce5631c996722a7833280a5a86bf"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawLine</a></div><div class="ttdeci">static bool drawLine(PixelVector fromPoint, PixelVector toPoint, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00294">DirectDraw.c:294</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_ab91553f26860fbb3c63add2db1915476"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawX</a></div><div class="ttdeci">static bool drawX(PixelVector center, int16 length, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00695">DirectDraw.c:695</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_abb874e9221ce406de7a85bb9fbf1f0b1"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::setFrustum</a></div><div class="ttdeci">void setFrustum(CameraFrustum frustum)</div><div class="ttdef"><b>Definition</b> <a href="#l01120">DirectDraw.c:1120</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_aca093d3845c535086cd8d9a89d8bb475"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawSolidCircle</a></div><div class="ttdeci">static bool drawSolidCircle(PixelVector center, int16 radius, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00800">DirectDraw.c:800</a></div></div>
+<div class="ttc" id="aclass_direct_draw_html_ad71feca1edd01ad3b9c7e827bcd0db4b"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::preparteToDraw</a></div><div class="ttdeci">void preparteToDraw()</div><div class="ttdoc">Prepare the manager to start drawing to the frame buffers.</div><div class="ttdef"><b>Definition</b> <a href="#l01093">DirectDraw.c:1093</a></div></div>
 <div class="ttc" id="aclass_direct_draw_html_afc8edefe5659fb5af84e386c253486e2"><div class="ttname"><a href="/documentation/api/class-direct-draw/">DirectDraw::drawPoint</a></div><div class="ttdeci">static bool drawPoint(PixelVector point, int32 color, uint8 bufferIndex, bool interlaced)</div><div class="ttdef"><b>Definition</b> <a href="#l00268">DirectDraw.c:268</a></div></div>
 <div class="ttc" id="aclass_listener_object_html"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:62</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa44d2f3fc00a88658f64cac1c02b47f7"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::addEventListener</a></div><div class="ttdeci">void addEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:64</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_ace4fdcff88c182d1a52be1f479f77ca5"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::removeEventListener</a></div><div class="ttdeci">void removeEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:100</a></div></div>
 <div class="ttc" id="aclass_math_html_a290ca0b8730a528c503199932101008f"><div class="ttname"><a href="/documentation/api/class-math/">Math::squareRoot</a></div><div class="ttdeci">static float squareRoot(float radicand)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:467</a></div></div>
 <div class="ttc" id="aclass_object_html_a3a3ea4d86b4b946d57464f65a6a42362"><div class="ttname"><a href="/documentation/api/class-object/">Object::constructor</a></div><div class="ttdeci">void constructor()</div><div class="ttdoc">Class&#39; constructor.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8c-source/">Object.c:188</a></div></div>
+<div class="ttc" id="aclass_printing_html_a1e43d7e70531d74fe03bea85e677cb29"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::int32</a></div><div class="ttdeci">static void int32(int32 value, uint8 x, uint8 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:299</a></div></div>
+<div class="ttc" id="aclass_printing_html_a92b0b91f848f46ae5305603a077489c8"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::text</a></div><div class="ttdeci">static void text(const char *string, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:288</a></div></div>
 <div class="ttc" id="astruct_camera_frustum_html"><div class="ttname"><a href="/documentation/api/struct-camera-frustum/">CameraFrustum</a></div><div class="ttdoc">Camera frustum.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:347</a></div></div>
 <div class="ttc" id="astruct_camera_frustum_html_a0fdd1218eb32adea74ad334982af39f9"><div class="ttname"><a href="/documentation/api/struct-camera-frustum/">CameraFrustum::z0</a></div><div class="ttdeci">int16 z0</div><div class="ttdoc">z0 frustum</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:353</a></div></div>
 <div class="ttc" id="astruct_camera_frustum_html_a11f669257d3c1a56da5b5b78de083cc5"><div class="ttname"><a href="/documentation/api/struct-camera-frustum/">CameraFrustum::y1</a></div><div class="ttdeci">int16 y1</div><div class="ttdoc">y1 frustum</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:357</a></div></div>

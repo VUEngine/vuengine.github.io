@@ -39,6 +39,8 @@ Classes</h2></td></tr>
 
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a></td></tr>
 
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-v-s-u-manager/">VSUManager</a></td></tr>
+
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -52,9 +54,11 @@ Macros</h2></td></tr>
 
 <tr class="memitem:a98bfab9f54093a53b51dac87ef87be3a" id="r_a98bfab9f54093a53b51dac87ef87be3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98bfab9f54093a53b51dac87ef87be3a">__TOTAL_NOISE_CHANNELS</a>&#160;&#160;&#160;1</td></tr>
 
-<tr class="memitem:ad37bbb93828cd3b9bb066b440ada28b0" id="r_ad37bbb93828cd3b9bb066b440ada28b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad37bbb93828cd3b9bb066b440ada28b0">__TOTAL_NORMAL_CHANNELS</a>&#160;&#160;&#160;	(<a class="el" href="#a0bb947cda3d3472700a654d8e6b442a0">__TOTAL_SOUND_SOURCES</a> - <a class="el" href="#a1cf1e5461ff02bfe46eb97c2f10353bc">__TOTAL_MODULATION_CHANNELS</a> - <a class="el" href="#a98bfab9f54093a53b51dac87ef87be3a">__TOTAL_NOISE_CHANNELS</a>)</td></tr>
+<tr class="memitem:ad37bbb93828cd3b9bb066b440ada28b0" id="r_ad37bbb93828cd3b9bb066b440ada28b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad37bbb93828cd3b9bb066b440ada28b0">__TOTAL_NORMAL_CHANNELS</a>&#160;&#160;&#160;(<a class="el" href="#a0bb947cda3d3472700a654d8e6b442a0">__TOTAL_SOUND_SOURCES</a> - <a class="el" href="#a1cf1e5461ff02bfe46eb97c2f10353bc">__TOTAL_MODULATION_CHANNELS</a> - <a class="el" href="#a98bfab9f54093a53b51dac87ef87be3a">__TOTAL_NOISE_CHANNELS</a>)</td></tr>
 
 <tr class="memitem:a620e19eb3d1a168a2f7f6d08c5f59fa0" id="r_a620e19eb3d1a168a2f7f6d08c5f59fa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a620e19eb3d1a168a2f7f6d08c5f59fa0">__TOTAL_POTENTIAL_NORMAL_CHANNELS</a>&#160;&#160;&#160;(<a class="el" href="#ad37bbb93828cd3b9bb066b440ada28b0">__TOTAL_NORMAL_CHANNELS</a> + <a class="el" href="#a1cf1e5461ff02bfe46eb97c2f10353bc">__TOTAL_MODULATION_CHANNELS</a>)</td></tr>
+
+<tr class="memitem:a4c163708785e8d1307953505e1f9b21d" id="r_a4c163708785e8d1307953505e1f9b21d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c163708785e8d1307953505e1f9b21d">__MAXIMUM_VOLUME</a>&#160;&#160;&#160;0xF</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -66,52 +70,45 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a56ad989930039d3bbcf603cbfb05152d" id="r_a56ad989930039d3bbcf603cbfb05152d"><td class="memItemLeft" align="right" valign="top">typedef struct VSUSoundSourceConfiguration&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56ad989930039d3bbcf603cbfb05152d">VSUSoundSourceConfiguration</a></td></tr>
 
 </table><table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a376d7d3bcdf251e4dea69cdae5825a1c" id="r_a376d7d3bcdf251e4dea69cdae5825a1c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a376d7d3bcdf251e4dea69cdae5825a1c">VSUSoundSourceTypes</a> { <a class="el" href="#a376d7d3bcdf251e4dea69cdae5825a1ca263d52f61e8c17317ab6b41abf898c23">kSoundSourceNormal</a> = (1 &lt;&lt; 0)
-, <a class="el" href="#a376d7d3bcdf251e4dea69cdae5825a1ca1b2fcc13b476868cd60179eec02e1d23">kSoundSourceModulation</a> = (1 &lt;&lt; 1)
-, <a class="el" href="#a376d7d3bcdf251e4dea69cdae5825a1ca0592f8ccb26b726179b7a2377a604a7e">kSoundSourceNoise</a> = (1 &lt;&lt; 2)
- }</td></tr>
-
-<tr class="memitem:a6ce33b77540e7b6ff4014f0a5b8d526f" id="r_a6ce33b77540e7b6ff4014f0a5b8d526f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ce33b77540e7b6ff4014f0a5b8d526f">VSUPlaybackModes</a> { <a class="el" href="#a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8">kPlaybackNative</a> = 0
-, <a class="el" href="#a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf">kPlaybackPCM</a>
- }</td></tr>
-
-</table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae0d8764867730e186d735dd96ba5b75c" id="r_ae0d8764867730e186d735dd96ba5b75c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0d8764867730e186d735dd96ba5b75c">playSounds</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a>)</td></tr>
+<tr class="memitem:af8863cc8c2e53292842a60fced564d6d" id="r_af8863cc8c2e53292842a60fced564d6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-v-s-u-manager/">VSUManager</a> <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8863cc8c2e53292842a60fced564d6d">applyPCMSampleToSoundSource</a> (<a class="el" href="/documentation/api/-types-8h/">int8</a> sample)</td></tr>
 
-<tr class="memitem:a9d8cd2b3faa6578e2f43f2df8284614a" id="r_a9d8cd2b3faa6578e2f43f2df8284614a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d8cd2b3faa6578e2f43f2df8284614a">applySoundSourceConfiguration</a> (const <a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a> *vsuSoundSourceConfiguration)</td></tr>
+<tr class="memitem:ad6c3dccbc79075b2c2713feaef1d9f29" id="r_ad6c3dccbc79075b2c2713feaef1d9f29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6c3dccbc79075b2c2713feaef1d9f29">playSounds</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> elapsedMicroseconds)</td></tr>
 
-<tr class="memitem:a5420a280aadf15ff3413e5c794d7d4a6" id="r_a5420a280aadf15ff3413e5c794d7d4a6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5420a280aadf15ff3413e5c794d7d4a6">applyPCMSampleToSoundSource</a> (<a class="el" href="/documentation/api/-types-8h/">int8</a> sample)</td></tr>
+<tr class="memitem:a6145690d6b582d48368078fee6b33b07" id="r_a6145690d6b582d48368078fee6b33b07"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6145690d6b582d48368078fee6b33b07">applySoundSourceConfiguration</a> (const <a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a> *vsuSoundSourceConfiguration)</td></tr>
 
-<tr class="memitem:ab9d3f06dc4ef871fad50465095b5ea32" id="r_ab9d3f06dc4ef871fad50465095b5ea32"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d3f06dc4ef871fad50465095b5ea32">reset</a> ()</td></tr>
-<tr class="memdesc:ab9d3f06dc4ef871fad50465095b5ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+<tr class="memitem:a2877dca6d852fc2789c22c001938ca95" id="r_a2877dca6d852fc2789c22c001938ca95"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2877dca6d852fc2789c22c001938ca95">stopSoundSourcesUsedBy</a> (<a class="el" href="/documentation/api/class-object/">Object</a> requester)</td></tr>
 
-<tr class="memitem:a123360ee4543edd7f6bf3dc5a176a947" id="r_a123360ee4543edd7f6bf3dc5a176a947"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123360ee4543edd7f6bf3dc5a176a947">setMode</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#ab5a7525af08c5157ecb87781c8f6fda6">playbackMode</a>)</td></tr>
+<tr class="memitem:af849b5e8218454a22070734e98a13356" id="r_af849b5e8218454a22070734e98a13356"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af849b5e8218454a22070734e98a13356">getMode</a> ()</td></tr>
 
-<tr class="memitem:aa8637a1aae95dd486fb201d7ad124364" id="r_aa8637a1aae95dd486fb201d7ad124364"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8637a1aae95dd486fb201d7ad124364">update</a> ()</td></tr>
-<tr class="memdesc:aa8637a1aae95dd486fb201d7ad124364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the manager.  <br /></td></tr>
+<tr class="memitem:aeba91ef466cf0126e90c34ca89dc2f84" id="r_aeba91ef466cf0126e90c34ca89dc2f84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeba91ef466cf0126e90c34ca89dc2f84">reset</a> ()</td></tr>
+<tr class="memdesc:aeba91ef466cf0126e90c34ca89dc2f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
 
-<tr class="memitem:afd0fca1ebb9d3412a4f7b81ffdd99aa5" id="r_afd0fca1ebb9d3412a4f7b81ffdd99aa5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd0fca1ebb9d3412a4f7b81ffdd99aa5">stopAllSounds</a> ()</td></tr>
-<tr class="memdesc:afd0fca1ebb9d3412a4f7b81ffdd99aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all sound sources.  <br /></td></tr>
+<tr class="memitem:a118bf8f62e721c9d4cd8980c6b7ab3ef" id="r_a118bf8f62e721c9d4cd8980c6b7ab3ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a118bf8f62e721c9d4cd8980c6b7ab3ef">setMode</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#ab5a7525af08c5157ecb87781c8f6fda6">playbackMode</a>)</td></tr>
 
-<tr class="memitem:a7f46ce18a0dcbd5f18b04a1116eaa37d" id="r_a7f46ce18a0dcbd5f18b04a1116eaa37d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f46ce18a0dcbd5f18b04a1116eaa37d">enableQueue</a> ()</td></tr>
-<tr class="memdesc:a7f46ce18a0dcbd5f18b04a1116eaa37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable queueing petitions to play sounds.  <br /></td></tr>
+<tr class="memitem:a7cf7a8f6e80e3af2bac8c267b888b9f7" id="r_a7cf7a8f6e80e3af2bac8c267b888b9f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cf7a8f6e80e3af2bac8c267b888b9f7">update</a> ()</td></tr>
+<tr class="memdesc:a7cf7a8f6e80e3af2bac8c267b888b9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the manager.  <br /></td></tr>
 
-<tr class="memitem:a3ab276287238fdb03add66038b8a4017" id="r_a3ab276287238fdb03add66038b8a4017"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ab276287238fdb03add66038b8a4017">disableQueue</a> ()</td></tr>
+<tr class="memitem:ae1fd57713dde2adbdbfaadec2958b738" id="r_ae1fd57713dde2adbdbfaadec2958b738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1fd57713dde2adbdbfaadec2958b738">stopAllSounds</a> ()</td></tr>
+<tr class="memdesc:ae1fd57713dde2adbdbfaadec2958b738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all sound sources.  <br /></td></tr>
 
-<tr class="memitem:aa94e45017bae233a8b757ea066d1dc21" id="r_aa94e45017bae233a8b757ea066d1dc21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94e45017bae233a8b757ea066d1dc21">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
-<tr class="memdesc:aa94e45017bae233a8b757ea066d1dc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the manager's status.  <br /></td></tr>
+<tr class="memitem:a5206486858ddb5afcf5c3b4fab9a473d" id="r_a5206486858ddb5afcf5c3b4fab9a473d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5206486858ddb5afcf5c3b4fab9a473d">enableQueue</a> ()</td></tr>
+<tr class="memdesc:a5206486858ddb5afcf5c3b4fab9a473d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable queueing petitions to play sounds.  <br /></td></tr>
 
-<tr class="memitem:a98730b5eb112d58a9e4b832c4e2d7758" id="r_a98730b5eb112d58a9e4b832c4e2d7758"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98730b5eb112d58a9e4b832c4e2d7758">printWaveFormStatus</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
-<tr class="memdesc:a98730b5eb112d58a9e4b832c4e2d7758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print waveforms.  <br /></td></tr>
+<tr class="memitem:a1fddffe8782998d147000d16b5941f0f" id="r_a1fddffe8782998d147000d16b5941f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fddffe8782998d147000d16b5941f0f">disableQueue</a> ()</td></tr>
+
+<tr class="memitem:ab91671b23d020d9a3e6d2ab6e40e11b6" id="r_ab91671b23d020d9a3e6d2ab6e40e11b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab91671b23d020d9a3e6d2ab6e40e11b6">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+<tr class="memdesc:ab91671b23d020d9a3e6d2ab6e40e11b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the manager's status.  <br /></td></tr>
+
+<tr class="memitem:a1617457e0994a0c26ebdb6d21fbce5bb" id="r_a1617457e0994a0c26ebdb6d21fbce5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1617457e0994a0c26ebdb6d21fbce5bb">printWaveFormStatus</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+<tr class="memdesc:a1617457e0994a0c26ebdb6d21fbce5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print waveforms.  <br /></td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0790959e99d5878beec6796de546cbdf" id="r_a0790959e99d5878beec6796de546cbdf"><td class="memItemLeft" align="right" valign="top">singleton !class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0790959e99d5878beec6796de546cbdf">VSUManager</a></td></tr>
+<tr class="memitem:a15c383043f7f4f0576726760b512d8da" id="r_a15c383043f7f4f0576726760b512d8da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15c383043f7f4f0576726760b512d8da">queuedVSUSoundSourceConfigurations</a></td></tr>
+<tr class="memdesc:a15c383043f7f4f0576726760b512d8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of queued sound source configurations.  <br /></td></tr>
 
 <tr class="memitem:a229c0dfeeca490f434e5dc3c749b5546" id="r_a229c0dfeeca490f434e5dc3c749b5546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229c0dfeeca490f434e5dc3c749b5546">vsuSoundSourceConfigurations</a> [6]</td></tr>
 <tr class="memdesc:a229c0dfeeca490f434e5dc3c749b5546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping of VSU sound source configurations.  <br /></td></tr>
@@ -154,6 +151,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a4c163708785e8d1307953505e1f9b21d" name="a4c163708785e8d1307953505e1f9b21d"></a>
+<h2 class="memtitle">__MAXIMUM_VOLUME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __MAXIMUM_VOLUME&#160;&#160;&#160;0xF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">30</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+
+</div>
+</div>
 <a id="a1cf1e5461ff02bfe46eb97c2f10353bc" name="a1cf1e5461ff02bfe46eb97c2f10353bc"></a>
 <h2 class="memtitle">__TOTAL_MODULATION_CHANNELS</h2>
 
@@ -193,15 +206,13 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname">#define __TOTAL_NORMAL_CHANNELS&#160;&#160;&#160;	(<a class="el" href="#a0bb947cda3d3472700a654d8e6b442a0">__TOTAL_SOUND_SOURCES</a> - <a class="el" href="#a1cf1e5461ff02bfe46eb97c2f10353bc">__TOTAL_MODULATION_CHANNELS</a> - <a class="el" href="#a98bfab9f54093a53b51dac87ef87be3a">__TOTAL_NOISE_CHANNELS</a>)</td>
+          <td class="memname">#define __TOTAL_NORMAL_CHANNELS&#160;&#160;&#160;(<a class="el" href="#a0bb947cda3d3472700a654d8e6b442a0">__TOTAL_SOUND_SOURCES</a> - <a class="el" href="#a1cf1e5461ff02bfe46eb97c2f10353bc">__TOTAL_MODULATION_CHANNELS</a> - <a class="el" href="#a98bfab9f54093a53b51dac87ef87be3a">__TOTAL_NOISE_CHANNELS</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">28</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span><span class="preprocessor">#define __TOTAL_NORMAL_CHANNELS                                                                                                  \</span></div>
-<div class="line"><span class="lineno">   29</span><span class="preprocessor">    (__TOTAL_SOUND_SOURCES - __TOTAL_MODULATION_CHANNELS - __TOTAL_NOISE_CHANNELS)</span></div>
-</div>
+
 </div>
 </div>
 <a id="a620e19eb3d1a168a2f7f6d08c5f59fa0" name="a620e19eb3d1a168a2f7f6d08c5f59fa0"></a>
@@ -216,7 +227,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">30</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">29</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -298,66 +309,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a6ce33b77540e7b6ff4014f0a5b8d526f" name="a6ce33b77540e7b6ff4014f0a5b8d526f"></a>
-<h2 class="memtitle">VSUPlaybackModes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a6ce33b77540e7b6ff4014f0a5b8d526f">VSUPlaybackModes</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Playback types </p>
-<table class="fieldtable table">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8" name="a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8"></a>kPlaybackNative&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf" name="a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf"></a>kPlaybackPCM&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">47</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_enumvalue" href="#a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8">kPlaybackNative</a> = 0,</div>
-<div class="line"><span class="lineno">   50</span>    <a class="code hl_enumvalue" href="#a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf">kPlaybackPCM</a></div>
-<div class="line"><span class="lineno">   51</span>};</div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf"><div class="ttname"><a href="#a6ce33b77540e7b6ff4014f0a5b8d526fa6e09413c199eb66f48aba8ddcf0feeaf">kPlaybackPCM</a></div><div class="ttdeci">@ kPlaybackPCM</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:50</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8"><div class="ttname"><a href="#a6ce33b77540e7b6ff4014f0a5b8d526faf81890d3ad091b437d5f741f8ac29de8">kPlaybackNative</a></div><div class="ttdeci">@ kPlaybackNative</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:49</a></div></div>
-</div>
-</div>
-</div>
-<a id="a376d7d3bcdf251e4dea69cdae5825a1c" name="a376d7d3bcdf251e4dea69cdae5825a1c"></a>
-<h2 class="memtitle">VSUSoundSourceTypes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a376d7d3bcdf251e4dea69cdae5825a1c">VSUSoundSourceTypes</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p><a class="el" href="/documentation/api/class-sound/">Sound</a> source types </p>
-<table class="fieldtable table">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a376d7d3bcdf251e4dea69cdae5825a1ca263d52f61e8c17317ab6b41abf898c23" name="a376d7d3bcdf251e4dea69cdae5825a1ca263d52f61e8c17317ab6b41abf898c23"></a>kSoundSourceNormal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a376d7d3bcdf251e4dea69cdae5825a1ca1b2fcc13b476868cd60179eec02e1d23" name="a376d7d3bcdf251e4dea69cdae5825a1ca1b2fcc13b476868cd60179eec02e1d23"></a>kSoundSourceModulation&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a376d7d3bcdf251e4dea69cdae5825a1ca0592f8ccb26b726179b7a2377a604a7e" name="a376d7d3bcdf251e4dea69cdae5825a1ca0592f8ccb26b726179b7a2377a604a7e"></a>kSoundSourceNoise&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">38</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
-<div class="line"><span class="lineno">   40</span>    <a class="code hl_enumvalue" href="#a376d7d3bcdf251e4dea69cdae5825a1ca263d52f61e8c17317ab6b41abf898c23">kSoundSourceNormal</a> = (1 &lt;&lt; 0),</div>
-<div class="line"><span class="lineno">   41</span>    <a class="code hl_enumvalue" href="#a376d7d3bcdf251e4dea69cdae5825a1ca1b2fcc13b476868cd60179eec02e1d23">kSoundSourceModulation</a> = (1 &lt;&lt; 1),</div>
-<div class="line"><span class="lineno">   42</span>    <a class="code hl_enumvalue" href="#a376d7d3bcdf251e4dea69cdae5825a1ca0592f8ccb26b726179b7a2377a604a7e">kSoundSourceNoise</a> = (1 &lt;&lt; 2),</div>
-<div class="line"><span class="lineno">   43</span>};</div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a376d7d3bcdf251e4dea69cdae5825a1ca0592f8ccb26b726179b7a2377a604a7e"><div class="ttname"><a href="#a376d7d3bcdf251e4dea69cdae5825a1ca0592f8ccb26b726179b7a2377a604a7e">kSoundSourceNoise</a></div><div class="ttdeci">@ kSoundSourceNoise</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:42</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a376d7d3bcdf251e4dea69cdae5825a1ca1b2fcc13b476868cd60179eec02e1d23"><div class="ttname"><a href="#a376d7d3bcdf251e4dea69cdae5825a1ca1b2fcc13b476868cd60179eec02e1d23">kSoundSourceModulation</a></div><div class="ttdeci">@ kSoundSourceModulation</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:41</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a376d7d3bcdf251e4dea69cdae5825a1ca263d52f61e8c17317ab6b41abf898c23"><div class="ttname"><a href="#a376d7d3bcdf251e4dea69cdae5825a1ca263d52f61e8c17317ab6b41abf898c23">kSoundSourceNormal</a></div><div class="ttdeci">@ kSoundSourceNormal</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:40</a></div></div>
-</div>
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5420a280aadf15ff3413e5c794d7d4a6" name="a5420a280aadf15ff3413e5c794d7d4a6"></a>
+<a id="af8863cc8c2e53292842a60fced564d6d" name="af8863cc8c2e53292842a60fced564d6d"></a>
 <h2 class="memtitle">applyPCMSampleToSoundSource()</h2>
 
 <div class="memitem">
@@ -367,7 +320,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void VSUManager::applyPCMSampleToSoundSource </td>
+          <td class="memname">static void applyPCMSampleToSoundSource </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int8</a></td>          <td class="paramname"><span class="paramname"><em>sample</em></span></td><td>)</td>
           <td></td>
@@ -375,7 +328,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -386,33 +339,36 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">123</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
-<div class="line"><span class="lineno">  125</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> vsuSoundSourceIndex = 0;</div>
-<div class="line"><span class="lineno">  126</span>    </div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a> &lt;= sample)</div>
-<div class="line"><span class="lineno">  130</span>        {</div>
-<div class="line"><span class="lineno">  131</span>            <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8c/">_vsuSoundSources</a>[vsuSoundSourceIndex].SxLRV = 0xFF;</div>
-<div class="line"><span class="lineno">  132</span>            sample -= <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a>;</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  135</span>        {</div>
-<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8c/">_vsuSoundSources</a>[vsuSoundSourceIndex].SxLRV = ((sample &lt;&lt; 4) | sample);</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>        vsuSoundSourceIndex++;</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
-<div class="line"><span class="lineno">  142</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">1</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>{</div>
+<div class="line"><span class="lineno">  248</span>    <span class="keyword">extern</span> <a class="code hl_struct" href="/documentation/api/struct-v-s-u-sound-source/">VSUSoundSource</a>* <span class="keyword">const</span> <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8c/">_vsuSoundSources</a>;</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> vsuSoundSourceIndex = 0;</div>
+<div class="line"><span class="lineno">  251</span>    </div>
+<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  253</span>    {</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="#a4c163708785e8d1307953505e1f9b21d">__MAXIMUM_VOLUME</a> &lt;= sample)</div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8c/">_vsuSoundSources</a>[vsuSoundSourceIndex].SxLRV = 0xFF;</div>
+<div class="line"><span class="lineno">  257</span>            sample -= <a class="code hl_define" href="#a4c163708785e8d1307953505e1f9b21d">__MAXIMUM_VOLUME</a>;</div>
+<div class="line"><span class="lineno">  258</span>        }</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8c/">_vsuSoundSources</a>[vsuSoundSourceIndex].SxLRV = ((sample &lt;&lt; 4) | sample);</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>        vsuSoundSourceIndex++;</div>
+<div class="line"><span class="lineno">  266</span>    }</div>
+<div class="line"><span class="lineno">  267</span>}</div>
 <div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
 <div class="ttc" id="a_v_s_u_manager_8c_html_a0428174a56eb9672c1cb7d5c58c32949"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8c/">_vsuSoundSources</a></div><div class="ttdeci">VSUSoundSource *const _vsuSoundSources</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c:42</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8c_html_a4c163708785e8d1307953505e1f9b21d"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a></div><div class="ttdeci">#define __MAXIMUM_VOLUME</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c:36</a></div></div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_a4c163708785e8d1307953505e1f9b21d"><div class="ttname"><a href="#a4c163708785e8d1307953505e1f9b21d">__MAXIMUM_VOLUME</a></div><div class="ttdeci">#define __MAXIMUM_VOLUME</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:30</a></div></div>
+<div class="ttc" id="astruct_v_s_u_sound_source_html"><div class="ttname"><a href="/documentation/api/struct-v-s-u-sound-source/">VSUSoundSource</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:77</a></div></div>
 </div>
 </div>
 </div>
-<a id="a9d8cd2b3faa6578e2f43f2df8284614a" name="a9d8cd2b3faa6578e2f43f2df8284614a"></a>
+<a id="a6145690d6b582d48368078fee6b33b07" name="a6145690d6b582d48368078fee6b33b07"></a>
 <h2 class="memtitle">applySoundSourceConfiguration()</h2>
 
 <div class="memitem">
@@ -422,7 +378,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void VSUManager::applySoundSourceConfiguration </td>
+          <td class="memname">static void applyPCMSampleToSoundSource::applySoundSourceConfiguration </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a> *</td>          <td class="paramname"><span class="paramname"><em>vsuSoundSourceConfiguration</em></span></td><td>)</td>
           <td></td>
@@ -441,83 +397,56 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">96</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_variable" href="#a0790959e99d5878beec6796de546cbdf">VSUManager</a> vsuManager = VSUManager::getInstance();</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> vsuSoundSourceIndex = </div>
-<div class="line"><span class="lineno">  101</span>        VSUManager::findAvailableSoundSource</div>
-<div class="line"><span class="lineno">  102</span>        (</div>
-<div class="line"><span class="lineno">  103</span>            vsuSoundSourceConfiguration-&gt;<a class="code hl_variable" href="/documentation/api/struct-v-s-u-sound-source-configuration/">requester</a>, vsuSoundSourceConfiguration-&gt;<a class="code hl_variable" href="/documentation/api/struct-v-s-u-sound-source-configuration/">type</a>, !vsuSoundSourceConfiguration-&gt;<a class="code hl_variable" href="/documentation/api/struct-v-s-u-sound-source-configuration/">skippable</a></div>
-<div class="line"><span class="lineno">  104</span>        );</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">if</span>(0 &gt; vsuSoundSourceIndex)</div>
-<div class="line"><span class="lineno">  107</span>    {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span>(vsuManager-&gt;allowQueueingSoundRequests &amp;&amp; !vsuSoundSourceConfiguration-&gt;<a class="code hl_variable" href="/documentation/api/struct-v-s-u-sound-source-configuration/">skippable</a>)</div>
-<div class="line"><span class="lineno">  109</span>        {</div>
-<div class="line"><span class="lineno">  110</span>            VSUManager::registerQueuedSoundSourceConfiguration(vsuSoundSourceConfiguration);</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_struct" href="/documentation/api/struct-waveform/">Waveform</a>* waveform = VSUManager::findWaveform(vsuSoundSourceConfiguration-&gt;<a class="code hl_variable" href="/documentation/api/struct-v-s-u-sound-source-configuration/">SxRAM</a>);</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        VSUManager::configureSoundSource(vsuSoundSourceIndex, vsuSoundSourceConfiguration, waveform);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>}</div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a0790959e99d5878beec6796de546cbdf"><div class="ttname"><a href="#a0790959e99d5878beec6796de546cbdf">VSUManager</a></div><div class="ttdeci">singleton !class VSUManager</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:161</a></div></div>
-<div class="ttc" id="astruct_v_s_u_sound_source_configuration_html_a16e55754c6dcc2e0f5f4cc959a577a0d"><div class="ttname"><a href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration::SxRAM</a></div><div class="ttdeci">const int8 * SxRAM</div><div class="ttdoc">SxRAM pointer.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:134</a></div></div>
-<div class="ttc" id="astruct_v_s_u_sound_source_configuration_html_a6c2f305a20fa5e1525eaef03a57127ca"><div class="ttname"><a href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration::type</a></div><div class="ttdeci">uint32 type</div><div class="ttdoc">Sound source type.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:113</a></div></div>
-<div class="ttc" id="astruct_v_s_u_sound_source_configuration_html_a90f092f50e0bfef076e113f6f04fcc1c"><div class="ttname"><a href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration::requester</a></div><div class="ttdeci">Object requester</div><div class="ttdoc">Requester object.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:101</a></div></div>
-<div class="ttc" id="astruct_v_s_u_sound_source_configuration_html_af85d0224393362e585021a2f5c01ca67"><div class="ttname"><a href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration::skippable</a></div><div class="ttdeci">bool skippable</div><div class="ttdoc">Skip if no sound source available?</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:143</a></div></div>
-<div class="ttc" id="astruct_waveform_html"><div class="ttname"><a href="/documentation/api/struct-waveform/">Waveform</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:56</a></div></div>
 </div>
 </div>
-</div>
-<a id="a3ab276287238fdb03add66038b8a4017" name="a3ab276287238fdb03add66038b8a4017"></a>
+<a id="a1fddffe8782998d147000d16b5941f0f" name="a1fddffe8782998d147000d16b5941f0f"></a>
 <h2 class="memtitle">disableQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void VSUManager::disableQueue </td>
+          <td class="memname">void applyPCMSampleToSoundSource::disableQueue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Disable queueing petitions to play sounds (if there are no sound sources availables at the time of request, the petition is ignored). </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">277</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>{</div>
-<div class="line"><span class="lineno">  279</span>    <a class="code hl_variable" href="#a0790959e99d5878beec6796de546cbdf">VSUManager</a> vsuManager = VSUManager::getInstance();</div>
-<div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>    vsuManager-&gt;allowQueueingSoundRequests = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  282</span>}</div>
 </div>
 </div>
-</div>
-<a id="a7f46ce18a0dcbd5f18b04a1116eaa37d" name="a7f46ce18a0dcbd5f18b04a1116eaa37d"></a>
+<a id="a5206486858ddb5afcf5c3b4fab9a473d" name="a5206486858ddb5afcf5c3b4fab9a473d"></a>
 <h2 class="memtitle">enableQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void applyPCMSampleToSoundSource::enableQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable queueing petitions to play sounds. </p>
+
+</div>
+</div>
+<a id="af849b5e8218454a22070734e98a13356" name="af849b5e8218454a22070734e98a13356"></a>
+<h2 class="memtitle">getMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
 <table class="mlabels table">
   <tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void VSUManager::enableQueue </td>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">uint32</a> applyPCMSampleToSoundSource::getMode </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -529,39 +458,23 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Retriev the playback mode (stops any playing sound). </p><dl class="section return"><dt>Returns</dt><dd>kPlaybackNative or kPlaybackPCM </dd></dl>
 
-<p>Enable queueing petitions to play sounds. </p>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">268</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>{</div>
-<div class="line"><span class="lineno">  270</span>    <a class="code hl_variable" href="#a0790959e99d5878beec6796de546cbdf">VSUManager</a> vsuManager = VSUManager::getInstance();</div>
-<div class="line"><span class="lineno">  271</span> </div>
-<div class="line"><span class="lineno">  272</span>    vsuManager-&gt;allowQueueingSoundRequests = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  273</span>}</div>
 </div>
 </div>
-</div>
-<a id="ae0d8764867730e186d735dd96ba5b75c" name="ae0d8764867730e186d735dd96ba5b75c"></a>
+<a id="ad6c3dccbc79075b2c2713feaef1d9f29" name="ad6c3dccbc79075b2c2713feaef1d9f29"></a>
 <h2 class="memtitle">playSounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void playSounds </td>
+          <td class="memname">void applyPCMSampleToSoundSource::playSounds </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elapsedMicroseconds</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Play the allocated sounds. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
@@ -572,17 +485,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa94e45017bae233a8b757ea066d1dc21" name="aa94e45017bae233a8b757ea066d1dc21"></a>
+<a id="ab91671b23d020d9a3e6d2ab6e40e11b6" name="ab91671b23d020d9a3e6d2ab6e40e11b6"></a>
 <h2 class="memtitle">print()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void print </td>
+          <td class="memname">void applyPCMSampleToSoundSource::print </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
@@ -592,28 +502,20 @@ Variables</h2></td></tr>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Print the manager's status. </p>
 
 </div>
 </div>
-<a id="a98730b5eb112d58a9e4b832c4e2d7758" name="a98730b5eb112d58a9e4b832c4e2d7758"></a>
+<a id="a1617457e0994a0c26ebdb6d21fbce5bb" name="a1617457e0994a0c26ebdb6d21fbce5bb"></a>
 <h2 class="memtitle">printWaveFormStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void VSUManager::printWaveFormStatus </td>
+          <td class="memname">void applyPCMSampleToSoundSource::printWaveFormStatus </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
@@ -623,83 +525,44 @@ Variables</h2></td></tr>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Print waveforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">325</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  326</span>{</div>
-<div class="line"><span class="lineno">  327</span>    <a class="code hl_variable" href="#a0790959e99d5878beec6796de546cbdf">VSUManager</a> vsuManager = VSUManager::getInstance();</div>
-<div class="line"><span class="lineno">  328</span> </div>
-<div class="line"><span class="lineno">  329</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> i = 0; i &lt; <a class="code hl_define" href="#a159f28184b5e8b03d7f820b3641ec0a0">__TOTAL_WAVEFORMS</a>; i++)</div>
-<div class="line"><span class="lineno">  330</span>    {</div>
-<div class="line"><span class="lineno">  331</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;           &quot;</span>, x, y + vsuManager-&gt;waveforms[i].index);</div>
-<div class="line"><span class="lineno">  332</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(vsuManager-&gt;waveforms[i].index, x, y + vsuManager-&gt;waveforms[i].index);</div>
-<div class="line"><span class="lineno">  333</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(vsuManager-&gt;waveforms[i].usageCount, x + 4, y + vsuManager-&gt;waveforms[i].index);</div>
-<div class="line"><span class="lineno">  334</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_HEX</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)vsuManager-&gt;waveforms[i].data, x + 8, y + vsuManager-&gt;waveforms[i].index);</div>
-<div class="line"><span class="lineno">  335</span>    }</div>
-<div class="line"><span class="lineno">  336</span>}</div>
-<div class="ttc" id="a_printing_8h_html_a94f55583bcb0aac45c7d5ec72fd013e0"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_HEX</a></div><div class="ttdeci">#define PRINT_HEX(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:34</a></div></div>
-<div class="ttc" id="a_printing_8h_html_aa3b793bbb3a63f36a0f6470a02eb536a"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_TEXT</a></div><div class="ttdeci">#define PRINT_TEXT(string, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:31</a></div></div>
-<div class="ttc" id="a_printing_8h_html_aa442798120532a77d6204683484b9f8e"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_INT</a></div><div class="ttdeci">#define PRINT_INT(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:32</a></div></div>
-<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a159f28184b5e8b03d7f820b3641ec0a0"><div class="ttname"><a href="#a159f28184b5e8b03d7f820b3641ec0a0">__TOTAL_WAVEFORMS</a></div><div class="ttdeci">#define __TOTAL_WAVEFORMS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:24</a></div></div>
 </div>
 </div>
-</div>
-<a id="ab9d3f06dc4ef871fad50465095b5ea32" name="ab9d3f06dc4ef871fad50465095b5ea32"></a>
+<a id="aeba91ef466cf0126e90c34ca89dc2f84" name="aeba91ef466cf0126e90c34ca89dc2f84"></a>
 <h2 class="memtitle">reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void reset </td>
+          <td class="memname">void applyPCMSampleToSoundSource::reset </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Reset the manager's state. </p>
 
 </div>
 </div>
-<a id="a123360ee4543edd7f6bf3dc5a176a947" name="a123360ee4543edd7f6bf3dc5a176a947"></a>
+<a id="a118bf8f62e721c9d4cd8980c6b7ab3ef" name="a118bf8f62e721c9d4cd8980c6b7ab3ef"></a>
 <h2 class="memtitle">setMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void setMode </td>
+          <td class="memname">void applyPCMSampleToSoundSource::setMode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>playbackMode</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Set the playback mode (stops any playing sound). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
@@ -710,8 +573,27 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afd0fca1ebb9d3412a4f7b81ffdd99aa5" name="afd0fca1ebb9d3412a4f7b81ffdd99aa5"></a>
+<a id="ae1fd57713dde2adbdbfaadec2958b738" name="ae1fd57713dde2adbdbfaadec2958b738"></a>
 <h2 class="memtitle">stopAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void applyPCMSampleToSoundSource::stopAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop all sound sources. </p>
+
+</div>
+</div>
+<a id="a2877dca6d852fc2789c22c001938ca95" name="a2877dca6d852fc2789c22c001938ca95"></a>
+<h2 class="memtitle">stopSoundSourcesUsedBy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -720,9 +602,9 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void stopAllSounds </td>
+          <td class="memname">static void applyPCMSampleToSoundSource::stopSoundSourcesUsedBy </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-object/">Object</a></td>          <td class="paramname"><span class="paramname"><em>requester</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -732,32 +614,28 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Stop all sound sources. </p>
+<p>Stop sound output in the sound sources in use by the requester object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">requester</td><td><a class="el" href="/documentation/api/class-object/">Object</a> using a sound source </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="aa8637a1aae95dd486fb201d7ad124364" name="aa8637a1aae95dd486fb201d7ad124364"></a>
+<a id="a7cf7a8f6e80e3af2bac8c267b888b9f7" name="a7cf7a8f6e80e3af2bac8c267b888b9f7"></a>
 <h2 class="memtitle">update()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static void update </td>
+          <td class="memname">void applyPCMSampleToSoundSource::update </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Update the manager. </p>
@@ -770,15 +648,23 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> allowQueueingSoundRequests</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>If false and if there are no sound sources availables at the time of request, the petition is ignored </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">180</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">269</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -787,16 +673,24 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> haveQueuedRequests</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Flag to skip pending sound source dispatching if not necessary. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">186</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">275</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -805,16 +699,24 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> haveUsedSoundSources</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Flag to skip sound source releasing if not necessary. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">183</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">272</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -823,16 +725,50 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> playbackMode</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Playback mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">176</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">265</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a15c383043f7f4f0576726760b512d8da" name="a15c383043f7f4f0576726760b512d8da"></a>
+<h2 class="memtitle">queuedVSUSoundSourceConfigurations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> queuedVSUSoundSourceConfigurations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of queued sound source configurations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">250</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -841,16 +777,24 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> targetPCMUpdates</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Target PCM cycles per game cycle. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">173</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">262</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -859,35 +803,24 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/-types-8h/">fix7_9_ext</a> ticks</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Elapsed ticks. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">170</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
-
-</div>
-</div>
-<a id="a0790959e99d5878beec6796de546cbdf" name="a0790959e99d5878beec6796de546cbdf"></a>
-<h2 class="memtitle">VSUManager</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">singleton !class VSUManager</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Class VSUManager</p>
-<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
-<p>Manages the VSU. </p>
-
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">156</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">259</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -896,16 +829,24 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/struct-v-s-u-sound-source-configuration/">VSUSoundSourceConfiguration</a> vsuSoundSourceConfigurations[6]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Mapping of VSU sound source configurations. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">164</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">253</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>
@@ -914,16 +855,24 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
           <td class="memname"><a class="el" href="/documentation/api/struct-waveform/">Waveform</a> waveforms[5]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Mapping of waveworms. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">167</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">256</a> of file <a class="el" href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h</a>.</p>
 
 </div>
 </div>

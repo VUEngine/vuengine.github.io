@@ -1,0 +1,1372 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "CommunicationManager Class Reference"
+permalink: documentation/api/class-communication-manager/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">CommunicationManager Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for CommunicationManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_communication_manager.png" usemap="#CommunicationManager_map" alt />
+  <map id="CommunicationManager_map" name="CommunicationManager_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="0,0,148,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a945fab9c729428cd07c7e1aa69aff1e1" id="r_a945fab9c729428cd07c7e1aa69aff1e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a945fab9c729428cd07c7e1aa69aff1e1">reset</a> ()</td></tr>
+<tr class="memdesc:a945fab9c729428cd07c7e1aa69aff1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:ab77128caaef4eb41fb800d8e4da9f7f5" id="r_ab77128caaef4eb41fb800d8e4da9f7f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab77128caaef4eb41fb800d8e4da9f7f5">enableCommunications</a> (<a class="el" href="/documentation/api/class-listener-object/">EventListener</a> eventListener, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:abe2a4d5607037c7db686d62932a66ca6" id="r_abe2a4d5607037c7db686d62932a66ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe2a4d5607037c7db686d62932a66ca6">disableCommunications</a> ()</td></tr>
+<tr class="memdesc:abe2a4d5607037c7db686d62932a66ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable communication on the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a2fc9703077f297b5e41535d92489500f" id="r_a2fc9703077f297b5e41535d92489500f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc9703077f297b5e41535d92489500f">cancelCommunications</a> ()</td></tr>
+<tr class="memdesc:a2fc9703077f297b5e41535d92489500f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel all pending transmissions on the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a16fe28a8ca65d348e8b28aeff05eb6b5" id="r_a16fe28a8ca65d348e8b28aeff05eb6b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16fe28a8ca65d348e8b28aeff05eb6b5">startSyncCycle</a> ()</td></tr>
+
+<tr class="memitem:a997ed9463f21fe8d902672e26ec59a06" id="r_a997ed9463f21fe8d902672e26ec59a06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a997ed9463f21fe8d902672e26ec59a06">isConnected</a> ()</td></tr>
+
+<tr class="memitem:af7b6d395275d7fbe0c57e56243cec693" id="r_af7b6d395275d7fbe0c57e56243cec693"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7b6d395275d7fbe0c57e56243cec693">isMaster</a> ()</td></tr>
+
+<tr class="memitem:a58a4bb1f2c1207898da802cf948796c8" id="r_a58a4bb1f2c1207898da802cf948796c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58a4bb1f2c1207898da802cf948796c8">broadcastData</a> (<a class="el" href="/documentation/api/-types-8h/">BYTE</a> *data, <a class="el" href="/documentation/api/-types-8h/">int32</a> numberOfBytes)</td></tr>
+
+<tr class="memitem:a3aac7d0034d3476261c9a051fed15a3d" id="r_a3aac7d0034d3476261c9a051fed15a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aac7d0034d3476261c9a051fed15a3d">broadcastDataAsync</a> (<a class="el" href="/documentation/api/-types-8h/">BYTE</a> *data, <a class="el" href="/documentation/api/-types-8h/">int32</a> numberOfBytes, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> eventListener, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a192fc9d36737a62c10d81e18f50da3cb" id="r_a192fc9d36737a62c10d81e18f50da3cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a192fc9d36737a62c10d81e18f50da3cb">sendAndReceiveData</a> (<a class="el" href="/documentation/api/-types-8h/">WORD</a> message, <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *data, <a class="el" href="/documentation/api/-types-8h/">int32</a> numberOfBytes)</td></tr>
+
+<tr class="memitem:ab29ed9fc4cd86ad751e52e19a2401307" id="r_ab29ed9fc4cd86ad751e52e19a2401307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29ed9fc4cd86ad751e52e19a2401307">sendAndReceiveDataAsync</a> (<a class="el" href="/documentation/api/-types-8h/">WORD</a> message, <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *data, <a class="el" href="/documentation/api/-types-8h/">int32</a> numberOfBytes, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> eventListener, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a44c68b66233e194fb2d6ab0a5a30a7c3" id="r_a44c68b66233e194fb2d6ab0a5a30a7c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44c68b66233e194fb2d6ab0a5a30a7c3">getSentMessage</a> ()</td></tr>
+<tr class="memdesc:a44c68b66233e194fb2d6ab0a5a30a7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the last sent message on the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a3beaca6c1b1628a0295fc942e3c218eb" id="r_a3beaca6c1b1628a0295fc942e3c218eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3beaca6c1b1628a0295fc942e3c218eb">getReceivedMessage</a> ()</td></tr>
+<tr class="memdesc:a3beaca6c1b1628a0295fc942e3c218eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the last received message on the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a2ae0db2d2ce0ec597b79a8c1a94fd43e" id="r_a2ae0db2d2ce0ec597b79a8c1a94fd43e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae0db2d2ce0ec597b79a8c1a94fd43e">getSentData</a> ()</td></tr>
+<tr class="memdesc:a2ae0db2d2ce0ec597b79a8c1a94fd43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the last sent data on the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a41cc6fcca19c60531a5d00e82b3b760d" id="r_a41cc6fcca19c60531a5d00e82b3b760d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41cc6fcca19c60531a5d00e82b3b760d">getReceivedData</a> ()</td></tr>
+<tr class="memdesc:a41cc6fcca19c60531a5d00e82b3b760d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the last received data on the EXT port.  <br /></td></tr>
+
+<tr class="memitem:ab20886e599ffcfb83841224ea4541b5f" id="r_ab20886e599ffcfb83841224ea4541b5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20886e599ffcfb83841224ea4541b5f">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
+
+<tr class="memitem:a4461ae00a5fa08dfaddc74ffb9cea73d" id="r_a4461ae00a5fa08dfaddc74ffb9cea73d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4461ae00a5fa08dfaddc74ffb9cea73d">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a67aa3ac02841d0b5231e555a25e0dada" id="r_a67aa3ac02841d0b5231e555a25e0dada"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67aa3ac02841d0b5231e555a25e0dada">interruptHandler</a> ()</td></tr>
+<tr class="memdesc:a67aa3ac02841d0b5231e555a25e0dada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt handler for COM interrupts.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a12e2d58bcda7770ba815477b1315dbe5" id="r_a12e2d58bcda7770ba815477b1315dbe5"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a></td></tr>
+<tr class="memdesc:a12e2d58bcda7770ba815477b1315dbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the communications.  <br /></td></tr>
+
+<tr class="memitem:a97656b6dcca3a0ba545cfd55ab07f6f5" id="r_a97656b6dcca3a0ba545cfd55ab07f6f5"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a></td></tr>
+<tr class="memdesc:a97656b6dcca3a0ba545cfd55ab07f6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data sent over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a6c7616815e162026776db4989d7a5d9a" id="r_a6c7616815e162026776db4989d7a5d9a"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a></td></tr>
+<tr class="memdesc:a6c7616815e162026776db4989d7a5d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data received over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a9b5fa646e8e977b51b0015d67a0335bc" id="r_a9b5fa646e8e977b51b0015d67a0335bc"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5fa646e8e977b51b0015d67a0335bc">syncSentByte</a></td></tr>
+<tr class="memdesc:a9b5fa646e8e977b51b0015d67a0335bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last byte sent synchronously over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:afe4de88ebfa2eef4eaa6e898109bcb3c" id="r_afe4de88ebfa2eef4eaa6e898109bcb3c"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4de88ebfa2eef4eaa6e898109bcb3c">syncReceivedByte</a></td></tr>
+<tr class="memdesc:afe4de88ebfa2eef4eaa6e898109bcb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last byte received synchronously over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:aea7ac0af6764196eecdcf852b266dc58" id="r_aea7ac0af6764196eecdcf852b266dc58"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea7ac0af6764196eecdcf852b266dc58">asyncSentByte</a></td></tr>
+<tr class="memdesc:aea7ac0af6764196eecdcf852b266dc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last byte sent asynchronously over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:ad7b8929fb76efd8c506a4699d364cb9e" id="r_ad7b8929fb76efd8c506a4699d364cb9e"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b8929fb76efd8c506a4699d364cb9e">asyncReceivedByte</a></td></tr>
+<tr class="memdesc:ad7b8929fb76efd8c506a4699d364cb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last byte received asynchronously over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a63d34befd05b3e2545365caa7f1ee763" id="r_a63d34befd05b3e2545365caa7f1ee763"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63d34befd05b3e2545365caa7f1ee763">numberOfBytesPendingTransmission</a></td></tr>
+<tr class="memdesc:a63d34befd05b3e2545365caa7f1ee763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes pending transmission over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:ad7fcb768b4e017bb1308ed40910013d9" id="r_ad7fcb768b4e017bb1308ed40910013d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7fcb768b4e017bb1308ed40910013d9">numberOfBytesPreviouslySent</a></td></tr>
+<tr class="memdesc:ad7fcb768b4e017bb1308ed40910013d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes already transmitted over the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a1779dece0d4f73b7b8d5df9035158d16" id="r_a1779dece0d4f73b7b8d5df9035158d16"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a></td></tr>
+<tr class="memdesc:a1779dece0d4f73b7b8d5df9035158d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of broadcast communications.  <br /></td></tr>
+
+<tr class="memitem:aaec002cac8fbcbaefde1956236f0ab1f" id="r_aaec002cac8fbcbaefde1956236f0ab1f"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaec002cac8fbcbaefde1956236f0ab1f">connected</a></td></tr>
+<tr class="memdesc:aaec002cac8fbcbaefde1956236f0ab1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates if there is something connected to the EXT port.  <br /></td></tr>
+
+<tr class="memitem:a4f180176461845e941d7695594852192" id="r_a4f180176461845e941d7695594852192"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f180176461845e941d7695594852192">communicationMode</a></td></tr>
+<tr class="memdesc:a4f180176461845e941d7695594852192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps track of the role as master or slave that the system holds in data transmissions.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a2a08be5bc263fa301ef555d27eb62fb3 inherit pub_types_class_listener_object" id="r_a2a08be5bc263fa301ef555d27eb62fb3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="/documentation/api/-types-8h/">bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">EventListener</a>) (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>)</td></tr>
+
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:aa44d2f3fc00a88658f64cac1c02b47f7 inherit pub_methods_class_listener_object" id="r_aa44d2f3fc00a88658f64cac1c02b47f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ace4fdcff88c182d1a52be1f479f77ca5 inherit pub_methods_class_listener_object" id="r_ace4fdcff88c182d1a52be1f479f77ca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a60fd7db5c9893337dd5dceaf83e14f90 inherit pub_methods_class_listener_object" id="r_a60fd7db5c9893337dd5dceaf83e14f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aee33a794d8e3f8d701053b225c4373d3 inherit pub_methods_class_listener_object" id="r_aee33a794d8e3f8d701053b225c4373d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListenerScopes</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="/documentation/api/-types-8h/">uint32</a> message, <a class="el" href="/documentation/api/-types-8h/">uint32</a> delay, <a class="el" href="/documentation/api/-types-8h/">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> message, <a class="el" href="/documentation/api/-types-8h/">uint32</a> delay, <a class="el" href="/documentation/api/-types-8h/">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> message)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages communications on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">34</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a58a4bb1f2c1207898da802cf948796c8" name="a58a4bb1f2c1207898da802cf948796c8"></a>
+<h2 class="memtitle">broadcastData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure <a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::broadcastData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">BYTE</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send data synchronously over the EXT port if there is nothing detectable attached to it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">data</td><td>Data to broadcast </td></tr>
+    <tr><td class="paramname">numberOfBytes</td><td>Number of bytes to broadcast </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">315</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  316</span>{</div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a997ed9463f21fe8d902672e26ec59a06">CommunicationManager::isConnected</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  318</span>    {</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  320</span>    }</div>
+<div class="line"><span class="lineno">  321</span> </div>
+<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">switch</span> (this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  323</span>    {</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingHandshake</a>:</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>            <a class="code hl_function" href="#a2fc9703077f297b5e41535d92489500f">CommunicationManager::cancelCommunications</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  328</span>    }</div>
+<div class="line"><span class="lineno">  329</span> </div>
+<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a> != this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  331</span>    {</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  333</span>    }</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>    <span class="comment">// Always start comms as master when broadcasting</span></div>
+<div class="line"><span class="lineno">  336</span>    this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_MASTER</a>;</div>
+<div class="line"><span class="lineno">  337</span> </div>
+<div class="line"><span class="lineno">  338</span>    this-&gt;<a class="code hl_variable" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastSync</a>;</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">while</span>(0 &lt; numberOfBytes)</div>
+<div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>        CommunicationManager::sendPayload(<span class="keyword">this</span>, *data, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">while</span>(CommunicationManager::isTransmitting(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">  345</span>        this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a>;</div>
+<div class="line"><span class="lineno">  346</span> </div>
+<div class="line"><span class="lineno">  347</span>        data++;</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>        numberOfBytes--;</div>
+<div class="line"><span class="lineno">  350</span>    }</div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>    </div>
+<div class="line"><span class="lineno">  353</span>    this-&gt;<a class="code hl_variable" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastNone</a>;</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  356</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_a1b267ee832e66b7e065f5ccb876bf564a3659b954b8e7157e3e43b1221b14cc50"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a></div><div class="ttdeci">@ kCommunicationsStatusIdle</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:41</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a1b267ee832e66b7e065f5ccb876bf564a94a451fe1324390c93f156391c7d9d0f"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingHandshake</a></div><div class="ttdeci">@ kCommunicationsStatusSendingHandshake</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:42</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a36abaa56bead2ae5e6b3226d9c90c263"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__COM_AS_MASTER</a></div><div class="ttdeci">#define __COM_AS_MASTER</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:75</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_abcaa46c0e5d2a84cbb4a87a69d69ffc2a4a5c342d6c19e615a18ff71d67239970"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastSync</a></div><div class="ttdeci">@ kCommunicationsBroadcastSync</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:34</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_abcaa46c0e5d2a84cbb4a87a69d69ffc2a51bc9ef7368f9e5a8d84a0c8acb31d2d"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastNone</a></div><div class="ttdeci">@ kCommunicationsBroadcastNone</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:33</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a12e2d58bcda7770ba815477b1315dbe5"><div class="ttname"><a href="#a12e2d58bcda7770ba815477b1315dbe5">CommunicationManager::status</a></div><div class="ttdeci">volatile int32 status</div><div class="ttdoc">Status of the communications.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:39</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a1779dece0d4f73b7b8d5df9035158d16"><div class="ttname"><a href="#a1779dece0d4f73b7b8d5df9035158d16">CommunicationManager::broadcast</a></div><div class="ttdeci">volatile uint32 broadcast</div><div class="ttdoc">Status of broadcast communications.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:66</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a2fc9703077f297b5e41535d92489500f"><div class="ttname"><a href="#a2fc9703077f297b5e41535d92489500f">CommunicationManager::cancelCommunications</a></div><div class="ttdeci">bool cancelCommunications()</div><div class="ttdoc">Cancel all pending transmissions on the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:227</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a4f180176461845e941d7695594852192"><div class="ttname"><a href="#a4f180176461845e941d7695594852192">CommunicationManager::communicationMode</a></div><div class="ttdeci">volatile uint8 communicationMode</div><div class="ttdoc">Keeps track of the role as master or slave that the system holds in data transmissions.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:72</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a997ed9463f21fe8d902672e26ec59a06"><div class="ttname"><a href="#a997ed9463f21fe8d902672e26ec59a06">CommunicationManager::isConnected</a></div><div class="ttdeci">bool isConnected()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:301</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3aac7d0034d3476261c9a051fed15a3d" name="a3aac7d0034d3476261c9a051fed15a3d"></a>
+<h2 class="memtitle">broadcastDataAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CommunicationManager::broadcastDataAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">BYTE</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">EventListener</a></td>          <td class="paramname"><span class="paramname"><em>eventListener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send data asynchronously over the EXT port if there is nothing detectable attached to it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">data</td><td>Data to broadcast </td></tr>
+    <tr><td class="paramname">numberOfBytes</td><td>Number of bytes to broadcast </td></tr>
+    <tr><td class="paramname">eventListener</td><td>Callback method for when a connection is stablished </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">360</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>{</div>
+<div class="line"><span class="lineno">  362</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#a997ed9463f21fe8d902672e26ec59a06">CommunicationManager::isConnected</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  363</span>    {</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  365</span>    }</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">switch</span> (this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  368</span>    {</div>
+<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingHandshake</a>:</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>            <a class="code hl_function" href="#a2fc9703077f297b5e41535d92489500f">CommunicationManager::cancelCommunications</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  373</span>    }</div>
+<div class="line"><span class="lineno">  374</span> </div>
+<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a> != this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  376</span>    {</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  378</span>    }</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>    <span class="comment">// Always start comms as master when broadcasting</span></div>
+<div class="line"><span class="lineno">  381</span>    this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_MASTER</a>;</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>    this-&gt;<a class="code hl_variable" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastAsync</a>;</div>
+<div class="line"><span class="lineno">  384</span>    CommunicationManager::sendDataAsync(<span class="keyword">this</span>, data, numberOfBytes, eventLister, scope);</div>
+<div class="line"><span class="lineno">  385</span> </div>
+<div class="line"><span class="lineno">  386</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  387</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_abcaa46c0e5d2a84cbb4a87a69d69ffc2a2fafca407c5cc88b6cce49447f161a1c"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastAsync</a></div><div class="ttdeci">@ kCommunicationsBroadcastAsync</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:35</a></div></div>
+</div>
+</div>
+</div>
+<a id="a2fc9703077f297b5e41535d92489500f" name="a2fc9703077f297b5e41535d92489500f"></a>
+<h2 class="memtitle">cancelCommunications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::cancelCommunications </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancel all pending transmissions on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">227</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  228</span>{</div>
+<div class="line"><span class="lineno">  229</span>    CommunicationManager::endCommunications(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a>)</div>
+<div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keyword">delete</span> this-&gt;<a class="code hl_variable" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a>;</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a>)</div>
+<div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keyword">delete</span> this-&gt;<a class="code hl_variable" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a>;</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>    this-&gt;<a class="code hl_variable" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  242</span>    this-&gt;<a class="code hl_variable" href="#a9b5fa646e8e977b51b0015d67a0335bc">syncSentByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  243</span>    this-&gt;<a class="code hl_variable" href="#aea7ac0af6764196eecdcf852b266dc58">asyncSentByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  244</span>    this-&gt;<a class="code hl_variable" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  245</span>    this-&gt;<a class="code hl_variable" href="#afe4de88ebfa2eef4eaa6e898109bcb3c">syncReceivedByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  246</span>    this-&gt;<a class="code hl_variable" href="#ad7b8929fb76efd8c506a4699d364cb9e">asyncReceivedByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  247</span>    this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a>;</div>
+<div class="line"><span class="lineno">  248</span>    this-&gt;<a class="code hl_variable" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastNone</a>;</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>    <a class="code hl_function" href="/documentation/api/class-listener-object/">CommunicationManager::removeEventListeners</a>(<span class="keyword">this</span>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventCommunicationsConnected</a>);</div>
+<div class="line"><span class="lineno">  251</span>    <a class="code hl_function" href="/documentation/api/class-listener-object/">CommunicationManager::removeEventListeners</a>(<span class="keyword">this</span>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventCommunicationsTransmissionCompleted</a>);</div>
+<div class="line"><span class="lineno">  252</span>    <a class="code hl_function" href="/documentation/api/class-listener-object/">CommunicationManager::discardAllMessages</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  255</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a61e58fff03b165a2001ea1753bf9b157"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventCommunicationsConnected</a></div><div class="ttdeci">@ kEventCommunicationsConnected</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:55</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a9fe79ca63abfec9a622b57af2e23be6a"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventCommunicationsTransmissionCompleted</a></div><div class="ttdeci">@ kEventCommunicationsTransmissionCompleted</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:56</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a6c7616815e162026776db4989d7a5d9a"><div class="ttname"><a href="#a6c7616815e162026776db4989d7a5d9a">CommunicationManager::receivedData</a></div><div class="ttdeci">volatile BYTE * receivedData</div><div class="ttdoc">Data received over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:45</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a97656b6dcca3a0ba545cfd55ab07f6f5"><div class="ttname"><a href="#a97656b6dcca3a0ba545cfd55ab07f6f5">CommunicationManager::sentData</a></div><div class="ttdeci">volatile BYTE * sentData</div><div class="ttdoc">Data sent over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:42</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a9b5fa646e8e977b51b0015d67a0335bc"><div class="ttname"><a href="#a9b5fa646e8e977b51b0015d67a0335bc">CommunicationManager::syncSentByte</a></div><div class="ttdeci">volatile BYTE * syncSentByte</div><div class="ttdoc">Last byte sent synchronously over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:48</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_ad7b8929fb76efd8c506a4699d364cb9e"><div class="ttname"><a href="#ad7b8929fb76efd8c506a4699d364cb9e">CommunicationManager::asyncReceivedByte</a></div><div class="ttdeci">volatile BYTE * asyncReceivedByte</div><div class="ttdoc">Last byte received asynchronously over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:57</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_aea7ac0af6764196eecdcf852b266dc58"><div class="ttname"><a href="#aea7ac0af6764196eecdcf852b266dc58">CommunicationManager::asyncSentByte</a></div><div class="ttdeci">volatile BYTE * asyncSentByte</div><div class="ttdoc">Last byte sent asynchronously over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:54</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_afe4de88ebfa2eef4eaa6e898109bcb3c"><div class="ttname"><a href="#afe4de88ebfa2eef4eaa6e898109bcb3c">CommunicationManager::syncReceivedByte</a></div><div class="ttdeci">volatile BYTE * syncReceivedByte</div><div class="ttdoc">Last byte received synchronously over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:51</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_a38293ac2b0f60480e1ac66f1668af206"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::discardAllMessages</a></div><div class="ttdeci">void discardAllMessages()</div><div class="ttdoc">Discard all messages, both to be sent and to be received.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:372</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_a60fd7db5c9893337dd5dceaf83e14f90"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::removeEventListeners</a></div><div class="ttdeci">void removeEventListeners(EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:149</a></div></div>
+</div>
+</div>
+</div>
+<a id="abe2a4d5607037c7db686d62932a66ca6" name="abe2a4d5607037c7db686d62932a66ca6"></a>
+<h2 class="memtitle">disableCommunications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CommunicationManager::disableCommunications </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable communication on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">216</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>{</div>
+<div class="line"><span class="lineno">  218</span>    <a class="code hl_function" href="#a2fc9703077f297b5e41535d92489500f">CommunicationManager::cancelCommunications</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>    this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusNone</a>;</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <a class="code hl_function" href="#a945fab9c729428cd07c7e1aa69aff1e1">CommunicationManager::reset</a>(<span class="keyword">this</span>);   </div>
+<div class="line"><span class="lineno">  223</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_a1b267ee832e66b7e065f5ccb876bf564ab87284c0ee2f81eba3a5021ed6a5edf6"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusNone</a></div><div class="ttdeci">@ kCommunicationsStatusNone</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:40</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_a945fab9c729428cd07c7e1aa69aff1e1"><div class="ttname"><a href="#a945fab9c729428cd07c7e1aa69aff1e1">CommunicationManager::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset the manager&#39;s state.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:145</a></div></div>
+</div>
+</div>
+</div>
+<a id="ab77128caaef4eb41fb800d8e4da9f7f5" name="ab77128caaef4eb41fb800d8e4da9f7f5"></a>
+<h2 class="memtitle">enableCommunications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CommunicationManager::enableCommunications </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">EventListener</a></td>          <td class="paramname"><span class="paramname"><em>eventListener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable communications on the EXT port. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">eventListener</td><td>Callback method for when a connection is stablished </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">179</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>{</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#aaec002cac8fbcbaefde1956236f0ab1f">connected</a> || <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a> != this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    CommunicationManager::endCommunications(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">if</span>(eventLister &amp;&amp; !<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(scope))</div>
+<div class="line"><span class="lineno">  189</span>    {</div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">CommunicationManager::addEventListener</a>(<span class="keyword">this</span>, scope, eventLister, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventCommunicationsConnected</a>);</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>    <span class="comment">// If handshake is taking place</span></div>
+<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">if</span>(CommunicationManager::isHandshakeIncoming(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  195</span>    {</div>
+<div class="line"><span class="lineno">  196</span>        <span class="comment">// There is another system attached already managing</span></div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">// The channel</span></div>
+<div class="line"><span class="lineno">  198</span>        this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_MASTER</a>;</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>        <span class="comment">// Send dummy payload to verify communication</span></div>
+<div class="line"><span class="lineno">  201</span>        CommunicationManager::sendHandshake(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  204</span>    {</div>
+<div class="line"><span class="lineno">  205</span>        <span class="comment">// I&#39;m alone since a previously turned on</span></div>
+<div class="line"><span class="lineno">  206</span>        <span class="comment">// System would had already closed the channel</span></div>
+<div class="line"><span class="lineno">  207</span>        this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_REMOTE</a>;</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>        <span class="comment">// Wait for incoming clock</span></div>
+<div class="line"><span class="lineno">  210</span>        CommunicationManager::sendHandshake(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+<div class="line"><span class="lineno">  212</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_a048dcb33c8e15471166e9607d348de0b"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__COM_AS_REMOTE</a></div><div class="ttdeci">#define __COM_AS_REMOTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:73</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_aaec002cac8fbcbaefde1956236f0ab1f"><div class="ttname"><a href="#aaec002cac8fbcbaefde1956236f0ab1f">CommunicationManager::connected</a></div><div class="ttdeci">volatile bool connected</div><div class="ttdoc">Flag that indicates if there is something connected to the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:69</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa44d2f3fc00a88658f64cac1c02b47f7"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::addEventListener</a></div><div class="ttdeci">void addEventListener(ListenerObject listener, EventListener callback, uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:64</a></div></div>
+</div>
+</div>
+</div>
+<a id="a41cc6fcca19c60531a5d00e82b3b760d" name="a41cc6fcca19c60531a5d00e82b3b760d"></a>
+<h2 class="memtitle">getReceivedData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/-types-8h/">BYTE</a> * CommunicationManager::getReceivedData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the last received data on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">429</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>{</div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordflow">return</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)this-&gt;<a class="code hl_variable" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a> + <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__MESSAGE_SIZE</a>;</div>
+<div class="line"><span class="lineno">  432</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_af24c2d90fe72f8ca513903576e4b2a0d"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__MESSAGE_SIZE</a></div><div class="ttdeci">#define __MESSAGE_SIZE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:80</a></div></div>
+<div class="ttc" id="a_types_8h_html_a47bd55d8c6a9b45db1ac0957cee2a82d"><div class="ttname"><a href="/documentation/api/-types-8h/">BYTE</a></div><div class="ttdeci">uint8 BYTE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:28</a></div></div>
+</div>
+</div>
+</div>
+<a id="a3beaca6c1b1628a0295fc942e3c218eb" name="a3beaca6c1b1628a0295fc942e3c218eb"></a>
+<h2 class="memtitle">getReceivedMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">WORD</a> CommunicationManager::getReceivedMessage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the last received message on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">415</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>{</div>
+<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">return</span> *(<a class="code hl_typedef" href="/documentation/api/-types-8h/">WORD</a>*)this-&gt;<a class="code hl_variable" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a>;</div>
+<div class="line"><span class="lineno">  418</span>}</div>
+<div class="ttc" id="a_types_8h_html_a7227cc934348bf0a71b097b579e572b6"><div class="ttname"><a href="/documentation/api/-types-8h/">WORD</a></div><div class="ttdeci">uint32 WORD</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:30</a></div></div>
+</div>
+</div>
+</div>
+<a id="a2ae0db2d2ce0ec597b79a8c1a94fd43e" name="a2ae0db2d2ce0ec597b79a8c1a94fd43e"></a>
+<h2 class="memtitle">getSentData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/-types-8h/">BYTE</a> * CommunicationManager::getSentData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the last sent data on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">422</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  423</span>{</div>
+<div class="line"><span class="lineno">  424</span>    <span class="keywordflow">return</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)this-&gt;<a class="code hl_variable" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a> + <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__MESSAGE_SIZE</a>;</div>
+<div class="line"><span class="lineno">  425</span>}</div>
+</div>
+</div>
+</div>
+<a id="a44c68b66233e194fb2d6ab0a5a30a7c3" name="a44c68b66233e194fb2d6ab0a5a30a7c3"></a>
+<h2 class="memtitle">getSentMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">WORD</a> CommunicationManager::getSentMessage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the last sent message on the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">408</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>{</div>
+<div class="line"><span class="lineno">  410</span>    <span class="keywordflow">return</span> *(<a class="code hl_typedef" href="/documentation/api/-types-8h/">WORD</a>*)this-&gt;<a class="code hl_variable" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a>;</div>
+<div class="line"><span class="lineno">  411</span>}</div>
+</div>
+</div>
+</div>
+<a id="a4461ae00a5fa08dfaddc74ffb9cea73d" name="a4461ae00a5fa08dfaddc74ffb9cea73d"></a>
+<h2 class="memtitle">handleMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::handleMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-telegram/">Telegram</a></td>          <td class="paramname"><span class="paramname"><em>telegram</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Receive and process a <a class="el" href="/documentation/api/class-telegram/">Telegram</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">telegram</td><td>Received telegram to process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the telegram was processed </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">121</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>{</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">switch</span>(<a class="code hl_function" href="/documentation/api/class-telegram/">Telegram::getMessage</a>(telegram))</div>
+<div class="line"><span class="lineno">  124</span>    {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-constants-8h/">kMessageCheckIfRemoteIsReady</a>:</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span>(CommunicationManager::isRemoteReady(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                CommunicationManager::startClockSignal(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  132</span>            {</div>
+<div class="line"><span class="lineno">  133</span>                CommunicationManager::waitForRemote(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a15053a4f88022c2d0680f04391a48878ab3b34c4f1ed384ab9695f9f1a1b1603b"><div class="ttname"><a href="/documentation/api/-constants-8h/">kMessageCheckIfRemoteIsReady</a></div><div class="ttdeci">@ kMessageCheckIfRemoteIsReady</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:38</a></div></div>
+<div class="ttc" id="aclass_telegram_html_a3ccd8f44ef33c7fdd6a8cd488a509a8e"><div class="ttname"><a href="/documentation/api/class-telegram/">Telegram::getMessage</a></div><div class="ttdeci">int32 getMessage()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-telegram-8c-source/">Telegram.c:64</a></div></div>
+</div>
+</div>
+</div>
+<a id="a67aa3ac02841d0b5231e555a25e0dada" name="a67aa3ac02841d0b5231e555a25e0dada"></a>
+<h2 class="memtitle">interruptHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void CommunicationManager::interruptHandler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interrupt handler for COM interrupts. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">91</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>{</div>
+<div class="line"><span class="lineno">   93</span>    CommunicationManager communicationManager = CommunicationManager::getInstance();</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span><span class="preprocessor">#ifdef __ENABLE_PROFILER</span></div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_function" href="/documentation/api/class-profiler/">Profiler::lap</a>(<a class="code hl_enumvalue" href="/documentation/api/-profiler-8h/">kProfilerLapTypeStartInterrupt</a>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastNone</a> == communicationManager-&gt;<a class="code hl_variable" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a> &amp;&amp; <a class="code hl_function" href="#af7b6d395275d7fbe0c57e56243cec693">CommunicationManager::isMaster</a>(communicationManager))</div>
+<div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        communicationManager-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_REMOTE</a>;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  104</span>    {</div>
+<div class="line"><span class="lineno">  105</span>        communicationManager-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_MASTER</a>;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    CommunicationManager::endCommunications(communicationManager);</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    CommunicationManager::processInterrupt(communicationManager);</div>
+<div class="line"><span class="lineno">  111</span>}</div>
+<div class="ttc" id="a_profiler_8h_html_a1a2e4501ff3380bff6b2729c807e5f43abe95f3197dd36dcc71506c7b92ffc97a"><div class="ttname"><a href="/documentation/api/-profiler-8h/">kProfilerLapTypeStartInterrupt</a></div><div class="ttdeci">@ kProfilerLapTypeStartInterrupt</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-profiler-8h-source/">Profiler.h:26</a></div></div>
+<div class="ttc" id="aclass_communication_manager_html_af7b6d395275d7fbe0c57e56243cec693"><div class="ttname"><a href="#af7b6d395275d7fbe0c57e56243cec693">CommunicationManager::isMaster</a></div><div class="ttdeci">bool isMaster()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:308</a></div></div>
+<div class="ttc" id="aclass_profiler_html_a639048ee640223054c4a20d9ca978d51"><div class="ttname"><a href="/documentation/api/class-profiler/">Profiler::lap</a></div><div class="ttdeci">static void lap(uint32 lapType, const char *processName)</div></div>
+</div>
+</div>
+</div>
+<a id="a997ed9463f21fe8d902672e26ec59a06" name="a997ed9463f21fe8d902672e26ec59a06"></a>
+<h2 class="memtitle">isConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::isConnected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if there is something attached to the EXT port. </p><dl class="section return"><dt>Returns</dt><dd>True if there is something attached to the EXT port; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">301</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  302</span>{</div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#aaec002cac8fbcbaefde1956236f0ab1f">connected</a>;</div>
+<div class="line"><span class="lineno">  304</span>}</div>
+</div>
+</div>
+</div>
+<a id="af7b6d395275d7fbe0c57e56243cec693" name="af7b6d395275d7fbe0c57e56243cec693"></a>
+<h2 class="memtitle">isMaster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::isMaster </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the system is the master during the next cycle of communications over the EXT port. </p><dl class="section return"><dt>Returns</dt><dd>True if the system is the master; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">308</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>{</div>
+<div class="line"><span class="lineno">  310</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_MASTER</a> == this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a>;</div>
+<div class="line"><span class="lineno">  311</span>}</div>
+</div>
+</div>
+</div>
+<a id="ab20886e599ffcfb83841224ea4541b5f" name="ab20886e599ffcfb83841224ea4541b5f"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CommunicationManager::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the manager's status. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">437</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  438</span>{</div>
+<div class="line"><span class="lineno">  439</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<a class="code hl_function" href="#a997ed9463f21fe8d902672e26ec59a06">CommunicationManager::isConnected</a>(<span class="keyword">this</span>) ? <span class="stringliteral">&quot;Connected   &quot;</span> : <span class="stringliteral">&quot;Disconnected&quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>    <span class="keywordtype">char</span>* helper = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  442</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> valueDisplacement = 20;</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TIME</a>(x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  445</span> </div>
+<div class="line"><span class="lineno">  446</span>    <span class="keywordflow">switch</span>(this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  447</span>    {</div>
+<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a>:</div>
+<div class="line"><span class="lineno">  449</span>            helper = <span class="stringliteral">&quot;Idle             &quot;</span>;</div>
+<div class="line"><span class="lineno">  450</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingHandshake</a>:</div>
+<div class="line"><span class="lineno">  452</span>            helper = <span class="stringliteral">&quot;Sending handshake         &quot;</span>;</div>
+<div class="line"><span class="lineno">  453</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusWaitingPayload</a>:</div>
+<div class="line"><span class="lineno">  455</span>            helper = <span class="stringliteral">&quot;Waiting payload            &quot;</span>;</div>
+<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingPayload</a>:</div>
+<div class="line"><span class="lineno">  458</span>            helper = <span class="stringliteral">&quot;Sending payload            &quot;</span>;</div>
+<div class="line"><span class="lineno">  459</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingAndReceivingPayload</a>:</div>
+<div class="line"><span class="lineno">  461</span>            helper = <span class="stringliteral">&quot;Send / Recv payload        &quot;</span>;</div>
+<div class="line"><span class="lineno">  462</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  463</span> </div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  465</span>            helper = <span class="stringliteral">&quot;Error            &quot;</span>;</div>
+<div class="line"><span class="lineno">  466</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  467</span>    }</div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Status:&quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  470</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>, x + valueDisplacement * 2, y);</div>
+<div class="line"><span class="lineno">  471</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(helper, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  472</span> </div>
+<div class="line"><span class="lineno">  473</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Mode: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  474</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_REMOTE</a> == this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> ? <span class="stringliteral">&quot;Remote&quot;</span> : <span class="stringliteral">&quot;Master &quot;</span>, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  475</span> </div>
+<div class="line"><span class="lineno">  476</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Channel: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  477</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(CommunicationManager::isAuxChannelOpen(<span class="keyword">this</span>) ? <span class="stringliteral">&quot;Aux Open    &quot;</span> : <span class="stringliteral">&quot;Aux Closed &quot;</span>, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  478</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(CommunicationManager::isRemoteReady(<span class="keyword">this</span>) ? <span class="stringliteral">&quot;Comms Open    &quot;</span> : <span class="stringliteral">&quot;Comms Closed &quot;</span>, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Transmission: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  481</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCR</a>] &amp; <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_PENDING</a> ? <span class="stringliteral">&quot;Pending&quot;</span> : <span class="stringliteral">&quot;Done  &quot;</span>, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  482</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;CCR: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  483</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_HEX</a>(<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCR</a>], x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  484</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;CCSR: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  485</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_HEX</a>(<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCSR</a>], x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  486</span> </div>
+<div class="line"><span class="lineno">  487</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Sig: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  488</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>((<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCSR</a>] &gt;&gt; 3) &amp; 0x01, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  489</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Smp: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  490</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>((<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCSR</a>] &gt;&gt; 2) &amp; 0x01, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  491</span> </div>
+<div class="line"><span class="lineno">  492</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Write: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  493</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>((<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCSR</a>] &gt;&gt; 1) &amp; 0x01, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  494</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Read: &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  495</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(<a class="code hl_variable" href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a>[<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__CCSR</a>] &amp; 0x01, x + valueDisplacement, y++);</div>
+<div class="line"><span class="lineno">  496</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_a074bb96d4b297c6fd08e24db5d5d5b9d"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__CCSR</a></div><div class="ttdeci">#define __CCSR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:59</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a1b267ee832e66b7e065f5ccb876bf564a3a077e7df05e567cfea9ca9f6a5f75a8"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingAndReceivingPayload</a></div><div class="ttdeci">@ kCommunicationsStatusSendingAndReceivingPayload</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:45</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a1b267ee832e66b7e065f5ccb876bf564a54cac6f7790ff4ddd2cff5b29940b220"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingPayload</a></div><div class="ttdeci">@ kCommunicationsStatusSendingPayload</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:43</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a1b267ee832e66b7e065f5ccb876bf564a5900e73eb7b71efacc45158bce0d2078"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusWaitingPayload</a></div><div class="ttdeci">@ kCommunicationsStatusWaitingPayload</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:44</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a58457e42200392f6927d03ebe2546044"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__CCR</a></div><div class="ttdeci">#define __CCR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:58</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_a6a770a63a3c24fcb882369b635539ea0"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__COM_PENDING</a></div><div class="ttdeci">#define __COM_PENDING</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:64</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_ab80aad835d162788b0ab7e4910f9c227"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">_communicationRegisters</a></div><div class="ttdeci">volatile BYTE * _communicationRegisters</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:52</a></div></div>
+<div class="ttc" id="a_printing_8h_html_a94f55583bcb0aac45c7d5ec72fd013e0"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_HEX</a></div><div class="ttdeci">#define PRINT_HEX(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:34</a></div></div>
+<div class="ttc" id="a_printing_8h_html_aa3b793bbb3a63f36a0f6470a02eb536a"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_TEXT</a></div><div class="ttdeci">#define PRINT_TEXT(string, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:31</a></div></div>
+<div class="ttc" id="a_printing_8h_html_aa442798120532a77d6204683484b9f8e"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_INT</a></div><div class="ttdeci">#define PRINT_INT(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:32</a></div></div>
+<div class="ttc" id="a_printing_8h_html_adc12a333a523ada6e7aa58d89bd8cb91"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_TIME</a></div><div class="ttdeci">#define PRINT_TIME(x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:36</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+</div>
+</div>
+</div>
+<a id="a945fab9c729428cd07c7e1aa69aff1e1" name="a945fab9c729428cd07c7e1aa69aff1e1"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CommunicationManager::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">145</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">switch</span>(this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a>)</div>
+<div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusNone</a>:</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>            this-&gt;<a class="code hl_variable" href="#aaec002cac8fbcbaefde1956236f0ab1f">connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  152</span>            this-&gt;<a class="code hl_variable" href="#a4f180176461845e941d7695594852192">communicationMode</a> = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__COM_AS_REMOTE</a>;</div>
+<div class="line"><span class="lineno">  153</span>            this-&gt;<a class="code hl_variable" href="#a12e2d58bcda7770ba815477b1315dbe5">status</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusIdle</a>;</div>
+<div class="line"><span class="lineno">  154</span>            this-&gt;<a class="code hl_variable" href="#a1779dece0d4f73b7b8d5df9035158d16">broadcast</a> = <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsBroadcastNone</a>;</div>
+<div class="line"><span class="lineno">  155</span>            this-&gt;<a class="code hl_variable" href="#a97656b6dcca3a0ba545cfd55ab07f6f5">sentData</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  156</span>            this-&gt;<a class="code hl_variable" href="#a9b5fa646e8e977b51b0015d67a0335bc">syncSentByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  157</span>            this-&gt;<a class="code hl_variable" href="#aea7ac0af6764196eecdcf852b266dc58">asyncSentByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  158</span>            this-&gt;<a class="code hl_variable" href="#a6c7616815e162026776db4989d7a5d9a">receivedData</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  159</span>            this-&gt;<a class="code hl_variable" href="#afe4de88ebfa2eef4eaa6e898109bcb3c">syncReceivedByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  160</span>            this-&gt;<a class="code hl_variable" href="#ad7b8929fb76efd8c506a4699d364cb9e">asyncReceivedByte</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  161</span>            this-&gt;<a class="code hl_variable" href="#ad7fcb768b4e017bb1308ed40910013d9">numberOfBytesPreviouslySent</a> = 0;</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>            CommunicationManager::endCommunications(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="/documentation/api/-communication-manager-8c/">kCommunicationsStatusSendingHandshake</a>:</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>            <a class="code hl_function" href="#a2fc9703077f297b5e41535d92489500f">CommunicationManager::cancelCommunications</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span>}</div>
+<div class="ttc" id="aclass_communication_manager_html_ad7fcb768b4e017bb1308ed40910013d9"><div class="ttname"><a href="#ad7fcb768b4e017bb1308ed40910013d9">CommunicationManager::numberOfBytesPreviouslySent</a></div><div class="ttdeci">int32 numberOfBytesPreviouslySent</div><div class="ttdoc">Number of bytes already transmitted over the EXT port.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h:63</a></div></div>
+</div>
+</div>
+</div>
+<a id="a192fc9d36737a62c10d81e18f50da3cb" name="a192fc9d36737a62c10d81e18f50da3cb"></a>
+<h2 class="memtitle">sendAndReceiveData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::sendAndReceiveData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">WORD</a></td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">BYTE</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send and receive data synchronously over the EXT port if there is something detectable attached to it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">message</td><td>Control message for the receiving partner </td></tr>
+    <tr><td class="paramname">data</td><td>Data to broadcast </td></tr>
+    <tr><td class="paramname">numberOfBytes</td><td>Number of bytes to broadcast </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">391</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  392</span>{</div>
+<div class="line"><span class="lineno">  393</span>    <span class="keywordflow">return</span> CommunicationManager::startBidirectionalDataTransmission(<span class="keyword">this</span>, message, data, numberOfBytes);</div>
+<div class="line"><span class="lineno">  394</span>}</div>
+</div>
+</div>
+</div>
+<a id="ab29ed9fc4cd86ad751e52e19a2401307" name="ab29ed9fc4cd86ad751e52e19a2401307"></a>
+<h2 class="memtitle">sendAndReceiveDataAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::sendAndReceiveDataAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">WORD</a></td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">BYTE</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">int32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">EventListener</a></td>          <td class="paramname"><span class="paramname"><em>eventListener</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send and receive data asynchronously over the EXT port if there is something detectable attached to it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">message</td><td>Control message for the receiving partner </td></tr>
+    <tr><td class="paramname">data</td><td>Data to broadcast </td></tr>
+    <tr><td class="paramname">numberOfBytes</td><td>Number of bytes to broadcast </td></tr>
+    <tr><td class="paramname">eventListener</td><td>Callback method for when a connection is stablished </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">398</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  402</span>{</div>
+<div class="line"><span class="lineno">  403</span>    <span class="keywordflow">return</span> CommunicationManager::startBidirectionalDataTransmissionAsync(<span class="keyword">this</span>, message, data, numberOfBytes, eventLister, scope);</div>
+<div class="line"><span class="lineno">  404</span>}</div>
+</div>
+</div>
+</div>
+<a id="a16fe28a8ca65d348e8b28aeff05eb6b5" name="a16fe28a8ca65d348e8b28aeff05eb6b5"></a>
+<h2 class="memtitle">startSyncCycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void CommunicationManager::startSyncCycle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Start the sync procedure according to the official documentation once a connection has been stablished. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8c-source/">259</a> of file <a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>{</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#aaec002cac8fbcbaefde1956236f0ab1f">connected</a>)</div>
+<div class="line"><span class="lineno">  262</span>    {</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>    <span class="keyword">extern</span> <span class="keyword">volatile</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a>* _vipRegisters;</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__FRMCYC</a>] = 0;</div>
+<div class="line"><span class="lineno">  269</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__DPCTRL</a>] = _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__DPSTTS</a>] | (<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__SYNCE</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__RE</a>);</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>    <a class="code hl_function" href="#a2fc9703077f297b5e41535d92489500f">CommunicationManager::cancelCommunications</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#af7b6d395275d7fbe0c57e56243cec693">CommunicationManager::isMaster</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  274</span>    {</div>
+<div class="line"><span class="lineno">  275</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> message = 0;</div>
+<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  277</span>        {</div>
+<div class="line"><span class="lineno">  278</span>            CommunicationManager::receiveData(<span class="keyword">this</span>, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)&amp;message, <span class="keyword">sizeof</span>(message));</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">while</span>(<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__REMOTE_READY_MESSAGE</a> != message);</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>        message = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__MASTER_FRMCYC_SET_MESSAGE</a>;</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">while</span>(!(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__DPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__FCLK</a>));</div>
+<div class="line"><span class="lineno">  284</span>        CommunicationManager::sendData(<span class="keyword">this</span>, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)&amp;message, <span class="keyword">sizeof</span>(message));</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="line"><span class="lineno">  286</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  287</span>    {</div>
+<div class="line"><span class="lineno">  288</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> message = <a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__REMOTE_READY_MESSAGE</a>;</div>
+<div class="line"><span class="lineno">  289</span>        CommunicationManager::sendData(<span class="keyword">this</span>, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)&amp;message, <span class="keyword">sizeof</span>(message));</div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            CommunicationManager::receiveData(<span class="keyword">this</span>, (<a class="code hl_typedef" href="/documentation/api/-types-8h/">BYTE</a>*)&amp;message, <span class="keyword">sizeof</span>(message));</div>
+<div class="line"><span class="lineno">  294</span>        }</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">while</span>(<a class="code hl_define" href="/documentation/api/-communication-manager-8c/">__MASTER_FRMCYC_SET_MESSAGE</a> != message);</div>
+<div class="line"><span class="lineno">  296</span>    }</div>
+<div class="line"><span class="lineno">  297</span>}</div>
+<div class="ttc" id="a_communication_manager_8c_html_a8c24a70d7e3955c0fa4e76b19b7888dc"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__MASTER_FRMCYC_SET_MESSAGE</a></div><div class="ttdeci">#define __MASTER_FRMCYC_SET_MESSAGE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:83</a></div></div>
+<div class="ttc" id="a_communication_manager_8c_html_ae89a655cf9d2aa84118a43fe76788551"><div class="ttname"><a href="/documentation/api/-communication-manager-8c/">__REMOTE_READY_MESSAGE</a></div><div class="ttdeci">#define __REMOTE_READY_MESSAGE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c:82</a></div></div>
+<div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
+<div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a1dd01cf3a1d1c5174a66b4e37a1a3d9e"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__DPSTTS</a></div><div class="ttdeci">#define __DPSTTS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:65</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a543fc0aa9d9fd72f147ea5bad176ba66"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__DPCTRL</a></div><div class="ttdeci">#define __DPCTRL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:66</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a78f3e8d01b5297312cb90ecd32351703"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__FRMCYC</a></div><div class="ttdeci">#define __FRMCYC</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:72</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a9e51c7a611d72bbeefd10c5df19892a4"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__FCLK</a></div><div class="ttdeci">#define __FCLK</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:45</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ac0893b19651016c429f58a394c66a9c2"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__SYNCE</a></div><div class="ttdeci">#define __SYNCE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:43</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ac82e77944801600c1ba66b90dd54f26f"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__RE</a></div><div class="ttdeci">#define __RE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:44</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad7b8929fb76efd8c506a4699d364cb9e" name="ad7b8929fb76efd8c506a4699d364cb9e"></a>
+<h2 class="memtitle">asyncReceivedByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* CommunicationManager::asyncReceivedByte</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Last byte received asynchronously over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">57</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aea7ac0af6764196eecdcf852b266dc58" name="aea7ac0af6764196eecdcf852b266dc58"></a>
+<h2 class="memtitle">asyncSentByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* CommunicationManager::asyncSentByte</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Last byte sent asynchronously over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">54</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a1779dece0d4f73b7b8d5df9035158d16" name="a1779dece0d4f73b7b8d5df9035158d16"></a>
+<h2 class="memtitle">broadcast</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">uint32</a> CommunicationManager::broadcast</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Status of broadcast communications. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">66</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a4f180176461845e941d7695594852192" name="a4f180176461845e941d7695594852192"></a>
+<h2 class="memtitle">communicationMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">uint8</a> CommunicationManager::communicationMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Keeps track of the role as master or slave that the system holds in data transmissions. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">72</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="aaec002cac8fbcbaefde1956236f0ab1f" name="aaec002cac8fbcbaefde1956236f0ab1f"></a>
+<h2 class="memtitle">connected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a> CommunicationManager::connected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag that indicates if there is something connected to the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">69</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a63d34befd05b3e2545365caa7f1ee763" name="a63d34befd05b3e2545365caa7f1ee763"></a>
+<h2 class="memtitle">numberOfBytesPendingTransmission</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">int32</a> CommunicationManager::numberOfBytesPendingTransmission</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of bytes pending transmission over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">60</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ad7fcb768b4e017bb1308ed40910013d9" name="ad7fcb768b4e017bb1308ed40910013d9"></a>
+<h2 class="memtitle">numberOfBytesPreviouslySent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">int32</a> CommunicationManager::numberOfBytesPreviouslySent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of bytes already transmitted over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">63</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6c7616815e162026776db4989d7a5d9a" name="a6c7616815e162026776db4989d7a5d9a"></a>
+<h2 class="memtitle">receivedData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* CommunicationManager::receivedData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data received over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">45</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a97656b6dcca3a0ba545cfd55ab07f6f5" name="a97656b6dcca3a0ba545cfd55ab07f6f5"></a>
+<h2 class="memtitle">sentData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* CommunicationManager::sentData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data sent over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">42</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a12e2d58bcda7770ba815477b1315dbe5" name="a12e2d58bcda7770ba815477b1315dbe5"></a>
+<h2 class="memtitle">status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">int32</a> CommunicationManager::status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Status of the communications. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">39</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="afe4de88ebfa2eef4eaa6e898109bcb3c" name="afe4de88ebfa2eef4eaa6e898109bcb3c"></a>
+<h2 class="memtitle">syncReceivedByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* CommunicationManager::syncReceivedByte</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Last byte received synchronously over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">51</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b5fa646e8e977b51b0015d67a0335bc" name="a9b5fa646e8e977b51b0015d67a0335bc"></a>
+<h2 class="memtitle">syncSentByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">BYTE</a>* CommunicationManager::syncSentByte</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Last byte sent synchronously over the EXT port. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-communication-manager-8h-source/">48</a> of file <a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="/documentation/api/-communication-manager-8h-source/">CommunicationManager.h</a></li>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="/documentation/api/-communication-manager-8c-source/">CommunicationManager.c</a></li>
+</ul>
+</div>
+
+
+</div>

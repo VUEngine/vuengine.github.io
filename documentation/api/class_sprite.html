@@ -126,11 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe2a14a2e0e00fc6944f81c1a43ea499" id="r_abe2a14a2e0e00fc6944f81c1a43ea499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe2a14a2e0e00fc6944f81c1a43ea499">invalidateRendering</a> ()</td></tr>
 <tr class="memdesc:abe2a14a2e0e00fc6944f81c1a43ea499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate the flags that determine if the sprite requires rendering.  <br /></td></tr>
 
-<tr class="memitem:a07cf40d8ffbb8565c0f8c5f5b0b75346" id="r_a07cf40d8ffbb8565c0f8c5f5b0b75346"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07cf40d8ffbb8565c0f8c5f5b0b75346">registerWithManager</a> ()=0</td></tr>
-<tr class="memdesc:a07cf40d8ffbb8565c0f8c5f5b0b75346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register this sprite with the appropriate sprites manager.  <br /></td></tr>
+<tr class="memitem:a37e20b921725364eaa250f7b501c6b9f" id="r_a37e20b921725364eaa250f7b501c6b9f"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37e20b921725364eaa250f7b501c6b9f">getManager</a> ()</td></tr>
 
-<tr class="memitem:ac3a1e47d9db69930636f255d45e567ce" id="r_ac3a1e47d9db69930636f255d45e567ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3a1e47d9db69930636f255d45e567ce">unregisterWithManager</a> ()=0</td></tr>
-<tr class="memdesc:ac3a1e47d9db69930636f255d45e567ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unegister this sprite with the appropriate sprites manager.  <br /></td></tr>
+<tr class="memitem:a108cf8ab7a544554bbfd6d44413d81ff" id="r_a108cf8ab7a544554bbfd6d44413d81ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a108cf8ab7a544554bbfd6d44413d81ff">getManagerClass</a> ()=0</td></tr>
 
 <tr class="memitem:a2b1cccfcdef9f18134b39f99a4124d4a" id="r_a2b1cccfcdef9f18134b39f99a4124d4a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b1cccfcdef9f18134b39f99a4124d4a">hasSpecialEffects</a> ()</td></tr>
 
@@ -360,36 +358,36 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">50</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
-<div class="line"><span class="lineno">   52</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
-<div class="line"><span class="lineno">   53</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, (<span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/class-visual-component/">VisualComponentSpec</a>*)&amp;spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">visualComponentSpec</a>);</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>    <span class="comment">// Clear values</span></div>
-<div class="line"><span class="lineno">   56</span>    this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a>;</div>
-<div class="line"><span class="lineno">   57</span>    this-&gt;<a class="code hl_variable" href="#ab0b07fc114d06a143184727cfa6de561">head</a> = 0;</div>
-<div class="line"><span class="lineno">   58</span>    this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">   59</span>    this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> = 0;</div>
-<div class="line"><span class="lineno">   60</span>    this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> = 0;</div>
-<div class="line"><span class="lineno">   61</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a>;</div>
-<div class="line"><span class="lineno">   62</span>    this-&gt;<a class="code hl_variable" href="#a8e04cea2969b211ed291467c1711a183">checkIfWithinScreenSpace</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   63</span>    this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">PixelVector</a>){0, 0, 0, 0};</div>
-<div class="line"><span class="lineno">   64</span>    this-&gt;<a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Rotation</a>){0, 0, 0};</div>
-<div class="line"><span class="lineno">   65</span>    this-&gt;<a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">PixelScale</a>){<a class="code hl_define" href="/documentation/api/-math-8h/">__1I_FIX7_9</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__1I_FIX7_9</a>};</div>
-<div class="line"><span class="lineno">   66</span>    this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a> = <a class="code hl_function" href="/documentation/api/struct-pixel-vector/">PixelVector::zero</a>();</div>
-<div class="line"><span class="lineno">   67</span>    this-&gt;<a class="code hl_variable" href="#a3a2ebc345bf023a5b13176afc367d093">hasTextures</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != spriteSpec)</div>
-<div class="line"><span class="lineno">   70</span>    {</div>
-<div class="line"><span class="lineno">   71</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">transparency</a>;</div>
-<div class="line"><span class="lineno">   72</span>        </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">textureSpec</a>)</div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> = spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">textureSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-texture-spec/">cols</a> &lt;&lt; 2;</div>
-<div class="line"><span class="lineno">   76</span>            this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> = spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">textureSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-texture-spec/">rows</a> &lt;&lt; 2;</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="line"><span class="lineno">   79</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">49</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   52</span>    Base::constructor(<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>, (<span class="keyword">const</span> <a class="code hl_typedef" href="/documentation/api/class-visual-component/">VisualComponentSpec</a>*)&amp;spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">visualComponentSpec</a>);</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="comment">// Clear values</span></div>
+<div class="line"><span class="lineno">   55</span>    this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a>;</div>
+<div class="line"><span class="lineno">   56</span>    this-&gt;<a class="code hl_variable" href="#ab0b07fc114d06a143184727cfa6de561">head</a> = 0;</div>
+<div class="line"><span class="lineno">   57</span>    this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   58</span>    this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> = 0;</div>
+<div class="line"><span class="lineno">   59</span>    this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> = 0;</div>
+<div class="line"><span class="lineno">   60</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a>;</div>
+<div class="line"><span class="lineno">   61</span>    this-&gt;<a class="code hl_variable" href="#a8e04cea2969b211ed291467c1711a183">checkIfWithinScreenSpace</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   62</span>    this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">PixelVector</a>){0, 0, 0, 0};</div>
+<div class="line"><span class="lineno">   63</span>    this-&gt;<a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Rotation</a>){0, 0, 0};</div>
+<div class="line"><span class="lineno">   64</span>    this-&gt;<a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a> = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">PixelScale</a>){<a class="code hl_define" href="/documentation/api/-math-8h/">__1I_FIX7_9</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__1I_FIX7_9</a>};</div>
+<div class="line"><span class="lineno">   65</span>    this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a> = <a class="code hl_function" href="/documentation/api/struct-pixel-vector/">PixelVector::zero</a>();</div>
+<div class="line"><span class="lineno">   66</span>    this-&gt;<a class="code hl_variable" href="#a3a2ebc345bf023a5b13176afc367d093">hasTextures</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != spriteSpec)</div>
+<div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">transparency</a>;</div>
+<div class="line"><span class="lineno">   71</span>        </div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">textureSpec</a>)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> = spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">textureSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-texture-spec/">cols</a> &lt;&lt; 2;</div>
+<div class="line"><span class="lineno">   75</span>            this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> = spriteSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-sprite-spec/">textureSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-texture-spec/">rows</a> &lt;&lt; 2;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
 <div class="ttc" id="a_constants_8h_html_a7f6fe1e96ba62511361a4da26ba22cf2"><div class="ttname"><a href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a></div><div class="ttdeci">#define __TRANSPARENCY_NONE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:79</a></div></div>
 <div class="ttc" id="a_constants_8h_html_aa53f7e054a332adcc8a9dfe08c0afc6f"><div class="ttname"><a href="/documentation/api/-constants-8h/">__NO_RENDER_INDEX</a></div><div class="ttdeci">#define __NO_RENDER_INDEX</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:83</a></div></div>
@@ -446,23 +444,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">116</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>{</div>
-<div class="line"><span class="lineno">  118</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a> = <span class="keyword">new</span> AnimationController();</div>
-<div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>))</div>
-<div class="line"><span class="lineno">  121</span>    {</div>
-<div class="line"><span class="lineno">  122</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="line"><span class="lineno">  125</span>    </div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>) &amp;&amp; <a class="code hl_function" href="/documentation/api/class-texture/">Texture::isSingleFrame</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>) &amp;&amp; <a class="code hl_function" href="/documentation/api/class-texture/">Texture::isShared</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>))</div>
-<div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span>        <a class="code hl_function" href="/documentation/api/class-animation-controller/">AnimationController::setAnimationCoordinator</a></div>
-<div class="line"><span class="lineno">  129</span>        (</div>
-<div class="line"><span class="lineno">  130</span>            this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>,</div>
-<div class="line"><span class="lineno">  131</span>            <a class="code hl_function" href="/documentation/api/class-animation-coordinator-factory/">AnimationCoordinatorFactory::getCoordinator</a></div>
-<div class="line"><span class="lineno">  132</span>            (</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">115</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a> = <span class="keyword">new</span> AnimationController();</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>))</div>
+<div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span>    </div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>) &amp;&amp; <a class="code hl_function" href="/documentation/api/class-texture/">Texture::isSingleFrame</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>) &amp;&amp; <a class="code hl_function" href="/documentation/api/class-texture/">Texture::isShared</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>))</div>
+<div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_function" href="/documentation/api/class-animation-controller/">AnimationController::setAnimationCoordinator</a></div>
+<div class="line"><span class="lineno">  128</span>        (</div>
+<div class="line"><span class="lineno">  129</span>            this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>,</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_function" href="/documentation/api/class-animation-coordinator-factory/">AnimationCoordinatorFactory::getCoordinator</a></div>
+<div class="line"><span class="lineno">  131</span>            (</div>
+<div class="line"><span class="lineno">  132</span>                AnimationCoordinatorFactory::getInstance(),</div>
 <div class="line"><span class="lineno">  133</span>                this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">animationController</a>, </div>
 <div class="line"><span class="lineno">  134</span>                ListenerObject::safeCast(this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>), </div>
 <div class="line"><span class="lineno">  135</span>                <a class="code hl_function" href="/documentation/api/class-texture/">Texture::getSpec</a>(this-&gt;<a class="code hl_variable" href="#aa4978b284ebaae7225869d238dcb32cb">texture</a>)-&gt;charSetSpec</div>
@@ -471,7 +470,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  138</span>    }</div>
 <div class="line"><span class="lineno">  139</span>}</div>
 <div class="ttc" id="aclass_animation_controller_html_a84a0542cd9f9902bdccb5c0dfff1646a"><div class="ttname"><a href="/documentation/api/class-animation-controller/">AnimationController::setAnimationCoordinator</a></div><div class="ttdeci">void setAnimationCoordinator(AnimationCoordinator animationCoordinator)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-controller-8c-source/">AnimationController.c:432</a></div></div>
-<div class="ttc" id="aclass_animation_coordinator_factory_html_a05e079dc44fba81cfe176c9d6e89ec9d"><div class="ttname"><a href="/documentation/api/class-animation-coordinator-factory/">AnimationCoordinatorFactory::getCoordinator</a></div><div class="ttdeci">static AnimationCoordinator getCoordinator(AnimationController animationController, ListenerObject scope, const CharSetSpec *charSetSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-coordinator-factory-8c-source/">AnimationCoordinatorFactory.c:44</a></div></div>
+<div class="ttc" id="aclass_animation_coordinator_factory_html_aaf4a3410af1379276f2bb88db3f7d49e"><div class="ttname"><a href="/documentation/api/class-animation-coordinator-factory/">AnimationCoordinatorFactory::getCoordinator</a></div><div class="ttdeci">AnimationCoordinator getCoordinator(AnimationController animationController, ListenerObject scope, const CharSetSpec *charSetSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-animation-coordinator-factory-8c-source/">AnimationCoordinatorFactory.c:42</a></div></div>
 <div class="ttc" id="aclass_texture_html_a279d3cfa1772245c11cadfd9d6f8d9ae"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::isSingleFrame</a></div><div class="ttdeci">bool isSingleFrame()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:495</a></div></div>
 <div class="ttc" id="aclass_texture_html_a310696e565a2ada2a8f74ad0ba7c904d"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::getSpec</a></div><div class="ttdeci">const TextureSpec * getSpec()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:361</a></div></div>
 <div class="ttc" id="aclass_texture_html_ad7df7f4eccb01575708a2ce99286fda9"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::isShared</a></div><div class="ttdeci">bool isShared()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:478</a></div></div>
@@ -582,12 +581,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">594</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  595</span>{</div>
-<div class="line"><span class="lineno">  596</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">show</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__HIDE</a>;</div>
-<div class="line"><span class="lineno">  597</span> </div>
-<div class="line"><span class="lineno">  598</span>    <a class="code hl_function" href="#ac8c0409bdf28f9379d3c7e5cc270b807">Sprite::setPosition</a>(<span class="keyword">this</span>, &amp;this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>);</div>
-<div class="line"><span class="lineno">  599</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">601</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  602</span>{</div>
+<div class="line"><span class="lineno">  603</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">show</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__HIDE</a>;</div>
+<div class="line"><span class="lineno">  604</span> </div>
+<div class="line"><span class="lineno">  605</span>    <a class="code hl_function" href="#ac8c0409bdf28f9379d3c7e5cc270b807">Sprite::setPosition</a>(<span class="keyword">this</span>, &amp;this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>);</div>
+<div class="line"><span class="lineno">  606</span>}</div>
 <div class="ttc" id="a_constants_8h_html_afef53cc1caa07ee1657ac2fc00abbe42"><div class="ttname"><a href="/documentation/api/-constants-8h/">__HIDE</a></div><div class="ttdeci">#define __HIDE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:188</a></div></div>
 <div class="ttc" id="aclass_sprite_html_ac8c0409bdf28f9379d3c7e5cc270b807"><div class="ttname"><a href="#ac8c0409bdf28f9379d3c7e5cc270b807">Sprite::setPosition</a></div><div class="ttdeci">void setPosition(const PixelVector *position)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:469</a></div></div>
 <div class="ttc" id="aclass_visual_component_html_ae666f83fa86525a20e1f120d4d2ee740"><div class="ttname"><a href="/documentation/api/class-visual-component/">VisualComponent::show</a></div><div class="ttdeci">uint8 show</div><div class="ttdoc">Show state flag (__HIDE, __SHOW_NEXT_FRAME, __SHOW)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-visual-component-8h-source/">VisualComponent.h:96</a></div></div>
@@ -621,12 +620,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">585</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  586</span>{</div>
-<div class="line"><span class="lineno">  587</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">show</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__SHOW</a>;</div>
-<div class="line"><span class="lineno">  588</span> </div>
-<div class="line"><span class="lineno">  589</span>    <a class="code hl_function" href="#ac8c0409bdf28f9379d3c7e5cc270b807">Sprite::setPosition</a>(<span class="keyword">this</span>, &amp;this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>);</div>
-<div class="line"><span class="lineno">  590</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">592</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  593</span>{</div>
+<div class="line"><span class="lineno">  594</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">show</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__SHOW</a>;</div>
+<div class="line"><span class="lineno">  595</span> </div>
+<div class="line"><span class="lineno">  596</span>    <a class="code hl_function" href="#ac8c0409bdf28f9379d3c7e5cc270b807">Sprite::setPosition</a>(<span class="keyword">this</span>, &amp;this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>);</div>
+<div class="line"><span class="lineno">  597</span>}</div>
 <div class="ttc" id="a_constants_8h_html_aadf205eeb6345cc8df01a860f784f0e1"><div class="ttname"><a href="/documentation/api/-constants-8h/">__SHOW</a></div><div class="ttdeci">#define __SHOW</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:190</a></div></div>
 </div>
 </div>
@@ -714,7 +713,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_v_i_p_manager_8h_html_a1714d848093e67716ac55dc8bf5754c6"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a></div><div class="ttdeci">WorldAttributes _worldAttributesCache[__TOTAL_LAYERS]</div></div>
 <div class="ttc" id="a_v_i_p_manager_8h_html_abc07e0a37c68c8b2b1921b4c77579d54"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a></div><div class="ttdeci">struct WorldAttributes WorldAttributes</div></div>
 <div class="ttc" id="aclass_sprite_html_aa2bfadbf85ac3dcb291d62802bb3609d"><div class="ttname"><a href="#aa2bfadbf85ac3dcb291d62802bb3609d">Sprite::isObject</a></div><div class="ttdeci">bool isObject()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:448</a></div></div>
-<div class="ttc" id="astruct_world_attributes_html_afa6a23e6d1f88f29ec84088763289a17"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::head</a></div><div class="ttdeci">uint16 head</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:149</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_afa6a23e6d1f88f29ec84088763289a17"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::head</a></div><div class="ttdeci">uint16 head</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:148</a></div></div>
 </div>
 </div>
 </div>
@@ -745,7 +744,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  344</span>    <span class="keywordflow">return</span> 0 &gt; (<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a>)worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">h</a> ? 0 : worldPointer-&gt;h;</div>
 <div class="line"><span class="lineno">  345</span>}</div>
 <div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
-<div class="ttc" id="astruct_world_attributes_html_a66d953ec55e766f754ed1893b8ecd92d"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::h</a></div><div class="ttdeci">uint16 h</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:157</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a66d953ec55e766f754ed1893b8ecd92d"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::h</a></div><div class="ttdeci">uint16 h</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:156</a></div></div>
 </div>
 </div>
 </div>
@@ -775,7 +774,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  421</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  422</span>    <span class="keywordflow">return</span> worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">mp</a>;</div>
 <div class="line"><span class="lineno">  423</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_a6b65501a6ae7e2383552dbb6e7e20123"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::mp</a></div><div class="ttdeci">int16 mp</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:154</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a6b65501a6ae7e2383552dbb6e7e20123"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::mp</a></div><div class="ttdeci">int16 mp</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:153</a></div></div>
 </div>
 </div>
 </div>
@@ -805,7 +804,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  395</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  396</span>    <span class="keywordflow">return</span> worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">mx</a>;</div>
 <div class="line"><span class="lineno">  397</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_a9a8615b4de66ad6238fbb3e20aee0a08"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::mx</a></div><div class="ttdeci">uint16 mx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:153</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a9a8615b4de66ad6238fbb3e20aee0a08"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::mx</a></div><div class="ttdeci">uint16 mx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:152</a></div></div>
 </div>
 </div>
 </div>
@@ -835,7 +834,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  408</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  409</span>    <span class="keywordflow">return</span> worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">my</a>;</div>
 <div class="line"><span class="lineno">  410</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_aaf1f412fc7b6698551060b52a86fede2"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::my</a></div><div class="ttdeci">uint16 my</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:155</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_aaf1f412fc7b6698551060b52a86fede2"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::my</a></div><div class="ttdeci">uint16 my</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:154</a></div></div>
 </div>
 </div>
 </div>
@@ -865,7 +864,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  382</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  383</span>    <span class="keywordflow">return</span> worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">gp</a>;</div>
 <div class="line"><span class="lineno">  384</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_aab6263a482dd9b7d942de94c70fa3c3d"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gp</a></div><div class="ttdeci">int16 gp</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:151</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_aab6263a482dd9b7d942de94c70fa3c3d"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gp</a></div><div class="ttdeci">int16 gp</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:150</a></div></div>
 </div>
 </div>
 </div>
@@ -895,7 +894,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  330</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  331</span>    <span class="keywordflow">return</span> 0 &gt; (<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a>)worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">w</a> ? 0 : worldPointer-&gt;w;</div>
 <div class="line"><span class="lineno">  332</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_af739afd6d875fed53d946b23dcbb32d9"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::w</a></div><div class="ttdeci">uint16 w</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:156</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_af739afd6d875fed53d946b23dcbb32d9"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::w</a></div><div class="ttdeci">uint16 w</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:155</a></div></div>
 </div>
 </div>
 </div>
@@ -925,7 +924,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  356</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  357</span>    <span class="keywordflow">return</span> worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">gx</a>;</div>
 <div class="line"><span class="lineno">  358</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_acb9f15818e3cd2a067a9774014dc6a49"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gx</a></div><div class="ttdeci">int16 gx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:150</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_acb9f15818e3cd2a067a9774014dc6a49"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gx</a></div><div class="ttdeci">int16 gx</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:149</a></div></div>
 </div>
 </div>
 </div>
@@ -955,7 +954,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  369</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">WorldAttributes</a>* worldPointer = &amp;<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8h/">_worldAttributesCache</a>[this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>];</div>
 <div class="line"><span class="lineno">  370</span>    <span class="keywordflow">return</span> worldPointer-&gt;<a class="code hl_variable" href="/documentation/api/struct-world-attributes/">gy</a>;</div>
 <div class="line"><span class="lineno">  371</span>}</div>
-<div class="ttc" id="astruct_world_attributes_html_a660bf7636cff565e0d5d1f3660079be4"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gy</a></div><div class="ttdeci">int16 gy</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:152</a></div></div>
+<div class="ttc" id="astruct_world_attributes_html_a660bf7636cff565e0d5d1f3660079be4"><div class="ttname"><a href="/documentation/api/struct-world-attributes/">WorldAttributes::gy</a></div><div class="ttdeci">int16 gy</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:151</a></div></div>
 </div>
 </div>
 </div>
@@ -1051,6 +1050,67 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 </div>
+<a id="a37e20b921725364eaa250f7b501c6b9f" name="a37e20b921725364eaa250f7b501c6b9f"></a>
+<h2 class="memtitle">getManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void * Sprite::getManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the sprite's manager. </p><dl class="section return"><dt>Returns</dt><dd>Generic pointer to the manager </dd></dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">563</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  564</span>{</div>
+<div class="line"><span class="lineno">  565</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  566</span>}</div>
+</div>
+</div>
+</div>
+<a id="a108cf8ab7a544554bbfd6d44413d81ff" name="a108cf8ab7a544554bbfd6d44413d81ff"></a>
+<h2 class="memtitle">getManagerClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">virtual <a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> Sprite::getManagerClass </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the class of the manager for the sprite. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/-oop-8h/" title="typedef for RTTI">ClassPointer</a> of the manager </dd></dl>
+
+<p>Implemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>, and <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>.</p>
+
+</div>
+</div>
 <a id="aeeb64ba35ee240a6e021c210066742bd" name="aeeb64ba35ee240a6e021c210066742bd"></a>
 <h2 class="memtitle">getPosition()</h2>
 
@@ -1101,35 +1161,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component/">Component</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">91</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>{</div>
-<div class="line"><span class="lineno">   93</span><span class="preprocessor">#ifndef __RELEASE</span></div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> || 0 == this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a>)</div>
-<div class="line"><span class="lineno">   95</span>    {</div>
-<div class="line"><span class="lineno">   96</span>        Printing::setDebugMode();</div>
-<div class="line"><span class="lineno">   97</span>        Printing::clear();</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_HEX</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>, 1, 27);</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="/documentation/api/class-error/">Error::triggerException</a>(<span class="stringliteral">&quot;Sprite::getRightBox: 0 size sprite&quot;</span>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="line"><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">RightBox</a>) </div>
-<div class="line"><span class="lineno">  104</span>    {</div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.x),</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.y),</div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-<a class="code hl_define" href="/documentation/api/-sprite-8c/">SPRITE_HALF_DEPTH</a>), </div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.x),</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.y),</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(<a class="code hl_define" href="/documentation/api/-sprite-8c/">SPRITE_HALF_DEPTH</a>),</div>
-<div class="line"><span class="lineno">  111</span>    };</div>
-<div class="line"><span class="lineno">  112</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">90</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>{</div>
+<div class="line"><span class="lineno">   92</span><span class="preprocessor">#ifndef __RELEASE</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span>(0 == this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> || 0 == this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a>)</div>
+<div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::setDebugMode</a>();</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::clear</a>();</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_HEX</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)this-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>, 1, 27);</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="/documentation/api/class-error/">Error::triggerException</a>(<span class="stringliteral">&quot;Sprite::getRightBox: 0 size sprite&quot;</span>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> (<a class="code hl_typedef" href="/documentation/api/-types-8h/">RightBox</a>) </div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.x),</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.y),</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-<a class="code hl_define" href="/documentation/api/-sprite-8c/">SPRITE_HALF_DEPTH</a>), </div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.x),</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> + this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.y),</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(<a class="code hl_define" href="/documentation/api/-sprite-8c/">SPRITE_HALF_DEPTH</a>),</div>
+<div class="line"><span class="lineno">  110</span>    };</div>
+<div class="line"><span class="lineno">  111</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a23e8e373f81337a78ab83b09c1559af1"><div class="ttname"><a href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a></div><div class="ttdeci">#define __PIXELS_TO_METERS(pixels)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:177</a></div></div>
 <div class="ttc" id="a_printing_8h_html_a94f55583bcb0aac45c7d5ec72fd013e0"><div class="ttname"><a href="/documentation/api/-printing-8h/">PRINT_HEX</a></div><div class="ttdeci">#define PRINT_HEX(number, x, y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:34</a></div></div>
-<div class="ttc" id="a_sprite_8c_html_ae1eb47fa25acc2f56fcb62c20fd32c33"><div class="ttname"><a href="/documentation/api/-sprite-8c/">SPRITE_HALF_DEPTH</a></div><div class="ttdeci">#define SPRITE_HALF_DEPTH</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:42</a></div></div>
+<div class="ttc" id="a_sprite_8c_html_ae1eb47fa25acc2f56fcb62c20fd32c33"><div class="ttname"><a href="/documentation/api/-sprite-8c/">SPRITE_HALF_DEPTH</a></div><div class="ttdeci">#define SPRITE_HALF_DEPTH</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:41</a></div></div>
 <div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
 <div class="ttc" id="a_types_8h_html_ace60101ed91783f79ada4ffe1b3525b5"><div class="ttname"><a href="/documentation/api/-types-8h/">RightBox</a></div><div class="ttdeci">struct RightBox RightBox</div></div>
 <div class="ttc" id="aclass_component_html_ada6fd2c1a873fe14efcc7db63d7a5d7e"><div class="ttname"><a href="/documentation/api/class-component/">Component::componentSpec</a></div><div class="ttdeci">const ComponentSpec * componentSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the component.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:84</a></div></div>
 <div class="ttc" id="aclass_error_html_a317637c6509c9da9ad1464fba1f3ecbf"><div class="ttname"><a href="/documentation/api/class-error/">Error::triggerException</a></div><div class="ttdeci">static void triggerException(char *message, char *detail)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-error-8c-source/">Error.c:48</a></div></div>
+<div class="ttc" id="aclass_printing_html_a99d5252d7ee3b715fd4189063f69252f"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::clear</a></div><div class="ttdeci">static void clear()</div><div class="ttdoc">Clear printing area in BGMAP memory.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:264</a></div></div>
+<div class="ttc" id="aclass_printing_html_aad0f1a46e008887c9f68670625d37497"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::setDebugMode</a></div><div class="ttdeci">static void setDebugMode()</div><div class="ttdoc">Set mode to debug to bypass loading fonts through CharSets.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:104</a></div></div>
 </div>
 </div>
 </div>
@@ -1210,10 +1272,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">563</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  564</span>{</div>
-<div class="line"><span class="lineno">  565</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  566</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">570</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  571</span>{</div>
+<div class="line"><span class="lineno">  572</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  573</span>}</div>
 </div>
 </div>
 </div>
@@ -1425,112 +1487,115 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">629</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  630</span>{</div>
-<div class="line"><span class="lineno">  631</span>    <span class="comment">// Allow normal rendering once for WORLD values to populate properly</span></div>
-<div class="line"><span class="lineno">  632</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a>;</div>
-<div class="line"><span class="lineno">  633</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a>;</div>
-<div class="line"><span class="lineno">  634</span> </div>
-<div class="line"><span class="lineno">  635</span>    Printing::text(<span class="stringliteral">&quot;SPRITE &quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  636</span>    Printing::text(<span class="stringliteral">&quot;Class: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  637</span>    Printing::text(<a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  638</span>    Printing::text(<span class="stringliteral">&quot;Mode:&quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  639</span> </div>
-<div class="line"><span class="lineno">  640</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#aa2bfadbf85ac3dcb291d62802bb3609d">Sprite::isObject</a>(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  641</span>    {</div>
-<div class="line"><span class="lineno">  642</span>        Printing::text(<span class="stringliteral">&quot;OBJECT   &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  643</span>    }</div>
-<div class="line"><span class="lineno">  644</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="#a9abc4fe1a45871687249a62a385fd827">Sprite::isAffine</a>(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  645</span>    {</div>
-<div class="line"><span class="lineno">  646</span>        Printing::text(<span class="stringliteral">&quot;AFFINE   &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  647</span>    }</div>
-<div class="line"><span class="lineno">  648</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="#a1d70b0c45c163f7b1a1320a856604d69">Sprite::isHBias</a>(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  649</span>    {</div>
-<div class="line"><span class="lineno">  650</span>        Printing::text(<span class="stringliteral">&quot;H-BIAS   &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  651</span>    }</div>
-<div class="line"><span class="lineno">  652</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="#aaf8fe49ab3d975dfae52b515b415ab54">Sprite::isBgmap</a>(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  653</span>    {</div>
-<div class="line"><span class="lineno">  654</span>        Printing::text(<span class="stringliteral">&quot;BGMAP    &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  655</span>    }</div>
-<div class="line"><span class="lineno">  656</span> </div>
-<div class="line"><span class="lineno">  657</span>    Printing::text(<span class="stringliteral">&quot;Index: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  658</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  659</span>    Printing::text(<span class="stringliteral">&quot;Head:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  660</span>    Printing::hex(<a class="code hl_function" href="#ac5c8a8276abf7bf231dfa43b37760b0d">Sprite::getEffectiveHead</a>(<span class="keyword">this</span>), x + 18, y, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  661</span>    Printing::text(<span class="stringliteral">&quot;Transparent:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  662</span>    Printing::text(<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> &gt; 0 ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  663</span>    Printing::text(<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> == 1 ? <span class="stringliteral">&quot;(Even)&quot;</span> : (<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> == 2) ? <span class="stringliteral">&quot;(Odd)&quot;</span> : <span class="stringliteral">&quot;&quot;</span>, x + 20, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  664</span>    Printing::text(<span class="stringliteral">&quot;Shown:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  665</span>    Printing::text(<a class="code hl_define" href="/documentation/api/-constants-8h/">__HIDE</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">show</a> ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  666</span> </div>
-<div class="line"><span class="lineno">  667</span>    Printing::text(<span class="stringliteral">&quot;Pos. (x,y,z,p):                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  668</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.x, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  669</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.y, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  670</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.z, x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  671</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.parallax, x + 36, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  672</span>    Printing::text(<span class="stringliteral">&quot;Displ. (x,y,z,p):                    &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  673</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.x, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  674</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.y, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  675</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.z, x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  676</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.parallax, x + 36, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  677</span>    Printing::text(<span class="stringliteral">&quot;FPos. (x,y,z,p):                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  678</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.x + this-&gt;displacement.x, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  679</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.y + this-&gt;displacement.y, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  680</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.z + this-&gt;displacement.z, x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  681</span>    Printing::int32(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.parallax + this-&gt;displacement.parallax, x + 36, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  682</span>    Printing::text(<span class="stringliteral">&quot;G (x,y,p):                           &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  683</span>    Printing::int32(<a class="code hl_function" href="#aecefbef74e6f06e6165c201f81c6be87">Sprite::getEffectiveX</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  684</span>    Printing::int32(<a class="code hl_function" href="#ace5012eb7c17fe4ee7c3bb14e2dba9c0">Sprite::getEffectiveY</a>(<span class="keyword">this</span>), x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  685</span>    Printing::int32(<a class="code hl_function" href="#a57e0aa6b66a0e148feb90b251087e3e6">Sprite::getEffectiveP</a>(<span class="keyword">this</span>), x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  686</span>    Printing::text(<span class="stringliteral">&quot;M (x,y,p):                           &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  687</span>    Printing::int32(<a class="code hl_function" href="#ad7b88ce31fa4d2e408b92d7c3f788f22">Sprite::getEffectiveMX</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  688</span>    Printing::int32(<a class="code hl_function" href="#a9c32fff97ecf3c193f2472985c436150">Sprite::getEffectiveMY</a>(<span class="keyword">this</span>), x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  689</span>    Printing::int32(<a class="code hl_function" href="#a811890e9e8583cf605ff6cbb9af53c70">Sprite::getEffectiveMP</a>(<span class="keyword">this</span>), x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  690</span>    Printing::text(<span class="stringliteral">&quot;Size (w,h):                          &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  691</span>    Printing::int32(<a class="code hl_function" href="#abc7f3d0631a6d0bdfc70caa2e55af816">Sprite::getEffectiveWidth</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  692</span>    Printing::int32(<a class="code hl_function" href="#a796e93312ce1ef5bef771cb55831cc7a">Sprite::getEffectiveHeight</a>(<span class="keyword">this</span>), x + 24, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  693</span>    Printing::text(<span class="stringliteral">&quot;Pixels:                      &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  694</span>    Printing::int32(<a class="code hl_function" href="#a045d960ef420871a0796fec9bb56c9ee">Sprite::getTotalPixels</a>(<span class="keyword">this</span>), x + 18, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  695</span> </div>
-<div class="line"><span class="lineno">  696</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">  697</span>    {</div>
-<div class="line"><span class="lineno">  698</span>        y++;</div>
-<div class="line"><span class="lineno">  699</span>        Printing::text(<span class="stringliteral">&quot;TEXTURE                          &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  700</span>        y++;</div>
-<div class="line"><span class="lineno">  701</span>        Printing::text(<span class="stringliteral">&quot;Spec:                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  702</span>        Printing::hex((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)<a class="code hl_function" href="/documentation/api/class-texture/">Texture::getSpec</a>(<a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>)), x + 18, y, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  703</span>        Printing::text(<span class="stringliteral">&quot;Size (w,h):                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  704</span>        Printing::int32(this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> * 2, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  705</span>        Printing::int32(this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> * 2, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  706</span> </div>
-<div class="line"><span class="lineno">  707</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>) &amp;&amp; <a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CAST</a>(<a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a>, <a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>)))</div>
-<div class="line"><span class="lineno">  708</span>        {</div>
-<div class="line"><span class="lineno">  709</span>            <a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a> bgmapTexture = <a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CAST</a>(<a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a>, <a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  710</span> </div>
-<div class="line"><span class="lineno">  711</span>            Printing::text(<span class="stringliteral">&quot;Segment:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  712</span>            Printing::int32(<a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getSegment</a>(bgmapTexture), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  713</span>            Printing::text(<span class="stringliteral">&quot;Written:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  714</span>            Printing::text</div>
-<div class="line"><span class="lineno">  715</span>            (</div>
-<div class="line"><span class="lineno">  716</span>                </div>
-<div class="line"><span class="lineno">  717</span>                <a class="code hl_function" href="/documentation/api/class-texture/">Texture::isWritten</a>(bgmapTexture) ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
-<div class="line"><span class="lineno">  718</span>            );</div>
-<div class="line"><span class="lineno">  719</span> </div>
-<div class="line"><span class="lineno">  720</span>            Printing::text(<span class="stringliteral">&quot;Rows remaining:                  &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  721</span>            Printing::int32(<a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getRemainingRowsToBeWritten</a>(bgmapTexture), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  722</span>        }</div>
-<div class="line"><span class="lineno">  723</span>    }</div>
-<div class="line"><span class="lineno">  724</span> </div>
-<div class="line"><span class="lineno">  725</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = <a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a>;</div>
-<div class="line"><span class="lineno">  726</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">636</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  637</span>{</div>
+<div class="line"><span class="lineno">  638</span>    <span class="comment">// Allow normal rendering once for WORLD values to populate properly</span></div>
+<div class="line"><span class="lineno">  639</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> <a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a>;</div>
+<div class="line"><span class="lineno">  640</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a>;</div>
+<div class="line"><span class="lineno">  641</span> </div>
+<div class="line"><span class="lineno">  642</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;SPRITE &quot;</span>, x, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  643</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Class: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  644</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  645</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Mode:&quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  646</span> </div>
+<div class="line"><span class="lineno">  647</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="#aa2bfadbf85ac3dcb291d62802bb3609d">Sprite::isObject</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  648</span>    {</div>
+<div class="line"><span class="lineno">  649</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;OBJECT   &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  650</span>    }</div>
+<div class="line"><span class="lineno">  651</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="#a9abc4fe1a45871687249a62a385fd827">Sprite::isAffine</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  652</span>    {</div>
+<div class="line"><span class="lineno">  653</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;AFFINE   &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  654</span>    }</div>
+<div class="line"><span class="lineno">  655</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="#a1d70b0c45c163f7b1a1320a856604d69">Sprite::isHBias</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  656</span>    {</div>
+<div class="line"><span class="lineno">  657</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;H-BIAS   &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  658</span>    }</div>
+<div class="line"><span class="lineno">  659</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="#aaf8fe49ab3d975dfae52b515b415ab54">Sprite::isBgmap</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  660</span>    {</div>
+<div class="line"><span class="lineno">  661</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;BGMAP    &quot;</span>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  662</span>    }</div>
+<div class="line"><span class="lineno">  663</span> </div>
+<div class="line"><span class="lineno">  664</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Index: &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  665</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ac56d109f8f1fca3a6b8669be46fc1d1b">index</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  666</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Head:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  667</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::hex</a>(<a class="code hl_function" href="#ac5c8a8276abf7bf231dfa43b37760b0d">Sprite::getEffectiveHead</a>(<span class="keyword">this</span>), x + 18, y, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  668</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Transparent:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  669</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> &gt; 0 ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  670</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> == 1 ? <span class="stringliteral">&quot;(Even)&quot;</span> : (<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> == 2) ? <span class="stringliteral">&quot;(Odd)&quot;</span> : <span class="stringliteral">&quot;&quot;</span>, x + 20, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  671</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Shown:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  672</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__HIDE</a> != this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">show</a> ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  673</span> </div>
+<div class="line"><span class="lineno">  674</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Pos. (x,y,z,p):                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  675</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.x, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  676</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.y, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  677</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.z, x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  678</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.parallax, x + 36, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  679</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Displ. (x,y,z,p):                    &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  680</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.x, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  681</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.y, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  682</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.z, x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  683</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#aaef43fd36e71fe32ddd70a0a5b1f88a4">displacement</a>.parallax, x + 36, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  684</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;FPos. (x,y,z,p):                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  685</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.x + this-&gt;displacement.x, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  686</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.y + this-&gt;displacement.y, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  687</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.z + this-&gt;displacement.z, x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  688</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#ad973d742f323cbd172e809cc75e83189">position</a>.parallax + this-&gt;displacement.parallax, x + 36, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  689</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;G (x,y,p):                           &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  690</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#aecefbef74e6f06e6165c201f81c6be87">Sprite::getEffectiveX</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  691</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#ace5012eb7c17fe4ee7c3bb14e2dba9c0">Sprite::getEffectiveY</a>(<span class="keyword">this</span>), x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  692</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#a57e0aa6b66a0e148feb90b251087e3e6">Sprite::getEffectiveP</a>(<span class="keyword">this</span>), x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  693</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;M (x,y,p):                           &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  694</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#ad7b88ce31fa4d2e408b92d7c3f788f22">Sprite::getEffectiveMX</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  695</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#a9c32fff97ecf3c193f2472985c436150">Sprite::getEffectiveMY</a>(<span class="keyword">this</span>), x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  696</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#a811890e9e8583cf605ff6cbb9af53c70">Sprite::getEffectiveMP</a>(<span class="keyword">this</span>), x + 30, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  697</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Size (w,h):                          &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  698</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#abc7f3d0631a6d0bdfc70caa2e55af816">Sprite::getEffectiveWidth</a>(<span class="keyword">this</span>), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  699</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#a796e93312ce1ef5bef771cb55831cc7a">Sprite::getEffectiveHeight</a>(<span class="keyword">this</span>), x + 24, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  700</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Pixels:                      &quot;</span>, x, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  701</span>    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="#a045d960ef420871a0796fec9bb56c9ee">Sprite::getTotalPixels</a>(<span class="keyword">this</span>), x + 18, y++, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  702</span> </div>
+<div class="line"><span class="lineno">  703</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">  704</span>    {</div>
+<div class="line"><span class="lineno">  705</span>        y++;</div>
+<div class="line"><span class="lineno">  706</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;TEXTURE                          &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  707</span>        y++;</div>
+<div class="line"><span class="lineno">  708</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Spec:                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  709</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::hex</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)<a class="code hl_function" href="/documentation/api/class-texture/">Texture::getSpec</a>(<a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>)), x + 18, y, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  710</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Size (w,h):                      &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  711</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#a23671d52da0111ab08cab587e53e39c3">halfWidth</a> * 2, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  712</span>        <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(this-&gt;<a class="code hl_variable" href="#a99ef22c192ee7c6a6cbff3c12e457805">halfHeight</a> * 2, x + 24, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  713</span> </div>
+<div class="line"><span class="lineno">  714</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>) &amp;&amp; <a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CAST</a>(<a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a>, <a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>)))</div>
+<div class="line"><span class="lineno">  715</span>        {</div>
+<div class="line"><span class="lineno">  716</span>            <a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a> bgmapTexture = <a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CAST</a>(<a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a>, <a class="code hl_function" href="#a95126cbe568a388a5b1092dee95716d0">Sprite::getTexture</a>(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">  717</span> </div>
+<div class="line"><span class="lineno">  718</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Segment:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  719</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getSegment</a>(bgmapTexture), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  720</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Written:                         &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  721</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a></div>
+<div class="line"><span class="lineno">  722</span>            (</div>
+<div class="line"><span class="lineno">  723</span>                </div>
+<div class="line"><span class="lineno">  724</span>                <a class="code hl_function" href="/documentation/api/class-texture/">Texture::isWritten</a>(bgmapTexture) ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
+<div class="line"><span class="lineno">  725</span>            );</div>
+<div class="line"><span class="lineno">  726</span> </div>
+<div class="line"><span class="lineno">  727</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Rows remaining:                  &quot;</span>, x, ++y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  728</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(<a class="code hl_function" href="/documentation/api/class-bgmap-texture/">BgmapTexture::getRemainingRowsToBeWritten</a>(bgmapTexture), x + 18, y, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  729</span>        }</div>
+<div class="line"><span class="lineno">  730</span>    }</div>
+<div class="line"><span class="lineno">  731</span> </div>
+<div class="line"><span class="lineno">  732</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a> = <a class="code hl_variable" href="/documentation/api/class-visual-component/">transparency</a>;</div>
+<div class="line"><span class="lineno">  733</span>}</div>
 <div class="ttc" id="a_bgmap_sprite_8c_html_a0d276167ff979110ce20c9f9d54d5526"><div class="ttname"><a href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a></div><div class="ttdeci">friend class BgmapTexture</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:29</a></div></div>
-<div class="ttc" id="a_oop_8h_html_a461079f1d9f6a4903103f18ae3eb0da4"><div class="ttname"><a href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a></div><div class="ttdeci">#define __GET_CLASS_NAME(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:535</a></div></div>
+<div class="ttc" id="a_oop_8h_html_a461079f1d9f6a4903103f18ae3eb0da4"><div class="ttname"><a href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a></div><div class="ttdeci">#define __GET_CLASS_NAME(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:553</a></div></div>
 <div class="ttc" id="a_printing_8h_html_a76613feefa2570037d36992bfa32006f"><div class="ttname"><a href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a></div><div class="ttdeci">#define __CHAR_CHECKBOX_UNCHECKED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:75</a></div></div>
 <div class="ttc" id="a_printing_8h_html_ac4a66fa42f1ad36c3f627904b9e1f006"><div class="ttname"><a href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a></div><div class="ttdeci">#define __CHAR_CHECKBOX_CHECKED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:76</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
 <div class="ttc" id="aclass_bgmap_texture_html_a4bebeb2306014f29178b0ad6c3575ddc"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture::getSegment</a></div><div class="ttdeci">int8 getSegment()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:124</a></div></div>
 <div class="ttc" id="aclass_bgmap_texture_html_a621f3983eadc3fc07e8d8d03727f439c"><div class="ttname"><a href="/documentation/api/class-bgmap-texture/">BgmapTexture::getRemainingRowsToBeWritten</a></div><div class="ttdeci">int8 getRemainingRowsToBeWritten()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-8c-source/">BgmapTexture.c:191</a></div></div>
+<div class="ttc" id="aclass_printing_html_a1e43d7e70531d74fe03bea85e677cb29"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::int32</a></div><div class="ttdeci">static void int32(int32 value, uint8 x, uint8 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:299</a></div></div>
+<div class="ttc" id="aclass_printing_html_a92b0b91f848f46ae5305603a077489c8"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::text</a></div><div class="ttdeci">static void text(const char *string, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:288</a></div></div>
+<div class="ttc" id="aclass_printing_html_a9c84c7ab379f7ef53e6ce5b320c4cd6b"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::hex</a></div><div class="ttdeci">static void hex(WORD value, uint8 x, uint8 y, uint8 length, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:306</a></div></div>
 <div class="ttc" id="aclass_sprite_html_a045d960ef420871a0796fec9bb56c9ee"><div class="ttname"><a href="#a045d960ef420871a0796fec9bb56c9ee">Sprite::getTotalPixels</a></div><div class="ttdeci">virtual int32 getTotalPixels()=0</div></div>
 <div class="ttc" id="aclass_sprite_html_a57e0aa6b66a0e148feb90b251087e3e6"><div class="ttname"><a href="#a57e0aa6b66a0e148feb90b251087e3e6">Sprite::getEffectiveP</a></div><div class="ttdeci">int16 getEffectiveP()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:375</a></div></div>
 <div class="ttc" id="aclass_sprite_html_a796e93312ce1ef5bef771cb55831cc7a"><div class="ttname"><a href="#a796e93312ce1ef5bef771cb55831cc7a">Sprite::getEffectiveHeight</a></div><div class="ttdeci">uint16 getEffectiveHeight()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:336</a></div></div>
@@ -1578,8 +1643,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">575</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  576</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">582</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  583</span>{}</div>
 </div>
 </div>
 </div>
@@ -1665,35 +1730,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  551</span>}</div>
 <div class="ttc" id="aclass_texture_html_a242a84056e799c85e970ee62888b8bce"><div class="ttname"><a href="/documentation/api/class-texture/">Texture::putPixel</a></div><div class="ttdeci">void putPixel(const Point *texturePixel, const Pixel *charSetPixel, BYTE newPixelColor)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:543</a></div></div>
 </div>
-</div>
-</div>
-<a id="a07cf40d8ffbb8565c0f8c5f5b0b75346" name="a07cf40d8ffbb8565c0f8c5f5b0b75346"></a>
-<h2 class="memtitle">registerWithManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">virtual void Sprite::registerWithManager </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Register this sprite with the appropriate sprites manager. </p>
-
-<p>Implemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>, and <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>.</p>
-
 </div>
 </div>
 <a id="a96ceaf54c5a2d9948dcd7578c717c8e4" name="a96ceaf54c5a2d9948dcd7578c717c8e4"></a>
@@ -1835,7 +1871,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_texture_8h_html_a4c9f4ce206a4e306145c8f71a44b035d"><div class="ttname"><a href="/documentation/api/-texture-8h/">kTextureInvalid</a></div><div class="ttdeci">@ kTextureInvalid</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:38</a></div></div>
 <div class="ttc" id="aclass_component_html_a079d309fbac2b3b2a6be4f7096da3955"><div class="ttname"><a href="/documentation/api/class-component/">Component::transformation</a></div><div class="ttdeci">const Transformation * transformation</div><div class="ttdoc">Pointer to the transformation that the component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:87</a></div></div>
 <div class="ttc" id="aclass_sprite_html_a3845568146dbe76e5ec12c45332039c1"><div class="ttname"><a href="#a3845568146dbe76e5ec12c45332039c1">Sprite::doRender</a></div><div class="ttdeci">virtual int16 doRender(int16 index)=0</div></div>
-<div class="ttc" id="aclass_sprite_html_a5e70e16bf7e519926dee9b96b71ae6a0"><div class="ttname"><a href="#a5e70e16bf7e519926dee9b96b71ae6a0">Sprite::updateAnimation</a></div><div class="ttdeci">virtual void updateAnimation()</div><div class="ttdoc">Update the animation.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:570</a></div></div>
+<div class="ttc" id="aclass_sprite_html_a5e70e16bf7e519926dee9b96b71ae6a0"><div class="ttname"><a href="#a5e70e16bf7e519926dee9b96b71ae6a0">Sprite::updateAnimation</a></div><div class="ttdeci">virtual void updateAnimation()</div><div class="ttdoc">Update the animation.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sprite-8c-source/">Sprite.c:577</a></div></div>
 </div>
 </div>
 </div>
@@ -1899,8 +1935,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, and <a class="el" href="/documentation/api/class-m-bgmap-animated-sprite/">MBgmapAnimatedSprite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">580</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  581</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">587</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  588</span>{}</div>
 </div>
 </div>
 </div>
@@ -1969,16 +2005,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, and <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">603</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  604</span>{</div>
-<div class="line"><span class="lineno">  605</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a>)</div>
-<div class="line"><span class="lineno">  606</span>    {</div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  608</span>    }</div>
-<div class="line"><span class="lineno">  609</span> </div>
-<div class="line"><span class="lineno">  610</span>    this-&gt;<a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a> = *<a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a>;</div>
-<div class="line"><span class="lineno">  611</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">rendered</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  612</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">610</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  611</span>{</div>
+<div class="line"><span class="lineno">  612</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a>)</div>
+<div class="line"><span class="lineno">  613</span>    {</div>
+<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  615</span>    }</div>
+<div class="line"><span class="lineno">  616</span> </div>
+<div class="line"><span class="lineno">  617</span>    this-&gt;<a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a> = *<a class="code hl_variable" href="#aabbc0bec2e23682d148cc8ad195c6164">rotation</a>;</div>
+<div class="line"><span class="lineno">  618</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">rendered</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  619</span>}</div>
 </div>
 </div>
 </div>
@@ -2013,16 +2049,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">616</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  617</span>{</div>
-<div class="line"><span class="lineno">  618</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a>)</div>
-<div class="line"><span class="lineno">  619</span>    {</div>
-<div class="line"><span class="lineno">  620</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  621</span>    }</div>
-<div class="line"><span class="lineno">  622</span> </div>
-<div class="line"><span class="lineno">  623</span>    this-&gt;<a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a> = *<a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a>;</div>
-<div class="line"><span class="lineno">  624</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">rendered</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  625</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">623</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  624</span>{</div>
+<div class="line"><span class="lineno">  625</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a>)</div>
+<div class="line"><span class="lineno">  626</span>    {</div>
+<div class="line"><span class="lineno">  627</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  628</span>    }</div>
+<div class="line"><span class="lineno">  629</span> </div>
+<div class="line"><span class="lineno">  630</span>    this-&gt;<a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a> = *<a class="code hl_variable" href="#a473b764adb02066959947206e8ddd54f">scale</a>;</div>
+<div class="line"><span class="lineno">  631</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-visual-component/">rendered</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  632</span>}</div>
 </div>
 </div>
 </div>
@@ -2063,35 +2099,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 </div>
-<a id="ac3a1e47d9db69930636f255d45e567ce" name="ac3a1e47d9db69930636f255d45e567ce"></a>
-<h2 class="memtitle">unregisterWithManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">virtual void Sprite::unregisterWithManager </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unegister this sprite with the appropriate sprites manager. </p>
-
-<p>Implemented in <a class="el" href="/documentation/api/class-bgmap-sprite/">BgmapSprite</a>, <a class="el" href="/documentation/api/class-object-sprite/">ObjectSprite</a>, and <a class="el" href="/documentation/api/class-object-sprite-container/">ObjectSpriteContainer</a>.</p>
-
-</div>
-</div>
 <a id="a5e70e16bf7e519926dee9b96b71ae6a0" name="a5e70e16bf7e519926dee9b96b71ae6a0"></a>
 <h2 class="memtitle">updateAnimation()</h2>
 
@@ -2119,8 +2126,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-animated-sprite/">BgmapAnimatedSprite</a>, <a class="el" href="/documentation/api/class-m-bgmap-animated-sprite/">MBgmapAnimatedSprite</a>, and <a class="el" href="/documentation/api/class-object-animated-sprite/">ObjectAnimatedSprite</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">570</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  571</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sprite-8c-source/">577</a> of file <a class="el" href="/documentation/api/-sprite-8c-source/">Sprite.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  578</span>{}</div>
 </div>
 </div>
 </div>

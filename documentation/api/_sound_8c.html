@@ -27,8 +27,7 @@ permalink: documentation/api/-sound-8c/
   <div class="headertitle"><h1 class="title">Sound.c File Reference</h1></div>
 </div>
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-message-dispatcher-8h-source/">MessageDispatcher.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="/documentation/api/-printing-8h-source/">Printing.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-sound-track-8h-source/">SoundTrack.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-timer-manager-8h-source/">TimerManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-virtual-list-8h-source/">VirtualList.h</a>&gt;</code><br />
@@ -72,7 +71,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">40</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">42</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
 
 </div>
 </div>
@@ -88,7 +87,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">38</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">40</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
 
 </div>
 </div>
@@ -104,7 +103,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">42</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">44</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
 
 </div>
 </div>
@@ -120,7 +119,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">43</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">45</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
 
 </div>
 </div>
@@ -146,7 +145,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  801</span>        this-&gt;soundSpec-&gt;targetTimerResolutionUS * (this-&gt;mainSoundTrack-&gt;elapsedTicks </div>
 <div class="line"><span class="lineno">  802</span>        - this-&gt;previouslyElapsedTicks) / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MICROSECONDS_PER_MILLISECOND</a>;</div>
 <div class="line"><span class="lineno">  803</span> </div>
-<div class="line"><span class="lineno">  804</span>    <span class="keywordflow">if</span>(VUEngine::getGameFrameDuration() &lt;= elapsedMilliseconds)</div>
+<div class="line"><span class="lineno">  804</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="/documentation/api/class-v-u-engine/">VUEngine::getGameFrameDuration</a>() &lt;= elapsedMilliseconds)</div>
 <div class="line"><span class="lineno">  805</span>    {</div>
 <div class="line"><span class="lineno">  806</span>        <span class="keywordflow">switch</span>(this-&gt;playbackType)</div>
 <div class="line"><span class="lineno">  807</span>        {</div>
@@ -166,9 +165,9 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  821</span> </div>
 <div class="line"><span class="lineno">  822</span>                this-&gt;volumeReduction += (this-&gt;volumeReductionMultiplier &gt;&gt; 1) + 1;</div>
 <div class="line"><span class="lineno">  823</span> </div>
-<div class="line"><span class="lineno">  824</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier &lt;= this-&gt;volumeReduction)</div>
+<div class="line"><span class="lineno">  824</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier &lt;= this-&gt;volumeReduction)</div>
 <div class="line"><span class="lineno">  825</span>                {</div>
-<div class="line"><span class="lineno">  826</span>                    this-&gt;volumeReduction = <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier;</div>
+<div class="line"><span class="lineno">  826</span>                    this-&gt;volumeReduction = <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier;</div>
 <div class="line"><span class="lineno">  827</span>                    this-&gt;playbackType = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaybackNone</a>;</div>
 <div class="line"><span class="lineno">  828</span>                    <a class="code hl_function" href="/documentation/api/class-sound/">Sound::pause</a>(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  829</span>                }</div>
@@ -179,9 +178,9 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  834</span> </div>
 <div class="line"><span class="lineno">  835</span>                this-&gt;volumeReduction += (this-&gt;volumeReductionMultiplier &gt;&gt; 1) + 1;</div>
 <div class="line"><span class="lineno">  836</span> </div>
-<div class="line"><span class="lineno">  837</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier &lt;= this-&gt;volumeReduction)</div>
+<div class="line"><span class="lineno">  837</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier &lt;= this-&gt;volumeReduction)</div>
 <div class="line"><span class="lineno">  838</span>                {</div>
-<div class="line"><span class="lineno">  839</span>                    this-&gt;volumeReduction = <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier;</div>
+<div class="line"><span class="lineno">  839</span>                    this-&gt;volumeReduction = <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a> * this-&gt;volumeReductionMultiplier;</div>
 <div class="line"><span class="lineno">  840</span>                    this-&gt;playbackType = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaybackNone</a>;</div>
 <div class="line"><span class="lineno">  841</span>                    <a class="code hl_function" href="/documentation/api/class-sound/">Sound::release</a>(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  842</span>                }</div>
@@ -199,9 +198,10 @@ Variables</h2></td></tr>
 <div class="ttc" id="a_sound_8h_html_aa0b3cae38fd5325810474a0c307face3"><div class="ttname"><a href="/documentation/api/-sound-8h/">kSoundPlaybackFadeIn</a></div><div class="ttdeci">@ kSoundPlaybackFadeIn</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:36</a></div></div>
 <div class="ttc" id="a_sound_8h_html_afb2325abd801debdcac9a2550fb5860e"><div class="ttname"><a href="/documentation/api/-sound-8h/">kSoundPlaybackNone</a></div><div class="ttdeci">@ kSoundPlaybackNone</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:34</a></div></div>
 <div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
-<div class="ttc" id="a_v_s_u_manager_8c_html_a4c163708785e8d1307953505e1f9b21d"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a></div><div class="ttdeci">#define __MAXIMUM_VOLUME</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c:36</a></div></div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_a4c163708785e8d1307953505e1f9b21d"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a></div><div class="ttdeci">#define __MAXIMUM_VOLUME</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:30</a></div></div>
 <div class="ttc" id="aclass_sound_html_a65b0f66e9123caed2809da366ac4d377"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">Pause the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:220</a></div></div>
 <div class="ttc" id="aclass_sound_html_af95ffcbe66dd8173d6caa635a6c42892"><div class="ttname"><a href="/documentation/api/class-sound/">Sound::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">Release this sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:369</a></div></div>
+<div class="ttc" id="aclass_v_u_engine_html_a35cf7b60c02c212d70f0a20457b83b93"><div class="ttname"><a href="/documentation/api/class-v-u-engine/">VUEngine::getGameFrameDuration</a></div><div class="ttdeci">static uint16 getGameFrameDuration()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-u-engine-8c-source/">VUEngine.c:338</a></div></div>
 </div>
 </div>
 </div>
@@ -226,8 +226,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">49</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>{<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>};</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">51</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>};</div>
 </div>
 </div>
 </div>

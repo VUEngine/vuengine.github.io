@@ -1,0 +1,1819 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "VIPManager Class Reference"
+permalink: documentation/api/class-v-i-p-manager/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">VIPManager Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for VIPManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_v_i_p_manager.png" usemap="#VIPManager_map" alt />
+  <map id="VIPManager_map" name="VIPManager_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="0,0,94,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab00f048e89ef74538e2b1c4c166009a9" id="r_ab00f048e89ef74538e2b1c4c166009a9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab00f048e89ef74538e2b1c4c166009a9">VIPMultiplexedInterrupts</a> </td></tr>
+
+<tr class="memitem:afdd15f446fa718e0e6639b3bc2bb8b5b" id="r_afdd15f446fa718e0e6639b3bc2bb8b5b"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-column-table-spec/">ColumnTableSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdd15f446fa718e0e6639b3bc2bb8b5b">ColumnTableROMSpec</a></td></tr>
+
+<tr class="memitem:a132aab3a676a9a82e8c25c8f04e2521a" id="r_a132aab3a676a9a82e8c25c8f04e2521a"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-brightness-repeat-spec/">BrightnessRepeatSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a132aab3a676a9a82e8c25c8f04e2521a">BrightnessRepeatROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:acf4fa1b2afd02996402da26515c79309" id="r_acf4fa1b2afd02996402da26515c79309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf4fa1b2afd02996402da26515c79309">reset</a> ()</td></tr>
+<tr class="memdesc:acf4fa1b2afd02996402da26515c79309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:adf716e4ad1a7250bf42c8b9676dc4e88" id="r_adf716e4ad1a7250bf42c8b9676dc4e88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf716e4ad1a7250bf42c8b9676dc4e88">configure</a> (<a class="el" href="/documentation/api/-types-8h/">uint8</a> backgroundColor, <a class="el" href="/documentation/api/struct-brightness/">Brightness</a> *brightness, <a class="el" href="/documentation/api/struct-brightness-repeat-spec/">BrightnessRepeatSpec</a> *brightnessRepeat, <a class="el" href="/documentation/api/struct-palette-config/">PaletteConfig</a> *paletteConfig, <a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a> *<a class="el" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a>)</td></tr>
+
+<tr class="memitem:ac4c02625cab2f98bf14de6c93a2d54ea" id="r_ac4c02625cab2f98bf14de6c93a2d54ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4c02625cab2f98bf14de6c93a2d54ea">startDrawing</a> ()</td></tr>
+<tr class="memdesc:ac4c02625cab2f98bf14de6c93a2d54ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start VIP drawing operations.  <br /></td></tr>
+
+<tr class="memitem:adf20e74b10a0e00cb86b45f59d9cc90f" id="r_adf20e74b10a0e00cb86b45f59d9cc90f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf20e74b10a0e00cb86b45f59d9cc90f">resumeDrawing</a> ()</td></tr>
+<tr class="memdesc:adf20e74b10a0e00cb86b45f59d9cc90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume VIP drawing operations.  <br /></td></tr>
+
+<tr class="memitem:ae21c343657c8f50b374223646013de8a" id="r_ae21c343657c8f50b374223646013de8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae21c343657c8f50b374223646013de8a">suspendDrawing</a> ()</td></tr>
+<tr class="memdesc:ae21c343657c8f50b374223646013de8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend VIP drawing operations.  <br /></td></tr>
+
+<tr class="memitem:a30ecdf579f99b864c02dde838c03e55e" id="r_a30ecdf579f99b864c02dde838c03e55e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30ecdf579f99b864c02dde838c03e55e">stopDrawing</a> ()</td></tr>
+<tr class="memdesc:a30ecdf579f99b864c02dde838c03e55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop VIP drawing operations.  <br /></td></tr>
+
+<tr class="memitem:a5b6cee100bc0dd3ae43fef3280de8c75" id="r_a5b6cee100bc0dd3ae43fef3280de8c75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b6cee100bc0dd3ae43fef3280de8c75">startDisplaying</a> ()</td></tr>
+<tr class="memdesc:a5b6cee100bc0dd3ae43fef3280de8c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start VIP displaying operations.  <br /></td></tr>
+
+<tr class="memitem:a2d0eb414dfc577439c5891c43dbf3cd1" id="r_a2d0eb414dfc577439c5891c43dbf3cd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d0eb414dfc577439c5891c43dbf3cd1">stopDisplaying</a> ()</td></tr>
+<tr class="memdesc:a2d0eb414dfc577439c5891c43dbf3cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop VIP displaying operations.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4859fd1f6b353d7bcec14c569b242f98" id="r_a4859fd1f6b353d7bcec14c569b242f98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4859fd1f6b353d7bcec14c569b242f98">interruptHandler</a> ()</td></tr>
+<tr class="memdesc:a4859fd1f6b353d7bcec14c569b242f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt handler for timer's interrupts.  <br /></td></tr>
+
+<tr class="memitem:aa3e14813abdafcc1f049b4cef007bab6" id="r_aa3e14813abdafcc1f049b4cef007bab6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3e14813abdafcc1f049b4cef007bab6">pushFrontPostProcessingEffect</a> (<a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a> postProcessingEffect, <a class="el" href="/documentation/api/class-entity/">Entity</a> entity)</td></tr>
+
+<tr class="memitem:af85d42902a47ecfadee0355e3d22d52c" id="r_af85d42902a47ecfadee0355e3d22d52c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af85d42902a47ecfadee0355e3d22d52c">pushBackPostProcessingEffect</a> (<a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a> postProcessingEffect, <a class="el" href="/documentation/api/class-entity/">Entity</a> entity)</td></tr>
+
+<tr class="memitem:a248a6256ca52e0351917033ed59d9d71" id="r_a248a6256ca52e0351917033ed59d9d71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a248a6256ca52e0351917033ed59d9d71">removePostProcessingEffect</a> (<a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a> postProcessingEffect, <a class="el" href="/documentation/api/class-entity/">Entity</a> entity)</td></tr>
+
+<tr class="memitem:a6c7de3aca25e52c805d4b7ead309e546" id="r_a6c7de3aca25e52c805d4b7ead309e546"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7de3aca25e52c805d4b7ead309e546">removePostProcessingEffects</a> ()</td></tr>
+<tr class="memdesc:a6c7de3aca25e52c805d4b7ead309e546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all a post-processing effects.  <br /></td></tr>
+
+<tr class="memitem:ab8890e5fe57f208970f683cbad38af80" id="r_ab8890e5fe57f208970f683cbad38af80"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8890e5fe57f208970f683cbad38af80">enableCustomInterrupts</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> <a class="el" href="#a121778583e3bcf3ccbdaa7816b6fd5f7">customInterrupts</a>)</td></tr>
+
+<tr class="memitem:ac4a8fda02776d688c56c8261a8f59bc6" id="r_ac4a8fda02776d688c56c8261a8f59bc6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4a8fda02776d688c56c8261a8f59bc6">enableMultiplexedInterrupts</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>)</td></tr>
+
+<tr class="memitem:ad1c338fc7f4be66158164bf7daf39dcc" id="r_ad1c338fc7f4be66158164bf7daf39dcc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c338fc7f4be66158164bf7daf39dcc">setDrawingStrategy</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a>)</td></tr>
+
+<tr class="memitem:a0899d114983fd257ba182c417ff52dea" id="r_a0899d114983fd257ba182c417ff52dea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0899d114983fd257ba182c417ff52dea">getDrawingStrategy</a> ()</td></tr>
+
+<tr class="memitem:aa8202e61adbd5af6d4e1212af4db6b17" id="r_aa8202e61adbd5af6d4e1212af4db6b17"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8202e61adbd5af6d4e1212af4db6b17">configurePalettes</a> (<a class="el" href="/documentation/api/struct-palette-config/">PaletteConfig</a> *paletteConfig)</td></tr>
+
+<tr class="memitem:aa0713a879956ae4de18074d6da8265ae" id="r_aa0713a879956ae4de18074d6da8265ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0713a879956ae4de18074d6da8265ae">setupColumnTable</a> (<a class="el" href="/documentation/api/struct-column-table-spec/">ColumnTableSpec</a> *columnTableSpec)</td></tr>
+
+<tr class="memitem:a1c452245018875ddeaf70c1dbf4c4770" id="r_a1c452245018875ddeaf70c1dbf4c4770"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c452245018875ddeaf70c1dbf4c4770">configureBrightness</a> (<a class="el" href="/documentation/api/struct-brightness/">Brightness</a> *brightness)</td></tr>
+
+<tr class="memitem:a342b1a417665c9226369aa5840fef131" id="r_a342b1a417665c9226369aa5840fef131"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a342b1a417665c9226369aa5840fef131">configureBrightnessRepeat</a> (<a class="el" href="/documentation/api/struct-brightness-repeat-spec/">BrightnessRepeatSpec</a> *brightnessRepeat)</td></tr>
+
+<tr class="memitem:a6d6eab4b53b0dbd8e19c5e589c41d1bc" id="r_a6d6eab4b53b0dbd8e19c5e589c41d1bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d6eab4b53b0dbd8e19c5e589c41d1bc">configureBackgroundColor</a> (<a class="el" href="/documentation/api/-types-8h/">uint8</a> color)</td></tr>
+
+<tr class="memitem:acfd561ee36d750588f9e7635913c085a" id="r_acfd561ee36d750588f9e7635913c085a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfd561ee36d750588f9e7635913c085a">upBrightness</a> ()</td></tr>
+<tr class="memdesc:acfd561ee36d750588f9e7635913c085a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Up the brightness to the maximum.  <br /></td></tr>
+
+<tr class="memitem:abfcc2564cb52e1ba185ff43b683426a4" id="r_abfcc2564cb52e1ba185ff43b683426a4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfcc2564cb52e1ba185ff43b683426a4">lowerBrightness</a> ()</td></tr>
+<tr class="memdesc:abfcc2564cb52e1ba185ff43b683426a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower the brightness to the minimum.  <br /></td></tr>
+
+<tr class="memitem:a2edd31c2a3ed05cfe03d77c16dbe6b23" id="r_a2edd31c2a3ed05cfe03d77c16dbe6b23"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2edd31c2a3ed05cfe03d77c16dbe6b23">getCurrentInterrupt</a> ()</td></tr>
+
+<tr class="memitem:aa17be96d159908c15e13f11383986e5f" id="r_aa17be96d159908c15e13f11383986e5f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa17be96d159908c15e13f11383986e5f">getGameFrameDuration</a> ()</td></tr>
+
+<tr class="memitem:ad7a2bac6e5ec9b7ce9d4dca7e8611e5e" id="r_ad7a2bac6e5ec9b7ce9d4dca7e8611e5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7a2bac6e5ec9b7ce9d4dca7e8611e5e">setFrameCycle</a> (<a class="el" href="/documentation/api/-types-8h/">uint8</a> frameCycle)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:afcc00e0b26becb42b7ad2e6d1097d44a" id="r_afcc00e0b26becb42b7ad2e6d1097d44a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a></td></tr>
+
+<tr class="memitem:a171fab7d443f827632617b02bc7fc292" id="r_a171fab7d443f827632617b02bc7fc292"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a171fab7d443f827632617b02bc7fc292">currentDrawingFrameBufferSet</a></td></tr>
+<tr class="memdesc:a171fab7d443f827632617b02bc7fc292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame buffers set using during the current game frame.  <br /></td></tr>
+
+<tr class="memitem:a4c5930d1f56a16a03334a1efc2941d69" id="r_a4c5930d1f56a16a03334a1efc2941d69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a></td></tr>
+<tr class="memdesc:a4c5930d1f56a16a03334a1efc2941d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum that determines which multiplexed interrupts are allowed.  <br /></td></tr>
+
+<tr class="memitem:a9dc07d7509b68efc53cf0d090c10c768" id="r_a9dc07d7509b68efc53cf0d090c10c768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a></td></tr>
+
+<tr class="memitem:a121778583e3bcf3ccbdaa7816b6fd5f7" id="r_a121778583e3bcf3ccbdaa7816b6fd5f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a121778583e3bcf3ccbdaa7816b6fd5f7">customInterrupts</a></td></tr>
+<tr class="memdesc:a121778583e3bcf3ccbdaa7816b6fd5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows VIP interrupts that the engine doesn't use.  <br /></td></tr>
+
+<tr class="memitem:acd39bdfa8b82fda7f4d9ae5393175f76" id="r_acd39bdfa8b82fda7f4d9ae5393175f76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd39bdfa8b82fda7f4d9ae5393175f76">currrentInterrupt</a></td></tr>
+<tr class="memdesc:acd39bdfa8b82fda7f4d9ae5393175f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register of the interrupts being processed.  <br /></td></tr>
+
+<tr class="memitem:ab401ac4ce2e251b963ec735ee86dcfff" id="r_ab401ac4ce2e251b963ec735ee86dcfff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab401ac4ce2e251b963ec735ee86dcfff">gameFrameDuration</a></td></tr>
+
+<tr class="memitem:acf2ca8caebee5714478a9a85ef986e5a" id="r_acf2ca8caebee5714478a9a85ef986e5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf2ca8caebee5714478a9a85ef986e5a">isDrawingAllowed</a></td></tr>
+<tr class="memdesc:acf2ca8caebee5714478a9a85ef986e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, XPEN is raised.  <br /></td></tr>
+
+<tr class="memitem:a4ba20c661773bffb318c9082191a757a" id="r_a4ba20c661773bffb318c9082191a757a"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ba20c661773bffb318c9082191a757a">processingGAMESTART</a></td></tr>
+<tr class="memdesc:a4ba20c661773bffb318c9082191a757a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, a VIP interrupt happened while in the midst of GAMESTART.  <br /></td></tr>
+
+<tr class="memitem:ae65a7a3cc0c26f6a47b5cd029c92f409" id="r_ae65a7a3cc0c26f6a47b5cd029c92f409"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae65a7a3cc0c26f6a47b5cd029c92f409">processingXPEND</a></td></tr>
+<tr class="memdesc:ae65a7a3cc0c26f6a47b5cd029c92f409"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, a VIP interrupt happened while in the midst of XPEND.  <br /></td></tr>
+
+<tr class="memitem:a83c99d33a9873c60babff3ac207b336a" id="r_a83c99d33a9873c60babff3ac207b336a"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83c99d33a9873c60babff3ac207b336a">FRAMESTARTDuringXPEND</a></td></tr>
+<tr class="memdesc:a83c99d33a9873c60babff3ac207b336a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, FRAMESTART happened during XPEND.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a2a08be5bc263fa301ef555d27eb62fb3 inherit pub_types_class_listener_object" id="r_a2a08be5bc263fa301ef555d27eb62fb3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="/documentation/api/-types-8h/">bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">EventListener</a>) (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>)</td></tr>
+
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:aa44d2f3fc00a88658f64cac1c02b47f7 inherit pub_methods_class_listener_object" id="r_aa44d2f3fc00a88658f64cac1c02b47f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ace4fdcff88c182d1a52be1f479f77ca5 inherit pub_methods_class_listener_object" id="r_ace4fdcff88c182d1a52be1f479f77ca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a60fd7db5c9893337dd5dceaf83e14f90 inherit pub_methods_class_listener_object" id="r_a60fd7db5c9893337dd5dceaf83e14f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="/documentation/api/class-listener-object/">EventListener</a> callback, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aee33a794d8e3f8d701053b225c4373d3 inherit pub_methods_class_listener_object" id="r_aee33a794d8e3f8d701053b225c4373d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListenerScopes</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="/documentation/api/-types-8h/">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="/documentation/api/-types-8h/">uint32</a> message, <a class="el" href="/documentation/api/-types-8h/">uint32</a> delay, <a class="el" href="/documentation/api/-types-8h/">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> message, <a class="el" href="/documentation/api/-types-8h/">uint32</a> delay, <a class="el" href="/documentation/api/-types-8h/">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> message)</td></tr>
+
+<tr class="memitem:ac00bf51bd5d127ab6c703fe37008ea68 inherit pub_methods_class_listener_object" id="r_ac00bf51bd5d127ab6c703fe37008ea68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-v-i-p-manager/">VIPManager</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages the VIP. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">290</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a132aab3a676a9a82e8c25c8f04e2521a" name="a132aab3a676a9a82e8c25c8f04e2521a"></a>
+<h2 class="memtitle">BrightnessRepeatROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-brightness-repeat-spec/">BrightnessRepeatSpec</a> <a class="el" href="#a132aab3a676a9a82e8c25c8f04e2521a">BrightnessRepeatROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A BrightnessRepeat spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">206</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="afdd15f446fa718e0e6639b3bc2bb8b5b" name="afdd15f446fa718e0e6639b3bc2bb8b5b"></a>
+<h2 class="memtitle">ColumnTableROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-column-table-spec/">ColumnTableSpec</a> <a class="el" href="#afdd15f446fa718e0e6639b3bc2bb8b5b">ColumnTableROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A ColumnTable spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">189</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ab00f048e89ef74538e2b1c4c166009a9" name="ab00f048e89ef74538e2b1c4c166009a9"></a>
+<h2 class="memtitle">VIPMultiplexedInterrupts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab00f048e89ef74538e2b1c4c166009a9">VIPMultiplexedInterrupts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enums used to control VIP interrupts </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">247</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>{</div>
+<div class="line"><span class="lineno">  249</span>    <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPNoMultiplexedInterrupts</a>          = 1 &lt;&lt; 0,</div>
+<div class="line"><span class="lineno">  250</span>    <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPOnlyVIPMultiplexedInterrupts</a>        = 1 &lt;&lt; 2,</div>
+<div class="line"><span class="lineno">  251</span>    <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPOnlyNonVIPMultiplexedInterrupts</a>  = 1 &lt;&lt; 3,</div>
+<div class="line"><span class="lineno">  252</span>    <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPAllMultiplexedInterrupts</a>            = 0x7FFFFFFF,</div>
+<div class="line"><span class="lineno">  253</span>};</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a028154d39905b5898c39a92bb71bc483"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">kVIPOnlyVIPMultiplexedInterrupts</a></div><div class="ttdeci">@ kVIPOnlyVIPMultiplexedInterrupts</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:250</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a5080099f157ea7815de6cc8fe21fe4a7"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">kVIPNoMultiplexedInterrupts</a></div><div class="ttdeci">@ kVIPNoMultiplexedInterrupts</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:249</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_acf313448f8bbed6dd08a4d271def191b"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">kVIPOnlyNonVIPMultiplexedInterrupts</a></div><div class="ttdeci">@ kVIPOnlyNonVIPMultiplexedInterrupts</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:251</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_afbb4dc84d9f27f63851b9c265bb96513"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">kVIPAllMultiplexedInterrupts</a></div><div class="ttdeci">@ kVIPAllMultiplexedInterrupts</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:252</a></div></div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adf716e4ad1a7250bf42c8b9676dc4e88" name="adf716e4ad1a7250bf42c8b9676dc4e88"></a>
+<h2 class="memtitle">configure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::configure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint8</a></td>          <td class="paramname"><span class="paramname"><em>backgroundColor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-brightness/">Brightness</a> *</td>          <td class="paramname"><span class="paramname"><em>brightness</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-brightness-repeat-spec/">BrightnessRepeatSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>brightnessRepeat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-palette-config/">PaletteConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>paletteConfig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a> *</td>          <td class="paramname"><span class="paramname"><em>postProcessingEffects</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure the manager's state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">backgroundColor</td><td>Color to apply to the background </td></tr>
+    <tr><td class="paramname">brightness</td><td><a class="el" href="/documentation/api/struct-brightness/">Brightness</a> configuration </td></tr>
+    <tr><td class="paramname">brightnessRepeat</td><td><a class="el" href="/documentation/api/struct-brightness/">Brightness</a> configuration </td></tr>
+    <tr><td class="paramname">paletteConfig</td><td>Palettes configuration </td></tr>
+    <tr><td class="paramname">postProcessingEffects</td><td>Array of postprocessing effects Configure the brightness registers with the provided configuration. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">421</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  426</span>{</div>
+<div class="line"><span class="lineno">  427</span>    <a class="code hl_function" href="#a6d6eab4b53b0dbd8e19c5e589c41d1bc">VIPManager::configureBackgroundColor</a>(backgroundColor);</div>
+<div class="line"><span class="lineno">  428</span>    <a class="code hl_function" href="#a1c452245018875ddeaf70c1dbf4c4770">VIPManager::configureBrightness</a>(brightness);</div>
+<div class="line"><span class="lineno">  429</span>    <a class="code hl_function" href="#a342b1a417665c9226369aa5840fef131">VIPManager::configureBrightnessRepeat</a>(brightnessRepeat);</div>
+<div class="line"><span class="lineno">  430</span>    <a class="code hl_function" href="#aa8202e61adbd5af6d4e1212af4db6b17">VIPManager::configurePalettes</a>(paletteConfig);</div>
+<div class="line"><span class="lineno">  431</span>    VIPManager::configurePostProcessingEffects(<a class="code hl_variable" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a>);</div>
+<div class="line"><span class="lineno">  432</span>}</div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a1c452245018875ddeaf70c1dbf4c4770"><div class="ttname"><a href="#a1c452245018875ddeaf70c1dbf4c4770">VIPManager::configureBrightness</a></div><div class="ttdeci">static void configureBrightness(Brightness *brightness)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:294</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a342b1a417665c9226369aa5840fef131"><div class="ttname"><a href="#a342b1a417665c9226369aa5840fef131">VIPManager::configureBrightnessRepeat</a></div><div class="ttdeci">static void configureBrightnessRepeat(BrightnessRepeatSpec *brightnessRepeat)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:304</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a6d6eab4b53b0dbd8e19c5e589c41d1bc"><div class="ttname"><a href="#a6d6eab4b53b0dbd8e19c5e589c41d1bc">VIPManager::configureBackgroundColor</a></div><div class="ttdeci">static void configureBackgroundColor(uint8 color)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:331</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_aa8202e61adbd5af6d4e1212af4db6b17"><div class="ttname"><a href="#aa8202e61adbd5af6d4e1212af4db6b17">VIPManager::configurePalettes</a></div><div class="ttdeci">static void configurePalettes(PaletteConfig *paletteConfig)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:255</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_afcc00e0b26becb42b7ad2e6d1097d44a"><div class="ttname"><a href="#afcc00e0b26becb42b7ad2e6d1097d44a">VIPManager::postProcessingEffects</a></div><div class="ttdeci">VirtualList postProcessingEffects</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:296</a></div></div>
+</div>
+</div>
+</div>
+<a id="a6d6eab4b53b0dbd8e19c5e589c41d1bc" name="a6d6eab4b53b0dbd8e19c5e589c41d1bc"></a>
+<h2 class="memtitle">configureBackgroundColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::configureBackgroundColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint8</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure the background color. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">color</td><td>Color to apply to the background </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">331</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>{</div>
+<div class="line"><span class="lineno">  333</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BACKGROUND_COLOR</a>] = (color &lt;= <a class="code hl_define" href="/documentation/api/-constants-8h/">__COLOR_BRIGHT_RED</a>)</div>
+<div class="line"><span class="lineno">  334</span>        ? color</div>
+<div class="line"><span class="lineno">  335</span>        : <a class="code hl_define" href="/documentation/api/-constants-8h/">__COLOR_BRIGHT_RED</a>;</div>
+<div class="line"><span class="lineno">  336</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a3ea492ae99a7cc84a0c3348728203841"><div class="ttname"><a href="/documentation/api/-constants-8h/">__COLOR_BRIGHT_RED</a></div><div class="ttdeci">#define __COLOR_BRIGHT_RED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:88</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a617c9d93b5ed2d70bbf4ee66a441c771"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__BACKGROUND_COLOR</a></div><div class="ttdeci">#define __BACKGROUND_COLOR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:94</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1c452245018875ddeaf70c1dbf4c4770" name="a1c452245018875ddeaf70c1dbf4c4770"></a>
+<h2 class="memtitle">configureBrightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::configureBrightness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-brightness/">Brightness</a> *</td>          <td class="paramname"><span class="paramname"><em>brightness</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure the brightness registers with the provided configuration. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">brightness</td><td><a class="el" href="/documentation/api/struct-brightness/">Brightness</a> configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">294</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  295</span>{</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  297</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTA</a>] = brightness-&gt;<a class="code hl_variable" href="/documentation/api/struct-brightness/">darkRed</a>;</div>
+<div class="line"><span class="lineno">  298</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTB</a>] = brightness-&gt;<a class="code hl_variable" href="/documentation/api/struct-brightness/">mediumRed</a>;</div>
+<div class="line"><span class="lineno">  299</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTC</a>] = brightness-&gt;<a class="code hl_variable" href="/documentation/api/struct-brightness/">brightRed</a> - (brightness-&gt;<a class="code hl_variable" href="/documentation/api/struct-brightness/">mediumRed</a> + brightness-&gt;<a class="code hl_variable" href="/documentation/api/struct-brightness/">darkRed</a>);</div>
+<div class="line"><span class="lineno">  300</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a0d0a92cfe566800e2edbf74c41529102"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__BRTB</a></div><div class="ttdeci">#define __BRTB</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:68</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a57dfcd25fdfb2c3f794c46bf77164a4c"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a></div><div class="ttdeci">#define __XPSTTS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:75</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a9462b7d5174d7725242817fb040a1f28"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a></div><div class="ttdeci">#define __XPBSY</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:56</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a9908783fbf020ef27286986eea8626d8"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__BRTA</a></div><div class="ttdeci">#define __BRTA</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:67</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_aaff5d0d969b81c11cbbe2df546bb2370"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__BRTC</a></div><div class="ttdeci">#define __BRTC</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:69</a></div></div>
+<div class="ttc" id="astruct_brightness_html_a608e0750820d9c84c9ad290b944cf08e"><div class="ttname"><a href="/documentation/api/struct-brightness/">Brightness::darkRed</a></div><div class="ttdeci">uint8 darkRed</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:73</a></div></div>
+<div class="ttc" id="astruct_brightness_html_a867460467523364d2530b9f8f6f693f1"><div class="ttname"><a href="/documentation/api/struct-brightness/">Brightness::brightRed</a></div><div class="ttdeci">uint8 brightRed</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:75</a></div></div>
+<div class="ttc" id="astruct_brightness_html_aa7a7983b9bde847902c7c80e6d6a35f9"><div class="ttname"><a href="/documentation/api/struct-brightness/">Brightness::mediumRed</a></div><div class="ttdeci">uint8 mediumRed</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:74</a></div></div>
+</div>
+</div>
+</div>
+<a id="a342b1a417665c9226369aa5840fef131" name="a342b1a417665c9226369aa5840fef131"></a>
+<h2 class="memtitle">configureBrightnessRepeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::configureBrightnessRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-brightness-repeat-spec/">BrightnessRepeatSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>brightnessRepeat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure the column table brightness repeat values. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">brightnessRepeat</td><td><a class="el" href="/documentation/api/struct-brightness/">Brightness</a> configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">304</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  305</span>{</div>
+<div class="line"><span class="lineno">  306</span>    <span class="comment">// Use the default repeat values as fallback</span></div>
+<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">if</span>(brightnessRepeatSpec == <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>)</div>
+<div class="line"><span class="lineno">  308</span>    {</div>
+<div class="line"><span class="lineno">  309</span>        brightnessRepeatSpec = (<a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">BrightnessRepeatSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-default-brightness-repeat-spec-8c/">DefaultBrightnessRepeatSpec</a>;</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
+<div class="line"><span class="lineno">  311</span>    <span class="comment">// Column table offsets</span></div>
+<div class="line"><span class="lineno">  312</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> leftCta = _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CTA</a>] &amp; 0xFF;</div>
+<div class="line"><span class="lineno">  313</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> rightCta = _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__CTA</a>] &gt;&gt; 8;</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>    <a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">CACHE_RESET</a>;</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>    <span class="comment">// Write repeat values to column table</span></div>
+<div class="line"><span class="lineno">  318</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; 96; i++)</div>
+<div class="line"><span class="lineno">  319</span>    {</div>
+<div class="line"><span class="lineno">  320</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> value = (brightnessRepeatSpec-&gt;mirror &amp;&amp; (i &gt; (<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRIGHTNESS_REPEAT_ENTRIES</a> / 2 - 1)))</div>
+<div class="line"><span class="lineno">  321</span>            ? brightnessRepeatSpec-&gt;brightnessRepeat[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRIGHTNESS_REPEAT_ENTRIES</a> - 1 - i] &lt;&lt; 8</div>
+<div class="line"><span class="lineno">  322</span>            : brightnessRepeatSpec-&gt;brightnessRepeat[i] &lt;&lt; 8;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>        <a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressLeft</a>[leftCta - i] = (<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressLeft</a>[leftCta - i] &amp; 0xff) | value;</div>
+<div class="line"><span class="lineno">  325</span>        <a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressRight</a>[rightCta - i] = (<a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressRight</a>[rightCta - i] &amp; 0xff) | value;</div>
+<div class="line"><span class="lineno">  326</span>    }</div>
+<div class="line"><span class="lineno">  327</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_default_brightness_repeat_spec_8c_html_ad4d6b18a2adecfe2d8b6e9d85aa265f5"><div class="ttname"><a href="/documentation/api/-default-brightness-repeat-spec-8c/">DefaultBrightnessRepeatSpec</a></div><div class="ttdeci">BrightnessRepeatROMSpec DefaultBrightnessRepeatSpec</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-default-brightness-repeat-spec-8c-source/">DefaultBrightnessRepeatSpec.c:15</a></div></div>
+<div class="ttc" id="a_hardware_manager_8h_html_a49126cf070caaf085a44ac1d98bdf053"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">CACHE_RESET</a></div><div class="ttdeci">#define CACHE_RESET</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:40</a></div></div>
+<div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8c_html_a29a9c7735a36d58c8d1b729444bc3b83"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressRight</a></div><div class="ttdeci">static uint16 *const _columnTableBaseAddressRight</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:64</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8c_html_a38e5cebf73a5ad9d2fe78a2d412f69dc"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressLeft</a></div><div class="ttdeci">static uint16 *const _columnTableBaseAddressLeft</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:63</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a8141c7bb92339fc49291ce22eb9e11ab"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__BRIGHTNESS_REPEAT_ENTRIES</a></div><div class="ttdeci">#define __BRIGHTNESS_REPEAT_ENTRIES</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:138</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a89d987332aca63057abcda6887a8fc1a"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__CTA</a></div><div class="ttdeci">#define __CTA</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:73</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ae0878c47dc2f112a3f26fd6aeb332307"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">BrightnessRepeatSpec</a></div><div class="ttdeci">struct BrightnessRepeatSpec BrightnessRepeatSpec</div></div>
+</div>
+</div>
+</div>
+<a id="aa8202e61adbd5af6d4e1212af4db6b17" name="aa8202e61adbd5af6d4e1212af4db6b17"></a>
+<h2 class="memtitle">configurePalettes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::configurePalettes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-palette-config/">PaletteConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>paletteConfig</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure the VIP's palettes with the provided configuration. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">paletteConfig</td><td>Palettes configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">255</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>{</div>
+<div class="line"><span class="lineno">  257</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__GPLT0</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">bgmap</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-bgmap/">gplt0</a>;</div>
+<div class="line"><span class="lineno">  258</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__GPLT1</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">bgmap</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-bgmap/">gplt1</a>;</div>
+<div class="line"><span class="lineno">  259</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__GPLT2</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">bgmap</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-bgmap/">gplt2</a>;</div>
+<div class="line"><span class="lineno">  260</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__GPLT3</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">bgmap</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-bgmap/">gplt3</a>;</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__JPLT0</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">object</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-object/">jplt0</a>;</div>
+<div class="line"><span class="lineno">  263</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__JPLT1</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">object</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-object/">jplt1</a>;</div>
+<div class="line"><span class="lineno">  264</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__JPLT2</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">object</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-object/">jplt2</a>;</div>
+<div class="line"><span class="lineno">  265</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__JPLT3</a>] = paletteConfig-&gt;<a class="code hl_variable" href="/documentation/api/struct-palette-config/">object</a>.<a class="code hl_variable" href="/documentation/api/struct-palette-config-1-1-object/">jplt3</a>;</div>
+<div class="line"><span class="lineno">  266</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a0d6595c2cd385a4fa7809dab818d73c6"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__JPLT0</a></div><div class="ttdeci">#define __JPLT0</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:89</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a124d6c61440cdd5affbeebaad775814c"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__GPLT2</a></div><div class="ttdeci">#define __GPLT2</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:86</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a392084bb96eb655e9151e0c7fbd10a17"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__GPLT0</a></div><div class="ttdeci">#define __GPLT0</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:84</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a515c7c6c3768e5d226d8073da0fbcfa2"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__GPLT1</a></div><div class="ttdeci">#define __GPLT1</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:85</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a6e8b1231227d08c290acb90f49e94d20"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__JPLT3</a></div><div class="ttdeci">#define __JPLT3</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:92</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a73eba9ae34dad04c47ac2be4c2371141"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__GPLT3</a></div><div class="ttdeci">#define __GPLT3</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:87</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a97b1dd04fc254c505f34e04f55cea666"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__JPLT2</a></div><div class="ttdeci">#define __JPLT2</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:91</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ac731aa34b7ccb99e0995651c5825ec90"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__JPLT1</a></div><div class="ttdeci">#define __JPLT1</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:90</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_bgmap_html_a22e2420ee07033dbcdd32239fdb1e57e"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-bgmap/">PaletteConfig::Bgmap::gplt2</a></div><div class="ttdeci">uint8 gplt2</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:231</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_bgmap_html_a3978d6674f200cca7763b645848b303d"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-bgmap/">PaletteConfig::Bgmap::gplt0</a></div><div class="ttdeci">uint8 gplt0</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:229</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_bgmap_html_a5eb39c8909a73aa033afe8b50383ce57"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-bgmap/">PaletteConfig::Bgmap::gplt3</a></div><div class="ttdeci">uint8 gplt3</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:232</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_bgmap_html_af8ba5c13ebc5b765fb563d12e04e3463"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-bgmap/">PaletteConfig::Bgmap::gplt1</a></div><div class="ttdeci">uint8 gplt1</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:230</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_object_html_a525da424af9dcc69e36759c6bcc240b7"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-object/">PaletteConfig::Object::jplt3</a></div><div class="ttdeci">uint8 jplt3</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:240</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_object_html_a7588f6ec97d398447804c882ead36a40"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-object/">PaletteConfig::Object::jplt1</a></div><div class="ttdeci">uint8 jplt1</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:238</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_object_html_ab29ea8edbcc24ca5de2c716e28b52873"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-object/">PaletteConfig::Object::jplt2</a></div><div class="ttdeci">uint8 jplt2</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:239</a></div></div>
+<div class="ttc" id="astruct_palette_config_1_1_object_html_abc913787ec08911df36bdca9f9afca27"><div class="ttname"><a href="/documentation/api/struct-palette-config-1-1-object/">PaletteConfig::Object::jplt0</a></div><div class="ttdeci">uint8 jplt0</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:237</a></div></div>
+<div class="ttc" id="astruct_palette_config_html_ab59d894e83f5a78a9f4afd1999f25e0a"><div class="ttname"><a href="/documentation/api/struct-palette-config/">PaletteConfig::bgmap</a></div><div class="ttdeci">struct PaletteConfig::Bgmap bgmap</div></div>
+<div class="ttc" id="astruct_palette_config_html_af68b7227ca3d4bbb752398bcf27a21ea"><div class="ttname"><a href="/documentation/api/struct-palette-config/">PaletteConfig::object</a></div><div class="ttdeci">struct PaletteConfig::Object object</div></div>
+</div>
+</div>
+</div>
+<a id="ab8890e5fe57f208970f683cbad38af80" name="ab8890e5fe57f208970f683cbad38af80"></a>
+<h2 class="memtitle">enableCustomInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::enableCustomInterrupts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint16</a></td>          <td class="paramname"><span class="paramname"><em>customInterrupts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enable VIP interrupts that the engine doesn't use. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">customInterrupts</td><td>Interrupts to enable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">191</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>{</div>
+<div class="line"><span class="lineno">  193</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>    vipManager-&gt;<a class="code hl_variable" href="#a121778583e3bcf3ccbdaa7816b6fd5f7">customInterrupts</a> = <a class="code hl_variable" href="#a121778583e3bcf3ccbdaa7816b6fd5f7">customInterrupts</a>;</div>
+<div class="line"><span class="lineno">  196</span>}</div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a121778583e3bcf3ccbdaa7816b6fd5f7"><div class="ttname"><a href="#a121778583e3bcf3ccbdaa7816b6fd5f7">VIPManager::customInterrupts</a></div><div class="ttdeci">uint16 customInterrupts</div><div class="ttdoc">Allows VIP interrupts that the engine doesn&#39;t use.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:309</a></div></div>
+</div>
+</div>
+</div>
+<a id="ac4a8fda02776d688c56c8261a8f59bc6" name="ac4a8fda02776d688c56c8261a8f59bc6"></a>
+<h2 class="memtitle">enableMultiplexedInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::enableMultiplexedInterrupts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>enabledMultiplexedInterrupts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the multiplexed interrupts that are allowed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">enabledMultiplexedInterrupts</td><td>Multiplexed interrupts to allow </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">200</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>{</div>
+<div class="line"><span class="lineno">  202</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span><span class="preprocessor">#ifndef __ENABLE_PROFILER</span></div>
+<div class="line"><span class="lineno">  205</span>    vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a> = <a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>;</div>
+<div class="line"><span class="lineno">  206</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  207</span>    vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a> = <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPNoMultiplexedInterrupts</a>;</div>
+<div class="line"><span class="lineno">  208</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  209</span>}</div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a4c5930d1f56a16a03334a1efc2941d69"><div class="ttname"><a href="#a4c5930d1f56a16a03334a1efc2941d69">VIPManager::enabledMultiplexedInterrupts</a></div><div class="ttdeci">uint32 enabledMultiplexedInterrupts</div><div class="ttdoc">Enum that determines which multiplexed interrupts are allowed.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:302</a></div></div>
+</div>
+</div>
+</div>
+<a id="a2edd31c2a3ed05cfe03d77c16dbe6b23" name="a2edd31c2a3ed05cfe03d77c16dbe6b23"></a>
+<h2 class="memtitle">getCurrentInterrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> VIPManager::getCurrentInterrupt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the registry of the interrupts being processed. </p><dl class="section return"><dt>Returns</dt><dd>The registry of the interrupts being processed </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">376</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  377</span>{</div>
+<div class="line"><span class="lineno">  378</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>    <span class="keywordflow">return</span> vipManager-&gt;<a class="code hl_variable" href="#acd39bdfa8b82fda7f4d9ae5393175f76">currrentInterrupt</a>;</div>
+<div class="line"><span class="lineno">  381</span>}</div>
+<div class="ttc" id="aclass_v_i_p_manager_html_acd39bdfa8b82fda7f4d9ae5393175f76"><div class="ttname"><a href="#acd39bdfa8b82fda7f4d9ae5393175f76">VIPManager::currrentInterrupt</a></div><div class="ttdeci">uint16 currrentInterrupt</div><div class="ttdoc">Register of the interrupts being processed.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:312</a></div></div>
+</div>
+</div>
+</div>
+<a id="a0899d114983fd257ba182c417ff52dea" name="a0899d114983fd257ba182c417ff52dea"></a>
+<h2 class="memtitle">getDrawingStrategy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/-types-8h/">uint32</a> VIPManager::getDrawingStrategy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the drawing management drawingStrategy interrupts that are allowed </p><dl class="section return"><dt>Returns</dt><dd>Value that controls the suspension and resuming of drawing </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">227</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  228</span>{</div>
+<div class="line"><span class="lineno">  229</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">return</span> vipManager-&gt;<a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a>;</div>
+<div class="line"><span class="lineno">  232</span>}</div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a9dc07d7509b68efc53cf0d090c10c768"><div class="ttname"><a href="#a9dc07d7509b68efc53cf0d090c10c768">VIPManager::drawingStrategy</a></div><div class="ttdeci">uint32 drawingStrategy</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:306</a></div></div>
+</div>
+</div>
+</div>
+<a id="aa17be96d159908c15e13f11383986e5f" name="aa17be96d159908c15e13f11383986e5f"></a>
+<h2 class="memtitle">getGameFrameDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> VIPManager::getGameFrameDuration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the time in milliseconds that each game frame lasts. </p><dl class="section return"><dt>Returns</dt><dd>Time in milliseconds that the game frame last according to the FRMCYC configuration </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">385</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  386</span>{</div>
+<div class="line"><span class="lineno">  387</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  388</span> </div>
+<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">return</span> vipManager-&gt;<a class="code hl_variable" href="#ab401ac4ce2e251b963ec735ee86dcfff">gameFrameDuration</a>;</div>
+<div class="line"><span class="lineno">  390</span>}</div>
+<div class="ttc" id="aclass_v_i_p_manager_html_ab401ac4ce2e251b963ec735ee86dcfff"><div class="ttname"><a href="#ab401ac4ce2e251b963ec735ee86dcfff">VIPManager::gameFrameDuration</a></div><div class="ttdeci">uint16 gameFrameDuration</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:316</a></div></div>
+</div>
+</div>
+</div>
+<a id="a4859fd1f6b353d7bcec14c569b242f98" name="a4859fd1f6b353d7bcec14c569b242f98"></a>
+<h2 class="memtitle">interruptHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::interruptHandler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interrupt handler for timer's interrupts. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">72</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
+<div class="line"><span class="lineno">   74</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    vipManager-&gt;<a class="code hl_variable" href="#acd39bdfa8b82fda7f4d9ae5393175f76">currrentInterrupt</a> = _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__INTPND</a>];</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <span class="comment">// Clear interrupts</span></div>
+<div class="line"><span class="lineno">   79</span>    VIPManager::clearInterrupts(vipManager);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span><span class="preprocessor">#ifndef __DEBUG</span></div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPNoMultiplexedInterrupts</a> != vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>)</div>
+<div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPOnlyVIPMultiplexedInterrupts</a> == vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::setInterruptLevel</a>(vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>);</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::enableMultiplexedInterrupts</a>();</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">// Handle the interrupt</span></div>
+<div class="line"><span class="lineno">   94</span>    VIPManager::processInterrupt(vipManager, vipManager-&gt;<a class="code hl_variable" href="#acd39bdfa8b82fda7f4d9ae5393175f76">currrentInterrupt</a>);</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span><span class="preprocessor">#ifndef __DEBUG</span></div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPNoMultiplexedInterrupts</a> != vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>)</div>
+<div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::disableMultiplexedInterrupts</a>();</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPOnlyVIPMultiplexedInterrupts</a> == vipManager-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a>)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::setInterruptLevel</a>(0);</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    vipManager-&gt;<a class="code hl_variable" href="#acd39bdfa8b82fda7f4d9ae5393175f76">currrentInterrupt</a> = 0;</div>
+<div class="line"><span class="lineno">  109</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a094ab651f56343e812d279c2be43a67e"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__INTPND</a></div><div class="ttdeci">#define __INTPND</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:61</a></div></div>
+<div class="ttc" id="aclass_hardware_manager_html_a203f4eed59492dd1963b85449e917f82"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::disableMultiplexedInterrupts</a></div><div class="ttdeci">static void disableMultiplexedInterrupts()</div><div class="ttdoc">Disable multiplexed interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:231</a></div></div>
+<div class="ttc" id="aclass_hardware_manager_html_a773977e556c67b4f94bd949fc49d72c6"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::setInterruptLevel</a></div><div class="ttdeci">static void setInterruptLevel(uint8 level)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:131</a></div></div>
+<div class="ttc" id="aclass_hardware_manager_html_ab93ff91069a8bbee20810ebe28a5b0f5"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::enableMultiplexedInterrupts</a></div><div class="ttdeci">static void enableMultiplexedInterrupts()</div><div class="ttdoc">Enable multiplexed interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:207</a></div></div>
+</div>
+</div>
+</div>
+<a id="abfcc2564cb52e1ba185ff43b683426a4" name="abfcc2564cb52e1ba185ff43b683426a4"></a>
+<h2 class="memtitle">lowerBrightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::lowerBrightness </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lower the brightness to the minimum. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">366</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  367</span>{</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  369</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTA</a>] = 0;</div>
+<div class="line"><span class="lineno">  370</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTB</a>] = 0;</div>
+<div class="line"><span class="lineno">  371</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTC</a>] = 0;</div>
+<div class="line"><span class="lineno">  372</span>}</div>
+</div>
+</div>
+</div>
+<a id="af85d42902a47ecfadee0355e3d22d52c" name="af85d42902a47ecfadee0355e3d22d52c"></a>
+<h2 class="memtitle">pushBackPostProcessingEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::pushBackPostProcessingEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a></td>          <td class="paramname"><span class="paramname"><em>postProcessingEffect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>entity</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Push a post processing effect at the end of the list of effects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">postProcessingEffect</td><td>Post-processing effect function </td></tr>
+    <tr><td class="paramname">entity</td><td>Post-processing effect function's scope </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">136</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>{</div>
+<div class="line"><span class="lineno">  138</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a>* postProcessingEffectRegistry = </div>
+<div class="line"><span class="lineno">  141</span>        VIPManager::isPostProcessingEffectRegistered(vipManager, postProcessingEffect, entity);</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(postProcessingEffectRegistry))</div>
+<div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">remove</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>    postProcessingEffectRegistry = <span class="keyword">new</span> <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a>;</div>
+<div class="line"><span class="lineno">  150</span>    postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">postProcessingEffect</a> = postProcessingEffect;</div>
+<div class="line"><span class="lineno">  151</span>    postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">entity</a> = entity;</div>
+<div class="line"><span class="lineno">  152</span>    postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">remove</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(vipManager-&gt;<a class="code hl_variable" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a>, postProcessingEffectRegistry);</div>
+<div class="line"><span class="lineno">  155</span>}</div>
+<div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8c_html_a0b35307a7fe4df33eda80a9c75c746d7"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a></div><div class="ttdeci">struct PostProcessingEffectRegistry PostProcessingEffectRegistry</div></div>
+<div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
+<div class="ttc" id="astruct_post_processing_effect_registry_html_a5b63cb6787e653850b1f34aa370bdf97"><div class="ttname"><a href="/documentation/api/struct-post-processing-effect-registry/">PostProcessingEffectRegistry::postProcessingEffect</a></div><div class="ttdeci">PostProcessingEffect postProcessingEffect</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:47</a></div></div>
+<div class="ttc" id="astruct_post_processing_effect_registry_html_a86508ea38631ff30d2529584f7b21bc0"><div class="ttname"><a href="/documentation/api/struct-post-processing-effect-registry/">PostProcessingEffectRegistry::remove</a></div><div class="ttdeci">bool remove</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:49</a></div></div>
+<div class="ttc" id="astruct_post_processing_effect_registry_html_ae26f4034e0552af34c90c7912ebf9afd"><div class="ttname"><a href="/documentation/api/struct-post-processing-effect-registry/">PostProcessingEffectRegistry::entity</a></div><div class="ttdeci">Entity entity</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:48</a></div></div>
+</div>
+</div>
+</div>
+<a id="aa3e14813abdafcc1f049b4cef007bab6" name="aa3e14813abdafcc1f049b4cef007bab6"></a>
+<h2 class="memtitle">pushFrontPostProcessingEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::pushFrontPostProcessingEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a></td>          <td class="paramname"><span class="paramname"><em>postProcessingEffect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>entity</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Push a post processing effect at the start of the list of effects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">postProcessingEffect</td><td>Post-processing effect function </td></tr>
+    <tr><td class="paramname">entity</td><td>Post-processing effect function's scope </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">113</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>{</div>
+<div class="line"><span class="lineno">  115</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a>* postProcessingEffectRegistry = </div>
+<div class="line"><span class="lineno">  118</span>        VIPManager::isPostProcessingEffectRegistered(vipManager, postProcessingEffect, entity);</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(postProcessingEffectRegistry))</div>
+<div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>        postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">remove</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>    postProcessingEffectRegistry = <span class="keyword">new</span> <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a>;</div>
+<div class="line"><span class="lineno">  127</span>    postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">postProcessingEffect</a> = postProcessingEffect;</div>
+<div class="line"><span class="lineno">  128</span>    postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">entity</a> = entity;</div>
+<div class="line"><span class="lineno">  129</span>    postProcessingEffectRegistry-&gt;<a class="code hl_variable" href="/documentation/api/struct-post-processing-effect-registry/">remove</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushFront</a>(vipManager-&gt;<a class="code hl_variable" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a>, postProcessingEffectRegistry);</div>
+<div class="line"><span class="lineno">  132</span>}</div>
+<div class="ttc" id="aclass_virtual_list_html_ad32db93a827e39f4bd22d37de2a2e0ac"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushFront</a></div><div class="ttdeci">VirtualNode pushFront(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:219</a></div></div>
+</div>
+</div>
+</div>
+<a id="a248a6256ca52e0351917033ed59d9d71" name="a248a6256ca52e0351917033ed59d9d71"></a>
+<h2 class="memtitle">removePostProcessingEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::removePostProcessingEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-v-i-p-manager-8h/">PostProcessingEffect</a></td>          <td class="paramname"><span class="paramname"><em>postProcessingEffect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>entity</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remove a post-processing effect from the list of effects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">postProcessingEffect</td><td>Post-processing effect function </td></tr>
+    <tr><td class="paramname">entity</td><td>Post-processing effect function's scope </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">159</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>{</div>
+<div class="line"><span class="lineno">  161</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = vipManager-&gt;<a class="code hl_variable" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  164</span>    {</div>
+<div class="line"><span class="lineno">  165</span>        <a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a>* postProcessingEffectRegistry = (<a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8c/">PostProcessingEffectRegistry</a>*)node-&gt;data;</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">if</span></div>
+<div class="line"><span class="lineno">  168</span>        (</div>
+<div class="line"><span class="lineno">  169</span>            postProcessingEffectRegistry-&gt;postProcessingEffect == postProcessingEffect </div>
+<div class="line"><span class="lineno">  170</span>            &amp;&amp; </div>
+<div class="line"><span class="lineno">  171</span>            postProcessingEffectRegistry-&gt;entity == entity</div>
+<div class="line"><span class="lineno">  172</span>        )</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            postProcessingEffectRegistry-&gt;remove = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+<div class="line"><span class="lineno">  178</span>}</div>
+<div class="ttc" id="a_virtual_circular_list_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:29</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_acb02e87ebf3f2af19b8f345ab02f202a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::head</a></div><div class="ttdeci">VirtualNode head</div><div class="ttdoc">List&#39;s first node.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:34</a></div></div>
+<div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
+</div>
+</div>
+</div>
+<a id="a6c7de3aca25e52c805d4b7ead309e546" name="a6c7de3aca25e52c805d4b7ead309e546"></a>
+<h2 class="memtitle">removePostProcessingEffects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::removePostProcessingEffects </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove all a post-processing effects. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">182</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>{</div>
+<div class="line"><span class="lineno">  184</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a>(vipManager-&gt;<a class="code hl_variable" href="#afcc00e0b26becb42b7ad2e6d1097d44a">postProcessingEffects</a>);</div>
+<div class="line"><span class="lineno">  187</span>}</div>
+<div class="ttc" id="aclass_virtual_list_html_aea135a8481da683f8376b1ddeb2184ca"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a></div><div class="ttdeci">void deleteData()</div><div class="ttdoc">Delete all the data and nodes from the list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:558</a></div></div>
+</div>
+</div>
+</div>
+<a id="acf4fa1b2afd02996402da26515c79309" name="acf4fa1b2afd02996402da26515c79309"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">400</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  401</span>{</div>
+<div class="line"><span class="lineno">  402</span>    this-&gt;<a class="code hl_variable" href="#a121778583e3bcf3ccbdaa7816b6fd5f7">customInterrupts</a> = 0;</div>
+<div class="line"><span class="lineno">  403</span>    this-&gt;<a class="code hl_variable" href="#acd39bdfa8b82fda7f4d9ae5393175f76">currrentInterrupt</a> = 0;</div>
+<div class="line"><span class="lineno">  404</span>    this-&gt;<a class="code hl_variable" href="#a4ba20c661773bffb318c9082191a757a">processingGAMESTART</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  405</span>    this-&gt;<a class="code hl_variable" href="#ae65a7a3cc0c26f6a47b5cd029c92f409">processingXPEND</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  406</span>    this-&gt;<a class="code hl_variable" href="#acf2ca8caebee5714478a9a85ef986e5a">isDrawingAllowed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  407</span>    this-&gt;<a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a> = <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPManagerFavorStability</a>;</div>
+<div class="line"><span class="lineno">  408</span>    this-&gt;<a class="code hl_variable" href="#a4c5930d1f56a16a03334a1efc2941d69">enabledMultiplexedInterrupts</a> = <a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPNoMultiplexedInterrupts</a>;</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>    <a class="code hl_function" href="#abfcc2564cb52e1ba185ff43b683426a4">VIPManager::lowerBrightness</a>();</div>
+<div class="line"><span class="lineno">  411</span>    <a class="code hl_function" href="#a6c7de3aca25e52c805d4b7ead309e546">VIPManager::removePostProcessingEffects</a>();</div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>    <a class="code hl_function" href="#ad7a2bac6e5ec9b7ce9d4dca7e8611e5e">VIPManager::setFrameCycle</a>(<a class="code hl_define" href="/documentation/api/-config-8h/">__FRAME_CYCLE</a>);</div>
+<div class="line"><span class="lineno">  414</span>    <a class="code hl_function" href="#aa0713a879956ae4de18074d6da8265ae">VIPManager::setupColumnTable</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  415</span> </div>
+<div class="line"><span class="lineno">  416</span>    VIPManager::clearDRAM(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  417</span>}</div>
+<div class="ttc" id="a_config_8h_html_ace75f34a0d97c795135321fa6030a99c"><div class="ttname"><a href="/documentation/api/-config-8h/">__FRAME_CYCLE</a></div><div class="ttdeci">#define __FRAME_CYCLE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-config-8h-source/">Config.h:134</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a22b874a160800b3cca15320614474af8ad00c57fa0a57ceeda7ba496ca99d3520"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">kVIPManagerFavorStability</a></div><div class="ttdeci">@ kVIPManagerFavorStability</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:259</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a4ba20c661773bffb318c9082191a757a"><div class="ttname"><a href="#a4ba20c661773bffb318c9082191a757a">VIPManager::processingGAMESTART</a></div><div class="ttdeci">volatile bool processingGAMESTART</div><div class="ttdoc">If true, a VIP interrupt happened while in the midst of GAMESTART.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:322</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_a6c7de3aca25e52c805d4b7ead309e546"><div class="ttname"><a href="#a6c7de3aca25e52c805d4b7ead309e546">VIPManager::removePostProcessingEffects</a></div><div class="ttdeci">static void removePostProcessingEffects()</div><div class="ttdoc">Remove all a post-processing effects.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:182</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_aa0713a879956ae4de18074d6da8265ae"><div class="ttname"><a href="#aa0713a879956ae4de18074d6da8265ae">VIPManager::setupColumnTable</a></div><div class="ttdeci">static void setupColumnTable(ColumnTableSpec *columnTableSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:270</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_abfcc2564cb52e1ba185ff43b683426a4"><div class="ttname"><a href="#abfcc2564cb52e1ba185ff43b683426a4">VIPManager::lowerBrightness</a></div><div class="ttdeci">static void lowerBrightness()</div><div class="ttdoc">Lower the brightness to the minimum.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:366</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_acf2ca8caebee5714478a9a85ef986e5a"><div class="ttname"><a href="#acf2ca8caebee5714478a9a85ef986e5a">VIPManager::isDrawingAllowed</a></div><div class="ttdeci">bool isDrawingAllowed</div><div class="ttdoc">If true, XPEN is raised.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:319</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_ad7a2bac6e5ec9b7ce9d4dca7e8611e5e"><div class="ttname"><a href="#ad7a2bac6e5ec9b7ce9d4dca7e8611e5e">VIPManager::setFrameCycle</a></div><div class="ttdeci">static void setFrameCycle(uint8 frameCycle)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c:235</a></div></div>
+<div class="ttc" id="aclass_v_i_p_manager_html_ae65a7a3cc0c26f6a47b5cd029c92f409"><div class="ttname"><a href="#ae65a7a3cc0c26f6a47b5cd029c92f409">VIPManager::processingXPEND</a></div><div class="ttdeci">volatile bool processingXPEND</div><div class="ttdoc">If true, a VIP interrupt happened while in the midst of XPEND.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:325</a></div></div>
+</div>
+</div>
+</div>
+<a id="adf20e74b10a0e00cb86b45f59d9cc90f" name="adf20e74b10a0e00cb86b45f59d9cc90f"></a>
+<h2 class="memtitle">resumeDrawing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::resumeDrawing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume VIP drawing operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">449</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  450</span>{</div>
+<div class="line"><span class="lineno">  451</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#acf2ca8caebee5714478a9a85ef986e5a">isDrawingAllowed</a>)</div>
+<div class="line"><span class="lineno">  452</span>    {</div>
+<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPManagerFavorStability</a> == this-&gt;<a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a>)</div>
+<div class="line"><span class="lineno">  454</span>        {</div>
+<div class="line"><span class="lineno">  455</span>            <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  456</span>        }</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>        _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPCTRL</a>] |= <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPEN</a>;</div>
+<div class="line"><span class="lineno">  459</span>    }</div>
+<div class="line"><span class="lineno">  460</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a0c9e2e11bb4d8edc4b9ba52962da874a"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__XPEN</a></div><div class="ttdeci">#define __XPEN</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:57</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ab4f3dc3d425e271863d06e92a4ecac42"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__XPCTRL</a></div><div class="ttdeci">#define __XPCTRL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:76</a></div></div>
+</div>
+</div>
+</div>
+<a id="ad1c338fc7f4be66158164bf7daf39dcc" name="ad1c338fc7f4be66158164bf7daf39dcc"></a>
+<h2 class="memtitle">setDrawingStrategy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::setDrawingStrategy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint32</a></td>          <td class="paramname"><span class="paramname"><em>drawingStrategy</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the drawing management drawingStrategy interrupts that are allowed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">drawingStrategy</td><td>Value to control the suspension and resuming of drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">213</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>{</div>
+<div class="line"><span class="lineno">  215</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPManagerStrategyLimiter</a> &lt;= <a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a>)</div>
+<div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        <a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a> = 0;</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    vipManager-&gt;<a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a> = <a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a>;</div>
+<div class="line"><span class="lineno">  223</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a22b874a160800b3cca15320614474af8ace37c4d829febbce309feb38d0a8b79c"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">kVIPManagerStrategyLimiter</a></div><div class="ttdeci">@ kVIPManagerStrategyLimiter</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:262</a></div></div>
+</div>
+</div>
+</div>
+<a id="ad7a2bac6e5ec9b7ce9d4dca7e8611e5e" name="ad7a2bac6e5ec9b7ce9d4dca7e8611e5e"></a>
+<h2 class="memtitle">setFrameCycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::setFrameCycle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/-types-8h/">uint8</a></td>          <td class="paramname"><span class="paramname"><em>frameCycle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the FRMCYC value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frameCycle</td><td>FRMCYC value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">235</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>{</div>
+<div class="line"><span class="lineno">  237</span>    VIPManager vipManager = VIPManager::getInstance();</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span><span class="preprocessor">#ifdef __DEBUG</span></div>
+<div class="line"><span class="lineno">  240</span>    frameCycle = 2;</div>
+<div class="line"><span class="lineno">  241</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">if</span>(3 &lt; frameCycle)</div>
+<div class="line"><span class="lineno">  243</span>    {</div>
+<div class="line"><span class="lineno">  244</span>        frameCycle = 3;</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
+<div class="line"><span class="lineno">  246</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>    vipManager-&gt;<a class="code hl_variable" href="#ab401ac4ce2e251b963ec735ee86dcfff">gameFrameDuration</a> = (<a class="code hl_define" href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a> / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MAXIMUM_FPS</a>) &lt;&lt; frameCycle;</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__FRMCYC</a>] = frameCycle;</div>
+<div class="line"><span class="lineno">  251</span>}</div>
+<div class="ttc" id="a_constants_8h_html_a38653620c5087bac1e1a96ca1afa7316"><div class="ttname"><a href="/documentation/api/-constants-8h/">__MAXIMUM_FPS</a></div><div class="ttdeci">#define __MAXIMUM_FPS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:167</a></div></div>
+<div class="ttc" id="a_constants_8h_html_a3ca36c20605d44a9dbe43d6483128f8b"><div class="ttname"><a href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a></div><div class="ttdeci">#define __MILLISECONDS_PER_SECOND</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:169</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a78f3e8d01b5297312cb90ecd32351703"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__FRMCYC</a></div><div class="ttdeci">#define __FRMCYC</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:72</a></div></div>
+</div>
+</div>
+</div>
+<a id="aa0713a879956ae4de18074d6da8265ae" name="aa0713a879956ae4de18074d6da8265ae"></a>
+<h2 class="memtitle">setupColumnTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::setupColumnTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-column-table-spec/">ColumnTableSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>columnTableSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setup the column table with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">columnTableSpec</td><td>Specification for the configuration of the column table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">270</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  271</span>{</div>
+<div class="line"><span class="lineno">  272</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> i, value;</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>    <span class="comment">// Use the default column table as fallback</span></div>
+<div class="line"><span class="lineno">  275</span>    <span class="keywordflow">if</span>(columnTableSpec == <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>)</div>
+<div class="line"><span class="lineno">  276</span>    {</div>
+<div class="line"><span class="lineno">  277</span>        columnTableSpec = (<a class="code hl_typedef" href="/documentation/api/-v-i-p-manager-8h/">ColumnTableSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-default-column-table-spec-8c/">DefaultColumnTableSpec</a>;</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
+<div class="line"><span class="lineno">  279</span> </div>
+<div class="line"><span class="lineno">  280</span>    <span class="comment">// Write column table</span></div>
+<div class="line"><span class="lineno">  281</span>    <span class="keywordflow">for</span>(i = 0; i &lt; 256; i++)</div>
+<div class="line"><span class="lineno">  282</span>    {</div>
+<div class="line"><span class="lineno">  283</span>        value = (columnTableSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-column-table-spec/">mirror</a> &amp;&amp; (i &gt; (<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__COLUMN_TABLE_ENTRIES</a> / 2 - 1)))</div>
+<div class="line"><span class="lineno">  284</span>            ? columnTableSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-column-table-spec/">columnTable</a>[(<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__COLUMN_TABLE_ENTRIES</a> - 1) - i]</div>
+<div class="line"><span class="lineno">  285</span>            : columnTableSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-column-table-spec/">columnTable</a>[i];</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>        <a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressLeft</a>[i] = value;</div>
+<div class="line"><span class="lineno">  288</span>        <a class="code hl_variable" href="/documentation/api/-v-i-p-manager-8c/">_columnTableBaseAddressRight</a>[i] = value;</div>
+<div class="line"><span class="lineno">  289</span>    }</div>
+<div class="line"><span class="lineno">  290</span>}</div>
+<div class="ttc" id="a_default_column_table_spec_8c_html_a4c822b81c5b3f5713a3d8d5a3def128d"><div class="ttname"><a href="/documentation/api/-default-column-table-spec-8c/">DefaultColumnTableSpec</a></div><div class="ttdeci">ColumnTableROMSpec DefaultColumnTableSpec</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-default-column-table-spec-8c-source/">DefaultColumnTableSpec.c:15</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a0048c2bd0c24c6935cfd8485faec2d33"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">ColumnTableSpec</a></div><div class="ttdeci">struct ColumnTableSpec ColumnTableSpec</div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a0693ea46595dc8238fb8d0fec383eb04"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__COLUMN_TABLE_ENTRIES</a></div><div class="ttdeci">#define __COLUMN_TABLE_ENTRIES</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:137</a></div></div>
+<div class="ttc" id="astruct_column_table_spec_html_a4321a09e8519456ce8e6d009e95619a1"><div class="ttname"><a href="/documentation/api/struct-column-table-spec/">ColumnTableSpec::columnTable</a></div><div class="ttdeci">BYTE columnTable[256]</div><div class="ttdoc">Column table entries array.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:183</a></div></div>
+<div class="ttc" id="astruct_column_table_spec_html_aa9acbe9b94a34061e83adddbb0d7c4a6"><div class="ttname"><a href="/documentation/api/struct-column-table-spec/">ColumnTableSpec::mirror</a></div><div class="ttdeci">bool mirror</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:180</a></div></div>
+</div>
+</div>
+</div>
+<a id="a5b6cee100bc0dd3ae43fef3280de8c75" name="a5b6cee100bc0dd3ae43fef3280de8c75"></a>
+<h2 class="memtitle">startDisplaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::startDisplaying </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start VIP displaying operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">490</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  491</span>{</div>
+<div class="line"><span class="lineno">  492</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__REST</a>] = 0;</div>
+<div class="line"><span class="lineno">  493</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__DPCTRL</a>] = (<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__SYNCE</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__RE</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__DISP</a>) &amp; ~<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__LOCK</a>;</div>
+<div class="line"><span class="lineno">  494</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a543fc0aa9d9fd72f147ea5bad176ba66"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__DPCTRL</a></div><div class="ttdeci">#define __DPCTRL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:66</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a7eecae51f18cdbc7ce26bf8af7cb6a11"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__REST</a></div><div class="ttdeci">#define __REST</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:70</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_aab8526ef5d80b00e458faf8213024295"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__LOCK</a></div><div class="ttdeci">#define __LOCK</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:42</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ac0893b19651016c429f58a394c66a9c2"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__SYNCE</a></div><div class="ttdeci">#define __SYNCE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:43</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_ac82e77944801600c1ba66b90dd54f26f"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__RE</a></div><div class="ttdeci">#define __RE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:44</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_af834ae14e275537311d2cd4b67d593c5"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__DISP</a></div><div class="ttdeci">#define __DISP</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:47</a></div></div>
+</div>
+</div>
+</div>
+<a id="ac4c02625cab2f98bf14de6c93a2d54ea" name="ac4c02625cab2f98bf14de6c93a2d54ea"></a>
+<h2 class="memtitle">startDrawing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::startDrawing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start VIP drawing operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">437</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  438</span>{</div>
+<div class="line"><span class="lineno">  439</span>    this-&gt;<a class="code hl_variable" href="#acf2ca8caebee5714478a9a85ef986e5a">isDrawingAllowed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>    VIPManager::enableInterrupts(<span class="keyword">this</span>, <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__FRAMESTART</a> | <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPEND</a>);</div>
+<div class="line"><span class="lineno">  442</span> </div>
+<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  444</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPCTRL</a>] |= <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPEN</a>;</div>
+<div class="line"><span class="lineno">  445</span>}</div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_a2c32af15640c73fc4c5baa2500262b45"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__XPEND</a></div><div class="ttdeci">#define __XPEND</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:34</a></div></div>
+<div class="ttc" id="a_v_i_p_manager_8h_html_afaae76f8a066978e8cf5c015cf647d77"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__FRAMESTART</a></div><div class="ttdeci">#define __FRAMESTART</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:36</a></div></div>
+</div>
+</div>
+</div>
+<a id="a2d0eb414dfc577439c5891c43dbf3cd1" name="a2d0eb414dfc577439c5891c43dbf3cd1"></a>
+<h2 class="memtitle">stopDisplaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::stopDisplaying </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop VIP displaying operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">498</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  499</span>{</div>
+<div class="line"><span class="lineno">  500</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__REST</a>] = 0;</div>
+<div class="line"><span class="lineno">  501</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__DPCTRL</a>] = 0;</div>
+<div class="line"><span class="lineno">  502</span>}</div>
+</div>
+</div>
+</div>
+<a id="a30ecdf579f99b864c02dde838c03e55e" name="a30ecdf579f99b864c02dde838c03e55e"></a>
+<h2 class="memtitle">stopDrawing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::stopDrawing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop VIP drawing operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">478</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  479</span>{</div>
+<div class="line"><span class="lineno">  480</span>    this-&gt;<a class="code hl_variable" href="#acf2ca8caebee5714478a9a85ef986e5a">isDrawingAllowed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  481</span> </div>
+<div class="line"><span class="lineno">  482</span>    VIPManager::disableInterrupts(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>    <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  485</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPCTRL</a>] &amp;= ~__XPEN;</div>
+<div class="line"><span class="lineno">  486</span>}</div>
+</div>
+</div>
+</div>
+<a id="ae21c343657c8f50b374223646013de8a" name="ae21c343657c8f50b374223646013de8a"></a>
+<h2 class="memtitle">suspendDrawing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void VIPManager::suspendDrawing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Suspend VIP drawing operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">464</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  465</span>{</div>
+<div class="line"><span class="lineno">  466</span>    this-&gt;<a class="code hl_variable" href="#acf2ca8caebee5714478a9a85ef986e5a">isDrawingAllowed</a> = <a class="code hl_variable" href="#acf2ca8caebee5714478a9a85ef986e5a">VIPManager::isDrawingAllowed</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  467</span>    </div>
+<div class="line"><span class="lineno">  468</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-v-i-p-manager-8h/">kVIPManagerFavorStability</a> == this-&gt;<a class="code hl_variable" href="#a9dc07d7509b68efc53cf0d090c10c768">drawingStrategy</a>)</div>
+<div class="line"><span class="lineno">  469</span>    {</div>
+<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  471</span>    }</div>
+<div class="line"><span class="lineno">  472</span> </div>
+<div class="line"><span class="lineno">  473</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPCTRL</a>] &amp;= ~__XPEN;</div>
+<div class="line"><span class="lineno">  474</span>}</div>
+</div>
+</div>
+</div>
+<a id="acfd561ee36d750588f9e7635913c085a" name="acfd561ee36d750588f9e7635913c085a"></a>
+<h2 class="memtitle">upBrightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void VIPManager::upBrightness </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Up the brightness to the maximum. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">356</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  357</span>{</div>
+<div class="line"><span class="lineno">  358</span>    <span class="keywordflow">while</span>(_vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPSTTS</a>] &amp; <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__XPBSY</a>);</div>
+<div class="line"><span class="lineno">  359</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTA</a>] = 32;</div>
+<div class="line"><span class="lineno">  360</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTB</a>] = 64;</div>
+<div class="line"><span class="lineno">  361</span>    _vipRegisters[<a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__BRTC</a>] = 32;</div>
+<div class="line"><span class="lineno">  362</span>}</div>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a171fab7d443f827632617b02bc7fc292" name="a171fab7d443f827632617b02bc7fc292"></a>
+<h2 class="memtitle">currentDrawingFrameBufferSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> VIPManager::currentDrawingFrameBufferSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Frame buffers set using during the current game frame. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">299</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="acd39bdfa8b82fda7f4d9ae5393175f76" name="acd39bdfa8b82fda7f4d9ae5393175f76"></a>
+<h2 class="memtitle">currrentInterrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> VIPManager::currrentInterrupt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register of the interrupts being processed. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">312</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a121778583e3bcf3ccbdaa7816b6fd5f7" name="a121778583e3bcf3ccbdaa7816b6fd5f7"></a>
+<h2 class="memtitle">customInterrupts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> VIPManager::customInterrupts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allows VIP interrupts that the engine doesn't use. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">309</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a9dc07d7509b68efc53cf0d090c10c768" name="a9dc07d7509b68efc53cf0d090c10c768"></a>
+<h2 class="memtitle">drawingStrategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> VIPManager::drawingStrategy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enum to determine if the manager waits for the VIP before suspending/resuming the VIP's drawing operations </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">306</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a4c5930d1f56a16a03334a1efc2941d69" name="a4c5930d1f56a16a03334a1efc2941d69"></a>
+<h2 class="memtitle">enabledMultiplexedInterrupts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint32</a> VIPManager::enabledMultiplexedInterrupts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enum that determines which multiplexed interrupts are allowed. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">302</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a83c99d33a9873c60babff3ac207b336a" name="a83c99d33a9873c60babff3ac207b336a"></a>
+<h2 class="memtitle">FRAMESTARTDuringXPEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a> VIPManager::FRAMESTARTDuringXPEND</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, FRAMESTART happened during XPEND. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">328</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ab401ac4ce2e251b963ec735ee86dcfff" name="ab401ac4ce2e251b963ec735ee86dcfff"></a>
+<h2 class="memtitle">gameFrameDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">uint16</a> VIPManager::gameFrameDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Time in milliseconds that the game frame last according to the FRMCYC configuration </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">316</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="acf2ca8caebee5714478a9a85ef986e5a" name="acf2ca8caebee5714478a9a85ef986e5a"></a>
+<h2 class="memtitle">isDrawingAllowed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-types-8h/">bool</a> VIPManager::isDrawingAllowed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, XPEN is raised. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">319</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="afcc00e0b26becb42b7ad2e6d1097d44a" name="afcc00e0b26becb42b7ad2e6d1097d44a"></a>
+<h2 class="memtitle">postProcessingEffects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> VIPManager::postProcessingEffects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Linked list of post processing effects to be applied after the VIP's drawing operations are completed </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">296</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a4ba20c661773bffb318c9082191a757a" name="a4ba20c661773bffb318c9082191a757a"></a>
+<h2 class="memtitle">processingGAMESTART</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a> VIPManager::processingGAMESTART</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, a VIP interrupt happened while in the midst of GAMESTART. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">322</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<a id="ae65a7a3cc0c26f6a47b5cd029c92f409" name="ae65a7a3cc0c26f6a47b5cd029c92f409"></a>
+<h2 class="memtitle">processingXPEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">volatile <a class="el" href="/documentation/api/-types-8h/">bool</a> VIPManager::processingXPEND</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, a VIP interrupt happened while in the midst of XPEND. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">325</a> of file <a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>.</p>
+
+</div>
+</div>
+<hr />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a></li>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="/documentation/api/-v-i-p-manager-8c-source/">VIPManager.c</a></li>
+</ul>
+</div>
+
+
+</div>

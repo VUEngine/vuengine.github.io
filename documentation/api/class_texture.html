@@ -329,7 +329,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  279</span>{</div>
 <div class="line"><span class="lineno">  280</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a>)</div>
 <div class="line"><span class="lineno">  281</span>    {</div>
-<div class="line"><span class="lineno">  282</span>        <a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">  282</span>        <a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>();</div>
 <div class="line"><span class="lineno">  283</span>    }</div>
 <div class="line"><span class="lineno">  284</span> </div>
 <div class="line"><span class="lineno">  285</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
@@ -352,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  302</span>    this-&gt;<a class="code hl_variable" href="#aa760abb5b7c93a305b87f0a0e66ba566">frame</a> = 0;</div>
 <div class="line"><span class="lineno">  303</span>    this-&gt;<a class="code hl_variable" href="#a4facafb3b5be41dcfbeac78eb8d0a396">update</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  304</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:24</a></div></div>
+<div class="ttc" id="a_listener_object_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-listener-object-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:29</a></div></div>
 <div class="ttc" id="a_texture_8c_html_af4dc991c1f6432edf59e126c61c51340"><div class="ttname"><a href="/documentation/api/-texture-8c/">_texturesToUpdate</a></div><div class="ttdeci">static VirtualList _texturesToUpdate</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8c-source/">Texture.c:35</a></div></div>
 <div class="ttc" id="aclass_texture_html_a2e14f70e68b85371ec1e14cf309c27ea"><div class="ttname"><a href="#a2e14f70e68b85371ec1e14cf309c27ea">Texture::usageCount</a></div><div class="ttdeci">uint8 usageCount</div><div class="ttdoc">Number of references to this texture instance.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:117</a></div></div>
 <div class="ttc" id="aclass_texture_html_a4facafb3b5be41dcfbeac78eb8d0a396"><div class="ttname"><a href="#a4facafb3b5be41dcfbeac78eb8d0a396">Texture::update</a></div><div class="ttdeci">bool update</div><div class="ttdoc">Flag to signal that the texture needs to update DRAM in the next render cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-texture-8h-source/">Texture.h:120</a></div></div>
@@ -464,15 +464,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> </div>
 <div class="line"><span class="lineno">   71</span>            Texture::safeCast</div>
 <div class="line"><span class="lineno">   72</span>            (</div>
-<div class="line"><span class="lineno">   73</span>                BgmapTextureManager::getTexture</div>
+<div class="line"><span class="lineno">   73</span>                <a class="code hl_function" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager::getTexture</a></div>
 <div class="line"><span class="lineno">   74</span>                (</div>
-<div class="line"><span class="lineno">   75</span>                    (BgmapTextureSpec*)<a class="code hl_variable" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>, minimumSegment, mustLiveAtEvenSegment, scValue</div>
+<div class="line"><span class="lineno">   75</span>                    BgmapTextureManager::getInstance(), (BgmapTextureSpec*)<a class="code hl_variable" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>, minimumSegment, mustLiveAtEvenSegment, scValue</div>
 <div class="line"><span class="lineno">   76</span>                )</div>
 <div class="line"><span class="lineno">   77</span>            );</div>
 <div class="line"><span class="lineno">   78</span>    }</div>
 <div class="line"><span class="lineno">   79</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">typeofclass</a>(<a class="code hl_friend" href="/documentation/api/-object-texture-manager-8c/">ObjectTexture</a>) == textureClass)</div>
 <div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> Texture::safeCast(ObjectTextureManager::getTexture((ObjectTextureSpec*)<a class="code hl_variable" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>));</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> Texture::safeCast(<a class="code hl_function" href="/documentation/api/class-object-texture-manager/">ObjectTextureManager::getTexture</a>(ObjectTextureManager::getInstance(), (ObjectTextureSpec*)<a class="code hl_variable" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>));</div>
 <div class="line"><span class="lineno">   82</span>    }</div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;    </div>
@@ -480,6 +480,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_bgmap_sprite_8c_html_a0d276167ff979110ce20c9f9d54d5526"><div class="ttname"><a href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a></div><div class="ttdeci">friend class BgmapTexture</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-sprite-8c-source/">BgmapSprite.c:29</a></div></div>
 <div class="ttc" id="a_object_texture_manager_8c_html_ac41bc19fdf1361cbf2764601319acbab"><div class="ttname"><a href="/documentation/api/-object-texture-manager-8c/">ObjectTexture</a></div><div class="ttdeci">friend class ObjectTexture</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-texture-manager-8c-source/">ObjectTextureManager.c:23</a></div></div>
 <div class="ttc" id="a_oop_8h_html_a8a833e6680131ee2dc131d6bbf6e03a0"><div class="ttname"><a href="/documentation/api/-oop-8h/">typeofclass</a></div><div class="ttdeci">#define typeofclass(ClassName)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:271</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_manager_html_ae80107ea5d86d0c9c2d466daa90a67b7"><div class="ttname"><a href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager::getTexture</a></div><div class="ttdeci">BgmapTexture getTexture(BgmapTextureSpec *bgmapTextureSpec, int16 minimumSegment, bool mustLiveAtEvenSegment, uint32 scValue)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c:195</a></div></div>
+<div class="ttc" id="aclass_object_texture_manager_html_aa19a616a928eb4ab214e59c1ca607ca3"><div class="ttname"><a href="/documentation/api/class-object-texture-manager/">ObjectTextureManager::getTexture</a></div><div class="ttdeci">ObjectTexture getTexture(ObjectTextureSpec *objectTextureSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-texture-manager-8c-source/">ObjectTextureManager.c:39</a></div></div>
 </div>
 </div>
 </div>
@@ -1097,14 +1099,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   95</span> </div>
 <div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">__IS_INSTANCE_OF</a>(<a class="code hl_friend" href="/documentation/api/-bgmap-sprite-8c/">BgmapTexture</a>, texture))</div>
 <div class="line"><span class="lineno">   97</span>    {</div>
-<div class="line"><span class="lineno">   98</span>        BgmapTextureManager::releaseTexture(BgmapTexture::safeCast(texture));</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager::releaseTexture</a>(BgmapTextureManager::getInstance(), BgmapTexture::safeCast(texture));</div>
 <div class="line"><span class="lineno">   99</span>    }</div>
 <div class="line"><span class="lineno">  100</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">__IS_INSTANCE_OF</a>(<a class="code hl_friend" href="/documentation/api/-object-texture-manager-8c/">ObjectTexture</a>, texture))</div>
 <div class="line"><span class="lineno">  101</span>    {</div>
-<div class="line"><span class="lineno">  102</span>        ObjectTextureManager::releaseTexture(ObjectTexture::safeCast(texture));</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_function" href="/documentation/api/class-object-texture-manager/">ObjectTextureManager::releaseTexture</a>(ObjectTextureManager::getInstance(), ObjectTexture::safeCast(texture));</div>
 <div class="line"><span class="lineno">  103</span>    }</div>
 <div class="line"><span class="lineno">  104</span>}</div>
 <div class="ttc" id="a_oop_8h_html_ab0ae088e286cc5cb3e76234aaa51af68"><div class="ttname"><a href="/documentation/api/-oop-8h/">__IS_INSTANCE_OF</a></div><div class="ttdeci">#define __IS_INSTANCE_OF(ClassName, object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:286</a></div></div>
+<div class="ttc" id="aclass_bgmap_texture_manager_html_acc4142e291ea2f7c87be9f9cede2d78e"><div class="ttname"><a href="/documentation/api/class-bgmap-texture-manager/">BgmapTextureManager::releaseTexture</a></div><div class="ttdeci">void releaseTexture(BgmapTexture bgmapTexture)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-bgmap-texture-manager-8c-source/">BgmapTextureManager.c:266</a></div></div>
+<div class="ttc" id="aclass_object_texture_manager_html_ab158d97f09a583d007e6c583f38e19b6"><div class="ttname"><a href="/documentation/api/class-object-texture-manager/">ObjectTextureManager::releaseTexture</a></div><div class="ttdeci">void releaseTexture(ObjectTexture objectTexture)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-texture-manager-8c-source/">ObjectTextureManager.c:59</a></div></div>
 </div>
 </div>
 </div>
@@ -1137,7 +1141,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   44</span>{</div>
 <div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == <a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a>)</div>
 <div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>();</div>
 <div class="line"><span class="lineno">   48</span>    }</div>
 <div class="line"><span class="lineno">   49</span> </div>
 <div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(<a class="code hl_variable" href="/documentation/api/-texture-8c/">_texturesToUpdate</a>))</div>

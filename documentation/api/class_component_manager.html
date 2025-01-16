@@ -68,6 +68,10 @@ Static Public Member Functions</h2></td></tr>
 
 <tr class="memitem:a2d22b8f1456c81566550300b83379dde" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d22b8f1456c81566550300b83379dde">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
 
+<tr class="memitem:a123ea126f5ba13de211c4dffced1137e" id="r_a123ea126f5ba13de211c4dffced1137e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123ea126f5ba13de211c4dffced1137e">createComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
+
+<tr class="memitem:a1c09750f44f3f93cc9039fe65d561065" id="r_a1c09750f44f3f93cc9039fe65d561065"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c09750f44f3f93cc9039fe65d561065">destroyComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+
 <tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b446d4fe848a795de3a8c8189b9d30a">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType, <a class="el" href="/documentation/api/-types-8h/">int16</a> componentIndex)</td></tr>
 
 <tr class="memitem:ad570cf1d4424c7bb33772b4d8852581c" id="r_ad570cf1d4424c7bb33772b4d8852581c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad570cf1d4424c7bb33772b4d8852581c">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/-types-8h/">uint32</a> componentType)</td></tr>
@@ -218,10 +222,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  152</span><span class="preprocessor">#ifndef __RELEASE</span></div>
 <div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-component-manager-8c/">__MAXIMUM_NUMBER_OF_COMPONENTS</a> &lt; i)</div>
 <div class="line"><span class="lineno">  154</span>        {</div>
-<div class="line"><span class="lineno">  155</span>            Printing::setDebugMode();</div>
-<div class="line"><span class="lineno">  156</span>            Printing::clear();</div>
-<div class="line"><span class="lineno">  157</span>            Printing::text(<span class="stringliteral">&quot;Component specs array: &quot;</span>, 1, 26, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  158</span>            Printing::hex((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)componentSpecs, 1, 27, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  155</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::setDebugMode</a>();</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::clear</a>();</div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Component specs array: &quot;</span>, 1, 26, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::hex</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)componentSpecs, 1, 27, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
 <div class="line"><span class="lineno">  159</span>            <a class="code hl_function" href="/documentation/api/class-error/">Error::triggerException</a>(<span class="stringliteral">&quot;ComponentManager::addComponents: Non terminated component specs array&quot;</span>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);  </div>
 <div class="line"><span class="lineno">  160</span>        }</div>
 <div class="line"><span class="lineno">  161</span><span class="preprocessor">#endif</span></div>
@@ -230,9 +234,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_component_8h_html_af0bf4d9cdda7a52eccd579a685adf8c5"><div class="ttname"><a href="/documentation/api/-component-8h/">kComponentTypes</a></div><div class="ttdeci">@ kComponentTypes</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:52</a></div></div>
 <div class="ttc" id="a_component_manager_8c_html_a466cbbaf12c10a5a7a93c956b5c7e987"><div class="ttname"><a href="/documentation/api/-component-manager-8c/">__MAXIMUM_NUMBER_OF_COMPONENTS</a></div><div class="ttdeci">#define __MAXIMUM_NUMBER_OF_COMPONENTS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:44</a></div></div>
 <div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="aclass_component_manager_html_a8564a423867320cf75ca685274559424"><div class="ttname"><a href="#a8564a423867320cf75ca685274559424">ComponentManager::addComponent</a></div><div class="ttdeci">static Component addComponent(Entity owner, const ComponentSpec *componentSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:114</a></div></div>
 <div class="ttc" id="aclass_error_html_a317637c6509c9da9ad1464fba1f3ecbf"><div class="ttname"><a href="/documentation/api/class-error/">Error::triggerException</a></div><div class="ttdeci">static void triggerException(char *message, char *detail)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-error-8c-source/">Error.c:48</a></div></div>
+<div class="ttc" id="aclass_printing_html_a92b0b91f848f46ae5305603a077489c8"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::text</a></div><div class="ttdeci">static void text(const char *string, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:288</a></div></div>
+<div class="ttc" id="aclass_printing_html_a99d5252d7ee3b715fd4189063f69252f"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::clear</a></div><div class="ttdeci">static void clear()</div><div class="ttdoc">Clear printing area in BGMAP memory.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:264</a></div></div>
+<div class="ttc" id="aclass_printing_html_a9c84c7ab379f7ef53e6ce5b320c4cd6b"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::hex</a></div><div class="ttdeci">static void hex(WORD value, uint8 x, uint8 y, uint8 length, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:306</a></div></div>
+<div class="ttc" id="aclass_printing_html_aad0f1a46e008887c9f68670625d37497"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::setDebugMode</a></div><div class="ttdeci">static void setDebugMode()</div><div class="ttdoc">Set mode to debug to bypass loading fonts through CharSets.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:104</a></div></div>
 <div class="ttc" id="astruct_component_spec_html_a6bd025c6bf7787ffef8867dfc842e423"><div class="ttname"><a href="/documentation/api/struct-component-spec/">ComponentSpec::allocator</a></div><div class="ttdeci">AllocatorPointer allocator</div><div class="ttdoc">Class&#39; allocator.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:60</a></div></div>
 </div>
 </div>
@@ -272,31 +280,31 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the owner has visual components; false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">443</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>{</div>
-<div class="line"><span class="lineno">  445</span>    <span class="keywordtype">bool</span> modified = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner)</div>
-<div class="line"><span class="lineno">  448</span>    {</div>
-<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  450</span>    }</div>
-<div class="line"><span class="lineno">  451</span> </div>
-<div class="line"><span class="lineno">  452</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
-<div class="line"><span class="lineno">  453</span>    {</div>
-<div class="line"><span class="lineno">  454</span>        ComponentManager componentManager = ComponentManager::getManager(i);</div>
-<div class="line"><span class="lineno">  455</span> </div>
-<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager || !ComponentManager::overrides(componentManager, <a class="code hl_function" href="#ae13a34663a70fdc54f4c8bf8625a2b68">isAnyVisible</a>))</div>
-<div class="line"><span class="lineno">  457</span>        {</div>
-<div class="line"><span class="lineno">  458</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  459</span>        }</div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>        modified |= ComponentManager::getRightBoxFromComponents(componentManager, owner, rightBox);</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-<div class="line"><span class="lineno">  463</span> </div>
-<div class="line"><span class="lineno">  464</span>    <span class="keywordflow">return</span> modified;</div>
-<div class="line"><span class="lineno">  465</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">490</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  491</span>{</div>
+<div class="line"><span class="lineno">  492</span>    <span class="keywordtype">bool</span> modified = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner)</div>
+<div class="line"><span class="lineno">  495</span>    {</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  497</span>    }</div>
+<div class="line"><span class="lineno">  498</span> </div>
+<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
+<div class="line"><span class="lineno">  500</span>    {</div>
+<div class="line"><span class="lineno">  501</span>        ComponentManager componentManager = ComponentManager::getManager(i);</div>
+<div class="line"><span class="lineno">  502</span> </div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager || !ComponentManager::overrides(componentManager, <a class="code hl_function" href="#ae13a34663a70fdc54f4c8bf8625a2b68">isAnyVisible</a>))</div>
+<div class="line"><span class="lineno">  504</span>        {</div>
+<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  506</span>        }</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>        modified |= ComponentManager::getRightBoxFromComponents(componentManager, owner, rightBox);</div>
+<div class="line"><span class="lineno">  509</span>    }</div>
+<div class="line"><span class="lineno">  510</span> </div>
+<div class="line"><span class="lineno">  511</span>    <span class="keywordflow">return</span> modified;</div>
+<div class="line"><span class="lineno">  512</span>}</div>
 <div class="ttc" id="a_types_8h_html_a259fa4834387bd68627ddf37bb3ebdb9"><div class="ttname"><a href="/documentation/api/-types-8h/">int16</a></div><div class="ttdeci">signed short int16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:24</a></div></div>
-<div class="ttc" id="aclass_component_manager_html_ae13a34663a70fdc54f4c8bf8625a2b68"><div class="ttname"><a href="#ae13a34663a70fdc54f4c8bf8625a2b68">ComponentManager::isAnyVisible</a></div><div class="ttdeci">virtual bool isAnyVisible(Entity owner)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:722</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_ae13a34663a70fdc54f4c8bf8625a2b68"><div class="ttname"><a href="#ae13a34663a70fdc54f4c8bf8625a2b68">ComponentManager::isAnyVisible</a></div><div class="ttdeci">virtual bool isAnyVisible(Entity owner)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:769</a></div></div>
 </div>
 </div>
 </div>
@@ -317,14 +325,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">666</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  667</span>{</div>
-<div class="line"><span class="lineno">  668</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
-<div class="line"><span class="lineno">  669</span>    Base::constructor();</div>
-<div class="line"><span class="lineno">  670</span> </div>
-<div class="line"><span class="lineno">  671</span>    this-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
-<div class="line"><span class="lineno">  672</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:24</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">713</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  714</span>{</div>
+<div class="line"><span class="lineno">  715</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">  716</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">  717</span> </div>
+<div class="line"><span class="lineno">  718</span>    this-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">  719</span>}</div>
+<div class="ttc" id="a_listener_object_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-listener-object-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:29</a></div></div>
 <div class="ttc" id="aclass_component_manager_html_a86bce556cf2be26d1414b36ecf82ee85"><div class="ttname"><a href="#a86bce556cf2be26d1414b36ecf82ee85">ComponentManager::components</a></div><div class="ttdeci">VirtualList components</div><div class="ttdoc">List of components.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8h-source/">ComponentManager.h:42</a></div></div>
 </div>
 </div>
@@ -388,9 +396,64 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> component;</div>
 <div class="line"><span class="lineno">   74</span>}</div>
 <div class="ttc" id="a_component_manager_8c_html_a90717717700965c100968cff0188e244"><div class="ttname"><a href="/documentation/api/-component-manager-8c/">Component</a></div><div class="ttdeci">friend class Component</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:35</a></div></div>
-<div class="ttc" id="aclass_component_manager_html_ae0ff65057b734a50961ae59028bcbb52"><div class="ttname"><a href="#ae0ff65057b734a50961ae59028bcbb52">ComponentManager::instantiateComponent</a></div><div class="ttdeci">virtual Component instantiateComponent(Entity owner, const ComponentSpec *componentSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:691</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_ae0ff65057b734a50961ae59028bcbb52"><div class="ttname"><a href="#ae0ff65057b734a50961ae59028bcbb52">ComponentManager::instantiateComponent</a></div><div class="ttdeci">virtual Component instantiateComponent(Entity owner, const ComponentSpec *componentSpec)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:738</a></div></div>
 <div class="ttc" id="aclass_entity_html_a439a33e947e77bdf488dad4dd6f987da"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::addedComponent</a></div><div class="ttdeci">virtual void addedComponent(Component component)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:436</a></div></div>
 <div class="ttc" id="astruct_component_spec_html_a41bc7a968e8118ad758d716ed188a451"><div class="ttname"><a href="/documentation/api/struct-component-spec/">ComponentSpec::componentType</a></div><div class="ttdeci">uint16 componentType</div><div class="ttdoc">Component type.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:63</a></div></div>
+</div>
+</div>
+</div>
+<a id="a123ea126f5ba13de211c4dffced1137e" name="a123ea126f5ba13de211c4dffced1137e"></a>
+<h2 class="memtitle">createComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void ComponentManager::createComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **</td>          <td class="paramname"><span class="paramname"><em>componentSpecs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create all the components from the specified specs array and attache to the provided owner. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the components attach to </td></tr>
+    <tr><td class="paramname">componentSpecs</td><td>Specs to initialize the new components </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">204</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>{</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> i = 0; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != componentSpecs[i] &amp;&amp; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != componentSpecs[i]-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">allocator</a>; i++)</div>
+<div class="line"><span class="lineno">  207</span>    {</div>
+<div class="line"><span class="lineno">  208</span>        <a class="code hl_function" href="#a8564a423867320cf75ca685274559424">ComponentManager::addComponent</a>(owner, componentSpecs[i]);</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span><span class="preprocessor">#ifndef __RELEASE</span></div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-component-manager-8c/">__MAXIMUM_NUMBER_OF_COMPONENTS</a> &lt; i)</div>
+<div class="line"><span class="lineno">  212</span>        {</div>
+<div class="line"><span class="lineno">  213</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::setDebugMode</a>();</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::clear</a>();</div>
+<div class="line"><span class="lineno">  215</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Component specs array: &quot;</span>, 1, 26, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  216</span>            <a class="code hl_function" href="/documentation/api/class-printing/">Printing::hex</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)componentSpecs, 1, 27, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  217</span>            <a class="code hl_function" href="/documentation/api/class-error/">Error::triggerException</a>(<span class="stringliteral">&quot;ComponentManager::addComponents: Non terminated component specs array&quot;</span>, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);  </div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="line"><span class="lineno">  221</span>}</div>
 </div>
 </div>
 </div>
@@ -428,20 +491,20 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">705</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  706</span>{</div>
-<div class="line"><span class="lineno">  707</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(component))</div>
-<div class="line"><span class="lineno">  708</span>    {</div>
-<div class="line"><span class="lineno">  709</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  710</span>    }</div>
-<div class="line"><span class="lineno">  711</span> </div>
-<div class="line"><span class="lineno">  712</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a> || <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes &lt;= component-&gt;</a>componentSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">componentType</a>)</div>
-<div class="line"><span class="lineno">  713</span>    {</div>
-<div class="line"><span class="lineno">  714</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  715</span>    }</div>
-<div class="line"><span class="lineno">  716</span> </div>
-<div class="line"><span class="lineno">  717</span>    ComponentManager::cleanOwnerComponentLists(owner, component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">componentType</a>);</div>
-<div class="line"><span class="lineno">  718</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">752</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  753</span>{</div>
+<div class="line"><span class="lineno">  754</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(component))</div>
+<div class="line"><span class="lineno">  755</span>    {</div>
+<div class="line"><span class="lineno">  756</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  757</span>    }</div>
+<div class="line"><span class="lineno">  758</span> </div>
+<div class="line"><span class="lineno">  759</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a> || <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes &lt;= component-&gt;</a>componentSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">componentType</a>)</div>
+<div class="line"><span class="lineno">  760</span>    {</div>
+<div class="line"><span class="lineno">  761</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  762</span>    }</div>
+<div class="line"><span class="lineno">  763</span> </div>
+<div class="line"><span class="lineno">  764</span>    ComponentManager::cleanOwnerComponentLists(owner, component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">componentSpec</a>-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">componentType</a>);</div>
+<div class="line"><span class="lineno">  765</span>}</div>
 <div class="ttc" id="aclass_component_html_ada6fd2c1a873fe14efcc7db63d7a5d7e"><div class="ttname"><a href="/documentation/api/class-component/">Component::componentSpec</a></div><div class="ttdeci">const ComponentSpec * componentSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the component.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:84</a></div></div>
 </div>
 </div>
@@ -514,8 +577,67 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  109</span>    <a class="code hl_function" href="#a8803e792ebc2bebd2b2a91c3127b91d7">ComponentManager::deinstantiateComponent</a>(componentManager, owner, component);</div>
 <div class="line"><span class="lineno">  110</span>}</div>
 <div class="ttc" id="aclass_component_html_aca4d3c4346e10579e0dce15d2deb2a22"><div class="ttname"><a href="/documentation/api/class-component/">Component::owner</a></div><div class="ttdeci">Entity owner</div><div class="ttdoc">Object to which this component attaches to.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:81</a></div></div>
-<div class="ttc" id="aclass_component_manager_html_a8803e792ebc2bebd2b2a91c3127b91d7"><div class="ttname"><a href="#a8803e792ebc2bebd2b2a91c3127b91d7">ComponentManager::deinstantiateComponent</a></div><div class="ttdeci">virtual void deinstantiateComponent(Entity owner, Component component)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:705</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_a8803e792ebc2bebd2b2a91c3127b91d7"><div class="ttname"><a href="#a8803e792ebc2bebd2b2a91c3127b91d7">ComponentManager::deinstantiateComponent</a></div><div class="ttdeci">virtual void deinstantiateComponent(Entity owner, Component component)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:752</a></div></div>
 <div class="ttc" id="aclass_entity_html_a67922bdd54d970af08d8cc993dd57707"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::removedComponent</a></div><div class="ttdeci">virtual void removedComponent(Component component)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8c-source/">Entity.c:474</a></div></div>
+</div>
+</div>
+</div>
+<a id="a1c09750f44f3f93cc9039fe65d561065" name="a1c09750f44f3f93cc9039fe65d561065"></a>
+<h2 class="memtitle">destroyComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void ComponentManager::destroyComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroy all the components from the specified owner. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the components attach to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">225</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>{</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(owner))</div>
+<div class="line"><span class="lineno">  228</span>    {</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
+<div class="line"><span class="lineno">  233</span>    {</div>
+<div class="line"><span class="lineno">  234</span>        ComponentManager componentManager = ComponentManager::getManager(i);</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  237</span>        {</div>
+<div class="line"><span class="lineno">  238</span>            nextNode = node-&gt;next;</div>
+<div class="line"><span class="lineno">  239</span>    </div>
+<div class="line"><span class="lineno">  240</span>            <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">if</span>(!component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a> &amp;&amp; owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
+<div class="line"><span class="lineno">  243</span>            {</div>
+<div class="line"><span class="lineno">  244</span>                <a class="code hl_function" href="#a8803e792ebc2bebd2b2a91c3127b91d7">ComponentManager::deinstantiateComponent</a>(componentManager, owner, component);</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>        }   </div>
+<div class="line"><span class="lineno">  247</span>    }</div>
+<div class="line"><span class="lineno">  248</span>}</div>
+<div class="ttc" id="a_virtual_circular_list_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:29</a></div></div>
+<div class="ttc" id="aclass_component_html_a6635da6105aa4fdf6905707468eb5905"><div class="ttname"><a href="/documentation/api/class-component/">Component::deleteMe</a></div><div class="ttdeci">bool deleteMe</div><div class="ttdoc">Flag to mark the component as pending deletion.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:90</a></div></div>
+<div class="ttc" id="aclass_virtual_list_html_acb02e87ebf3f2af19b8f345ab02f202a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::head</a></div><div class="ttdeci">VirtualNode head</div><div class="ttdoc">List&#39;s first node.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:34</a></div></div>
 </div>
 </div>
 </div>
@@ -588,38 +710,35 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-component/">Component</a> at the provided index position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">204</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>{</div>
-<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes &lt;= componentType || 0 &gt;</a> componentIndex)</div>
-<div class="line"><span class="lineno">  207</span>    {</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  209</span>    }</div>
-<div class="line"><span class="lineno">  210</span> </div>
-<div class="line"><span class="lineno">  211</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
-<div class="line"><span class="lineno">  212</span> </div>
-<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
-<div class="line"><span class="lineno">  214</span>    {</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  216</span>    }</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
-<div class="line"><span class="lineno">  219</span>    {</div>
-<div class="line"><span class="lineno">  220</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span>(!component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a> &amp;&amp; owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
-<div class="line"><span class="lineno">  223</span>        {</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">if</span>(0 == componentIndex--)</div>
-<div class="line"><span class="lineno">  225</span>            {</div>
-<div class="line"><span class="lineno">  226</span>                <span class="keywordflow">return</span> component;</div>
-<div class="line"><span class="lineno">  227</span>            }</div>
-<div class="line"><span class="lineno">  228</span>        }</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  232</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
-<div class="ttc" id="aclass_component_html_a6635da6105aa4fdf6905707468eb5905"><div class="ttname"><a href="/documentation/api/class-component/">Component::deleteMe</a></div><div class="ttdeci">bool deleteMe</div><div class="ttdoc">Flag to mark the component as pending deletion.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:90</a></div></div>
-<div class="ttc" id="aclass_virtual_list_html_acb02e87ebf3f2af19b8f345ab02f202a"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::head</a></div><div class="ttdeci">VirtualNode head</div><div class="ttdoc">List&#39;s first node.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8h-source/">VirtualList.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">252</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>{</div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes &lt;= componentType || 0 &gt;</a> componentIndex)</div>
+<div class="line"><span class="lineno">  255</span>    {</div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
+<div class="line"><span class="lineno">  262</span>    {</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  267</span>    {</div>
+<div class="line"><span class="lineno">  268</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span>(!component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a> &amp;&amp; owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span>(0 == componentIndex--)</div>
+<div class="line"><span class="lineno">  273</span>            {</div>
+<div class="line"><span class="lineno">  274</span>                <span class="keywordflow">return</span> component;</div>
+<div class="line"><span class="lineno">  275</span>            }</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>    }</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  280</span>}</div>
 <div class="ttc" id="aclass_virtual_node_html_a26e6211285e470125103eaf485fab548"><div class="ttname"><a href="/documentation/api/class-virtual-node/">VirtualNode::next</a></div><div class="ttdeci">VirtualNode next</div><div class="ttdoc">Pointer to the next node in the linked list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-node-8h-source/">VirtualNode.h:33</a></div></div>
 </div>
 </div>
@@ -659,52 +778,53 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Linked list of components of the type provided that attach to the provided owner </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">236</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>{</div>
-<div class="line"><span class="lineno">  238</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>)</div>
-<div class="line"><span class="lineno">  239</span>    {</div>
-<div class="line"><span class="lineno">  240</span>        owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a> = </div>
-<div class="line"><span class="lineno">  241</span>            (<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>*)</div>
-<div class="line"><span class="lineno">  242</span>            (</div>
-<div class="line"><span class="lineno">  243</span>                (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)MemoryPool::allocate(<span class="keyword">sizeof</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>) * <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> + <a class="code hl_define" href="/documentation/api/-oop-8h/">__DYNAMIC_STRUCT_PAD</a>) + <a class="code hl_define" href="/documentation/api/-oop-8h/">__DYNAMIC_STRUCT_PAD</a></div>
-<div class="line"><span class="lineno">  244</span>            );</div>
-<div class="line"><span class="lineno">  245</span> </div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
-<div class="line"><span class="lineno">  247</span>        {</div>
-<div class="line"><span class="lineno">  248</span>            owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[i] = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span>    }</div>
-<div class="line"><span class="lineno">  251</span> </div>
-<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType])</div>
-<div class="line"><span class="lineno">  253</span>    {</div>
-<div class="line"><span class="lineno">  254</span>        owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType] = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
-<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  257</span>    {</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">return</span> owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType];</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-<div class="line"><span class="lineno">  260</span> </div>
-<div class="line"><span class="lineno">  261</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
-<div class="line"><span class="lineno">  264</span>    {</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  266</span>    }</div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
-<div class="line"><span class="lineno">  269</span>    {</div>
-<div class="line"><span class="lineno">  270</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  271</span> </div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">if</span>(owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
-<div class="line"><span class="lineno">  273</span>        {</div>
-<div class="line"><span class="lineno">  274</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType], component);</div>
-<div class="line"><span class="lineno">  275</span>        }</div>
-<div class="line"><span class="lineno">  276</span>    }</div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">return</span> owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType];</div>
-<div class="line"><span class="lineno">  279</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">284</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>{</div>
+<div class="line"><span class="lineno">  286</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
+<div class="line"><span class="lineno">  287</span> </div>
+<div class="line"><span class="lineno">  288</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
+<div class="line"><span class="lineno">  289</span>    {</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
+<div class="line"><span class="lineno">  292</span> </div>
+<div class="line"><span class="lineno">  293</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>)</div>
+<div class="line"><span class="lineno">  294</span>    {</div>
+<div class="line"><span class="lineno">  295</span>        owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a> = </div>
+<div class="line"><span class="lineno">  296</span>            (<a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>*)</div>
+<div class="line"><span class="lineno">  297</span>            (</div>
+<div class="line"><span class="lineno">  298</span>                (<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a>)<a class="code hl_function" href="/documentation/api/class-memory-pool/">MemoryPool::allocate</a>(<span class="keyword">sizeof</span>(<a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>) * <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> + <a class="code hl_define" href="/documentation/api/-oop-8h/">__DYNAMIC_STRUCT_PAD</a>) + <a class="code hl_define" href="/documentation/api/-oop-8h/">__DYNAMIC_STRUCT_PAD</a></div>
+<div class="line"><span class="lineno">  299</span>            );</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
+<div class="line"><span class="lineno">  302</span>        {</div>
+<div class="line"><span class="lineno">  303</span>            owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[i] = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="line"><span class="lineno">  305</span>    }</div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType])</div>
+<div class="line"><span class="lineno">  308</span>    {</div>
+<div class="line"><span class="lineno">  309</span>        owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType] = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
+<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  312</span>    {</div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">return</span> owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType];</div>
+<div class="line"><span class="lineno">  314</span>    }</div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  317</span>    {</div>
+<div class="line"><span class="lineno">  318</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">if</span>(owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
+<div class="line"><span class="lineno">  321</span>        {</div>
+<div class="line"><span class="lineno">  322</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType], component);</div>
+<div class="line"><span class="lineno">  323</span>        }</div>
+<div class="line"><span class="lineno">  324</span>    }</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">return</span> owner-&gt;<a class="code hl_variable" href="/documentation/api/class-entity/">components</a>[componentType];</div>
+<div class="line"><span class="lineno">  327</span>}</div>
 <div class="ttc" id="a_oop_8h_html_a754546bf41810451c9693030bd837ab1"><div class="ttname"><a href="/documentation/api/-oop-8h/">__DYNAMIC_STRUCT_PAD</a></div><div class="ttdeci">#define __DYNAMIC_STRUCT_PAD</div><div class="ttdoc">Padding to be adding to dynamic memory allocation requests.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:102</a></div></div>
 <div class="ttc" id="aclass_entity_html_aaa6483e8ee109c7f19df03a605f96b8c"><div class="ttname"><a href="/documentation/api/class-entity/">Entity::components</a></div><div class="ttdeci">VirtualList * components</div><div class="ttdoc">Linked list of attached components.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-entity-8h-source/">Entity.h:43</a></div></div>
+<div class="ttc" id="aclass_memory_pool_html_ad13dc143c441ebfe6e30a45c4745bfe8"><div class="ttname"><a href="/documentation/api/class-memory-pool/">MemoryPool::allocate</a></div><div class="ttdeci">static BYTE * allocate(int32 numBytes)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8c-source/">MemoryPool.c:40</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
 </div>
 </div>
@@ -744,50 +864,50 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of components belonging to the provided owner </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">322</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  323</span>{</div>
-<div class="line"><span class="lineno">  324</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> <a class="code hl_function" href="#afdb9d380597a7ae5e1f4c79a61f018e6">getCount</a>(ComponentManager componentManager)</div>
-<div class="line"><span class="lineno">  325</span>    {</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
-<div class="line"><span class="lineno">  327</span>        {</div>
-<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  329</span>        }</div>
-<div class="line"><span class="lineno">  330</span> </div>
-<div class="line"><span class="lineno">  331</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> count = 0;</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
-<div class="line"><span class="lineno">  334</span>        {</div>
-<div class="line"><span class="lineno">  335</span>            nextNode = node-&gt;next;</div>
-<div class="line"><span class="lineno">  336</span>    </div>
-<div class="line"><span class="lineno">  337</span>            <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">if</span>(owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a> &amp;&amp; !component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a>)</div>
-<div class="line"><span class="lineno">  340</span>            {</div>
-<div class="line"><span class="lineno">  341</span>                count++;</div>
-<div class="line"><span class="lineno">  342</span>            }</div>
-<div class="line"><span class="lineno">  343</span>        }</div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  346</span>    }</div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> count = 0;</div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
-<div class="line"><span class="lineno">  351</span>    {</div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
-<div class="line"><span class="lineno">  353</span>        {</div>
-<div class="line"><span class="lineno">  354</span>            count += <a class="code hl_function" href="#afdb9d380597a7ae5e1f4c79a61f018e6">getCount</a>(ComponentManager::getManager(i));</div>
-<div class="line"><span class="lineno">  355</span>        }</div>
-<div class="line"><span class="lineno">  356</span>    }</div>
-<div class="line"><span class="lineno">  357</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  358</span>    {</div>
-<div class="line"><span class="lineno">  359</span>        count = <a class="code hl_function" href="#afdb9d380597a7ae5e1f4c79a61f018e6">getCount</a>(ComponentManager::getManager(componentType));</div>
-<div class="line"><span class="lineno">  360</span>    }</div>
-<div class="line"><span class="lineno">  361</span> </div>
-<div class="line"><span class="lineno">  362</span>    <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  363</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">370</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  371</span>{</div>
+<div class="line"><span class="lineno">  372</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> <a class="code hl_function" href="#afdb9d380597a7ae5e1f4c79a61f018e6">getCount</a>(ComponentManager componentManager)</div>
+<div class="line"><span class="lineno">  373</span>    {</div>
+<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
+<div class="line"><span class="lineno">  375</span>        {</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  377</span>        }</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> count = 0;</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  382</span>        {</div>
+<div class="line"><span class="lineno">  383</span>            nextNode = node-&gt;next;</div>
+<div class="line"><span class="lineno">  384</span>    </div>
+<div class="line"><span class="lineno">  385</span>            <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  386</span> </div>
+<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">if</span>(owner == component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a> &amp;&amp; !component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a>)</div>
+<div class="line"><span class="lineno">  388</span>            {</div>
+<div class="line"><span class="lineno">  389</span>                count++;</div>
+<div class="line"><span class="lineno">  390</span>            }</div>
+<div class="line"><span class="lineno">  391</span>        }</div>
+<div class="line"><span class="lineno">  392</span> </div>
+<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  394</span>    }</div>
+<div class="line"><span class="lineno">  395</span> </div>
+<div class="line"><span class="lineno">  396</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> count = 0;</div>
+<div class="line"><span class="lineno">  397</span> </div>
+<div class="line"><span class="lineno">  398</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
+<div class="line"><span class="lineno">  399</span>    {</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
+<div class="line"><span class="lineno">  401</span>        {</div>
+<div class="line"><span class="lineno">  402</span>            count += <a class="code hl_function" href="#afdb9d380597a7ae5e1f4c79a61f018e6">getCount</a>(ComponentManager::getManager(i));</div>
+<div class="line"><span class="lineno">  403</span>        }</div>
+<div class="line"><span class="lineno">  404</span>    }</div>
+<div class="line"><span class="lineno">  405</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  406</span>    {</div>
+<div class="line"><span class="lineno">  407</span>        count = <a class="code hl_function" href="#afdb9d380597a7ae5e1f4c79a61f018e6">getCount</a>(ComponentManager::getManager(componentType));</div>
+<div class="line"><span class="lineno">  408</span>    }</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>    <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  411</span>}</div>
 <div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
-<div class="ttc" id="aclass_component_manager_html_afdb9d380597a7ae5e1f4c79a61f018e6"><div class="ttname"><a href="#afdb9d380597a7ae5e1f4c79a61f018e6">ComponentManager::getCount</a></div><div class="ttdeci">static uint16 getCount(Entity owner, uint32 componentType)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:410</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_afdb9d380597a7ae5e1f4c79a61f018e6"><div class="ttname"><a href="#afdb9d380597a7ae5e1f4c79a61f018e6">ComponentManager::getCount</a></div><div class="ttdeci">static uint16 getCount(Entity owner, uint32 componentType)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:457</a></div></div>
 </div>
 </div>
 </div>
@@ -838,42 +958,42 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if one or more behaviors met the search criteria; false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">283</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  284</span>{</div>
-<div class="line"><span class="lineno">  285</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
-<div class="line"><span class="lineno">  286</span>    {</div>
-<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  288</span>    }</div>
-<div class="line"><span class="lineno">  289</span> </div>
-<div class="line"><span class="lineno">  290</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
-<div class="line"><span class="lineno">  291</span> </div>
-<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
-<div class="line"><span class="lineno">  293</span>    {</div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  295</span>    }</div>
-<div class="line"><span class="lineno">  296</span> </div>
-<div class="line"><span class="lineno">  297</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
-<div class="line"><span class="lineno">  298</span>    {</div>
-<div class="line"><span class="lineno">  299</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  300</span> </div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span>(owner != component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a> || component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a>)</div>
-<div class="line"><span class="lineno">  302</span>        {</div>
-<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  304</span>        }</div>
-<div class="line"><span class="lineno">  305</span> </div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span>(!classPointer || <a class="code hl_function" href="/documentation/api/class-object/">Object::getCast</a>(component, classPointer, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>))</div>
-<div class="line"><span class="lineno">  307</span>        {</div>
-<div class="line"><span class="lineno">  308</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>, component);</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>    }</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;head)</div>
-<div class="line"><span class="lineno">  313</span>    {</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  315</span>    }</div>
-<div class="line"><span class="lineno">  316</span> </div>
-<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  318</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">331</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>{</div>
+<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
+<div class="line"><span class="lineno">  334</span>    {</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  336</span>    }</div>
+<div class="line"><span class="lineno">  337</span> </div>
+<div class="line"><span class="lineno">  338</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
+<div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  343</span>    }</div>
+<div class="line"><span class="lineno">  344</span> </div>
+<div class="line"><span class="lineno">  345</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  346</span>    {</div>
+<div class="line"><span class="lineno">  347</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span>(owner != component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a> || component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">deleteMe</a>)</div>
+<div class="line"><span class="lineno">  350</span>        {</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">if</span>(!classPointer || <a class="code hl_function" href="/documentation/api/class-object/">Object::getCast</a>(component, classPointer, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>))</div>
+<div class="line"><span class="lineno">  355</span>        {</div>
+<div class="line"><span class="lineno">  356</span>            <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>, component);</div>
+<div class="line"><span class="lineno">  357</span>        }</div>
+<div class="line"><span class="lineno">  358</span>    }</div>
+<div class="line"><span class="lineno">  359</span> </div>
+<div class="line"><span class="lineno">  360</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != <a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;head)</div>
+<div class="line"><span class="lineno">  361</span>    {</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  363</span>    }</div>
+<div class="line"><span class="lineno">  364</span> </div>
+<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  366</span>}</div>
 <div class="ttc" id="aclass_object_html_a8ae116f1bf924247a7fd9e91a615a705"><div class="ttname"><a href="/documentation/api/class-object/">Object::getCast</a></div><div class="ttdeci">static Object getCast(void *object, ClassPointer targetClassGetClassMethod, ClassPointer baseClassGetClassMethod)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-object-8c-source/">Object.c:27</a></div></div>
 </div>
 </div>
@@ -913,36 +1033,36 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of components belonging to the provided owner </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">410</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  411</span>{</div>
-<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
-<div class="line"><span class="lineno">  413</span>    {</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  415</span>    }</div>
-<div class="line"><span class="lineno">  416</span> </div>
-<div class="line"><span class="lineno">  417</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> count = 0;</div>
-<div class="line"><span class="lineno">  418</span> </div>
-<div class="line"><span class="lineno">  419</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
-<div class="line"><span class="lineno">  420</span> </div>
-<div class="line"><span class="lineno">  421</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
-<div class="line"><span class="lineno">  422</span>    {</div>
-<div class="line"><span class="lineno">  423</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  424</span>    }</div>
-<div class="line"><span class="lineno">  425</span> </div>
-<div class="line"><span class="lineno">  426</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
-<div class="line"><span class="lineno">  427</span>    {</div>
-<div class="line"><span class="lineno">  428</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != owner &amp;&amp; owner != component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
-<div class="line"><span class="lineno">  431</span>        {</div>
-<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  433</span>        }</div>
-<div class="line"><span class="lineno">  434</span>        </div>
-<div class="line"><span class="lineno">  435</span>        count++;</div>
-<div class="line"><span class="lineno">  436</span>    }</div>
-<div class="line"><span class="lineno">  437</span> </div>
-<div class="line"><span class="lineno">  438</span>    <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  439</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">457</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  458</span>{</div>
+<div class="line"><span class="lineno">  459</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
+<div class="line"><span class="lineno">  460</span>    {</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  462</span>    }</div>
+<div class="line"><span class="lineno">  463</span> </div>
+<div class="line"><span class="lineno">  464</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> count = 0;</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>    ComponentManager componentManager = ComponentManager::getManager(componentType);</div>
+<div class="line"><span class="lineno">  467</span> </div>
+<div class="line"><span class="lineno">  468</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager)</div>
+<div class="line"><span class="lineno">  469</span>    {</div>
+<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  471</span>    }</div>
+<div class="line"><span class="lineno">  472</span> </div>
+<div class="line"><span class="lineno">  473</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  474</span>    {</div>
+<div class="line"><span class="lineno">  475</span>        <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != owner &amp;&amp; owner != component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
+<div class="line"><span class="lineno">  478</span>        {</div>
+<div class="line"><span class="lineno">  479</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  480</span>        }</div>
+<div class="line"><span class="lineno">  481</span>        </div>
+<div class="line"><span class="lineno">  482</span>        count++;</div>
+<div class="line"><span class="lineno">  483</span>    }</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  486</span>}</div>
 </div>
 </div>
 </div>
@@ -981,17 +1101,17 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created component </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">691</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  692</span>{</div>
-<div class="line"><span class="lineno">  693</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes &lt;= componentSpec-&gt;</a>componentType)</div>
-<div class="line"><span class="lineno">  694</span>    {</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  696</span>    }</div>
-<div class="line"><span class="lineno">  697</span> </div>
-<div class="line"><span class="lineno">  698</span>    ComponentManager::cleanOwnerComponentLists(owner, componentSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">componentType</a>);</div>
-<div class="line"><span class="lineno">  699</span> </div>
-<div class="line"><span class="lineno">  700</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">  701</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">738</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  739</span>{</div>
+<div class="line"><span class="lineno">  740</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes &lt;= componentSpec-&gt;</a>componentType)</div>
+<div class="line"><span class="lineno">  741</span>    {</div>
+<div class="line"><span class="lineno">  742</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  743</span>    }</div>
+<div class="line"><span class="lineno">  744</span> </div>
+<div class="line"><span class="lineno">  745</span>    ComponentManager::cleanOwnerComponentLists(owner, componentSpec-&gt;<a class="code hl_variable" href="/documentation/api/struct-component-spec/">componentType</a>);</div>
+<div class="line"><span class="lineno">  746</span> </div>
+<div class="line"><span class="lineno">  747</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">  748</span>}</div>
 </div>
 </div>
 </div>
@@ -1025,30 +1145,30 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if at least of the visual components that attach to the provided owner is visible </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">469</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  470</span>{</div>
-<div class="line"><span class="lineno">  471</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner)</div>
-<div class="line"><span class="lineno">  472</span>    {</div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  474</span>    }</div>
-<div class="line"><span class="lineno">  475</span> </div>
-<div class="line"><span class="lineno">  476</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
-<div class="line"><span class="lineno">  477</span>    {</div>
-<div class="line"><span class="lineno">  478</span>        ComponentManager componentManager = ComponentManager::getManager(i);</div>
-<div class="line"><span class="lineno">  479</span> </div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager || !ComponentManager::overrides(componentManager, <a class="code hl_function" href="#ae13a34663a70fdc54f4c8bf8625a2b68">isAnyVisible</a>))</div>
-<div class="line"><span class="lineno">  481</span>        {</div>
-<div class="line"><span class="lineno">  482</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  483</span>        }</div>
-<div class="line"><span class="lineno">  484</span> </div>
-<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#ae13a34663a70fdc54f4c8bf8625a2b68">ComponentManager::isAnyVisible</a>(componentManager, owner))</div>
-<div class="line"><span class="lineno">  486</span>        {</div>
-<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  488</span>        }</div>
-<div class="line"><span class="lineno">  489</span>    }</div>
-<div class="line"><span class="lineno">  490</span> </div>
-<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  492</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">516</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  517</span>{</div>
+<div class="line"><span class="lineno">  518</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == owner)</div>
+<div class="line"><span class="lineno">  519</span>    {</div>
+<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  521</span>    }</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
+<div class="line"><span class="lineno">  524</span>    {</div>
+<div class="line"><span class="lineno">  525</span>        ComponentManager componentManager = ComponentManager::getManager(i);</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == componentManager || !ComponentManager::overrides(componentManager, <a class="code hl_function" href="#ae13a34663a70fdc54f4c8bf8625a2b68">isAnyVisible</a>))</div>
+<div class="line"><span class="lineno">  528</span>        {</div>
+<div class="line"><span class="lineno">  529</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  530</span>        }</div>
+<div class="line"><span class="lineno">  531</span> </div>
+<div class="line"><span class="lineno">  532</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#ae13a34663a70fdc54f4c8bf8625a2b68">ComponentManager::isAnyVisible</a>(componentManager, owner))</div>
+<div class="line"><span class="lineno">  533</span>        {</div>
+<div class="line"><span class="lineno">  534</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  535</span>        }</div>
+<div class="line"><span class="lineno">  536</span>    }</div>
+<div class="line"><span class="lineno">  537</span> </div>
+<div class="line"><span class="lineno">  538</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  539</span>}</div>
 </div>
 </div>
 </div>
@@ -1084,10 +1204,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">722</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  723</span>{</div>
-<div class="line"><span class="lineno">  724</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  725</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">769</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  770</span>{</div>
+<div class="line"><span class="lineno">  771</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  772</span>}</div>
 </div>
 </div>
 </div>
@@ -1137,48 +1257,47 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">367</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  368</span>{</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="#a66848197db33bc9b10cc145181bac7d4">propagateCommand</a>(ComponentManager componentManager, va_list args)</div>
-<div class="line"><span class="lineno">  371</span>    {</div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
-<div class="line"><span class="lineno">  373</span>        {</div>
-<div class="line"><span class="lineno">  374</span>            <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  375</span> </div>
-<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != owner &amp;&amp; owner != component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
-<div class="line"><span class="lineno">  377</span>            {</div>
-<div class="line"><span class="lineno">  378</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  379</span>            }</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>            <a class="code hl_function" href="/documentation/api/class-component/">Component::handleCommand</a>(component, command, args);</div>
-<div class="line"><span class="lineno">  382</span>        }</div>
-<div class="line"><span class="lineno">  383</span>    }</div>
-<div class="line"><span class="lineno">  384</span> </div>
-<div class="line"><span class="lineno">  385</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
-<div class="line"><span class="lineno">  386</span>    {</div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
-<div class="line"><span class="lineno">  388</span>        {</div>
-<div class="line"><span class="lineno">  389</span>            va_list args;</div>
-<div class="line"><span class="lineno">  390</span>            va_start(args, componentType);</div>
-<div class="line"><span class="lineno">  391</span> </div>
-<div class="line"><span class="lineno">  392</span>            <a class="code hl_function" href="#a66848197db33bc9b10cc145181bac7d4">propagateCommand</a>(ComponentManager::getManager(i), args);</div>
-<div class="line"><span class="lineno">  393</span> </div>
-<div class="line"><span class="lineno">  394</span>            va_end(args);</div>
-<div class="line"><span class="lineno">  395</span>        }</div>
-<div class="line"><span class="lineno">  396</span>    }</div>
-<div class="line"><span class="lineno">  397</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  398</span>    {       </div>
-<div class="line"><span class="lineno">  399</span>        va_list args;</div>
-<div class="line"><span class="lineno">  400</span>        va_start(args, componentType);</div>
-<div class="line"><span class="lineno">  401</span>    </div>
-<div class="line"><span class="lineno">  402</span>        <a class="code hl_function" href="#a66848197db33bc9b10cc145181bac7d4">propagateCommand</a>(ComponentManager::getManager(componentType), args);</div>
-<div class="line"><span class="lineno">  403</span> </div>
-<div class="line"><span class="lineno">  404</span>        va_end(args);</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
-<div class="line"><span class="lineno">  406</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-component-manager-8c-source/">415</a> of file <a class="el" href="/documentation/api/-component-manager-8c-source/">ComponentManager.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>{</div>
+<div class="line"><span class="lineno">  417</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="#a66848197db33bc9b10cc145181bac7d4">propagateCommand</a>(ComponentManager componentManager, va_list args)</div>
+<div class="line"><span class="lineno">  418</span>    {</div>
+<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-node/">next</a>)</div>
+<div class="line"><span class="lineno">  420</span>        {</div>
+<div class="line"><span class="lineno">  421</span>            <a class="code hl_friend" href="/documentation/api/-component-manager-8c/">Component</a> component = Component::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  422</span> </div>
+<div class="line"><span class="lineno">  423</span>            <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != owner &amp;&amp; owner != component-&gt;<a class="code hl_variable" href="/documentation/api/class-component/">owner</a>)</div>
+<div class="line"><span class="lineno">  424</span>            {</div>
+<div class="line"><span class="lineno">  425</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  426</span>            }</div>
+<div class="line"><span class="lineno">  427</span> </div>
+<div class="line"><span class="lineno">  428</span>            <a class="code hl_function" href="/documentation/api/class-component/">Component::handleCommand</a>(component, command, args);</div>
+<div class="line"><span class="lineno">  429</span>        }</div>
+<div class="line"><span class="lineno">  430</span>    }</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a> &lt;= componentType)</div>
+<div class="line"><span class="lineno">  433</span>    {</div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">int16</a> i = 0; i &lt; <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kComponentTypes</a>; i++)</div>
+<div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            va_list args;</div>
+<div class="line"><span class="lineno">  437</span>            va_start(args, componentType);</div>
+<div class="line"><span class="lineno">  438</span> </div>
+<div class="line"><span class="lineno">  439</span>            <a class="code hl_function" href="#a66848197db33bc9b10cc145181bac7d4">propagateCommand</a>(ComponentManager::getManager(i), args);</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>            va_end(args);</div>
+<div class="line"><span class="lineno">  442</span>        }</div>
+<div class="line"><span class="lineno">  443</span>    }</div>
+<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  445</span>    {       </div>
+<div class="line"><span class="lineno">  446</span>        va_list args;</div>
+<div class="line"><span class="lineno">  447</span>        va_start(args, componentType);</div>
+<div class="line"><span class="lineno">  448</span>    </div>
+<div class="line"><span class="lineno">  449</span>        <a class="code hl_function" href="#a66848197db33bc9b10cc145181bac7d4">propagateCommand</a>(ComponentManager::getManager(componentType), args);</div>
+<div class="line"><span class="lineno">  450</span> </div>
+<div class="line"><span class="lineno">  451</span>        va_end(args);</div>
+<div class="line"><span class="lineno">  452</span>    }</div>
+<div class="line"><span class="lineno">  453</span>}</div>
 <div class="ttc" id="aclass_component_html_aeb8bcf6d63894cf031312c5298334e1b"><div class="ttname"><a href="/documentation/api/class-component/">Component::handleCommand</a></div><div class="ttdeci">virtual void handleCommand(int32 command, va_list args)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8c-source/">Component.c:114</a></div></div>
-<div class="ttc" id="aclass_component_manager_html_a66848197db33bc9b10cc145181bac7d4"><div class="ttname"><a href="#a66848197db33bc9b10cc145181bac7d4">ComponentManager::propagateCommand</a></div><div class="ttdeci">static void propagateCommand(int32 command, Entity owner, uint32 componentType,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:367</a></div></div>
+<div class="ttc" id="aclass_component_manager_html_a66848197db33bc9b10cc145181bac7d4"><div class="ttname"><a href="#a66848197db33bc9b10cc145181bac7d4">ComponentManager::propagateCommand</a></div><div class="ttdeci">static void propagateCommand(int32 command, Entity owner, uint32 componentType,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-manager-8c-source/">ComponentManager.c:415</a></div></div>
 </div>
 </div>
 </div>
@@ -1277,7 +1396,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  173</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  174</span>        }</div>
 <div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = componentManager-&gt;<a class="code hl_variable" href="#a86bce556cf2be26d1414b36ecf82ee85">components</a>-&gt;<a class="code hl_variable" href="/documentation/api/class-virtual-list/">head</a>, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
 <div class="line"><span class="lineno">  177</span>        {</div>
 <div class="line"><span class="lineno">  178</span>            nextNode = node-&gt;next;</div>
 <div class="line"><span class="lineno">  179</span>    </div>

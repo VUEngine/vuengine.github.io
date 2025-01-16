@@ -29,11 +29,13 @@ permalink: documentation/api/-printing-8c/
 <div class="contents">
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-char-set-8h-source/">CharSet.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-char-set-manager-8h-source/">CharSetManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-component-manager-8h-source/">ComponentManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-debug-config-8h-source/">DebugConfig.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-mem-8h-source/">Mem.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-printing-sprite-8h-source/">PrintingSprite.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="/documentation/api/-sprite-manager-8h-source/">SpriteManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-utilities-8h-source/">Utilities.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-virtual-list-8h-source/">VirtualList.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h</a>&gt;</code><br />
@@ -50,11 +52,11 @@ Macros</h2></td></tr>
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a14a116f30044025d4f80912628f210f1" id="r_a14a116f30044025d4f80912628f210f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">FontROMSpec</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14a116f30044025d4f80912628f210f1">_fonts</a> []</td></tr>
+<tr class="memitem:a14a116f30044025d4f80912628f210f1" id="r_a14a116f30044025d4f80912628f210f1"><td class="memItemLeft" align="right" valign="top">FontROMSpec *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14a116f30044025d4f80912628f210f1">_fonts</a> []</td></tr>
 
-<tr class="memitem:a72bb15842c17ba452dd84eba09b4c4f6" id="r_a72bb15842c17ba452dd84eba09b4c4f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">FontROMSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72bb15842c17ba452dd84eba09b4c4f6">DefaultFontSpec</a></td></tr>
+<tr class="memitem:a72bb15842c17ba452dd84eba09b4c4f6" id="r_a72bb15842c17ba452dd84eba09b4c4f6"><td class="memItemLeft" align="right" valign="top">FontROMSpec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72bb15842c17ba452dd84eba09b4c4f6">DefaultFontSpec</a></td></tr>
 
-<tr class="memitem:a1003ae13a1921f2a4fcf579b53fc8c80" id="r_a1003ae13a1921f2a4fcf579b53fc8c80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-printing-8h/">FontROMData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1003ae13a1921f2a4fcf579b53fc8c80">VUENGINE_DEBUG_FONT_DATA</a></td></tr>
+<tr class="memitem:a1003ae13a1921f2a4fcf579b53fc8c80" id="r_a1003ae13a1921f2a4fcf579b53fc8c80"><td class="memItemLeft" align="right" valign="top">FontROMData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1003ae13a1921f2a4fcf579b53fc8c80">VUENGINE_DEBUG_FONT_DATA</a></td></tr>
 
 <tr class="memitem:a8e45546622e95852eb7fa63012fb145e" id="r_a8e45546622e95852eb7fa63012fb145e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-printing-sprite-spec/">PrintingSpriteSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e45546622e95852eb7fa63012fb145e">DefaultPrintingSpriteSpec</a></td></tr>
 
@@ -72,7 +74,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">39</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">41</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
 
 </div>
 </div>
@@ -88,7 +90,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">40</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">42</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
 
 </div>
 </div>
@@ -103,7 +105,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">FontROMSpec</a>* const _fonts[]</td>
+          <td class="memname">FontROMSpec* const _fonts[]</td>
         </tr>
       </table>
   </td>
@@ -139,7 +141,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">FontROMSpec</a> DefaultFontSpec</td>
+          <td class="memname">FontROMSpec DefaultFontSpec</td>
         </tr>
       </table>
   </td>
@@ -186,47 +188,47 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">55</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
-<div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            <span class="comment">// Component</span></div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <span class="comment">// Allocator</span></div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_define" href="/documentation/api/-oop-8h/">__TYPE</a>(<a class="code hl_class" href="/documentation/api/class-printing-sprite/">PrintingSprite</a>),</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>                <span class="comment">// Component type</span></div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kSpriteComponent</a></div>
-<div class="line"><span class="lineno">   66</span>            },</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>            <span class="comment">// Spec for the texture to display</span></div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>,</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>            <span class="comment">// Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)</span></div>
-<div class="line"><span class="lineno">   72</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a>,</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>            <span class="comment">// Displacement added to the sprite&#39;s position</span></div>
-<div class="line"><span class="lineno">   75</span>            {</div>
-<div class="line"><span class="lineno">   76</span>                0, <span class="comment">// x</span></div>
-<div class="line"><span class="lineno">   77</span>                0, <span class="comment">// y</span></div>
-<div class="line"><span class="lineno">   78</span>                0, <span class="comment">// z</span></div>
-<div class="line"><span class="lineno">   79</span>                0, <span class="comment">// parallax</span></div>
-<div class="line"><span class="lineno">   80</span>            },</div>
-<div class="line"><span class="lineno">   81</span>        },</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>        <span class="comment">// Flag to indicate in which display to show the texture (__WORLD_ON, __WORLD_LON or __WORLD_RON)</span></div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_ON</a>,</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>        <span class="comment">// The display mode (__WORLD_BGMAP, __WORLD_AFFINE or __WORLD_HBIAS)</span></div>
-<div class="line"><span class="lineno">   87</span>        <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a>,</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>        <span class="comment">// Pointer to affine/hbias manipulation function</span></div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
-<div class="line"><span class="lineno">   91</span>    }</div>
-<div class="line"><span class="lineno">   92</span>};</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">57</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="comment">// Component</span></div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <span class="comment">// Allocator</span></div>
+<div class="line"><span class="lineno">   64</span>                <a class="code hl_define" href="/documentation/api/-oop-8h/">__TYPE</a>(<a class="code hl_class" href="/documentation/api/class-printing-sprite/">PrintingSprite</a>),</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>                <span class="comment">// Component type</span></div>
+<div class="line"><span class="lineno">   67</span>                <a class="code hl_enumvalue" href="/documentation/api/-component-8h/">kSpriteComponent</a></div>
+<div class="line"><span class="lineno">   68</span>            },</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>            <span class="comment">// Spec for the texture to display</span></div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>,</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>            <span class="comment">// Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)</span></div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_define" href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a>,</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>            <span class="comment">// Displacement added to the sprite&#39;s position</span></div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                0, <span class="comment">// x</span></div>
+<div class="line"><span class="lineno">   79</span>                0, <span class="comment">// y</span></div>
+<div class="line"><span class="lineno">   80</span>                0, <span class="comment">// z</span></div>
+<div class="line"><span class="lineno">   81</span>                0, <span class="comment">// parallax</span></div>
+<div class="line"><span class="lineno">   82</span>            },</div>
+<div class="line"><span class="lineno">   83</span>        },</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>        <span class="comment">// Flag to indicate in which display to show the texture (__WORLD_ON, __WORLD_LON or __WORLD_RON)</span></div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_ON</a>,</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <span class="comment">// The display mode (__WORLD_BGMAP, __WORLD_AFFINE or __WORLD_HBIAS)</span></div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_define" href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a>,</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>        <span class="comment">// Pointer to affine/hbias manipulation function</span></div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a></div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>};</div>
 <div class="ttc" id="a_component_8h_html_ad7fa0e4e7d96213e0c5c1807e7eebadf"><div class="ttname"><a href="/documentation/api/-component-8h/">kSpriteComponent</a></div><div class="ttdeci">@ kSpriteComponent</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-component-8h-source/">Component.h:45</a></div></div>
 <div class="ttc" id="a_constants_8h_html_a7f6fe1e96ba62511361a4da26ba22cf2"><div class="ttname"><a href="/documentation/api/-constants-8h/">__TRANSPARENCY_NONE</a></div><div class="ttdeci">#define __TRANSPARENCY_NONE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:79</a></div></div>
-<div class="ttc" id="a_oop_8h_html_ab83598e0611182061ea3f9b815216bfc"><div class="ttname"><a href="/documentation/api/-oop-8h/">__TYPE</a></div><div class="ttdeci">#define __TYPE(ClassName)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:542</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ab83598e0611182061ea3f9b815216bfc"><div class="ttname"><a href="/documentation/api/-oop-8h/">__TYPE</a></div><div class="ttdeci">#define __TYPE(ClassName)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:560</a></div></div>
 <div class="ttc" id="a_v_i_p_manager_8h_html_a2c324b05d7418c89acfa97c408d2d454"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_BGMAP</a></div><div class="ttdeci">#define __WORLD_BGMAP</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:121</a></div></div>
 <div class="ttc" id="a_v_i_p_manager_8h_html_ad756d5a960e9500408ec1591c05d2920"><div class="ttname"><a href="/documentation/api/-v-i-p-manager-8h/">__WORLD_ON</a></div><div class="ttdeci">#define __WORLD_ON</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-i-p-manager-8h-source/">VIPManager.h:115</a></div></div>
 <div class="ttc" id="aclass_printing_sprite_html"><div class="ttname"><a href="/documentation/api/class-printing-sprite/">PrintingSprite</a></div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-sprite-8h-source/">PrintingSprite.h:46</a></div></div>
@@ -240,7 +242,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/-printing-8h/">FontROMData</a> VUENGINE_DEBUG_FONT_DATA</td>
+          <td class="memname">FontROMData VUENGINE_DEBUG_FONT_DATA</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,14 +255,14 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>,</div>
 <div class="line">}</div>
 </div>
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">46</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
-<div class="line"><span class="lineno">   48</span>    <span class="comment">// Font spec</span></div>
-<div class="line"><span class="lineno">   49</span>    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-default-font-spec-8c/">DefaultFontSpec</a>,</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    <span class="comment">// CharSet</span></div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>,</div>
-<div class="line"><span class="lineno">   53</span>};</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-printing-8c-source/">48</a> of file <a class="el" href="/documentation/api/-printing-8c-source/">Printing.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment">// Font spec</span></div>
+<div class="line"><span class="lineno">   51</span>    (<a class="code hl_struct" href="/documentation/api/struct-font-spec/">FontSpec</a>*)&amp;<a class="code hl_variable" href="/documentation/api/-default-font-spec-8c/">DefaultFontSpec</a>,</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    <span class="comment">// CharSet</span></div>
+<div class="line"><span class="lineno">   54</span>    <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>,</div>
+<div class="line"><span class="lineno">   55</span>};</div>
 </div>
 </div>
 </div>

@@ -101,11 +101,15 @@ Macros</h2></td></tr>
 
 <tr class="memitem:a129ef8c36b8c7c22ecb3f14d91da63d1" id="r_a129ef8c36b8c7c22ecb3f14d91da63d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a129ef8c36b8c7c22ecb3f14d91da63d1">__FORWARD_CLASS</a>(ClassName)</td></tr>
 
+<tr class="memitem:a798bc24e332da6a53a304e9dd836a772" id="r_a798bc24e332da6a53a304e9dd836a772"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a798bc24e332da6a53a304e9dd836a772">__CLASS_FUNDAMENTAL_METHODS</a>(ClassName)</td></tr>
+
 <tr class="memitem:a6069e38448ecb7883000674ef0e17cae" id="r_a6069e38448ecb7883000674ef0e17cae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6069e38448ecb7883000674ef0e17cae">__CLASS</a>(ClassName)</td></tr>
 
 <tr class="memitem:afc1f6bb0264f07793473c232d79ff3c9" id="r_afc1f6bb0264f07793473c232d79ff3c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc1f6bb0264f07793473c232d79ff3c9">__CLASS_FRIEND_DEFINITION</a>(ClassName)</td></tr>
 
 <tr class="memitem:a5064f406b88a72edcf4a1c863667cc08" id="r_a5064f406b88a72edcf4a1c863667cc08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5064f406b88a72edcf4a1c863667cc08">__GET_INSTANCE_SIZE_DEFINITION</a>(ClassName)</td></tr>
+
+<tr class="memitem:a52aa0a622595aa2e6cdb2b77187d4441" id="r_a52aa0a622595aa2e6cdb2b77187d4441"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52aa0a622595aa2e6cdb2b77187d4441">__CLASS_FUNDAMENTAL_DEFINITION</a>(ClassName,  BaseClassName)</td></tr>
 
 <tr class="memitem:ad0fae87ed315c6a602cd783ad1d3d917" id="r_ad0fae87ed315c6a602cd783ad1d3d917"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0fae87ed315c6a602cd783ad1d3d917">__CLASS_DEFINITION</a>(ClassName,  BaseClassName)</td></tr>
 
@@ -122,7 +126,13 @@ Macros</h2></td></tr>
 
 <tr class="memitem:a329b5fb17935acab5a0f2bd26abeed5c" id="r_a329b5fb17935acab5a0f2bd26abeed5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a329b5fb17935acab5a0f2bd26abeed5c">__SINGLETON_CONSTRUCTED</a>&#160;&#160;&#160;2</td></tr>
 
-<tr class="memitem:a9f03098c32d46218292dd08e6f855988" id="r_a9f03098c32d46218292dd08e6f855988"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f03098c32d46218292dd08e6f855988">__SINGLETON</a>(ClassName, ...)</td></tr>
+<tr class="memitem:acef707112cf6da4b7757706b730a13db" id="r_acef707112cf6da4b7757706b730a13db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acef707112cf6da4b7757706b730a13db">__SINGLETON_SECURITY_CHECKER</a>(ClassName)</td></tr>
+
+<tr class="memitem:a90151628b7e2d659061d2c0808587a13" id="r_a90151628b7e2d659061d2c0808587a13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90151628b7e2d659061d2c0808587a13">__SINGLETON_AUTHORIZATION_CHECK</a>(ClassName)</td></tr>
+
+<tr class="memitem:a996f56acd7f922be776d17e53253e40f" id="r_a996f56acd7f922be776d17e53253e40f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a996f56acd7f922be776d17e53253e40f">__SINGLETON_ACCESS</a>(ClassName)</td></tr>
+
+<tr class="memitem:af18418f309b28af4e27473f81ce1b871" id="r_af18418f309b28af4e27473f81ce1b871"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af18418f309b28af4e27473f81ce1b871">__SINGLETON</a>(ClassName,  MemorySection)</td></tr>
 
 <tr class="memitem:a3139c04933e813ebe46f0a17bbb63402" id="r_a3139c04933e813ebe46f0a17bbb63402"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3139c04933e813ebe46f0a17bbb63402">__SINGLETON_DESTROY</a></td></tr>
 
@@ -160,7 +170,7 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted pointer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">547</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">565</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 
 </div>
 </div>
@@ -307,28 +317,27 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* declare vtable */</span>                                                                                                            \</div>
+<div class="line">        <span class="comment">/* Declare vtable */</span>                                                                                                            \</div>
 <div class="line">        __VTABLE(ClassName);                                                                                                            \</div>
 <div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* declare vtable */</span>                                                                                                            \</div>
+<div class="line">        <span class="comment">/* Declare vtable */</span>                                                                                                            \</div>
 <div class="line">        <span class="keywordtype">void</span> ClassName ## _setVTable(<span class="keywordtype">bool</span> force);                                                                                       \</div>
 <div class="line">                                                                                                                                        \</div>
 <div class="line">        <span class="comment">/* get class */</span>                                                                                                                 \</div>
 <div class="line">        <span class="keyword">const</span> <span class="keywordtype">void</span>* ClassName ## _getClass();                                                                                           \</div>
 <div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* declare getSize method */</span>                                                                                                    \</div>
-<div class="line">        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> ClassName ## _getObjectSize();                                                                                           \</div>
+<div class="line">        <span class="comment">/* Declare restoreMethods name method */</span>                                                                                        \</div>
+<div class="line">        <span class="keywordtype">void</span> ClassName ## _restoreMethods();                                                                                                \</div>
 <div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* declare getBaseClass method */</span>                                                                                               \</div>
-<div class="line">        <a class="code hl_typedef" href="#a061ab3af7279dbb9d5e929a1b97f89e6">ClassPointer</a> ClassName ## _getBaseClass(<span class="keywordtype">void</span>*);                                                                                 \</div>
+<div class="line">        <span class="comment">/* Declare getSize method */</span>                                                                                                    \</div>
+<div class="line">        <a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a> ClassName ## _getObjectSize();                                                                                           \</div>
 <div class="line">                                                                                                                                        \</div>
 <div class="line">        <span class="comment">/* declare getClass name method */</span>                                                                                              \</div>
 <div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* ClassName ## _getClassName(ClassName);                                                                              \</div>
 <div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* declare restoreMethods name method */</span>                                                                                        \</div>
-<div class="line">        <span class="keywordtype">void</span> ClassName ## _restoreMethods()                                                                                             \</div>
-<div class="ttc" id="a_oop_8h_html_a061ab3af7279dbb9d5e929a1b97f89e6"><div class="ttname"><a href="#a061ab3af7279dbb9d5e929a1b97f89e6">ClassPointer</a></div><div class="ttdeci">void *(*(* ClassPointer)(void *))(void *)</div><div class="ttdoc">typedef for RTTI</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:415</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="line">        <span class="comment">/* Declare fundamental class methods */</span>                                                                                         \</div>
+<div class="line">        __CLASS_FUNDAMENTAL_METHODS(ClassName);</div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 </div><p>Declare a class. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
     <tr><td class="paramname">ClassName</td><td>Class being declared </td></tr>
@@ -337,30 +346,29 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Class' declaration </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">420</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  420</span><span class="preprocessor">#define __CLASS(ClassName)                                                                                                              \</span></div>
-<div class="line"><span class="lineno">  421</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  422</span><span class="preprocessor">        </span><span class="comment">/* declare vtable */</span><span class="preprocessor">                                                                                                            \</span></div>
-<div class="line"><span class="lineno">  423</span><span class="preprocessor">        __VTABLE(ClassName);                                                                                                            \</span></div>
-<div class="line"><span class="lineno">  424</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  425</span><span class="preprocessor">        </span><span class="comment">/* declare vtable */</span><span class="preprocessor">                                                                                                            \</span></div>
-<div class="line"><span class="lineno">  426</span><span class="preprocessor">        void ClassName ## _setVTable(bool force);                                                                                       \</span></div>
-<div class="line"><span class="lineno">  427</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  428</span><span class="preprocessor">        </span><span class="comment">/* get class */</span><span class="preprocessor">                                                                                                                 \</span></div>
-<div class="line"><span class="lineno">  429</span><span class="preprocessor">        const void* ClassName ## _getClass();                                                                                           \</span></div>
-<div class="line"><span class="lineno">  430</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  431</span><span class="preprocessor">        </span><span class="comment">/* declare getSize method */</span><span class="preprocessor">                                                                                                    \</span></div>
-<div class="line"><span class="lineno">  432</span><span class="preprocessor">        int32 ClassName ## _getObjectSize();                                                                                            \</span></div>
-<div class="line"><span class="lineno">  433</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  434</span><span class="preprocessor">        </span><span class="comment">/* declare getBaseClass method */</span><span class="preprocessor">                                                                                               \</span></div>
-<div class="line"><span class="lineno">  435</span><span class="preprocessor">        ClassPointer ClassName ## _getBaseClass(void*);                                                                                 \</span></div>
-<div class="line"><span class="lineno">  436</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  437</span><span class="preprocessor">        </span><span class="comment">/* declare getClass name method */</span><span class="preprocessor">                                                                                              \</span></div>
-<div class="line"><span class="lineno">  438</span><span class="preprocessor">        const char* ClassName ## _getClassName(ClassName);                                                                              \</span></div>
-<div class="line"><span class="lineno">  439</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  440</span><span class="preprocessor">        </span><span class="comment">/* declare restoreMethods name method */</span><span class="preprocessor">                                                                                        \</span></div>
-<div class="line"><span class="lineno">  441</span><span class="preprocessor">        void ClassName ## _restoreMethods()                                                                                             \</span></div>
-<div class="line"><span class="lineno">  442</span><span class="preprocessor"></span> </div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">428</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  428</span><span class="preprocessor">#define __CLASS(ClassName)                                                                                                              \</span></div>
+<div class="line"><span class="lineno">  429</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  430</span><span class="preprocessor">        </span><span class="comment">/* Declare vtable */</span><span class="preprocessor">                                                                                                            \</span></div>
+<div class="line"><span class="lineno">  431</span><span class="preprocessor">        __VTABLE(ClassName);                                                                                                            \</span></div>
+<div class="line"><span class="lineno">  432</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  433</span><span class="preprocessor">        </span><span class="comment">/* Declare vtable */</span><span class="preprocessor">                                                                                                            \</span></div>
+<div class="line"><span class="lineno">  434</span><span class="preprocessor">        void ClassName ## _setVTable(bool force);                                                                                       \</span></div>
+<div class="line"><span class="lineno">  435</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  436</span><span class="preprocessor">        </span><span class="comment">/* get class */</span><span class="preprocessor">                                                                                                                 \</span></div>
+<div class="line"><span class="lineno">  437</span><span class="preprocessor">        const void* ClassName ## _getClass();                                                                                           \</span></div>
+<div class="line"><span class="lineno">  438</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  439</span><span class="preprocessor">        </span><span class="comment">/* Declare restoreMethods name method */</span><span class="preprocessor">                                                                                        \</span></div>
+<div class="line"><span class="lineno">  440</span><span class="preprocessor">        void ClassName ## _restoreMethods();                                                                                                \</span></div>
+<div class="line"><span class="lineno">  441</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  442</span><span class="preprocessor">        </span><span class="comment">/* Declare getSize method */</span><span class="preprocessor">                                                                                                    \</span></div>
+<div class="line"><span class="lineno">  443</span><span class="preprocessor">        int32 ClassName ## _getObjectSize();                                                                                            \</span></div>
+<div class="line"><span class="lineno">  444</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  445</span><span class="preprocessor">        </span><span class="comment">/* declare getClass name method */</span><span class="preprocessor">                                                                                              \</span></div>
+<div class="line"><span class="lineno">  446</span><span class="preprocessor">        const char* ClassName ## _getClassName(ClassName);                                                                              \</span></div>
+<div class="line"><span class="lineno">  447</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  448</span><span class="preprocessor">        </span><span class="comment">/* Declare fundamental class methods */</span><span class="preprocessor">                                                                                         \</span></div>
+<div class="line"><span class="lineno">  449</span><span class="preprocessor">        __CLASS_FUNDAMENTAL_METHODS(ClassName);</span></div>
 </div>
 </div>
 </div>
@@ -382,7 +390,7 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Define the fundamental methods of a class. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Define the methods of a class. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
     <tr><td class="paramname">ClassName</td><td>Class whose methods are defined </td></tr>
     <tr><td class="paramname">BaseClassName</td><td>Base class' from which the class inherits </td></tr>
@@ -391,66 +399,61 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Class' fundamental method's definition </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">473</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  473</span><span class="preprocessor">#define __CLASS_DEFINITION(ClassName, BaseClassName)                                                                                    \</span></div>
-<div class="line"><span class="lineno">  474</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  475</span><span class="preprocessor">        typedef struct ClassName ## _str                                                                                                \</span></div>
-<div class="line"><span class="lineno">  476</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  477</span><span class="preprocessor">            </span><span class="comment">/* class attributes */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  478</span><span class="preprocessor">            ClassName ## _ATTRIBUTES                                                                                                    \</span></div>
-<div class="line"><span class="lineno">  479</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  480</span><span class="preprocessor">            </span><span class="comment">/* end spec */</span><span class="preprocessor">                                                                                                              \</span></div>
-<div class="line"><span class="lineno">  481</span><span class="preprocessor">        } ClassName ## _str;                                                                                                            \</span></div>
-<div class="line"><span class="lineno">  482</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  483</span><span class="preprocessor">        </span><span class="comment">/* class&#39; vtable&#39;s spec */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  484</span><span class="preprocessor">        struct ClassName ## _vTable ClassName ## _vTable __VIRTUAL_TABLES_DATA_SECTION_ATTRIBUTE;                                       \</span></div>
-<div class="line"><span class="lineno">  485</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  486</span><span class="preprocessor">        static void (* const _baseDestructor)(Object) =                                                                                 \</span></div>
-<div class="line"><span class="lineno">  487</span><span class="preprocessor">        </span><span class="comment">/* class&#39; base&#39;s destructor */</span><span class="preprocessor">                                                                                                  \</span></div>
-<div class="line"><span class="lineno">  488</span><span class="preprocessor">            (void (*)(Object))&amp;BaseClassName ## _destructor;                                                                            \</span></div>
-<div class="line"><span class="lineno">  489</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  490</span><span class="preprocessor">        </span><span class="comment">/* define class&#39;s getSize method */</span><span class="preprocessor">                                                                                             \</span></div>
-<div class="line"><span class="lineno">  491</span><span class="preprocessor">        __GET_INSTANCE_SIZE_DEFINITION(ClassName)                                                                                       \</span></div>
-<div class="line"><span class="lineno">  492</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  493</span><span class="preprocessor">        </span><span class="comment">/* define class&#39;s getBaseClass method */</span><span class="preprocessor">                                                                                        \</span></div>
-<div class="line"><span class="lineno">  494</span><span class="preprocessor">        ClassPointer ClassName ## _getBaseClass(void* this __attribute__ ((unused)))                                                    \</span></div>
-<div class="line"><span class="lineno">  495</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  496</span><span class="preprocessor">            ASSERT(&amp;BaseClassName ## _getBaseClass != &amp;ClassName ## _getBaseClass,                                                      \</span></div>
-<div class="line"><span class="lineno">  497</span><span class="preprocessor">                    &quot;Wrong class spec: __CLASS_DEFINITION(&quot; __MAKE_STRING(ClassName) &quot;, &quot;                                               \</span></div>
-<div class="line"><span class="lineno">  498</span><span class="preprocessor">                    __MAKE_STRING(BaseClassName) &quot;)&quot;);                                                                                  \</span></div>
-<div class="line"><span class="lineno">  499</span><span class="preprocessor">            return (ClassPointer)&amp;BaseClassName ## _getBaseClass;                                                                       \</span></div>
-<div class="line"><span class="lineno">  500</span><span class="preprocessor">        }                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  501</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  502</span><span class="preprocessor">        </span><span class="comment">/* define class&#39;s getSize method */</span><span class="preprocessor">                                                                                             \</span></div>
-<div class="line"><span class="lineno">  503</span><span class="preprocessor">        const char* ClassName ## _getClassName(ClassName this __attribute__ ((unused)))                                                 \</span></div>
-<div class="line"><span class="lineno">  504</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  505</span><span class="preprocessor">            ASSERT(&amp;BaseClassName ## _getBaseClass != &amp;ClassName ## _getBaseClass,                                                      \</span></div>
-<div class="line"><span class="lineno">  506</span><span class="preprocessor">                    &quot;Wrong class spec: __CLASS_DEFINITION(&quot; __MAKE_STRING(ClassName) &quot;, &quot;                                               \</span></div>
-<div class="line"><span class="lineno">  507</span><span class="preprocessor">                    __MAKE_STRING(BaseClassName) &quot;)&quot;);                                                                                  \</span></div>
-<div class="line"><span class="lineno">  508</span><span class="preprocessor">            return (char*)__OBFUSCATE_NAME(ClassName);                                                                                  \</span></div>
-<div class="line"><span class="lineno">  509</span><span class="preprocessor">        }                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  510</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  511</span><span class="preprocessor">        </span><span class="comment">/* restore class vTable */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  512</span><span class="preprocessor">        void ClassName ## _restoreMethods()                                                                                             \</span></div>
-<div class="line"><span class="lineno">  513</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  514</span><span class="preprocessor">            </span><span class="comment">/* must prevent any interrupt from calling methods on unstable vtables */</span><span class="preprocessor">                                                   \</span></div>
-<div class="line"><span class="lineno">  515</span><span class="preprocessor">            HardwareManager_suspendInterrupts();                                                                                        \</span></div>
-<div class="line"><span class="lineno">  516</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  517</span><span class="preprocessor">            ClassName ## _setVTable(true);                                                                                              \</span></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">496</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span><span class="preprocessor">#define __CLASS_DEFINITION(ClassName, BaseClassName)                                                                                    \</span></div>
+<div class="line"><span class="lineno">  497</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  498</span><span class="preprocessor">        typedef struct ClassName ## _str                                                                                                \</span></div>
+<div class="line"><span class="lineno">  499</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  500</span><span class="preprocessor">            </span><span class="comment">/* class attributes */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  501</span><span class="preprocessor">            ClassName ## _ATTRIBUTES                                                                                                    \</span></div>
+<div class="line"><span class="lineno">  502</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  503</span><span class="preprocessor">            </span><span class="comment">/* end spec */</span><span class="preprocessor">                                                                                                              \</span></div>
+<div class="line"><span class="lineno">  504</span><span class="preprocessor">        } ClassName ## _str;                                                                                                            \</span></div>
+<div class="line"><span class="lineno">  505</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  506</span><span class="preprocessor">        </span><span class="comment">/* class&#39; vtable&#39;s spec */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  507</span><span class="preprocessor">        struct ClassName ## _vTable ClassName ## _vTable __VIRTUAL_TABLES_DATA_SECTION_ATTRIBUTE;                                       \</span></div>
+<div class="line"><span class="lineno">  508</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  509</span><span class="preprocessor">        static void (* const _baseDestructor)(Object) =                                                                                 \</span></div>
+<div class="line"><span class="lineno">  510</span><span class="preprocessor">        </span><span class="comment">/* class&#39; base&#39;s destructor */</span><span class="preprocessor">                                                                                                  \</span></div>
+<div class="line"><span class="lineno">  511</span><span class="preprocessor">            (void (*)(Object))&amp;BaseClassName ## _destructor;                                                                            \</span></div>
+<div class="line"><span class="lineno">  512</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  513</span><span class="preprocessor">        </span><span class="comment">/* Define class&#39;s getSize method */</span><span class="preprocessor">                                                                                             \</span></div>
+<div class="line"><span class="lineno">  514</span><span class="preprocessor">        const void* ClassName ## _getClass()                                                                                            \</span></div>
+<div class="line"><span class="lineno">  515</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  516</span><span class="preprocessor">            return (const void*)&amp;ClassName ## _vTable;                                                                                  \</span></div>
+<div class="line"><span class="lineno">  517</span><span class="preprocessor">        }                                                                                                                               \</span></div>
 <div class="line"><span class="lineno">  518</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  519</span><span class="preprocessor">            </span><span class="comment">/* resume interrupts */</span><span class="preprocessor">                                                                                                     \</span></div>
-<div class="line"><span class="lineno">  520</span><span class="preprocessor">            HardwareManager_resumeInterrupts();                                                                                         \</span></div>
-<div class="line"><span class="lineno">  521</span><span class="preprocessor">        }                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  522</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  523</span><span class="preprocessor">        const void* ClassName ## _getClass()                                                                                            \</span></div>
-<div class="line"><span class="lineno">  524</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  525</span><span class="preprocessor">            return (const void*)&amp;ClassName ## _vTable;                                                                                  \</span></div>
+<div class="line"><span class="lineno">  519</span><span class="preprocessor">        </span><span class="comment">/* Define class&#39;s getSize method */</span><span class="preprocessor">                                                                                             \</span></div>
+<div class="line"><span class="lineno">  520</span><span class="preprocessor">        const char* ClassName ## _getClassName(ClassName this __attribute__ ((unused)))                                                 \</span></div>
+<div class="line"><span class="lineno">  521</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  522</span><span class="preprocessor">            ASSERT(&amp;BaseClassName ## _getBaseClass != &amp;ClassName ## _getBaseClass,                                                      \</span></div>
+<div class="line"><span class="lineno">  523</span><span class="preprocessor">                    &quot;Wrong class spec: __CLASS_DEFINITION(&quot; __MAKE_STRING(ClassName) &quot;, &quot;                                               \</span></div>
+<div class="line"><span class="lineno">  524</span><span class="preprocessor">                    __MAKE_STRING(BaseClassName) &quot;)&quot;);                                                                                  \</span></div>
+<div class="line"><span class="lineno">  525</span><span class="preprocessor">            return (char*)__OBFUSCATE_NAME(ClassName);                                                                                  \</span></div>
 <div class="line"><span class="lineno">  526</span><span class="preprocessor">        }                                                                                                                               \</span></div>
 <div class="line"><span class="lineno">  527</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  528</span><span class="preprocessor">        </span><span class="comment">/* now add the function which will handle the vtable */</span><span class="preprocessor">                                                                         \</span></div>
-<div class="line"><span class="lineno">  529</span><span class="preprocessor">        __SET_VTABLE_DEFINITION(ClassName, BaseClassName)                                                                               \</span></div>
-<div class="line"><span class="lineno">  530</span><span class="preprocessor">        __CHECK_VTABLE_DEFINITION(ClassName)                                                                                            \</span></div>
-<div class="line"><span class="lineno">  531</span><span class="preprocessor"></span> </div>
+<div class="line"><span class="lineno">  528</span><span class="preprocessor">        </span><span class="comment">/* Define class&#39;s fundamental methods */</span><span class="preprocessor">                                                                                        \</span></div>
+<div class="line"><span class="lineno">  529</span><span class="preprocessor">        __CLASS_FUNDAMENTAL_DEFINITION(ClassName, BaseClassName)                                                                        \</span></div>
+<div class="line"><span class="lineno">  530</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  531</span><span class="preprocessor">        </span><span class="comment">/* Define class&#39;s getSize method */</span><span class="preprocessor">                                                                                             \</span></div>
+<div class="line"><span class="lineno">  532</span><span class="preprocessor">        __GET_INSTANCE_SIZE_DEFINITION(ClassName)                                                                                       \</span></div>
+<div class="line"><span class="lineno">  533</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  534</span><span class="preprocessor">        </span><span class="comment">/* restore class vTable */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  535</span><span class="preprocessor">        void ClassName ## _restoreMethods()                                                                                             \</span></div>
+<div class="line"><span class="lineno">  536</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  537</span><span class="preprocessor">            </span><span class="comment">/* must prevent any interrupt from calling methods on unstable vtables */</span><span class="preprocessor">                                                   \</span></div>
+<div class="line"><span class="lineno">  538</span><span class="preprocessor">            HardwareManager_suspendInterrupts();                                                                                        \</span></div>
+<div class="line"><span class="lineno">  539</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  540</span><span class="preprocessor">            ClassName ## _setVTable(true);                                                                                              \</span></div>
+<div class="line"><span class="lineno">  541</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  542</span><span class="preprocessor">            </span><span class="comment">/* resume interrupts */</span><span class="preprocessor">                                                                                                     \</span></div>
+<div class="line"><span class="lineno">  543</span><span class="preprocessor">            HardwareManager_resumeInterrupts();                                                                                         \</span></div>
+<div class="line"><span class="lineno">  544</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  545</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  546</span><span class="preprocessor">        </span><span class="comment">/* now add the function which will handle the vtable */</span><span class="preprocessor">                                                                         \</span></div>
+<div class="line"><span class="lineno">  547</span><span class="preprocessor">        __SET_VTABLE_DEFINITION(ClassName, BaseClassName)                                                                               \</span></div>
+<div class="line"><span class="lineno">  548</span><span class="preprocessor">        __CHECK_VTABLE_DEFINITION(ClassName)                                                                                            \</span></div>
+<div class="line"><span class="lineno">  549</span><span class="preprocessor"></span> </div>
 </div>
 </div>
 </div>
@@ -483,16 +486,100 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Class' struct declaration </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">446</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  446</span><span class="preprocessor">#define __CLASS_FRIEND_DEFINITION(ClassName)                                                                                            \</span></div>
-<div class="line"><span class="lineno">  447</span><span class="preprocessor">        typedef struct ClassName ## _str                                                                                                \</span></div>
-<div class="line"><span class="lineno">  448</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  449</span><span class="preprocessor">            </span><span class="comment">/* class attributes */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  450</span><span class="preprocessor">            ClassName ## _ATTRIBUTES                                                                                                    \</span></div>
-<div class="line"><span class="lineno">  451</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  452</span><span class="preprocessor">            </span><span class="comment">/* end spec */</span><span class="preprocessor">                                                                                                              \</span></div>
-<div class="line"><span class="lineno">  453</span><span class="preprocessor">        } ClassName ## _str                                                                                                             \</span></div>
-<div class="line"><span class="lineno">  454</span><span class="preprocessor"></span> </div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">454</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  454</span><span class="preprocessor">#define __CLASS_FRIEND_DEFINITION(ClassName)                                                                                            \</span></div>
+<div class="line"><span class="lineno">  455</span><span class="preprocessor">        typedef struct ClassName ## _str                                                                                                \</span></div>
+<div class="line"><span class="lineno">  456</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  457</span><span class="preprocessor">            </span><span class="comment">/* class attributes */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  458</span><span class="preprocessor">            ClassName ## _ATTRIBUTES                                                                                                    \</span></div>
+<div class="line"><span class="lineno">  459</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  460</span><span class="preprocessor">            </span><span class="comment">/* end spec */</span><span class="preprocessor">                                                                                                              \</span></div>
+<div class="line"><span class="lineno">  461</span><span class="preprocessor">        } ClassName ## _str                                                                                                             \</span></div>
+<div class="line"><span class="lineno">  462</span><span class="preprocessor"></span> </div>
+</div>
+</div>
+</div>
+<a id="a52aa0a622595aa2e6cdb2b77187d4441" name="a52aa0a622595aa2e6cdb2b77187d4441"></a>
+<h2 class="memtitle">__CLASS_FUNDAMENTAL_DEFINITION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __CLASS_FUNDAMENTAL_DEFINITION</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ClassName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>BaseClassName</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
+<div class="line">        <span class="comment">/* Define class&#39;s getBaseClass method */</span>                                                                                        \</div>
+<div class="line">        <a class="code hl_typedef" href="#a061ab3af7279dbb9d5e929a1b97f89e6">ClassPointer</a> ClassName ## _getBaseClass(<span class="keywordtype">void</span>* <span class="keyword">this</span> <a class="code hl_function" href="/documentation/api/-debug-font-spec-8c/">__attribute__</a> ((unused)))                                                   \</div>
+<div class="line">        {                                                                                                                               \</div>
+<div class="line">            ASSERT(&amp;BaseClassName ## _getBaseClass != &amp;ClassName ## _getBaseClass,                                                      \</div>
+<div class="line">                    <span class="stringliteral">&quot;Wrong class spec: __CLASS_DEFINITION(&quot;</span> <a class="code hl_define" href="#af3adadeee4c0d4bf629622b436edbb17">__MAKE_STRING</a>(ClassName) <span class="stringliteral">&quot;, &quot;</span>                                              \</div>
+<div class="line">                    <a class="code hl_define" href="#af3adadeee4c0d4bf629622b436edbb17">__MAKE_STRING</a>(BaseClassName) <span class="stringliteral">&quot;)&quot;</span>);                                                                                 \</div>
+<div class="line">            return (<a class="code hl_typedef" href="#a061ab3af7279dbb9d5e929a1b97f89e6">ClassPointer</a>)&amp;BaseClassName ## _getBaseClass;                                                                       \</div>
+<div class="line">        }</div>
+<div class="ttc" id="a_oop_8h_html_a061ab3af7279dbb9d5e929a1b97f89e6"><div class="ttname"><a href="#a061ab3af7279dbb9d5e929a1b97f89e6">ClassPointer</a></div><div class="ttdeci">void *(*(* ClassPointer)(void *))(void *)</div><div class="ttdoc">typedef for RTTI</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:415</a></div></div>
+</div><p>Define the fundamental methods of a class. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">ClassName</td><td>Class whose methods are defined </td></tr>
+    <tr><td class="paramname">BaseClassName</td><td>Base class' from which the class inherits </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Class' fundamental method's definition </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">481</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  481</span><span class="preprocessor">#define __CLASS_FUNDAMENTAL_DEFINITION(ClassName, BaseClassName)                                                                        \</span></div>
+<div class="line"><span class="lineno">  482</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  483</span><span class="preprocessor">        </span><span class="comment">/* Define class&#39;s getBaseClass method */</span><span class="preprocessor">                                                                                        \</span></div>
+<div class="line"><span class="lineno">  484</span><span class="preprocessor">        ClassPointer ClassName ## _getBaseClass(void* this __attribute__ ((unused)))                                                    \</span></div>
+<div class="line"><span class="lineno">  485</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  486</span><span class="preprocessor">            ASSERT(&amp;BaseClassName ## _getBaseClass != &amp;ClassName ## _getBaseClass,                                                      \</span></div>
+<div class="line"><span class="lineno">  487</span><span class="preprocessor">                    &quot;Wrong class spec: __CLASS_DEFINITION(&quot; __MAKE_STRING(ClassName) &quot;, &quot;                                               \</span></div>
+<div class="line"><span class="lineno">  488</span><span class="preprocessor">                    __MAKE_STRING(BaseClassName) &quot;)&quot;);                                                                                  \</span></div>
+<div class="line"><span class="lineno">  489</span><span class="preprocessor">            return (ClassPointer)&amp;BaseClassName ## _getBaseClass;                                                                       \</span></div>
+<div class="line"><span class="lineno">  490</span><span class="preprocessor">        }</span></div>
+</div>
+</div>
+</div>
+<a id="a798bc24e332da6a53a304e9dd836a772" name="a798bc24e332da6a53a304e9dd836a772"></a>
+<h2 class="memtitle">__CLASS_FUNDAMENTAL_METHODS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __CLASS_FUNDAMENTAL_METHODS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ClassName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
+<div class="line">        <span class="comment">/* declare getBaseClass method */</span>                                                                                               \</div>
+<div class="line">        <a class="code hl_typedef" href="#a061ab3af7279dbb9d5e929a1b97f89e6">ClassPointer</a> ClassName ## _getBaseClass(<span class="keywordtype">void</span>*)</div>
+</div><p>Declare a class' fundamental methods. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">ClassName</td><td>Class being declared </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Declaration of methods that all classes must have </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">420</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  420</span><span class="preprocessor">#define __CLASS_FUNDAMENTAL_METHODS(ClassName)                                                                                          \</span></div>
+<div class="line"><span class="lineno">  421</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  422</span><span class="preprocessor">        </span><span class="comment">/* declare getBaseClass method */</span><span class="preprocessor">                                                                                               \</span></div>
+<div class="line"><span class="lineno">  423</span><span class="preprocessor">        ClassPointer ClassName ## _getBaseClass(void*)</span></div>
 </div>
 </div>
 </div>
@@ -562,7 +649,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* define the method */</span>                                                                                                         \</div>
+<div class="line">        <span class="comment">/* Define the method */</span>                                                                                                         \</div>
 <div class="line">        ClassName ClassName ## _new(__VA_ARGS__)                                                                                        \</div>
 <div class="line">        {                                                                                                                               \</div>
 <div class="line">            <span class="comment">/* make sure that the class is properly set */</span>                                                                              \</div>
@@ -595,7 +682,7 @@ Typedefs</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">58</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   58</span><span class="preprocessor">#define __CLASS_NEW_DEFINITION(ClassName, ...)                                                                                          \</span></div>
 <div class="line"><span class="lineno">   59</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">   60</span><span class="preprocessor">        </span><span class="comment">/* define the method */</span><span class="preprocessor">                                                                                                         \</span></div>
+<div class="line"><span class="lineno">   60</span><span class="preprocessor">        </span><span class="comment">/* Define the method */</span><span class="preprocessor">                                                                                                         \</span></div>
 <div class="line"><span class="lineno">   61</span><span class="preprocessor">        ClassName ClassName ## _new(__VA_ARGS__)                                                                                        \</span></div>
 <div class="line"><span class="lineno">   62</span><span class="preprocessor">        {                                                                                                                               \</span></div>
 <div class="line"><span class="lineno">   63</span><span class="preprocessor">            </span><span class="comment">/* make sure that the class is properly set */</span><span class="preprocessor">                                                                              \</span></div>
@@ -799,7 +886,7 @@ Typedefs</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Call to ClassName::destructor or deallocation request to MemoryPool </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Call to ClassName::destructor or deallocation request to <a class="el" href="/documentation/api/class-memory-pool/">MemoryPool</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">127</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  127</span><span class="preprocessor">#define __DELETE(objectToDelete)                                                                                                        \</span></div>
@@ -844,7 +931,7 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
 <div class="line">        _baseDestructor(<a class="code hl_define" href="/documentation/api/-memory-pool-8c/">__SAFE_CAST</a>(<a class="code hl_class" href="/documentation/api/class-object/">Object</a>, <span class="keyword">this</span>));                                                                                        \</div>
-<div class="ttc" id="a_memory_pool_8c_html_a48318515b98581c042f5ee46d07a674b"><div class="ttname"><a href="/documentation/api/-memory-pool-8c/">__SAFE_CAST</a></div><div class="ttdeci">#define __SAFE_CAST(ClassName, object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8c-source/">MemoryPool.c:99</a></div></div>
+<div class="ttc" id="a_memory_pool_8c_html_a48318515b98581c042f5ee46d07a674b"><div class="ttname"><a href="/documentation/api/-memory-pool-8c/">__SAFE_CAST</a></div><div class="ttdeci">#define __SAFE_CAST(ClassName, object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-memory-pool-8c-source/">MemoryPool.c:32</a></div></div>
 </div><p>Call the base class' destructor. </p><dl class="section return"><dt>Returns</dt><dd>Call to the class' destructor </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">188</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
@@ -969,10 +1056,10 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Call to the method to retrieve the object's class' name </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">535</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  535</span><span class="preprocessor">#define __GET_CLASS_NAME(object)                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  536</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  537</span><span class="preprocessor">        __VIRTUAL_CALL(Object, getClassName, (Object)object)</span></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">553</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  553</span><span class="preprocessor">#define __GET_CLASS_NAME(object)                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  554</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  555</span><span class="preprocessor">        __VIRTUAL_CALL(Object, getClassName, (Object)object)</span></div>
 </div>
 </div>
 </div>
@@ -1003,13 +1090,13 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Implementation of the class' method to retrive the size of its instances </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">459</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  459</span><span class="preprocessor">#define __GET_INSTANCE_SIZE_DEFINITION(ClassName)                                                                                       \</span></div>
-<div class="line"><span class="lineno">  460</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  461</span><span class="preprocessor">        int32 ClassName ## _getObjectSize()                                                                                             \</span></div>
-<div class="line"><span class="lineno">  462</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  463</span><span class="preprocessor">            return sizeof(ClassName ## _str);                                                                                           \</span></div>
-<div class="line"><span class="lineno">  464</span><span class="preprocessor">        }</span></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">467</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  467</span><span class="preprocessor">#define __GET_INSTANCE_SIZE_DEFINITION(ClassName)                                                                                       \</span></div>
+<div class="line"><span class="lineno">  468</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  469</span><span class="preprocessor">        int32 ClassName ## _getObjectSize()                                                                                             \</span></div>
+<div class="line"><span class="lineno">  470</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  471</span><span class="preprocessor">            return sizeof(ClassName ## _str);                                                                                           \</span></div>
+<div class="line"><span class="lineno">  472</span><span class="preprocessor">        }</span></div>
 </div>
 </div>
 </div>
@@ -1207,7 +1294,7 @@ Typedefs</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Call to allocation request to the MemoryPool </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Call to allocation request to the <a class="el" href="/documentation/api/class-memory-pool/">MemoryPool</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">117</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  117</span><span class="preprocessor">#define __NEW_BASIC(StructName)                                                                                                         \</span></div>
@@ -1361,7 +1448,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
-<div class="line">        <span class="comment">/* define the static method */</span>                                                                                                  \</div>
+<div class="line">        <span class="comment">/* Define the static method */</span>                                                                                                  \</div>
 <div class="line">        <span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/-debug-font-spec-8c/">__attribute__</a> ((noinline)) ClassName ## _setVTable(<span class="keywordtype">bool</span> force)                                                                \</div>
 <div class="line">        {                                                                                                                               \</div>
 <div class="line">            <span class="comment">/* setup the class&#39;s vtable only if destructor is NULL */</span>                                                                   \</div>
@@ -1401,7 +1488,7 @@ Typedefs</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">352</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  352</span><span class="preprocessor">#define __SET_VTABLE_DEFINITION(ClassName, BaseClassName)                                                                               \</span></div>
 <div class="line"><span class="lineno">  353</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  354</span><span class="preprocessor">        </span><span class="comment">/* define the static method */</span><span class="preprocessor">                                                                                                  \</span></div>
+<div class="line"><span class="lineno">  354</span><span class="preprocessor">        </span><span class="comment">/* Define the static method */</span><span class="preprocessor">                                                                                                  \</span></div>
 <div class="line"><span class="lineno">  355</span><span class="preprocessor">        void __attribute__ ((noinline)) ClassName ## _setVTable(bool force)                                                             \</span></div>
 <div class="line"><span class="lineno">  356</span><span class="preprocessor">        {                                                                                                                               \</span></div>
 <div class="line"><span class="lineno">  357</span><span class="preprocessor">            </span><span class="comment">/* setup the class&#39;s vtable only if destructor is NULL */</span><span class="preprocessor">                                                                   \</span></div>
@@ -1433,7 +1520,7 @@ Typedefs</h2></td></tr>
 </div>
 </div>
 </div>
-<a id="a9f03098c32d46218292dd08e6f855988" name="a9f03098c32d46218292dd08e6f855988"></a>
+<a id="af18418f309b28af4e27473f81ce1b871" name="af18418f309b28af4e27473f81ce1b871"></a>
 <h2 class="memtitle">__SINGLETON</h2>
 
 <div class="memitem">
@@ -1447,81 +1534,183 @@ Typedefs</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>MemorySection</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Defines a singleton class' fundamental methods. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
-    <tr><td class="paramname">ClassName</td><td>Singleton class' name to define </td></tr>
+    <tr><td class="paramname">ClassName</td><td><a class="el" href="/documentation/api/class-singleton/">Singleton</a> class' name to define </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Implementation of a singleton class' fundamental methods </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">557</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  557</span><span class="preprocessor">#define __SINGLETON(ClassName, ...)                                                                                                         \</span></div>
-<div class="line"><span class="lineno">  558</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  559</span><span class="preprocessor">        </span><span class="comment">/* declare the static instance */</span><span class="preprocessor">                                                                                               \</span></div>
-<div class="line"><span class="lineno">  560</span><span class="preprocessor">        typedef struct SingletonWrapper ## ClassName                                                                                    \</span></div>
-<div class="line"><span class="lineno">  561</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  562</span><span class="preprocessor">            </span><span class="comment">/* footprint to differentiate between objects and structs */</span><span class="preprocessor">                                                                \</span></div>
-<div class="line"><span class="lineno">  563</span><span class="preprocessor">            uint32 objectMemoryFootprint;                                                                                               \</span></div>
-<div class="line"><span class="lineno">  564</span><span class="preprocessor">            </span><span class="comment">/* declare the static instance */</span><span class="preprocessor">                                                                                           \</span></div>
-<div class="line"><span class="lineno">  565</span><span class="preprocessor">            ClassName ## _str instance;                                                                                                 \</span></div>
-<div class="line"><span class="lineno">  566</span><span class="preprocessor">        } SingletonWrapper ## ClassName;                                                                                                \</span></div>
-<div class="line"><span class="lineno">  567</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  568</span><span class="preprocessor">        static SingletonWrapper ## ClassName _singletonWrapper ## ClassName                                                             \</span></div>
-<div class="line"><span class="lineno">  569</span><span class="preprocessor">                __STATIC_SINGLETONS_DATA_SECTION_ATTRIBUTE;                                                                             \</span></div>
-<div class="line"><span class="lineno">  570</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  571</span><span class="preprocessor">        </span><span class="comment">/* a flag to know when to allow construction */</span><span class="preprocessor">                                                                                 \</span></div>
-<div class="line"><span class="lineno">  572</span><span class="preprocessor">        static int8 _singletonConstructed __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE                                                   \</span></div>
-<div class="line"><span class="lineno">  573</span><span class="preprocessor">                                        = __SINGLETON_NOT_CONSTRUCTED;                                                                  \</span></div>
-<div class="line"><span class="lineno">  574</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  575</span><span class="preprocessor">        </span><span class="comment">/* define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
-<div class="line"><span class="lineno">  576</span><span class="preprocessor">        static void __attribute__ ((noinline)) ClassName ## _instantiate()                                                              \</span></div>
-<div class="line"><span class="lineno">  577</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  578</span><span class="preprocessor">            NM_ASSERT(__SINGLETON_BEING_CONSTRUCTED != _singletonConstructed,                                                           \</span></div>
-<div class="line"><span class="lineno">  579</span><span class="preprocessor">                ClassName get instance during construction);                                                                            \</span></div>
-<div class="line"><span class="lineno">  580</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  581</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_BEING_CONSTRUCTED;                                                                      \</span></div>
-<div class="line"><span class="lineno">  582</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  583</span><span class="preprocessor">            </span><span class="comment">/* make sure that the class is properly set */</span><span class="preprocessor">                                                                              \</span></div>
-<div class="line"><span class="lineno">  584</span><span class="preprocessor">            __CALL_CHECK_VTABLE(ClassName);                                                                                             \</span></div>
-<div class="line"><span class="lineno">  585</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  586</span><span class="preprocessor">            </span><span class="comment">/*  */</span><span class="preprocessor">                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  587</span><span class="preprocessor">            ClassName instance = &amp;_singletonWrapper ## ClassName.instance;                                                              \</span></div>
-<div class="line"><span class="lineno">  588</span><span class="preprocessor">            _singletonWrapper ## ClassName.objectMemoryFootprint =                                                                      \</span></div>
-<div class="line"><span class="lineno">  589</span><span class="preprocessor">                (__OBJECT_MEMORY_FOOT_PRINT &lt;&lt; 16) | -1;                                                                                \</span></div>
-<div class="line"><span class="lineno">  590</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  591</span><span class="preprocessor">            </span><span class="comment">/* set the vtable pointer */</span><span class="preprocessor">                                                                                                \</span></div>
-<div class="line"><span class="lineno">  592</span><span class="preprocessor">            instance-&gt;vTable = &amp;ClassName ## _vTable;                                                                                   \</span></div>
-<div class="line"><span class="lineno">  593</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  594</span><span class="preprocessor">            </span><span class="comment">/* call constructor */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  595</span><span class="preprocessor">            ClassName ## _constructor(instance);                                                                                        \</span></div>
-<div class="line"><span class="lineno">  596</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  597</span><span class="preprocessor">            </span><span class="comment">/* set the vtable pointer */</span><span class="preprocessor">                                                                                                \</span></div>
-<div class="line"><span class="lineno">  598</span><span class="preprocessor">            instance-&gt;vTable = &amp;ClassName ## _vTable;                                                                                   \</span></div>
-<div class="line"><span class="lineno">  599</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  600</span><span class="preprocessor">            </span><span class="comment">/* don&#39;t allow more constructs */</span><span class="preprocessor">                                                                                           \</span></div>
-<div class="line"><span class="lineno">  601</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_CONSTRUCTED;                                                                            \</span></div>
-<div class="line"><span class="lineno">  602</span><span class="preprocessor">        }                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  603</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  604</span><span class="preprocessor">        </span><span class="comment">/* define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
-<div class="line"><span class="lineno">  605</span><span class="preprocessor">        __VA_ARGS__ __attribute__((unused)) ClassName ClassName ## _getInstance ()                                                      \</span></div>
-<div class="line"><span class="lineno">  606</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  607</span><span class="preprocessor">            </span><span class="comment">/* first check if not constructed yet */</span><span class="preprocessor">                                                                                    \</span></div>
-<div class="line"><span class="lineno">  608</span><span class="preprocessor">            if(__SINGLETON_NOT_CONSTRUCTED == _singletonConstructed)                                                                    \</span></div>
-<div class="line"><span class="lineno">  609</span><span class="preprocessor">            {                                                                                                                           \</span></div>
-<div class="line"><span class="lineno">  610</span><span class="preprocessor">                ClassName ## _instantiate();                                                                                            \</span></div>
-<div class="line"><span class="lineno">  611</span><span class="preprocessor">            }                                                                                                                           \</span></div>
-<div class="line"><span class="lineno">  612</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  613</span><span class="preprocessor">            </span><span class="comment">/* return the created singleton */</span><span class="preprocessor">                                                                                          \</span></div>
-<div class="line"><span class="lineno">  614</span><span class="preprocessor">            return &amp;_singletonWrapper ## ClassName.instance;                                                                            \</span></div>
-<div class="line"><span class="lineno">  615</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">649</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  649</span><span class="preprocessor">#define __SINGLETON(ClassName, MemorySection)                                                                                                       \</span></div>
+<div class="line"><span class="lineno">  650</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  651</span><span class="preprocessor">        </span><span class="comment">/* declare the static instance */</span><span class="preprocessor">                                                                                               \</span></div>
+<div class="line"><span class="lineno">  652</span><span class="preprocessor">        typedef struct SingletonWrapper ## ClassName                                                                                    \</span></div>
+<div class="line"><span class="lineno">  653</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  654</span><span class="preprocessor">            </span><span class="comment">/* footprint to differentiate between objects and structs */</span><span class="preprocessor">                                                                \</span></div>
+<div class="line"><span class="lineno">  655</span><span class="preprocessor">            uint32 objectMemoryFootprint;                                                                                               \</span></div>
+<div class="line"><span class="lineno">  656</span><span class="preprocessor">            </span><span class="comment">/* declare the static instance */</span><span class="preprocessor">                                                                                           \</span></div>
+<div class="line"><span class="lineno">  657</span><span class="preprocessor">            ClassName ## _str instance;                                                                                                 \</span></div>
+<div class="line"><span class="lineno">  658</span><span class="preprocessor">        } SingletonWrapper ## ClassName;                                                                                                \</span></div>
+<div class="line"><span class="lineno">  659</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  660</span><span class="preprocessor">        static SingletonWrapper ## ClassName _singletonWrapper ## ClassName                                                             \</span></div>
+<div class="line"><span class="lineno">  661</span><span class="preprocessor">                MemorySection;                                                                                                          \</span></div>
+<div class="line"><span class="lineno">  662</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  663</span><span class="preprocessor">        </span><span class="comment">/* a flag to know when to allow construction */</span><span class="preprocessor">                                                                                 \</span></div>
+<div class="line"><span class="lineno">  664</span><span class="preprocessor">        static int8 _singletonConstructed __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE                                                   \</span></div>
+<div class="line"><span class="lineno">  665</span><span class="preprocessor">                                        = __SINGLETON_NOT_CONSTRUCTED;                                                                  \</span></div>
+<div class="line"><span class="lineno">  666</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  667</span><span class="preprocessor">        </span><span class="comment">/* Define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  668</span><span class="preprocessor">        static void __attribute__ ((noinline)) ClassName ## _instantiate()                                                              \</span></div>
+<div class="line"><span class="lineno">  669</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  670</span><span class="preprocessor">            NM_ASSERT(__SINGLETON_BEING_CONSTRUCTED != _singletonConstructed,                                                           \</span></div>
+<div class="line"><span class="lineno">  671</span><span class="preprocessor">                ClassName get instance during construction);                                                                            \</span></div>
+<div class="line"><span class="lineno">  672</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  673</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_BEING_CONSTRUCTED;                                                                      \</span></div>
+<div class="line"><span class="lineno">  674</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  675</span><span class="preprocessor">            </span><span class="comment">/* make sure that the class is properly set */</span><span class="preprocessor">                                                                              \</span></div>
+<div class="line"><span class="lineno">  676</span><span class="preprocessor">            __CALL_CHECK_VTABLE(ClassName);                                                                                             \</span></div>
+<div class="line"><span class="lineno">  677</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  678</span><span class="preprocessor">            </span><span class="comment">/*  */</span><span class="preprocessor">                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  679</span><span class="preprocessor">            ClassName instance = &amp;_singletonWrapper ## ClassName.instance;                                                              \</span></div>
+<div class="line"><span class="lineno">  680</span><span class="preprocessor">            _singletonWrapper ## ClassName.objectMemoryFootprint =                                                                      \</span></div>
+<div class="line"><span class="lineno">  681</span><span class="preprocessor">                (__OBJECT_MEMORY_FOOT_PRINT &lt;&lt; 16) | -1;                                                                                \</span></div>
+<div class="line"><span class="lineno">  682</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  683</span><span class="preprocessor">            </span><span class="comment">/* set the vtable pointer */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  684</span><span class="preprocessor">            instance-&gt;vTable = &amp;ClassName ## _vTable;                                                                                   \</span></div>
+<div class="line"><span class="lineno">  685</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  686</span><span class="preprocessor">            </span><span class="comment">/* call constructor */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  687</span><span class="preprocessor">            ClassName ## _constructor(instance);                                                                                        \</span></div>
+<div class="line"><span class="lineno">  688</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  689</span><span class="preprocessor">            </span><span class="comment">/* set the vtable pointer */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  690</span><span class="preprocessor">            instance-&gt;vTable = &amp;ClassName ## _vTable;                                                                                   \</span></div>
+<div class="line"><span class="lineno">  691</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  692</span><span class="preprocessor">            </span><span class="comment">/* don&#39;t allow more constructs */</span><span class="preprocessor">                                                                                           \</span></div>
+<div class="line"><span class="lineno">  693</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_CONSTRUCTED;                                                                            \</span></div>
+<div class="line"><span class="lineno">  694</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  695</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  696</span><span class="preprocessor">        __SINGLETON_ACCESS(ClassName)                                                                                                   \</span></div>
+<div class="line"><span class="lineno">  697</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  698</span><span class="preprocessor">        </span><span class="comment">/* Define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  699</span><span class="preprocessor">        __attribute__((unused)) ClassName ClassName ## _getInstance (ClassPointer requesterClass __attribute__((unused)))               \</span></div>
+<div class="line"><span class="lineno">  700</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  701</span><span class="preprocessor">            </span><span class="comment">/* Check if the call has higher privileges */</span><span class="preprocessor">                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  702</span><span class="preprocessor">            __SINGLETON_AUTHORIZATION_CHECK(ClassName)                                                                                  \</span></div>
+<div class="line"><span class="lineno">  703</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  704</span><span class="preprocessor">            </span><span class="comment">/* first check if not constructed yet */</span><span class="preprocessor">                                                                                    \</span></div>
+<div class="line"><span class="lineno">  705</span><span class="preprocessor">            if(__SINGLETON_NOT_CONSTRUCTED == _singletonConstructed)                                                                    \</span></div>
+<div class="line"><span class="lineno">  706</span><span class="preprocessor">            {                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  707</span><span class="preprocessor">                ClassName ## _instantiate();                                                                                            \</span></div>
+<div class="line"><span class="lineno">  708</span><span class="preprocessor">            }                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  709</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  710</span><span class="preprocessor">            </span><span class="comment">/* return the created singleton */</span><span class="preprocessor">                                                                                          \</span></div>
+<div class="line"><span class="lineno">  711</span><span class="preprocessor">            return &amp;_singletonWrapper ## ClassName.instance;                                                                            \</span></div>
+<div class="line"><span class="lineno">  712</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  713</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  714</span><span class="preprocessor">        </span><span class="comment">/* dummy redeclaration to avoid warning when compiling with -pedantic */</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><span class="lineno">  715</span><span class="preprocessor">        void ClassName ## dummyMethodSingleton()</span></div>
+</div>
+</div>
+</div>
+<a id="a996f56acd7f922be776d17e53253e40f" name="a996f56acd7f922be776d17e53253e40f"></a>
+<h2 class="memtitle">__SINGLETON_ACCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SINGLETON_ACCESS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ClassName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">609</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  609</span><span class="preprocessor">#define __SINGLETON_ACCESS(ClassName)                                                                                                   \</span></div>
+<div class="line"><span class="lineno">  610</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  611</span><span class="preprocessor">        </span><span class="comment">/* Array of authorized callers */</span><span class="preprocessor">                                                                                               \</span></div>
+<div class="line"><span class="lineno">  612</span><span class="preprocessor">        static ClassPointer const (*_authorizedRequesters)[] = NULL;                                                                    \</span></div>
+<div class="line"><span class="lineno">  613</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  614</span><span class="preprocessor">        </span><span class="comment">/* Flag to authorize access to secure methods */</span><span class="preprocessor">                                                                                \</span></div>
+<div class="line"><span class="lineno">  615</span><span class="preprocessor">        static bool _authorized __attribute__((unused)) = true;                                                                         \</span></div>
 <div class="line"><span class="lineno">  616</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  617</span><span class="preprocessor">        </span><span class="comment">/* dummy redeclaration to avoid warning when compiling with -pedantic */</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><span class="lineno">  618</span><span class="preprocessor">        void ClassName ## dummyMethodSingleton()</span></div>
+<div class="line"><span class="lineno">  617</span><span class="preprocessor">        </span><span class="comment">/* Define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  618</span><span class="preprocessor">        bool ClassName ## _authorize(ClassPointer requesterClass)                                                                       \</span></div>
+<div class="line"><span class="lineno">  619</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  620</span><span class="preprocessor">            for(int16 i = 0; NULL != (*_authorizedRequesters)[i]; i++)                                                                  \</span></div>
+<div class="line"><span class="lineno">  621</span><span class="preprocessor">            {                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  622</span><span class="preprocessor">                if(requesterClass == (*_authorizedRequesters)[i])                                                                       \</span></div>
+<div class="line"><span class="lineno">  623</span><span class="preprocessor">                {                                                                                                                       \</span></div>
+<div class="line"><span class="lineno">  624</span><span class="preprocessor">                    return true;                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  625</span><span class="preprocessor">                }                                                                                                                       \</span></div>
+<div class="line"><span class="lineno">  626</span><span class="preprocessor">            }                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  627</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  628</span><span class="preprocessor">            return typeofclass(ClassName) == requesterClass;                                                                            \</span></div>
+<div class="line"><span class="lineno">  629</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  630</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  631</span><span class="preprocessor">        </span><span class="comment">/* Define secure */</span><span class="preprocessor">                                                                                                             \</span></div>
+<div class="line"><span class="lineno">  632</span><span class="preprocessor">        void ClassName ## _secure (ClassPointer const (*requesterClasses)[])                                                            \</span></div>
+<div class="line"><span class="lineno">  633</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  634</span><span class="preprocessor">            </span><span class="comment">/* Check the validity of the provided array */</span><span class="preprocessor">                                                                              \</span></div>
+<div class="line"><span class="lineno">  635</span><span class="preprocessor">            __SINGLETON_SECURITY_CHECKER(ClassName)                                                                                     \</span></div>
+<div class="line"><span class="lineno">  636</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  637</span><span class="preprocessor">            if(NULL != _authorizedRequesters)                                                                                           \</span></div>
+<div class="line"><span class="lineno">  638</span><span class="preprocessor">            {                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  639</span><span class="preprocessor">                return;                                                                                                                 \</span></div>
+<div class="line"><span class="lineno">  640</span><span class="preprocessor">            }                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  641</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  642</span><span class="preprocessor">            </span><span class="comment">/* Register the provided array */</span><span class="preprocessor">                                                                                           \</span></div>
+<div class="line"><span class="lineno">  643</span><span class="preprocessor">            _authorizedRequesters = requesterClasses;                                                                                   \</span></div>
+<div class="line"><span class="lineno">  644</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  645</span><span class="preprocessor"></span> </div>
+</div>
+</div>
+</div>
+<a id="a90151628b7e2d659061d2c0808587a13" name="a90151628b7e2d659061d2c0808587a13"></a>
+<h2 class="memtitle">__SINGLETON_AUTHORIZATION_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SINGLETON_AUTHORIZATION_CHECK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ClassName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                                                                                                                        \</div>
+<div class="line">    _authorized = <span class="keyword">true</span>;                                                                                                                 \</div>
+<div class="line">                                                                                                                                        \</div>
+<div class="line">    if(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != _authorizedRequesters &amp;&amp; !ClassName ## _authorize(requesterClass))                                                       \</div>
+<div class="line">    {                                                                                                                                   \</div>
+<div class="line">        _authorized = <span class="keyword">false</span>;                                                                                                            \</div>
+<div class="line">    }</div>
+</div><p>Checks that the provided authorization array lives in non volatile memory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">ClassName</td><td>Class to verity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Implementation of a check for the validity of the authorization array </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">597</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  597</span><span class="preprocessor">#define __SINGLETON_AUTHORIZATION_CHECK(ClassName)                                                                                      \</span></div>
+<div class="line"><span class="lineno">  598</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  599</span><span class="preprocessor">    _authorized = true;                                                                                                                 \</span></div>
+<div class="line"><span class="lineno">  600</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  601</span><span class="preprocessor">    if(NULL != _authorizedRequesters &amp;&amp; !ClassName ## _authorize(requesterClass))                                                       \</span></div>
+<div class="line"><span class="lineno">  602</span><span class="preprocessor">    {                                                                                                                                   \</span></div>
+<div class="line"><span class="lineno">  603</span><span class="preprocessor">        _authorized = false;                                                                                                            \</span></div>
+<div class="line"><span class="lineno">  604</span><span class="preprocessor">    }</span></div>
 </div>
 </div>
 </div>
@@ -1537,7 +1726,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">551</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">569</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 
 </div>
 </div>
@@ -1553,7 +1742,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">552</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">570</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 
 </div>
 </div>
@@ -1575,18 +1764,18 @@ Typedefs</h2></td></tr>
 <div class="line">        <span class="comment">/* allow new constructs */</span>                                                                                                      \</div>
 <div class="line">        _singletonConstructed = <a class="code hl_define" href="#ae1acbeb9da8283619049322f4a5b0fdf">__SINGLETON_NOT_CONSTRUCTED</a>;                                                                         \</div>
 <div class="ttc" id="a_oop_8h_html_a1574f530dbb8739d0d70d03a956980b6"><div class="ttname"><a href="#a1574f530dbb8739d0d70d03a956980b6">__DESTROY_BASE</a></div><div class="ttdeci">#define __DESTROY_BASE</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:188</a></div></div>
-<div class="ttc" id="a_oop_8h_html_ae1acbeb9da8283619049322f4a5b0fdf"><div class="ttname"><a href="#ae1acbeb9da8283619049322f4a5b0fdf">__SINGLETON_NOT_CONSTRUCTED</a></div><div class="ttdeci">#define __SINGLETON_NOT_CONSTRUCTED</div><div class="ttdoc">Singletons&#39; construction state flags.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:550</a></div></div>
+<div class="ttc" id="a_oop_8h_html_ae1acbeb9da8283619049322f4a5b0fdf"><div class="ttname"><a href="#ae1acbeb9da8283619049322f4a5b0fdf">__SINGLETON_NOT_CONSTRUCTED</a></div><div class="ttdeci">#define __SINGLETON_NOT_CONSTRUCTED</div><div class="ttdoc">Singletons&#39; construction state flags.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:568</a></div></div>
 </div><p>Call's the singleton's base class' destructor and allows a new instantiation. </p><dl class="section return"><dt>Returns</dt><dd>Code to call the singleton class' base's destructor and to pull down the flag that prevents a new instance being created </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">623</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  623</span><span class="preprocessor">#define __SINGLETON_DESTROY                                                                                                             \</span></div>
-<div class="line"><span class="lineno">  624</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  625</span><span class="preprocessor">        </span><span class="comment">/* destroy super object */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  626</span><span class="preprocessor">        __DESTROY_BASE;                                                                                                                 \</span></div>
-<div class="line"><span class="lineno">  627</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  628</span><span class="preprocessor">        </span><span class="comment">/* allow new constructs */</span><span class="preprocessor">                                                                                                      \</span></div>
-<div class="line"><span class="lineno">  629</span><span class="preprocessor">        _singletonConstructed = __SINGLETON_NOT_CONSTRUCTED;                                                                            \</span></div>
-<div class="line"><span class="lineno">  630</span><span class="preprocessor"></span> </div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">720</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  720</span><span class="preprocessor">#define __SINGLETON_DESTROY                                                                                                             \</span></div>
+<div class="line"><span class="lineno">  721</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  722</span><span class="preprocessor">        </span><span class="comment">/* destroy super object */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  723</span><span class="preprocessor">        __DESTROY_BASE;                                                                                                                 \</span></div>
+<div class="line"><span class="lineno">  724</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  725</span><span class="preprocessor">        </span><span class="comment">/* allow new constructs */</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><span class="lineno">  726</span><span class="preprocessor">        _singletonConstructed = __SINGLETON_NOT_CONSTRUCTED;                                                                            \</span></div>
+<div class="line"><span class="lineno">  727</span><span class="preprocessor"></span> </div>
 </div>
 </div>
 </div>
@@ -1606,56 +1795,61 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 <p>Defines a dynamically allocated singleton class' fundamental methods. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
-    <tr><td class="paramname">ClassName</td><td>Singleton class' name to define </td></tr>
+    <tr><td class="paramname">ClassName</td><td><a class="el" href="/documentation/api/class-singleton/">Singleton</a> class' name to define </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Implementation of a singleton class' fundamental methods </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">634</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  634</span><span class="preprocessor">#define __SINGLETON_DYNAMIC(ClassName)                                                                                                  \</span></div>
-<div class="line"><span class="lineno">  635</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  636</span><span class="preprocessor">        </span><span class="comment">/* declare the static pointer to instance */</span><span class="preprocessor">                                                                                    \</span></div>
-<div class="line"><span class="lineno">  637</span><span class="preprocessor">        static ClassName _instance ## ClassName __NON_INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE;                                        \</span></div>
-<div class="line"><span class="lineno">  638</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  639</span><span class="preprocessor">        </span><span class="comment">/* define allocator */</span><span class="preprocessor">                                                                                                          \</span></div>
-<div class="line"><span class="lineno">  640</span><span class="preprocessor">        __CLASS_NEW_DEFINITION(ClassName, void)                                                                                         \</span></div>
-<div class="line"><span class="lineno">  641</span><span class="preprocessor">        __CLASS_NEW_END(ClassName, this);                                                                                               \</span></div>
-<div class="line"><span class="lineno">  642</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  643</span><span class="preprocessor">        </span><span class="comment">/* a flag to know when to allow construction */</span><span class="preprocessor">                                                                                 \</span></div>
-<div class="line"><span class="lineno">  644</span><span class="preprocessor">        static int8 _singletonConstructed __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE                                                   \</span></div>
-<div class="line"><span class="lineno">  645</span><span class="preprocessor">                                        = __SINGLETON_NOT_CONSTRUCTED;                                                                  \</span></div>
-<div class="line"><span class="lineno">  646</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  647</span><span class="preprocessor">        </span><span class="comment">/* define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
-<div class="line"><span class="lineno">  648</span><span class="preprocessor">        static void __attribute__ ((noinline)) ClassName ## _instantiate()                                                              \</span></div>
-<div class="line"><span class="lineno">  649</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  650</span><span class="preprocessor">            NM_ASSERT(__SINGLETON_BEING_CONSTRUCTED != _singletonConstructed,                                                           \</span></div>
-<div class="line"><span class="lineno">  651</span><span class="preprocessor">                ClassName get instance during construction);                                                                            \</span></div>
-<div class="line"><span class="lineno">  652</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  653</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_BEING_CONSTRUCTED;                                                                      \</span></div>
-<div class="line"><span class="lineno">  654</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  655</span><span class="preprocessor">            </span><span class="comment">/* allocate */</span><span class="preprocessor">                                                                                                              \</span></div>
-<div class="line"><span class="lineno">  656</span><span class="preprocessor">            _instance ## ClassName = ClassName ## _new();                                                                               \</span></div>
-<div class="line"><span class="lineno">  657</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  658</span><span class="preprocessor">            </span><span class="comment">/* don&#39;t allow more constructs */</span><span class="preprocessor">                                                                                           \</span></div>
-<div class="line"><span class="lineno">  659</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_CONSTRUCTED;                                                                            \</span></div>
-<div class="line"><span class="lineno">  660</span><span class="preprocessor">        }                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  661</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  662</span><span class="preprocessor">        </span><span class="comment">/* define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
-<div class="line"><span class="lineno">  663</span><span class="preprocessor">        ClassName ClassName ## _getInstance()                                                                                           \</span></div>
-<div class="line"><span class="lineno">  664</span><span class="preprocessor">        {                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  665</span><span class="preprocessor">            </span><span class="comment">/* first check if not constructed yet */</span><span class="preprocessor">                                                                                    \</span></div>
-<div class="line"><span class="lineno">  666</span><span class="preprocessor">            if(__SINGLETON_NOT_CONSTRUCTED == _singletonConstructed)                                                                    \</span></div>
-<div class="line"><span class="lineno">  667</span><span class="preprocessor">            {                                                                                                                           \</span></div>
-<div class="line"><span class="lineno">  668</span><span class="preprocessor">                ClassName ## _instantiate();                                                                                            \</span></div>
-<div class="line"><span class="lineno">  669</span><span class="preprocessor">            }                                                                                                                           \</span></div>
-<div class="line"><span class="lineno">  670</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  671</span><span class="preprocessor">            </span><span class="comment">/* return the created singleton */</span><span class="preprocessor">                                                                                          \</span></div>
-<div class="line"><span class="lineno">  672</span><span class="preprocessor">            return _instance ## ClassName;                                                                                              \</span></div>
-<div class="line"><span class="lineno">  673</span><span class="preprocessor">        }                                                                                                                               \</span></div>
-<div class="line"><span class="lineno">  674</span><span class="preprocessor">                                                                                                                                        \</span></div>
-<div class="line"><span class="lineno">  675</span><span class="preprocessor">        </span><span class="comment">/* dummy redeclaration to avoid warning when compiling with -pedantic */</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><span class="lineno">  676</span><span class="preprocessor">        void ClassName ## dummyMethodSingletonNew()</span></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">731</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  731</span><span class="preprocessor">#define __SINGLETON_DYNAMIC(ClassName)                                                                                                  \</span></div>
+<div class="line"><span class="lineno">  732</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  733</span><span class="preprocessor">        </span><span class="comment">/* declare the static pointer to instance */</span><span class="preprocessor">                                                                                    \</span></div>
+<div class="line"><span class="lineno">  734</span><span class="preprocessor">        static ClassName _instance ## ClassName __NON_INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE;                                        \</span></div>
+<div class="line"><span class="lineno">  735</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  736</span><span class="preprocessor">        </span><span class="comment">/* Define allocator */</span><span class="preprocessor">                                                                                                          \</span></div>
+<div class="line"><span class="lineno">  737</span><span class="preprocessor">        __CLASS_NEW_DEFINITION(ClassName, void)                                                                                         \</span></div>
+<div class="line"><span class="lineno">  738</span><span class="preprocessor">        __CLASS_NEW_END(ClassName, this);                                                                                               \</span></div>
+<div class="line"><span class="lineno">  739</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  740</span><span class="preprocessor">        </span><span class="comment">/* a flag to know when to allow construction */</span><span class="preprocessor">                                                                                 \</span></div>
+<div class="line"><span class="lineno">  741</span><span class="preprocessor">        static int8 _singletonConstructed __INITIALIZED_GLOBAL_DATA_SECTION_ATTRIBUTE                                                   \</span></div>
+<div class="line"><span class="lineno">  742</span><span class="preprocessor">                                        = __SINGLETON_NOT_CONSTRUCTED;                                                                  \</span></div>
+<div class="line"><span class="lineno">  743</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  744</span><span class="preprocessor">        </span><span class="comment">/* Define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  745</span><span class="preprocessor">        static void __attribute__ ((noinline)) ClassName ## _instantiate()                                                              \</span></div>
+<div class="line"><span class="lineno">  746</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  747</span><span class="preprocessor">            NM_ASSERT(__SINGLETON_BEING_CONSTRUCTED != _singletonConstructed,                                                           \</span></div>
+<div class="line"><span class="lineno">  748</span><span class="preprocessor">                ClassName get instance during construction);                                                                            \</span></div>
+<div class="line"><span class="lineno">  749</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  750</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_BEING_CONSTRUCTED;                                                                      \</span></div>
+<div class="line"><span class="lineno">  751</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  752</span><span class="preprocessor">            </span><span class="comment">/* allocate */</span><span class="preprocessor">                                                                                                              \</span></div>
+<div class="line"><span class="lineno">  753</span><span class="preprocessor">            _instance ## ClassName = ClassName ## _new();                                                                               \</span></div>
+<div class="line"><span class="lineno">  754</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  755</span><span class="preprocessor">            </span><span class="comment">/* don&#39;t allow more constructs */</span><span class="preprocessor">                                                                                           \</span></div>
+<div class="line"><span class="lineno">  756</span><span class="preprocessor">            _singletonConstructed = __SINGLETON_CONSTRUCTED;                                                                            \</span></div>
+<div class="line"><span class="lineno">  757</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  758</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  759</span><span class="preprocessor">        __SINGLETON_ACCESS(ClassName)                                                                                                   \</span></div>
+<div class="line"><span class="lineno">  760</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  761</span><span class="preprocessor">        </span><span class="comment">/* Define get instance method */</span><span class="preprocessor">                                                                                                \</span></div>
+<div class="line"><span class="lineno">  762</span><span class="preprocessor">        __attribute__((unused)) ClassName ClassName ## _getInstance (ClassPointer requesterClass __attribute__((unused)))               \</span></div>
+<div class="line"><span class="lineno">  763</span><span class="preprocessor">        {                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  764</span><span class="preprocessor">            </span><span class="comment">/* Check if the call has higher privileges */</span><span class="preprocessor">                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  765</span><span class="preprocessor">            __SINGLETON_AUTHORIZATION_CHECK(ClassName)                                                                                  \</span></div>
+<div class="line"><span class="lineno">  766</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  767</span><span class="preprocessor">            </span><span class="comment">/* first check if not constructed yet */</span><span class="preprocessor">                                                                                    \</span></div>
+<div class="line"><span class="lineno">  768</span><span class="preprocessor">            if(__SINGLETON_NOT_CONSTRUCTED == _singletonConstructed)                                                                    \</span></div>
+<div class="line"><span class="lineno">  769</span><span class="preprocessor">            {                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  770</span><span class="preprocessor">                ClassName ## _instantiate();                                                                                            \</span></div>
+<div class="line"><span class="lineno">  771</span><span class="preprocessor">            }                                                                                                                           \</span></div>
+<div class="line"><span class="lineno">  772</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  773</span><span class="preprocessor">            </span><span class="comment">/* return the created singleton */</span><span class="preprocessor">                                                                                          \</span></div>
+<div class="line"><span class="lineno">  774</span><span class="preprocessor">            return _instance ## ClassName;                                                                                              \</span></div>
+<div class="line"><span class="lineno">  775</span><span class="preprocessor">        }                                                                                                                               \</span></div>
+<div class="line"><span class="lineno">  776</span><span class="preprocessor">                                                                                                                                        \</span></div>
+<div class="line"><span class="lineno">  777</span><span class="preprocessor">        </span><span class="comment">/* dummy redeclaration to avoid warning when compiling with -pedantic */</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><span class="lineno">  778</span><span class="preprocessor">        void ClassName ## dummyMethodSingletonNew()</span></div>
 </div>
 </div>
 </div>
@@ -1673,7 +1867,33 @@ Typedefs</h2></td></tr>
 
 <p>Singletons' construction state flags. </p>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">550</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">568</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+
+</div>
+</div>
+<a id="acef707112cf6da4b7757706b730a13db" name="acef707112cf6da4b7757706b730a13db"></a>
+<h2 class="memtitle">__SINGLETON_SECURITY_CHECKER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">#define __SINGLETON_SECURITY_CHECKER</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ClassName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks that the provided authorization array lives in non volatile memory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">ClassName</td><td>Class to verity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Implementation of a check for the validity of the authorization array </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">590</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 
 </div>
 </div>
@@ -1700,7 +1920,7 @@ Typedefs</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Address of the class' allocator </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">542</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-oop-8h-source/">560</a> of file <a class="el" href="/documentation/api/-oop-8h-source/">Oop.h</a>.</p>
 
 </div>
 </div>

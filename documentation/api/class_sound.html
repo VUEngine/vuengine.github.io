@@ -78,10 +78,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af95ffcbe66dd8173d6caa635a6c42892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release this sound.  <br /></td></tr>
 
 <tr class="memitem:a05c0966776b58b800f6e38a621bfffdc" id="r_a05c0966776b58b800f6e38a621bfffdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05c0966776b58b800f6e38a621bfffdc">lock</a> ()</td></tr>
-<tr class="memdesc:a05c0966776b58b800f6e38a621bfffdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent other requests to get a sound to steal this sound's channels.  <br /></td></tr>
+<tr class="memdesc:a05c0966776b58b800f6e38a621bfffdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent other requests to get a sound to steal this sound's sources.  <br /></td></tr>
 
 <tr class="memitem:af076f7115b325a0e21193693cf59f5e7" id="r_af076f7115b325a0e21193693cf59f5e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af076f7115b325a0e21193693cf59f5e7">unlock</a> ()</td></tr>
-<tr class="memdesc:af076f7115b325a0e21193693cf59f5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow other requests to get a sound to steal this sound's channels.  <br /></td></tr>
+<tr class="memdesc:af076f7115b325a0e21193693cf59f5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow other requests to get a sound to steal this sound's sources.  <br /></td></tr>
 
 <tr class="memitem:a7848623f523aef9e2270f2473414e5ce" id="r_a7848623f523aef9e2270f2473414e5ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7848623f523aef9e2270f2473414e5ce">autoReleaseOnFinish</a> (<a class="el" href="/documentation/api/-types-8h/">bool</a> autoReleaseOnFinish)</td></tr>
 
@@ -104,7 +104,10 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:a42cc291647019057615f02ec4546eef9" id="r_a42cc291647019057615f02ec4546eef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42cc291647019057615f02ec4546eef9">isFadingOut</a> ()</td></tr>
 
-<tr class="memitem:a5a1cc078e3bc11493f84f9f8f258f624" id="r_a5a1cc078e3bc11493f84f9f8f258f624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a1cc078e3bc11493f84f9f8f258f624">update</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a>, <a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>)</td></tr>
+<tr class="memitem:a19b6e64c9ef3f9284ecdf9835c955fb6" id="r_a19b6e64c9ef3f9284ecdf9835c955fb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19b6e64c9ef3f9284ecdf9835c955fb6">finishPlayback</a> ()</td></tr>
+<tr class="memdesc:a19b6e64c9ef3f9284ecdf9835c955fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish the sound playback.  <br /></td></tr>
+
+<tr class="memitem:a5a1cc078e3bc11493f84f9f8f258f624" id="r_a5a1cc078e3bc11493f84f9f8f258f624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a1cc078e3bc11493f84f9f8f258f624">update</a> (<a class="el" href="/documentation/api/-types-8h/">uint32</a> elapsedMicroseconds, <a class="el" href="/documentation/api/-types-8h/">uint32</a> <a class="el" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>)</td></tr>
 
 <tr class="memitem:a5de93dbabc5ba67dee701cd34515f843" id="r_a5de93dbabc5ba67dee701cd34515f843"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5de93dbabc5ba67dee701cd34515f843">print</a> (<a class="el" href="/documentation/api/-types-8h/">int32</a> x, <a class="el" href="/documentation/api/-types-8h/">int32</a> y)</td></tr>
 
@@ -359,44 +362,44 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">70</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
-<div class="line"><span class="lineno">   73</span>    Base::constructor();</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>    this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundOff</a>;</div>
-<div class="line"><span class="lineno">   76</span>    this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a> = <a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>;</div>
-<div class="line"><span class="lineno">   77</span>    this-&gt;<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a>(1);</div>
-<div class="line"><span class="lineno">   78</span>    this-&gt;<a class="code hl_variable" href="#a2f9a579d5ac37b330ed1226aa7b8e304">previouslyElapsedTicks</a> = 0;</div>
-<div class="line"><span class="lineno">   79</span>    this-&gt;<a class="code hl_variable" href="#ac0524133b24dac1ce4cf556d3fd2fc83">totalPlaybackMilliseconds</a> = 0;</div>
-<div class="line"><span class="lineno">   80</span>    this-&gt;<a class="code hl_variable" href="#a44a0e325cea53d90a156bd6b60672a80">autoReleaseOnFinish</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   81</span>    this-&gt;<a class="code hl_variable" href="#a8ef8b013b3713738e8af0d643a960804">playbackType</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaybackNone</a>;</div>
-<div class="line"><span class="lineno">   82</span>    this-&gt;<a class="code hl_variable" href="#a141f56472639684cb1f39906de2aaaef">locked</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>    this-&gt;<a class="code hl_variable" href="#a66e3b8bb2ad96946d27e7324371aac92">targetTimerResolutionFactor</a> = Sound::computeTimerResolutionFactor(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   85</span>    this-&gt;<a class="code hl_variable" href="#a2f0d0295a6b14465e359c32c8bbceadd">tickStep</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(this-&gt;<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a>, this-&gt;<a class="code hl_variable" href="#a66e3b8bb2ad96946d27e7324371aac92">targetTimerResolutionFactor</a>);</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span><span class="preprocessor">#ifdef __MUTE_ALL_SOUND</span></div>
-<div class="line"><span class="lineno">   88</span>    this-&gt;<a class="code hl_variable" href="#a2041e917a1235a715644e430d01d43a7">unmute</a> = 0x00;</div>
-<div class="line"><span class="lineno">   89</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">   90</span>    this-&gt;<a class="code hl_variable" href="#a2041e917a1235a715644e430d01d43a7">unmute</a> = 0xFF;</div>
-<div class="line"><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>    this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">   94</span>    this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">   95</span>    this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
-<div class="line"><span class="lineno">   96</span>    this-&gt;<a class="code hl_variable" href="#a487060482ca4a3a3b81b4d73c260d219">volumeReduction</a> = 0;</div>
-<div class="line"><span class="lineno">   97</span>    this-&gt;<a class="code hl_variable" href="#a180b81fbcf655e613e307e56abec4c5c">volumeReductionMultiplier</a> = 1;</div>
-<div class="line"><span class="lineno">   98</span>    this-&gt;<a class="code hl_variable" href="#a2f2deffa9f233ed61dfb63ec0c1c72f2">volumenScalePower</a> = 0;</div>
-<div class="line"><span class="lineno">   99</span>    this-&gt;<a class="code hl_variable" href="#ae8212aaf1135ea316a5b03cd100ccc7a">frequencyDelta</a> = 0;</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>    Sound::configureTracks(<span class="keyword">this</span>);</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">72</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
+<div class="line"><span class="lineno">   74</span>    <span class="comment">// Always explicitly call the base&#39;s constructor </span></div>
+<div class="line"><span class="lineno">   75</span>    Base::constructor();</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundOff</a>;</div>
+<div class="line"><span class="lineno">   78</span>    this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a> = <a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>;</div>
+<div class="line"><span class="lineno">   79</span>    this-&gt;<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a>(1);</div>
+<div class="line"><span class="lineno">   80</span>    this-&gt;<a class="code hl_variable" href="#a2f9a579d5ac37b330ed1226aa7b8e304">previouslyElapsedTicks</a> = 0;</div>
+<div class="line"><span class="lineno">   81</span>    this-&gt;<a class="code hl_variable" href="#ac0524133b24dac1ce4cf556d3fd2fc83">totalPlaybackMilliseconds</a> = 0;</div>
+<div class="line"><span class="lineno">   82</span>    this-&gt;<a class="code hl_variable" href="#a44a0e325cea53d90a156bd6b60672a80">autoReleaseOnFinish</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   83</span>    this-&gt;<a class="code hl_variable" href="#a8ef8b013b3713738e8af0d643a960804">playbackType</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaybackNone</a>;</div>
+<div class="line"><span class="lineno">   84</span>    this-&gt;<a class="code hl_variable" href="#a141f56472639684cb1f39906de2aaaef">locked</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    this-&gt;<a class="code hl_variable" href="#a66e3b8bb2ad96946d27e7324371aac92">targetTimerResolutionFactor</a> = Sound::computeTimerResolutionFactor(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   87</span>    this-&gt;<a class="code hl_variable" href="#a2f0d0295a6b14465e359c32c8bbceadd">tickStep</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(this-&gt;<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a>, this-&gt;<a class="code hl_variable" href="#a66e3b8bb2ad96946d27e7324371aac92">targetTimerResolutionFactor</a>);</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span><span class="preprocessor">#ifdef __MUTE_ALL_SOUND</span></div>
+<div class="line"><span class="lineno">   90</span>    this-&gt;<a class="code hl_variable" href="#a2041e917a1235a715644e430d01d43a7">unmute</a> = 0x00;</div>
+<div class="line"><span class="lineno">   91</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   92</span>    this-&gt;<a class="code hl_variable" href="#a2041e917a1235a715644e430d01d43a7">unmute</a> = 0xFF;</div>
+<div class="line"><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   96</span>    this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   97</span>    this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a> = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>;</div>
+<div class="line"><span class="lineno">   98</span>    this-&gt;<a class="code hl_variable" href="#a487060482ca4a3a3b81b4d73c260d219">volumeReduction</a> = 0;</div>
+<div class="line"><span class="lineno">   99</span>    this-&gt;<a class="code hl_variable" href="#a180b81fbcf655e613e307e56abec4c5c">volumeReductionMultiplier</a> = 1;</div>
+<div class="line"><span class="lineno">  100</span>    this-&gt;<a class="code hl_variable" href="#a2f2deffa9f233ed61dfb63ec0c1c72f2">volumenScalePower</a> = 0;</div>
+<div class="line"><span class="lineno">  101</span>    this-&gt;<a class="code hl_variable" href="#ae8212aaf1135ea316a5b03cd100ccc7a">frequencyDelta</a> = 0;</div>
 <div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != soundReleaseListener &amp;&amp; !<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(scope))</div>
-<div class="line"><span class="lineno">  104</span>    {</div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">Sound::addEventListener</a>(<span class="keyword">this</span>, scope, soundReleaseListener, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventSoundReleased</a>);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="line"><span class="lineno">  107</span>}</div>
+<div class="line"><span class="lineno">  103</span>    Sound::configureTracks(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != soundReleaseListener &amp;&amp; !<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(scope))</div>
+<div class="line"><span class="lineno">  106</span>    {</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">Sound::addEventListener</a>(<span class="keyword">this</span>, scope, soundReleaseListener, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventSoundReleased</a>);</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
 <div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a3492a5b44d5483b2fa83e7011b6abb9d"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventSoundReleased</a></div><div class="ttdeci">@ kEventSoundReleased</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:62</a></div></div>
 <div class="ttc" id="a_math_8h_html_a4d370dfe9c18ffb7218b635540fe775c"><div class="ttname"><a href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a></div><div class="ttdeci">#define __I_TO_FIX7_9_EXT(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:88</a></div></div>
@@ -421,6 +424,57 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclass_sound_html_ae38feb61079d4dba99cf5b38595b42e1"><div class="ttname"><a href="#ae38feb61079d4dba99cf5b38595b42e1">Sound::soundSpec</a></div><div class="ttdeci">const SoundSpec * soundSpec</div><div class="ttdoc">Pointer to the spec that defines how to initialize the sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:86</a></div></div>
 <div class="ttc" id="aclass_sound_html_ae8212aaf1135ea316a5b03cd100ccc7a"><div class="ttname"><a href="#ae8212aaf1135ea316a5b03cd100ccc7a">Sound::frequencyDelta</a></div><div class="ttdeci">uint16 frequencyDelta</div><div class="ttdoc">Delta added to the frequency registers.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:119</a></div></div>
 <div class="ttc" id="aclass_sound_html_ae9c8cd136e470e2e64a00f34066616fb"><div class="ttname"><a href="#ae9c8cd136e470e2e64a00f34066616fb">Sound::speed</a></div><div class="ttdeci">fix7_9_ext speed</div><div class="ttdoc">Playback speed.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8h-source/">Sound.h:98</a></div></div>
+</div>
+</div>
+</div>
+<a id="a19b6e64c9ef3f9284ecdf9835c955fb6" name="a19b6e64c9ef3f9284ecdf9835c955fb6"></a>
+<h2 class="memtitle">finishPlayback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Sound::finishPlayback </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finish the sound playback. </p>
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">489</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>{</div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">if</span>(!this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>-&gt;loop)</div>
+<div class="line"><span class="lineno">  492</span>    {</div>
+<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">if</span>(this-&gt;<a class="code hl_variable" href="#a44a0e325cea53d90a156bd6b60672a80">autoReleaseOnFinish</a>)</div>
+<div class="line"><span class="lineno">  494</span>        {</div>
+<div class="line"><span class="lineno">  495</span>            <a class="code hl_function" href="#af95ffcbe66dd8173d6caa635a6c42892">Sound::release</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  496</span>        }</div>
+<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  498</span>        {</div>
+<div class="line"><span class="lineno">  499</span>            <a class="code hl_function" href="#a07c551ab56d2f83a861a2f7fd81b480a">Sound::stop</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  500</span>        }</div>
+<div class="line"><span class="lineno">  501</span>    }</div>
+<div class="line"><span class="lineno">  502</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  503</span>    {</div>
+<div class="line"><span class="lineno">  504</span>        <a class="code hl_function" href="#aed907ddbeb22738e517b36c19cabd7ee">Sound::rewind</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  505</span>    }</div>
+<div class="line"><span class="lineno">  506</span> </div>
+<div class="line"><span class="lineno">  507</span>    <span class="keywordflow">if</span>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(this-&gt;<a class="code hl_variable" href="/documentation/api/class-listener-object/">events</a>))</div>
+<div class="line"><span class="lineno">  508</span>    {</div>
+<div class="line"><span class="lineno">  509</span>        <a class="code hl_function" href="/documentation/api/class-listener-object/">Sound::fireEvent</a>(<span class="keyword">this</span>, <a class="code hl_enumvalue" href="/documentation/api/-events-8h/">kEventSoundFinished</a>);</div>
+<div class="line"><span class="lineno">  510</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(<span class="keyword">this</span>), <span class="stringliteral">&quot;Sound::finishPlayback: deleted this during kEventSoundFinished&quot;</span>);</div>
+<div class="line"><span class="lineno">  511</span>    }</div>
+<div class="line"><span class="lineno">  512</span>}</div>
+<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
+<div class="ttc" id="a_events_8h_html_af60e00b78607064c5be6aa9397ea49c1a4ed989d7aaac01d23b6aab44264852ae"><div class="ttname"><a href="/documentation/api/-events-8h/">kEventSoundFinished</a></div><div class="ttdeci">@ kEventSoundFinished</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-events-8h-source/">Events.h:61</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_a9867d0b4fc72feb68eadd9cf6d88cca0"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::events</a></div><div class="ttdeci">VirtualList events</div><div class="ttdoc">List of registered events.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:66</a></div></div>
+<div class="ttc" id="aclass_listener_object_html_aa7bddc5d7ebb22d3d3cd7537786c4b27"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::fireEvent</a></div><div class="ttdeci">void fireEvent(uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:286</a></div></div>
+<div class="ttc" id="aclass_sound_html_a07c551ab56d2f83a861a2f7fd81b480a"><div class="ttname"><a href="#a07c551ab56d2f83a861a2f7fd81b480a">Sound::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:196</a></div></div>
+<div class="ttc" id="aclass_sound_html_aed907ddbeb22738e517b36c19cabd7ee"><div class="ttname"><a href="#aed907ddbeb22738e517b36c19cabd7ee">Sound::rewind</a></div><div class="ttdeci">void rewind()</div><div class="ttdoc">Rewind the playack.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:342</a></div></div>
+<div class="ttc" id="aclass_sound_html_af95ffcbe66dd8173d6caa635a6c42892"><div class="ttname"><a href="#af95ffcbe66dd8173d6caa635a6c42892">Sound::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">Release this sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:369</a></div></div>
 </div>
 </div>
 </div>
@@ -578,7 +632,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prevent other requests to get a sound to steal this sound's channels. </p>
+<p>Prevent other requests to get a sound to steal this sound's sources. </p>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">396</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  397</span>{</div>
@@ -644,7 +698,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  233</span>    {</div>
 <div class="line"><span class="lineno">  234</span>        this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPaused</a>;</div>
 <div class="line"><span class="lineno">  235</span> </div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  237</span>        {</div>
 <div class="line"><span class="lineno">  238</span>            <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  239</span>            </div>
@@ -652,9 +706,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  241</span>        }</div>
 <div class="line"><span class="lineno">  242</span>    }</div>
 <div class="line"><span class="lineno">  243</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
-<div class="ttc" id="a_sound_8c_html_a70f124f4f2b680afb0d971492bfc62b3"><div class="ttname"><a href="/documentation/api/-sound-8c/">SoundTrack</a></div><div class="ttdeci">friend class SoundTrack</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:28</a></div></div>
-<div class="ttc" id="aclass_sound_track_html_a5da1ecfd757675358d02236446a1bc81"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">Pause the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:76</a></div></div>
+<div class="ttc" id="a_sound_8c_html_a70f124f4f2b680afb0d971492bfc62b3"><div class="ttname"><a href="/documentation/api/-sound-8c/">SoundTrack</a></div><div class="ttdeci">friend class SoundTrack</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:30</a></div></div>
+<div class="ttc" id="a_virtual_circular_list_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:29</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_a5da1ecfd757675358d02236446a1bc81"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">Pause the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:72</a></div></div>
 </div>
 </div>
 </div>
@@ -702,7 +756,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  145</span> </div>
 <div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaying</a> != this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a>)</div>
 <div class="line"><span class="lineno">  147</span>            {</div>
-<div class="line"><span class="lineno">  148</span>                Sound::setVolumeReduction(<span class="keyword">this</span>, <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a> * this-&gt;<a class="code hl_variable" href="#a180b81fbcf655e613e307e56abec4c5c">volumeReductionMultiplier</a>);</div>
+<div class="line"><span class="lineno">  148</span>                Sound::setVolumeReduction(<span class="keyword">this</span>, <a class="code hl_define" href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a> * this-&gt;<a class="code hl_variable" href="#a180b81fbcf655e613e307e56abec4c5c">volumeReductionMultiplier</a>);</div>
 <div class="line"><span class="lineno">  149</span>            }</div>
 <div class="line"><span class="lineno">  150</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  151</span>            {</div>
@@ -731,7 +785,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  174</span> </div>
 <div class="line"><span class="lineno">  175</span>                this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a> = <a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>;</div>
 <div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  178</span>                {</div>
 <div class="line"><span class="lineno">  179</span>                    <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  180</span> </div>
@@ -747,8 +801,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  190</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  191</span>    }</div>
 <div class="line"><span class="lineno">  192</span>}</div>
-<div class="ttc" id="a_v_s_u_manager_8c_html_a4c163708785e8d1307953505e1f9b21d"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8c/">__MAXIMUM_VOLUME</a></div><div class="ttdeci">#define __MAXIMUM_VOLUME</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8c-source/">VSUManager.c:36</a></div></div>
-<div class="ttc" id="aclass_sound_track_html_a08bb19975743ecab4655604bfc2d1c40"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::start</a></div><div class="ttdeci">void start(bool wasPaused)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:51</a></div></div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_a4c163708785e8d1307953505e1f9b21d"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">__MAXIMUM_VOLUME</a></div><div class="ttdeci">#define __MAXIMUM_VOLUME</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:30</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_a08bb19975743ecab4655604bfc2d1c40"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::start</a></div><div class="ttdeci">void start(bool wasPaused)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:47</a></div></div>
 </div>
 </div>
 </div>
@@ -778,44 +832,44 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">593</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  594</span>{</div>
-<div class="line"><span class="lineno">  595</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;                                  &quot;</span>, x, y);</div>
-<div class="line"><span class="lineno">  596</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>-&gt;name, x, y++);</div>
-<div class="line"><span class="lineno">  597</span>    y++;</div>
-<div class="line"><span class="lineno">  598</span> </div>
-<div class="line"><span class="lineno">  599</span>    <a class="code hl_function" href="#abb7e6388a863ffed26b572676fb711f8">Sound::printPlaybackProgress</a>(<span class="keyword">this</span>, x, y++);</div>
-<div class="line"><span class="lineno">  600</span> </div>
-<div class="line"><span class="lineno">  601</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> trackInfoXOffset = x + 22;</div>
-<div class="line"><span class="lineno">  602</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> trackInfoValuesXOffset = 9;</div>
-<div class="line"><span class="lineno">  603</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> <a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_TO_I</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(this-&gt;<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a>(100)));</div>
-<div class="line"><span class="lineno">  604</span> </div>
-<div class="line"><span class="lineno">  605</span>    y++;</div>
-<div class="line"><span class="lineno">  606</span> </div>
-<div class="line"><span class="lineno">  607</span>    Sound::printTiming(<span class="keyword">this</span>, 0, x + 23, y);</div>
-<div class="line"><span class="lineno">  608</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;/&quot;</span>, x + 27, y);</div>
-<div class="line"><span class="lineno">  609</span>    Sound::printTiming(<span class="keyword">this</span>, this-&gt;<a class="code hl_variable" href="#ac0524133b24dac1ce4cf556d3fd2fc83">totalPlaybackMilliseconds</a> / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a>, x + 28, y);</div>
-<div class="line"><span class="lineno">  610</span> </div>
-<div class="line"><span class="lineno">  611</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Speed&quot;</span>, x, y);</div>
-<div class="line"><span class="lineno">  612</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;    &quot;</span>, x + 6, y);</div>
-<div class="line"><span class="lineno">  613</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a>, x + 6, y);</div>
-<div class="line"><span class="lineno">  614</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;%&quot;</span>, x + 6 + ((<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> &lt; 10) ? 1 : (<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> &lt; 100) ? 2 : 3), y);</div>
-<div class="line"><span class="lineno">  615</span> </div>
-<div class="line"><span class="lineno">  616</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaying</a> == this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> ? <span class="stringliteral">&quot;\x07\x07&quot;</span> : <span class="stringliteral">&quot; \x0B &quot;</span>, x + 15, y++);</div>
-<div class="line"><span class="lineno">  617</span> </div>
-<div class="line"><span class="lineno">  618</span>    y+=2;</div>
-<div class="line"><span class="lineno">  619</span> </div>
-<div class="line"><span class="lineno">  620</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;TRACK INFO&quot;</span>, trackInfoXOffset, y++);</div>
-<div class="line"><span class="lineno">  621</span> </div>
-<div class="line"><span class="lineno">  622</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Tracks&quot;</span>, trackInfoXOffset, ++y);</div>
-<div class="line"><span class="lineno">  623</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(<a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::getCount</a>(this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>), trackInfoXOffset + trackInfoValuesXOffset, y);</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">619</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  620</span>{</div>
+<div class="line"><span class="lineno">  621</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;                                  &quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  622</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>-&gt;name, x, y++);</div>
+<div class="line"><span class="lineno">  623</span>    y++;</div>
 <div class="line"><span class="lineno">  624</span> </div>
-<div class="line"><span class="lineno">  625</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Loop&quot;</span>, trackInfoXOffset, ++y);</div>
-<div class="line"><span class="lineno">  626</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a></div>
-<div class="line"><span class="lineno">  627</span>    (</div>
-<div class="line"><span class="lineno">  628</span>        this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>-&gt;loop ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, trackInfoXOffset + trackInfoValuesXOffset, y++</div>
-<div class="line"><span class="lineno">  629</span>    );</div>
-<div class="line"><span class="lineno">  630</span>}</div>
+<div class="line"><span class="lineno">  625</span>    <a class="code hl_function" href="#abb7e6388a863ffed26b572676fb711f8">Sound::printPlaybackProgress</a>(<span class="keyword">this</span>, x, y++);</div>
+<div class="line"><span class="lineno">  626</span> </div>
+<div class="line"><span class="lineno">  627</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> trackInfoXOffset = x + 22;</div>
+<div class="line"><span class="lineno">  628</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a> trackInfoValuesXOffset = 9;</div>
+<div class="line"><span class="lineno">  629</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> <a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> = <a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_TO_I</a>(<a class="code hl_define" href="/documentation/api/-math-8h/">__FIX7_9_EXT_MULT</a>(this-&gt;<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a>, <a class="code hl_define" href="/documentation/api/-math-8h/">__I_TO_FIX7_9_EXT</a>(100)));</div>
+<div class="line"><span class="lineno">  630</span> </div>
+<div class="line"><span class="lineno">  631</span>    y++;</div>
+<div class="line"><span class="lineno">  632</span> </div>
+<div class="line"><span class="lineno">  633</span>    Sound::printTiming(<span class="keyword">this</span>, 0, x + 23, y);</div>
+<div class="line"><span class="lineno">  634</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;/&quot;</span>, x + 27, y);</div>
+<div class="line"><span class="lineno">  635</span>    Sound::printTiming(<span class="keyword">this</span>, this-&gt;<a class="code hl_variable" href="#ac0524133b24dac1ce4cf556d3fd2fc83">totalPlaybackMilliseconds</a> / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a>, x + 28, y);</div>
+<div class="line"><span class="lineno">  636</span> </div>
+<div class="line"><span class="lineno">  637</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Speed&quot;</span>, x, y);</div>
+<div class="line"><span class="lineno">  638</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;    &quot;</span>, x + 6, y);</div>
+<div class="line"><span class="lineno">  639</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a>, x + 6, y);</div>
+<div class="line"><span class="lineno">  640</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;%&quot;</span>, x + 6 + ((<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> &lt; 10) ? 1 : (<a class="code hl_variable" href="#ae9c8cd136e470e2e64a00f34066616fb">speed</a> &lt; 100) ? 2 : 3), y);</div>
+<div class="line"><span class="lineno">  641</span> </div>
+<div class="line"><span class="lineno">  642</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaying</a> == this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> ? <span class="stringliteral">&quot;\x07\x07&quot;</span> : <span class="stringliteral">&quot; \x0B &quot;</span>, x + 15, y++);</div>
+<div class="line"><span class="lineno">  643</span> </div>
+<div class="line"><span class="lineno">  644</span>    y+=2;</div>
+<div class="line"><span class="lineno">  645</span> </div>
+<div class="line"><span class="lineno">  646</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;TRACK INFO&quot;</span>, trackInfoXOffset, y++);</div>
+<div class="line"><span class="lineno">  647</span> </div>
+<div class="line"><span class="lineno">  648</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Tracks&quot;</span>, trackInfoXOffset, ++y);</div>
+<div class="line"><span class="lineno">  649</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_INT</a>(<a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::getCount</a>(this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>), trackInfoXOffset + trackInfoValuesXOffset, y);</div>
+<div class="line"><span class="lineno">  650</span> </div>
+<div class="line"><span class="lineno">  651</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(<span class="stringliteral">&quot;Loop&quot;</span>, trackInfoXOffset, ++y);</div>
+<div class="line"><span class="lineno">  652</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a></div>
+<div class="line"><span class="lineno">  653</span>    (</div>
+<div class="line"><span class="lineno">  654</span>        this-&gt;<a class="code hl_variable" href="#ae38feb61079d4dba99cf5b38595b42e1">soundSpec</a>-&gt;loop ? <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a> : <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a>, trackInfoXOffset + trackInfoValuesXOffset, y++</div>
+<div class="line"><span class="lineno">  655</span>    );</div>
+<div class="line"><span class="lineno">  656</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a3ca36c20605d44a9dbe43d6483128f8b"><div class="ttname"><a href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a></div><div class="ttdeci">#define __MILLISECONDS_PER_SECOND</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:169</a></div></div>
 <div class="ttc" id="a_math_8h_html_a6d76d840a18a405f8ee73c7181135660"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIX7_9_EXT_TO_I</a></div><div class="ttdeci">#define __FIX7_9_EXT_TO_I(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:96</a></div></div>
 <div class="ttc" id="a_printing_8h_html_a76613feefa2570037d36992bfa32006f"><div class="ttname"><a href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_UNCHECKED</a></div><div class="ttdeci">#define __CHAR_CHECKBOX_UNCHECKED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:75</a></div></div>
@@ -824,7 +878,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_printing_8h_html_ac4a66fa42f1ad36c3f627904b9e1f006"><div class="ttname"><a href="/documentation/api/-printing-8h/">__CHAR_CHECKBOX_CHECKED</a></div><div class="ttdeci">#define __CHAR_CHECKBOX_CHECKED</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:76</a></div></div>
 <div class="ttc" id="a_types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:19</a></div></div>
 <div class="ttc" id="a_types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="/documentation/api/-types-8h/">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:18</a></div></div>
-<div class="ttc" id="aclass_sound_html_abb7e6388a863ffed26b572676fb711f8"><div class="ttname"><a href="#abb7e6388a863ffed26b572676fb711f8">Sound::printPlaybackProgress</a></div><div class="ttdeci">void printPlaybackProgress(int32 x, int32 y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:662</a></div></div>
+<div class="ttc" id="aclass_sound_html_abb7e6388a863ffed26b572676fb711f8"><div class="ttname"><a href="#abb7e6388a863ffed26b572676fb711f8">Sound::printPlaybackProgress</a></div><div class="ttdeci">void printPlaybackProgress(int32 x, int32 y)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:688</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_aeff94be006312783be69b6e77a41ae2b"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::getCount</a></div><div class="ttdeci">int32 getCount()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:197</a></div></div>
 </div>
 </div>
@@ -855,45 +909,45 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">662</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  663</span>{</div>
-<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a> || 0 == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>-&gt;ticks)</div>
-<div class="line"><span class="lineno">  665</span>    {</div>
-<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  667</span>    }</div>
-<div class="line"><span class="lineno">  668</span> </div>
-<div class="line"><span class="lineno">  669</span>    <span class="keywordtype">float</span> elapsedTicksPercentaje = <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::getElapsedTicksPercentaje</a>(this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>);</div>
-<div class="line"><span class="lineno">  670</span> </div>
-<div class="line"><span class="lineno">  671</span>    <span class="keywordflow">if</span>(0 &gt; elapsedTicksPercentaje || 1 &lt; elapsedTicksPercentaje)</div>
-<div class="line"><span class="lineno">  672</span>    {</div>
-<div class="line"><span class="lineno">  673</span>        elapsedTicksPercentaje = 1;     </div>
-<div class="line"><span class="lineno">  674</span>    }</div>
-<div class="line"><span class="lineno">  675</span> </div>
-<div class="line"><span class="lineno">  676</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a> = elapsedTicksPercentaje * 32;</div>
-<div class="line"><span class="lineno">  677</span> </div>
-<div class="line"><span class="lineno">  678</span>    <span class="keywordtype">char</span> boxesArray[33] = </div>
-<div class="line"><span class="lineno">  679</span>    {</div>
-<div class="line"><span class="lineno">  680</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
-<div class="line"><span class="lineno">  681</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>,</div>
-<div class="line"><span class="lineno">  682</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
-<div class="line"><span class="lineno">  683</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>,</div>
-<div class="line"><span class="lineno">  684</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
-<div class="line"><span class="lineno">  685</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>,</div>
-<div class="line"><span class="lineno">  686</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
-<div class="line"><span class="lineno">  687</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <span class="charliteral">&#39;\0&#39;</span></div>
-<div class="line"><span class="lineno">  688</span>    };</div>
-<div class="line"><span class="lineno">  689</span> </div>
-<div class="line"><span class="lineno">  690</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> i = 0; i &lt; position &amp;&amp; 32 &gt;= i; i++)</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">688</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  689</span>{</div>
+<div class="line"><span class="lineno">  690</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a> || 0 == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>-&gt;ticks)</div>
 <div class="line"><span class="lineno">  691</span>    {</div>
-<div class="line"><span class="lineno">  692</span>        boxesArray[i] = <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_BRIGHT_RED_BOX</a>;</div>
+<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  693</span>    }</div>
 <div class="line"><span class="lineno">  694</span> </div>
-<div class="line"><span class="lineno">  695</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(boxesArray, x, y);</div>
-<div class="line"><span class="lineno">  696</span>}</div>
+<div class="line"><span class="lineno">  695</span>    <span class="keywordtype">float</span> elapsedTicksPercentaje = <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::getElapsedTicksPercentaje</a>(this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>);</div>
+<div class="line"><span class="lineno">  696</span> </div>
+<div class="line"><span class="lineno">  697</span>    <span class="keywordflow">if</span>(0 &gt; elapsedTicksPercentaje || 1 &lt; elapsedTicksPercentaje)</div>
+<div class="line"><span class="lineno">  698</span>    {</div>
+<div class="line"><span class="lineno">  699</span>        elapsedTicksPercentaje = 1;     </div>
+<div class="line"><span class="lineno">  700</span>    }</div>
+<div class="line"><span class="lineno">  701</span> </div>
+<div class="line"><span class="lineno">  702</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> <a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a> = elapsedTicksPercentaje * 32;</div>
+<div class="line"><span class="lineno">  703</span> </div>
+<div class="line"><span class="lineno">  704</span>    <span class="keywordtype">char</span> boxesArray[33] = </div>
+<div class="line"><span class="lineno">  705</span>    {</div>
+<div class="line"><span class="lineno">  706</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
+<div class="line"><span class="lineno">  707</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>,</div>
+<div class="line"><span class="lineno">  708</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
+<div class="line"><span class="lineno">  709</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>,</div>
+<div class="line"><span class="lineno">  710</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
+<div class="line"><span class="lineno">  711</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>,</div>
+<div class="line"><span class="lineno">  712</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, </div>
+<div class="line"><span class="lineno">  713</span>        <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a>, <span class="charliteral">&#39;\0&#39;</span></div>
+<div class="line"><span class="lineno">  714</span>    };</div>
+<div class="line"><span class="lineno">  715</span> </div>
+<div class="line"><span class="lineno">  716</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> i = 0; i &lt; position &amp;&amp; 32 &gt;= i; i++)</div>
+<div class="line"><span class="lineno">  717</span>    {</div>
+<div class="line"><span class="lineno">  718</span>        boxesArray[i] = <a class="code hl_define" href="/documentation/api/-printing-8h/">__CHAR_BRIGHT_RED_BOX</a>;</div>
+<div class="line"><span class="lineno">  719</span>    }</div>
+<div class="line"><span class="lineno">  720</span> </div>
+<div class="line"><span class="lineno">  721</span>    <a class="code hl_define" href="/documentation/api/-printing-8h/">PRINT_TEXT</a>(boxesArray, x, y);</div>
+<div class="line"><span class="lineno">  722</span>}</div>
 <div class="ttc" id="a_printing_8h_html_a7d311ff09979278789f25ea30bb82594"><div class="ttname"><a href="/documentation/api/-printing-8h/">__CHAR_BRIGHT_RED_BOX</a></div><div class="ttdeci">#define __CHAR_BRIGHT_RED_BOX</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:73</a></div></div>
 <div class="ttc" id="a_printing_8h_html_ae3730af79446b09978d712c7dea166ef"><div class="ttname"><a href="/documentation/api/-printing-8h/">__CHAR_DARK_RED_BOX</a></div><div class="ttdeci">#define __CHAR_DARK_RED_BOX</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8h-source/">Printing.h:71</a></div></div>
 <div class="ttc" id="a_types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="/documentation/api/-types-8h/">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:20</a></div></div>
-<div class="ttc" id="aclass_sound_track_html_a15bf98695b8fd700e81fac2557041097"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::getElapsedTicksPercentaje</a></div><div class="ttdeci">float getElapsedTicksPercentaje()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:157</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_a15bf98695b8fd700e81fac2557041097"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::getElapsedTicksPercentaje</a></div><div class="ttdeci">float getElapsedTicksPercentaje()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:155</a></div></div>
 </div>
 </div>
 </div>
@@ -923,31 +977,31 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">634</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  635</span>{</div>
-<div class="line"><span class="lineno">  636</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> previousSecond = 0;</div>
-<div class="line"><span class="lineno">  637</span> </div>
-<div class="line"><span class="lineno">  638</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a> || 0 == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>-&gt;ticks)</div>
-<div class="line"><span class="lineno">  639</span>    {</div>
-<div class="line"><span class="lineno">  640</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  641</span>    }</div>
-<div class="line"><span class="lineno">  642</span> </div>
-<div class="line"><span class="lineno">  643</span>    <span class="keywordtype">float</span> elapsedTicksPercentaje = <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::getElapsedTicksPercentaje</a>(this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>);</div>
-<div class="line"><span class="lineno">  644</span>    </div>
-<div class="line"><span class="lineno">  645</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> currentSecond = elapsedTicksPercentaje * this-&gt;<a class="code hl_variable" href="#ac0524133b24dac1ce4cf556d3fd2fc83">totalPlaybackMilliseconds</a> / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a>;</div>
-<div class="line"><span class="lineno">  646</span> </div>
-<div class="line"><span class="lineno">  647</span>    <span class="keywordflow">if</span>(previousSecond &gt; currentSecond)</div>
-<div class="line"><span class="lineno">  648</span>    {</div>
-<div class="line"><span class="lineno">  649</span>        previousSecond = currentSecond;</div>
-<div class="line"><span class="lineno">  650</span>    }</div>
-<div class="line"><span class="lineno">  651</span> </div>
-<div class="line"><span class="lineno">  652</span>    <span class="keywordflow">if</span>(currentSecond &gt; previousSecond)</div>
-<div class="line"><span class="lineno">  653</span>    {</div>
-<div class="line"><span class="lineno">  654</span>        previousSecond = currentSecond;</div>
-<div class="line"><span class="lineno">  655</span> </div>
-<div class="line"><span class="lineno">  656</span>        Sound::printTiming(<span class="keyword">this</span>, currentSecond, x, y);</div>
-<div class="line"><span class="lineno">  657</span>    }</div>
-<div class="line"><span class="lineno">  658</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">660</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  661</span>{</div>
+<div class="line"><span class="lineno">  662</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> previousSecond = 0;</div>
+<div class="line"><span class="lineno">  663</span> </div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a> || 0 == this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>-&gt;ticks)</div>
+<div class="line"><span class="lineno">  665</span>    {</div>
+<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  667</span>    }</div>
+<div class="line"><span class="lineno">  668</span> </div>
+<div class="line"><span class="lineno">  669</span>    <span class="keywordtype">float</span> elapsedTicksPercentaje = <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::getElapsedTicksPercentaje</a>(this-&gt;<a class="code hl_variable" href="#a0f5a0139713d87b151456dd68cd5bad4">mainSoundTrack</a>);</div>
+<div class="line"><span class="lineno">  670</span>    </div>
+<div class="line"><span class="lineno">  671</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint32</a> currentSecond = elapsedTicksPercentaje * this-&gt;<a class="code hl_variable" href="#ac0524133b24dac1ce4cf556d3fd2fc83">totalPlaybackMilliseconds</a> / <a class="code hl_define" href="/documentation/api/-constants-8h/">__MILLISECONDS_PER_SECOND</a>;</div>
+<div class="line"><span class="lineno">  672</span> </div>
+<div class="line"><span class="lineno">  673</span>    <span class="keywordflow">if</span>(previousSecond &gt; currentSecond)</div>
+<div class="line"><span class="lineno">  674</span>    {</div>
+<div class="line"><span class="lineno">  675</span>        previousSecond = currentSecond;</div>
+<div class="line"><span class="lineno">  676</span>    }</div>
+<div class="line"><span class="lineno">  677</span> </div>
+<div class="line"><span class="lineno">  678</span>    <span class="keywordflow">if</span>(currentSecond &gt; previousSecond)</div>
+<div class="line"><span class="lineno">  679</span>    {</div>
+<div class="line"><span class="lineno">  680</span>        previousSecond = currentSecond;</div>
+<div class="line"><span class="lineno">  681</span> </div>
+<div class="line"><span class="lineno">  682</span>        Sound::printTiming(<span class="keyword">this</span>, currentSecond, x, y);</div>
+<div class="line"><span class="lineno">  683</span>    }</div>
+<div class="line"><span class="lineno">  684</span>}</div>
 </div>
 </div>
 </div>
@@ -992,10 +1046,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  390</span>        <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(<span class="keyword">this</span>), <span class="stringliteral">&quot;Sound::release: deleted this during kEventSoundReleased&quot;</span>);</div>
 <div class="line"><span class="lineno">  391</span>    }</div>
 <div class="line"><span class="lineno">  392</span>}</div>
-<div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
-<div class="ttc" id="aclass_listener_object_html_a9867d0b4fc72feb68eadd9cf6d88cca0"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::events</a></div><div class="ttdeci">VirtualList events</div><div class="ttdoc">List of registered events.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:66</a></div></div>
-<div class="ttc" id="aclass_listener_object_html_aa7bddc5d7ebb22d3d3cd7537786c4b27"><div class="ttname"><a href="/documentation/api/class-listener-object/">ListenerObject::fireEvent</a></div><div class="ttdeci">void fireEvent(uint16 eventCode)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:286</a></div></div>
-<div class="ttc" id="aclass_sound_html_a07c551ab56d2f83a861a2f7fd81b480a"><div class="ttname"><a href="#a07c551ab56d2f83a861a2f7fd81b480a">Sound::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:196</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_aea135a8481da683f8376b1ddeb2184ca"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::deleteData</a></div><div class="ttdeci">void deleteData()</div><div class="ttdoc">Delete all the data and nodes from the list.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:558</a></div></div>
 </div>
 </div>
@@ -1034,14 +1084,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  316</span>    }</div>
 <div class="line"><span class="lineno">  317</span> </div>
-<div class="line"><span class="lineno">  318</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  318</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  319</span>    {</div>
 <div class="line"><span class="lineno">  320</span>        <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  321</span>        </div>
 <div class="line"><span class="lineno">  322</span>        <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::resume</a>(soundTrack);</div>
 <div class="line"><span class="lineno">  323</span>    }</div>
 <div class="line"><span class="lineno">  324</span>}</div>
-<div class="ttc" id="aclass_sound_track_html_ae034b454f0ccbaf577a064f04db82a8f"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::resume</a></div><div class="ttdeci">void resume()</div><div class="ttdoc">Resume the output of sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:91</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_ae034b454f0ccbaf577a064f04db82a8f"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::resume</a></div><div class="ttdeci">void resume()</div><div class="ttdoc">Resume the output of sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:89</a></div></div>
 </div>
 </div>
 </div>
@@ -1079,14 +1129,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  356</span> </div>
 <div class="line"><span class="lineno">  357</span>    this-&gt;<a class="code hl_variable" href="#a2f9a579d5ac37b330ed1226aa7b8e304">previouslyElapsedTicks</a> = 0;</div>
 <div class="line"><span class="lineno">  358</span> </div>
-<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  360</span>    {</div>
 <div class="line"><span class="lineno">  361</span>        <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  362</span> </div>
 <div class="line"><span class="lineno">  363</span>        <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::rewind</a>(soundTrack);</div>
 <div class="line"><span class="lineno">  364</span>    }</div>
 <div class="line"><span class="lineno">  365</span>}</div>
-<div class="ttc" id="aclass_sound_track_html_aa6882dfb0ed2786248898b1236fc978d"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::rewind</a></div><div class="ttdeci">void rewind()</div><div class="ttdoc">Rewind the track.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:96</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_aa6882dfb0ed2786248898b1236fc978d"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::rewind</a></div><div class="ttdeci">void rewind()</div><div class="ttdoc">Rewind the track.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:94</a></div></div>
 </div>
 </div>
 </div>
@@ -1147,11 +1197,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">57</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a> = mirror;</div>
-<div class="line"><span class="lineno">   60</span>}</div>
-<div class="ttc" id="a_sound_8c_html_a50a567e24a61b21bef2bd4287f25426b"><div class="ttname"><a href="/documentation/api/-sound-8c/">_mirror</a></div><div class="ttdeci">static Mirror _mirror</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">59</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a> = mirror;</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="a_sound_8c_html_a50a567e24a61b21bef2bd4287f25426b"><div class="ttname"><a href="/documentation/api/-sound-8c/">_mirror</a></div><div class="ttdeci">static Mirror _mirror</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:51</a></div></div>
 </div>
 </div>
 </div>
@@ -1252,14 +1302,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  207</span> </div>
 <div class="line"><span class="lineno">  208</span>    this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundOff</a>;</div>
 <div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  210</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  211</span>    {</div>
 <div class="line"><span class="lineno">  212</span>        <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  213</span> </div>
 <div class="line"><span class="lineno">  214</span>        <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::stop</a>(soundTrack);</div>
 <div class="line"><span class="lineno">  215</span>    }</div>
 <div class="line"><span class="lineno">  216</span>}</div>
-<div class="ttc" id="aclass_sound_track_html_a1547bb0338f5fa2cc3d859358c710043"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:66</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_a1547bb0338f5fa2cc3d859358c710043"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:62</a></div></div>
 </div>
 </div>
 </div>
@@ -1297,14 +1347,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  289</span>    }</div>
 <div class="line"><span class="lineno">  290</span> </div>
-<div class="line"><span class="lineno">  291</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  291</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  292</span>    {</div>
 <div class="line"><span class="lineno">  293</span>        <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  294</span> </div>
 <div class="line"><span class="lineno">  295</span>        <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::suspend</a>(soundTrack);</div>
 <div class="line"><span class="lineno">  296</span>    }</div>
 <div class="line"><span class="lineno">  297</span>}</div>
-<div class="ttc" id="aclass_sound_track_html_aace503feaaf54aec239438d91cee8ba3"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdoc">Suspend the output of sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:86</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_aace503feaaf54aec239438d91cee8ba3"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdoc">Suspend the output of sound.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:84</a></div></div>
 </div>
 </div>
 </div>
@@ -1323,7 +1373,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allow other requests to get a sound to steal this sound's channels. </p>
+<p>Allow other requests to get a sound to steal this sound's sources. </p>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">403</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  404</span>{</div>
@@ -1384,7 +1434,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  260</span>    {</div>
 <div class="line"><span class="lineno">  261</span>        this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a> = <a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaying</a>;</div>
 <div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">  264</span>        {</div>
 <div class="line"><span class="lineno">  265</span>            <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
 <div class="line"><span class="lineno">  266</span> </div>
@@ -1392,7 +1442,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  268</span>        }</div>
 <div class="line"><span class="lineno">  269</span>    }</div>
 <div class="line"><span class="lineno">  270</span>}</div>
-<div class="ttc" id="aclass_sound_track_html_ac3de0d83de019c923d539d011952bdd1"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::unpause</a></div><div class="ttdeci">void unpause()</div><div class="ttdoc">Unpause the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:81</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_ac3de0d83de019c923d539d011952bdd1"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::unpause</a></div><div class="ttdeci">void unpause()</div><div class="ttdoc">Unpause the playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:79</a></div></div>
 </div>
 </div>
 </div>
@@ -1414,7 +1464,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Advance the playback on the sound's MIDI tracks. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Advance the playback on the sound's native tracks. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
     <tr><td class="paramname">elapsedMicroseconds</td><td>Elapsed time since the last call </td></tr>
     <tr><td class="paramname">targetPCMUpdates</td><td>Ideal Elapsed time since the last call </td></tr>
@@ -1422,117 +1472,116 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">489</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  490</span>{</div>
-<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaying</a> !=    this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a>)</div>
-<div class="line"><span class="lineno">  492</span>    {</div>
-<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  494</span>    }</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>    <span class="keywordtype">bool</span> finished = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  497</span> </div>
-<div class="line"><span class="lineno">  498</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> leftVolumeFactor = -1;</div>
-<div class="line"><span class="lineno">  499</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> rightVolumeFactor = -1;</div>
-<div class="line"><span class="lineno">  500</span> </div>
-<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>)</div>
-<div class="line"><span class="lineno">  502</span>    {</div>
-<div class="line"><span class="lineno">  503</span><span class="preprocessor">#ifndef __LEGACY_COORDINATE_PROJECTION</span></div>
-<div class="line"><span class="lineno">  504</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> relativePosition = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a>(*this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>), *_cameraInvertedRotation);</div>
-<div class="line"><span class="lineno">  505</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  506</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> relativePosition = </div>
-<div class="line"><span class="lineno">  507</span>            <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a></div>
-<div class="line"><span class="lineno">  508</span>            (</div>
-<div class="line"><span class="lineno">  509</span>                <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::sub</a></div>
-<div class="line"><span class="lineno">  510</span>                (</div>
-<div class="line"><span class="lineno">  511</span>                    <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a></div>
-<div class="line"><span class="lineno">  512</span>                    (</div>
-<div class="line"><span class="lineno">  513</span>                        *this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>), (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){<a class="code hl_define" href="/documentation/api/-constants-8h/">__HALF_SCREEN_WIDTH_METERS</a>, <a class="code hl_define" href="/documentation/api/-constants-8h/">__HALF_SCREEN_HEIGHT_METERS</a>, 0}</div>
-<div class="line"><span class="lineno">  514</span>                    ), </div>
-<div class="line"><span class="lineno">  515</span>                    *_cameraInvertedRotation</div>
-<div class="line"><span class="lineno">  516</span>            );</div>
-<div class="line"><span class="lineno">  517</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a>.<a class="code hl_variable" href="/documentation/api/struct-mirror/">x</a>)</div>
-<div class="line"><span class="lineno">  519</span>        {</div>
-<div class="line"><span class="lineno">  520</span>            relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a> = -relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a>;</div>
-<div class="line"><span class="lineno">  521</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-sound-8c-source/">516</a> of file <a class="el" href="/documentation/api/-sound-8c-source/">Sound.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  517</span>{</div>
+<div class="line"><span class="lineno">  518</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaying</a> !=    this-&gt;<a class="code hl_variable" href="#a80a5a5ef4ec61b59cc3cdf2bde4b193d">state</a>)</div>
+<div class="line"><span class="lineno">  519</span>    {</div>
+<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  521</span>    }</div>
 <div class="line"><span class="lineno">  522</span> </div>
-<div class="line"><span class="lineno">  523</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a>.<a class="code hl_variable" href="/documentation/api/struct-mirror/">y</a>)</div>
-<div class="line"><span class="lineno">  524</span>        {</div>
-<div class="line"><span class="lineno">  525</span>            relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a> = -relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a>;</div>
-<div class="line"><span class="lineno">  526</span>        }</div>
-<div class="line"><span class="lineno">  527</span> </div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a>.<a class="code hl_variable" href="/documentation/api/struct-mirror/">z</a>)</div>
-<div class="line"><span class="lineno">  529</span>        {</div>
-<div class="line"><span class="lineno">  530</span>            relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a> = -relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>;</div>
-<div class="line"><span class="lineno">  531</span>        }</div>
-<div class="line"><span class="lineno">  532</span> </div>
-<div class="line"><span class="lineno">  533</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> leftEar = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-__EAR_DISPLACEMENT), 0, 0};</div>
-<div class="line"><span class="lineno">  534</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> rightEar = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(__EAR_DISPLACEMENT), 0, 0};</div>
-<div class="line"><span class="lineno">  535</span> </div>
-<div class="line"><span class="lineno">  536</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> squaredDistanceToLeftEar = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::squareLength</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::get</a>(leftEar, relativePosition));</div>
-<div class="line"><span class="lineno">  537</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> squaredDistanceToRightEar = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::squareLength</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::get</a>(rightEar, relativePosition));</div>
-<div class="line"><span class="lineno">  538</span> </div>
-<div class="line"><span class="lineno">  539</span>        leftVolumeFactor  = </div>
-<div class="line"><span class="lineno">  540</span>            __1I_FIXED - </div>
-<div class="line"><span class="lineno">  541</span>            __FIXED_EXT_DIV(squaredDistanceToLeftEar, <a class="code hl_define" href="/documentation/api/-math-8h/">__FIXED_SQUARE</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(__SOUND_STEREO_ATTENUATION_DISTANCE)));</div>
-<div class="line"><span class="lineno">  542</span>        </div>
-<div class="line"><span class="lineno">  543</span>        rightVolumeFactor = </div>
-<div class="line"><span class="lineno">  544</span>            __1I_FIXED - </div>
-<div class="line"><span class="lineno">  545</span>            __FIXED_EXT_DIV(squaredDistanceToRightEar, <a class="code hl_define" href="/documentation/api/-math-8h/">__FIXED_SQUARE</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(__SOUND_STEREO_ATTENUATION_DISTANCE)));</div>
-<div class="line"><span class="lineno">  546</span> </div>
-<div class="line"><span class="lineno">  547</span>        <span class="keywordflow">if</span>(leftVolumeFactor &gt; rightVolumeFactor)</div>
-<div class="line"><span class="lineno">  548</span>        {</div>
-<div class="line"><span class="lineno">  549</span>            rightVolumeFactor -= (leftVolumeFactor - rightVolumeFactor);</div>
-<div class="line"><span class="lineno">  550</span>        }</div>
-<div class="line"><span class="lineno">  551</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  552</span>        {</div>
-<div class="line"><span class="lineno">  553</span>            leftVolumeFactor -= (rightVolumeFactor - leftVolumeFactor);</div>
-<div class="line"><span class="lineno">  554</span>        }</div>
-<div class="line"><span class="lineno">  555</span> </div>
-<div class="line"><span class="lineno">  556</span>        leftVolumeFactor = 0 &gt; leftVolumeFactor ? 0 : leftVolumeFactor;</div>
-<div class="line"><span class="lineno">  557</span>        rightVolumeFactor = 0 &gt; rightVolumeFactor ? 0 : rightVolumeFactor;</div>
-<div class="line"><span class="lineno">  558</span>    }</div>
-<div class="line"><span class="lineno">  559</span> </div>
-<div class="line"><span class="lineno">  560</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
-<div class="line"><span class="lineno">  561</span>    {</div>
-<div class="line"><span class="lineno">  562</span>        <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
-<div class="line"><span class="lineno">  563</span> </div>
-<div class="line"><span class="lineno">  564</span>        finished = </div>
-<div class="line"><span class="lineno">  565</span>            <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::update</a></div>
-<div class="line"><span class="lineno">  566</span>            (</div>
-<div class="line"><span class="lineno">  567</span>                soundTrack, </div>
-<div class="line"><span class="lineno">  568</span>                <a class="code hl_variable" href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a>, </div>
-<div class="line"><span class="lineno">  569</span>                <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>, </div>
-<div class="line"><span class="lineno">  570</span>                this-&gt;<a class="code hl_variable" href="#a2f0d0295a6b14465e359c32c8bbceadd">tickStep</a>, </div>
-<div class="line"><span class="lineno">  571</span>                this-&gt;<a class="code hl_variable" href="#a66e3b8bb2ad96946d27e7324371aac92">targetTimerResolutionFactor</a>, </div>
-<div class="line"><span class="lineno">  572</span>                leftVolumeFactor, </div>
-<div class="line"><span class="lineno">  573</span>                rightVolumeFactor, </div>
-<div class="line"><span class="lineno">  574</span>                this-&gt;<a class="code hl_variable" href="#a487060482ca4a3a3b81b4d73c260d219">volumeReduction</a>, </div>
-<div class="line"><span class="lineno">  575</span>                this-&gt;<a class="code hl_variable" href="#a2f2deffa9f233ed61dfb63ec0c1c72f2">volumenScalePower</a>, </div>
-<div class="line"><span class="lineno">  576</span>                this-&gt;<a class="code hl_variable" href="#ae8212aaf1135ea316a5b03cd100ccc7a">frequencyDelta</a></div>
-<div class="line"><span class="lineno">  577</span>            ) &amp;&amp; finished;</div>
-<div class="line"><span class="lineno">  578</span>    }</div>
-<div class="line"><span class="lineno">  579</span> </div>
-<div class="line"><span class="lineno">  580</span>    <span class="keywordflow">if</span>(finished)</div>
-<div class="line"><span class="lineno">  581</span>    {</div>
-<div class="line"><span class="lineno">  582</span>        Sound::completedPlayback(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  583</span>    }</div>
-<div class="line"><span class="lineno">  584</span> </div>
-<div class="line"><span class="lineno">  585</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaybackNormal</a> != this-&gt;<a class="code hl_variable" href="#a8ef8b013b3713738e8af0d643a960804">playbackType</a>)</div>
-<div class="line"><span class="lineno">  586</span>    {</div>
-<div class="line"><span class="lineno">  587</span>        Sound::updateVolumeReduction(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  588</span>    }</div>
-<div class="line"><span class="lineno">  589</span>}</div>
+<div class="line"><span class="lineno">  523</span>    <span class="keywordtype">bool</span> finished = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  524</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> leftVolumeFactor = -1;</div>
+<div class="line"><span class="lineno">  525</span>    <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_t</a> rightVolumeFactor = -1;</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>)</div>
+<div class="line"><span class="lineno">  528</span>    {</div>
+<div class="line"><span class="lineno">  529</span><span class="preprocessor">#ifndef __LEGACY_COORDINATE_PROJECTION</span></div>
+<div class="line"><span class="lineno">  530</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> relativePosition = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a>(*this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>), *_cameraInvertedRotation);</div>
+<div class="line"><span class="lineno">  531</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  532</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> relativePosition = </div>
+<div class="line"><span class="lineno">  533</span>            <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::rotate</a></div>
+<div class="line"><span class="lineno">  534</span>            (</div>
+<div class="line"><span class="lineno">  535</span>                <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::sub</a></div>
+<div class="line"><span class="lineno">  536</span>                (</div>
+<div class="line"><span class="lineno">  537</span>                    <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::getRelativeToCamera</a></div>
+<div class="line"><span class="lineno">  538</span>                    (</div>
+<div class="line"><span class="lineno">  539</span>                        *this-&gt;<a class="code hl_variable" href="#a2d254415789d5acb24e1dc10bddbe8c2">position</a>), (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){<a class="code hl_define" href="/documentation/api/-constants-8h/">__HALF_SCREEN_WIDTH_METERS</a>, <a class="code hl_define" href="/documentation/api/-constants-8h/">__HALF_SCREEN_HEIGHT_METERS</a>, 0}</div>
+<div class="line"><span class="lineno">  540</span>                    ), </div>
+<div class="line"><span class="lineno">  541</span>                    *_cameraInvertedRotation</div>
+<div class="line"><span class="lineno">  542</span>            );</div>
+<div class="line"><span class="lineno">  543</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a>.<a class="code hl_variable" href="/documentation/api/struct-mirror/">x</a>)</div>
+<div class="line"><span class="lineno">  545</span>        {</div>
+<div class="line"><span class="lineno">  546</span>            relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a> = -relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">x</a>;</div>
+<div class="line"><span class="lineno">  547</span>        }</div>
+<div class="line"><span class="lineno">  548</span> </div>
+<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a>.<a class="code hl_variable" href="/documentation/api/struct-mirror/">y</a>)</div>
+<div class="line"><span class="lineno">  550</span>        {</div>
+<div class="line"><span class="lineno">  551</span>            relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a> = -relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">y</a>;</div>
+<div class="line"><span class="lineno">  552</span>        }</div>
+<div class="line"><span class="lineno">  553</span> </div>
+<div class="line"><span class="lineno">  554</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="/documentation/api/-sound-8c/">_mirror</a>.<a class="code hl_variable" href="/documentation/api/struct-mirror/">z</a>)</div>
+<div class="line"><span class="lineno">  555</span>        {</div>
+<div class="line"><span class="lineno">  556</span>            relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a> = -relativePosition.<a class="code hl_variable" href="/documentation/api/struct-vector3-d/">z</a>;</div>
+<div class="line"><span class="lineno">  557</span>        }</div>
+<div class="line"><span class="lineno">  558</span> </div>
+<div class="line"><span class="lineno">  559</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> leftEar = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(-__EAR_DISPLACEMENT), 0, 0};</div>
+<div class="line"><span class="lineno">  560</span>        <a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a> rightEar = (<a class="code hl_typedef" href="/documentation/api/-types-8h/">Vector3D</a>){<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(__EAR_DISPLACEMENT), 0, 0};</div>
+<div class="line"><span class="lineno">  561</span> </div>
+<div class="line"><span class="lineno">  562</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> squaredDistanceToLeftEar = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::squareLength</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::get</a>(leftEar, relativePosition));</div>
+<div class="line"><span class="lineno">  563</span>        <a class="code hl_define" href="/documentation/api/-types-8h/">fixed_ext_t</a> squaredDistanceToRightEar = <a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::squareLength</a>(<a class="code hl_function" href="/documentation/api/struct-vector3-d/">Vector3D::get</a>(rightEar, relativePosition));</div>
+<div class="line"><span class="lineno">  564</span> </div>
+<div class="line"><span class="lineno">  565</span>        leftVolumeFactor  = </div>
+<div class="line"><span class="lineno">  566</span>            __1I_FIXED - </div>
+<div class="line"><span class="lineno">  567</span>            __FIXED_EXT_DIV(squaredDistanceToLeftEar, <a class="code hl_define" href="/documentation/api/-math-8h/">__FIXED_SQUARE</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(__SOUND_STEREO_ATTENUATION_DISTANCE)));</div>
+<div class="line"><span class="lineno">  568</span>        </div>
+<div class="line"><span class="lineno">  569</span>        rightVolumeFactor = </div>
+<div class="line"><span class="lineno">  570</span>            __1I_FIXED - </div>
+<div class="line"><span class="lineno">  571</span>            __FIXED_EXT_DIV(squaredDistanceToRightEar, <a class="code hl_define" href="/documentation/api/-math-8h/">__FIXED_SQUARE</a>(<a class="code hl_define" href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a>(__SOUND_STEREO_ATTENUATION_DISTANCE)));</div>
+<div class="line"><span class="lineno">  572</span> </div>
+<div class="line"><span class="lineno">  573</span>        <span class="keywordflow">if</span>(leftVolumeFactor &gt; rightVolumeFactor)</div>
+<div class="line"><span class="lineno">  574</span>        {</div>
+<div class="line"><span class="lineno">  575</span>            rightVolumeFactor -= (leftVolumeFactor - rightVolumeFactor);</div>
+<div class="line"><span class="lineno">  576</span>        }</div>
+<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  578</span>        {</div>
+<div class="line"><span class="lineno">  579</span>            leftVolumeFactor -= (rightVolumeFactor - leftVolumeFactor);</div>
+<div class="line"><span class="lineno">  580</span>        }</div>
+<div class="line"><span class="lineno">  581</span> </div>
+<div class="line"><span class="lineno">  582</span>        leftVolumeFactor = 0 &gt; leftVolumeFactor ? 0 : leftVolumeFactor;</div>
+<div class="line"><span class="lineno">  583</span>        rightVolumeFactor = 0 &gt; rightVolumeFactor ? 0 : rightVolumeFactor;</div>
+<div class="line"><span class="lineno">  584</span>    }</div>
+<div class="line"><span class="lineno">  585</span> </div>
+<div class="line"><span class="lineno">  586</span>    <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a07b4d000c62823e460a0687eef802e8b">soundTracks</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">  587</span>    {</div>
+<div class="line"><span class="lineno">  588</span>        <a class="code hl_friend" href="/documentation/api/-sound-8c/">SoundTrack</a> soundTrack = SoundTrack::safeCast(node-&gt;data);</div>
+<div class="line"><span class="lineno">  589</span> </div>
+<div class="line"><span class="lineno">  590</span>        finished = </div>
+<div class="line"><span class="lineno">  591</span>            <a class="code hl_function" href="/documentation/api/class-sound-track/">SoundTrack::update</a></div>
+<div class="line"><span class="lineno">  592</span>            (</div>
+<div class="line"><span class="lineno">  593</span>                soundTrack, </div>
+<div class="line"><span class="lineno">  594</span>                elapsedMicroseconds, </div>
+<div class="line"><span class="lineno">  595</span>                <a class="code hl_variable" href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a>, </div>
+<div class="line"><span class="lineno">  596</span>                this-&gt;<a class="code hl_variable" href="#a2f0d0295a6b14465e359c32c8bbceadd">tickStep</a>, </div>
+<div class="line"><span class="lineno">  597</span>                this-&gt;<a class="code hl_variable" href="#a66e3b8bb2ad96946d27e7324371aac92">targetTimerResolutionFactor</a>, </div>
+<div class="line"><span class="lineno">  598</span>                leftVolumeFactor, </div>
+<div class="line"><span class="lineno">  599</span>                rightVolumeFactor, </div>
+<div class="line"><span class="lineno">  600</span>                this-&gt;<a class="code hl_variable" href="#a487060482ca4a3a3b81b4d73c260d219">volumeReduction</a>, </div>
+<div class="line"><span class="lineno">  601</span>                this-&gt;<a class="code hl_variable" href="#a2f2deffa9f233ed61dfb63ec0c1c72f2">volumenScalePower</a>, </div>
+<div class="line"><span class="lineno">  602</span>                this-&gt;<a class="code hl_variable" href="#ae8212aaf1135ea316a5b03cd100ccc7a">frequencyDelta</a></div>
+<div class="line"><span class="lineno">  603</span>            ) &amp;&amp; finished;</div>
+<div class="line"><span class="lineno">  604</span>    }</div>
+<div class="line"><span class="lineno">  605</span> </div>
+<div class="line"><span class="lineno">  606</span>    <span class="keywordflow">if</span>(finished)</div>
+<div class="line"><span class="lineno">  607</span>    {</div>
+<div class="line"><span class="lineno">  608</span>        <a class="code hl_function" href="#a19b6e64c9ef3f9284ecdf9835c955fb6">Sound::finishPlayback</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  609</span>    }</div>
+<div class="line"><span class="lineno">  610</span> </div>
+<div class="line"><span class="lineno">  611</span>    <span class="keywordflow">if</span>(<a class="code hl_enumvalue" href="/documentation/api/-sound-8h/">kSoundPlaybackNormal</a> != this-&gt;<a class="code hl_variable" href="#a8ef8b013b3713738e8af0d643a960804">playbackType</a>)</div>
+<div class="line"><span class="lineno">  612</span>    {</div>
+<div class="line"><span class="lineno">  613</span>        Sound::updateVolumeReduction(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  614</span>    }</div>
+<div class="line"><span class="lineno">  615</span>}</div>
 <div class="ttc" id="a_constants_8h_html_a23e8e373f81337a78ab83b09c1559af1"><div class="ttname"><a href="/documentation/api/-constants-8h/">__PIXELS_TO_METERS</a></div><div class="ttdeci">#define __PIXELS_TO_METERS(pixels)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:177</a></div></div>
 <div class="ttc" id="a_constants_8h_html_aae0149d281ee7fabeb8467b8fb4d4f48"><div class="ttname"><a href="/documentation/api/-constants-8h/">__HALF_SCREEN_HEIGHT_METERS</a></div><div class="ttdeci">#define __HALF_SCREEN_HEIGHT_METERS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:121</a></div></div>
 <div class="ttc" id="a_constants_8h_html_ad31091223c38464fa7e421d2a42240f3"><div class="ttname"><a href="/documentation/api/-constants-8h/">__HALF_SCREEN_WIDTH_METERS</a></div><div class="ttdeci">#define __HALF_SCREEN_WIDTH_METERS</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:118</a></div></div>
 <div class="ttc" id="a_math_8h_html_aa33ff6d4da546c008051dc099478d779"><div class="ttname"><a href="/documentation/api/-math-8h/">__FIXED_SQUARE</a></div><div class="ttdeci">#define __FIXED_SQUARE(n)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-math-8h-source/">Math.h:314</a></div></div>
-<div class="ttc" id="a_timer_manager_8h_html_a7fbe280444975b504b551c61244e82af"><div class="ttname"><a href="/documentation/api/-timer-manager-8h/">elapsedMicroseconds</a></div><div class="ttdeci">uint32 elapsedMicroseconds</div><div class="ttdoc">Elapsed microseconds.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-timer-manager-8h-source/">TimerManager.h:83</a></div></div>
 <div class="ttc" id="a_types_8h_html_a25294c217cd565d2410d2ffde44c1942"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_t</a></div><div class="ttdeci">#define fixed_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:46</a></div></div>
 <div class="ttc" id="a_types_8h_html_a3b5675e00af046980df12ddb73b0aaca"><div class="ttname"><a href="/documentation/api/-types-8h/">fixed_ext_t</a></div><div class="ttdeci">#define fixed_ext_t</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:47</a></div></div>
 <div class="ttc" id="a_types_8h_html_ab04f901853123890736948a2ff6bef01"><div class="ttname"><a href="/documentation/api/-types-8h/">Vector3D</a></div><div class="ttdeci">struct Vector3D Vector3D</div></div>
-<div class="ttc" id="a_v_s_u_manager_8h_html_a6695a8f17f42411955a09df1da983a05"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a></div><div class="ttdeci">uint32 targetPCMUpdates</div><div class="ttdoc">Target PCM cycles per game cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:173</a></div></div>
-<div class="ttc" id="aclass_sound_track_html_a6f4d4e5efa57ef122aaa57fe68c33a28"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::update</a></div><div class="ttdeci">bool update(uint32 elapsedMicroseconds, uint32 targetPCMUpdates, fix7_9_ext tickStep, fix7_9_ext targetTimerResolutionFactor, fixed_t leftVolumeFactor, fixed_t rightVolumeFactor, int8 volumeReduction, uint8 volumenScalePower, uint16 frequencyDelta)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:121</a></div></div>
+<div class="ttc" id="a_v_s_u_manager_8h_html_a6695a8f17f42411955a09df1da983a05"><div class="ttname"><a href="/documentation/api/-v-s-u-manager-8h/">targetPCMUpdates</a></div><div class="ttdeci">uint32 targetPCMUpdates</div><div class="ttdoc">Target PCM cycles per game cycle.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-s-u-manager-8h-source/">VSUManager.h:262</a></div></div>
+<div class="ttc" id="aclass_sound_html_a19b6e64c9ef3f9284ecdf9835c955fb6"><div class="ttname"><a href="#a19b6e64c9ef3f9284ecdf9835c955fb6">Sound::finishPlayback</a></div><div class="ttdeci">void finishPlayback()</div><div class="ttdoc">Finish the sound playback.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-8c-source/">Sound.c:489</a></div></div>
+<div class="ttc" id="aclass_sound_track_html_a6f4d4e5efa57ef122aaa57fe68c33a28"><div class="ttname"><a href="/documentation/api/class-sound-track/">SoundTrack::update</a></div><div class="ttdeci">bool update(uint32 elapsedMicroseconds, uint32 targetPCMUpdates, fix7_9_ext tickStep, fix7_9_ext targetTimerResolutionFactor, fixed_t leftVolumeFactor, fixed_t rightVolumeFactor, int8 volumeReduction, uint8 volumenScalePower, uint16 frequencyDelta)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-sound-track-8c-source/">SoundTrack.c:119</a></div></div>
 <div class="ttc" id="astruct_mirror_html_a529c3f2e3ce5fcafce6fe24a7badf8a9"><div class="ttname"><a href="/documentation/api/struct-mirror/">Mirror::y</a></div><div class="ttdeci">bool y</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:366</a></div></div>
 <div class="ttc" id="astruct_mirror_html_aaec00dbd01c67da81ecf3e5c940fffb1"><div class="ttname"><a href="/documentation/api/struct-mirror/">Mirror::z</a></div><div class="ttdeci">bool z</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:367</a></div></div>
 <div class="ttc" id="astruct_mirror_html_ac8696aa0bffca33925c36ae4f02b006a"><div class="ttname"><a href="/documentation/api/struct-mirror/">Mirror::x</a></div><div class="ttdeci">bool x</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:365</a></div></div>

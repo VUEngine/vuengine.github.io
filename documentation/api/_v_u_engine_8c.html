@@ -30,6 +30,7 @@ permalink: documentation/api/-v-u-engine-8c/
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-animation-coordinator-factory-8h-source/">AnimationCoordinatorFactory.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-animation-inspector-state-8h-source/">AnimationInspectorState.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-behavior-manager-8h-source/">BehaviorManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-bgmap-texture-manager-8h-source/">BgmapTextureManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-body-manager-8h-source/">BodyManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-camera-8h-source/">Camera.h</a>&gt;</code><br />
@@ -51,6 +52,7 @@ permalink: documentation/api/-v-u-engine-8c/
 <code>#include &lt;<a class="el" href="/documentation/api/-param-table-manager-8h-source/">ParamTableManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-profiler-8h-source/">Profiler.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-rumble-manager-8h-source/">RumbleManager.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="/documentation/api/-singleton-8h-source/">Singleton.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-sound-manager-8h-source/">SoundManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-sprite-manager-8h-source/">SpriteManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="/documentation/api/-s-r-a-m-manager-8h-source/">SRAMManager.h</a>&gt;</code><br />
@@ -78,6 +80,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a3ae84124d170bb9185c17a936994c4b5" id="r_a3ae84124d170bb9185c17a936994c4b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae84124d170bb9185c17a936994c4b5">__GAME_ENTRY_POINT</a> (void)</td></tr>
 
 <tr class="memitem:ad6c3142b2b61d89e846be5a69203951d" id="r_ad6c3142b2b61d89e846be5a69203951d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-types-8h/">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6c3142b2b61d89e846be5a69203951d">main</a> (void)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac59665c4a7ced0d4e25313bfa03ad4c8" id="r_ac59665c4a7ced0d4e25313bfa03ad4c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac59665c4a7ced0d4e25313bfa03ad4c8">_authClass</a> = <a class="el" href="/documentation/api/-constants-8h/">NULL</a></td></tr>
 
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -113,12 +120,29 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-u-engine-8c-source/">78</a> of file <a class="el" href="/documentation/api/-v-u-engine-8c-source/">VUEngine.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a3ae84124d170bb9185c17a936994c4b5">__GAME_ENTRY_POINT</a>();</div>
-<div class="line"><span class="lineno">   81</span>}</div>
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-u-engine-8c-source/">82</a> of file <a class="el" href="/documentation/api/-v-u-engine-8c-source/">VUEngine.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a3ae84124d170bb9185c17a936994c4b5">__GAME_ENTRY_POINT</a>();</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 <div class="ttc" id="a_v_u_engine_8c_html_a3ae84124d170bb9185c17a936994c4b5"><div class="ttname"><a href="#a3ae84124d170bb9185c17a936994c4b5">__GAME_ENTRY_POINT</a></div><div class="ttdeci">int32 __GAME_ENTRY_POINT(void)</div></div>
 </div>
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ac59665c4a7ced0d4e25313bfa03ad4c8" name="ac59665c4a7ced0d4e25313bfa03ad4c8"></a>
+<h2 class="memtitle">_authClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/-oop-8h/">ClassPointer</a> _authClass = <a class="el" href="/documentation/api/-constants-8h/">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="/documentation/api/-v-u-engine-8c-source/">74</a> of file <a class="el" href="/documentation/api/-v-u-engine-8c-source/">VUEngine.c</a>.</p>
+
 </div>
 </div>
 </div>

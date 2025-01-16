@@ -60,7 +60,7 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="/documentation/api/class-stopwatch/">Stopwatch::reset</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Register clock</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    StopwatchManager::register(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="/documentation/api/class-stopwatch-manager/">StopwatchManager::register</a>(StopwatchManager::getInstance(), <span class="keyword">this</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -70,7 +70,7 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="/documentation/api/class-stopwatch/">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="/documentation/api/class-stopwatch/">Stopwatch::destructor</a>()</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Unregister the clock</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    StopwatchManager::unregister(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="/documentation/api/class-stopwatch-manager/">StopwatchManager::unregister</a>(StopwatchManager::getInstance(), <span class="keyword">this</span>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Always explicitly call the base&#39;s destructor </span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Base::destructor();</div>
@@ -84,8 +84,8 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">interrupts</a> = 0;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">milliSeconds</a> = 0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a> = TimerManager::getTimerCounter();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timeProportion</a> = TimerManager::getTargetTimePerInterruptInMS() / (<a class="code hl_function" href="/documentation/api/-printing-8h/">float</a>)this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a> = <a class="code hl_function" href="/documentation/api/class-timer-manager/">TimerManager::getTimerCounter</a>(TimerManager::getInstance());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timeProportion</a> = <a class="code hl_function" href="/documentation/api/class-timer-manager/">TimerManager::getTargetTimePerInterruptInMS</a>(TimerManager::getInstance()) / (float)this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">previousTimerCounter</a> = this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
 </div>
@@ -106,7 +106,7 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">extern</span> <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint8</a>* <span class="keyword">const</span> <a class="code hl_variable" href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    TimerManager::disable();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="/documentation/api/class-timer-manager/">TimerManager::disable</a>(TimerManager::getInstance());</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_typedef" href="/documentation/api/-types-8h/">uint16</a> currentTimerCounter = (<a class="code hl_variable" href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a>[<a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">__THR</a>] &lt;&lt; 8 ) | <a class="code hl_variable" href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a>[<a class="code hl_define" href="/documentation/api/-hardware-manager-8h/">__TLR</a>];</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
@@ -116,7 +116,7 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">if</span>(currentTimerCounter &gt; this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">previousTimerCounter</a>)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a> = VUEngine::getGameFrameDuration() / this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timeProportion</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="/documentation/api/class-stopwatch/">timerCounter</a> = <a class="code hl_function" href="/documentation/api/class-v-u-engine/">VUEngine::getGameFrameDuration</a>() / this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">timeProportion</a>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
@@ -141,7 +141,7 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    this-&gt;<a class="code hl_variable" href="/documentation/api/class-stopwatch/">milliSeconds</a> += elapsedTime;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    TimerManager::enable();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_function" href="/documentation/api/class-timer-manager/">TimerManager::enable</a>(TimerManager::getInstance());</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> elapsedTime;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
@@ -151,7 +151,6 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="ttc" id="a_hardware_manager_8c_html_a3d39baf10a8ca1b139b6134967827112"><div class="ttname"><a href="/documentation/api/-hardware-manager-8c/">_hardwareRegisters</a></div><div class="ttdeci">uint8 *const _hardwareRegisters</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8c-source/">HardwareManager.c:77</a></div></div>
 <div class="ttc" id="a_hardware_manager_8h_html_a4b3126127f087e3ca8004f08ec835e3d"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">__TLR</a></div><div class="ttdeci">#define __TLR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:30</a></div></div>
 <div class="ttc" id="a_hardware_manager_8h_html_a61896f5047a8d51da54c476b52717103"><div class="ttname"><a href="/documentation/api/-hardware-manager-8h/">__THR</a></div><div class="ttdeci">#define __THR</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:31</a></div></div>
-<div class="ttc" id="a_printing_8h_html_a51b8d5cf5427dcbeb82a969807df845f"><div class="ttname"><a href="/documentation/api/-printing-8h/">float</a></div><div class="ttdeci">static void float(float value, uint8 x, uint8 y, int32 precision, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:326</a></div></div>
 <div class="ttc" id="a_stopwatch_8h_html"><div class="ttname"><a href="/documentation/api/-stopwatch-8h/">Stopwatch.h</a></div></div>
 <div class="ttc" id="a_stopwatch_manager_8h_html"><div class="ttname"><a href="/documentation/api/-stopwatch-manager-8h/">StopwatchManager.h</a></div></div>
 <div class="ttc" id="a_timer_manager_8h_html"><div class="ttname"><a href="/documentation/api/-timer-manager-8h/">TimerManager.h</a></div></div>
@@ -168,6 +167,13 @@ permalink: documentation/api/-stopwatch-8c-source/
 <div class="ttc" id="aclass_stopwatch_html_ab807e758c2d027cc226fefc8b6da5cfb"><div class="ttname"><a href="/documentation/api/class-stopwatch/">Stopwatch::lap</a></div><div class="ttdeci">float lap()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">Stopwatch.c:68</a></div></div>
 <div class="ttc" id="aclass_stopwatch_html_abfbc354af5296a9ad1fa5d35ed5a11a9"><div class="ttname"><a href="/documentation/api/class-stopwatch/">Stopwatch::interrupts</a></div><div class="ttdeci">uint32 interrupts</div><div class="ttdoc">Interrupts counter.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-stopwatch-8h-source/">Stopwatch.h:36</a></div></div>
 <div class="ttc" id="aclass_stopwatch_html_aff21bc5b879eb1979c1ccc6d10c715db"><div class="ttname"><a href="/documentation/api/class-stopwatch/">Stopwatch::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update the state of the stopwatch.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">Stopwatch.c:61</a></div></div>
+<div class="ttc" id="aclass_stopwatch_manager_html_a7efce6c775114af97653e73ee23702d6"><div class="ttname"><a href="/documentation/api/class-stopwatch-manager/">StopwatchManager::unregister</a></div><div class="ttdeci">void unregister(Stopwatch clock)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-stopwatch-manager-8c-source/">StopwatchManager.c:57</a></div></div>
+<div class="ttc" id="aclass_stopwatch_manager_html_ace736201fe92d2025044a9e600a85525"><div class="ttname"><a href="/documentation/api/class-stopwatch-manager/">StopwatchManager::register</a></div><div class="ttdeci">void register(Stopwatch clock)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-stopwatch-manager-8c-source/">StopwatchManager.c:47</a></div></div>
+<div class="ttc" id="aclass_timer_manager_html_a2366a615b17fbf883e8c76346dcdb454"><div class="ttname"><a href="/documentation/api/class-timer-manager/">TimerManager::getTimerCounter</a></div><div class="ttdeci">static uint16 getTimerCounter()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-timer-manager-8c-source/">TimerManager.c:389</a></div></div>
+<div class="ttc" id="aclass_timer_manager_html_a45b403ad76ee08f61e6500d05a0c7ff5"><div class="ttname"><a href="/documentation/api/class-timer-manager/">TimerManager::getTargetTimePerInterruptInMS</a></div><div class="ttdeci">static float getTargetTimePerInterruptInMS()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-timer-manager-8c-source/">TimerManager.c:303</a></div></div>
+<div class="ttc" id="aclass_timer_manager_html_a7f7704db8c4b22bf8f664b4c8b5db133"><div class="ttname"><a href="/documentation/api/class-timer-manager/">TimerManager::disable</a></div><div class="ttdeci">static void disable()</div><div class="ttdoc">Disable the timer.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-timer-manager-8c-source/">TimerManager.c:124</a></div></div>
+<div class="ttc" id="aclass_timer_manager_html_a9ce3fbd29a8be6a03a48e1f70c92b5dd"><div class="ttname"><a href="/documentation/api/class-timer-manager/">TimerManager::enable</a></div><div class="ttdeci">static void enable()</div><div class="ttdoc">Enable the timer.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-timer-manager-8c-source/">TimerManager.c:113</a></div></div>
+<div class="ttc" id="aclass_v_u_engine_html_a35cf7b60c02c212d70f0a20457b83b93"><div class="ttname"><a href="/documentation/api/class-v-u-engine/">VUEngine::getGameFrameDuration</a></div><div class="ttdeci">static uint16 getGameFrameDuration()</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-v-u-engine-8c-source/">VUEngine.c:338</a></div></div>
 </div></div>
 
 

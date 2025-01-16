@@ -39,15 +39,22 @@ Inheritance diagram for ListenerObject:</div>
 <area href="/documentation/api/class-camera-movement-manager/" alt="CameraMovementManager" shape="rect" coords="175,336,340,360" />
 <area href="/documentation/api/class-char-set/" alt="CharSet" shape="rect" coords="175,392,340,416" />
 <area href="/documentation/api/class-clock/" alt="Clock" shape="rect" coords="175,448,340,472" />
-<area href="/documentation/api/class-component/" alt="Component" shape="rect" coords="175,504,340,528" />
-<area href="/documentation/api/class-entity/" alt="Entity" shape="rect" coords="175,560,340,584" />
-<area href="/documentation/api/class-options-selector/" alt="OptionsSelector" shape="rect" coords="175,616,340,640" />
-<area href="/documentation/api/class-profiler/" alt="Profiler" shape="rect" coords="175,672,340,696" />
-<area href="/documentation/api/class-sound/" alt="Sound" shape="rect" coords="175,728,340,752" />
-<area href="/documentation/api/class-state/" alt="State" shape="rect" coords="175,784,340,808" />
-<area href="/documentation/api/class-state-machine/" alt="StateMachine" shape="rect" coords="175,840,340,864" />
-<area href="/documentation/api/class-stopwatch/" alt="Stopwatch" shape="rect" coords="175,896,340,920" />
-<area href="/documentation/api/class-texture/" alt="Texture" shape="rect" coords="175,952,340,976" />
+<area href="/documentation/api/class-communication-manager/" alt="CommunicationManager" shape="rect" coords="175,504,340,528" />
+<area href="/documentation/api/class-component/" alt="Component" shape="rect" coords="175,560,340,584" />
+<area href="/documentation/api/class-entity/" alt="Entity" shape="rect" coords="175,616,340,640" />
+<area href="/documentation/api/class-frame-rate/" alt="FrameRate" shape="rect" coords="175,672,340,696" />
+<area href="/documentation/api/class-keypad-manager/" alt="KeypadManager" shape="rect" coords="175,728,340,752" />
+<area href="/documentation/api/class-options-selector/" alt="OptionsSelector" shape="rect" coords="175,784,340,808" />
+<area href="/documentation/api/class-printing/" alt="Printing" shape="rect" coords="175,840,340,864" />
+<area href="/documentation/api/class-profiler/" alt="Profiler" shape="rect" coords="175,896,340,920" />
+<area href="/documentation/api/class-sound/" alt="Sound" shape="rect" coords="175,952,340,976" />
+<area href="/documentation/api/class-sound-manager/" alt="SoundManager" shape="rect" coords="175,1008,340,1032" />
+<area href="/documentation/api/class-state/" alt="State" shape="rect" coords="175,1064,340,1088" />
+<area href="/documentation/api/class-state-machine/" alt="StateMachine" shape="rect" coords="175,1120,340,1144" />
+<area href="/documentation/api/class-stopwatch/" alt="Stopwatch" shape="rect" coords="175,1176,340,1200" />
+<area href="/documentation/api/class-texture/" alt="Texture" shape="rect" coords="175,1232,340,1256" />
+<area href="/documentation/api/class-v-i-p-manager/" alt="VIPManager" shape="rect" coords="175,1288,340,1312" />
+<area href="/documentation/api/class-v-u-engine/" alt="VUEngine" shape="rect" coords="175,1344,340,1368" />
   </map>
 </div></div>
 <table class="memberdecls table">
@@ -183,11 +190,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   70</span> </div>
 <div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> == this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>)</div>
 <div class="line"><span class="lineno">   72</span>    {</div>
-<div class="line"><span class="lineno">   73</span>        this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualList</a>();</div>
+<div class="line"><span class="lineno">   73</span>        this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a> = <span class="keyword">new</span> <a class="code hl_friend" href="/documentation/api/-listener-object-8c/">VirtualList</a>();</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
 <div class="line"><span class="lineno">   75</span>    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = node-&gt;next)</div>
 <div class="line"><span class="lineno">   78</span>        {</div>
 <div class="line"><span class="lineno">   79</span>            <a class="code hl_typedef" href="/documentation/api/-listener-object-8h/">Event</a>* <span class="keyword">event</span> = (<a class="code hl_typedef" href="/documentation/api/-listener-object-8h/">Event</a>*)node-&gt;data;</div>
 <div class="line"><span class="lineno">   80</span> </div>
@@ -207,10 +214,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   94</span> </div>
 <div class="line"><span class="lineno">   95</span>    <a class="code hl_function" href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a>(this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>, event);</div>
 <div class="line"><span class="lineno">   96</span>}</div>
-<div class="ttc" id="a_authenticator_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:24</a></div></div>
-<div class="ttc" id="a_authenticator_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-authenticator-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-authenticator-8c-source/">Authenticator.c:23</a></div></div>
 <div class="ttc" id="a_constants_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="/documentation/api/-constants-8h/">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:134</a></div></div>
+<div class="ttc" id="a_listener_object_8c_html_a0f3098903a30b52a0f805bf3d1c1f653"><div class="ttname"><a href="/documentation/api/-listener-object-8c/">VirtualList</a></div><div class="ttdeci">friend class VirtualList</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:29</a></div></div>
 <div class="ttc" id="a_listener_object_8h_html_a607b119a19e65e2c1c7a606f21ab7a46"><div class="ttname"><a href="/documentation/api/-listener-object-8h/">Event</a></div><div class="ttdeci">struct Event Event</div></div>
+<div class="ttc" id="a_virtual_circular_list_8c_html_a46402c333759d5e4fa23b947bb9712ed"><div class="ttname"><a href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a></div><div class="ttdeci">friend class VirtualNode</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-circular-list-8c-source/">VirtualCircularList.c:29</a></div></div>
 <div class="ttc" id="aclass_listener_object_html_a9867d0b4fc72feb68eadd9cf6d88cca0"><div class="ttname"><a href="#a9867d0b4fc72feb68eadd9cf6d88cca0">ListenerObject::events</a></div><div class="ttdeci">VirtualList events</div><div class="ttdoc">List of registered events.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:66</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_ac238c95ec36c31ae7e8f1c0412ba8be3"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::pushBack</a></div><div class="ttdeci">VirtualNode pushBack(const void *const data)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:251</a></div></div>
 <div class="ttc" id="astruct_event_html_a2cee127e2025f25df8281296df19bd80"><div class="ttname"><a href="/documentation/api/struct-event/">Event::listener</a></div><div class="ttdeci">ListenerObject listener</div><div class="ttdoc">The object listening for the event.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8h-source/">ListenerObject.h:39</a></div></div>
@@ -280,7 +287,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="a_constants_8h_html_afb745accb69c2c508a3c0e2d29f1dcde"><div class="ttname"><a href="/documentation/api/-constants-8h/">NM_ASSERT</a></div><div class="ttdeci">#define NM_ASSERT(Statement,...)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-constants-8h-source/">Constants.h:226</a></div></div>
 <div class="ttc" id="a_oop_8h_html_ac47e3c3f18db093d092e47e0e46b3d5d"><div class="ttname"><a href="/documentation/api/-oop-8h/">isDeleted</a></div><div class="ttdeci">#define isDeleted(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:266</a></div></div>
 <div class="ttc" id="aclass_listener_object_html_a12aa1f5be761aad9c22a82ff32801471"><div class="ttname"><a href="#a12aa1f5be761aad9c22a82ff32801471">ListenerObject::removeAllEventListeners</a></div><div class="ttdeci">void removeAllEventListeners()</div><div class="ttdoc">Remove all listener objects.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-listener-object-8c-source/">ListenerObject.c:246</a></div></div>
-<div class="ttc" id="aclass_message_dispatcher_html_ab4f87ece1cc527f9154c416075945729"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessages</a></div><div class="ttdeci">static bool discardAllDelayedMessages(ListenerObject listenerObject)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:379</a></div></div>
+<div class="ttc" id="aclass_message_dispatcher_html_ab4f87ece1cc527f9154c416075945729"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessages</a></div><div class="ttdeci">static bool discardAllDelayedMessages(ListenerObject listenerObject)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:229</a></div></div>
 </div>
 </div>
 </div>
@@ -306,8 +313,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  374</span>    <a class="code hl_function" href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessagesFromSender</a>(ListenerObject::safeCast(<span class="keyword">this</span>));</div>
 <div class="line"><span class="lineno">  375</span>    <a class="code hl_function" href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessagesForReceiver</a>(ListenerObject::safeCast(<span class="keyword">this</span>));</div>
 <div class="line"><span class="lineno">  376</span>}</div>
-<div class="ttc" id="aclass_message_dispatcher_html_a14f49196bda64a92d6ba083591d8cd88"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessagesFromSender</a></div><div class="ttdeci">static bool discardAllDelayedMessagesFromSender(ListenerObject sender)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:323</a></div></div>
-<div class="ttc" id="aclass_message_dispatcher_html_a77c55da48053b6c316ddd1daa0b4d9b1"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessagesForReceiver</a></div><div class="ttdeci">static bool discardAllDelayedMessagesForReceiver(ListenerObject receiver)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:351</a></div></div>
+<div class="ttc" id="aclass_message_dispatcher_html_a14f49196bda64a92d6ba083591d8cd88"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessagesFromSender</a></div><div class="ttdeci">static bool discardAllDelayedMessagesFromSender(ListenerObject sender)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:173</a></div></div>
+<div class="ttc" id="aclass_message_dispatcher_html_a77c55da48053b6c316ddd1daa0b4d9b1"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardAllDelayedMessagesForReceiver</a></div><div class="ttdeci">static bool discardAllDelayedMessagesForReceiver(ListenerObject receiver)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:201</a></div></div>
 </div>
 </div>
 </div>
@@ -337,8 +344,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  382</span>    <a class="code hl_function" href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardDelayedMessagesFromSender</a>(ListenerObject::safeCast(<span class="keyword">this</span>), message);</div>
 <div class="line"><span class="lineno">  383</span>    <a class="code hl_function" href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardDelayedMessagesForReceiver</a>(ListenerObject::safeCast(<span class="keyword">this</span>), message);</div>
 <div class="line"><span class="lineno">  384</span>}</div>
-<div class="ttc" id="aclass_message_dispatcher_html_a6e0612f7208bce531e6aeccd4cebd233"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardDelayedMessagesForReceiver</a></div><div class="ttdeci">static bool discardDelayedMessagesForReceiver(ListenerObject receiver, int32 message)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:295</a></div></div>
-<div class="ttc" id="aclass_message_dispatcher_html_a6fa081d211598b3c6bcb30104cca4287"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardDelayedMessagesFromSender</a></div><div class="ttdeci">static bool discardDelayedMessagesFromSender(ListenerObject sender, int32 message)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:267</a></div></div>
+<div class="ttc" id="aclass_message_dispatcher_html_a6e0612f7208bce531e6aeccd4cebd233"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardDelayedMessagesForReceiver</a></div><div class="ttdeci">static bool discardDelayedMessagesForReceiver(ListenerObject receiver, int32 message)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:145</a></div></div>
+<div class="ttc" id="aclass_message_dispatcher_html_a6fa081d211598b3c6bcb30104cca4287"><div class="ttname"><a href="/documentation/api/class-message-dispatcher/">MessageDispatcher::discardDelayedMessagesFromSender</a></div><div class="ttdeci">static bool discardDelayedMessagesFromSender(ListenerObject sender, int32 message)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-message-dispatcher-8c-source/">MessageDispatcher.c:117</a></div></div>
 </div>
 </div>
 </div>
@@ -371,7 +378,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  291</span> </div>
 <div class="line"><span class="lineno">  292</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
 <div class="line"><span class="lineno">  295</span>        {</div>
 <div class="line"><span class="lineno">  296</span>            nextNode = node-&gt;next;</div>
 <div class="line"><span class="lineno">  297</span> </div>
@@ -399,14 +406,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  319</span>                <span class="keywordflow">if</span>(<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(<span class="keyword">this</span>))</div>
 <div class="line"><span class="lineno">  320</span>                {</div>
 <div class="line"><span class="lineno">  321</span><span class="preprocessor">#ifndef __RELEASE</span></div>
-<div class="line"><span class="lineno">  322</span>                    Printing::setDebugMode();</div>
-<div class="line"><span class="lineno">  323</span>                    Printing::clear();</div>
-<div class="line"><span class="lineno">  324</span>                    Printing::text(<span class="stringliteral">&quot;Class:    &quot;</span>, 1, 12, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  325</span>                    Printing::text(<a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a>(<span class="keyword">this</span>), 13, 12, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  326</span>                    Printing::text(<span class="stringliteral">&quot;Method:    &quot;</span>, 1, 13, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  327</span>                    Printing::hex((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)event-&gt;callback, 13, 13, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  328</span>                    Printing::text(<span class="stringliteral">&quot;Event code: &quot;</span>, 1, 14, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
-<div class="line"><span class="lineno">  329</span>                    Printing::int32(event-&gt;code, 13, 14, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  322</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::setDebugMode</a>();</div>
+<div class="line"><span class="lineno">  323</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::clear</a>();</div>
+<div class="line"><span class="lineno">  324</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Class:    &quot;</span>, 1, 12, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  325</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<a class="code hl_define" href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a>(<span class="keyword">this</span>), 13, 12, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  326</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Method:    &quot;</span>, 1, 13, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  327</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::hex</a>((<a class="code hl_typedef" href="/documentation/api/-types-8h/">int32</a>)event-&gt;callback, 13, 13, 8, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  328</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::text</a>(<span class="stringliteral">&quot;Event code: &quot;</span>, 1, 14, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
+<div class="line"><span class="lineno">  329</span>                    <a class="code hl_function" href="/documentation/api/class-printing/">Printing::int32</a>(event-&gt;code, 13, 14, <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>);</div>
 <div class="line"><span class="lineno">  330</span>                    <a class="code hl_define" href="/documentation/api/-constants-8h/">NM_ASSERT</a>(!<a class="code hl_define" href="/documentation/api/-oop-8h/">isDeleted</a>(<span class="keyword">this</span>), <span class="stringliteral">&quot;ListenerObject::fireEvent: deleted during event listening&quot;</span>);</div>
 <div class="line"><span class="lineno">  331</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  332</span>                    <span class="keywordflow">break</span>;</div>
@@ -425,10 +432,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  345</span>        this-&gt;<a class="code hl_variable" href="#a9a94add9233fee0172513f97a1b4fbde">eventFirings</a>--;</div>
 <div class="line"><span class="lineno">  346</span>    }</div>
 <div class="line"><span class="lineno">  347</span>}</div>
-<div class="ttc" id="a_oop_8h_html_a461079f1d9f6a4903103f18ae3eb0da4"><div class="ttname"><a href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a></div><div class="ttdeci">#define __GET_CLASS_NAME(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:535</a></div></div>
-<div class="ttc" id="a_types_8h_html_a2d76908924b2f33a34a8dde159369b27"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
+<div class="ttc" id="a_oop_8h_html_a461079f1d9f6a4903103f18ae3eb0da4"><div class="ttname"><a href="/documentation/api/-oop-8h/">__GET_CLASS_NAME</a></div><div class="ttdeci">#define __GET_CLASS_NAME(object)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-oop-8h-source/">Oop.h:553</a></div></div>
+<div class="ttc" id="a_types_8h_html_a43d43196463bde49cb067f5c20ab8481"><div class="ttname"><a href="/documentation/api/-types-8h/">int32</a></div><div class="ttdeci">signed int int32</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-types-8h-source/">Types.h:25</a></div></div>
 <div class="ttc" id="aclass_hardware_manager_html_a4bf64bd4af05f96de863c0aa103b6e9e"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a></div><div class="ttdeci">static void suspendInterrupts()</div><div class="ttdoc">Suspend interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:195</a></div></div>
 <div class="ttc" id="aclass_hardware_manager_html_af5ffa43804c808e35bb4a22bd25a9d10"><div class="ttname"><a href="/documentation/api/class-hardware-manager/">HardwareManager::resumeInterrupts</a></div><div class="ttdeci">static void resumeInterrupts()</div><div class="ttdoc">Resume interrupts.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-hardware-manager-8h-source/">HardwareManager.h:180</a></div></div>
+<div class="ttc" id="aclass_printing_html_a1e43d7e70531d74fe03bea85e677cb29"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::int32</a></div><div class="ttdeci">static void int32(int32 value, uint8 x, uint8 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:299</a></div></div>
+<div class="ttc" id="aclass_printing_html_a92b0b91f848f46ae5305603a077489c8"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::text</a></div><div class="ttdeci">static void text(const char *string, int32 x, int32 y, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:288</a></div></div>
+<div class="ttc" id="aclass_printing_html_a99d5252d7ee3b715fd4189063f69252f"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::clear</a></div><div class="ttdeci">static void clear()</div><div class="ttdoc">Clear printing area in BGMAP memory.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:264</a></div></div>
+<div class="ttc" id="aclass_printing_html_a9c84c7ab379f7ef53e6ce5b320c4cd6b"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::hex</a></div><div class="ttdeci">static void hex(WORD value, uint8 x, uint8 y, uint8 length, const char *font)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:306</a></div></div>
+<div class="ttc" id="aclass_printing_html_aad0f1a46e008887c9f68670625d37497"><div class="ttname"><a href="/documentation/api/class-printing/">Printing::setDebugMode</a></div><div class="ttdeci">static void setDebugMode()</div><div class="ttdoc">Set mode to debug to bypass loading fonts through CharSets.</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-printing-8c-source/">Printing.c:104</a></div></div>
 <div class="ttc" id="aclass_virtual_list_html_a38ec1057d1bcc94228a1ea9dda1ec118"><div class="ttname"><a href="/documentation/api/class-virtual-list/">VirtualList::removeNode</a></div><div class="ttdeci">bool removeNode(VirtualNode node)</div><div class="ttdef"><b>Definition</b> <a href="/documentation/api/-virtual-list-8c-source/">VirtualList.c:450</a></div></div>
 </div>
 </div>
@@ -463,7 +475,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the telegram was processed </dd></dl>
 
-<p>Reimplemented in <a class="el" href="/documentation/api/class-camera-effect-manager/">CameraEffectManager</a>, <a class="el" href="/documentation/api/class-collider/">Collider</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/class-game-state/">GameState</a>, and <a class="el" href="/documentation/api/class-state-machine/">StateMachine</a>.</p>
+<p>Reimplemented in <a class="el" href="/documentation/api/class-camera-effect-manager/">CameraEffectManager</a>, <a class="el" href="/documentation/api/class-collider/">Collider</a>, <a class="el" href="/documentation/api/class-communication-manager/">CommunicationManager</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a>, <a class="el" href="/documentation/api/class-game-state/">GameState</a>, <a class="el" href="/documentation/api/class-state-machine/">StateMachine</a>, and <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="/documentation/api/-listener-object-8c-source/">388</a> of file <a class="el" href="/documentation/api/-listener-object-8c-source/">ListenerObject.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  389</span>{</div>
@@ -528,7 +540,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  257</span>        }</div>
 <div class="line"><span class="lineno">  258</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  259</span>        {</div>
-<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
 <div class="line"><span class="lineno">  261</span>            {</div>
 <div class="line"><span class="lineno">  262</span>                nextNode = node-&gt;next;</div>
 <div class="line"><span class="lineno">  263</span> </div>
@@ -586,7 +598,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  103</span>    {</div>
 <div class="line"><span class="lineno">  104</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
 <div class="line"><span class="lineno">  107</span>        {</div>
 <div class="line"><span class="lineno">  108</span>            nextNode = node-&gt;next;</div>
 <div class="line"><span class="lineno">  109</span> </div>
@@ -661,7 +673,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  152</span>    {</div>
 <div class="line"><span class="lineno">  153</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
 <div class="line"><span class="lineno">  156</span>        {</div>
 <div class="line"><span class="lineno">  157</span>            nextNode = node-&gt;next;</div>
 <div class="line"><span class="lineno">  158</span> </div>
@@ -736,7 +748,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  201</span>    {</div>
 <div class="line"><span class="lineno">  202</span>        <a class="code hl_function" href="/documentation/api/class-hardware-manager/">HardwareManager::suspendInterrupts</a>();</div>
 <div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-authenticator-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">for</span>(<a class="code hl_friend" href="/documentation/api/-virtual-circular-list-8c/">VirtualNode</a> node = this-&gt;<a class="code hl_variable" href="#a9867d0b4fc72feb68eadd9cf6d88cca0">events</a>-&gt;head, nextNode = <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a>; <a class="code hl_define" href="/documentation/api/-constants-8h/">NULL</a> != node; node = nextNode)</div>
 <div class="line"><span class="lineno">  205</span>        {</div>
 <div class="line"><span class="lineno">  206</span>            nextNode = node-&gt;next;</div>
 <div class="line"><span class="lineno">  207</span> </div>
