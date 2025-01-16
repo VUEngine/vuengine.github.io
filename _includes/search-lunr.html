@@ -9,7 +9,18 @@
     const resultsContainer = document.getElementById('lunrsearchresults');
     if (term && idx) {
       resultsContainer.innerHTML = resultsContainer.innerHTML;
-      const results = idx.search('*' + term + '*').splice(0, 20);
+      const results = idx
+        .search('*' + term + '*')
+        .map(r => ({
+          ...r,
+          score: r.ref.startsWith('/documentation/api/')
+            ? r.score
+            : r.ref.startsWith('/documentation/tutorial/')
+              ? r.score + 5
+              : r.score + 3
+        }))
+        .sort((a, b) => a.score < b.score)
+        .splice(0, 20);
       resultsLength = results.length;
       active = -1;
       if (resultsLength > 0) {
@@ -21,7 +32,11 @@
           const url = doc.url;
           const title = doc.title;
           const content = doc.content;
-          const icon = url.startsWith('/documentation/') ? 'fas fa-book fa-fw' : 'far fa-file fa-fw';
+          const icon = url.startsWith('/documentation/api/')
+            ? 'fas fa-cog fa-lg'
+            : url.startsWith('/documentation/')
+              ? 'fas fa-book fa-fw fa-lg'
+              : 'far fa-file fa-fw fa-lg';
           const context = '...'
             + content.slice(
               Math.max(0, metadata.position[0][0] - 25),
@@ -43,7 +58,7 @@
             resultsContainer.innerHTML +
             '<a href="' + url + '" class="list-group-item d-flex gap-3" onmousemove="setActive(' + i + ', false)">' +
             '<span class="icon"><i class="' + icon + '"></i></span>' +
-            '<span class="page flex-grow-1 d-flex flex-column">' +
+            '<span class="page flex-grow-1 d-flex flex-column overflow-hidden">' +
             '<span class="snippet text-nowrap">' + context + '</span>' +
             '<span class="title opacity-50">' + title + '</span>' +
             '</span>' +
