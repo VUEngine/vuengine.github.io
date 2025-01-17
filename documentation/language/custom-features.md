@@ -31,11 +31,11 @@ The `abstract` class modifier prevents the creation of class instances through t
 
 ### Singleton classes
 
-The language implements support to declare classes that can only have a single instance and adds automatically the necessary code to support it and to prevent more than one instantiation.
+The language support the declaration of classes that can only have a single instance and adds automatically the necessary code to prevent more than one instantiation.
 
 The singleton classes' instances are allocated in the stack.
 
-Since singletons are globally accesible, they put at risk the stability of the program by being modifiable from anywhere. So, it is important to have some mechanism to help preventing such modifications where possible.
+Since singletons are globally accesible, they put at risk the stability of the program by being modifiable from anywhere. So, it is important to have some mechanism to help preventing as much as possible such modifications.
 
 The transpiler adds the `secure` keyword to decorate non static methods of singleton classes that should not be called but by specific classes.
 
@@ -46,7 +46,7 @@ secure void SomeSingletonClass::someMethod()
 }
 ```
 
-Then, to restrict from were it is legal to call such method, a array of classes must be defined globally in non volatitle memory:
+Then, to restrict from were it is legal to call such method, an array of classes must be defined globally in non volatitle memory:
 
 ```cpp
 const ClassPointer SomSingletonClassAuthorizedClasses[] =
@@ -60,7 +60,7 @@ const ClassPointer SomSingletonClassAuthorizedClasses[] =
 Finally, the following method must be called where appropriate:
 
 ```cpp
-	SomeSingletonClass::secure(&SomSingletonClassAuthorizedClasses);
+SomeSingletonClass::secure(&SomSingletonClassAuthorizedClasses);
 ```
 
 After `SomeSingletonClass::secure` has been called with a non empty array of classes, if any other class besides those listed in the array tries to call `SomeSingletonClass::someMethod`, an exception like the following will be triggered:
@@ -68,7 +68,7 @@ After `SomeSingletonClass::secure` has been called with a non empty array of cla
 <a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Illegal method access"><img src="/documentation/images/language/custom-features/singleton-security.png" width="500" /></a><br/>
 _Illegal access to secure method_
 
-There are some limitations due to the fact that globality cannot really be so easily defeated. And this contraption doesn't pretend to achieve that. Instead, it only expects to be just a tool to help preventing potentially dangerous code paths when developing programs using Virtual C.
+There are some limitations due to the fact that globality cannot really be so easily defeated. And this contraption doesn't pretend to achieve that. Instead, it is a tool to help preventing potentially dangerous code paths when developing programs using Virtual C.
 
 ### Dynamic Singleton classes
 
@@ -80,7 +80,7 @@ Static classes cannot have instances. All their methods are static.
 
 ## Class extensions
 
-Classes can be extended through the use of the `extension` keyword. They provided a mechanism to achieve runtime method overloading on virtual methods.
+Classes can be extended through the use of the `extension` keyword. They provided a mechanism to achieve something like runtime method re-implementation on virtual methods.
 
 Give some class:
 

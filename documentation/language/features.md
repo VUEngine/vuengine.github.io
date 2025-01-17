@@ -8,7 +8,7 @@ title: Features
 
 ## Inheritance
 
-The base class of Virtual C is called `Object`, which declares and implements a minimal interface:
+The base class of Virtual C is called [Object](/documentation/api/class-object/), which declares and implements a minimal interface:
 
 ```cpp
 /// Class Object
@@ -48,9 +48,9 @@ abstract class Object : Object
 }
 ```
 
-`Object` is abstract, so it cannot be instantiated. And it inherits from itself. It supports RTTI by means of its `getCast` method, which allows to perform safe up and down castings at runtime.
+[Object](/documentation/api/class-object/) is abstract, so it cannot be instantiated. And it inherits from itself. It supports RTTI by means of its `getCast` method, which allows to perform safe up and down castings at runtime.
 
-Any new class must always inherit from the `Object` class or from another class that ultimately inherits from it.
+Any new class must always inherit from the [Object](/documentation/api/class-object/) class or from another class that ultimately inherits from it.
 
 ## Encapsulation
 
