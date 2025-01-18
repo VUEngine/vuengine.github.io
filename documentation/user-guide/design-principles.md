@@ -179,34 +179,54 @@ As another mechanism to facilitate the separation of concerns principle, the eng
 
 By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
 
-But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory and performance overhead, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
+But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory (that's why they are by default allocated in DRAM instead of WRAM) and performance overhead, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
 
-One of the first methods to protect from logically invalid calls is the `VUEngine::reset` method, which touches many of the engine's subsystems. To do so, it is decorated with the `secure` keyword:
+A singleton class' non static method can be protected as by qualifying it as follows:
 
 ```cpp
-secure void VUEngine::reset(bool resetSounds)
+secure void SomeSingletonClass::someSecureMethod()
 {
     [...]
 }
 ```
 
-And a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the [VUEngine](/documentation/api/class-vu-engine/) is be passed to `VUEngine::secure`:
+Then a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the singleton class has to be passed to `SomeSingletonClass::secure`:
 
 ```cpp
-const ClassPointer VUEngineAuthorizedClasses[] =
+const ClassPointer SomeSingletonClassAuthorizedClasses[] =
 {
-    typeofclass(GameState),
+    typeofclass(SomeAuthorizeClass),
     NULL
 };
 ```
 
+And finally, the above array is passed to `SomeSingletonClass::secure` at some point:
+
 ```cpp
-VUEngine::secure(&VUEngineAuthorizedClasses);
+SomeSingletonClass::secure(&SomeSingletonClassAuthorizedClasses);
 ```
 
-Notice that it is not necessary to list the [VUEngine](/documentation/api/class-vu-engine/) class itself in the list of authorized classes. Implicitly, all secured methods are accessible from their own classes without restrictions.
+Only the first call to `SomeSingletonClass::secure` has any effect, subsequent calls won't change the security conditions for the class.
 
-Only the first call to `ClassName::secure` has any effect, subsequent calls won't change the security conditions for the class.
+Implicitly, all secured methods are accessible from their own classes without restrictions. So, `SomeSingletonClass` still has access to `SomeSingletonClass::someSecureMethod`.
+
+One of the first methods to protect from logically invalid calls is the `VUEngine::start` method, which is the entry point of any game and should be only called once. To protect it from multiple calls, a global array of authorized classes is passed to its `secure` method:
+
+```cpp
+const ClassPointer VUEngineAuthorizedClasses[] =
+{
+    NULL
+};
+
+secure int32 VUEngine::start(GameState currentGameState)
+{
+    VUEngine::secure(&VUEngineAuthorizedClasses);
+
+    [...]
+}
+```
+
+In this way, the first call to `VUEngine::secure` secures it so no external class or function can call it again, otherwise, an exception is triggered during runtime in non release builds.
 
 The safety checks are removed in release builds to prevent them from impacting the game's performance.
 
