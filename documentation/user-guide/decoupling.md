@@ -113,29 +113,46 @@ void Entity::hide()
 
 [ListenerObjects](/documentation/api/class-listener-object/) can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
 
-To listen for events, an [EventListener](/documentation/api/class-eventlistener/) plus a scope object must be attached to a [ListenerObject](/documentation/api/class-listener-object/):
+To listen for events, add an event listener to a [ListenerObject](/documentation/api/class-listener-object/):
 
 ```cpp
 SomeClass::addEventListener
 (
-    someObject, ListenerObject::safeCast(someOtherObject),
-    (EventListener)SomeClass::onSomeInterestingEvent, kEventInteresting
+    someObject, ListenerObject::safeCast(someOtherObject), kEventInteresting
 );
 ```
 
-An [EventListener](/documentation/api/class-eventlistener/) method must return a boolean and receive a [ListenerObject](/documentation/api/class-listener-object/) as the event firer:
+Events are catched and processed by overriding the [ListenerObject](/documentation/api/class-listener-object/)'s `onEvent` method:
 
 ```cpp
-bool SomeClass::onSomeInterestingEvent(ListenerObject eventFirer __attribute__ ((unused)))
+bool SomeClass::onEvent(ListenerObject eventFirer, uint16 eventCode)
 {
-    // Do interesting stuff
+    switch(eventCode)
+    {
+        case kEventInteresting1:
+        {
+            // Do interesting stuff
+            [...]
 
-    // Return true to keep listening for the event, false otherwise
-    return true;
+            // By returning true, the listener is kept
+            return true;
+        }
+
+        case kEventInteresting2:
+        {
+            // Do interesting stuff
+            [...]
+
+            // By returning false, the listener is dropped
+            return false;
+        }
+    }
+
+    return Base::onEvent(this, eventFirer, eventCode);
 }
 ```
 
-If the [EventListener](/documentation/api/class-eventlistener/) returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the method must return `true`.
+If the `onEvent` method returns `false`, it is removed from the eventFirer’s list of listeners; to retain the listener, the method must return `true`.
 
 An event is fired by calling `fireEvent` on an instance of [ListenerObject](/documentation/api/class-listener-object/):
 
