@@ -181,7 +181,7 @@ By their own nature, singletons are globally accessible, hence, they come with a
 
 But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory (that's why they are by default allocated in DRAM instead of WRAM) and performance overhead, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer, by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
 
-A singleton class' non static method can be protected as by qualifying it as follows:
+A singleton class' non static method can be protected by qualifying it as follows:
 
 ```cpp
 secure void SomeSingletonClass::someSecureMethod()
