@@ -232,7 +232,7 @@ Actor::safeCast
 Or you acquire it indirectly if the [Actor](/documentation/api/class-actor/) is being added automatically by the [Stage](/documentation/api/class-stage/)’s streaming as specified in the [StageSpec](/documentation/api/struct-stage-spec/):
 
 ```cpp
-Actor childActor = Actor::safeCast(Actor::getChildByName(actor, childActorName, false));
+Actor childActor = Actor::safeCast(Actor::getChildByName(actor, "ChildActorName", false));
 ```
 
 Then you can move around the [Actor](/documentation/api/class-actor/), rotate it, etc., and all its components will take care of keeping their states in sync with the [Actor](/documentation/api/class-actor/).
