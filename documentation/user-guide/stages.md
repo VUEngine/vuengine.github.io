@@ -10,6 +10,8 @@ title: Stages
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) implements [Stages](/documentation/api/class-stage/) as collections of a specific type of [Entity](/documentation/api/class-entity/): [Actors](/documentation/api/class-actor/).
 
+Since the Virtual Boy's CPU lacks data cache, the penalty for having to dereference pointers instead of indexing fixed arrays is not big enough to give up the generality that the use of lists affords.
+
 ## Entity
 
 A [Entity](/documentation/api/class-entity/) is a [ListenerObject](/documentation/api/class-listener-object/), so it can send and receive messages and it can listen for and fire events. It adds to it a 3D [Transformation](/documentation/api/struct-transformations/), which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that [Transformation](/documentation/api/struct-transformations/). Finally, it supports the attachment of [Components](/documentation/api/class-component/) to it. [Components](/documentation/api/class-component/) can be visual components, like [Sprites](/documentation/api/class-sprite/) and [Wireframes](/documentation/api/class-wireframe/); behavioral components, like steering behaviors; physical components or collision components.
