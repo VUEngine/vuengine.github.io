@@ -41,7 +41,7 @@ static inline Vector3D Vector3D::scalarDivision(Vector3D vector, fixed_t scalar)
 }
 ```
 
-[Transformations](/documentation/api/struct-transformations/) and its attributes are declared as follows:
+[Transformations](/documentation/api/struct-transformation/) and its attributes are declared as follows:
 
 ```cpp
 // A spatial description

@@ -14,17 +14,17 @@ Since the Virtual Boy's CPU lacks data cache, the penalty for having to derefere
 
 ## Entity
 
-A [Entity](/documentation/api/class-entity/) is a [ListenerObject](/documentation/api/class-listener-object/), so it can send and receive messages and it can listen for and fire events. It adds to it a 3D [Transformation](/documentation/api/struct-transformations/), which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that [Transformation](/documentation/api/struct-transformations/). Finally, it supports the attachment of [Components](/documentation/api/class-component/) to it. [Components](/documentation/api/class-component/) can be visual components, like [Sprites](/documentation/api/class-sprite/) and [Wireframes](/documentation/api/class-wireframe/); behavioral components, like steering behaviors; physical components or collision components.
+A [Entity](/documentation/api/class-entity/) is a [ListenerObject](/documentation/api/class-listener-object/), so it can send and receive messages and it can listen for and fire events. It adds to it a 3D [Transformation](/documentation/api/struct-transformation/), which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that [Transformation](/documentation/api/struct-transformation/). Finally, it supports the attachment of [Components](/documentation/api/class-component/) to it. [Components](/documentation/api/class-component/) can be visual components, like [Sprites](/documentation/api/class-sprite/) and [Wireframes](/documentation/api/class-wireframe/); behavioral components, like steering behaviors; physical components or collision components.
 
 The [Entity](/documentation/api/class-entity/) class is abstract, therefore there can not be pure instances of it.
 
 ## Container
 
-[Containers](/documentation/api/class-container/) are a special type of [Entity](/documentation/api/class-entity/) that implement parenting by adding a local [Transformation](/documentation/api/struct-transformations/) relative to that of a parent [Container](/documentation/api/class-container/). They are the means by which the engine implements the composite pattern.
+[Containers](/documentation/api/class-container/) are a special type of [Entity](/documentation/api/class-entity/) that implement parenting by adding a local [Transformation](/documentation/api/struct-transformation/) relative to that of a parent [Container](/documentation/api/class-container/). They are the means by which the engine implements the composite pattern.
 
 [Containers](/documentation/api/class-container/) can have children [Containers](/documentation/api/class-container/), grandchildren [Containers](/documentation/api/class-container/), grand-grandchildren [Containers](/documentation/api/class-container/), etc.
 
-The engine takes care of keeping up to date the [Containers](/documentation/api/class-container/)’ [Transformation](/documentation/api/struct-transformations/) by concatenating their local [Transformation](/documentation/api/struct-transformations/) to their reference environment, which is the global [Transformation](/documentation/api/struct-transformations/) of the parent [Container](/documentation/api/class-container/).
+The engine takes care of keeping up to date the [Containers](/documentation/api/class-container/)’ [Transformation](/documentation/api/struct-transformation/) by concatenating their local [Transformation](/documentation/api/struct-transformation/) to their reference environment, which is the global [Transformation](/documentation/api/struct-transformation/) of the parent [Container](/documentation/api/class-container/).
 
 [Containers](/documentation/api/class-container/) can forward or block the flow of logic towards their children. They can propagate messages to them too.
 
@@ -314,7 +314,7 @@ Actor::applyForce(actor, &force, true);
 
 ## ParticleSystem
 
-[ParticleSystems](/documentation/api/class-particlesystem/) are a specific kind of [Actor](/documentation/api/class-actor/) whose purpose is to instantiate a peculiar kind of [Entity](/documentation/api/class-entity/): [Particles](/documentation/api/class-particles/).
+[ParticleSystems](/documentation/api/class-particlesystem/) are a specific kind of [Actor](/documentation/api/class-actor/) whose purpose is to instantiate a peculiar kind of [Entity](/documentation/api/class-entity/): [Particles](/documentation/api/class-particle/).
 
 As any other [Actor](/documentation/api/class-actor/), components can be attached to [ParticleSystems](/documentation/api/class-particlesystem/) and they have their own **Spec** that adds a few attributes to control how [Particles](/documentation/api/class-particle/) are generated:
 

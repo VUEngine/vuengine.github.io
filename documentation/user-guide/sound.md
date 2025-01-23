@@ -145,7 +145,7 @@ extern SoundSpec SampleSoundSpec;
 Sound sound = SoundManager::getSound(&SampleSoundSpec, NULL, NULL);
 ```
 
-Sound playback supports spatial positioning through stereo separation if a reference to a [Transformation](/documentation/api/struct-transformations/) is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
+Sound playback supports spatial positioning through stereo separation if a reference to a [Transformation](/documentation/api/struct-transformation/) is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
 
 ```cpp
 if(!isDeleted(sound))
