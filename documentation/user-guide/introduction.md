@@ -79,3 +79,71 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) is a high-level, object oriented game engine for the Nintendo Virtual Boy. It is written in [Virtual C](../../language/introduction), a custom C-dialect that resembles some of C++’ syntax that is converted by our custom transpiler to plain C with macros.
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) aims to facilitate the creation of games for the Virtual Boy without having to worry about nor master its underlying hardware unless you want to. Instead, it provides higher level abstractions that are relevant for general game development.
+
+## Features
+
+- General:
+	- Object Oriented
+	- Composite and composition architecture
+	- Decoupling through message sending and propagation, and event firing
+	- State machines
+	- Separation of concers through *Spec* recipes to instantiate
+	game actors
+	- Restricted singletons
+	- Dinaymic memory allocation through custom memory pools
+	- Runtime debugging tools
+	- User data saving support
+	- Assets preloading
+
+- Stages:
+	- 3D stages
+	- Automatic streaming
+	- Parenting
+
+- Components:
+	- Behaviors
+	- Physics
+	- Colliders
+	- Sprites
+	-Wireframes
+
+- Particles:
+	- Physically capable
+	- Recyclable
+
+- Rendering:
+	- CHAR memory management
+	- BGAMP memory management
+	- OBJECT memory management
+	- WORLD memory management
+	- Direct frame buffer manipulation
+	- Affine/H-Bias effects
+	- Transparency
+	- Event driven frame based animation
+
+- Physics:
+	- Basic accelerated/uniform movement
+	- Gravity
+	- Friction
+	- Bouncing
+	- Collision detection and notification
+
+- Sound:
+	- Fully flexible VSU-native soundtrack format
+	- PCM playback
+
+- Development tools:
+	- Debug
+		- Memory usage
+		- Profiling data
+		- Streaming
+		- Hardware registers' usage
+		- VIP inspector:
+			- CHAR memory
+			- BGMAP memory
+			- OBJECT memory
+			- WORLD memory
+		- Colliders
+	- Stage editor
+	- Animations inspector
+	- Sound test
