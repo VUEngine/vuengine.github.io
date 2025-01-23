@@ -40,7 +40,7 @@ To make effective any change to these options, the whole project needs to be ful
 
 ## Game entry point
 
-Each game has to provide as its main entry point a global function called `game`. By convention, this is provided in a file called **Game.c** in the game's source folder. In receives the instance of the [VUEngine](/documentation/api/class-v-u-engine/) class and has to return the instance of the `GameState` that the engine will enter as its first state:
+Each game has to provide as its main entry point a global function called `game`. By convention, this is provided in a file called **Game.c** in the game's source folder. The function has to return the instance of the `GameState` that the engine will enter as its first state:
 
 ```cpp
 GameState game(void)
