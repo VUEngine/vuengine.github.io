@@ -8,7 +8,7 @@ title: Game Logic
 
 ## Update
 
-Most likely, any game will run inside an infinite loop that starts after some previous initialization and that only breaks when the program is going to finish. [VUEngine](https://github.com/VUEngine/VUEngine-Core) games work the same, but the loop where the actual game’s logic runs (not to confuse it with the loop that the engine’s core runs in as part of the cycle that loops over the engine’s subsystems like physics simulations, rendering, etc.) is implemented as an iterative call to the [VUEngine](/documentation/api/class-vu-engine/) instance’s current [GameState](/documentation/api/class-game-state/)’s execute method.
+Most likely, any game will run inside an infinite loop that starts after some previous initialization and that only breaks when the program is going to finish. [VUEngine](https://github.com/VUEngine/VUEngine-Core) games work the same, but the loop where the actual game’s logic runs (not to confuse it with the loop that the engine’s core runs in as part of the cycle that loops over the engine’s subsystems like physics simulations, rendering, etc.) is implemented as an iterative call to the [VUEngine](/documentation/api/class-v-u-engine/) instance’s current [GameState](/documentation/api/class-game-state/)’s execute method.
 
 The [GameState](/documentation/api/class-game-state/)’s implementation of the execute method calls `Stage::update` on its [Stage](/documentation/api/class-stage/)’s instance, which in turn forwards that call to its children’s implementation.
 
@@ -24,7 +24,7 @@ void SomeGameState::execute(void* owner __attribute__((unused)))
 }
 ```
 
-By overriding the execute method, the `SomeGameState::execute` method in the above example will be called once per game frame once the [VUEngine](/documentation/api/class-vu-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) enters that state. And by forwarding the call to the base’s implementation, any class deriving from [Actor](/documentation/api/class-actor/) that overrides its update method will be called once per frame too:
+By overriding the execute method, the `SomeGameState::execute` method in the above example will be called once per game frame once the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) enters that state. And by forwarding the call to the base’s implementation, any class deriving from [Actor](/documentation/api/class-actor/) that overrides its update method will be called once per frame too:
 
 ```cpp
 void CogWheel::update()

@@ -21,9 +21,9 @@ order expose those features in a more friendly manner, we implemented a transpil
 
 ## State Machines
 
-The core of the engine is the [VUEngine](/documentation/api/class-vu-engine/) singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
+The core of the engine is the [VUEngine](/documentation/api/class-v-u-engine/) singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
 
-Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-vu-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to in the game’s starting function:
+Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to in the game’s starting function:
 
 ```cpp
 int32 game(void)
@@ -60,9 +60,9 @@ virtual void suspend(void* owner);
 virtual void resume(void* owner);
 ```
 
-Through the life of a program, the [VUEngine](/documentation/api/class-vu-engine/) instance will enter different [GameStates](/documentation/api/class-game-state/), each representing a screen that is presented to the user for him to interact with.
+Through the life of a program, the [VUEngine](/documentation/api/class-v-u-engine/) instance will enter different [GameStates](/documentation/api/class-game-state/), each representing a screen that is presented to the user for him to interact with.
 
-[StateMachines](/documentation/api/class-state-machine/) can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-vu-engine/) class. [Actors](/documentation/api/class-actor/), which are used to implement enemies, vehicles, etc., can use [StateMachines](/documentation/api/class-state-machine/) to define the logic that drives their behavior with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
+[StateMachines](/documentation/api/class-state-machine/) can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-v-u-engine/) class. [Actors](/documentation/api/class-actor/), which are used to implement enemies, vehicles, etc., can use [StateMachines](/documentation/api/class-state-machine/) to define the logic that drives their behavior with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
 
 ## Components
 
@@ -88,7 +88,7 @@ Each [Component](/documentation/api/class-component/) keeps a reference to the o
 
 ## Parenting
 
-A game must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. In the context of [VUEngine](/documentation/api/class-vu-engine/) games, such objects are constructed and managed by a [GameState](/documentation/api/class-game-state/) through an instance of the [Stage](/documentation/api/class-stage/) class. All the objects that belong to a [Stage](/documentation/api/class-stage/) have to be instances of the [Actor](/documentation/api/class-actor/) class. And both, it and the [Stage](/documentation/api/class-stage/) class, inherit from the [Container](/documentation/api/class-container/) class, which is a special type of [Entity](/documentation/api/class-entity/) that keeps a local transformation relative to that of another [Container](/documentation/api/class-container/) that acts as its parent.
+A game must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. In the context of [VUEngine](/documentation/api/class-v-u-engine/) games, such objects are constructed and managed by a [GameState](/documentation/api/class-game-state/) through an instance of the [Stage](/documentation/api/class-stage/) class. All the objects that belong to a [Stage](/documentation/api/class-stage/) have to be instances of the [Actor](/documentation/api/class-actor/) class. And both, it and the [Stage](/documentation/api/class-stage/) class, inherit from the [Container](/documentation/api/class-container/) class, which is a special type of [Entity](/documentation/api/class-entity/) that keeps a local transformation relative to that of another [Container](/documentation/api/class-container/) that acts as its parent.
 
 Parenting allows easy transformation of whole sets of [Actors](/documentation/api/class-actor/) in a [Stage](/documentation/api/class-stage/) by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and ideally this happens without having to manually keep track of the buttons’ absolute or global positions.
 
