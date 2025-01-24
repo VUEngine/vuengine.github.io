@@ -98,7 +98,7 @@ Some of the earliest requirements and goals of the engine were to provide mechan
 
 Messages can be sent directly to another [ListenerObject](/documentation/api/class-listener-object/) when the target is known, or they can be propagated through the [Stage](/documentation/api/class-stage/)’s children list.
 
-A special kind of message, called command, can be propagated to the [Components](/documentation/api/class-component/) attached to a [Entity](/documentation/api/class-entity/).
+A special kind of message, called command, can be propagated to the [Components](/documentation/api/class-component/) attached to an [Entity](/documentation/api/class-entity/).
 
 ## Separation of concerns
 

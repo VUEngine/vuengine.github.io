@@ -106,6 +106,34 @@ The following modes are available:
 
 Normally, you'll work in **Beta** mode, which includes a selected set of debug asserts. When debugging, you'll want to switch to **Tools** mode, to include the engine's various debugging tools, or to **Debug** mode for the full set of runtime assertions and debug output. Be warned that **Debug** mode is heavy on resources and has the potential to slow down your program considerably. Finally, to build a releasable ROM, you'll want to build in **Release** mode to get rid of any asserts or debug flags.
 
+### Debug
+
+In this mode, the produced ROM will contain all the safety checks that the engine implements with the aim to prevent undefined behavior caused by passing around invalid pointers.
+
+The calls to `SomeClass::safeCast` will be internally converted into a call to `Object::getCast`, which will perform a RTTI check on the provided pointer to ensure that it is an instance of the intended class.
+
+The same check will be performed at the start of each class method on the `this` pointer.
+
+There is a heavy performance hit in this mode and the amount of calls to `Object::getCast` can easily overflow the stack if not careful. Because of this, the engine halves the configured target frame rate to mitigate that scenario from happening.
+
+Debug mode enables the [Developer Tools](/documentation/user-guide/development-tools/).
+
+### Tools
+
+This mode removes some of the checks that debug mode enables, letting the games to run at the intended frame rate target, but still enables access to the [Developer Tools](/documentation/user-guide/development-tools/).
+
+### Beta
+
+This is the default building mode in [VUEngine Studio](https://www.vuengine.dev/) and is the recommended one for development. It disables the [Developer Tools](/documentation/user-guide/development-tools/) and removes the injected of the safety checks added by the transpiler in debug and tools modes, but leaves in the checks performend through the explicit usage of the `NM_ASSERT` macro.
+
+Although it still entails a significative performance hit that makes ROMs compiled in this mode generally too slow to represent the final game as it should be playable on hardware.
+
+### Release
+
+This is the mode intended to produce ROMs that should perform well on the Virtual Boy. To acomplish that, it removes almost all but the most critical safety checks that the engine implements, which are only removed by defining the `__SHIPPING` macro through the `EngineConfig` editor.
+
+It is strongly adviced to not use this mode through development, but only for testing on hardware.
+
 ## Build Options
 
 Additional build options are available through the settings dialog. These will prove helpful when having to debug harder problems.
@@ -150,68 +178,11 @@ A successful build will result in the creation of a Virtual Boy ROM, a binary V8
 
 ## Troubleshooting
 
-When a build fails, you can, in the best case, just follow the error messages to find and fix the problem, and get the build to succeed again. Error messages can often be a bit cryptic, though. See below for info on how to diagnose build errors.
+#### I am getting the following error after compiling, what does it mean?
 
-### Error diagnosis
-
-Since the engine makes heavy use of pointer logic, it is really easy to trigger difficult to find bugs. In order to mitigate this issue, [VUEngine](https://github.com/VUEngine/VUEngine-Core) provides the following aids:
-
-#### Asserts
-
-Use the `ASSERT` macro to check every pointer or variable which can be troublesome; in particular, place an `ASSERT` checking that the `this` pointer passed to the class's methods is not `NULL`.
-
-The engine provides two kinds of `ASSERT` macros, which check a given statement and throw an exception with a given error message if this statement returns false. These macros should be used throughout the code to make debugging easier. Since the engine relies on heavy pointer usage, it is common to operate on a `NULL` pointer and get lost.
-
-##### ASSERT
-
-Only inserted when compiling under **Debug** mode. It is used at the start of most of the engine's methods to check that the `this` pointer is not `NULL`. Since the MemoryPool writes a 0 in the first byte of a deleted pointer, this helps to assure that any memory slot within the MemoryPool's pools has a 0 when it has been deleted.
-
-Another good use case for this would be to check an object's class against the expected class as shown below.
-
-```cpp
-ASSERT(__GET_CAST(ClassName, someObject), "ClassName::methodName: Wrong object class");
+```bash
+/opt/gccvb/lib/gcc/v810/4.4.2/../../../../v810/bin/ld: main.elf section '.bss' will not fit in region 'ram'
+/opt/gccvb/lib/gcc/v810/4.4.2/../../../../v810/bin/ld: region 'ram' overflowed by xx bytes
 ```
 
-##### NM_ASSERT
-
-Inserted under any compilation type (NM stands for "non maskable"). This macro is meant to be placed in sensible parts of the code. Here's a few examples of usage in [VUEngine](https://github.com/VUEngine/VUEngine-Core):
-
-- **MemoryPool allocation**:
-  To let you know that the memory is full, otherwise extremely hard to track bugs occur.
-- **SpriteManager, registering a new Sprite**:
-  To let you know that there are no more WORLDs available.
-- **ParamTableManager, registering a new Sprite**:
-  To let you know that param memory is depleted.
-
-#### Initialize everything
-
-One of the most difficult, and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange behavior often are caused by not properly initialized variables. To aid the detection of such mistakes, set `memoryPools.cleanUp` to `true` in `config/Engine.json` to define the `__MEMORY_POOL_CLEAN_UP` macro. This will force the engine to put every memory pool's free block to 0 when the game changes its state, so, if the problem gets solved by defining such macro, the cause is, most likely, an uninitialized variable.
-
-#### MemoryPool size
-
-Whenever crashes appear more or less randomly with alternating exceptions, the cause will be, most likely, a stack overflow. Try to reduce the memory pool size to leave a bit more room for the stack. Since the safe minimum for the stack is about 2KB, your memory pool configuration should not exceed 62KB (depending on how deep the stack can grow because of nested function calls, this limit could be lower; this is specially the case when compiling under **Debug** mode).
-
-#### Cast everything
-
-Because the engine implements class inheritance by accumulation of attributes' definitions within macros, it is necessary to cast every pointer of any given class to its base class in order to avoid compiler warnings when calling the base class' methods. This exposes the program to hard to identify errors. In order to mitigate this danger, cast every pointer before passing it to the base class' method by following this pattern:
-
-```cpp
-BaseClass::method(__SAFE_CAST(BaseClass, object), ...);
-```
-
-When compiling for release, the macro is replaced by a simple C type cast; while for debug, the `Object::getCast` method will be called, returning `NULL` if the object does not inherit from the given BaseClass, raising an exception in the method (which must check that the `this` pointer isn't `NULL`).
-
-#### Exceptions
-
-When an exception is thrown in-game in **Debug** mode, you're presented with some output that's meant to help you find the exact location that is causing the crash. These are last process, LP and SP as well as the exception message.
-
-Looking for the message in both your game code as well as the engine would be the quickest thing to do but should give you only a rough idea of the problem's root in most cases.
-
-The LP (linker pointer) value shows you the exact location in program where the crash occurred and will lead you to the function that has caused it. Enable the `Build: Dump Elf` setting and recompile. The compiler will produce a file called `machine-{MODE}.asm` in the project's `build/{MODE}` folder. It contains a huge list of all functions, their ASM equivalent and memory locations. Search it for your LP value and it will lead you to the faulty function.
-
-The SP (stack pointer) value becomes useful in the (seldom) case of a stack overflow. Since the check is performed during a timer interrupt, it is possible that an overflow occurs between interrupts. By checking the SP value against the `__lastDataVariable` address in the `sections.txt` file, you can guess that there was an overflow. As described for the `machine.asm` file above, activate generation of the `sections.txt` file in the makefile.
-
-#### Other useful macros
-
-- `__GET_CLASS_NAME()`:
-  Get the class of an object using this macro.
+In the context of the engine, it means that the memory pool is too big. You're trying to reserve more RAM than physically exists.
