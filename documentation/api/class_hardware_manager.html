@@ -24,7 +24,7 @@ permalink: documentation/api/class-hardware-manager/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for HardwareManager:</div>
 <div class="dyncontent">
@@ -37,13 +37,16 @@ Inheritance diagram for HardwareManager:</div>
 <table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5d0e768603290c5e93400887f99cf663" id="r_a5d0e768603290c5e93400887f99cf663"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d0e768603290c5e93400887f99cf663">initialize</a> ()</td></tr>
+<tr class="memdesc:a5d0e768603290c5e93400887f99cf663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the basic hardware registries.  <br /></td></tr>
+
 <tr class="memitem:ab81c82ffe32db3284514fccc37889039" id="r_ab81c82ffe32db3284514fccc37889039"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab81c82ffe32db3284514fccc37889039">reset</a> ()</td></tr>
-<tr class="memdesc:ab81c82ffe32db3284514fccc37889039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset hardware registries.  <br /></td></tr>
+<tr class="memdesc:ab81c82ffe32db3284514fccc37889039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the hardware managers.  <br /></td></tr>
 
 <tr class="memitem:ad0707a9e22bec6e3ed9a0bec127718b5" id="r_ad0707a9e22bec6e3ed9a0bec127718b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0707a9e22bec6e3ed9a0bec127718b5">halt</a> ()</td></tr>
 <tr class="memdesc:ad0707a9e22bec6e3ed9a0bec127718b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Halt the CPU.  <br /></td></tr>
 
-<tr class="memitem:a773977e556c67b4f94bd949fc49d72c6" id="r_a773977e556c67b4f94bd949fc49d72c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a773977e556c67b4f94bd949fc49d72c6">setInterruptLevel</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint8</a> level)</td></tr>
+<tr class="memitem:a773977e556c67b4f94bd949fc49d72c6" id="r_a773977e556c67b4f94bd949fc49d72c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a773977e556c67b4f94bd949fc49d72c6">setInterruptLevel</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint8</a> level)</td></tr>
 
 <tr class="memitem:a15f7f248d8f209cd3cd81fc169b93519" id="r_a15f7f248d8f209cd3cd81fc169b93519"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f7f248d8f209cd3cd81fc169b93519">enableInterrupts</a> ()</td></tr>
 <tr class="memdesc:a15f7f248d8f209cd3cd81fc169b93519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable interrupts.  <br /></td></tr>
@@ -63,15 +66,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a203f4eed59492dd1963b85449e917f82" id="r_a203f4eed59492dd1963b85449e917f82"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a203f4eed59492dd1963b85449e917f82">disableMultiplexedInterrupts</a> ()</td></tr>
 <tr class="memdesc:a203f4eed59492dd1963b85449e917f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable multiplexed interrupts.  <br /></td></tr>
 
-<tr class="memitem:aafd9fae5b5ad8e1935aa6c2309a856e1" id="r_aafd9fae5b5ad8e1935aa6c2309a856e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafd9fae5b5ad8e1935aa6c2309a856e1">getStackPointer</a> ()</td></tr>
+<tr class="memitem:aafd9fae5b5ad8e1935aa6c2309a856e1" id="r_aafd9fae5b5ad8e1935aa6c2309a856e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafd9fae5b5ad8e1935aa6c2309a856e1">getStackPointer</a> ()</td></tr>
 
-<tr class="memitem:a95313abcbba0b5e25f0b7dec4cb935bf" id="r_a95313abcbba0b5e25f0b7dec4cb935bf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95313abcbba0b5e25f0b7dec4cb935bf">getLinkPointer</a> ()</td></tr>
+<tr class="memitem:a95313abcbba0b5e25f0b7dec4cb935bf" id="r_a95313abcbba0b5e25f0b7dec4cb935bf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95313abcbba0b5e25f0b7dec4cb935bf">getLinkPointer</a> ()</td></tr>
 
-<tr class="memitem:a70c5bbeab720a268ba9a46b06ffe6a56" id="r_a70c5bbeab720a268ba9a46b06ffe6a56"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70c5bbeab720a268ba9a46b06ffe6a56">getPSW</a> ()</td></tr>
+<tr class="memitem:a70c5bbeab720a268ba9a46b06ffe6a56" id="r_a70c5bbeab720a268ba9a46b06ffe6a56"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70c5bbeab720a268ba9a46b06ffe6a56">getPSW</a> ()</td></tr>
 
-<tr class="memitem:a9d3bc452fb7b55535f7af24dc6348c64" id="r_a9d3bc452fb7b55535f7af24dc6348c64"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d3bc452fb7b55535f7af24dc6348c64">printStackStatus</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> y, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a> resumed)</td></tr>
+<tr class="memitem:a9d3bc452fb7b55535f7af24dc6348c64" id="r_a9d3bc452fb7b55535f7af24dc6348c64"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d3bc452fb7b55535f7af24dc6348c64">printStackStatus</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> y, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> resumed)</td></tr>
 
-<tr class="memitem:a99aac7c80aa4c2f40e658103717eaaca" id="r_a99aac7c80aa4c2f40e658103717eaaca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99aac7c80aa4c2f40e658103717eaaca">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> y)</td></tr>
+<tr class="memitem:a99aac7c80aa4c2f40e658103717eaaca" id="r_a99aac7c80aa4c2f40e658103717eaaca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99aac7c80aa4c2f40e658103717eaaca">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> y)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -82,10 +85,10 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
 
-<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
-<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/Oop.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/Oop.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/Oop.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/Oop.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
 
 <tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
 <tr class="memitem:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object" id="r_a481b05c1f25b4e686eca17995944bfcc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">vTable</a></td></tr>
@@ -97,7 +100,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
 <p>Centralizes the management of the hardware. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L59">59</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L59">59</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4407ff56713e795ab789085728deb9ea" name="a4407ff56713e795ab789085728deb9ea"></a>
 <h2 class="memtitle">disableInterrupts()</h2>
@@ -124,7 +127,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Disable interrupts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L166">166</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L169">169</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +156,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Disable multiplexed interrupts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L231">231</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L234">234</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -182,7 +185,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Enable interrupts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L152">152</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L155">155</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +214,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Enable multiplexed interrupts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L207">207</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L210">210</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -225,7 +228,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> HardwareManager::getLinkPointer </td>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> HardwareManager::getLinkPointer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -239,7 +242,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the Link Pointer's value. </p><dl class="section return"><dt>Returns</dt><dd>Link pointer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L259">259</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L262">262</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> HardwareManager::getPSW </td>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> HardwareManager::getPSW </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -267,7 +270,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the PSW </p><dl class="section return"><dt>Returns</dt><dd>PSW </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L274">274</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L277">277</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -281,7 +284,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> HardwareManager::getStackPointer </td>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> HardwareManager::getStackPointer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -295,7 +298,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the Stack Pointer's value. </p><dl class="section return"><dt>Returns</dt><dd>Stack pointer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L244">244</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L247">247</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -326,6 +329,33 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a5d0e768603290c5e93400887f99cf663" name="a5d0e768603290c5e93400887f99cf663"></a>
+<h2 class="memtitle">initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void HardwareManager::initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the basic hardware registries. </p>
+
+</div>
+</div>
 <a id="a99aac7c80aa4c2f40e658103717eaaca" name="a99aac7c80aa4c2f40e658103717eaaca"></a>
 <h2 class="memtitle">print()</h2>
 
@@ -338,12 +368,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static void HardwareManager::print </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -360,7 +390,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.c#L108">108</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.c">HardwareManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c#L136">136</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c">HardwareManager.c</a>.</p>
 
 </div>
 </div>
@@ -376,17 +406,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static void HardwareManager::printStackStatus </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>resumed</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>resumed</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -404,7 +434,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.c#L190">190</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.c">HardwareManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c#L218">218</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c">HardwareManager.c</a>.</p>
 
 </div>
 </div>
@@ -431,7 +461,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reset hardware registries. </p>
+<p>Reset the hardware managers. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c#L117">117</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c">HardwareManager.c</a>.</p>
 
 </div>
 </div>
@@ -460,7 +492,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Resume interrupts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L180">180</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L183">183</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +508,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static void HardwareManager::setInterruptLevel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -493,7 +525,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L131">131</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L134">134</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
@@ -522,13 +554,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Suspend interrupts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h#L195">195</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h#L198">198</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Hardware/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.h">HardwareManager.h</a></li>
-<li>VUEngine-Core/source/Hardware/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Hardware/HardwareManager.c">HardwareManager.c</a></li>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.h">HardwareManager.h</a></li>
+<li>VUEngine-Core/source/Hardware/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/HardwareManager.c">HardwareManager.c</a></li>
 </ul>
 </div>
 

@@ -52,7 +52,7 @@ html {
 
     /* font-families. will affect all text on the website
      * font-family: the normal font for text, headlines, menus
-     * font-family-monospace: used for preformatted text in memtitle, code, fragments
+     * font-family-monospace: used for preformatted text in memtitle, code
      */
     --font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     --font-family-monospace: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
@@ -61,7 +61,7 @@ html {
     --page-font-size: 15.6px;
     --navigation-font-size: 14.4px;
     --toc-font-size: 13.4px;
-    --code-font-size: 14px; /* affects code, fragment */
+    --code-font-size: 14px; /* affects code */
     --title-font-size: 22px;
 
     /* content text properties. These only affect the page content, not the navigation or any other ui elements */
@@ -128,18 +128,6 @@ html {
 
     /* fragment colors */
     --fragment-background: #F8F9FA;
-    --fragment-foreground: #37474F;
-    --fragment-keyword: #bb6bb2;
-    --fragment-keywordtype: #8258b3;
-    --fragment-keywordflow: #d67c3b;
-    --fragment-token: #438a59;
-    --fragment-comment: #969696;
-    --fragment-link: #5383d6;
-    --fragment-preprocessor: #46aaa5;
-    --fragment-linenumber-color: #797979;
-    --fragment-linenumber-background: #f4f4f5;
-    --fragment-linenumber-border: #e3e5e7;
-    --fragment-lineheight: 20px;
 
     /* sidebar navigation (treeview) colors */
     --side-nav-background: #fbfbfb;
@@ -168,7 +156,7 @@ html {
         --page-font-size: 16px;
         --navigation-font-size: 16px;
         --toc-font-size: 15px;
-        --code-font-size: 15px; /* affects code, fragment */
+        --code-font-size: 15px; /* affects code */
         --title-font-size: 22px;
     }
 }
@@ -216,17 +204,6 @@ html[data-bs-theme="dark"]:not(.light-mode) {
     --invariant-color-darker: #cceed5;
 
     --fragment-background: #282c34;
-    --fragment-foreground: #dbe4eb;
-    --fragment-keyword: #cc99cd;
-    --fragment-keywordtype: #ab99cd;
-    --fragment-keywordflow: #e08000;
-    --fragment-token: #7ec699;
-    --fragment-comment: #999999;
-    --fragment-link: #98c0e3;
-    --fragment-preprocessor: #65cabe;
-    --fragment-linenumber-color: #cccccc;
-    --fragment-linenumber-background: #35393c;
-    --fragment-linenumber-border: #1f1f1f;
 }
 
 /* dark mode variables are defined twice, to support both the dark-mode without and with doxygen-awesome-darkmode-toggle.js */
@@ -273,17 +250,6 @@ html.dark-mode {
     --invariant-color-darker: #cceed5;
 
     --fragment-background: #282c34;
-    --fragment-foreground: #dbe4eb;
-    --fragment-keyword: #cc99cd;
-    --fragment-keywordtype: #ab99cd;
-    --fragment-keywordflow: #e08000;
-    --fragment-token: #7ec699;
-    --fragment-comment: #999999;
-    --fragment-link: #98c0e3;
-    --fragment-preprocessor: #65cabe;
-    --fragment-linenumber-color: #cccccc;
-    --fragment-linenumber-background: #35393c;
-    --fragment-linenumber-border: #1f1f1f;
 }
 
 /*
@@ -301,7 +267,7 @@ html.dark-mode {
 
     #main-menu a.has-submenu span.sub-arrow {
         color: var(--page-secondary-foreground-color);
-        border-radius: var(--bs-border-radius-medium);
+        border-radius: var(--bs-border-radius);
     }
 }
 
@@ -328,10 +294,10 @@ html.dark-mode {
 }
 
 .sm-dox ul {
-    background: var(--page-background-color);
+    background: var(--fragment-background);
     box-shadow: var(--box-shadow);
     border: 1px solid var(--separator-color);
-    border-radius: var(--bs-border-radius-medium) !important;
+    border-radius: var(--bs-border-radius) !important;
     padding: var(--spacing-small);
     animation: ease-out 150ms slideInMenu;
 }
@@ -350,7 +316,7 @@ html.dark-mode {
 
 .sm-dox ul a {
     color: var(--page-foreground-color) !important;
-    background: var(--page-background-color);
+    background: var(--fragment-background);
     font-size: var(--navigation-font-size);
 }
 
@@ -367,7 +333,7 @@ html.dark-mode {
     color: var(--menu-focus-foreground) !important;
     text-shadow: none;
     background-color: var(--menu-focus-background);
-    border-radius: var(--bs-border-radius-small) !important;
+    border-radius: var(--bs-border-radius) !important;
 }
 
 .sm-dox a, .sm-dox a:focus, .tablist li, .tablist li a, .tablist li.current a {
@@ -377,7 +343,7 @@ html.dark-mode {
     color: var(--header-foreground) !important;
     font-weight: normal;
     font-size: var(--navigation-font-size);
-    border-radius: var(--bs-border-radius-small) !important;
+    border-radius: var(--bs-border-radius) !important;
 }
 
 .sm-dox a:focus {
@@ -389,12 +355,12 @@ html.dark-mode {
     font-weight: normal;
     background: var(--menu-focus-background);
     color: var(--menu-focus-foreground) !important;
-    border-radius: var(--bs-border-radius-small) !important;
+    border-radius: var(--bs-border-radius) !important;
     font-size: var(--navigation-font-size);
 }
 
 .tablist li.current {
-    border-radius: var(--bs-border-radius-small);
+    border-radius: var(--bs-border-radius);
     background: var(--menu-selected-background);
 }
 
@@ -404,327 +370,6 @@ html.dark-mode {
 
 .tablist a {
     padding: 0 var(--spacing-large);
-}
-
-
-/*
- Search box
- */
-
-#MSearchBox {
-    height: var(--searchbar-height);
-    background: var(--searchbar-background);
-    border-radius: var(--searchbar-border-radius);
-    border: 1px solid var(--separator-color);
-    overflow: hidden;
-    width: var(--searchbar-width);
-    position: relative;
-    box-shadow: none;
-    display: block;
-    margin-top: 0;
-}
-
-/* until Doxygen 1.9.4 */
-.left img#MSearchSelect {
-    left: 0;
-    user-select: none;
-    padding-left: 8px;
-}
-
-/* Doxygen 1.9.5 */
-.left span#MSearchSelect {
-    left: 0;
-    user-select: none;
-    margin-left: 8px;
-    padding: 0;
-}
-
-.left #MSearchSelect[src$=".png"] {
-    padding-left: 0
-}
-
-.SelectionMark {
-    user-select: none;
-}
-
-#MSearchSelectWindow, #MSearchResultsWindow {
-    z-index: 9999;
-}
-
-#MSearchBox.MSearchBoxActive {
-    border-color: var(--bs-primary-color);
-    box-shadow: inset 0 0 0 1px var(--bs-primary-color);
-}
-
-#main-menu > li:last-child {
-    margin-right: 0;
-}
-
-@media screen and (max-width: 767px) {
-    #main-menu > li:last-child {
-        height: 50px;
-    }
-}
-
-#MSearchField {
-    font-size: var(--navigation-font-size);
-    height: calc(var(--searchbar-height) - 2px);
-    background: transparent;
-    width: calc(var(--searchbar-width) - 64px);
-}
-
-.MSearchBoxActive #MSearchField {
-    color: var(--searchbar-foreground);
-}
-
-#MSearchSelect {
-    top: calc(calc(var(--searchbar-height) / 2) - 11px);
-}
-
-#MSearchBox span.left, #MSearchBox span.right {
-    background: none;
-    background-image: none;
-}
-
-#MSearchBox span.right {
-    padding-top: calc(calc(var(--searchbar-height) / 2) - 12px);
-    position: absolute;
-    right: var(--spacing-small);
-}
-
-@keyframes slideInSearchResults {
-    from {
-        opacity: 0;
-        transform: translate(0, 15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(0, 20px);
-    }
-}
-
-#MSearchResultsWindow {
-    left: auto !important;
-    right: var(--spacing-medium);
-    border-radius: var(--bs-border-radius-large);
-    border: 1px solid var(--separator-color);
-    transform: translate(0, 20px);
-    box-shadow: var(--box-shadow);
-    animation: ease-out 280ms slideInSearchResults;
-    background: var(--page-background-color);
-}
-
-iframe#MSearchResults {
-    margin: 4px;
-}
-
-iframe {
-    color-scheme: normal;
-}
-
-html[data-bs-theme="dark"]:not(.light-mode) iframe#MSearchResults {
-    filter: invert() hue-rotate(180deg);
-}
-
-html.dark-mode iframe#MSearchResults {
-    filter: invert() hue-rotate(180deg);
-}
-
-#MSearchResults .SRPage {
-    background-color: transparent;
-}
-
-#MSearchResults .SRPage .SREntry {
-    font-size: 10pt;
-    padding: var(--spacing-small) var(--spacing-medium);
-}
-
-#MSearchSelectWindow {
-    border: 1px solid var(--separator-color);
-    border-radius: var(--bs-border-radius-medium);
-    box-shadow: var(--box-shadow);
-    background: var(--page-background-color);
-    padding-top: var(--spacing-small);
-    padding-bottom: var(--spacing-small);
-}
-
-#MSearchSelectWindow a.SelectItem {
-    font-size: var(--navigation-font-size);
-    line-height: var(--content-line-height);
-    margin: 0 var(--spacing-small);
-    border-radius: var(--bs-border-radius-small);
-    color: var(--page-foreground-color) !important;
-    font-weight: normal;
-}
-
-#MSearchSelectWindow a.SelectItem:hover {
-    background: var(--menu-focus-background);
-    color: var(--menu-focus-foreground) !important;
-}
-
-@media screen and (max-width: 767px) {
-    #MSearchBox {
-        margin-top: var(--spacing-medium);
-        margin-bottom: var(--spacing-medium);
-        width: calc(100vw - 30px);
-    }
-
-    #main-menu > li:last-child {
-        float: none !important;
-    }
-
-    #MSearchField {
-        width: calc(100vw - 110px);
-    }
-
-    @keyframes slideInSearchResultsMobile {
-        from {
-            opacity: 0;
-            transform: translate(0, 15px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translate(0, 20px);
-        }
-    }
-
-    #MSearchResultsWindow {
-        left: var(--spacing-medium) !important;
-        right: var(--spacing-medium);
-        overflow: auto;
-        transform: translate(0, 20px);
-        animation: ease-out 280ms slideInSearchResultsMobile;
-        width: auto !important;
-    }
-
-    /*
-     * Overwrites for fixing the searchbox on mobile in doxygen 1.9.2
-     */
-    label.main-menu-btn ~ #searchBoxPos1 {
-        top: 3px !important;
-        right: 6px !important;
-        left: 45px;
-        display: flex;
-    }
-
-    label.main-menu-btn ~ #searchBoxPos1 > #MSearchBox {
-        margin-top: 0;
-        margin-bottom: 0;
-        flex-grow: 2;
-        float: left;
-    }
-}
-
-/*
- Tree view
- */
-
-#side-nav {
-    padding: 0 !important;
-    background: var(--side-nav-background);
-    min-width: 8px;
-    max-width: 50vw;
-}
-
-@media screen and (max-width: 767px) {
-    #side-nav {
-        display: none;
-    }
-
-    #doc-content {
-        margin-left: 0 !important;
-    }
-}
-
-#nav-tree {
-    background: transparent;
-    margin-right: 1px;
-}
-
-#nav-tree .label {
-    font-size: var(--navigation-font-size);
-}
-
-#nav-tree .item {
-    height: var(--tree-item-height);
-    line-height: var(--tree-item-height);
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-#nav-tree .item > a:focus {
-    outline: none;
-}
-
-#nav-sync {
-    bottom: 12px;
-    right: 12px;
-    top: auto !important;
-    user-select: none;
-}
-
-#nav-tree .selected {
-    text-shadow: none;
-    background-image: none;
-    background-color: transparent;
-    position: relative;
-    color: var(--bs-primary-color) !important;
-    font-weight: 500;
-}
-
-#nav-tree .selected::after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    bottom: 1px;
-    left: 0;
-    width: 4px;
-    border-radius: 0 var(--bs-border-radius-small) var(--bs-border-radius-small) 0;
-    background: var(--bs-primary-color);
-}
-
-
-#nav-tree a {
-    color: var(--side-nav-foreground) !important;
-    font-weight: normal;
-}
-
-#nav-tree a:focus {
-    outline-style: auto;
-}
-
-#nav-tree .arrow {
-    opacity: var(--side-nav-arrow-opacity);
-    background: none;
-}
-
-.arrow {
-    color: inherit;
-    cursor: pointer;
-    font-size: 45%;
-    vertical-align: middle;
-    margin-right: 2px;
-    font-family: serif;
-    height: auto;
-    text-align: right;
-}
-
-#nav-tree div.item:hover .arrow, #nav-tree a:focus .arrow {
-    opacity: var(--side-nav-arrow-hover-opacity);
-}
-
-#nav-tree .selected a {
-    color: var(--bs-primary-color) !important;
-    font-weight: bolder;
-    font-weight: 600;
-}
-
-.ui-resizable-e {
-    width: 4px;
-    background: transparent;
-    box-shadow: inset -1px 0 0 0 var(--separator-color);
 }
 
 /*
@@ -870,7 +515,7 @@ div.toc li a.aboveActive {
         top: 0;
         position: relative;
         border: 1px solid var(--separator-color);
-        border-radius: var(--bs-border-radius-medium);
+        border-radius: var(--bs-border-radius);
         background-color: var(--toc-background);
         box-shadow: var(--box-shadow);
     }
@@ -925,135 +570,6 @@ div.toc li a.aboveActive {
 }
 
 /*
- Fragments
- */
-
-div.fragment, pre.fragment {
-    border-radius: var(--bs-border-radius-small);
-    border: 1px solid var(--separator-color);
-    overflow: hidden;
-}
-
-div.fragment, pre.fragment {
-    margin: var(--spacing-medium) 0;
-    padding: calc(var(--spacing-large) - (var(--spacing-large) / 6)) var(--spacing-large);
-    background: var(--fragment-background);
-    color: var(--fragment-foreground);
-    overflow-x: auto;
-}
-
-@media screen and (max-width: 767px) {
-    div.fragment, pre.fragment {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-right: 0;
-    }
-
-    .contents > div.fragment,
-    .textblock > div.fragment,
-    .textblock > pre.fragment,
-    .textblock > .tabbed > ul > li > div.fragment,
-    .textblock > .tabbed > ul > li > pre.fragment,
-    .contents > .doxygen-awesome-fragment-wrapper > div.fragment,
-    .textblock > .doxygen-awesome-fragment-wrapper > div.fragment,
-    .textblock > .doxygen-awesome-fragment-wrapper > pre.fragment,
-    .textblock > .tabbed > ul > li > .doxygen-awesome-fragment-wrapper > div.fragment,
-    .textblock > .tabbed > ul > li > .doxygen-awesome-fragment-wrapper > pre.fragment {
-        margin: var(--spacing-medium) calc(0px - var(--spacing-large));
-        border-radius: 0;
-        border-left: 0;
-    }
-
-    .textblock li > .fragment,
-    .textblock li > .doxygen-awesome-fragment-wrapper > .fragment {
-        margin: var(--spacing-medium) calc(0px - var(--spacing-large));
-    }
-
-    .memdoc li > .fragment,
-    .memdoc li > .doxygen-awesome-fragment-wrapper > .fragment {
-        margin: var(--spacing-medium) calc(0px - var(--spacing-medium));
-    }
-
-    .textblock ul, .memdoc ul {
-        overflow: initial;
-    }
-
-    .memdoc > div.fragment,
-    .memdoc > pre.fragment,
-    dl dd > div.fragment,
-    dl dd pre.fragment,
-    .memdoc > .doxygen-awesome-fragment-wrapper > div.fragment,
-    .memdoc > .doxygen-awesome-fragment-wrapper > pre.fragment,
-    dl dd > .doxygen-awesome-fragment-wrapper > div.fragment,
-    dl dd .doxygen-awesome-fragment-wrapper > pre.fragment {
-        margin: var(--spacing-medium) calc(0px - var(--spacing-medium));
-        border-radius: 0;
-        border-left: 0;
-    }
-}
-
-div.line:after {
-    margin-right: var(--spacing-medium);
-}
-
-div.fragment .line, pre.fragment {
-    white-space: pre;
-    word-wrap: initial;
-    line-height: var(--fragment-lineheight);
-}
-
-div.fragment span.keyword {
-    color: var(--fragment-keyword);
-}
-
-div.fragment span.keywordtype {
-    color: var(--fragment-keywordtype);
-}
-
-div.fragment span.keywordflow {
-    color: var(--fragment-keywordflow);
-}
-
-div.fragment span.stringliteral {
-    color: var(--fragment-token)
-}
-
-div.fragment span.comment {
-    color: var(--fragment-comment);
-}
-
-div.fragment span.preprocessor {
-    color: var(--fragment-preprocessor);
-}
-
-div.fragment span.lineno {
-    display: inline-block;
-    width: 27px;
-    border-right: none;
-    background: var(--fragment-linenumber-background);
-    color: var(--fragment-linenumber-color);
-}
-
-div.fragment span.lineno a {
-    background: none;
-    color: var(--fragment-link) !important;
-}
-
-div.fragment > .line:first-child .lineno {
-    box-shadow: -999999px 0px 0 999999px var(--fragment-linenumber-background), -999998px 0px 0 999999px var(--fragment-linenumber-border);
-    background-color: var(--fragment-linenumber-background) !important;
-}
-
-div.line {
-    border-radius: var(--bs-border-radius-small);
-}
-
-div.line.glow {
-    background-color: var(--primary-light-color);
-    box-shadow: none;
-}
-
-/*
  dl warning, attention, note, deprecated, bug, ...
  */
 
@@ -1067,7 +583,7 @@ dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug, dl.invariant, dl.pre, 
     color: var(--page-background-color);
     overflow: hidden;
     margin-left: 0;
-    border-radius: var(--bs-border-radius-small);
+    border-radius: var(--bs-border-radius);
 }
 
 dl.section dd {
@@ -1153,8 +669,8 @@ div.memdoc, div.memproto, h2.memtitle {
 }
 
 div.memdoc {
-    padding: 0 var(--spacing-medium);
-    background: var(--page-background-color);
+    padding: var(--spacing-medium) calc(2 * var(--spacing-medium));
+    background: var(--fragment-background);
 }
 
 h2.memtitle, div.memitem {
@@ -1175,14 +691,17 @@ div.memproto, h2.memtitle {
 }
 
 h2.memtitle {
-    font-weight: 500;
-    font-size: var(--memtitle-font-size);
-    font-family: var(--font-family-monospace);
     border-bottom: none;
-    border-top-left-radius: var(--bs-border-radius-medium);
-    border-top-right-radius: var(--bs-border-radius-medium);
-    word-break: break-all;
+    border-top-left-radius: var(--bs-border-radius);
+    border-top-right-radius: var(--bs-border-radius);
+    display: inline-block;
+    font-family: var(--font-family-monospace);
+    font-size: var(--memtitle-font-size);
+    font-weight: 500;
+    margin-bottom: 0;
+    padding: var(--spacing-medium);
     position: relative;
+    word-break: break-all;
 }
 
 h2.memtitle:after {
@@ -1194,7 +713,7 @@ h2.memtitle:after {
     left: 0;
     right: -14px;
     position: absolute;
-    border-top-right-radius: var(--bs-border-radius-medium);
+    border-top-right-radius: var(--bs-border-radius);
 }
 
 h2.memtitle > span.permalink {
@@ -1219,9 +738,9 @@ a:target + h2.memtitle, a:target + h2.memtitle + div.memitem {
 }
 
 div.memitem {
-    border-top-right-radius: var(--bs-border-radius-medium);
-    border-bottom-right-radius: var(--bs-border-radius-medium);
-    border-bottom-left-radius: var(--bs-border-radius-medium);
+    border-top-right-radius: var(--bs-border-radius);
+    border-bottom-right-radius: var(--bs-border-radius);
+    border-bottom-left-radius: var(--bs-border-radius);
     overflow: hidden;
     display: block !important;
 }
@@ -1231,7 +750,7 @@ div.memdoc {
 }
 
 div.memproto {
-    border-radius: 0 var(--bs-border-radius-small) 0 0;
+    border-radius: 0 var(--bs-border-radius) 0 0;
     overflow: auto;
     border-bottom: 1px solid var(--separator-color);
     padding: var(--spacing-medium);
@@ -1239,8 +758,8 @@ div.memproto {
 }
 
 div.memtitle {
-    border-top-right-radius: var(--bs-border-radius-medium);
-    border-top-left-radius: var(--bs-border-radius-medium);
+    border-top-right-radius: var(--bs-border-radius);
+    border-top-left-radius: var(--bs-border-radius);
 }
 
 div.memproto table.memname {
@@ -1287,7 +806,7 @@ table.mlabels > tbody > tr:first-child {
 
 dl.reflist {
     box-shadow: var(--box-shadow);
-    border-radius: var(--bs-border-radius-medium);
+    border-radius: var(--bs-border-radius);
     border: 1px solid var(--separator-color);
     overflow: hidden;
     padding: 0;
@@ -1337,7 +856,7 @@ table.doxtable tbody {
     border: none;
     margin: var(--spacing-medium) 0;
     box-shadow: 0 0 0 1px var(--separator-color);
-    border-radius: var(--bs-border-radius-small);
+    border-radius: var(--bs-border-radius);
 }
 
 table.markdownTable, table.doxtable, table.fieldtable {
@@ -1369,7 +888,7 @@ th.markdownTableHeadRight:first-child,
 th.markdownTableHeadCenter:first-child,
 th.markdownTableHeadNone:first-child,
 table.doxtable tr th:first-child {
-    border-top-left-radius: var(--bs-border-radius-small);
+    border-top-left-radius: var(--bs-border-radius);
 }
 
 th.markdownTableHeadLeft:last-child,
@@ -1377,7 +896,7 @@ th.markdownTableHeadRight:last-child,
 th.markdownTableHeadCenter:last-child,
 th.markdownTableHeadNone:last-child,
 table.doxtable tr th:last-child {
-    border-top-right-radius: var(--bs-border-radius-small);
+    border-top-right-radius: var(--bs-border-radius);
 }
 
 table.markdownTable td,
@@ -1457,11 +976,11 @@ table.fieldtable td.fieldtype, .fieldtable td.fieldname, .fieldtable td.fieldini
 }
 
 table.fieldtable tr:last-child td:first-child {
-    border-bottom-left-radius: var(--bs-border-radius-small);
+    border-bottom-left-radius: var(--bs-border-radius);
 }
 
 table.fieldtable tr:last-child td:last-child {
-    border-bottom-right-radius: var(--bs-border-radius-small);
+    border-bottom-right-radius: var(--bs-border-radius);
 }
 
 .memberdecls td.glow, .fieldtable tr.glow {
@@ -1665,7 +1184,7 @@ table.directory td.desc {
 
 .icon {
     background: var(--bs-primary-color);
-    border-radius: var(--bs-border-radius-small);
+    border-radius: var(--bs-border-radius);
     font-size: var(--page-font-size);
     padding: calc(var(--page-font-size) / 5);
     line-height: var(--page-font-size);
@@ -1710,7 +1229,7 @@ table.classindex table div.ah {
     background-color: initial;
     border-color: var(--separator-color);
     box-shadow: var(--box-shadow);
-    border-radius: var(--bs-border-radius-large);
+    border-radius: var(--bs-border-radius);
     padding: var(--spacing-small);
 }
 
@@ -1782,8 +1301,6 @@ li.navelem:first-child:before {
 }
 
 #nav-tree,
-div.fragment,
-pre.fragment,
 div.memproto,
 .contents center,
 .contents .center,
@@ -1797,65 +1314,6 @@ div.contents .toc {
     overflow-x: auto;
     overflow-y: auto;
     overflow-y: overlay;
-}
-
-/*
- Optional fragment copy button
-*/
-.doxygen-awesome-fragment-wrapper {
-    position: relative;
-}
-
-doxygen-awesome-fragment-copy-button {
-    opacity: 0;
-    background: var(--fragment-background);
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    right: calc(var(--spacing-large) - (var(--spacing-large) / 2.5));
-    top: calc(var(--spacing-large) - (var(--spacing-large) / 2.5));
-    border: 1px solid var(--fragment-foreground);
-    cursor: pointer;
-    border-radius: var(--bs-border-radius-small);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.doxygen-awesome-fragment-wrapper:hover doxygen-awesome-fragment-copy-button, doxygen-awesome-fragment-copy-button.success {
-    opacity: .28;
-}
-
-doxygen-awesome-fragment-copy-button:hover, doxygen-awesome-fragment-copy-button.success {
-    opacity: 1 !important;
-}
-
-doxygen-awesome-fragment-copy-button:active:not([class~=success]) svg {
-    transform: scale(.91);
-}
-
-doxygen-awesome-fragment-copy-button svg {
-    fill: var(--fragment-foreground);
-    width: 18px;
-    height: 18px;
-}
-
-doxygen-awesome-fragment-copy-button.success svg {
-    fill: rgb(14, 168, 14);
-}
-
-doxygen-awesome-fragment-copy-button.success {
-    border-color: rgb(14, 168, 14);
-}
-
-@media screen and (max-width: 767px) {
-    .textblock > .doxygen-awesome-fragment-wrapper > doxygen-awesome-fragment-copy-button,
-    .textblock li > .doxygen-awesome-fragment-wrapper > doxygen-awesome-fragment-copy-button,
-    .memdoc li > .doxygen-awesome-fragment-wrapper > doxygen-awesome-fragment-copy-button,
-    .memdoc > .doxygen-awesome-fragment-wrapper > doxygen-awesome-fragment-copy-button,
-    dl dd > .doxygen-awesome-fragment-wrapper > doxygen-awesome-fragment-copy-button {
-        right: 0;
-    }
 }
 
 /*
@@ -1930,7 +1388,7 @@ h2:hover a.anchorlink, h1:hover a.anchorlink, h3:hover a.anchorlink, h4:hover a.
 .section_buttons a {
     display: inline-block;
     border: 1px solid var(--separator-color);
-    border-radius: var(--bs-border-radius-medium);
+    border-radius: var(--bs-border-radius);
     color: var(--page-secondary-foreground-color) !important;
     text-decoration: none;
     transition: color var(--animation-duration) ease-in-out, background-color var(--animation-duration) ease-in-out;
@@ -1985,11 +1443,15 @@ h2:hover a.anchorlink, h1:hover a.anchorlink, h3:hover a.anchorlink, h4:hover a.
     }
 
     .section_buttons tr td:nth-of-type(1).markdownTableBodyLeft a {
-        border-radius: var(--bs-border-radius-medium) 0 0 var(--bs-border-radius-medium);
+        border-radius: var(--bs-border-radius) 0 0 var(--bs-border-radius);
         border-right: none;
     }
 
     .section_buttons tr td:nth-of-type(2).markdownTableBodyRight a {
-        border-radius: 0 var(--bs-border-radius-medium) var(--bs-border-radius-medium) 0;
+        border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
     }
+}
+
+p.definition {
+    margin-bottom: 0;
 }

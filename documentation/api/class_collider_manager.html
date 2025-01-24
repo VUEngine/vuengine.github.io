@@ -24,7 +24,7 @@ permalink: documentation/api/class-collider-manager/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ColliderManager:</div>
 <div class="dyncontent">
@@ -40,20 +40,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec73db4d20d63fd40b87de7c493bfaa0" id="r_aec73db4d20d63fd40b87de7c493bfaa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec73db4d20d63fd40b87de7c493bfaa0">constructor</a> ()</td></tr>
 <tr class="memdesc:aec73db4d20d63fd40b87de7c493bfaa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
+<tr class="memitem:a52a88aab5a5b78760fa1f6cd25fda577" id="r_a52a88aab5a5b78760fa1f6cd25fda577"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52a88aab5a5b78760fa1f6cd25fda577">getType</a> ()</td></tr>
+
+<tr class="memitem:a31ad7c3a0f1f5b3e4a4cf41f42bdf7b9" id="r_a31ad7c3a0f1f5b3e4a4cf41f42bdf7b9"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31ad7c3a0f1f5b3e4a4cf41f42bdf7b9">enable</a> ()</td></tr>
+<tr class="memdesc:a31ad7c3a0f1f5b3e4a4cf41f42bdf7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the manager.  <br /></td></tr>
+
+<tr class="memitem:ab9ce3d34810a23a1c88ab1d176abdf8d" id="r_ab9ce3d34810a23a1c88ab1d176abdf8d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9ce3d34810a23a1c88ab1d176abdf8d">disable</a> ()</td></tr>
+<tr class="memdesc:ab9ce3d34810a23a1c88ab1d176abdf8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the manager.  <br /></td></tr>
+
 <tr class="memitem:a734e52cf72b2b347e3bfc3ee2276248d" id="r_a734e52cf72b2b347e3bfc3ee2276248d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-collider/">Collider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734e52cf72b2b347e3bfc3ee2276248d">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> *colliderSpec)</td></tr>
 
 <tr class="memitem:afee54a7aa37ea55eada5b9a16df6623c" id="r_afee54a7aa37ea55eada5b9a16df6623c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee54a7aa37ea55eada5b9a16df6623c">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-collider/">Collider</a> collider)</td></tr>
 
-<tr class="memitem:ab3302fa08ce4f747dfde1b2fe5eaad2c" id="r_ab3302fa08ce4f747dfde1b2fe5eaad2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3302fa08ce4f747dfde1b2fe5eaad2c">reset</a> ()</td></tr>
-<tr class="memdesc:ab3302fa08ce4f747dfde1b2fe5eaad2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
-
 <tr class="memitem:a81cece5d3ec101b0492446a8310a7813" id="r_a81cece5d3ec101b0492446a8310a7813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81cece5d3ec101b0492446a8310a7813">purgeDestroyedColliders</a> ()</td></tr>
 <tr class="memdesc:a81cece5d3ec101b0492446a8310a7813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge destroyed colliders.  <br /></td></tr>
 
-<tr class="memitem:a2a8c073ebec3864f53f02acffccf1dbd" id="r_a2a8c073ebec3864f53f02acffccf1dbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a8c073ebec3864f53f02acffccf1dbd">update</a> ()</td></tr>
+<tr class="memitem:a2a8c073ebec3864f53f02acffccf1dbd" id="r_a2a8c073ebec3864f53f02acffccf1dbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a8c073ebec3864f53f02acffccf1dbd">update</a> ()</td></tr>
 <tr class="memdesc:a2a8c073ebec3864f53f02acffccf1dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update colliders and test collisions.  <br /></td></tr>
 
-<tr class="memitem:a57ee29ae96de211f9d5ac5eae08a9bbe" id="r_a57ee29ae96de211f9d5ac5eae08a9bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57ee29ae96de211f9d5ac5eae08a9bbe">setCheckCollidersOutOfCameraRange</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a> value)</td></tr>
+<tr class="memitem:a57ee29ae96de211f9d5ac5eae08a9bbe" id="r_a57ee29ae96de211f9d5ac5eae08a9bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57ee29ae96de211f9d5ac5eae08a9bbe">setCheckCollidersOutOfCameraRange</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> value)</td></tr>
 
 <tr class="memitem:a19fb0d090143e16ed84476e509515d21" id="r_a19fb0d090143e16ed84476e509515d21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19fb0d090143e16ed84476e509515d21">showColliders</a> ()</td></tr>
 <tr class="memdesc:a19fb0d090143e16ed84476e509515d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the colliders visible by the usage of wireframes.  <br /></td></tr>
@@ -61,15 +66,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9788e758570b6e3a236271b5c4326d2" id="r_af9788e758570b6e3a236271b5c4326d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9788e758570b6e3a236271b5c4326d2">hideColliders</a> ()</td></tr>
 <tr class="memdesc:af9788e758570b6e3a236271b5c4326d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the colliders invisible by hiding their wireframes.  <br /></td></tr>
 
-<tr class="memitem:a048894c8b894f19a41e4ea5f857f9cdd" id="r_a048894c8b894f19a41e4ea5f857f9cdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a048894c8b894f19a41e4ea5f857f9cdd">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> y)</td></tr>
+<tr class="memitem:a048894c8b894f19a41e4ea5f857f9cdd" id="r_a048894c8b894f19a41e4ea5f857f9cdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a048894c8b894f19a41e4ea5f857f9cdd">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> y)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ab0af5c9b207a0bf8867571ff10d548e5" id="r_ab0af5c9b207a0bf8867571ff10d548e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0af5c9b207a0bf8867571ff10d548e5">checkCollidersOutOfCameraRange</a></td></tr>
+<tr class="memitem:ab0af5c9b207a0bf8867571ff10d548e5" id="r_ab0af5c9b207a0bf8867571ff10d548e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0af5c9b207a0bf8867571ff10d548e5">checkCollidersOutOfCameraRange</a></td></tr>
 <tr class="memdesc:ab0af5c9b207a0bf8867571ff10d548e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">If false, colliders out of camera's range are culled of from collision testing.  <br /></td></tr>
 
-<tr class="memitem:a930e00670747611e57c553e4ec3ba1c5" id="r_a930e00670747611e57c553e4ec3ba1c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a930e00670747611e57c553e4ec3ba1c5">dirty</a></td></tr>
+<tr class="memitem:a930e00670747611e57c553e4ec3ba1c5" id="r_a930e00670747611e57c553e4ec3ba1c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a930e00670747611e57c553e4ec3ba1c5">dirty</a></td></tr>
 <tr class="memdesc:a930e00670747611e57c553e4ec3ba1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the list of registered colliders was modified in the mist of processing collisions.  <br /></td></tr>
 
 </table><table class="memberdecls table">
@@ -79,15 +84,20 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ad32cb84fe38abfddb9908462bc7a54b6 inherit pub_methods_class_component_manager" id="r_ad32cb84fe38abfddb9908462bc7a54b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">constructor</a> ()</td></tr>
 <tr class="memdesc:ad32cb84fe38abfddb9908462bc7a54b6 inherit pub_methods_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
+<tr class="memitem:a5f02551ea04409d07101562db96f82f3 inherit pub_methods_class_component_manager" id="r_a5f02551ea04409d07101562db96f82f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyAllComponents</a> ()</td></tr>
+<tr class="memdesc:a5f02551ea04409d07101562db96f82f3 inherit pub_methods_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy all the manager's components.  <br /></td></tr>
+
 <tr class="memitem:ae0ff65057b734a50961ae59028bcbb52 inherit pub_methods_class_component_manager" id="r_ae0ff65057b734a50961ae59028bcbb52"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
 
 <tr class="memitem:a8803e792ebc2bebd2b2a91c3127b91d7 inherit pub_methods_class_component_manager" id="r_a8803e792ebc2bebd2b2a91c3127b91d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
 
 <tr class="memitem:aa5935cd8d552dd8dbcc2bc02f10cc743 inherit pub_methods_class_component_manager" id="r_aa5935cd8d552dd8dbcc2bc02f10cc743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">doGetComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>)</td></tr>
 
-<tr class="memitem:ae13a34663a70fdc54f4c8bf8625a2b68 inherit pub_methods_class_component_manager" id="r_ae13a34663a70fdc54f4c8bf8625a2b68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+<tr class="memitem:ae13a34663a70fdc54f4c8bf8625a2b68 inherit pub_methods_class_component_manager" id="r_ae13a34663a70fdc54f4c8bf8625a2b68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
+<tr class="memitem:a26fe2edd2da326d8ba40b56240ace2d8 inherit pub_static_methods_class_component_manager" id="r_a26fe2edd2da326d8ba40b56240ace2d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+
 <tr class="memitem:ab7850e60b0adf3926f04150afba28dd5 inherit pub_static_methods_class_component_manager" id="r_ab7850e60b0adf3926f04150afba28dd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
 
 <tr class="memitem:a4ae69ec984ab68cd9340ca55cd097313 inherit pub_static_methods_class_component_manager" id="r_a4ae69ec984ab68cd9340ca55cd097313"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
@@ -96,29 +106,29 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a92e8340427cb4bec7980d97065930a3f inherit pub_static_methods_class_component_manager" id="r_a92e8340427cb4bec7980d97065930a3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
 
-<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
 
 <tr class="memitem:a123ea126f5ba13de211c4dffced1137e inherit pub_static_methods_class_component_manager" id="r_a123ea126f5ba13de211c4dffced1137e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
 
 <tr class="memitem:a1c09750f44f3f93cc9039fe65d561065 inherit pub_static_methods_class_component_manager" id="r_a1c09750f44f3f93cc9039fe65d561065"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
-<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int16</a> componentIndex)</td></tr>
+<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int16</a> componentIndex)</td></tr>
 
-<tr class="memitem:ad570cf1d4424c7bb33772b4d8852581c inherit pub_static_methods_class_component_manager" id="r_ad570cf1d4424c7bb33772b4d8852581c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:ad570cf1d4424c7bb33772b4d8852581c inherit pub_static_methods_class_component_manager" id="r_ad570cf1d4424c7bb33772b4d8852581c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/Oop.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/Oop.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType,...)</td></tr>
+<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType,...)</td></tr>
 
-<tr class="memitem:afdb9d380597a7ae5e1f4c79a61f018e6 inherit pub_static_methods_class_component_manager" id="r_afdb9d380597a7ae5e1f4c79a61f018e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:afdb9d380597a7ae5e1f4c79a61f018e6 inherit pub_static_methods_class_component_manager" id="r_afdb9d380597a7ae5e1f4c79a61f018e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
+<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
 
-<tr class="memitem:a50e0ecbab92db23be791d7feaea1ad7d inherit pub_static_methods_class_component_manager" id="r_a50e0ecbab92db23be791d7feaea1ad7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyCompomentVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+<tr class="memitem:a50e0ecbab92db23be791d7feaea1ad7d inherit pub_static_methods_class_component_manager" id="r_a50e0ecbab92db23be791d7feaea1ad7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyCompomentVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
 <tr class="inherit_header pub_attribs_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
 <tr class="memitem:a86bce556cf2be26d1414b36ecf82ee85 inherit pub_attribs_class_component_manager" id="r_a86bce556cf2be26d1414b36ecf82ee85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">components</a></td></tr>
@@ -130,7 +140,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></p>
 <p>Manages the colliders in the game states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h#L42">42</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h#L42">42</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aec73db4d20d63fd40b87de7c493bfaa0" name="aec73db4d20d63fd40b87de7c493bfaa0"></a>
 <h2 class="memtitle">constructor()</h2>
@@ -149,7 +159,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L372">372</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L373">373</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -179,7 +189,99 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L93">93</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+
+</div>
+</div>
+<a id="ab9ce3d34810a23a1c88ab1d176abdf8d" name="ab9ce3d34810a23a1c88ab1d176abdf8d"></a>
+<h2 class="memtitle">disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ColliderManager::disable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disable the manager. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a31ad7c3a0f1f5b3e4a4cf41f42bdf7b9" name="a31ad7c3a0f1f5b3e4a4cf41f42bdf7b9"></a>
+<h2 class="memtitle">enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ColliderManager::enable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable the manager. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L65">65</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a52a88aab5a5b78760fa1f6cd25fda577" name="a52a88aab5a5b78760fa1f6cd25fda577"></a>
+<h2 class="memtitle">getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> ColliderManager::getType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the compoment type that the manager manages. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-component/">Component</a> type </dd></dl>
+
+<p>Implements <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L58">58</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -200,7 +302,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Make the colliders invisible by hiding their wireframes. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L320">320</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L321">321</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -231,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created collider </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L58">58</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -244,12 +346,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void ColliderManager::print </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -261,7 +363,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L331">331</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L332">332</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -282,28 +384,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Purge destroyed colliders. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L106">106</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
-
-</div>
-</div>
-<a id="ab3302fa08ce4f747dfde1b2fe5eaad2c" name="ab3302fa08ce4f747dfde1b2fe5eaad2c"></a>
-<h2 class="memtitle">reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">void ColliderManager::reset </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reset the manager's state. </p>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L86">86</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L107">107</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -316,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void ColliderManager::setCheckCollidersOutOfCameraRange </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -328,7 +409,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L303">303</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L304">304</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -349,7 +430,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Make the colliders visible by the usage of wireframes. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L310">310</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L311">311</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -360,7 +441,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">uint32</a> ColliderManager::update </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> ColliderManager::update </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -370,7 +451,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Update colliders and test collisions. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c#L125">125</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c#L126">126</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a>.</p>
 
 </div>
 </div>
@@ -385,7 +466,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a> ColliderManager::checkCollidersOutOfCameraRange</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> ColliderManager::checkCollidersOutOfCameraRange</td>
         </tr>
       </table>
   </td>
@@ -397,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If false, colliders out of camera's range are culled of from collision testing. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +492,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Base/General/Types.h">bool</a> ColliderManager::dirty</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> ColliderManager::dirty</td>
         </tr>
       </table>
   </td>
@@ -423,13 +504,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If true, the list of registered colliders was modified in the mist of processing collisions. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h#L50">50</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h#L50">50</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Component/Physics/Collision/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a></li>
-<li>VUEngine-Core/source/Component/Physics/Collision/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/91780cc136c7c572dfeb75e7722346b386ff7f57/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a></li>
+<li>VUEngine-Core/source/Component/Physics/Collision/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.h">ColliderManager.h</a></li>
+<li>VUEngine-Core/source/Component/Physics/Collision/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Physics/Collision/ColliderManager.c">ColliderManager.c</a></li>
 </ul>
 </div>
 
