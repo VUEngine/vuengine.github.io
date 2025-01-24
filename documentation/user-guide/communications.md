@@ -18,7 +18,7 @@ void SomeClass::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataByt
     CommunicationManager communicationManager = ;
 
     /*
-    * Data will be send sychroniously. This means that if the cable is disconnect during
+    * Data will be sent sychroniously. This means that if the cable is disconnected during
     * transmission, the behavior is undefined.
     */
     do
