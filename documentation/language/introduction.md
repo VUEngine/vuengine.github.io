@@ -40,4 +40,4 @@ Virtual C doesn't support all of the common OOP concepts or common features of f
 
 In Virtual C, all attributes are protected; while all methods are either public or private.
 
-Another limitation is that all class instances have to be dynamically allocated, there can no be instances allocated in the stack.
+Another limitation is that all class instances have to be dynamically allocated, there can no be instances allocated in the stack. But since the Virtual Boy's CPU doesn't have data cache, the performance impact is not as big as on architectures that have it.
