@@ -27,16 +27,16 @@ Debug mode enables the [Developer Tools](/documentation/user-guide/development-t
 
 ## Tools
 
-This mode removes some of the checks that debug mode enables, letting the games to run at the intended frame rate target, but enables access to the [Developer Tools](/documentation/user-guide/development-tools/).
+This mode removes some of the checks that debug mode enables, letting the games to run at the intended frame rate target, but still enables access to the [Developer Tools](/documentation/user-guide/development-tools/).
 
 ## Beta
 
-This is the recommended building mode for development and comes as the default in [VUEngine Studio](https://www.vuengine.dev/). It disables the [Developer Tools](/documentation/user-guide/development-tools/) and removes of the injected safety checks added by the transpiler in debug and tools modes, but leaves in the checks performend through the `NM_ASSERT` macro.
+This is the default building mode in [VUEngine Studio](https://www.vuengine.dev/) and is the recommended one for development. It disables the [Developer Tools](/documentation/user-guide/development-tools/) and removes the injected of the safety checks added by the transpiler in debug and tools modes, but leaves in the checks performend through the explicit usage of the `NM_ASSERT` macro.
 
-Although it still entails a significative performance hit that makes ROMs compiled in this mode generally too slow to be tested on hardware.
+Although it still entails a significative performance hit that makes ROMs compiled in this mode generally too slow to represent the final game as it should be playable on hardware.
 
 ## Release
 
-This is the mode intended to produce ROMs that should perform well on the Virtual Boy. To acomplish that, it removes almost all but the most critical safety checks that are only removed by defining the `__SHIPPING` macro through the `EngineConfig` editor.
+This is the mode intended to produce ROMs that should perform well on the Virtual Boy. To acomplish that, it removes almost all but the most critical safety checks that the engine implements, which are only removed by defining the `__SHIPPING` macro through the `EngineConfig` editor.
 
 It is strongly adviced to not use this mode through development, but only for testing on hardware.
