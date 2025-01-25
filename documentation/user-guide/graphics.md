@@ -108,6 +108,9 @@ BgmapSpriteROMSpec ActorSpriteSpec =
             kSpriteComponent
         },
 
+        // Is animated?
+        true,
+
         // Spec for the texture to display
         (TextureSpec*)&ActorTextureSpec,
 
