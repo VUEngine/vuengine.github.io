@@ -24,7 +24,7 @@ permalink: documentation/api/class-state-machine/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for StateMachine:</div>
 <div class="dyncontent">
@@ -40,9 +40,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a54f9009fdc5b51d66c968ff24b544637" id="r_a54f9009fdc5b51d66c968ff24b544637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f9009fdc5b51d66c968ff24b544637">constructor</a> (void *<a class="el" href="#a135d57328f7b4e54af033f6b81b1e689">owner</a>)</td></tr>
 <tr class="memdesc:a54f9009fdc5b51d66c968ff24b544637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
-<tr class="memitem:a4e3bc499547335b9c1be12858d91f070" id="r_a4e3bc499547335b9c1be12858d91f070"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e3bc499547335b9c1be12858d91f070">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+<tr class="memitem:a4e3bc499547335b9c1be12858d91f070" id="r_a4e3bc499547335b9c1be12858d91f070"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e3bc499547335b9c1be12858d91f070">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
 
-<tr class="memitem:a14c668af6920a3fc48a035dff4120852" id="r_a14c668af6920a3fc48a035dff4120852"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14c668af6920a3fc48a035dff4120852">transitionTo</a> (<a class="el" href="/documentation/api/class-state/">State</a> state, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int16</a> command)</td></tr>
+<tr class="memitem:a14c668af6920a3fc48a035dff4120852" id="r_a14c668af6920a3fc48a035dff4120852"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14c668af6920a3fc48a035dff4120852">transitionTo</a> (<a class="el" href="/documentation/api/class-state/">State</a> state, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> command)</td></tr>
 
 <tr class="memitem:a82acc83746a1b80e982953f4a2066687" id="r_a82acc83746a1b80e982953f4a2066687"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82acc83746a1b80e982953f4a2066687">swapState</a> (<a class="el" href="/documentation/api/class-state/">State</a> newState)</td></tr>
 
@@ -57,9 +57,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a357afd3818d40a13bbf677d61b2e956c" id="r_a357afd3818d40a13bbf677d61b2e956c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-state/">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a357afd3818d40a13bbf677d61b2e956c">update</a> ()</td></tr>
 <tr class="memdesc:a357afd3818d40a13bbf677d61b2e956c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the state at the top of the stack.  <br /></td></tr>
 
-<tr class="memitem:a7f3eba2b15d9584cd27b7ec9a764172a" id="r_a7f3eba2b15d9584cd27b7ec9a764172a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f3eba2b15d9584cd27b7ec9a764172a">isInState</a> (<a class="el" href="/documentation/api/class-state/">State</a> state)</td></tr>
+<tr class="memitem:a7f3eba2b15d9584cd27b7ec9a764172a" id="r_a7f3eba2b15d9584cd27b7ec9a764172a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f3eba2b15d9584cd27b7ec9a764172a">isInState</a> (<a class="el" href="/documentation/api/class-state/">State</a> state)</td></tr>
 
-<tr class="memitem:a6c3146caa1df98777c7be2fc18ca3b40" id="r_a6c3146caa1df98777c7be2fc18ca3b40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c3146caa1df98777c7be2fc18ca3b40">hasStateInTheStack</a> (<a class="el" href="/documentation/api/class-state/">State</a> state)</td></tr>
+<tr class="memitem:a6c3146caa1df98777c7be2fc18ca3b40" id="r_a6c3146caa1df98777c7be2fc18ca3b40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c3146caa1df98777c7be2fc18ca3b40">hasStateInTheStack</a> (<a class="el" href="/documentation/api/class-state/">State</a> state)</td></tr>
 
 <tr class="memitem:a9355b0322a06bc017d9e225346a65aa6" id="r_a9355b0322a06bc017d9e225346a65aa6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9355b0322a06bc017d9e225346a65aa6">getStateStack</a> ()</td></tr>
 
@@ -69,7 +69,7 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:a81b3974de5ef4f711fd2631639f8a4c7" id="r_a81b3974de5ef4f711fd2631639f8a4c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-state/">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81b3974de5ef4f711fd2631639f8a4c7">getPreviousState</a> ()</td></tr>
 
-<tr class="memitem:adde9c456dded51a2d0d1b3d95d641173" id="r_adde9c456dded51a2d0d1b3d95d641173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde9c456dded51a2d0d1b3d95d641173">getStackSize</a> ()</td></tr>
+<tr class="memitem:adde9c456dded51a2d0d1b3d95d641173" id="r_adde9c456dded51a2d0d1b3d95d641173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde9c456dded51a2d0d1b3d95d641173">getStackSize</a> ()</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -89,7 +89,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a63e6e8f1bbf9a12a0d4fa098a142114f" id="r_a63e6e8f1bbf9a12a0d4fa098a142114f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-state/">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63e6e8f1bbf9a12a0d4fa098a142114f">nextState</a></td></tr>
 <tr class="memdesc:a63e6e8f1bbf9a12a0d4fa098a142114f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-state/">State</a> to push on top of the stack of states.  <br /></td></tr>
 
-<tr class="memitem:aa8a4476c364e77e6282644e06fc534ef" id="r_aa8a4476c364e77e6282644e06fc534ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8a4476c364e77e6282644e06fc534ef">transition</a></td></tr>
+<tr class="memitem:aa8a4476c364e77e6282644e06fc534ef" id="r_aa8a4476c364e77e6282644e06fc534ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8a4476c364e77e6282644e06fc534ef">transition</a></td></tr>
 <tr class="memdesc:aa8a4476c364e77e6282644e06fc534ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum that determines the next state transition.  <br /></td></tr>
 
 </table><table class="memberdecls table">
@@ -102,35 +102,35 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
 <tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
 
-<tr class="memitem:abbad842e81ca692ea80f2a123fe3d4ad inherit pub_methods_class_listener_object" id="r_abbad842e81ca692ea80f2a123fe3d4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> eventCode)</td></tr>
+<tr class="memitem:abbad842e81ca692ea80f2a123fe3d4ad inherit pub_methods_class_listener_object" id="r_abbad842e81ca692ea80f2a123fe3d4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
 
-<tr class="memitem:a4576f085df122b6ca093affc2ad92061 inherit pub_methods_class_listener_object" id="r_a4576f085df122b6ca093affc2ad92061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> eventCode)</td></tr>
+<tr class="memitem:a4576f085df122b6ca093affc2ad92061 inherit pub_methods_class_listener_object" id="r_a4576f085df122b6ca093affc2ad92061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
 
-<tr class="memitem:aa118c3b40a6ff3e2b49aacaa7536cf07 inherit pub_methods_class_listener_object" id="r_aa118c3b40a6ff3e2b49aacaa7536cf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> eventCode)</td></tr>
+<tr class="memitem:aa118c3b40a6ff3e2b49aacaa7536cf07 inherit pub_methods_class_listener_object" id="r_aa118c3b40a6ff3e2b49aacaa7536cf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
 
 <tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
 <tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
 
-<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
 
-<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> eventCode)</td></tr>
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
 
-<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> randomDelay)</td></tr>
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
 
-<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> randomDelay)</td></tr>
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
 
 <tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
 <tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
 
-<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> message)</td></tr>
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> message)</td></tr>
 
-<tr class="memitem:ad4061ed61e54372bfc3be55718900f02 inherit pub_methods_class_listener_object" id="r_ad4061ed61e54372bfc3be55718900f02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> eventCode)</td></tr>
+<tr class="memitem:ad4061ed61e54372bfc3be55718900f02 inherit pub_methods_class_listener_object" id="r_ad4061ed61e54372bfc3be55718900f02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
 
 <tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
 <tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
 <tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
 
-<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
 <tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
 
 </table>
@@ -139,7 +139,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
 <p>Implements a behavioral model of finite states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L49">49</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L49">49</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a54f9009fdc5b51d66c968ff24b544637" name="a54f9009fdc5b51d66c968ff24b544637"></a>
 <h2 class="memtitle">constructor()</h2>
@@ -158,7 +158,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L33">33</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L33">33</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -178,7 +178,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the state at the top of the stack. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-state/">State</a> at the top of the stack of states </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L241">241</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L244">244</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the state that the machine is pending transition to. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-state/">State</a> that the machine has to transition to </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L248">248</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L251">251</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the state that was before at the top of the stack. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-state/">State</a>: the state that was previously at the top of the stack </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L255">255</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L258">258</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -229,7 +229,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> StateMachine::getStackSize </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> StateMachine::getStackSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -238,7 +238,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the number of states in the stack. </p><dl class="section return"><dt>Returns</dt><dd>Number of states in the stack </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L271">271</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L274">274</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -258,7 +258,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the stack of states. </p><dl class="section return"><dt>Returns</dt><dd>Linked list of states </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L234">234</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L237">237</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> StateMachine::handleMessage </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> StateMachine::handleMessage </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-telegram/">Telegram</a></td>          <td class="paramname"><span class="paramname"><em>telegram</em></span></td><td>)</td>
           <td></td>
@@ -294,7 +294,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L70">70</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L73">73</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -305,7 +305,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> StateMachine::hasStateInTheStack </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> StateMachine::hasStateInTheStack </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-state/">State</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
           <td></td>
@@ -320,7 +320,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the provided state is in the stack </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L227">227</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L230">230</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> StateMachine::isInState </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> StateMachine::isInState </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-state/">State</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
           <td></td>
@@ -346,7 +346,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the provided state is the top most state in the stack </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L220">220</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L223">223</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -367,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Pop all the states in the stack and leave it empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L197">197</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L200">200</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Pop the top most state in the stack. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L166">166</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L169">169</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -413,7 +413,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L138">138</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L141">141</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -438,7 +438,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L102">102</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L105">105</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -449,27 +449,27 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> StateMachine::transitionTo </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> StateMachine::transitionTo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-state/">State</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Instructs the machine to change to the provided state by the transition specified by command </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
     <tr><td class="paramname">state</td><td><a class="el" href="/documentation/api/class-state/">State</a> to transition to </td></tr>
-    <tr><td class="paramname">command</td><td>Enum that specifies the type of transition defined in <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateOperations</a> </td></tr>
+    <tr><td class="paramname">command</td><td>Enum that specifies the type of transition defined in <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateOperations</a> </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the machine is not scheduled for a transition already, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L82">82</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L85">85</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -490,7 +490,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Updates the state at the top of the stack. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c#L204">204</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c#L207">207</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a>.</p>
 
 </div>
 </div>
@@ -517,7 +517,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p><a class="el" href="/documentation/api/class-state/">State</a> at the top of the stack of states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L60">60</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L60">60</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 
 </div>
 </div>
@@ -543,7 +543,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p><a class="el" href="/documentation/api/class-state/">State</a> to push on top of the stack of states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L66">66</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L66">66</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 
 </div>
 </div>
@@ -569,7 +569,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Owner of this instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 
 </div>
 </div>
@@ -595,7 +595,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Previous state at the top of the stack of states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L63">63</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L63">63</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Linked list of states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L57">57</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L57">57</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 
 </div>
 </div>
@@ -635,7 +635,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int16</a> StateMachine::transition</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> StateMachine::transition</td>
         </tr>
       </table>
   </td>
@@ -647,13 +647,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Enum that determines the next state transition. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h#L69">69</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h#L69">69</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/State/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.h">StateMachine.h</a></li>
-<li>VUEngine-Core/source/State/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/State/StateMachine.c">StateMachine.c</a></li>
+<li>VUEngine-Core/source/State/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.h">StateMachine.h</a></li>
+<li>VUEngine-Core/source/State/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/StateMachine.c">StateMachine.c</a></li>
 </ul>
 </div>
 

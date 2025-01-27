@@ -1,0 +1,1775 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Printer Class Reference"
+permalink: documentation/api/class-printer/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Printer Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Printer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_printer.png" usemap="#Printer_map" alt />
+  <map id="Printer_map" name="Printer_map">
+<area href="/documentation/api/class-entity/" alt="Entity" shape="rect" coords="0,0,50,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a253149e040583ebd81340e94ff39444f" id="r_a253149e040583ebd81340e94ff39444f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a253149e040583ebd81340e94ff39444f">PrintingOrientation</a> </td></tr>
+
+<tr class="memitem:a7cfd4f9c03d7f3cbb99a469861002dcd" id="r_a7cfd4f9c03d7f3cbb99a469861002dcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cfd4f9c03d7f3cbb99a469861002dcd">PrintingDirection</a> </td></tr>
+
+<tr class="memitem:a018e6cead78e3fef46f0aadbf6b91c95" id="r_a018e6cead78e3fef46f0aadbf6b91c95"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-font-spec/">FontSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018e6cead78e3fef46f0aadbf6b91c95">FontROMSpec</a></td></tr>
+
+<tr class="memitem:ac92f9b385ede0a4602ddd4f24fb52877" id="r_ac92f9b385ede0a4602ddd4f24fb52877"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-font-data/">FontData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92f9b385ede0a4602ddd4f24fb52877">FontROMData</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae94e17b2829b8c927d4805967643ba8a" id="r_ae94e17b2829b8c927d4805967643ba8a"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae94e17b2829b8c927d4805967643ba8a">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ada33f8925039911369e7176bac069e94" id="r_ada33f8925039911369e7176bac069e94"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada33f8925039911369e7176bac069e94">removedComponent</a> (<a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:aa6e2c48535c97c7cc409ed0e2c17ed22" id="r_aa6e2c48535c97c7cc409ed0e2c17ed22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6e2c48535c97c7cc409ed0e2c17ed22">reset</a> ()</td></tr>
+<tr class="memdesc:aa6e2c48535c97c7cc409ed0e2c17ed22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empties internal virtual list of registered fonts.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a794ebcfdf374133e26a14ec1f48fc714" id="r_a794ebcfdf374133e26a14ec1f48fc714"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a794ebcfdf374133e26a14ec1f48fc714">setDebugMode</a> ()</td></tr>
+<tr class="memdesc:a794ebcfdf374133e26a14ec1f48fc714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mode to debug to bypass loading fonts through CharSets.  <br /></td></tr>
+
+<tr class="memitem:a357dc1b918c3c358d098d6fdcfa8c459" id="r_a357dc1b918c3c358d098d6fdcfa8c459"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a357dc1b918c3c358d098d6fdcfa8c459">loadFonts</a> (<a class="el" href="/documentation/api/struct-font-spec/">FontSpec</a> **fontSpecs)</td></tr>
+
+<tr class="memitem:ac09e6107de627530fc31dd3d553a0096" id="r_ac09e6107de627530fc31dd3d553a0096"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac09e6107de627530fc31dd3d553a0096">releaseFonts</a> ()</td></tr>
+<tr class="memdesc:ac09e6107de627530fc31dd3d553a0096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release fonts, free VRAM.  <br /></td></tr>
+
+<tr class="memitem:aefeb98a13ddf7692b897e01a4d584750" id="r_aefeb98a13ddf7692b897e01a4d584750"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefeb98a13ddf7692b897e01a4d584750">clear</a> ()</td></tr>
+<tr class="memdesc:aefeb98a13ddf7692b897e01a4d584750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear printing area in BGMAP memory.  <br /></td></tr>
+
+<tr class="memitem:ae367d40f94a2b0e434e4a6cd2d5d39ac" id="r_ae367d40f94a2b0e434e4a6cd2d5d39ac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae367d40f94a2b0e434e4a6cd2d5d39ac">clearRow</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> row)</td></tr>
+
+<tr class="memitem:ae2ca9fa9c9a3f612e2daca68a86eb01e" id="r_ae2ca9fa9c9a3f612e2daca68a86eb01e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ca9fa9c9a3f612e2daca68a86eb01e">text</a> (const char *string, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> y, const char *font)</td></tr>
+
+<tr class="memitem:acaff443aa80f2de9462fa16ad78f869c" id="r_acaff443aa80f2de9462fa16ad78f869c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaff443aa80f2de9462fa16ad78f869c">int32</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> value, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> y, const char *font)</td></tr>
+
+<tr class="memitem:a0aba2e5a45def5239a22c4daca9d74bb" id="r_a0aba2e5a45def5239a22c4daca9d74bb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0aba2e5a45def5239a22c4daca9d74bb">hex</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">WORD</a> value, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> y, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Math/PixelVector.h">length</a>, const char *font)</td></tr>
+
+<tr class="memitem:a9b7f4e693c9dc865b1f38147dd526268" id="r_a9b7f4e693c9dc865b1f38147dd526268"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b7f4e693c9dc865b1f38147dd526268">float</a> (float value, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> y, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> precision, const char *font)</td></tr>
+
+<tr class="memitem:af4ad9f3c166d13afbaf3a969c9563cb4" id="r_af4ad9f3c166d13afbaf3a969c9563cb4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4ad9f3c166d13afbaf3a969c9563cb4">setFontPage</a> (const char *font, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> page)</td></tr>
+
+<tr class="memitem:af3b7149ebe84d032b6c00c8d9a23ecc8" id="r_af3b7149ebe84d032b6c00c8d9a23ecc8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3b7149ebe84d032b6c00c8d9a23ecc8">setOrientation</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> value)</td></tr>
+
+<tr class="memitem:a5c582cc6d4481598a488fc908c4a91f5" id="r_a5c582cc6d4481598a488fc908c4a91f5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c582cc6d4481598a488fc908c4a91f5">setTextDirection</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> value)</td></tr>
+
+<tr class="memitem:a2a7e836a77bd9b0aedf971edfb313523" id="r_a2a7e836a77bd9b0aedf971edfb313523"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a7e836a77bd9b0aedf971edfb313523">setPrintingBgmapSegment</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> <a class="el" href="#a9b92bfc12611b0232b3ad8ef70865a41">printingBgmapSegment</a>)</td></tr>
+
+<tr class="memitem:a6e4af45351aa8f593acc77aa0286b466" id="r_a6e4af45351aa8f593acc77aa0286b466"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4af45351aa8f593acc77aa0286b466">getPrintingBgmapSegment</a> ()</td></tr>
+
+<tr class="memitem:a87557d21a4049abfacc39d05c433e627" id="r_a87557d21a4049abfacc39d05c433e627"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87557d21a4049abfacc39d05c433e627">addSprite</a> ()</td></tr>
+<tr class="memdesc:a87557d21a4049abfacc39d05c433e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a printing sprite.  <br /></td></tr>
+
+<tr class="memitem:acbf36c4bf65267778e0a6b5bd97fe88a" id="r_acbf36c4bf65267778e0a6b5bd97fe88a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbf36c4bf65267778e0a6b5bd97fe88a">setActiveSprite</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> printingSpriteIndex)</td></tr>
+
+<tr class="memitem:a266757e571ccfe8126cf4a4f271d9b3c" id="r_a266757e571ccfe8126cf4a4f271d9b3c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a266757e571ccfe8126cf4a4f271d9b3c">printSprite</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> y)</td></tr>
+
+<tr class="memitem:a1d37153ae6ee23ea0de83e0aaf2e1c68" id="r_a1d37153ae6ee23ea0de83e0aaf2e1c68"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d37153ae6ee23ea0de83e0aaf2e1c68">setCoordinates</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> y, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> z, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> parallax)</td></tr>
+
+<tr class="memitem:a23d1532ef648a0b3cee04c60fab7c32a" id="r_a23d1532ef648a0b3cee04c60fab7c32a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23d1532ef648a0b3cee04c60fab7c32a">setWorldCoordinates</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> y, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> z, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> parallax)</td></tr>
+
+<tr class="memitem:a92dc7381e85b70750c5b93b4a2e2b4f5" id="r_a92dc7381e85b70750c5b93b4a2e2b4f5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92dc7381e85b70750c5b93b4a2e2b4f5">setBgmapCoordinates</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> mx, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> my, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> mp)</td></tr>
+
+<tr class="memitem:af367c0723ce9ede4c0957f3661dd315a" id="r_af367c0723ce9ede4c0957f3661dd315a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af367c0723ce9ede4c0957f3661dd315a">setWorldSize</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> w, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> h)</td></tr>
+
+<tr class="memitem:a4f1e9c47c9fee24ea8b458607df33ee4" id="r_a4f1e9c47c9fee24ea8b458607df33ee4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f1e9c47c9fee24ea8b458607df33ee4">setTransparency</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> transparency)</td></tr>
+
+<tr class="memitem:a8822060e33eeef793e605c48bc9c27ff" id="r_a8822060e33eeef793e605c48bc9c27ff"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8822060e33eeef793e605c48bc9c27ff">setPalette</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> <a class="el" href="#af54929cd5c1cdf773d3890f95b46c6a5">palette</a>)</td></tr>
+
+<tr class="memitem:a5a5226a6eeea3cb1d99d1e3515542a82" id="r_a5a5226a6eeea3cb1d99d1e3515542a82"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a5226a6eeea3cb1d99d1e3515542a82">resetCoordinates</a> ()</td></tr>
+<tr class="memdesc:a5a5226a6eeea3cb1d99d1e3515542a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the coordinates of the WORLD used for printing.  <br /></td></tr>
+
+<tr class="memitem:a59d6f98348208172def9cd6e86600220" id="r_a59d6f98348208172def9cd6e86600220"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59d6f98348208172def9cd6e86600220">getWorldCoordinatesX</a> ()</td></tr>
+
+<tr class="memitem:af0ae0338d987c805135f8c7eca441695" id="r_af0ae0338d987c805135f8c7eca441695"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ae0338d987c805135f8c7eca441695">getWorldCoordinatesY</a> ()</td></tr>
+
+<tr class="memitem:a944efb58e35f1e5664594f909f3d7106" id="r_a944efb58e35f1e5664594f909f3d7106"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a944efb58e35f1e5664594f909f3d7106">getWorldCoordinatesP</a> ()</td></tr>
+
+<tr class="memitem:a76fe0afa436e960bbac2a1d71031cfd8" id="r_a76fe0afa436e960bbac2a1d71031cfd8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-pixel-vector/">PixelVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76fe0afa436e960bbac2a1d71031cfd8">getActiveSpritePosition</a> ()</td></tr>
+
+<tr class="memitem:a8ba2a278da25af0b8596b57969ea825d" id="r_a8ba2a278da25af0b8596b57969ea825d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-font-data/">FontData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba2a278da25af0b8596b57969ea825d">getFontByName</a> (const char *font)</td></tr>
+
+<tr class="memitem:a3ca9a6e7a122b31e95bfb7ce968a9608" id="r_a3ca9a6e7a122b31e95bfb7ce968a9608"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-font-size/">FontSize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ca9a6e7a122b31e95bfb7ce968a9608">getTextSize</a> (const char *string, const char *font)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:acbaabb69428ff746a8bf1b492f5252e0" id="r_acbaabb69428ff746a8bf1b492f5252e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-printing-sprite/">PrintingSprite</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbaabb69428ff746a8bf1b492f5252e0">activePrintingSprite</a></td></tr>
+<tr class="memdesc:acbaabb69428ff746a8bf1b492f5252e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active sprite that is manipulated by this class' interface.  <br /></td></tr>
+
+<tr class="memitem:a54ded382c933c5a5eba46172153431b5" id="r_a54ded382c933c5a5eba46172153431b5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54ded382c933c5a5eba46172153431b5">lastUsedFont</a></td></tr>
+<tr class="memdesc:a54ded382c933c5a5eba46172153431b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache the last used font to speed up searches.  <br /></td></tr>
+
+<tr class="memitem:a2af17138d474e9526d750b906a491471" id="r_a2af17138d474e9526d750b906a491471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-font-data/">FontData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2af17138d474e9526d750b906a491471">lastUsedFontData</a></td></tr>
+<tr class="memdesc:a2af17138d474e9526d750b906a491471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache the last used font data to speed up searches.  <br /></td></tr>
+
+<tr class="memitem:a1bedb1c6e96bebf6d663acddf90a33cb" id="r_a1bedb1c6e96bebf6d663acddf90a33cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bedb1c6e96bebf6d663acddf90a33cb">mode</a></td></tr>
+<tr class="memdesc:a1bedb1c6e96bebf6d663acddf90a33cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-printer/">Printer</a> mode (Default or <a class="el" href="/documentation/api/class-debug/">Debug</a>)  <br /></td></tr>
+
+<tr class="memitem:af54929cd5c1cdf773d3890f95b46c6a5" id="r_af54929cd5c1cdf773d3890f95b46c6a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af54929cd5c1cdf773d3890f95b46c6a5">palette</a></td></tr>
+<tr class="memdesc:af54929cd5c1cdf773d3890f95b46c6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Palette to use for printing.  <br /></td></tr>
+
+<tr class="memitem:ae4796b911387175a89f4c23550a98b52" id="r_ae4796b911387175a89f4c23550a98b52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4796b911387175a89f4c23550a98b52">orientation</a></td></tr>
+<tr class="memdesc:ae4796b911387175a89f4c23550a98b52"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-printer/">Printer</a> orientation.  <br /></td></tr>
+
+<tr class="memitem:a2d01d1788f100408894aeda2943eb046" id="r_a2d01d1788f100408894aeda2943eb046"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d01d1788f100408894aeda2943eb046">direction</a></td></tr>
+<tr class="memdesc:a2d01d1788f100408894aeda2943eb046"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-printer/">Printer</a> direction.  <br /></td></tr>
+
+<tr class="memitem:a9b92bfc12611b0232b3ad8ef70865a41" id="r_a9b92bfc12611b0232b3ad8ef70865a41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b92bfc12611b0232b3ad8ef70865a41">printingBgmapSegment</a></td></tr>
+<tr class="memdesc:a9b92bfc12611b0232b3ad8ef70865a41"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-printer/">Printer</a> segment (BGMAP memory)  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_entity')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-entity/">Entity</a></td></tr>
+<tr class="memitem:ac2581324b54cab2cad6749cc42cfc2df inherit pub_methods_class_entity" id="r_ac2581324b54cab2cad6749cc42cfc2df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">constructor</a> ()</td></tr>
+<tr class="memdesc:ac2581324b54cab2cad6749cc42cfc2df inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad0dfa1dc1d3146e7a3f66b65444d94dc inherit pub_methods_class_entity" id="r_ad0dfa1dc1d3146e7a3f66b65444d94dc"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="memitem:a5e1bc9f47ded5dc2c606e89850f507f6 inherit pub_methods_class_entity" id="r_a5e1bc9f47ded5dc2c606e89850f507f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">clearComponentLists</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a241d7059a56679c05f6645390321a44e inherit pub_methods_class_entity" id="r_a241d7059a56679c05f6645390321a44e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">addComponent</a> (const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
+
+<tr class="memitem:ac4ad48cc047718e23b3a395aab1e5c5d inherit pub_methods_class_entity" id="r_ac4ad48cc047718e23b3a395aab1e5c5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">removeComponent</a> (<a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:ae420dfc77549012f61010274eb031d6f inherit pub_methods_class_entity" id="r_ae420dfc77549012f61010274eb031d6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">addComponents</a> (<a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:ac8d9b85b1ea6fb282dac1e101c506d75 inherit pub_methods_class_entity" id="r_ac8d9b85b1ea6fb282dac1e101c506d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">removeComponents</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a8c918c932b3c1cee7f0d8c52af551f5a inherit pub_methods_class_entity" id="r_a8c918c932b3c1cee7f0d8c52af551f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponentAtIndex</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> componentIndex)</td></tr>
+
+<tr class="memitem:a81cc5dc030f75c2eafaca17bab78d7d3 inherit pub_methods_class_entity" id="r_a81cc5dc030f75c2eafaca17bab78d7d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponents</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:ac517599844c683557be7f7978dea3075 inherit pub_methods_class_entity" id="r_ac517599844c683557be7f7978dea3075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponentsOfClass</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-entity/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a0a38dc1e053049a3a0e7470a0c6d2d87 inherit pub_methods_class_entity" id="r_a0a38dc1e053049a3a0e7470a0c6d2d87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponentsCount</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a7cc2be4d7a98fd264cc56ad5514b97bf inherit pub_methods_class_entity" id="r_a7cc2be4d7a98fd264cc56ad5514b97bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">resetComponents</a> ()</td></tr>
+<tr class="memdesc:a7cc2be4d7a98fd264cc56ad5514b97bf inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset components.  <br /></td></tr>
+
+<tr class="memitem:adab7ec0e927c7c5ddcc218434469c4b5 inherit pub_methods_class_entity" id="r_adab7ec0e927c7c5ddcc218434469c4b5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getTransformation</a> ()</td></tr>
+
+<tr class="memitem:aae654d8c799bbb62d136efacd8f21f70 inherit pub_methods_class_entity" id="r_aae654d8c799bbb62d136efacd8f21f70"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getPosition</a> ()</td></tr>
+
+<tr class="memitem:aa99e6245fb520f7c28b6124a5bb5f703 inherit pub_methods_class_entity" id="r_aa99e6245fb520f7c28b6124a5bb5f703"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getRotation</a> ()</td></tr>
+
+<tr class="memitem:aaac65288970c9e2ed33956ad3c517e0c inherit pub_methods_class_entity" id="r_aaac65288970c9e2ed33956ad3c517e0c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-scale/">Scale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getScale</a> ()</td></tr>
+
+<tr class="memitem:a1f79c0c15771984ff26fc424135e5078 inherit pub_methods_class_entity" id="r_a1f79c0c15771984ff26fc424135e5078"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getBody</a> ()</td></tr>
+
+<tr class="memitem:aa208f77af13f749357d0151fdb5f8b34 inherit pub_methods_class_entity" id="r_aa208f77af13f749357d0151fdb5f8b34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isMoving</a> ()</td></tr>
+
+<tr class="memitem:a1ebc8385e1533e8d90c6dfea07e05a13 inherit pub_methods_class_entity" id="r_a1ebc8385e1533e8d90c6dfea07e05a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">stopAllMovement</a> ()</td></tr>
+<tr class="memdesc:a1ebc8385e1533e8d90c6dfea07e05a13 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all entity's movement.  <br /></td></tr>
+
+<tr class="memitem:aa9ddf3598c286de71a5273ad94a0ea99 inherit pub_methods_class_entity" id="r_aa9ddf3598c286de71a5273ad94a0ea99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">stopMovement</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> axis)</td></tr>
+
+<tr class="memitem:a156e120c08558ac1472fe79b82fdc48a inherit pub_methods_class_entity" id="r_a156e120c08558ac1472fe79b82fdc48a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setVelocity</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *velocity, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> checkIfCanMove)</td></tr>
+
+<tr class="memitem:ab407723b12e144148fd4e3651496bd3c inherit pub_methods_class_entity" id="r_ab407723b12e144148fd4e3651496bd3c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getVelocity</a> ()</td></tr>
+
+<tr class="memitem:ab6c7a4c84c33bd58e17a804f1953364d inherit pub_methods_class_entity" id="r_ab6c7a4c84c33bd58e17a804f1953364d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getSpeed</a> ()</td></tr>
+
+<tr class="memitem:a88518d918b595a5cf21f4a9140f87c93 inherit pub_methods_class_entity" id="r_a88518d918b595a5cf21f4a9140f87c93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getMaximumSpeed</a> ()</td></tr>
+
+<tr class="memitem:a0c10fd8eae068e567d44bc6f4d713ec8 inherit pub_methods_class_entity" id="r_a0c10fd8eae068e567d44bc6f4d713ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getBounciness</a> ()</td></tr>
+
+<tr class="memitem:af63c24fa234f1d77d5ca5b965432fa4b inherit pub_methods_class_entity" id="r_af63c24fa234f1d77d5ca5b965432fa4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getFrictionCoefficient</a> ()</td></tr>
+
+<tr class="memitem:ad2f418750e207243cb8eb52d822d9d55 inherit pub_methods_class_entity" id="r_ad2f418750e207243cb8eb52d822d9d55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">enableCollisions</a> ()</td></tr>
+<tr class="memdesc:ad2f418750e207243cb8eb52d822d9d55 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable collision detection on the entity's colliders.  <br /></td></tr>
+
+<tr class="memitem:a74dfb657f6ca82ae338fdf17527f2f45 inherit pub_methods_class_entity" id="r_a74dfb657f6ca82ae338fdf17527f2f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">disableCollisions</a> ()</td></tr>
+<tr class="memdesc:a74dfb657f6ca82ae338fdf17527f2f45 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable collision detection on the entity's colliders.  <br /></td></tr>
+
+<tr class="memitem:ad45add407d10d69f47a542a1156ce245 inherit pub_methods_class_entity" id="r_ad45add407d10d69f47a542a1156ce245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">checkCollisions</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> activate)</td></tr>
+
+<tr class="memitem:a3e2e4b5724aa0a99ec2c71545c50c312 inherit pub_methods_class_entity" id="r_a3e2e4b5724aa0a99ec2c71545c50c312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">registerCollisions</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> activate)</td></tr>
+
+<tr class="memitem:ada6b23e83beee98ad358ede0a951b1c3 inherit pub_methods_class_entity" id="r_ada6b23e83beee98ad358ede0a951b1c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setCollidersLayers</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> layers)</td></tr>
+
+<tr class="memitem:adf17c1e37166f326f89735ffb70e5f7b inherit pub_methods_class_entity" id="r_adf17c1e37166f326f89735ffb70e5f7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getCollidersLayers</a> ()</td></tr>
+
+<tr class="memitem:a1787451b502cb4c62862f783658bb810 inherit pub_methods_class_entity" id="r_a1787451b502cb4c62862f783658bb810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setCollidersLayersToIgnore</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> layersToIgnore)</td></tr>
+
+<tr class="memitem:a86153e825d0e8fb07689c3729313ffaa inherit pub_methods_class_entity" id="r_a86153e825d0e8fb07689c3729313ffaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getCollidersLayersToIgnore</a> ()</td></tr>
+
+<tr class="memitem:adffb2ec95320ad431fd300ce002111e2 inherit pub_methods_class_entity" id="r_adffb2ec95320ad431fd300ce002111e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">hasColliders</a> ()</td></tr>
+
+<tr class="memitem:a54b636c231de434ecfc65c00964fec79 inherit pub_methods_class_entity" id="r_a54b636c231de434ecfc65c00964fec79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">showColliders</a> ()</td></tr>
+<tr class="memdesc:a54b636c231de434ecfc65c00964fec79 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the entity's colliders visible.  <br /></td></tr>
+
+<tr class="memitem:aed3d3cccd8686d08587d678d21e76e7b inherit pub_methods_class_entity" id="r_aed3d3cccd8686d08587d678d21e76e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">hideColliders</a> ()</td></tr>
+<tr class="memdesc:aed3d3cccd8686d08587d678d21e76e7b inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the entity's colliders invisible.  <br /></td></tr>
+
+<tr class="memitem:aeeb988a19c8316d22bac106db6d2e789 inherit pub_methods_class_entity" id="r_aeeb988a19c8316d22bac106db6d2e789"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">createComponents</a> (<a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
+
+<tr class="memitem:a9b47fc6b5830f7b8be2f749ea462b5f4 inherit pub_methods_class_entity" id="r_a9b47fc6b5830f7b8be2f749ea462b5f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">destroyComponents</a> ()</td></tr>
+<tr class="memdesc:a9b47fc6b5830f7b8be2f749ea462b5f4 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the components that attach to this container.  <br /></td></tr>
+
+<tr class="memitem:a439a33e947e77bdf488dad4dd6f987da inherit pub_methods_class_entity" id="r_a439a33e947e77bdf488dad4dd6f987da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">addedComponent</a> (<a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:a111d61c668ae3b78d88b60c82db8ee00 inherit pub_methods_class_entity" id="r_a111d61c668ae3b78d88b60c82db8ee00"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">show</a> ()</td></tr>
+<tr class="memdesc:a111d61c668ae3b78d88b60c82db8ee00 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this instance visible.  <br /></td></tr>
+
+<tr class="memitem:a752393fb51ee62c4b4183231e05b3343 inherit pub_methods_class_entity" id="r_a752393fb51ee62c4b4183231e05b3343"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">hide</a> ()</td></tr>
+<tr class="memdesc:a752393fb51ee62c4b4183231e05b3343 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this instance invisible.  <br /></td></tr>
+
+<tr class="memitem:a77b86ede95c6b975c132bc509bcb0e63 inherit pub_methods_class_entity" id="r_a77b86ede95c6b975c132bc509bcb0e63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">calculateSize</a> ()</td></tr>
+<tr class="memdesc:a77b86ede95c6b975c132bc509bcb0e63 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the entity's size.  <br /></td></tr>
+
+<tr class="memitem:a7d6f3030d87ec26f038773ef74a62f0a inherit pub_methods_class_entity" id="r_a7d6f3030d87ec26f038773ef74a62f0a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getRadius</a> ()</td></tr>
+
+<tr class="memitem:a43af21ea27013c289575143257b94873 inherit pub_methods_class_entity" id="r_a43af21ea27013c289575143257b94873"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setPosition</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *position)</td></tr>
+
+<tr class="memitem:abf0e35af473f7fc49cfe26b6079aed87 inherit pub_methods_class_entity" id="r_abf0e35af473f7fc49cfe26b6079aed87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setRotation</a> (const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *rotation)</td></tr>
+
+<tr class="memitem:ab7b983f1739e6ab06ba87670c4897a88 inherit pub_methods_class_entity" id="r_ab7b983f1739e6ab06ba87670c4897a88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setScale</a> (const <a class="el" href="/documentation/api/class-scale/">Scale</a> *<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Math/Vector2D.h">scale</a>)</td></tr>
+
+<tr class="memitem:a7c178aa6b9dfe6458f329fe1f5c404f9 inherit pub_methods_class_entity" id="r_a7c178aa6b9dfe6458f329fe1f5c404f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setDirection</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *direction)</td></tr>
+
+<tr class="memitem:ac154174d13c1eca884912e2ee50a80dc inherit pub_methods_class_entity" id="r_ac154174d13c1eca884912e2ee50a80dc"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getDirection</a> ()</td></tr>
+
+<tr class="memitem:ad2918531b95eed94370ae7eb661be1ee inherit pub_methods_class_entity" id="r_ad2918531b95eed94370ae7eb661be1ee"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">applyForce</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *force, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> checkIfCanMove)</td></tr>
+
+<tr class="memitem:a64dd59e61991238af058b94e839a2935 inherit pub_methods_class_entity" id="r_a64dd59e61991238af058b94e839a2935"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">canMoveTowards</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> direction)</td></tr>
+
+<tr class="memitem:ae1eed7653bafd427161eb83496a3653d inherit pub_methods_class_entity" id="r_ae1eed7653bafd427161eb83496a3653d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isSensibleToCollidingObjectBouncinessOnCollision</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> collidingEntity)</td></tr>
+
+<tr class="memitem:adb43eaa20d84a8d16669dd5a7d4ca0f3 inherit pub_methods_class_entity" id="r_adb43eaa20d84a8d16669dd5a7d4ca0f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isSensibleToCollidingObjectFrictionOnCollision</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> collidingEntity)</td></tr>
+
+<tr class="memitem:a12c484e8f4a610ee9694e801a834fd8f inherit pub_methods_class_entity" id="r_a12c484e8f4a610ee9694e801a834fd8f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isSubjectToGravity</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> gravity)</td></tr>
+
+<tr class="memitem:aa769d3b3089290e04bdc5ba66958f7bc inherit pub_methods_class_entity" id="r_aa769d3b3089290e04bdc5ba66958f7bc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">collisionStarts</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:a4ec73898129388029ebf96cd379839c1 inherit pub_methods_class_entity" id="r_a4ec73898129388029ebf96cd379839c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">collisionPersists</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:ab531aaa8cbf234e7ea7785badfa91127 inherit pub_methods_class_entity" id="r_ab531aaa8cbf234e7ea7785badfa91127"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">collisionEnds</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:a2076e90ad4cdd3823e6a3d9abbbcdd0f inherit pub_methods_class_entity" id="r_a2076e90ad4cdd3823e6a3d9abbbcdd0f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getInGameType</a> ()</td></tr>
+
+<tr class="inherit_header pub_attribs_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_entity')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-entity/">Entity</a></td></tr>
+<tr class="memitem:aaa6483e8ee109c7f19df03a605f96b8c inherit pub_attribs_class_entity" id="r_aaa6483e8ee109c7f19df03a605f96b8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">components</a></td></tr>
+<tr class="memdesc:aaa6483e8ee109c7f19df03a605f96b8c inherit pub_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked list of attached components.  <br /></td></tr>
+
+<tr class="memitem:aae66d4192d0965d383a6d1ebe11e6e01 inherit pub_attribs_class_entity" id="r_aae66d4192d0965d383a6d1ebe11e6e01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-transformation/">Transformation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">transformation</a></td></tr>
+<tr class="memdesc:aae66d4192d0965d383a6d1ebe11e6e01 inherit pub_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D transformation  <br /></td></tr>
+
+<tr class="memitem:a2f6f06971778eb48c43666051201f0c3 inherit pub_attribs_class_entity" id="r_a2f6f06971778eb48c43666051201f0c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">body</a></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-printer/">Printer</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages printing layer and offers various functions to write to it. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L171">171</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ac92f9b385ede0a4602ddd4f24fb52877" name="ac92f9b385ede0a4602ddd4f24fb52877"></a>
+<h2 class="memtitle">FontROMData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-font-data/">FontData</a> <a class="el" href="#ac92f9b385ede0a4602ddd4f24fb52877">FontROMData</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/struct-font-data/">FontData</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L160">160</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a018e6cead78e3fef46f0aadbf6b91c95" name="a018e6cead78e3fef46f0aadbf6b91c95"></a>
+<h2 class="memtitle">FontROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-font-spec/">FontSpec</a> <a class="el" href="#a018e6cead78e3fef46f0aadbf6b91c95">FontROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L145">145</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a7cfd4f9c03d7f3cbb99a469861002dcd" name="a7cfd4f9c03d7f3cbb99a469861002dcd"></a>
+<h2 class="memtitle">PrintingDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a7cfd4f9c03d7f3cbb99a469861002dcd">PrintingDirection</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L107">107</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a253149e040583ebd81340e94ff39444f" name="a253149e040583ebd81340e94ff39444f"></a>
+<h2 class="memtitle">PrintingOrientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a253149e040583ebd81340e94ff39444f">PrintingOrientation</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L100">100</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a87557d21a4049abfacc39d05c433e627" name="a87557d21a4049abfacc39d05c433e627"></a>
+<h2 class="memtitle">addSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::addSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a printing sprite. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L445">445</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="aefeb98a13ddf7692b897e01a4d584750" name="aefeb98a13ddf7692b897e01a4d584750"></a>
+<h2 class="memtitle">clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear printing area in BGMAP memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L203">203</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="ae367d40f94a2b0e434e4a6cd2d5d39ac" name="ae367d40f94a2b0e434e4a6cd2d5d39ac"></a>
+<h2 class="memtitle">clearRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::clearRow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clear a given row in the printable area of BGMAP memory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">row</td><td>Row to clean (0-27) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L219">219</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a9b7f4e693c9dc865b1f38147dd526268" name="a9b7f4e693c9dc865b1f38147dd526268"></a>
+<h2 class="memtitle">float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::float </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>precision</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print a float value. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td>Float value to print </td></tr>
+    <tr><td class="paramname">x</td><td>Column to start printing at </td></tr>
+    <tr><td class="paramname">y</td><td>Row to start printing at </td></tr>
+    <tr><td class="paramname">precision</td><td>How many decimals to print </td></tr>
+    <tr><td class="paramname">font</td><td>Name of font to use for printing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L252">252</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a76fe0afa436e960bbac2a1d71031cfd8" name="a76fe0afa436e960bbac2a1d71031cfd8"></a>
+<h2 class="memtitle">getActiveSpritePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-pixel-vector/">PixelVector</a> Printer::getActiveSpritePosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the active sprite's position. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-sprite/">Sprite</a>'s position </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L671">671</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a8ba2a278da25af0b8596b57969ea825d" name="a8ba2a278da25af0b8596b57969ea825d"></a>
+<h2 class="memtitle">getFontByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-font-data/">FontData</a> * Printer::getFontByName </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get font spec and starting position in character memory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">font</td><td>Name of font to get spec for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/struct-font-data/">FontData</a> of desired font or default font if NULL or none could be found matching the name </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L684">684</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a6e4af45351aa8f593acc77aa0286b466" name="a6e4af45351aa8f593acc77aa0286b466"></a>
+<h2 class="memtitle">getPrintingBgmapSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> Printer::getPrintingBgmapSegment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the printing bgmap segment. </p><dl class="section return"><dt>Returns</dt><dd>Index of the bgmap segment to print to </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L436">436</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a3ca9a6e7a122b31e95bfb7ce968a9608" name="a3ca9a6e7a122b31e95bfb7ce968a9608"></a>
+<h2 class="memtitle">getTextSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-font-size/">FontSize</a> Printer::getTextSize </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>string</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the size of a (block of) text so you can for example center it on screen. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">string</td><td>String to compute size for </td></tr>
+    <tr><td class="paramname">font</td><td>Name of font to use for size computation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L734">734</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a944efb58e35f1e5664594f909f3d7106" name="a944efb58e35f1e5664594f909f3d7106"></a>
+<h2 class="memtitle">getWorldCoordinatesP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> Printer::getWorldCoordinatesP </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve WORLD's gp. </p><dl class="section return"><dt>Returns</dt><dd>: WORLD's gp </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L662">662</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a59d6f98348208172def9cd6e86600220" name="a59d6f98348208172def9cd6e86600220"></a>
+<h2 class="memtitle">getWorldCoordinatesX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> Printer::getWorldCoordinatesX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve WORLD's gx. </p><dl class="section return"><dt>Returns</dt><dd>WORLD's gx </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L644">644</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="af0ae0338d987c805135f8c7eca441695" name="af0ae0338d987c805135f8c7eca441695"></a>
+<h2 class="memtitle">getWorldCoordinatesY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> Printer::getWorldCoordinatesY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve WORLD's gy. </p><dl class="section return"><dt>Returns</dt><dd>: WORLD's gy </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L653">653</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a0aba2e5a45def5239a22c4daca9d74bb" name="a0aba2e5a45def5239a22c4daca9d74bb"></a>
+<h2 class="memtitle">hex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::hex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">WORD</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print a hex value. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td>Hex value to print </td></tr>
+    <tr><td class="paramname">x</td><td>Column to start printing at </td></tr>
+    <tr><td class="paramname">y</td><td>Row to start printing at </td></tr>
+    <tr><td class="paramname">length</td><td>Digits to print </td></tr>
+    <tr><td class="paramname">font</td><td>Name of font to use for printing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L245">245</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="acaff443aa80f2de9462fa16ad78f869c" name="acaff443aa80f2de9462fa16ad78f869c"></a>
+<h2 class="memtitle">int32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::int32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print an integer value. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td>Integer to print </td></tr>
+    <tr><td class="paramname">x</td><td>Column to start printing at </td></tr>
+    <tr><td class="paramname">y</td><td>Row to start printing at </td></tr>
+    <tr><td class="paramname">font</td><td>Name of font to use for printing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L238">238</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a357dc1b918c3c358d098d6fdcfa8c459" name="a357dc1b918c3c358d098d6fdcfa8c459"></a>
+<h2 class="memtitle">loadFonts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::loadFonts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-font-spec/">FontSpec</a> **</td>          <td class="paramname"><span class="paramname"><em>fontSpecs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add fonts to internal <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> and preload CharSets for specified fonts. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">fontSpecs</td><td>Array of font specs whose charset should pre preloaded </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Must force CHAR defragmentation</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L127">127</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="ae94e17b2829b8c927d4805967643ba8a" name="ae94e17b2829b8c927d4805967643ba8a"></a>
+<h2 class="memtitle">onEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> Printer::onEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>eventFirer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>eventCode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process an event that the instance is listen for. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">eventFirer</td><td><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> that signals the event </td></tr>
+    <tr><td class="paramname">eventCode</td><td>Code of the firing event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if the listener has to be removed; true to keep it </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L993">993</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a266757e571ccfe8126cf4a4f271d9b3c" name="a266757e571ccfe8126cf4a4f271d9b3c"></a>
+<h2 class="memtitle">printSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::printSprite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print active printing sprite's info. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L482">482</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="ac09e6107de627530fc31dd3d553a0096" name="ac09e6107de627530fc31dd3d553a0096"></a>
+<h2 class="memtitle">releaseFonts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::releaseFonts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release fonts, free VRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L177">177</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="ada33f8925039911369e7176bac069e94" name="ada33f8925039911369e7176bac069e94"></a>
+<h2 class="memtitle">removedComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Printer::removedComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-component/">Component</a></td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A component has been removed from this entity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">component</td><td>Removed component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L1017">1017</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="aa6e2c48535c97c7cc409ed0e2c17ed22" name="aa6e2c48535c97c7cc409ed0e2c17ed22"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void Printer::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empties internal virtual list of registered fonts. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L1026">1026</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a5a5226a6eeea3cb1d99d1e3515542a82" name="a5a5226a6eeea3cb1d99d1e3515542a82"></a>
+<h2 class="memtitle">resetCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::resetCoordinates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the coordinates of the WORLD used for printing. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L632">632</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="acbf36c4bf65267778e0a6b5bd97fe88a" name="acbf36c4bf65267778e0a6b5bd97fe88a"></a>
+<h2 class="memtitle">setActiveSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> Printer::setActiveSprite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>printingSpriteIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the active printing sprite. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">printingSpriteIndex</td><td>Index of the sprite to activate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L464">464</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a92dc7381e85b70750c5b93b4a2e2b4f5" name="a92dc7381e85b70750c5b93b4a2e2b4f5"></a>
+<h2 class="memtitle">setBgmapCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setBgmapCoordinates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>mx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>my</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>mp</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the coordinates of the BGMAP used for printing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">mx</td><td>BGMAP x coordinate </td></tr>
+    <tr><td class="paramname">my</td><td>BGMAP y coordinate </td></tr>
+    <tr><td class="paramname">mp</td><td>BGMAP parallax value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L559">559</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a1d37153ae6ee23ea0de83e0aaf2e1c68" name="a1d37153ae6ee23ea0de83e0aaf2e1c68"></a>
+<h2 class="memtitle">setCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setCoordinates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>parallax</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the coordinates used for printing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>WORLD x coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>WORLD y coordinate </td></tr>
+    <tr><td class="paramname">z</td><td>WORLD parallax value </td></tr>
+    <tr><td class="paramname">parallax</td><td>WORLD parallax value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L502">502</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a794ebcfdf374133e26a14ec1f48fc714" name="a794ebcfdf374133e26a14ec1f48fc714"></a>
+<h2 class="memtitle">setDebugMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setDebugMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set mode to debug to bypass loading fonts through CharSets. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L108">108</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="af4ad9f3c166d13afbaf3a969c9563cb4" name="af4ad9f3c166d13afbaf3a969c9563cb4"></a>
+<h2 class="memtitle">setFontPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setFontPage </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>page</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes the font's char set to CHAR memory with displacing the source pointer by numberOfChars * page. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">font</td><td>Name of font to use for printing </td></tr>
+    <tr><td class="paramname">page</td><td>ROM's displacement multiplier </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L357">357</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="af3b7149ebe84d032b6c00c8d9a23ecc8" name="af3b7149ebe84d032b6c00c8d9a23ecc8"></a>
+<h2 class="memtitle">setOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setOrientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the orientation for the following call to print. Resets its self automatically to horizonal. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td><a class="el" href="#a253149e040583ebd81340e94ff39444f">PrintingOrientation</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L371">371</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a8822060e33eeef793e605c48bc9c27ff" name="a8822060e33eeef793e605c48bc9c27ff"></a>
+<h2 class="memtitle">setPalette()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setPalette </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>palette</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set palette for the printing area. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">palette</td><td>Palette for the printing area </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L620">620</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a2a7e836a77bd9b0aedf971edfb313523" name="a2a7e836a77bd9b0aedf971edfb313523"></a>
+<h2 class="memtitle">setPrintingBgmapSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setPrintingBgmapSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>printingBgmapSegment</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cache the printing bgmap segment. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">printingBgmapSegment</td><td>Index of the bgmap segment to print to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L415">415</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a5c582cc6d4481598a488fc908c4a91f5" name="a5c582cc6d4481598a488fc908c4a91f5"></a>
+<h2 class="memtitle">setTextDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setTextDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the direction for the following call to print. Resets its self automatically to LTR (Left to Right). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td><a class="el" href="#a7cfd4f9c03d7f3cbb99a469861002dcd">PrintingDirection</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L393">393</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a4f1e9c47c9fee24ea8b458607df33ee4" name="a4f1e9c47c9fee24ea8b458607df33ee4"></a>
+<h2 class="memtitle">setTransparency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setTransparency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>transparency</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set sprite's transparency </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">transparency</td><td>Transparent value (__TRANSPARENCY_NONE, _EVEN or _ODD) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L608">608</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="a23d1532ef648a0b3cee04c60fab7c32a" name="a23d1532ef648a0b3cee04c60fab7c32a"></a>
+<h2 class="memtitle">setWorldCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setWorldCoordinates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>parallax</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the coordinates of the WORLD used for printing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>WORLD x coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>WORLD y coordinate </td></tr>
+    <tr><td class="paramname">z</td><td>WORLD parallax value </td></tr>
+    <tr><td class="paramname">parallax</td><td>WORLD parallax value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L527">527</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="af367c0723ce9ede4c0957f3661dd315a" name="af367c0723ce9ede4c0957f3661dd315a"></a>
+<h2 class="memtitle">setWorldSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::setWorldSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set WORLD's size. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">w</td><td>WORLD's width </td></tr>
+    <tr><td class="paramname">h</td><td>WORLD's height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L592">592</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<a id="ae2ca9fa9c9a3f612e2daca68a86eb01e" name="ae2ca9fa9c9a3f612e2daca68a86eb01e"></a>
+<h2 class="memtitle">text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Printer::text </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>string</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print a string. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">string</td><td>String to print </td></tr>
+    <tr><td class="paramname">x</td><td>Column to start printing at </td></tr>
+    <tr><td class="paramname">y</td><td>Row to start printing at </td></tr>
+    <tr><td class="paramname">font</td><td>Name of font to use for printing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c#L227">227</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acbaabb69428ff746a8bf1b492f5252e0" name="acbaabb69428ff746a8bf1b492f5252e0"></a>
+<h2 class="memtitle">activePrintingSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-printing-sprite/">PrintingSprite</a> Printer::activePrintingSprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Active sprite that is manipulated by this class' interface. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L176">176</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a2d01d1788f100408894aeda2943eb046" name="a2d01d1788f100408894aeda2943eb046"></a>
+<h2 class="memtitle">direction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> Printer::direction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-printer/">Printer</a> direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L194">194</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a54ded382c933c5a5eba46172153431b5" name="a54ded382c933c5a5eba46172153431b5"></a>
+<h2 class="memtitle">lastUsedFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const char* Printer::lastUsedFont</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cache the last used font to speed up searches. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L179">179</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a2af17138d474e9526d750b906a491471" name="a2af17138d474e9526d750b906a491471"></a>
+<h2 class="memtitle">lastUsedFontData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-font-data/">FontData</a>* Printer::lastUsedFontData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cache the last used font data to speed up searches. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L182">182</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a1bedb1c6e96bebf6d663acddf90a33cb" name="a1bedb1c6e96bebf6d663acddf90a33cb"></a>
+<h2 class="memtitle">mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> Printer::mode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-printer/">Printer</a> mode (Default or <a class="el" href="/documentation/api/class-debug/">Debug</a>) </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L185">185</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="ae4796b911387175a89f4c23550a98b52" name="ae4796b911387175a89f4c23550a98b52"></a>
+<h2 class="memtitle">orientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> Printer::orientation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-printer/">Printer</a> orientation. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L191">191</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="af54929cd5c1cdf773d3890f95b46c6a5" name="af54929cd5c1cdf773d3890f95b46c6a5"></a>
+<h2 class="memtitle">palette</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> Printer::palette</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Palette to use for printing. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L188">188</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b92bfc12611b0232b3ad8ef70865a41" name="a9b92bfc12611b0232b3ad8ef70865a41"></a>
+<h2 class="memtitle">printingBgmapSegment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> Printer::printingBgmapSegment</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-printer/">Printer</a> segment (BGMAP memory) </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h#L197">197</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Entity/Printer/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.h">Printer.h</a></li>
+<li>VUEngine-Core/source/Entity/Printer/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Entity/Printer/Printer.c">Printer.c</a></li>
+</ul>
+</div>
+
+
+</div>

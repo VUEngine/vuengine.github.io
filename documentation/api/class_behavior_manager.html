@@ -24,7 +24,7 @@ permalink: documentation/api/class-behavior-manager/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.h">BehaviorManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h">BehaviorManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BehaviorManager:</div>
 <div class="dyncontent">
@@ -40,7 +40,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac33d9f820200aed3d594b494c8482c48" id="r_ac33d9f820200aed3d594b494c8482c48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac33d9f820200aed3d594b494c8482c48">constructor</a> ()</td></tr>
 <tr class="memdesc:ac33d9f820200aed3d594b494c8482c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
-<tr class="memitem:a5f598b3b9ec48f023c38443eb5979318" id="r_a5f598b3b9ec48f023c38443eb5979318"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f598b3b9ec48f023c38443eb5979318">getType</a> ()</td></tr>
+<tr class="memitem:a5f598b3b9ec48f023c38443eb5979318" id="r_a5f598b3b9ec48f023c38443eb5979318"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f598b3b9ec48f023c38443eb5979318">getType</a> ()</td></tr>
 
 <tr class="memitem:adc82816342316e80357cf61fcd243e68" id="r_adc82816342316e80357cf61fcd243e68"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc82816342316e80357cf61fcd243e68">enable</a> ()</td></tr>
 <tr class="memdesc:adc82816342316e80357cf61fcd243e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the manager.  <br /></td></tr>
@@ -50,10 +50,10 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:ad4f2d9ed88d818848b0c04253bf3fa44" id="r_ad4f2d9ed88d818848b0c04253bf3fa44"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-behavior/">Behavior</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f2d9ed88d818848b0c04253bf3fa44">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a> *behaviorSpec)</td></tr>
 
-<tr class="memitem:ad1b6d19bc20939962ef46f600c63eb11" id="r_ad1b6d19bc20939962ef46f600c63eb11"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1b6d19bc20939962ef46f600c63eb11">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-behavior/">Behavior</a> behavior)</td></tr>
-
 <tr class="memitem:aa81fedc8c88c18b2a61b03cdbf91cd56" id="r_aa81fedc8c88c18b2a61b03cdbf91cd56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa81fedc8c88c18b2a61b03cdbf91cd56">reset</a> ()</td></tr>
-<tr class="memdesc:aa81fedc8c88c18b2a61b03cdbf91cd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:a15899e6ce4646d7ca90ff412dff83706" id="r_a15899e6ce4646d7ca90ff412dff83706"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15899e6ce4646d7ca90ff412dff83706">update</a> ()</td></tr>
+<tr class="memdesc:a15899e6ce4646d7ca90ff412dff83706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the registered bodies by advancing the physics simulations.  <br /></td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -69,12 +69,13 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a8803e792ebc2bebd2b2a91c3127b91d7 inherit pub_methods_class_component_manager" id="r_a8803e792ebc2bebd2b2a91c3127b91d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
 
-<tr class="memitem:aa5935cd8d552dd8dbcc2bc02f10cc743 inherit pub_methods_class_component_manager" id="r_aa5935cd8d552dd8dbcc2bc02f10cc743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">doGetComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>)</td></tr>
+<tr class="memitem:a857bfb91f9066ce89104e5e414a396e8 inherit pub_methods_class_component_manager" id="r_a857bfb91f9066ce89104e5e414a396e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">purgeComponents</a> ()</td></tr>
+<tr class="memdesc:a857bfb91f9066ce89104e5e414a396e8 inherit pub_methods_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the purging of deleted components.  <br /></td></tr>
 
-<tr class="memitem:ae13a34663a70fdc54f4c8bf8625a2b68 inherit pub_methods_class_component_manager" id="r_ae13a34663a70fdc54f4c8bf8625a2b68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+<tr class="memitem:ae13a34663a70fdc54f4c8bf8625a2b68 inherit pub_methods_class_component_manager" id="r_ae13a34663a70fdc54f4c8bf8625a2b68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
-<tr class="memitem:a26fe2edd2da326d8ba40b56240ace2d8 inherit pub_static_methods_class_component_manager" id="r_a26fe2edd2da326d8ba40b56240ace2d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a26fe2edd2da326d8ba40b56240ace2d8 inherit pub_static_methods_class_component_manager" id="r_a26fe2edd2da326d8ba40b56240ace2d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
 <tr class="memitem:ab7850e60b0adf3926f04150afba28dd5 inherit pub_static_methods_class_component_manager" id="r_ab7850e60b0adf3926f04150afba28dd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
 
@@ -84,29 +85,29 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a92e8340427cb4bec7980d97065930a3f inherit pub_static_methods_class_component_manager" id="r_a92e8340427cb4bec7980d97065930a3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
 
-<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
 <tr class="memitem:a123ea126f5ba13de211c4dffced1137e inherit pub_static_methods_class_component_manager" id="r_a123ea126f5ba13de211c4dffced1137e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
 
 <tr class="memitem:a1c09750f44f3f93cc9039fe65d561065 inherit pub_static_methods_class_component_manager" id="r_a1c09750f44f3f93cc9039fe65d561065"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
-<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int16</a> componentIndex)</td></tr>
+<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> componentIndex)</td></tr>
 
-<tr class="memitem:ad570cf1d4424c7bb33772b4d8852581c inherit pub_static_methods_class_component_manager" id="r_ad570cf1d4424c7bb33772b4d8852581c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a33f787c9658a559e5e18da3376c7478b inherit pub_static_methods_class_component_manager" id="r_a33f787c9658a559e5e18da3376c7478b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>)</td></tr>
 
-<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/Oop.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType,...)</td></tr>
+<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType,...)</td></tr>
 
-<tr class="memitem:afdb9d380597a7ae5e1f4c79a61f018e6 inherit pub_static_methods_class_component_manager" id="r_afdb9d380597a7ae5e1f4c79a61f018e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:afdb9d380597a7ae5e1f4c79a61f018e6 inherit pub_static_methods_class_component_manager" id="r_afdb9d380597a7ae5e1f4c79a61f018e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
+<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
 
-<tr class="memitem:a50e0ecbab92db23be791d7feaea1ad7d inherit pub_static_methods_class_component_manager" id="r_a50e0ecbab92db23be791d7feaea1ad7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyCompomentVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+<tr class="memitem:a50e0ecbab92db23be791d7feaea1ad7d inherit pub_static_methods_class_component_manager" id="r_a50e0ecbab92db23be791d7feaea1ad7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyCompomentVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
 <tr class="inherit_header pub_attribs_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
 <tr class="memitem:a86bce556cf2be26d1414b36ecf82ee85 inherit pub_attribs_class_component_manager" id="r_a86bce556cf2be26d1414b36ecf82ee85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">components</a></td></tr>
@@ -118,7 +119,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></p>
 <p>Manages all the behavior instances. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.h#L30">30</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.h">BehaviorManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h#L30">30</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h">BehaviorManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac33d9f820200aed3d594b494c8482c48" name="ac33d9f820200aed3d594b494c8482c48"></a>
 <h2 class="memtitle">constructor()</h2>
@@ -137,37 +138,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c#L92">92</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a>.</p>
-
-</div>
-</div>
-<a id="ad1b6d19bc20939962ef46f600c63eb11" name="ad1b6d19bc20939962ef46f600c63eb11"></a>
-<h2 class="memtitle">deinstantiateComponent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname">void BehaviorManager::deinstantiateComponent </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="/documentation/api/class-behavior/">Behavior</a></td>          <td class="paramname"><span class="paramname"><em>behavior</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Destroy the provided behavior. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the sprite will attach to </td></tr>
-    <tr><td class="paramname">behavior</td><td><a class="el" href="/documentation/api/class-behavior/">Behavior</a> to destroy </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c#L70">70</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L101">101</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
 
 </div>
 </div>
@@ -198,7 +169,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c#L45">45</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
 
 </div>
 </div>
@@ -229,7 +200,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c#L38">38</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
 
 </div>
 </div>
@@ -243,7 +214,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> BehaviorManager::getType </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> BehaviorManager::getType </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -259,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c#L31">31</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L33">33</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
 
 </div>
 </div>
@@ -290,7 +261,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Created behavior </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c#L52">52</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
 
 </div>
 </div>
@@ -308,14 +279,34 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Destroy the provided behavior Reset the manager's state </p>
 
-<p>Reset the manager's state. </p>
+</div>
+</div>
+<a id="a15899e6ce4646d7ca90ff412dff83706" name="a15899e6ce4646d7ca90ff412dff83706"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void BehaviorManager::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the registered bodies by advancing the physics simulations. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Component/Logic/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.h">BehaviorManager.h</a></li>
-<li>VUEngine-Core/source/Component/Logic/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Component/Logic/BehaviorManager.c">BehaviorManager.c</a></li>
+<li>VUEngine-Core/source/Component/Behavior/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h">BehaviorManager.h</a></li>
+<li>VUEngine-Core/source/Component/Behavior/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a></li>
 </ul>
 </div>
 

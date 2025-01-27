@@ -24,7 +24,7 @@ permalink: documentation/api/class-sound-track/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SoundTrack:</div>
 <div class="dyncontent">
@@ -48,7 +48,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a90a81f32d88537a2266074a8bc913515" id="r_a90a81f32d88537a2266074a8bc913515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a81f32d88537a2266074a8bc913515">constructor</a> (const <a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a> *<a class="el" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a>)</td></tr>
 
-<tr class="memitem:a08bb19975743ecab4655604bfc2d1c40" id="r_a08bb19975743ecab4655604bfc2d1c40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08bb19975743ecab4655604bfc2d1c40">start</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> wasPaused)</td></tr>
+<tr class="memitem:a08bb19975743ecab4655604bfc2d1c40" id="r_a08bb19975743ecab4655604bfc2d1c40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08bb19975743ecab4655604bfc2d1c40">start</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> wasPaused)</td></tr>
 
 <tr class="memitem:a1547bb0338f5fa2cc3d859358c710043" id="r_a1547bb0338f5fa2cc3d859358c710043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1547bb0338f5fa2cc3d859358c710043">stop</a> ()</td></tr>
 <tr class="memdesc:a1547bb0338f5fa2cc3d859358c710043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the playback.  <br /></td></tr>
@@ -68,18 +68,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6882dfb0ed2786248898b1236fc978d" id="r_aa6882dfb0ed2786248898b1236fc978d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6882dfb0ed2786248898b1236fc978d">rewind</a> ()</td></tr>
 <tr class="memdesc:aa6882dfb0ed2786248898b1236fc978d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewind the track.  <br /></td></tr>
 
-<tr class="memitem:a6f4d4e5efa57ef122aaa57fe68c33a28" id="r_a6f4d4e5efa57ef122aaa57fe68c33a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f4d4e5efa57ef122aaa57fe68c33a28">update</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> elapsedMicroseconds, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Hardware/VSUManager.h">targetPCMUpdates</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a> tickStep, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a> targetTimerResolutionFactor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fixed_t</a> leftVolumeFactor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fixed_t</a> rightVolumeFactor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int8</a> volumeReduction, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint8</a> volumenScalePower, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> frequencyDelta)</td></tr>
+<tr class="memitem:a6f4d4e5efa57ef122aaa57fe68c33a28" id="r_a6f4d4e5efa57ef122aaa57fe68c33a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f4d4e5efa57ef122aaa57fe68c33a28">update</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> elapsedMicroseconds, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Hardware/VSUManager.h">targetPCMUpdates</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a> tickStep, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a> targetTimerResolutionFactor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> leftVolumeFactor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> rightVolumeFactor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> volumeReduction, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> volumenScalePower, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> frequencyDelta)</td></tr>
 
-<tr class="memitem:a7ce8aa2c2964fa1a9a168ec636492e2b" id="r_a7ce8aa2c2964fa1a9a168ec636492e2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ce8aa2c2964fa1a9a168ec636492e2b">getTicks</a> ()</td></tr>
+<tr class="memitem:a7ce8aa2c2964fa1a9a168ec636492e2b" id="r_a7ce8aa2c2964fa1a9a168ec636492e2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ce8aa2c2964fa1a9a168ec636492e2b">getTicks</a> ()</td></tr>
 
 <tr class="memitem:a15bf98695b8fd700e81fac2557041097" id="r_a15bf98695b8fd700e81fac2557041097"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15bf98695b8fd700e81fac2557041097">getElapsedTicksPercentaje</a> ()</td></tr>
 
-<tr class="memitem:a082e4a1ce7f759ff1c1d55f54448f748" id="r_a082e4a1ce7f759ff1c1d55f54448f748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082e4a1ce7f759ff1c1d55f54448f748">getTotalPlaybackMilliseconds</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> targetTimerResolutionUS)</td></tr>
+<tr class="memitem:a082e4a1ce7f759ff1c1d55f54448f748" id="r_a082e4a1ce7f759ff1c1d55f54448f748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082e4a1ce7f759ff1c1d55f54448f748">getTotalPlaybackMilliseconds</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> targetTimerResolutionUS)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0c7564bf06b6cdc10af886c151d4d4b" id="r_ac0c7564bf06b6cdc10af886c151d4d4b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c7564bf06b6cdc10af886c151d4d4b">setPCMTargetPlaybackRefreshRate</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a> pcmTargetPlaybackRefreshRate)</td></tr>
+<tr class="memitem:ac0c7564bf06b6cdc10af886c151d4d4b" id="r_ac0c7564bf06b6cdc10af886c151d4d4b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c7564bf06b6cdc10af886c151d4d4b">setPCMTargetPlaybackRefreshRate</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> pcmTargetPlaybackRefreshRate)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -87,46 +87,46 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a259d9c7906c7baba29adc42d0d0addc6" id="r_a259d9c7906c7baba29adc42d0d0addc6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-sound-track-spec/">SoundTrackSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a259d9c7906c7baba29adc42d0d0addc6">soundTrackSpec</a></td></tr>
 <tr class="memdesc:a259d9c7906c7baba29adc42d0d0addc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the spec that defines how to initialize the soundtrack.  <br /></td></tr>
 
-<tr class="memitem:a14d897136b729166623c873e3efc11bb" id="r_a14d897136b729166623c873e3efc11bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14d897136b729166623c873e3efc11bb">samples</a></td></tr>
+<tr class="memitem:a14d897136b729166623c873e3efc11bb" id="r_a14d897136b729166623c873e3efc11bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14d897136b729166623c873e3efc11bb">samples</a></td></tr>
 <tr class="memdesc:a14d897136b729166623c873e3efc11bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel's effective length.  <br /></td></tr>
 
-<tr class="memitem:a0acc26209cb105b8729ba65ed331f67f" id="r_a0acc26209cb105b8729ba65ed331f67f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0acc26209cb105b8729ba65ed331f67f">cursor</a></td></tr>
+<tr class="memitem:a0acc26209cb105b8729ba65ed331f67f" id="r_a0acc26209cb105b8729ba65ed331f67f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0acc26209cb105b8729ba65ed331f67f">cursor</a></td></tr>
 <tr class="memdesc:a0acc26209cb105b8729ba65ed331f67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position within the sound track.  <br /></td></tr>
 
-<tr class="memitem:a5ec02bfc36fd9bf766b39d9d2d061f57" id="r_a5ec02bfc36fd9bf766b39d9d2d061f57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ec02bfc36fd9bf766b39d9d2d061f57">cursorSxINT</a></td></tr>
+<tr class="memitem:a5ec02bfc36fd9bf766b39d9d2d061f57" id="r_a5ec02bfc36fd9bf766b39d9d2d061f57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ec02bfc36fd9bf766b39d9d2d061f57">cursorSxINT</a></td></tr>
 <tr class="memdesc:a5ec02bfc36fd9bf766b39d9d2d061f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxINT cursor.  <br /></td></tr>
 
-<tr class="memitem:a48a2a359bad00a025fa0ee34faa36d33" id="r_a48a2a359bad00a025fa0ee34faa36d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48a2a359bad00a025fa0ee34faa36d33">cursorSxLRV</a></td></tr>
+<tr class="memitem:a48a2a359bad00a025fa0ee34faa36d33" id="r_a48a2a359bad00a025fa0ee34faa36d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48a2a359bad00a025fa0ee34faa36d33">cursorSxLRV</a></td></tr>
 <tr class="memdesc:a48a2a359bad00a025fa0ee34faa36d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxLRV cursor.  <br /></td></tr>
 
-<tr class="memitem:ae68c08a1d2c73ce83cfea1f4e0862201" id="r_ae68c08a1d2c73ce83cfea1f4e0862201"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae68c08a1d2c73ce83cfea1f4e0862201">cursorSxFQ</a></td></tr>
+<tr class="memitem:ae68c08a1d2c73ce83cfea1f4e0862201" id="r_ae68c08a1d2c73ce83cfea1f4e0862201"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae68c08a1d2c73ce83cfea1f4e0862201">cursorSxFQ</a></td></tr>
 <tr class="memdesc:ae68c08a1d2c73ce83cfea1f4e0862201"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxFQ cursor.  <br /></td></tr>
 
-<tr class="memitem:a3c3d13f62b1739bb89814a1466345aa3" id="r_a3c3d13f62b1739bb89814a1466345aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c3d13f62b1739bb89814a1466345aa3">cursorSxEV0</a></td></tr>
+<tr class="memitem:a3c3d13f62b1739bb89814a1466345aa3" id="r_a3c3d13f62b1739bb89814a1466345aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c3d13f62b1739bb89814a1466345aa3">cursorSxEV0</a></td></tr>
 <tr class="memdesc:a3c3d13f62b1739bb89814a1466345aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxEV0 cursor.  <br /></td></tr>
 
-<tr class="memitem:a09fc7f3fc21519e0a24d043afa90d156" id="r_a09fc7f3fc21519e0a24d043afa90d156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09fc7f3fc21519e0a24d043afa90d156">cursorSxEV1</a></td></tr>
+<tr class="memitem:a09fc7f3fc21519e0a24d043afa90d156" id="r_a09fc7f3fc21519e0a24d043afa90d156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09fc7f3fc21519e0a24d043afa90d156">cursorSxEV1</a></td></tr>
 <tr class="memdesc:a09fc7f3fc21519e0a24d043afa90d156"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxEV1 cursor.  <br /></td></tr>
 
-<tr class="memitem:a12a4916d060f28abe35c54c7799b404c" id="r_a12a4916d060f28abe35c54c7799b404c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12a4916d060f28abe35c54c7799b404c">cursorSxRAM</a></td></tr>
+<tr class="memitem:a12a4916d060f28abe35c54c7799b404c" id="r_a12a4916d060f28abe35c54c7799b404c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12a4916d060f28abe35c54c7799b404c">cursorSxRAM</a></td></tr>
 <tr class="memdesc:a12a4916d060f28abe35c54c7799b404c"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxRAM cursor.  <br /></td></tr>
 
-<tr class="memitem:af3d83b506a8bf6b49f63cd64f67ddf20" id="r_af3d83b506a8bf6b49f63cd64f67ddf20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3d83b506a8bf6b49f63cd64f67ddf20">cursorSxSWP</a></td></tr>
+<tr class="memitem:af3d83b506a8bf6b49f63cd64f67ddf20" id="r_af3d83b506a8bf6b49f63cd64f67ddf20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3d83b506a8bf6b49f63cd64f67ddf20">cursorSxSWP</a></td></tr>
 <tr class="memdesc:af3d83b506a8bf6b49f63cd64f67ddf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxSWP cursor.  <br /></td></tr>
 
-<tr class="memitem:af0064dec7b4b2ad442f513d9e0ed3aa0" id="r_af0064dec7b4b2ad442f513d9e0ed3aa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0064dec7b4b2ad442f513d9e0ed3aa0">cursorSxMOD</a></td></tr>
+<tr class="memitem:af0064dec7b4b2ad442f513d9e0ed3aa0" id="r_af0064dec7b4b2ad442f513d9e0ed3aa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0064dec7b4b2ad442f513d9e0ed3aa0">cursorSxMOD</a></td></tr>
 <tr class="memdesc:af0064dec7b4b2ad442f513d9e0ed3aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SxMOD cursor.  <br /></td></tr>
 
-<tr class="memitem:aee3f5fee69e9adec192932773ff6ac0f" id="r_aee3f5fee69e9adec192932773ff6ac0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a></td></tr>
+<tr class="memitem:aee3f5fee69e9adec192932773ff6ac0f" id="r_aee3f5fee69e9adec192932773ff6ac0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee3f5fee69e9adec192932773ff6ac0f">ticks</a></td></tr>
 <tr class="memdesc:aee3f5fee69e9adec192932773ff6ac0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of ticks.  <br /></td></tr>
 
-<tr class="memitem:a9582deadc3419be1a58ae7430836ba44" id="r_a9582deadc3419be1a58ae7430836ba44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9582deadc3419be1a58ae7430836ba44">elapsedTicks</a></td></tr>
+<tr class="memitem:a9582deadc3419be1a58ae7430836ba44" id="r_a9582deadc3419be1a58ae7430836ba44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9582deadc3419be1a58ae7430836ba44">elapsedTicks</a></td></tr>
 <tr class="memdesc:a9582deadc3419be1a58ae7430836ba44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ticks before moving the cursor.  <br /></td></tr>
 
-<tr class="memitem:a7d0a6173abb9958ae2cd1e8c33f1083b" id="r_a7d0a6173abb9958ae2cd1e8c33f1083b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d0a6173abb9958ae2cd1e8c33f1083b">nextElapsedTicksTarget</a></td></tr>
+<tr class="memitem:a7d0a6173abb9958ae2cd1e8c33f1083b" id="r_a7d0a6173abb9958ae2cd1e8c33f1083b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d0a6173abb9958ae2cd1e8c33f1083b">nextElapsedTicksTarget</a></td></tr>
 <tr class="memdesc:a7d0a6173abb9958ae2cd1e8c33f1083b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next ticks target.  <br /></td></tr>
 
-<tr class="memitem:af9ea3f91ec7b3c606b10466fd4ef645a" id="r_af9ea3f91ec7b3c606b10466fd4ef645a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a></td></tr>
+<tr class="memitem:af9ea3f91ec7b3c606b10466fd4ef645a" id="r_af9ea3f91ec7b3c606b10466fd4ef645a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ea3f91ec7b3c606b10466fd4ef645a">finished</a></td></tr>
 <tr class="memdesc:af9ea3f91ec7b3c606b10466fd4ef645a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the playback is complete.  <br /></td></tr>
 
 </table><table class="memberdecls table">
@@ -138,10 +138,10 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
 
-<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
-<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/Oop.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/Oop.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
 
 <tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
 <tr class="memitem:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object" id="r_a481b05c1f25b4e686eca17995944bfcc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">vTable</a></td></tr>
@@ -153,7 +153,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
 <p>Implements a sound track. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L257">257</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L257">257</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3bcdf3ef942d3b430b5f8311b79069b0" name="a3bcdf3ef942d3b430b5f8311b79069b0"></a>
 <h2 class="memtitle">SoundTrackROMSpec</h2>
@@ -168,7 +168,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>A <a class="el" href="/documentation/api/class-sound-track/">SoundTrack</a> spec that is stored in ROM </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L246">246</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L246">246</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -186,7 +186,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="/documentation/api/class-sound/">Sound</a> events that the sound player recongnizes </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L174">174</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L174">174</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -203,7 +203,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="/documentation/api/class-sound/">Sound</a> track types </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L166">166</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L166">166</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -229,7 +229,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L191">191</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L191">191</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -249,7 +249,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the sound track's percentage of elapsed ticks. </p><dl class="section return"><dt>Returns</dt><dd>Percentaje of elapsed ticks </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L155">155</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L155">155</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::getTicks </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::getTicks </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -269,7 +269,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the sound track's total ticks. </p><dl class="section return"><dt>Returns</dt><dd>Total number of ticks </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L148">148</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L148">148</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -280,9 +280,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::getTotalPlaybackMilliseconds </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::getTotalPlaybackMilliseconds </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>targetTimerResolutionUS</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>targetTimerResolutionUS</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -295,7 +295,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The total time of playback in milliseconds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L167">167</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L167">167</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -316,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Pause the playback. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Resume the output of sound. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L89">89</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L89">89</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Rewind the track. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L94">94</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L94">94</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -374,7 +374,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static void SoundTrack::setPCMTargetPlaybackRefreshRate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>pcmTargetPlaybackRefreshRate</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>pcmTargetPlaybackRefreshRate</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -391,7 +391,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L34">34</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L34">34</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void SoundTrack::start </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>wasPaused</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>wasPaused</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -416,7 +416,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -437,7 +437,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Stop the playback. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L62">62</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L62">62</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Suspend the output of sound. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L84">84</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L84">84</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Unpause the playback. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -490,49 +490,49 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> SoundTrack::update </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> SoundTrack::update </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elapsedMicroseconds</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elapsedMicroseconds</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>targetPCMUpdates</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>targetPCMUpdates</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a></td>          <td class="paramname"><span class="paramname"><em>tickStep</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a></td>          <td class="paramname"><span class="paramname"><em>tickStep</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a></td>          <td class="paramname"><span class="paramname"><em>targetTimerResolutionFactor</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a></td>          <td class="paramname"><span class="paramname"><em>targetTimerResolutionFactor</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>leftVolumeFactor</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>leftVolumeFactor</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>rightVolumeFactor</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>rightVolumeFactor</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>volumeReduction</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>volumeReduction</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>volumenScalePower</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>volumenScalePower</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>frequencyDelta</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>frequencyDelta</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -552,7 +552,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the playback is complete; false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c#L118">118</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c#L118">118</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a>.</p>
 
 </div>
 </div>
@@ -567,7 +567,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursor</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursor</td>
         </tr>
       </table>
   </td>
@@ -579,7 +579,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Position within the sound track. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L268">268</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L268">268</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -593,7 +593,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxEV0</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxEV0</td>
         </tr>
       </table>
   </td>
@@ -605,7 +605,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxEV0 cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L280">280</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L280">280</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +619,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxEV1</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxEV1</td>
         </tr>
       </table>
   </td>
@@ -631,7 +631,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxEV1 cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L283">283</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L283">283</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +645,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxFQ</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxFQ</td>
         </tr>
       </table>
   </td>
@@ -657,7 +657,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxFQ cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L277">277</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L277">277</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxINT</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxINT</td>
         </tr>
       </table>
   </td>
@@ -683,7 +683,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxINT cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L271">271</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L271">271</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxLRV</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxLRV</td>
         </tr>
       </table>
   </td>
@@ -709,7 +709,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxLRV cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L274">274</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L274">274</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -723,7 +723,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxMOD</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxMOD</td>
         </tr>
       </table>
   </td>
@@ -735,7 +735,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxMOD cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L292">292</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L292">292</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -749,7 +749,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxRAM</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxRAM</td>
         </tr>
       </table>
   </td>
@@ -761,7 +761,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxRAM cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L286">286</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L286">286</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -775,7 +775,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::cursorSxSWP</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::cursorSxSWP</td>
         </tr>
       </table>
   </td>
@@ -787,7 +787,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>SxSWP cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L289">289</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L289">289</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -801,7 +801,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a> SoundTrack::elapsedTicks</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a> SoundTrack::elapsedTicks</td>
         </tr>
       </table>
   </td>
@@ -813,7 +813,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Ticks before moving the cursor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L298">298</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L298">298</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -827,7 +827,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">bool</a> SoundTrack::finished</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> SoundTrack::finished</td>
         </tr>
       </table>
   </td>
@@ -839,7 +839,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If true, the playback is complete. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L304">304</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L304">304</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -853,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">fix7_9_ext</a> SoundTrack::nextElapsedTicksTarget</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fix7_9_ext</a> SoundTrack::nextElapsedTicksTarget</td>
         </tr>
       </table>
   </td>
@@ -865,7 +865,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Next ticks target. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L301">301</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L301">301</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -879,7 +879,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::samples</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::samples</td>
         </tr>
       </table>
   </td>
@@ -891,7 +891,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Channel's effective length. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L265">265</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L265">265</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -917,7 +917,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Pointer to the spec that defines how to initialize the soundtrack. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L262">262</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L262">262</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
@@ -931,7 +931,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Base/General/Types.h">uint32</a> SoundTrack::ticks</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> SoundTrack::ticks</td>
         </tr>
       </table>
   </td>
@@ -943,13 +943,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Total number of ticks. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h#L295">295</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h#L295">295</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Sound/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.h">SoundTrack.h</a></li>
-<li>VUEngine-Core/source/Sound/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/092dda5c81faa24f892aefa2b68d5970d6e2c987/source/Sound/SoundTrack.c">SoundTrack.c</a></li>
+<li>VUEngine-Core/source/Sound/SoundTrack/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.h">SoundTrack.h</a></li>
+<li>VUEngine-Core/source/Sound/SoundTrack/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Sound/SoundTrack/SoundTrack.c">SoundTrack.c</a></li>
 </ul>
 </div>
 
