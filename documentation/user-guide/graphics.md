@@ -102,7 +102,7 @@ BgmapSpriteROMSpec ActorSpriteSpec =
         // Component
         {
             // Allocator
-            __TYPE(BgmapAnimatedSprite),
+            __TYPE(BgmapSprite),
 
             // Component type
             kSpriteComponent

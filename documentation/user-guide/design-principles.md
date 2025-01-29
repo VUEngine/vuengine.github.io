@@ -23,20 +23,20 @@ order expose those features in a more friendly manner, we implemented a transpil
 
 The core of the engine is the [VUEngine](/documentation/api/class-v-u-engine/) singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
 
-Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to in the game’s starting function:
+Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter to:
 
 ```cpp
-int32 game(void)
+GameState game(void)
 {
-    // Start the game
-    return VUEngine::start
-    (
-        GameState::safeCast(PrecautionScreenState::getInstance())
-    );
+    // Initialize stuff
+    [...]
+
+    // Return the instance of the intial GameState
+    return GameState::safeCast(InitialGameState::getInstance());
 }
 ```
 
-In the state machine pattern implemented by the engine, the life cycle of any [State](/documentation/api/class-state/) consists of the following events:
+In the state machine pattern implemented by the engine, the life cycle of any [GameState](/documentation/api/class-game-state/) consists of the following events:
 
 ```cpp
 /// Prepares the object to enter this state.
@@ -213,7 +213,7 @@ Only the first call to `SomeSingletonClass::secure` has any effect, subsequent c
 
 Implicitly, all secured methods are accessible from their own classes without restrictions. So, `SomeSingletonClass` still has access to `SomeSingletonClass::someSecureMethod`.
 
-One of the first methods to protect from logically invalid calls is the `VUEngine::start` method, which is the entry point of any game and should be only called once. To protect it from multiple calls, a global array of authorized classes is passed to its `secure` method:
+One of the first methods to protect from logically invalid calls is the `VUEngine::run` method. To protect it from multiple calls, a global array of authorized classes is passed to its `secure` method:
 
 ```cpp
 const ClassPointer VUEngineAuthorizedClasses[] =
@@ -221,15 +221,17 @@ const ClassPointer VUEngineAuthorizedClasses[] =
     NULL
 };
 
-secure int32 VUEngine::start(GameState currentGameState)
+int32 main(void)
 {
+    [...]
+
     VUEngine::secure(&VUEngineAuthorizedClasses);
 
     [...]
 }
 ```
 
-In this way, the first call to `VUEngine::secure` secures it so no external class or function can call it again, otherwise, an exception is triggered during runtime in non release builds.
+In this way, the first call to `VUEngine::secure` secures it so no external class or function can call it, otherwise, an exception is triggered during runtime in non release builds.
 
 The safety checks are removed in release builds to prevent them from impacting the game's performance.
 
