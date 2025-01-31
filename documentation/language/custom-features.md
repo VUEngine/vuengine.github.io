@@ -110,6 +110,8 @@ extension class SomeClass : SomeBaseClass
 };
 ```
 
+Extension classes are meant to provide the target methods for the [Class Mutation](/documentation/language/custom-features/#class-mutation) functionality, see below.
+
 ## Class Mutation
 
 Virtual C allows the modification of a class's behavior during runtime by changing the pointers to the virtual methods. This enables the possibility to change simultaneously the logic that governs of all the instances of the class.

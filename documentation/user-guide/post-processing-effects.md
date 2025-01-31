@@ -48,4 +48,4 @@ _Example of a post-processing effect that adds a full-screen wobble_
 
 ## Performance
 
-Depending on the effect, some might not be feasible for use on real hardware, since reading back from the frame buffers is very slow. The problem is that, for each framebuffer access, the hardware has to wait a certain amount of CPU cycles. 1 to write and 3(!) for read access. Therefore, it is advised to use post-processing effects carefully and to manipulate only small areas of the screen. If possible, only write to, but not read from, the frame buffers.
+Depending on the effect, some might not be feasible for use on real hardware, since reading back from the frame buffers is very slow. The problem is that, for each framebuffer access, the hardware has to wait a certain amount of CPU cycles: 1 to write and 3(!) for read access. Therefore, it is advised to use post-processing effects carefully and to manipulate only small areas of the screen. If possible, only write to, but not read from, the frame buffers.
