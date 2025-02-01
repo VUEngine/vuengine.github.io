@@ -6,6 +6,8 @@ title: Game State
 
 # Game State
 
+The main purpose of a [GameState](/documentation/api/class-game-state/) is to serve as the point of contact between the [VUEngine](https://github.com/VUEngine/VUEngine-Core) and the actual game. While it is possible to implement a whole game that runs solely in the `execute` method, the flexibility of the engine shines when using [Stages](/documentation/api/class-stage/). They are [Containers](/documentation/api/class-container/) that has [Actors](/documentation/api/class-actor/) as children.
+
 [GameStates](/documentation/api/class-game-state/) have a life cycle defined by the following interface:
 
 ```cpp
@@ -73,5 +75,3 @@ void PongState::enter(void* owner __attribute__((unused)))
 While the engine remains in the same state, it will call [GameState::execute](/documentation/api/class-game-state/) once per game frame. So far, the `PongState` does override the `execute` method. Nor does it override the `exit` method, which is called when the engine's [StateMachine](/documentation/api/class-state-machine/) changes to another [GameState](/documentation/api/class-game-state/).
 
 Additionally, the [GameState](/documentation/api/class-game-state/) defines the `suspend` and `resume` methods, which intented to give the current [GameState](/documentation/api/class-game-state/) the opportunity to perform optional tasks for suspending and resuming it, like when pausing and unpausing the game.
-
-The main purpose of a [GameState](/documentation/api/class-game-state/) is to serve as the point of contact between the [VUEngine](https://github.com/VUEngine/VUEngine-Core) and the actual game. While it is possible to implement a whole game that runs solely in the `execute` method, the flexibility of the engine shines when using [Stages](/documentation/api/class-stage/). They are [Containers](/documentation/api/class-container/) that has [Actors](/documentation/api/class-actor/) as children.

@@ -34,7 +34,7 @@ Once the plugins are installed, their usage depends on what functionality each p
 
 ## Game's entry point
 
-In the **source** folder, you will find a file called *Game.c* and, inside it, you will find a function called `game` that returns an instance of `GameState`:
+In the **source** folder, you there is a file called *Game.c* and, inside it, you will find a function called `game` that returns an instance of `GameState`:
 
 ```cpp
 GameState game(void)
@@ -82,19 +82,23 @@ GameState game(void)
 
 The engine internally calls the global `game` function for it to return the first [GameState](/documentation/api/class-game-state/) that the engine's [StateMachine](/documentation/api/class-state-machine/) must enter into. In this case, it is the `PrecautionScreenState`.
 
-On top of that, various other initialization steps can be performed in the `game` function before returning the control back to the engine. The template project already does some common tasks like enabling an `AutomaticPauseManager`, provided through a plugin, that takes care of pausing the game after a configurable amount of time has passed to remember the player to rest regularly. To change its configuration, select the "Configuration" tab from the plugin's page in the plugin explorer:
+Various other initialization steps can be performed in the `game` function before returning the control back to the engine. The template project already does some common tasks, like enabling the `AutomaticPauseManager`, that takes care of pausing the game after a fixed amount of time has passed to remember the player to rest regularly. To change the configurations of plugins, select the "Configuration" tab from each's page in the plugin explorer:
 
 <a href="/documentation/images/tutorial/automatic-pause-manager-configuration.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Automatic Pause Manager configuration"><img src="/documentation/images/tutorial/automatic-pause-manager-configuration.png"/></a>
 
-But the most important above is the chain of states that is setup. The `PrecautionScreenState` inherits from `SplashScreenState`, which can be configured to change the engine's state to another [GameState](/documentation/api/class-game-state/). When it exists, it will instruct the engine to enter the `AdjustmentScreenState` and so on. The sequence will make the engine to enter the following states:
+But the most important above is the chain of states that is setup and that ends with `MyGameState`. The `PrecautionScreenState` inherits from `SplashScreenState`, which can be configured to change the engine's state to an arbitrary [GameState](/documentation/api/class-game-state/). In the template project, it is setup to instruct the engine to enter the `AdjustmentScreenState` when it exits. The sequence will make the engine to enter the following states:
 
 1) `PrecautionScreenState`
+
 2) `AdjustmentScreenState`
+
 3) `AutomaticPauseSelectionScreenState`
+
 4) `LanguageSelectionScreenState`
+
 5) `MyGameState`
 
-From these, `MyGameState` is the first [GameState](/documentation/api/class-game-state/) of the game, not a plugin's and, as such, where the game's logic actually starts.
+From these, `MyGameState` is the first [GameState](/documentation/api/class-game-state/) of the game that is not a plugin's and, as such, where the game's logic actually starts.
 
 During development, it makes sense to skip those splash screens and go directly to the [GameState](/documentation/api/class-game-state/) that is being implemented. This can be easily done by returning that state in the `game` function:
 
@@ -164,11 +168,11 @@ Finally, we will change the message print to the screen by modifying the method 
 ```cpp
 void PongState::print()
 {
-	Printer::text("A Pong Clone", (__SCREEN_WIDTH_IN_CHARS >> 1) - 6, 12, NULL);
+    Printer::text("A Pong Clone", (__SCREEN_WIDTH_IN_CHARS >> 1) - 6, 12, NULL);
 }
 ```
 
-If not font name is provided to the [Printer::text](/documentation/api/class-printer/) function, a configurable default one will be provided by the engine.
+If a font name is not provided to the [Printer::text](/documentation/api/class-printer/) function by passig it `NULL` as the last argument, a configurable default one will be used by the engine.
 
 The output when the game is rebuilt will be:
 
