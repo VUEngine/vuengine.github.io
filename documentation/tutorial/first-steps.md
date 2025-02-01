@@ -1,7 +1,7 @@
 ---
 layout: documentation
 parents: Documentation > Tutorial
-title: First Steps
+title: Title Screen
 ---
 
 # First Steps
@@ -112,68 +112,3 @@ SplashScreenState::setNextState
 Once the project is rebuilt and run, the following screen will show up right away:
 
 <a href="/documentation/images/tutorial/my-game-state.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState"><img src="/documentation/images/tutorial/my-game-state.png"/></a>
-
-
-Since here were are developing a Pong game, it makes sense to rename `MyGameState` as `PongState`:
-
-```cpp
-[...]
-#include <PongState.h>
-
-GameState game(void)
-{
-    [...]
-
-    // Return the first GameState
-    return GameState::safeCast(PongState::getInstance());
-}
-```
-
-And the same rename will be applied to the files *source/States/MyGameState/MyGameState.h* and *source/States/MyGameState/MyGameState.h*:
-
-<a href="/documentation/images/tutorial/my-game-state-folders.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState folders"><img src="/documentation/images/tutorial/my-game-state-folders.png"/></a>
-
-Then, in the mentioned files, `MyGameState` is replaced by `PongState`:
-
-```cpp
-dynamic_singleton class PongState : GameState
-{
-    [...]
-
-    /// Method to GameSaveDataManager the singleton instance
-    /// @return AnimationSchemesState singleton
-    static PongState getInstance();
-
-    [...]
-}
-```
-
-```cpp
-#include <PongState.h>
-
-[...]
-
-void PongState::enter(void* owner __attribute__((unused)))
-{
-    Base::enter(this, owner);
-
-    [...]
-}
-
-[...]
-```
-
-Finally, we will change the message print to the screen by modifying the method `PongState::print`:
-
-```cpp
-void PongState::print()
-{
-    Printer::text("A Pong Clone", (__SCREEN_WIDTH_IN_CHARS >> 1) - 6, 12, NULL);
-}
-```
-
-If a font name is not provided to the [Printer::text](/documentation/api/class-printer/) function by passig it `NULL` as the last argument, a configurable default one will be used by the engine.
-
-The output when the game is rebuilt will be:
-
-<a href="/documentation/images/tutorial/a-pong-clone.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Game Title"><img src="/documentation/images/tutorial/a-pong-clone.png"/></a>
