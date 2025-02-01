@@ -28,4 +28,8 @@ Let's build and run our new project for the first time, before we head on to mak
 
 <a href="/documentation/images/tutorial/building.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Build view"><img src="/documentation/images/tutorial/building.png" width="50%"/></a><a href="/documentation/images/tutorial/building.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Build view"><img src="/documentation/images/tutorial/building.png" width="50%"/></a>
 
+If everything goes well, you will be greated with the following screen:
+
+<a href="/documentation/images/tutorial/sucessful-build.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Successfull build"><img src="/documentation/images/tutorial/sucessful-build.png" width="640"/></a>
+
 Now that we have set up our project and confirmed that it's building just fine, we are ready to start [messing with some code](/documentation/tutorial/first-steps/).
