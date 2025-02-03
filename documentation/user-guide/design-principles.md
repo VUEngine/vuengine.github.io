@@ -122,18 +122,22 @@ The following exemplifies a **Spec** that specifies what to display (a [Texture]
 ```cpp
 BgmapSpriteROMSpec SomeSpriteSpec =
 {
+    // Sprite
     {
-        // Component
+        // VisualComponent
         {
-            // Allocator
-            __TYPE(BgmapSprite),
+            // Component
+            {
+                // Allocator
+                __TYPE(BgmapSprite),
 
-            // Component type
-            kSpriteComponent
+                // Component type
+                kSpriteComponent
+            },
+
+            // Array of function animations
+            NULL 
         },
-
-        // Is animated?
-        false,
 
         // Spec for the texture to display
         (TextureSpec*)&SomeTextureSpec,

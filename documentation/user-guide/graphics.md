@@ -99,17 +99,20 @@ BgmapSpriteROMSpec ActorSpriteSpec =
 {
     // Sprite
     {
-        // Component
+        // VisualComponent
         {
-            // Allocator
-            __TYPE(BgmapSprite),
+            // Component
+            {
+                // Allocator
+                __TYPE(BgmapSprite),
 
-            // Component type
-            kSpriteComponent
+                // Component type
+                kSpriteComponent
+            },
+
+            // Array of function animations
+            NULL 
         },
-
-        // Is animated?
-        true,
 
         // Spec for the texture to display
         (TextureSpec*)&ActorTextureSpec,
