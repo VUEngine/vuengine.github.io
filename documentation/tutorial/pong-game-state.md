@@ -178,11 +178,11 @@ void PongState::enter(void* owner __attribute__((unused)))
 }
 ```
 
-But the `PongState` will remain empty if we don't add actors to it. The consists of a Disk and 2 paddles so, lets create them in *assets/Actors/Disk/* and *assets/Actors/Paddle/* with the "Actor" file as it was done before to create the logo in the title screen:
+But the `PongState` will remain empty if we don't add actors to it. The consists of a disk and 2 paddles so, lets create them in *assets/Actors/Disk/* and *assets/Actors/Paddle/* with the "Actor" file as it was done before to create the logo in the title screen:
 
-<a href="/documentation/images/tutorial/Disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/Disk-and-paddle-actors.png" /></a>
+<a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
 
-Now, we need a [StageSpec](/documentation/api/struct-stage-spec/) for the `PongState`. Simply copy the *TitleScreenStageSpec.c* file, name it as *PongStageSpec.c* and rename all the variables in it from `TitleScreen*` as `Pong*`. Finally, add the [ActorSpecs](/documentation/api/struct-actor-spec/) for the Disk and the paddle as we added the **LogoActorSpec** to the title screen:
+Now, we need a [StageSpec](/documentation/api/struct-stage-spec/) for the `PongState`. Simply copy the *TitleScreenStageSpec.c* file, name it as *PongStageSpec.c* and rename all the variables in it from `TitleScreen*` as `Pong*`. Finally, add the [ActorSpecs](/documentation/api/struct-actor-spec/) for the disk and the paddle as we added the **LogoActorSpec** to the title screen:
 
 ```cpp
 [...]
@@ -230,6 +230,6 @@ When the game is built and run, pressing START in the title screen will show a f
 
 <a href="/documentation/images/tutorial/Disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/pong-state.png" /></a>
 
-While the engine remains in the same state, it will call [GameState::execute](/documentation/api/class-game-state/) once per game frame. So far, the `PongState` doesn't override the method, Nor does it override the `exit` method, which is called when the engine's [StateMachine](/documentation/api/class-state-machine/) changes to another [GameState](/documentation/api/class-game-state/).
+While the engine remains in the same state, it will call [GameState::execute](/documentation/api/class-game-state/) once per game frame. So far, the `PongState` doesn't override the method, nor does it override the `exit` method, which is called when the engine's [StateMachine](/documentation/api/class-state-machine/) changes to another [GameState](/documentation/api/class-game-state/).
 
-Additionally, the [GameState](/documentation/api/class-game-state/) defines the `suspend` and `resume` methods, which is intented to give the current [GameState](/documentation/api/class-game-state/) the opportunity to perform optional tasks for suspending and resuming it, like when pausing and unpausing the game.
+Additionally, the [GameState](/documentation/api/class-game-state/) defines the `suspend` and `resume` methods, which are intented to give the current [GameState](/documentation/api/class-game-state/) the opportunity to perform optional tasks for suspending and resuming it, like when pausing and unpausing the game.

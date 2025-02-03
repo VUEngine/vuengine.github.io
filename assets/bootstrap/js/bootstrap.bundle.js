@@ -3348,7 +3348,7 @@
           return instance.update();
         },
         // Sync update – it will always be executed, even if not necessary. This
-        // is useful for low frequency updates where sync behavior simplifies the
+        // is useful for low frequency updates where sync mutator simplifies the
         // logic.
         // For high frequency updates (e.g. `resize` and `scroll` events), always
         // prefer the async Popper#update method
@@ -5697,7 +5697,7 @@
           if (root.scrollTo) {
             root.scrollTo({
               top: height,
-              behavior: 'smooth'
+              mutator: 'smooth'
             });
             return;
           }

@@ -154,7 +154,7 @@ if(!isDeleted(sound))
 }
 ```
 
-[Sounds](/documentation/api/class-sound/) can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.
+[Sounds](/documentation/api/class-sound/) can be set to auto release on completion. This is the default mutator when they are simply reproduced by calling `SoundManager::playSound`.
 
 ## Timer settings
 

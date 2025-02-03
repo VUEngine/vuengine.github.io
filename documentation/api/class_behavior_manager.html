@@ -1,8 +1,8 @@
 ---
 layout: documentation
 parents: Documentation > API
-title: "BehaviorManager Class Reference"
-permalink: documentation/api/class-behavior-manager/
+title: "MutatorManager Class Reference"
+permalink: documentation/api/class-mutator-manager/
 ---
 
 
@@ -20,17 +20,17 @@ permalink: documentation/api/class-behavior-manager/
 <div id="doc-content">
 <div class="header">
   
-  <div class="headertitle"><h1 class="title">BehaviorManager Class Reference</h1></div>
+  <div class="headertitle"><h1 class="title">MutatorManager Class Reference</h1></div>
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h">BehaviorManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.h">MutatorManager.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for BehaviorManager:</div>
+Inheritance diagram for MutatorManager:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="../class_behavior_manager.png" usemap="#BehaviorManager_map" alt />
-  <map id="BehaviorManager_map" name="BehaviorManager_map">
+  <img src="../class_mutator_manager.png" usemap="#MutatorManager_map" alt />
+  <map id="MutatorManager_map" name="MutatorManager_map">
 <area href="/documentation/api/class-component-manager/" alt="ComponentManager" shape="rect" coords="0,0,126,24" />
   </map>
 </div></div>
@@ -48,7 +48,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88445077a15ccf260bd6969f3d8c4d1c" id="r_a88445077a15ccf260bd6969f3d8c4d1c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88445077a15ccf260bd6969f3d8c4d1c">disable</a> ()</td></tr>
 <tr class="memdesc:a88445077a15ccf260bd6969f3d8c4d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the manager.  <br /></td></tr>
 
-<tr class="memitem:ad4f2d9ed88d818848b0c04253bf3fa44" id="r_ad4f2d9ed88d818848b0c04253bf3fa44"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-behavior/">Behavior</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f2d9ed88d818848b0c04253bf3fa44">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a> *behaviorSpec)</td></tr>
+<tr class="memitem:ad4f2d9ed88d818848b0c04253bf3fa44" id="r_ad4f2d9ed88d818848b0c04253bf3fa44"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-mutator/">Mutator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f2d9ed88d818848b0c04253bf3fa44">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-mutator-spec/">MutatorSpec</a> *mutatorSpec)</td></tr>
 
 <tr class="memitem:aa81fedc8c88c18b2a61b03cdbf91cd56" id="r_aa81fedc8c88c18b2a61b03cdbf91cd56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa81fedc8c88c18b2a61b03cdbf91cd56">reset</a> ()</td></tr>
 
@@ -115,11 +115,11 @@ Additional Inherited Members</h2></td></tr>
 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a></p>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-mutator-manager/">MutatorManager</a></p>
 <p>Inherits from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></p>
-<p>Manages all the behavior instances. </p>
+<p>Manages all the mutator instances. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h#L30">30</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h">BehaviorManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.h#L30">30</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.h">MutatorManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac33d9f820200aed3d594b494c8482c48" name="ac33d9f820200aed3d594b494c8482c48"></a>
 <h2 class="memtitle">constructor()</h2>
@@ -128,7 +128,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname">void BehaviorManager::constructor </td>
+          <td class="memname">void MutatorManager::constructor </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -138,7 +138,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L101">101</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c#L101">101</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a>.</p>
 
 </div>
 </div>
@@ -152,7 +152,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">void BehaviorManager::disable </td>
+          <td class="memname">void MutatorManager::disable </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -169,7 +169,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a>.</p>
 
 </div>
 </div>
@@ -183,7 +183,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">void BehaviorManager::enable </td>
+          <td class="memname">void MutatorManager::enable </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -200,7 +200,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> BehaviorManager::getType </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> MutatorManager::getType </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -230,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L33">33</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c#L33">33</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a>.</p>
 
 </div>
 </div>
@@ -241,27 +241,27 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="/documentation/api/class-behavior/">Behavior</a> BehaviorManager::instantiateComponent </td>
+          <td class="memname"><a class="el" href="/documentation/api/class-mutator/">Mutator</a> MutatorManager::instantiateComponent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="/documentation/api/struct-behavior-spec/">BehaviorSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>behaviorSpec</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-mutator-spec/">MutatorSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>mutatorSpec</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a behavior with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Create a mutator with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params table">
-    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the behavior will attach to </td></tr>
-    <tr><td class="paramname">behaviorSpec</td><td>Spec to use to create the behavior </td></tr>
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the mutator will attach to </td></tr>
+    <tr><td class="paramname">mutatorSpec</td><td>Spec to use to create the mutator </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Created behavior </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Created mutator </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a>.</p>
 
 </div>
 </div>
@@ -272,14 +272,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname">void BehaviorManager::reset </td>
+          <td class="memname">void MutatorManager::reset </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destroy the provided behavior Reset the manager's state </p>
+<p>Destroy the provided mutator Reset the manager's state </p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname">void BehaviorManager::update </td>
+          <td class="memname">void MutatorManager::update </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -300,13 +300,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Update the registered bodies by advancing the physics simulations. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Component/Behavior/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.h">BehaviorManager.h</a></li>
-<li>VUEngine-Core/source/Component/Behavior/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Behavior/BehaviorManager.c">BehaviorManager.c</a></li>
+<li>VUEngine-Core/source/Component/Mutator/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.h">MutatorManager.h</a></li>
+<li>VUEngine-Core/source/Component/Mutator/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Mutator/MutatorManager.c">MutatorManager.c</a></li>
 </ul>
 </div>
 

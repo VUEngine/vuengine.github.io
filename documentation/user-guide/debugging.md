@@ -120,7 +120,7 @@ NM_ASSERT(NULL != __GET_CAST(ClassName, object), "ClassName::methodName: object 
 
 #### Initialize everything
 
-One of the most difficult, and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange behavior often are caused by not properly initialized variables. To aid the detection of such mistakes, set `memoryPools.cleanUp` to `true` in `config/Engine.json` to define the `__MEMORY_POOL_CLEAN_UP` macro. This will force the engine to put every memory pool's free block to 0 when the game changes its state, so, if the problem gets solved by defining such macro, the cause is, most likely, an uninitialized variable.
+One of the most difficult, and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange mutator often are caused by not properly initialized variables. To aid the detection of such mistakes, set `memoryPools.cleanUp` to `true` in `config/Engine.json` to define the `__MEMORY_POOL_CLEAN_UP` macro. This will force the engine to put every memory pool's free block to 0 when the game changes its state, so, if the problem gets solved by defining such macro, the cause is, most likely, an uninitialized variable.
 
 #### MemoryPool size
 

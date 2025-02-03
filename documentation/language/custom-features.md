@@ -110,11 +110,11 @@ extension class SomeClass : SomeBaseClass
 };
 ```
 
-Extension classes are meant to provide the target methods for the [Class Mutation](/documentation/language/custom-features/#class-mutation) functionality, see below.
+Extension classes are meant to provide the target methods for the [Class Mutator](/documentation/language/custom-features/#class-mutator) functionality, see below.
 
-## Class Mutation
+## Class Mutator
 
-Virtual C allows the modification of a class's behavior during runtime by changing the pointers to the virtual methods. This enables the possibility to change simultaneously the logic that governs of all the instances of the class.
+Virtual C allows the modification of a class's mutator during runtime by changing the pointers to the virtual methods. This enables the possibility to change simultaneously the logic that governs of all the instances of the class.
 
 Having a class that declares a `virtual` method or overrides one:
 
@@ -145,13 +145,13 @@ void SomeClass::someVirtualMethodOverride()
 }
 ```
 
-## Instance mutation
+## Instance mutator
 
-It is possible to modify the behavior of individual instances by means of the `mutateTo` method call. This effectively provides a language-level mechanism for state machines.
+It is possible to modify the mutator of individual instances by means of the `mutateTo` method call. This effectively provides a language-level mechanism for state machines.
 
 Objects can only evolve to classes that either inherint from the object's original class or to those from which the object's original class inherits.
 
-Classes that are meant to be mutation targets must be abstract and cannot add additional attributes to its instances.
+Classes that are meant to be mutator targets must be abstract and cannot add additional attributes to its instances.
 
 Given the following class:
 
@@ -166,10 +166,10 @@ class SomeClass : SomeBaseClass
 }
 ```
 
-A valid mutation for it is:
+A valid mutator for it is:
 
 ```cpp
-abstract class SomeClassMutation : SomeClass
+abstract class SomeClassMutator : SomeClass
 {
     [...]
 
@@ -179,8 +179,8 @@ abstract class SomeClassMutation : SomeClass
 }
 ```
 
-The mutation of a class instance is done as follows:
+The mutator of a class instance is done as follows:
 
 ```cpp
-SomeClass::mutateTo(object, SomeClassMutation::getClass());
+SomeClass::mutateTo(object, SomeClassMutator::getClass());
 ```

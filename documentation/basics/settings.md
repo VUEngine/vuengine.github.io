@@ -6,7 +6,7 @@ title: Settings
 
 # Settings
 
-You can configure VUEngine Studio to your liking through its various settings. Nearly every part of its editor, user interface, and functional behavior has options you can modify.
+You can configure VUEngine Studio to your liking through its various settings. Nearly every part of its editor, user interface, and functional mutator has options you can modify.
 
 VUEngine Studio provides different scopes for settings:
 

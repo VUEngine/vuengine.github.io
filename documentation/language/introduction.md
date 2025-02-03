@@ -25,8 +25,8 @@ And adds a few features of its own:
 - [Singleton classes](../custom-features/#singleton-classes)
 - [Static classes](../custom-features/#static-classes)
 - [Class extensions](../custom-features/#class-extensions)
-- [Class mutation](../custom-features/#class-mutation)
-- [Instance mutation](../custom-features/#instance-mutation)
+- [Class mutator](../custom-features/#class-mutator)
+- [Instance mutator](../custom-features/#instance-mutator)
 
 ## Limitations
 

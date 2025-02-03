@@ -101,7 +101,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
 	- Parenting
 
 - Components:
-	- Behaviors
+	- Mutators
 	- Physics
 	- Colliders
 	- Sprites

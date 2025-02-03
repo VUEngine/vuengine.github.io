@@ -32,7 +32,7 @@ Inheritance diagram for ComponentManager:</div>
   <img src="../class_component_manager.png" usemap="#ComponentManager_map" alt />
   <map id="ComponentManager_map" name="ComponentManager_map">
 <area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="272,0,398,24" />
-<area href="/documentation/api/class-behavior-manager/" alt="BehaviorManager" shape="rect" coords="0,112,126,136" />
+<area href="/documentation/api/class-mutator-manager/" alt="MutatorManager" shape="rect" coords="0,112,126,136" />
 <area href="/documentation/api/class-body-manager/" alt="BodyManager" shape="rect" coords="136,112,262,136" />
 <area href="/documentation/api/class-collider-manager/" alt="ColliderManager" shape="rect" coords="272,112,398,136" />
 <area href="/documentation/api/class-sprite-manager/" alt="SpriteManager" shape="rect" coords="408,112,534,136" />
@@ -534,7 +534,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Disable the manager. </p>
 
-<p>Reimplemented in <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>, <a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
+<p>Reimplemented in <a class="el" href="/documentation/api/class-mutator-manager/">MutatorManager</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>, <a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/ComponentManager.c#L776">776</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/ComponentManager.c">ComponentManager.c</a>.</p>
 
@@ -565,7 +565,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Enable the manager. </p>
 
-<p>Reimplemented in <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>, <a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
+<p>Reimplemented in <a class="el" href="/documentation/api/class-mutator-manager/">MutatorManager</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>, <a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/ComponentManager.c#L769">769</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/ComponentManager.c">ComponentManager.c</a>.</p>
 
@@ -739,12 +739,12 @@ Additional Inherited Members</h2></td></tr>
   <table class="params table">
     <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the components attach to </td></tr>
     <tr><td class="paramname">classPointer</td><td>Pointer to the class to use as search criteria. Usage: <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">typeofclass(ClassName)</a> </td></tr>
-    <tr><td class="paramname">components</td><td>Linked list to be filled with the behaviors that meed the search criteria (it is externally allocated and must be externally deleted) </td></tr>
+    <tr><td class="paramname">components</td><td>Linked list to be filled with the mutators that meed the search criteria (it is externally allocated and must be externally deleted) </td></tr>
     <tr><td class="paramname">componentType</td><td>Type of components to retrieve </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if one or more behaviors met the search criteria; false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if one or more mutators met the search criteria; false otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/ComponentManager.c#L328">328</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/ComponentManager.c">ComponentManager.c</a>.</p>
 
@@ -846,7 +846,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the compoment type that the manager manages. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-component/">Component</a> type </dd></dl>
 
-<p>Implemented in <a class="el" href="/documentation/api/class-behavior-manager/">BehaviorManager</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>, <a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
+<p>Implemented in <a class="el" href="/documentation/api/class-mutator-manager/">MutatorManager</a>, <a class="el" href="/documentation/api/class-body-manager/">BodyManager</a>, <a class="el" href="/documentation/api/class-collider-manager/">ColliderManager</a>, <a class="el" href="/documentation/api/class-sprite-manager/">SpriteManager</a>, and <a class="el" href="/documentation/api/class-wireframe-manager/">WireframeManager</a>.</p>
 
 </div>
 </div>

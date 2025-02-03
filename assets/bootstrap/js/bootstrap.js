@@ -3877,7 +3877,7 @@
           if (root.scrollTo) {
             root.scrollTo({
               top: height,
-              behavior: 'smooth'
+              mutator: 'smooth'
             });
             return;
           }
