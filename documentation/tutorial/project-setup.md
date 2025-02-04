@@ -8,7 +8,7 @@ title: Project Setup
 
 The very first thing to do, if you haven't already, is to [download and install VUEngine Studio](/documentation/setup/installation/).
 
-Launch [VUEngine Studio](https://www.vuengine.dev/downloads/) and you will be greeted with the [Welcome view](/documentation/basics/getting-started/) when starting [VUEngine Studio](https://www.vuengine.dev/downloads/) for the first time (or whenever you don't currently have any project loaded).
+Launch [VUEngine Studio](https://www.vuengine.dev/downloads/) and you will be greeted with the [Welcome view](/documentation/basics/getting-started/) when starting it for the first time (or whenever you don't currently have any project loaded).
 
 <figure>
     <a href="/documentation/images/tutorial/welcome-view.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Welcome View">
