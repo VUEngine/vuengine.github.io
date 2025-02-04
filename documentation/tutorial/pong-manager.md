@@ -76,6 +76,3 @@ PositionedActorROMSpec PongStageActors[] =
 ```
 
 Now that he have references to the disk and the paddles, it is time to make them move.
-
-## Adding components to the Actors
-

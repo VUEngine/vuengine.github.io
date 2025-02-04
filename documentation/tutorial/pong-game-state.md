@@ -141,7 +141,7 @@ void TitleScreenState::processUserInput(const UserInput* userInput)
 We need to create the `PongState` in order to being able to transition to it. To do so, create the folder *source/States/PongState* and two files: *source/States/PongState/PongState.h* and *source/States/PongState/PongState.c*. The new state needs to override the `enter` method make the screen to fade in since the previous state left it dark:
 
 ```cpp
-dynamic_singleton class PongState : GameState
+singleton class PongState : GameState
 {
     /// @protectedsection
 

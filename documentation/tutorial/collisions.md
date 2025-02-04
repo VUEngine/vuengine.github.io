@@ -34,6 +34,43 @@ And the paddle's should be configured as follows:
 
 <a href="/documentation/images/tutorial/paddle-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle collider"><img src="/documentation/images/tutorial/paddle-collider.png" /></a>
 
-Notice that the toogle for collision checking in the paddle's [Collider](/documentation/api/class-collider/)'s configuration is disabled. This is because there is no reason to loose performance by making the test for collisions against the disk when the latter will already be doing checks for itself.
+Notice that the toogle for collision checking in the paddle's [Collider](/documentation/api/class-collider/)'s configuration is disabled. This is because there is no reason to waste performance by performing the test for collisions against the disk when the latter will already be doing checks for itself.
 
-Finally, we should have a barebone Pong clone!
+Almost there!, we are missing some walls so the disk doesn't go out through the screen's top or bottom.
+
+Lets add a "Wall" In Game Type in the *config/InGameType* file and a "Wall" Collider Layer in the *config/ColliderLayers* file:
+
+<a href="/documentation/images/tutorial/wall-in-game-type.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Wall In Game Type"><img src="/documentation/images/tutorial/wall-in-game-type.png" /></a>
+
+<a href="/documentation/images/tutorial/wall-collider-layer.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Wall Collider Layer"><img src="/documentation/images/tutorial/wall-collider-layer.png" /></a>
+
+We can now create a *Wall.actor* in *assets/Actors/Wall* and add a [Collider](/documentation/api/class-collider/) that lives in the "Wall" layer to it:
+
+<a href="/documentation/images/tutorial/wall-actor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Wall Actor"><img src="/documentation/images/tutorial/wall-actor.png" /></a>
+
+And make sure that the disk's [Collider](/documentation/api/class-collider/) check collisions against others in the "Wall" Collider Layer:
+
+<a href="/documentation/images/tutorial/disk-collider-wall.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk Wall Collider Layer"><img src="/documentation/images/tutorial/disk-collider-wall.png" /></a>
+
+Finally, lets place the walls at the top and bottom of the screen in the [Stage](/documentation/api/struct-stage-spec/)'s **PongStageActors** array:
+
+```cpp
+[...]
+extern ActorSpec WallActorSpec;
+
+PositionedActorROMSpec PongStageActors[] =
+{	
+    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, DISK_NAME, NULL, NULL, false},
+    {&PaddleActorSpec,              {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, PADDLE_LEFT_NAME, NULL, NULL, false},
+    {&PaddleActorSpec,              {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, PADDLE_RIGHT_NAME, NULL, NULL, false},
+    {&WallActorSpec,                {0, -120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&WallActorSpec,                {0, 120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+
+    {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+};
+```
+
+If you don't like that the paddles can get out of the screen, enable the collision checks in their [Collider](/documentation/api/class-collider/) and add the "Wall" Collider Layer to the layers that it checks.
+
+We now have a basic Pong clone!

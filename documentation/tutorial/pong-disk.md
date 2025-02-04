@@ -41,20 +41,9 @@ Therefore, to make the disk to move, we override thet `ready` method and impleme
 ```cpp
 void Disk::ready(bool recursive)
 {
-    static uint32 _randomSeed = 0;
+    Base::ready(this, recursive);
 
-    int16 angle = 0;
-
-    if(0 == _randomSeed)
-    {
-        _randomSeed = 7;
-    }
-
-    _randomSeed ^= _randomSeed << 13;
-    _randomSeed ^= _randomSeed >> 17;
-    _randomSeed ^= _randomSeed << 5;
-
-    angle = Math::random(Math::randomSeed() + _randomSeed, 64) - 32;
+    int16 angle = Math::random(Math::randomSeed(), 64) - 32;
 
     Vector3D velocity = 
     {
@@ -63,7 +52,7 @@ void Disk::ready(bool recursive)
         0
     };
 
-    if(50 > Math::random(Math::randomSeed() + _randomSeed, 100))
+    if(50 > Math::random(Math::randomSeed(), 100))
     {
         velocity.x = -velocity.x;
     }

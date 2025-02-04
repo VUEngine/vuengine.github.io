@@ -6,4 +6,4 @@ title: Multiplayer
 
 # Multiplayer
 
-[...]
+Comming soon...

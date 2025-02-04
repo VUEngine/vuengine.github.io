@@ -228,20 +228,34 @@ Another type of [Component](/documentation/api/class-component/) that can be eas
 Finally, we are able to move the paddles. In the iplementation of `Paddle::moveTowards`, add the following:
 
 ```cpp
-#define VERTICAL_FORCE	 	__I_TO_FIX10_6(3)
+[...]
+
+#include <Body.h>
 
 [...]
 
 void Paddle::moveTowards(NormalizedDirection direction)
 {
-    Vector3D force = 
-    {
-        0,
-        __FIX10_6_MULT(VERTICAL_FORCE, __I_TO_FIX10_6(direction.y)),
-        0
-    };
+	if(isDeleted(this->body))
+	{
+		return;
+	}
 
-    Paddle::applyForce(this, &force, true);
+	Vector3D force = 
+	{
+		0,
+		__FIX10_6_MULT
+		(
+			__FIXED_MULT
+			(
+				Body::getMass(this->body), Body::getMaximumSpeed(this->body)
+			),
+			__I_TO_FIX10_6(direction.y)
+		),
+		0
+	};
+
+	Paddle::applyForce(this, &force, true);
 }
 ```
 
