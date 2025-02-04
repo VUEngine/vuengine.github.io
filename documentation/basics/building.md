@@ -18,7 +18,7 @@ The central spot for building is the Build Panel.
 
 ### Action Buttons
 
-The Action Button Bar (**A**) in the top right of the application allow you to quickly start a build, run or flash a game, or clean the build cache. You'll also be able to see the progress of builds or flash cart writes on the respective buttons.
+The toolbar Action Buttons (**A**) in the top right of the application allow you to quickly start a build, run or flash a game, clean the build cache and more.
 
 If you click on <i class="fa fa-play" /> **Run** or <i class="fa fa-microchip" /> **Flash** without a ROM being built yet, a build will start and the respective action will be queued and executed once the build is completed. Click the button again to unqueue. Click the other button, respectively, to queue/unqueue that action as well. Clicking the Build button while a build is running toggles the Build Panel.
 
@@ -35,7 +35,7 @@ Keyboard shortcuts:
 
 ### Side Bar Tab
 
-The Build Side Bar Tab <i class="codicon codicon-tools"></i> (**B**) allows you to toggle the visibility of the Build Panel by clicking on it. It can also shows the current build status:
+The Build Side Bar Tab <i class="codicon codicon-tools"></i> (**B**) allows you to toggle the visibility of the Build Panel by clicking on it. It can also shows the current build status and progress:
 
 - <i class="fa fa-fw fa-cog" /> Cog for running build
 - <i class="fa fa-fw fa-check" /> Checkmark for a successful build
@@ -170,7 +170,7 @@ In the above example, the output ROM would be patched through the **"Patch ROM"*
 
 See the [Tasks](/documentation/basics/tasks/) page to learn how to set up a Task.
 
-> Tip: The JSON preferences editor will assist you with auto completion of option names and, if applicable, values.
+> **Tip**: The JSON preferences editor will assist you with auto completion of option names and, if applicable, values.
 
 ## The ROM file
 
