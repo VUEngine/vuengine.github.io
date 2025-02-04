@@ -24,6 +24,7 @@ The class modifiers are:
 - `dynamic_singleton`
 - `static`
 - `extension`
+- `mutation`
 
 ### Abstract classes
 
@@ -78,11 +79,11 @@ These kind of singletons are dynamically allocated, hence not in the stack. Thei
 
 Static classes cannot have instances. All their methods are static.
 
-## Class extensions
+## Extensions classes
 
-Classes can be extended through the use of the `extension` keyword. They provided a mechanism to achieve something like runtime method re-implementation on virtual methods.
+Classes can be extended through the use of the `extension` keyword. They provided a mechanism to achieve something like runtime method re-implementation on specific virtual methods. Extension classes don't have to, and cannot, provide a constructor and destructor.
 
-Give some class:
+Given some class:
 
 ```cpp
 class SomeClass : SomeBaseClass
@@ -100,7 +101,7 @@ class SomeClass : SomeBaseClass
 The syntax to declare an extension for it is the following:
 
 ```cpp
-extension class SomeClass : SomeBaseClass
+extension class SomeClassExtension : SomeBaseClass
 {
     [...]
 
@@ -110,77 +111,58 @@ extension class SomeClass : SomeBaseClass
 };
 ```
 
-Extension classes are meant to provide the target methods for the [Class Mutator](/documentation/language/custom-features/#class-mutator) functionality, see below.
+Entensions classes are meant to provide a mechanism to change at runtime the implementation of a virtual method affecting all the instances of the original class immediately. 
 
-## Class Mutator
-
-Virtual C allows the modification of a class's mutator during runtime by changing the pointers to the virtual methods. This enables the possibility to change simultaneously the logic that governs of all the instances of the class.
-
-Having a class that declares a `virtual` method or overrides one:
+To mutate a virtual method, use the following syntax:
 
 ```cpp
-class SomeClass : SomeBaseClass
+    SomeClass::mutateMethod(someVirtualMethod, SomeClassExtension::someVirtualMethodOverride);
+```
+
+## Mutation classes
+
+Virtual C implements polymorphism by adding a virtual table pointer to each object, which means that it can be manipulated in real time. Mutation classes permit to override or to extend a class' functionality by allowing an object's virtual table pointer to change its target in runtime, making the instance subject to different implementations of virtual methods or capable of reacting to new methods provided by the mutation class. These classes have the following constraints:
+
+- They have to inherit from a non abstract class
+- They have to be data-invariant with respect to the base class (ie: they cannot add attributes of their own)
+- They cannot provide a constructor or destructor
+- They cannot be directly instantiated
+
+Mutation classes are declared as shown below:
+
+```cpp
+#include <SomeClass.h>
+
+mutation class AMutationOfSomeClass : SomeClass
 {
     [...]
 
-    virtual void someVirtualMethod();
+    override void someMethod();
 
+    void someNewMethod();
+}
+```
+
+Their implementation must contain the following:
+
+```cpp
+#include <AMutationOfSomeClass.h>
+
+mutation class AMutationOfSomeClass;
+
+void AMutationOfSomeClass::someMethod()
+{
+    [...]
+}
+
+void AMutationOfSomeClass::someNewMethod()
+{
     [...]
 }
 ```
 
-It is possible to change at runtime the implementation of a virtual method that is called on all the class instances, by writing the following call to `mutateMethod` with another implementation of the same signature:
+The mutation of an instance of a class is done as follows:
 
 ```cpp
-void SomeClass::changeDoRenderImplementation()
-{
-    SomeClass::mutateMethod(someVirtualMethod, SomeClass::someVirtualMethodOverride);
-}
-
-//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-
-void SomeClass::someVirtualMethodOverride()
-{
-    // Do stuff differently
-}
-```
-
-## Instance mutator
-
-It is possible to modify the mutator of individual instances by means of the `mutateTo` method call. This effectively provides a language-level mechanism for state machines.
-
-Objects can only evolve to classes that either inherint from the object's original class or to those from which the object's original class inherits.
-
-Classes that are meant to be mutator targets must be abstract and cannot add additional attributes to its instances.
-
-Given the following class:
-
-```cpp
-class SomeClass : SomeBaseClass
-{
-    [...]
-
-    virtual void someVirtualMethod();
-
-    [...]
-}
-```
-
-A valid mutator for it is:
-
-```cpp
-abstract class SomeClassMutator : SomeClass
-{
-    [...]
-
-    override void someVirtualMethod();
-
-    [...]
-}
-```
-
-The mutator of a class instance is done as follows:
-
-```cpp
-SomeClass::mutateTo(object, SomeClassMutator::getClass());
+    SomeClass::mutateTo(someClassObject, AMutationOfSomeClass::getClass());
 ```

@@ -8,61 +8,18 @@ title: Pong Paddles
 
 Lets make the paddles move by pressing the keypad. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the paddles in the `PongState`, or creating instances of a `Paddle` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature. 
 
-## Mutation classes
-
-Mutation classes permit to override or extend a class' functionality by allowing an object's virtual table pointer to change its target in runtime, making the instance subject to different implementations of virtual methods or capable of reaction to new methods provided by the mutation class. They have the following constraints:
-
-- They have to inherit from a non abstract class
-- They have to be data-invariant with respect to the base class (ie: they cannot add attributes of their own)
-- They cannot provide a constructor or destructor
-- They cannot be directly instantiated
-
-Mutation classes are declared as shown below:
-
-```cpp
-#include <SomeClass.h>
-
-mutation class AMutationOfSomeClass : SomeClass
-{
-    [...]
-
-    override void someMethod();
-
-    void someNewMethod();
-}
-```
-
-Their implementation must contain the following:
-
-```cpp
-#include <AMutationOfSomeClass.h>
-
-mutation class AMutationOfSomeClass;
-
-void AMutationOfSomeClass::someMethod()
-{
-    [...]
-}
-
-void AMutationOfSomeClass::someNewMethod()
-{
-    [...]
-}
-```
 
 ## Mutators
 
-Although mutation classes can be used directly by calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`, the engine provides the [Mutator](/documentation/api/class-mutator/) class, which is a kind of [Component](/documentation/api/class-component/) that performs the mutation on [Actors](/documentation/api/class-actor/) without having to do it manually.
+The [Mutator](/documentation/api/class-mutator/) class, which is a kind of [Component](/documentation/api/class-component/) that performs the [mutation](/documentation/language/custom-features/#mutation-classes) on [Actors](/documentation/api/class-actor/) without having to do it manually by means of directly calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`. 
 
-To add a [Mutator](/documentation/api/class-mutator/) to the paddles, lets open the *Paddle.actor* editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto generated **PaddleActorSpec** (see *assets/Actors/Paddle/Converted/PaddleActorSpec.c*):
-
-[image]
+To add a [Mutator](/documentation/api/class-mutator/) to the paddles, lets open the *Paddle.actor* editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto generated **PaddleActorSpec** (see *assets/Actors/Paddle/Converted/PaddleActorSpec.c*).
 
 When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration.
 
 Since we want this instance to behave like a Pong paddle, we will specify `Paddle` as the target mutation class of the [Mutator](/documentation/api/class-mutator/):
 
-[image]
+<a href="/documentation/images/tutorial/paddle-mutator.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle mutator"><img src="/documentation/images/tutorial/paddle-mutator.png" /></a>
 
 The editor will update **PaddleActorSpec** and render a **PaddleMutator1MutatorSpec** in `PaddleComponentSpecs`:
 
@@ -77,10 +34,10 @@ MutatorROMSpec PaddleMutator1MutatorSpec =
         kMutatorComponent
     },
 
-    /// Mutatoral class
+    // Mutation target class
     class(Paddle),
 
-    /// enabled
+    // Enabled
     true
 };
 
@@ -88,7 +45,7 @@ ComponentSpec* const PaddleComponentSpecs[] =
 {
     (ComponentSpec*)&PaddleSprite1SpriteSpec,
     (ComponentSpec*)&PaddleMutator1MutatorSpec,
-	NULL
+    NULL
 };
 ```
 
@@ -266,7 +223,7 @@ We are not done yet. `Paddle::moveTowards` is still empty. We have various optio
 
 Another type of [Component](/documentation/api/class-component/) that can be easily added throught **ActorEditor** is the [Body](/documentation/api/class-body/), which allows to apply forces to an [Actor](/documentation/api/class-actor/) or set its velocity and it will take care of the computation of the movement. Input the following values:
 
-<a href="/documentation/images/tutorial/paddle-body-configuration.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle body configuration"><img src="/documentation/images/tutorial/paddle-body-configuration.png" /></a>
+<a href="/documentation/images/tutorial/paddle-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle body"><img src="/documentation/images/tutorial/paddle-body.png" /></a>
 
 Finally, we are able to move the paddles. In the iplementation of `Paddle::moveTowards`, add the following:
 
@@ -277,13 +234,15 @@ Finally, we are able to move the paddles. In the iplementation of `Paddle::moveT
 
 void Paddle::moveTowards(NormalizedDirection direction)
 {
-	Vector3D force = 
-	{
-		0,
-		__FIX10_6_MULT(VERTICAL_FORCE, __I_TO_FIX10_6(direction.y)),
-		0
-	};
+    Vector3D force = 
+    {
+        0,
+        __FIX10_6_MULT(VERTICAL_FORCE, __I_TO_FIX10_6(direction.y)),
+        0
+    };
 
-	Paddle::applyForce(this, &force, true);
+    Paddle::applyForce(this, &force, true);
 }
 ```
+
+If everything went right, once the game is built and run, both paddles will move when the user presses UP or DOWN in the directional pads.
