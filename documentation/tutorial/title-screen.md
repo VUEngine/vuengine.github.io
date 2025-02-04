@@ -133,7 +133,39 @@ PositionedActorROMSpec TitleScreenStageUiActors[] =
 };
 ```
 
-When [TitleScreenState::configureStage](/documentation/api/class-game-state/) is called with **TitleScreenStageSpec** as one of its arguments, an [Actor](/documentation/api/class-actor/) will be created with the **LowPowerIndicatorActorSpec**.
+When [TitleScreenState::configureStage](/documentation/api/class-game-state/) is called with **TitleScreenStageSpec** as one of its arguments, an [Actor](/documentation/api/class-actor/) will be created with the **LowPowerIndicatorActorSpec**:
+
+```cpp
+void PongState::enter(void* owner __attribute__((unused)))
+{
+    Base::enter(this, owner);
+
+    // Reset last button inputs
+    TitleScreenState::resetLastInputs(this);
+
+    // Load stage
+    TitleScreenState::configureStage(this, (StageSpec*)&TitleScreenStageSpec, NULL);
+
+    // Start clocks to start animations
+    TitleScreenState::startClocks(this);
+
+    // Enable user input
+    KeypadManager::enable();
+
+    // Start fade in effect
+    Camera::startEffect(Camera::getInstance(), kHide);
+
+    Camera::startEffect
+    (
+        Camera::getInstance(),
+        kFadeTo,        // effect type
+        0,              // initial delay (in ms)
+        NULL,           // target brightness
+        __FADE_DELAY,   // delay between fading steps (in ms)
+        NULL            // callback scope
+    );
+}
+```
 
 The `LowPowerIndicatorActor` is provided by the Low Power Indicator plugin. Although it is not explicitly added to the template project, it is implicitly so by the Adjustment Screen plugin, which is included in it:
 
