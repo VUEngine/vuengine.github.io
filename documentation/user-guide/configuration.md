@@ -6,7 +6,7 @@ title: Configuration
 
 # Configuration
 
-## Mutator configuration
+## Behavior configuration
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a header file called _Config.h_ where different aspects of its behavior are defined.
 
