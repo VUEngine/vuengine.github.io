@@ -252,7 +252,7 @@ void AIPaddle::update()
 
             AIPaddle::applyForce(this, &force, true);
         }
-}
+    }
 }
 ```
 
