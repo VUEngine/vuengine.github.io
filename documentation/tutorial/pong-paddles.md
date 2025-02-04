@@ -47,28 +47,22 @@ And propagate the appropriate message according to the user input:
 ```cpp
 void PongState::processUserInput(const UserInput* userInput)
 {
-    uint32 message = 0;
-
     if(K_LU & userInput->holdKey)
     {
-        message = kMessageKeypadHoldLeftUp;
+        PongState::propagateMessage(this, kMessageKeypadHoldLeftUp);
     }
     else if(K_LD & userInput->holdKey)
     {
-        message = kMessageKeypadHoldLeftDown;
+        PongState::propagateMessage(this, kMessageKeypadHoldLeftDown);
     }
-    else if(K_RU & userInput->holdKey)
+
+    if(K_RU & userInput->holdKey)
     {
-        message = kMessageKeypadHoldRightUp;
+        PongState::propagateMessage(this, kMessageKeypadHoldRightUp);
     }
     else if(K_RD & userInput->holdKey)
     {
-        message = kMessageKeypadHoldRightDown;
-    }
-
-    if(0 != message)
-    {
-        PongState::propagateMessage(this, message);
+        PongState::propagateMessage(this, kMessageKeypadHoldRightDown);
     }
 }
 ```
