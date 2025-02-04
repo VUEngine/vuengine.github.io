@@ -16,7 +16,9 @@ This documentation consists of the following sections:
 - [User Guide](/documentation/user-guide/introduction/): to learn about the design principles and concepts of VUEngine, the engine you'll build upon.
 - [API](/documentation/api/classes/): for an API documentation of VUEngine's classes.
 - [Tutorial](/documentation/tutorial/introduction/): for a step-by-step tutorial that implements a simple game with VUEngine Studio.
+  {% comment %}
 - [FAQ](/documentation/faq/): for an overview of the most frequently asked questions.
+  {% endcomment %}
 
 You might just want to skip most of that and start off with the [tutorial](/documentation/tutorial/introduction/) to start making your first game. You can still come back to the other sections later to deepen your knowledge of e.g. VUEngine's concepts.
 
