@@ -1,14 +1,10 @@
 ---
 layout: documentation
 parents: Documentation > Tutorial
-title: Final touches
+title: Sound and Rumble
 ---
 
-# Final touches
-
-The game is almost completed, it is just missing some feedback in the form of sound effects and even rumble effects, thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak.
-
-## Sound Effects
+# Sound Effects
 
 Lets add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/main/assets/Sounds/FX) and place them in *assets/Sounds/FX*. And download the header here from [here](https://github.com/VUEngine/Pong/blob/main/headers/Sounds.h) and place it in the *headers/* folder.
 
@@ -28,7 +24,7 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 
         case kEventActorDeleted:
         {
-            if(NULL != __GET_CAST(Disk, eventFirer))
+            if(0 == strcmp(DISK_NAME, Actor::getName(eventFirer)))
             {
                 SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
 
@@ -79,9 +75,9 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 }
 ```
 
-## Rumble Effects
+# Rumble Effects
 
-To add the rumble effects, create the *assets/Rumble/Bounce* and *assets/Rumble/Point* folders. And create a rumble effect file in each:
+Rumble effects are supported thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak. To add the these effects, create the *assets/Rumble/Bounce* and *assets/Rumble/Point* folders. And create a rumble effect file in each:
 
 <a href="/documentation/images/tutorial/new-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Rumble Effect"><img src="/documentation/images/tutorial/new-rumble-effect.png" /></a>
 
@@ -103,10 +99,10 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 
         case kEventActorDeleted:
         {
-            if(NULL != __GET_CAST(Disk, eventFirer))
+            if(0 == strcmp(DISK_NAME, Actor::getName(eventFirer)))
             {
                 SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
-                RumbleManager::startEffect(&BounceRumbleEffectSpec);
+                RumbleManager::startEffect(&PointRumbleEffectSpec);
 
     [...]
 }
@@ -139,42 +135,5 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
         break;
 
     [...]
-}
-```
-
-## Improving the disk's behavior
-
-The Pong's disk reaction is not very interesting at the moment. We can improve it by artificially modifying its vertical speed in function of the collision point in relation go the paddle:
-
-```cpp
-bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
-{
-    bool returnValue = Base::collisionStarts(this, collisionInformation);
-
-    Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
-
-    switch(Entity::getInGameType(collidingEntity))
-    {
-        case kTypePaddle:
-        {
-            Vector3D velocity = *Body::getVelocity(this->body);
-
-            fixed_t yDisplacement = this->transformation.position.y - Entity::getPosition(collidingEntity)->y;
-
-            velocity.y += yDisplacement;
-
-            Body::setVelocity(this->body, &velocity);
-        }
-        // Intended fall through
-
-        case kTypeWall:
-        {
-            SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
-            RumbleManager::startEffect(&BounceRumbleEffectSpec);
-        }
-        break;
-    }
-
-    return returnValue;
 }
 ```

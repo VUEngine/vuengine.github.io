@@ -59,7 +59,7 @@ Finally, lets place the walls at the top and bottom of the screen in the [Stage]
 extern ActorSpec WallActorSpec;
 
 PositionedActorROMSpec PongStageActors[] =
-{	
+{
     {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, DISK_NAME, NULL, NULL, false},
     {&PaddleActorSpec,              {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, PADDLE_LEFT_NAME, NULL, NULL, false},
     {&PaddleActorSpec,              {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, PADDLE_RIGHT_NAME, NULL, NULL, false},
@@ -74,3 +74,34 @@ PositionedActorROMSpec PongStageActors[] =
 If you don't like that the paddles can get out of the screen, enable the collision checks in their [Collider](/documentation/api/class-collider/) and add the "Wall" Collider Layer to the layers that it checks.
 
 We now have a basic Pong clone!
+
+## Improving the disk's behavior
+
+The Pong's disk reaction is not very interesting at the moment. We can improve it by artificially modifying its vertical speed in function of the collision point in relation go the paddle:
+
+```cpp
+bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
+{
+    bool returnValue = Base::collisionStarts(this, collisionInformation);
+
+    Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
+
+    switch(Entity::getInGameType(collidingEntity))
+    {
+        case kTypePaddle:
+        {
+            Vector3D velocity = *Body::getVelocity(this->body);
+
+            fixed_t yDisplacement = this->transformation.position.y - Entity::getPosition(collidingEntity)->y;
+
+            velocity.y += yDisplacement;
+
+            Body::setVelocity(this->body, &velocity);
+        }
+
+        break;
+    }
+
+    return returnValue;
+}
+```

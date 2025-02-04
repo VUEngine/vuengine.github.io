@@ -6,14 +6,84 @@ title: Pong Paddles
 
 # Paddles
 
-Lets make the paddles move by pressing the keypad. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the paddles in the `PongState`, or creating instances of a `Paddle` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature. 
+Lets make the paddles move by pressing the controller's direction pads. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the paddles in the `PongState`, or creating instances of a `Paddle` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature. 
 
+## Processing the user input
+
+The [Actors](/documentation/api/class-actor/) that belong to the [Stage](/documentation/api/class-stage/) can receive messages that propagate through all its children. This allows to decouple the `PongState` and from the [Actors](/documentation/api/class-actor/) that need to react to the user input.
+
+First, lets create the messages. To do that, right click the *config* folder and create a new **Messages** file and add the following messages to it:
+
+<a href="/documentation/images/tutorial/messages.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle mutator"><img src="/documentation/images/tutorial/messages.png" /></a>
+
+
+In the `PongState`'s declaration, override the `processUserInput` method:
+
+```cpp
+[...]
+
+#include <PongManager.h>
+
+[...]
+
+singleton class PongState : GameState
+{
+    /// @publicsection
+
+    /// Method to GameSaveDataManager the singleton instance
+    /// @return AnimationSchemesState singleton
+    static PongState getInstance();
+
+    [...]
+
+    /// Process the provided user input.
+    /// @param userInput: Struct with the current user input information
+    override void processUserInput(const UserInput* userInput);
+}
+```
+
+And propagate the appropriate message according to the user input:
+
+```cpp
+void PongState::processUserInput(const UserInput* userInput)
+{
+    uint32 message = 0;
+
+    if(K_LU & userInput->holdKey)
+    {
+        message = kMessageKeypadHoldLeftUp;
+    }
+    else if(K_LD & userInput->holdKey)
+    {
+        message = kMessageKeypadHoldLeftDown;
+    }
+    else if(K_RU & userInput->holdKey)
+    {
+        message = kMessageKeypadHoldRightUp;
+    }
+    else if(K_RD & userInput->holdKey)
+    {
+        message = kMessageKeypadHoldRightDown;
+    }
+
+    if(0 != message)
+    {
+        PongState::propagateMessage(this, message);
+    }
+}
+```
+
+Now, we need to somehow catch the message with the paddle actors. Enter [Mutators](/documentation/api/class-mutator/).
+
+## Mutation classes
+
+With [mutation classes](/documentation/language/custom-features/#mutation-classes), we can add functionality to classes by means of abstract classes that don't allow instantiation, that is without having to go the full blown inheritance route. In the case of mutations of the [Actor](/documentation/api/class-actor/) class, they spare us the need to define another **Spec** and worry about implementing a constructor and destructor. They are useful as long as we don't need to persist any additional data to implement the logic of the class. They are not restricted to inherit from [Actor](/documentation/api/class-actor/), mutation classes can be created for any non abstract class in [VUEngine](https://github.com/VUEngine/VUEngine-Core). Lets see how to use them.
 
 ## Mutators
 
-The [Mutator](/documentation/api/class-mutator/) class, which is a kind of [Component](/documentation/api/class-component/) that performs the [mutation](/documentation/language/custom-features/#mutation-classes) on [Actors](/documentation/api/class-actor/) without having to do it manually by means of directly calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`. 
+The [Mutator](/documentation/api/class-mutator/) class is a kind of [Component](/documentation/api/class-component/) that performs the [mutation](/documentation/language/custom-features/#mutation-classes) on [Actors](/documentation/api/class-actor/) without having to do it manually by means of directly calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`. 
 
-To add a [Mutator](/documentation/api/class-mutator/) to the paddles, lets open the *Paddle.actor* editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto generated **PaddleActorSpec** (see *assets/Actors/Paddle/Converted/PaddleActorSpec.c*).
+To add a [Mutator](/documentation/api/class-mutator/) to the paddles, open the *Paddle.actor* editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto generated **PaddleActorSpec** (see *assets/Actors/Paddle/Converted/PaddleActorSpec.c*).
 
 When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration.
 
@@ -60,164 +130,27 @@ In *Paddle.h* lets add the following to declare the new class:
 
 mutation class Paddle : Actor
 {
-    void moveTowards(NormalizedDirection direction);
+    /// Default interger message handler for propagateMessage
+    /// @param message: Propagated integer message
+    /// @return True if the propagation must stop; false if the propagation must reach other containers
+    override bool handlePropagatedMessage(int32 message);
 }
 ```
 
-As you can see, it is very minimal, and we have declared a single method that takes a [NormalizedDirection](/documentation/api/struct-normalized-direction/) struct.
-
-The implementation file shoudl contain the following:
-
-```cpp
-#include "Paddle.h"
-
-mutation class Paddle;
-
-void Paddle::moveTowards(NormalizedDirection direction)
-{
-}
-
-```
-
-With mutation classes, with don't need to define another **Spec** and worry about construction and destruction. They are useful as long as we don't need to persist any additional data to implement the logic of the class. They are not restricted to inherit from [Actor](/documentation/api/class-actor/), mutation classes can be created for any non abstract class in [VUEngine](https://github.com/VUEngine/VUEngine-Core).
-
-## Processing the user input
-
-We have a place to implement the logic for moving the paddles and we have a reference to them in the `PongManager`, so, we just need to process the user input. We already did it in the `TitleScreenState` so, lets override the `processUserInput` in the `PongState` to forward the user input up to the `Paddle`.
-
-Lets add a member that will point to a `PongManager` instance and override the `processUserInput` method in the `PongState`. We need too to override the `enter` and `exit` methods to create and destroy the manager:
+As you can see, it is very minimal, and we only had to override the [Container::handlePropagatedMessage](/documentation/api/class-container/) to process the message propagated by the `PongState`:
 
 ```cpp
 [...]
 
-#include <PongManager.h>
-
-[...]
-
-singleton class PongState : GameState
-    {
-    /// @protectedsection
-
-    /// Manager for the pong game's logic
-    PongManager pongManager;
-
-    /// @publicsection
-
-    /// Method to GameSaveDataManager the singleton instance
-    /// @return AnimationSchemesState singleton
-    static PongState getInstance();
-
-    /// Prepares the object to enter this state.
-    /// @param owner: Object that is entering in this state
-    override void enter(void* owner);
-
-    /// Prepares the object to exit this state.
-    /// @param owner: Object that is exiting this state
-    override void exit(void* owner);
-
-    /// Process the provided user input.
-    /// @param userInput: Struct with the current user input information
-    override void processUserInput(const UserInput* userInput);
+bool Paddle::handlePropagatedMessage(int32 message)
+{
+    return false;
 }
 ```
 
-Now, instantiate the `PongManager`:
+Notice that the method returns `false`. This allows the propagation to continue. Since there are two paddles, neither must stop the message.
 
-```cpp
-[...]
-
-void PongState::enter(void* owner __attribute__((unused)))
-{
-    [...]
-
-    // Create the Pong game controller
-    this->pongManager = new PongManager(this->stage);
-}
-
-[...]
-
-void PongState::constructor()
-{
-    // Always explicitly call the base's constructor
-    Base::constructor();
-
-    this->pongManager = NULL;
-}
-```
-
-And don't forget to destroy it:
-
-```cpp
-void PongState::exit(void* owner __attribute__((unused)))
-{
-    if(!isDeleted(this->pongManager))
-    {
-        delete this->pongManager;
-    }
-
-    this->pongManager = NULL;
-
-    [...]
-
-    Base::exit(this, owner);
-}
-```
-
-Finally, we can safely forward the user input to it:
-
-```cpp
-void PongState::processUserInput(const UserInput* userInput)
-{
-    if(!isDeleted(this->pongManager))
-    {
-        PongManager::processUserInput(this->pongManager, userInput);
-    }
-}
-
-[...]
-```
-
-In `PongManager::processUserInput`, we will manipulate the data to prepare it to be used by the `Paddle`:
-
-```cpp
-class PongManager : ListenerObject
-{
-    [...]
-
-    void processUserInput(const UserInput* userInput);
-}
-```
-
-```cpp
-void PongManager::processUserInput(const UserInput* userInput)
-{
-    if(0 != userInput->holdKey)
-    {
-        NormalizedDirection normalizedDirection = {0, 0, 0};
-
-        if((K_LU | K_RU) & holdKey)
-        {
-            normalizedDirection.y = __UP;
-        }
-        else if((K_LD | K_RD) & holdKey)
-        {
-            normalizedDirection.y = __DOWN;
-        }
-
-        if(NULL != this->leftPaddle)
-        {
-            Paddle::moveTowards(this->leftPaddle, normalizedDirection);
-        }
-
-        if(NULL != this->rightPaddle)
-        {
-            Paddle::moveTowards(this->rightPaddle, normalizedDirection);
-        }
-    }
-}
-```
-
-We are not done yet. `Paddle::moveTowards` is still empty. We have various options here, again: directly manipulate the `Paddle`'s transformation or use physic simulations to give the paddles some weight and inertia. Lets do the latter.
+`Paddle::handlePropagatedMessage` is still empty, we haven't really done anything with the input yet. We have various options here again: directly manipulate the `Paddle`'s transformation or use physic simulations to give the paddles some weight and inertia. Lets do the latter.
 
 ## Adding physic simulations
 
@@ -225,17 +158,53 @@ Another type of [Component](/documentation/api/class-component/) that can be eas
 
 <a href="/documentation/images/tutorial/paddle-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle body"><img src="/documentation/images/tutorial/paddle-body.png" /></a>
 
-Finally, we are able to move the paddles. In the iplementation of `Paddle::moveTowards`, add the following:
+Finally, we are able to move the paddles. In the iplementation of `Paddle::handlePropagatedMessage`, add the following:
 
 ```cpp
-[...]
-
 #include <Body.h>
+#include <Messages.h>
 
 [...]
 
-void Paddle::moveTowards(NormalizedDirection direction)
+bool Paddle::handlePropagatedMessage(int32 message)
 {
+    NormalizedDirection normalizedDirection = {0, 0, 0};
+
+    if(this->transformation.position.x < 0)
+    {
+        switch(message)
+        {
+            case kMessageKeypadHoldLeftUp:
+            {
+                normalizedDirection.y = __UP;
+                break;
+            }
+
+            case kMessageKeypadHoldLeftDown:
+            {
+                normalizedDirection.y = __DOWN;
+                break;
+            }
+        }
+    }
+    else
+    {
+        switch(message)
+        {
+            case kMessageKeypadHoldRightUp:
+            {
+                normalizedDirection.y = __UP;
+                break;
+            }
+
+            case kMessageKeypadHoldRightDown:
+            {
+                normalizedDirection.y = __DOWN;
+                break;
+            }
+        }
+    }
+
     if(isDeleted(this->body))
     {
         return;
@@ -256,6 +225,8 @@ void Paddle::moveTowards(NormalizedDirection direction)
     };
 
     Paddle::applyForce(this, &force, true);
+
+    return false;
 }
 ```
 

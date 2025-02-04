@@ -19,7 +19,7 @@ And then add a [Mutator](/documentation/api/class-mutator/) with `Disk` as the m
 
 We have to create the `Disk` class. Lets add the folder *source/Actors/Disk* and, in it, a header and an implementation file: *Disk.h* and *Disk.c*.
 
-In *Paddle.h* lets add the following to declare the new class:
+In *Disk.h* lets add the following to declare the new class:
 
 ```cpp
 #include <Actor.h>
@@ -32,7 +32,7 @@ mutation class Disk : Actor
 }
 ```
 
-[Actors](/documentation/api/class-actor/) are not necessarily ready to be manipulated immediately after they are instantiated since whether or not the have, by that point in time, all their [Components](/documentation/api/class-component/) attached to them depends on whether the [Stage](/documentation/api/class-stage/) is configure to defer their initialization over time or not. [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports deferred initialization in order to reduce the chances of hicups during gameplay due to the load on the CPU when creating [Actors](/documentation/api/class-actor/) with many [Components](/documentation/api/class-component/) attached to them.
+[Actors](/documentation/api/class-actor/) are not necessarily ready to be manipulated immediately after they are instantiated since whether or not the have, by that point in time, all their [Components](/documentation/api/class-component/) attached to them depends on whether the [Stage](/documentation/api/class-stage/) is configure to defer their initialization over time or not. [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports deferred initialization in order to reduce the chances of hiccups during gameplay due to the load on the CPU when creating [Actors](/documentation/api/class-actor/) with many [Components](/documentation/api/class-component/) attached to them.
 
 So, the way in which the engine tells the game that an [Actor](/documentation/api/class-actor/) has been completely configured and can be manipulated is through the call to the [Container::ready](/documentation/api/class-container/) virtual method.
 
