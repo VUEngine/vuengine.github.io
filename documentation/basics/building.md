@@ -8,7 +8,7 @@ title: Building
 
 To get from source code to a playable ROM (\*.vb) file, you'll need to build your code.
 
-VUEngine Studio allows you to build your project and queue running it in an emulator, flash to your flash cart(s) or export the ROM, all in a unified workflow and in fully embedded tools.
+[VUEngine Studio](https://www.vuengine.dev/downloads/) allows you to build your project and queue running it in an emulator, flash to your flash cart(s) or export the ROM, all in a unified workflow and in fully embedded tools.
 
 ## Build Panel
 
@@ -124,7 +124,7 @@ This mode removes some of the checks that debug mode enables, letting the games 
 
 ### Beta
 
-This is the default building mode in [VUEngine Studio](https://www.vuengine.dev/) and is the recommended one for development. It disables the [Developer Tools](/documentation/user-guide/development-tools/) and removes the injected of the safety checks added by the transpiler in debug and tools modes, but leaves in the checks performend through the explicit usage of the `NM_ASSERT` macro.
+This is the default building mode in [VUEngine Studio](https://www.vuengine.dev/downloads/) and is the recommended one for development. It disables the [Developer Tools](/documentation/user-guide/development-tools/) and removes the injected of the safety checks added by the transpiler in debug and tools modes, but leaves in the checks performend through the explicit usage of the `NM_ASSERT` macro.
 
 Although it still entails a significative performance hit that makes ROMs compiled in this mode generally too slow to represent the final game as it should be playable on hardware.
 

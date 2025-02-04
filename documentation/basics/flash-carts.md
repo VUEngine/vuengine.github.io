@@ -6,7 +6,7 @@ title: Flash Carts
 
 # Flash Carts
 
-VUEngine Studio has built-in support for writing your [freshly built](/documentation/basics/building/) ROM to your flash cart(s), through the flash carts widget. You can connect, and flash to, any number of flash carts at once.
+[VUEngine Studio](https://www.vuengine.dev/downloads/) has built-in support for writing your [freshly built](/documentation/basics/building/) ROM to your flash cart(s), through the flash carts widget. You can connect, and flash to, any number of flash carts at once.
 
 <a href="/documentation/images/basics/flash-carts/flash-carts-panel.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Flash Carts Panel"><img src="/documentation/images/basics/flash-carts/flash-carts-panel.png" /></a><br />
 _The Flash Carts Panel_
@@ -15,7 +15,7 @@ _The Flash Carts Panel_
 
 ## Custom configurations
 
-VUEngine Studio ships with built-in configurations for all the most common Virtual Boy flash carts.
+[VUEngine Studio](https://www.vuengine.dev/downloads/) ships with built-in configurations for all the most common Virtual Boy flash carts.
 
 - FlashBoy
 - FlashBoy Plus
@@ -46,4 +46,4 @@ There are a few placeholders that can be used in the flasher arguments input.
 
 > **Note**: On Windows 10, you can't see COM ports directly. You need to open Device Manager, select `View tab` and choose `Show hidden` devices. After that, You’ll see the Ports (COM & LPT) option and only need to expand it to find COM ports.
 
-> **Note**: On Windows, if your flash cart is not HID, like HyperFlash32 or HyperBoy, and it is not using WinUSB driver, you must install those before VUEngine Studio is able to detect the cart. The recommended way is to install the most recent version of [Zadig](https://zadig.akeo.ie/) and use it to change the driver of your flash cart to WinUSB, as shown in the following screenshot.<br><br> <a href="/documentation/images/basics/flash-carts/zadig-hyperflash32.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/flash-carts/zadig-hyperflash32.png" width="600" /></a>
+> **Note**: On Windows, if your flash cart is not HID, like HyperFlash32 or HyperBoy, and it is not using WinUSB driver, you must install those before [VUEngine Studio](https://www.vuengine.dev/downloads/) is able to detect the cart. The recommended way is to install the most recent version of [Zadig](https://zadig.akeo.ie/) and use it to change the driver of your flash cart to WinUSB, as shown in the following screenshot.<br><br> <a href="/documentation/images/basics/flash-carts/zadig-hyperflash32.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/flash-carts/zadig-hyperflash32.png" width="600" /></a>

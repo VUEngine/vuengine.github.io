@@ -20,7 +20,7 @@ title: Emulator
 
 ## Red Viper
 
-As a secondary built-in emulator, VUEngine Studio supports playtesting on a Nintendo 3DS using the [Red Viper](https://github.com/skyfloogle/red-viper) emulator (version v0.9.5 and up). This allows you to comfortably preview in stereo at true 50Hz. The integration utilizes the VBLink protocol to wirelessly send your ROM over your home WiFi.
+As a secondary built-in emulator, [VUEngine Studio](https://www.vuengine.dev/downloads/) supports playtesting on a Nintendo 3DS using the [Red Viper](https://github.com/skyfloogle/red-viper) emulator (version v0.9.5 and up). This allows you to comfortably preview in stereo at true 50Hz. The integration utilizes the VBLink protocol to wirelessly send your ROM over your home WiFi.
 
 ### Setup
 
@@ -28,7 +28,7 @@ Boot up Red Viper and press Y on the main menu to set it to listen for new ROMs 
 
 <a href="/documentation/images/basics/emulator/red-viper-vblink.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/emulator/red-viper-vblink.png"/></a>
 
-The above screen displays your Nintendo 3DS' IP address, `192.168.5.206` in this case. Configure VUEngine Studio accordingly and set Red Viper as the default emulator, as seen in the following screenshot.
+The above screen displays your Nintendo 3DS' IP address, `192.168.5.206` in this case. Configure [VUEngine Studio](https://www.vuengine.dev/downloads/) accordingly and set Red Viper as the default emulator, as seen in the following screenshot.
 
 <a href="/documentation/images/basics/emulator/red-viper-set-ip.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/emulator/red-viper-set-ip.png" width="800"/></a>
 
@@ -56,7 +56,7 @@ Example:
 }]
 ```
 
-To configure VUEngine Studio to make use of any of your custom emulator configurations, you have to choose it as the new default emulator using the command `Emulator: Set Default Emulator Config`.
+To configure [VUEngine Studio](https://www.vuengine.dev/downloads/) to make use of any of your custom emulator configurations, you have to choose it as the new default emulator using the command `Emulator: Set Default Emulator Config`.
 
 Note that this command writes the name of your chosen emulator config to a preference like below. So be aware that you have to reset it in case you change the name of the respective emulator configuration.
 

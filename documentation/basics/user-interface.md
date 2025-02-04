@@ -6,13 +6,13 @@ title: User Interface
 
 # User Interface
 
-VUEngine Studio's user interface is modeled after Visual Studio Code, but with more flexibility and an additional right sidepanel and sidebar in mind. Like many other code editors, VUEngine Studio adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to, and an editor in the center, showing the content of the files you have opened.
+VUEngine Studio's user interface is modeled after Visual Studio Code, but with more flexibility and an additional right sidepanel and sidebar in mind. Like many other code editors, [VUEngine Studio](https://www.vuengine.dev/downloads/) adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to, and an editor in the center, showing the content of the files you have opened.
 
 <a href="/documentation/images/basics/user-interface/user-interface.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/user-interface.png" width="100%" /></a>
 
 ## Layout
 
-VUEngine Studio comes with a simple and intuitive layout that maximizes the space provided for the editor while leaving ample room to browse and access the full context of your folder or project. The UI is divided into the following areas:
+[VUEngine Studio](https://www.vuengine.dev/downloads/) comes with a simple and intuitive layout that maximizes the space provided for the editor while leaving ample room to browse and access the full context of your folder or project. The UI is divided into the following areas:
 
 - **(A) Sidepanels** - Located on the far left-hand and right-hand sides, this lets you switch between views and gives you additional context-specific indicators, like the number of outgoing changes when Git is enabled, number of connected flash carts, etc.
 - **(B) Sidebars** - Contains different views like the Explorer to assist you while working on your project.
@@ -23,7 +23,7 @@ VUEngine Studio comes with a simple and intuitive layout that maximizes the spac
 
 You can freely drag and drop editors and widgets between all the editor area, sidebar and bottom panel.
 
-Each time you start VUEngine Studio, it opens up in the same state it was in when you last closed it. The last opened project, folder, layout, and opened files are preserved.
+Each time you start [VUEngine Studio](https://www.vuengine.dev/downloads/), it opens up in the same state it was in when you last closed it. The last opened project, folder, layout, and opened files are preserved.
 
 You can revert to the default layout with the `View: Reset Workbench Layout` command.
 
@@ -68,21 +68,21 @@ In the above image, you can also see indentation guides (vertical lines) in the 
 
 ## Explorer
 
-The Explorer is used to browse, open, and manage all of the files and folders in your project. VUEngine Studio is file and folder based - you can get started immediately by opening a file or folder in VUEngine Studio.
+The Explorer is used to browse, open, and manage all of the files and folders in your project. [VUEngine Studio](https://www.vuengine.dev/downloads/) is file and folder based - you can get started immediately by opening a file or folder in [VUEngine Studio](https://www.vuengine.dev/downloads/).
 
-After opening a folder in VUEngine Studio, the contents of the folder are shown in the Explorer. You can do many things from here:
+After opening a folder in [VUEngine Studio](https://www.vuengine.dev/downloads/), the contents of the folder are shown in the Explorer. You can do many things from here:
 
 - Create, delete, and rename files and folders.
 - Move files and folders with drag and drop.
 - Use the context menu to explore all options.
 
-> **Tip:** You can drag and drop files into the Explorer from outside VUEngine Studio to copy them (if the explorer is empty VUEngine Studio will open them instead)
+> **Tip:** You can drag and drop files into the Explorer from outside [VUEngine Studio](https://www.vuengine.dev/downloads/) to copy them (if the explorer is empty [VUEngine Studio](https://www.vuengine.dev/downloads/) will open them instead)
 
-VUEngine Studio works very well with other tools that you might use, especially command-line tools. If you want to run a command-line tool in the context of the folder you currently have open in VUEngine Studio, right-click the folder and select <span class="target-os-win">`Open in Command Prompt`</span><span class="target-os-not-win">`Open in Terminal`</span>.
+[VUEngine Studio](https://www.vuengine.dev/downloads/) works very well with other tools that you might use, especially command-line tools. If you want to run a command-line tool in the context of the folder you currently have open in [VUEngine Studio](https://www.vuengine.dev/downloads/), right-click the folder and select <span class="target-os-win">`Open in Command Prompt`</span><span class="target-os-not-win">`Open in Terminal`</span>.
 
 > **Tip:** Type <span class="keys" data-osx="⌘P">Ctrl+P</span> to quickly search and open a file by its name.
 
-By default, VUEngine Studio excludes some folders from the Explorer (for example. .git). Use the `files.exclude` setting to configure rules for hiding files and folders from the Explorer.
+By default, [VUEngine Studio](https://www.vuengine.dev/downloads/) excludes some folders from the Explorer (for example. .git). Use the `files.exclude` setting to configure rules for hiding files and folders from the Explorer.
 
 ### Multi-selection
 
@@ -100,24 +100,24 @@ Hovering over the filter box and selecting **Enable Filter on Type** will show o
 
 The Explorer holds an additional view labeled **OPEN EDITORS**. It is hidden by default and can be enabled by right clicking on the Exlorer header and checking the `Open Editors` option.
 
-This is a list of active files or previews. These are files you previously opened in VUEngine Studio that you were working on. For example, a file will be listed in the **OPEN EDITORS** view if you:
+This is a list of active files or previews. These are files you previously opened in [VUEngine Studio](https://www.vuengine.dev/downloads/) that you were working on. For example, a file will be listed in the **OPEN EDITORS** view if you:
 
 - Make a change to a file.
 - Double-click a file's header.
 - Double-click a file in the Explorer.
 - Open a file that is not part of the current folder.
 
-Just click an item in the **OPEN EDITORS** view, and it becomes active in VUEngine Studio.
+Just click an item in the **OPEN EDITORS** view, and it becomes active in [VUEngine Studio](https://www.vuengine.dev/downloads/).
 
 Once you are done with your task, you can remove files individually from the **OPEN EDITORS** view, or you can remove all files by using the `Close All Editors` or `Close Group` actions.
 
 ## Views
 
-The Explorer is just one of the Views available in VUEngine Studio. There are also Views for:
+The Explorer is just one of the Views available in [VUEngine Studio](https://www.vuengine.dev/downloads/). There are also Views for:
 
 - Build - The project build panel.
-- Documentation - Browse this documentation within VUEngine Studio.
-- Extensions - Install and manage extensions within VUEngine Studio.
+- Documentation - Browse this documentation within [VUEngine Studio](https://www.vuengine.dev/downloads/).
+- Extensions - Install and manage extensions within [VUEngine Studio](https://www.vuengine.dev/downloads/).
 - Flash Carts - Lets you write your built ROM to any flash carts.
 - History - Git history of currently opened file.
 - Image Conversion - Image conversion logs.
@@ -126,7 +126,7 @@ The Explorer is just one of the Views available in VUEngine Studio. There are al
 - Problems - List of problems in workspace.
 - Properties - Properties of currently opened file.
 - Search - Provides global search and replace across your open folder.
-- Source Control - VUEngine Studio includes Git source control by default.
+- Source Control - [VUEngine Studio](https://www.vuengine.dev/downloads/) includes Git source control by default.
 - Other - Views contributed by extensions.
 
 > **Tip:** You can open any view using the `View: Open View` command.
@@ -137,7 +137,7 @@ The Sidebars on the left and right let you quickly switch between Views. You can
 
 ## Command Palette
 
-VUEngine Studio is equally accessible from the keyboard. The most important key combination to know is <span class="keys" data-osx="⇧⌘P">Shift+Ctrl+P</span>, which brings up the **Command Palette**. From here, you have access to all of the functionality of VUEngine Studio, including keyboard shortcuts for the most common operations.
+[VUEngine Studio](https://www.vuengine.dev/downloads/) is equally accessible from the keyboard. The most important key combination to know is <span class="keys" data-osx="⇧⌘P">Shift+Ctrl+P</span>, which brings up the **Command Palette**. From here, you have access to all of the functionality of [VUEngine Studio](https://www.vuengine.dev/downloads/), including keyboard shortcuts for the most common operations.
 
 <a href="/documentation/images/basics/user-interface/command-palette.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/command-palette.png" width="600" /></a>
 
@@ -152,7 +152,7 @@ Type "?" into the input field to get a list of available commands you can execut
 
 ## Editor Configuration
 
-VUEngine Studio gives you many options to configure the editor. From the **View** menu, you can hide or toggle various parts of the user interface, such as the Side Panels, Status Bar, and Bottom Panel.
+[VUEngine Studio](https://www.vuengine.dev/downloads/) gives you many options to configure the editor. From the **View** menu, you can hide or toggle various parts of the user interface, such as the Side Panels, Status Bar, and Bottom Panel.
 
 ### Settings
 

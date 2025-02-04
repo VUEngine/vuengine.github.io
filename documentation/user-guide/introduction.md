@@ -6,7 +6,7 @@ title: Introduction
 
 # Introduction
 
-So, you want to create some awesome game or application for the Nintendo Virtual Boy, or you just want to display stereoscopic graphics or even only to play music or sound effects on it. If you have already downloaded VUEngine Studio (VES for short) for any of that, it is most likely because you are not planning on writing assembly code, but C, and might already be wondering if [VUEngine](https://github.com/VUEngine/VUEngine-Core) is the right tool to use to achieve your goals.
+So, you want to create some awesome game or application for the Nintendo Virtual Boy, or you just want to display stereoscopic graphics or even only to play music or sound effects on it. If you have already downloaded [VUEngine Studio](https://www.vuengine.dev/downloads/) (VES for short) for any of that, it is most likely because you are not planning on writing assembly code, but C, and might already be wondering if [VUEngine](https://github.com/VUEngine/VUEngine-Core) is the right tool to use to achieve your goals.
 
 VES can be used with other libraries, and [Team VUEngine](https://www.patreon.com/vuengine) even provides a ready to be used version of libgccvb, a basic set of functions that give access to the hardware features if you want to manage all the low level stuff yourself. With it, you will be controlling down to the hardware’s registers and memory level, most likely mixing data within the code that implements the logic of the game to do basic stuff like displaying some graphics, keeping track of mapping screen coordinates to video memory coordinates, among other things:
 
