@@ -28,7 +28,7 @@ And the same rename will be applied to the files *source/States/MyGameState/MyGa
 Then, in the mentioned files, `MyGameState` is replaced by `TitleScreenState`:
 
 ```cpp
-dynamic_singleton class TitleScreenState : GameState
+singleton class TitleScreenState : GameState
 {
     [...]
 
@@ -164,11 +164,11 @@ We will use the following image to replace the text:
 
 <a href="/documentation/images/tutorial/pong-logo.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Logo"><img src="/documentation/images/tutorial/pong-logo.png" /></a>
 
-To do so, create the folder *assets/Actors/Logo* and add an "Actor" file in it by right clicking the *Logo* folder and selecting "New File":
+To do so, create the folder *assets/Actors/Logo* and add an *.actor* file in it by right clicking the *Logo* folder and selecting "New File":
 
 <a href="/documentation/images/tutorial/new-actor-file.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Actor file"><img src="/documentation/images/tutorial/new-actor-file.png" /></a>
 
-It will open the "Actor" editor with a single button that reads "Add Component". Click it and select "Sprite" from the drop down menu. It will show the "Sprite" editor:
+It will open the *.actor* file editor with a single button that reads "Add Component". Click it and select "Sprite" from the drop down menu. It will show the "Sprite" editor:
 
 <a href="/documentation/images/tutorial/new-sprite-component.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Sprite Component"><img src="/documentation/images/tutorial/new-sprite-component.png" /></a>
 

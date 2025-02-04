@@ -182,7 +182,7 @@ void PongManager::constructor(Stage stage)
 
     if(!isDeleted(stage))
     {
-        Actor disk = Actor::safeCast(Stage::getChildByName(stage, (char*)DISK_NAME, false));
+        Actor disk = Actor::safeCast(Stage::getChildByName(stage, (char*)"Disk", false));
 
         if(!isDeleted(disk))
         {
@@ -241,7 +241,7 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
         {
             if(__GET_CAST(Actor, eventFirer))
             {
-                if(0 == strcmp(DISK_NAME, Actor::getName(eventFirer)))
+                if(0 == strcmp("Disk", Actor::getName(eventFirer)))
                 {
                     Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
                 }

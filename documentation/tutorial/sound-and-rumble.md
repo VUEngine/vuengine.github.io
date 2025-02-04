@@ -24,7 +24,7 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 
         case kEventActorDeleted:
         {
-            if(0 == strcmp(DISK_NAME, Actor::getName(eventFirer)))
+            if(0 == strcmp("Disk", Actor::getName(eventFirer)))
             {
                 SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
 
@@ -99,7 +99,7 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 
         case kEventActorDeleted:
         {
-            if(0 == strcmp(DISK_NAME, Actor::getName(eventFirer)))
+            if(0 == strcmp("Disk", Actor::getName(eventFirer)))
             {
                 SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
                 RumbleManager::startEffect(&PointRumbleEffectSpec);

@@ -73,7 +73,7 @@ void PongState::enter(void* owner __attribute__((unused)))
 But we need to move beyond this state to start implementing the actual game. To do so, we need to detect the user input and change the engine's current state when the START button is pressed. That is done in the [GameState::processUserInput](/documentation/api/class-game-state/) method, which the state provided in the template project already overrides:
 
 ```cpp
-dynamic_singleton class TitleScreenState : GameState
+singleton class TitleScreenState : GameState
 {
     [...]
 
@@ -138,7 +138,7 @@ void TitleScreenState::processUserInput(const UserInput* userInput)
 
 ## Entering the Pong State
 
-We need to create the `PongState` in order to being able to transition to it. To do so, create the folder *source/States/PongState* and two files: *source/States/PongState/PongState.h* and *source/States/PongState/PongState.c*. The new state needs to override the `enter` method make the screen to fade in since the previous state left it dark:
+We need to create the `PongState` in order to being able to transition to it. To do so, create the folder *source/States/PongState* and two files: *source/States/PongState/PongState.h* and *source/States/PongState/PongState.c*. 
 
 ```cpp
 singleton class PongState : GameState
@@ -150,35 +150,10 @@ singleton class PongState : GameState
     /// Method to GameSaveDataManager the singleton instance
     /// @return AnimationSchemesState singleton
     static PongState getInstance();
-
-    /// Prepares the object to enter this state.
-    /// @param owner: Object that is entering in this state
-    override void enter(void* owner);
 }
 ```
 
-And in the implementation, a fade in effect has to be applied:
-
-```cpp
-void PongState::enter(void* owner __attribute__((unused)))
-{
-    Base::enter(this, owner);
-
-    // Start fade in effect
-    Camera::startEffect(Camera::getInstance(), kHide);
-    Camera::startEffect
-    (
-        Camera::getInstance(),
-        kFadeTo,       // effect type
-        0,             // initial delay (in ms)
-        NULL,          // target brightness
-        __FADE_DELAY,  // delay between fading steps (in ms)
-        NULL           // callback scope
-    );
-}
-```
-
-But the `PongState` will remain empty if we don't add actors to it. The consists of a disk and 2 paddles so, lets create them in *assets/Actors/Disk/* and *assets/Actors/Paddle/* with the "Actor" file as it was done before to create the logo in the title screen:
+But the `PongState` will remain empty if we don't add actors to it. They consists of a disk and 2 paddles so, lets create them in *assets/Actors/Disk/* and *assets/Actors/Paddle/* with the *.actor* file as it was done before to create the logo in the title screen:
 
 <a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
 
@@ -202,7 +177,7 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-Now that the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it has to be passed to `PongState::configureStage`(/documentation/api/class-game-state/):
+Since the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to `PongState::configureStage`(/documentation/api/class-game-state/):
 
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
@@ -211,22 +186,10 @@ void PongState::enter(void* owner __attribute__((unused)))
 
     // Load stage
     PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
-
-    // Start fade in effect
-    Camera::startEffect(Camera::getInstance(), kHide);
-    Camera::startEffect
-    (
-        Camera::getInstance(),
-        kFadeTo,       // effect type
-        0,             // initial delay (in ms)
-        NULL,          // target brightness
-        __FADE_DELAY,  // delay between fading steps (in ms)
-        NULL           // callback scope
-    );
 }
 ```
 
-When the game is built and run, pressing START in the title screen will show a fade out and fade in into the `PongState`, which will show the following:
+When the game is built and run, pressing START in the title screen will transition onto the `PongState`, which will show the following:
 
 <a href="/documentation/images/tutorial/Disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/pong-state.png" /></a>
 
