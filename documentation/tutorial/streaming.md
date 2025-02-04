@@ -19,29 +19,29 @@ To be notified of the destruction of the paddles, an event listener has to be ad
 ```cpp
 void PongManager::getReady(Stage stage)
 {
-	if(!isDeleted(stage))
-	{
-		this->disk = Disk::safeCast(Stage::getChildByName(stage, (char*)DISK_NAME, false));
-		this->leftPaddle = Paddle::safeCast(Stage::getChildByName(stage, (char*)PADDLE_LEFT_NAME, true));
-		this->rightPaddle = Paddle::safeCast(Stage::getChildByName(stage, (char*)PADDLE_RIGHT_NAME, true));
+    if(!isDeleted(stage))
+    {
+        this->disk = Disk::safeCast(Stage::getChildByName(stage, (char*)DISK_NAME, false));
+        this->leftPaddle = Paddle::safeCast(Stage::getChildByName(stage, (char*)PADDLE_LEFT_NAME, true));
+        this->rightPaddle = Paddle::safeCast(Stage::getChildByName(stage, (char*)PADDLE_RIGHT_NAME, true));
 
-		if(!isDeleted(this->disk))
-		{
-			Actor::addEventListener(this->disk, ListenerObject::safeCast(this), kEventActorDeleted);
-		}
+        if(!isDeleted(this->disk))
+        {
+            Actor::addEventListener(this->disk, ListenerObject::safeCast(this), kEventActorDeleted);
+        }
 
-		if(!isDeleted(this->leftPaddle))
-		{
-			Actor::addEventListener(this->leftPaddle, ListenerObject::safeCast(this), kEventActorDeleted);
-		}
+        if(!isDeleted(this->leftPaddle))
+        {
+            Actor::addEventListener(this->leftPaddle, ListenerObject::safeCast(this), kEventActorDeleted);
+        }
 
-		if(!isDeleted(this->rightPaddle))
-		{
-			Actor::addEventListener(this->rightPaddle, ListenerObject::safeCast(this), kEventActorDeleted);
-		}
+        if(!isDeleted(this->rightPaddle))
+        {
+            Actor::addEventListener(this->rightPaddle, ListenerObject::safeCast(this), kEventActorDeleted);
+        }
 
-		Stage::addActorLoadingListener(stage, ListenerObject::safeCast(this));
-	}
+        Stage::addActorLoadingListener(stage, ListenerObject::safeCast(this));
+    }
 }
 ```
 
@@ -69,34 +69,34 @@ And in its implementation, we process both events as follows:
 ```cpp
 bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uint16 eventCode)
 {
-	switch(eventCode)
-	{
-		case kEventActorDeleted:
-		{
-			if(NULL != this->disk && eventFirer == ListenerObject::safeCast(this->disk))
-			{
-				this->disk = NULL;
-			}
-			else if(NULL != this->leftPaddle && eventFirer == ListenerObject::safeCast(this->leftPaddle))
-			{
-				this->leftPaddle = NULL;
-			}
-			else if(NULL != this->rightPaddle && eventFirer == ListenerObject::safeCast(this->rightPaddle))
-			{
-				this->rightPaddle = NULL;
-			}
+    switch(eventCode)
+    {
+        case kEventActorDeleted:
+        {
+            if(NULL != this->disk && eventFirer == ListenerObject::safeCast(this->disk))
+            {
+                this->disk = NULL;
+            }
+            else if(NULL != this->leftPaddle && eventFirer == ListenerObject::safeCast(this->leftPaddle))
+            {
+                this->leftPaddle = NULL;
+            }
+            else if(NULL != this->rightPaddle && eventFirer == ListenerObject::safeCast(this->rightPaddle))
+            {
+                this->rightPaddle = NULL;
+            }
 
-			return true;
-		}
+            return true;
+        }
 
-		case kEventActorCreated:
-		{
+        case kEventActorCreated:
+        {
             if(__GET_CAST(Disk, eventFirer))
             {
                 if(0 == strcmp(DISK_NAME, Disk::getName(eventFirer)))
                 {
                     this->disk = Disk::safeCast(eventFirer);
-    				Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
+                    Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
                 }
             }
             else if(__GET_CAST(Paddle, eventFirer))
@@ -104,20 +104,20 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
                 if(0 == strcmp(PADDLE_LEFT_NAME, Actor::getName(eventFirer)))
                 {
                     this->leftPaddle = Paddle::safeCast(eventFirer);
-     				Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
-               }
+                    Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
+                }
                 else if(0 == strcmp(PADDLE_RIGHT_NAME, Actor::getName(eventFirer)))
                 {
                     this->rightPaddle = Paddle::safeCast(eventFirer);
-    				Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
+                    Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
                 }
-			}
+            }
 
-			return true;
-		}
-	}
+            return true;
+        }
+    }
 
-	return Base::onEvent(this, eventFirer, eventCode);
+    return Base::onEvent(this, eventFirer, eventCode);
 }
 ```
 
