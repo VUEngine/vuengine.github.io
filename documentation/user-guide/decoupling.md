@@ -111,7 +111,7 @@ void Entity::hide()
 
 ## Events
 
-[ListenerObjects](/documentation/api/class-listener-object/) can listen for events or fire them. This permits the implementation of event driven mutator where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
+[ListenerObjects](/documentation/api/class-listener-object/) can listen for events or fire them. This permits the implementation of event driven behavior where it makes sense to, for example, avoid the need of constantly polling for some condition to happen.
 
 To listen for events, add an event listener to a [ListenerObject](/documentation/api/class-listener-object/):
 

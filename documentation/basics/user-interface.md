@@ -170,7 +170,7 @@ Preview mode is indicated by italics in the Tab heading:
 
 <a href="/documentation/images/basics/user-interface/preview-mode.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/preview-mode.png" width="600" /></a>
 
-If you'd prefer to not use preview mode and always create a new Tab, you can control the mutator with this setting:
+If you'd prefer to not use preview mode and always create a new Tab, you can control the behavior with this setting:
 
 ```json
 "editor.enablePreview": false

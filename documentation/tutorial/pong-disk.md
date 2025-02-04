@@ -6,7 +6,7 @@ title: Pong Disk
 
 # Disk
 
-Lets make the disk to move. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the disk in the `PongState`, or creating an instance of a `Disk` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature. 
+Lets make the disk to move. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the disk in the `PongState`, or creating an instance of a `Disk` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature.
 
 To make the disk to move we have various options: directly manipulate the its transformation or use physic simulations to give it some weight and inertia. Lets do the latter.
 
@@ -24,9 +24,9 @@ With [mutation classes](/documentation/language/custom-features/#mutation-classe
 
 ## Mutators
 
-The [Mutator](/documentation/api/class-mutator/) class is a kind of [Component](/documentation/api/class-component/) that performs the [mutation](/documentation/language/custom-features/#mutation-classes) on [Actors](/documentation/api/class-actor/) without having to do it manually by means of directly calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`. 
+The [Mutator](/documentation/api/class-mutator/) class is a kind of [Component](/documentation/api/class-component/) that performs the [mutation](/documentation/language/custom-features/#mutation-classes) on [Actors](/documentation/api/class-actor/) without having to do it manually by means of directly calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`.
 
-To add a [Mutator](/documentation/api/class-mutator/) to the disk, open the *Disk.actor* editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto generated **DiskActorSpec** (see *assets/Actors/Disk/Converted/DiskActorSpec.c*).
+To add a [Mutator](/documentation/api/class-mutator/) to the disk, open the _Disk.actor_ editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto-generated **DiskActorSpec** (see _assets/Actors/Disk/Converted/DiskActorSpec.c_).
 
 When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration.
 
@@ -54,7 +54,7 @@ MutatorROMSpec DiskMutator1MutatorSpec =
     true
 };
 
-ComponentSpec* const DiskComponentSpecs[] = 
+ComponentSpec* const DiskComponentSpecs[] =
 {
     (ComponentSpec*)&DiskSprite1SpriteSpec,
     (ComponentSpec*)&DiskMutator1MutatorSpec,
@@ -62,11 +62,11 @@ ComponentSpec* const DiskComponentSpecs[] =
 };
 ```
 
-Now, we have to create the `Disk` class. Since it is a mutation target, it has to be a mutation class. 
+Now, we have to create the `Disk` class. Since it is a mutation target, it has to be a mutation class.
 
-To create the `Disk` mutation class, add the folder *source/Actors/Disk* and, in it, a header and an implementation file: *Disk.h* and *Disk.c*.
+To create the `Disk` mutation class, add the folder _source/Actors/Disk_ and, in it, a header and an implementation file: _Disk.h_ and _Disk.c_.
 
-In *Disk.h* lets add the following to declare the new class:
+In _Disk.h_ lets add the following to declare the new class:
 
 ```cpp
 #include <Actor.h>
@@ -104,7 +104,7 @@ void Disk::ready(bool recursive)
 {
     int16 angle = Math::random(Math::randomSeed(), 64) - 32;
 
-    Vector3D velocity = 
+    Vector3D velocity =
     {
         __FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__COS(angle))),
         __FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__SIN(angle))),

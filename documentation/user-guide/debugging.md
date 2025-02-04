@@ -42,7 +42,7 @@ _Exception screen_
 
 When an exception is thrown, you're presented with some output that's meant to help you find the exact location that is causing the crash. Looking for the message in both your game code as well as the engine would be the quickest thing to do but should give you only a rough idea of the problem's root in most cases.
 
-The most important information in the exception screen are the LP and the message. The message usually shows the class and the method where an assertion failed, while the LP value represents the return point in the binary of the code that made the call to method shown by the message. 
+The most important information in the exception screen are the LP and the message. The message usually shows the class and the method where an assertion failed, while the LP value represents the return point in the binary of the code that made the call to method shown by the message.
 
 The LP (linker pointer) value shows you the return point of the function in program where the crash occurred and will lead you to the code that has caused it. By enabling the **Build: Dump Elf** setting, the compiler will produce a file called **machine-{MODE}.asm** in the project's **build/working/** folder. It contains the dissassembled ROM. Search it for the LP value and it will lead you to the faulty function.
 
@@ -63,7 +63,7 @@ In the above example, the call to `BgmapTextureManager::reset` was made from the
  7010e74:   ca 00           mov    r10, r6
  7010e76:   e0 40           mov    0, r7
  7010e78:   00 ac 4c a4     jal    701b2c4 <_BgmapTextureManager_clearBgmapSegment>
- ```
+```
 
 The above reveals that the illegal call is made from `AnimationSchemesState::removeSprites`, which leads to the C code:
 
@@ -72,13 +72,13 @@ void AnimationSchemesState::removeSprites()
 {
     [...]
     /*
-    * Cleaning graphics memory explicitly should not be done in general, the engine takes care of that 
-    * when swapping states. We do it here becuase BGMAP memory cannot be defragmented and loading non 
+    * Cleaning graphics memory explicitly should not be done in general, the engine takes care of that
+    * when swapping states. We do it here becuase BGMAP memory cannot be defragmented and loading non
     * shared textures would quickly deplete it.
     *
-    * BgmapTextureManager::reset call is restricted so, this call will trigger an exception 
+    * BgmapTextureManager::reset call is restricted so, this call will trigger an exception
     * in non release build modes!!!
-    */ 
+    */
     BgmapTextureManager::reset(BgmapTextureManager::getInstance());
     BgmapTextureManager::clearBgmapSegment(BgmapTextureManager::getInstance(), 0);
 }
@@ -99,6 +99,7 @@ NM_ASSERT(!isDeleted(someObject), "ClassName::methodName: someObject is invalid"
 #### Other useful macros
 
 To get the class name of an object, use the following macro:
+
 - `__GET_CLASS_NAME(object)`
 
 Usually, it is used in conjunction with one of the printing macros:
@@ -108,6 +109,7 @@ PRINT_TEXT(__GET_CLASS_NAME(object), 1, 1);
 ```
 
 To up or down cast an object safely, use the macro:
+
 - `__GET_CLASS_NAME(ClassName, object)`
 
 Usually, it is used in conjunction with an assert macro:
@@ -120,7 +122,7 @@ NM_ASSERT(NULL != __GET_CAST(ClassName, object), "ClassName::methodName: object 
 
 #### Initialize everything
 
-One of the most difficult, and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange mutator often are caused by not properly initialized variables. To aid the detection of such mistakes, set `memoryPools.cleanUp` to `true` in `config/Engine.json` to define the `__MEMORY_POOL_CLEAN_UP` macro. This will force the engine to put every memory pool's free block to 0 when the game changes its state, so, if the problem gets solved by defining such macro, the cause is, most likely, an uninitialized variable.
+One of the most difficult, and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange behavior often are caused by not properly initialized variables. To aid the detection of such mistakes, set `memoryPools.cleanUp` to `true` in `config/Engine.json` to define the `__MEMORY_POOL_CLEAN_UP` macro. This will force the engine to put every memory pool's free block to 0 when the game changes its state, so, if the problem gets solved by defining such macro, the cause is, most likely, an uninitialized variable.
 
 #### MemoryPool size
 

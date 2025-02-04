@@ -6,26 +6,20 @@ title: First Steps
 
 # Title Screen
 
-Since here were are developing a Pong game and all games have at least a minimal title screen, it makes sense to rename `MyGameState` as `TitleScreenState` and return it in the `game` function:
+The game we are developing should at least have a minimal title screen, so let's go ahead and rename `MyGameState` to `TitleScreenState`.
 
-```cpp
-[...]
-#include <TitleScreenState.h>
+First, rename the files _source/States/MyGameState/MyGameState.h_ and _source/States/MyGameState/MyGameState.h_, as well as the folder.
 
-GameState game(void)
-{
-    [...]
+<figure>
+    <a href="/documentation/images/tutorial/my-game-state-folders.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState folder">
+        <img src="/documentation/images/tutorial/my-game-state-folders.png" />
+    </a>
+    <figcaption>
+        MyGameState folder
+    </figcaption>
+</figure>
 
-    // Return the first GameState
-    return GameState::safeCast(TitleScreenState::getInstance());
-}
-```
-
-And the same rename will be applied to the files *source/States/MyGameState/MyGameState.h* and *source/States/MyGameState/MyGameState.h*:
-
-<a href="/documentation/images/tutorial/my-game-state-folders.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState folders"><img src="/documentation/images/tutorial/my-game-state-folders.png"/></a>
-
-Then, in the mentioned files, `MyGameState` is replaced by `TitleScreenState`:
+Then, in the mentioned files, all occurences of `MyGameState` must be replaced by `TitleScreenState`.
 
 ```cpp
 singleton class TitleScreenState : GameState
@@ -55,7 +49,22 @@ void TitleScreenState::enter(void* owner __attribute__((unused)))
 [...]
 ```
 
-Finally, we will change the message print to the screen by modifying the method `TitleScreenState::print`:
+Also change the references to `MaGameState` in _source/Game.c_.
+
+```cpp
+[...]
+#include <TitleScreenState.h>
+
+GameState game(void)
+{
+    [...]
+
+    // Return the first GameState
+    return GameState::safeCast(TitleScreenState::getInstance());
+}
+```
+
+Finally, we will change the message printed to the screen by modifying the method `TitleScreenState::print`.
 
 ```cpp
 void TitleScreenState::print()
@@ -70,21 +79,21 @@ The output when the game is rebuilt will be:
 
 <a href="/documentation/images/tutorial/a-pong-clone.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Game Title"><img src="/documentation/images/tutorial/a-pong-clone.png"/></a>
 
-But we can do better and replace that simple text by a nice image instead. To do that, we need to add an [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/) and attach to it a [Sprite](/documentation/api/class-sprite/). Lets see how to do that.
+But we can do better and replace that simple text with a nice image instead. To do that, we need to add an [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/) and attach to it a [Sprite](/documentation/api/class-sprite/). Lets see how to do that.
 
 ## Stage
 
-At this moment, the `TitleScreenState` initializes its [Stage](/documentation/api/class-stage/) with the **MyGameStageSpec**. It is defined in the file *assets/Stages/MyGameStageSpec.c*. We will rename both to **TitleScreentageSpec** and *assets/Stages/TitleScreentageSpec.c* respectively.
+At this moment, the `TitleScreenState` initializes its [Stage](/documentation/api/class-stage/) with the **MyGameStageSpec**. It is defined in the file _assets/Stages/MyGameStageSpec.c_. We will rename both to **TitleScreenStageSpec** and _assets/Stages/TitleScreenStageSpec.c_, respectively.
 
 ### StageSpec
 
-The [Stages](/documentation/api/class-stage/) are created by passing a [StageSpec](/documentation/api/struct-stage-spec/) pointer to [GameState::configureStage](/documentation/api/class-game-state/). A [StageSpec](/documentation/api/struct-stage-spec/) holds all the configuration details to instatiante a [Stage](/documentation/api/class-stage/) and populate it with 
+The [Stages](/documentation/api/class-stage/) are created by passing a [StageSpec](/documentation/api/struct-stage-spec/) pointer to [GameState::configureStage](/documentation/api/class-game-state/). A [StageSpec](/documentation/api/struct-stage-spec/) holds all the configuration details to instatiante a [Stage](/documentation/api/class-stage/) and populate it with
 game [Actors](/documentation/api/class-actor/).
 
-Almost at the end of it, two arrays are referenced, `TitleScreentageUiActors` and `TitleScreentageActors`. These have entries that reference the **ActorSpecs** to use to instantiate and initialize the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/):
+Almost at the end of it, two arrays are referenced, `TitleScreenStageUiActors` and `TitleScreenStageActors`. These have entries that reference the **ActorSpecs** to use to instantiate and initialize the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/):
 
 ```cpp
-StageROMSpec TitleScreentageSpec =
+StageROMSpec TitleScreenStageSpec =
 {
     // Class allocator
     __TYPE(Stage),
@@ -95,12 +104,12 @@ StageROMSpec TitleScreentageSpec =
     {
         // UI configuration
         {
-            (PositionedActor*)TitleScreentageUiActors,
+            (PositionedActor*)TitleScreenStageUiActors,
             __TYPE(UIContainer),
         },
 
         // Stage's children actors
-        (PositionedActor*)TitleScreentageActors,
+        (PositionedActor*)TitleScreenStageActors,
     },
 
     // Post processing effects
@@ -111,20 +120,20 @@ StageROMSpec TitleScreentageSpec =
 Those arrays are very simple right now:
 
 ```cpp
-PositionedActorROMSpec TitleScreentageActors[] =
+PositionedActorROMSpec TitleScreenStageActors[] =
 {
     {&LowPowerIndicatorActorSpec, {0, 12, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 
     {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
 
-PositionedActorROMSpec TitleScreentageUiActors[] =
+PositionedActorROMSpec TitleScreenStageUiActors[] =
 {
     {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
 ```
 
-When [TitleScreenState::configureStage](/documentation/api/class-game-state/) is called with **TitleScreentageSpec** as one of its arguments, an [Actor](/documentation/api/class-actor/) will be created with the **LowPowerIndicatorActorSpec**.
+When [TitleScreenState::configureStage](/documentation/api/class-game-state/) is called with **TitleScreenStageSpec** as one of its arguments, an [Actor](/documentation/api/class-actor/) will be created with the **LowPowerIndicatorActorSpec**.
 
 The `LowPowerIndicatorActor` is provided by the Low Power Indicator plugin. Although it is not explicitly added to the template project, it is implicitly so by the Adjustment Screen plugin, which is included in it:
 
@@ -134,7 +143,7 @@ The `LowPowerIndicatorActor` only shows when the battery's power is low, but thi
 
 <a href="/documentation/images/tutorial/low-power-indicator.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Low Power Indicator"><img src="/documentation/images/tutorial/low-power-indicator.png" /></a>
 
-The entry for the low power indicator in the `TitleScreentageActors` array not only references the **LowPowerIndicatorActorSpec**, but specifies a transformation: position, rotation and scale. The center of the screen is at the coordinates (0, 0, 0), so, since the Virtual Boy's screen is 384 pixels wide and 224 pixels tall, to make the indicator to show at the left-bottom corner, we can modify the coordinates to (-192, 112, 0):
+The entry for the low power indicator in the `TitleScreenStageActors` array not only references the **LowPowerIndicatorActorSpec**, but specifies a transformation: position, rotation and scale. The center of the screen is at the coordinates (0, 0, 0), so, since the Virtual Boy's screen is 384 pixels wide and 224 pixels tall, to make the indicator to show at the left-bottom corner, we can modify the coordinates to (-192, 112, 0):
 
 ```cpp
     {&LowPowerIndicatorActorSpec, {-192, 112, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
@@ -164,23 +173,23 @@ We will use the following image to replace the text:
 
 <a href="/documentation/images/tutorial/pong-logo.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Logo"><img src="/documentation/images/tutorial/pong-logo.png" /></a>
 
-To do so, create the folder *assets/Actors/Logo* and add an *.actor* file in it by right clicking the *Logo* folder and selecting "New File":
+To do so, create the folder _assets/Actors/Logo_ and add an _.actor_ file in it by right clicking the _Logo_ folder and selecting "New File". Enter "Logo" as the file name and select the Type "Actor" on the right hand side dropdown.
 
 <a href="/documentation/images/tutorial/new-actor-file.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Actor file"><img src="/documentation/images/tutorial/new-actor-file.png" /></a>
 
-It will open the *.actor* file editor with a single button that reads "Add Component". Click it and select "Sprite" from the drop down menu. It will show the "Sprite" editor:
+Our newly created file, _Logo.actor_ will automatically be opened and you will see an empty editor with a single button that reads "Add Component". Click it and select "Sprite" from the drop down menu. The newly added "Sprite" component will automatically be selected and an editor panel for that component shown on the right hand side.
 
 <a href="/documentation/images/tutorial/new-sprite-component.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Sprite Component"><img src="/documentation/images/tutorial/new-sprite-component.png" /></a>
 
-In it, an image can be added by clicking the "Source Image" box at the top. Once a file has been selected, the image will be loaded in the editor:
+In that panel, an image can be added by clicking the "Source Image" box at the top. Once a file has been selected, a preview of the Sprite will be visible in the editor.
 
 <a href="/documentation/images/tutorial/pong-sprite.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Sprite"><img src="/documentation/images/tutorial/pong-sprite.png" /></a>
 
-Behind the scenes, the IDE will generate the **LogoSpec** file with all the **Spec** to add the logo [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/):
+Behind the scenes, VUEngine Studio will generate the file _Converted/LogoActorSpec.c_ next to our _Logo.actor_ file, containing the necessary **Spec**(s) to add our logo [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/).
 
 <a href="/documentation/images/tutorial/logo-actor-spec.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Logo Actor Spec"><img src="/documentation/images/tutorial/logo-actor-spec.png" /></a>
 
-We are finally ready to replace the text with a nice image. To do that, **LogoActorSpec** has to be added to the `TitleScreentageActors` array in *assets/Stages/MyGameStageSpec.c*:
+We are finally ready to replace the text with a nice image. To do so, **LogoActorSpec** has to be added to the `TitleScreenStageActors` array in the file _assets/Stages/MyGameStageSpec.c_.
 
 ```cpp
 [...]
@@ -197,10 +206,8 @@ PositionedActorROMSpec TitleScreenStageActors[] =
 [...]
 ```
 
-Finally, remove the call to `TitleScreenState::print` from `TitleScreenState::enter`.
-
-When build and run, the image will show up in the emulator's screen:
+Finally, remove the call to `TitleScreenState::print` from the `TitleScreenState::enter` method. After another round of build and run, the image will show up in the emulator.
 
 <a href="/documentation/images/tutorial/title-screen.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Title Screen"><img src="/documentation/images/tutorial/title-screen.png" /></a>
 
-
+We can now [add another custom GameState](/documentation/tutorial/pong-game-state/), this time one that will hold the actual Pong game.

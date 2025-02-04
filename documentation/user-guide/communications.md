@@ -19,7 +19,7 @@ void SomeClass::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataByt
 
     /*
     * Data will be sent sychroniously. This means that if the cable is disconnected during
-    * transmission, the mutator is undefined.
+    * transmission, the behavior is undefined.
     */
     do
     {

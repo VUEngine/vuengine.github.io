@@ -62,7 +62,7 @@ virtual void resume(void* owner);
 
 Through the life of a program, the [VUEngine](/documentation/api/class-v-u-engine/) instance will enter different [GameStates](/documentation/api/class-game-state/), each representing a screen that is presented to the user for him to interact with.
 
-[StateMachines](/documentation/api/class-state-machine/) can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-v-u-engine/) class. [Actors](/documentation/api/class-actor/), which are used to implement enemies, vehicles, etc., can use [StateMachines](/documentation/api/class-state-machine/) to define the logic that drives their mutator with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
+[StateMachines](/documentation/api/class-state-machine/) can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-v-u-engine/) class. [Actors](/documentation/api/class-actor/), which are used to implement enemies, vehicles, etc., can use [StateMachines](/documentation/api/class-state-machine/) to define the logic that drives their behavior with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
 
 ## Components
 
@@ -136,7 +136,7 @@ BgmapSpriteROMSpec SomeSpriteSpec =
             },
 
             // Array of function animations
-            NULL 
+            NULL
         },
 
         // Spec for the texture to display

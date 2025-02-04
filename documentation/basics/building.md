@@ -108,7 +108,7 @@ Normally, you'll work in **Beta** mode, which includes a selected set of debug a
 
 ### Debug
 
-In this mode, the produced ROM will contain all the safety checks that the engine implements with the aim to prevent undefined mutator caused by passing around invalid pointers.
+In this mode, the produced ROM will contain all the safety checks that the engine implements with the aim to prevent undefined behavior caused by passing around invalid pointers.
 
 The calls to `SomeClass::safeCast` will be internally converted into a call to `Object::getCast`, which will perform a RTTI check on the provided pointer to ensure that it is an instance of the intended class.
 
