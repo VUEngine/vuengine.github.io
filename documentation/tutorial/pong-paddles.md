@@ -47,22 +47,9 @@ And propagate the appropriate message according to the user input:
 ```cpp
 void PongState::processUserInput(const UserInput* userInput)
 {
-    if(K_LU & userInput->holdKey)
+    if(0 != userInput->holdKey)
     {
-        PongState::propagateMessage(this, kMessageKeypadHoldLeftUp);
-    }
-    else if(K_LD & userInput->holdKey)
-    {
-        PongState::propagateMessage(this, kMessageKeypadHoldLeftDown);
-    }
-
-    if(K_RU & userInput->holdKey)
-    {
-        PongState::propagateMessage(this, kMessageKeypadHoldRightUp);
-    }
-    else if(K_RD & userInput->holdKey)
-    {
-        PongState::propagateMessage(this, kMessageKeypadHoldRightDown);
+        PongState::propagateMessage(this, kMessageKeypadHoldDown);
     }
 }
 ```
@@ -155,50 +142,60 @@ Another type of [Component](/documentation/api/class-component/) that can be eas
 Finally, we are able to move the paddles. In the iplementation of `Paddle::handlePropagatedMessage`, add the following:
 
 ```cpp
-#include <Body.h>
+[...]
+
+#include <KeypadManager.h>
 #include <Messages.h>
 
 [...]
 
 bool Paddle::handlePropagatedMessage(int32 message)
 {
-    NormalizedDirection normalizedDirection = {0, 0, 0};
-
-    if(this->transformation.position.x < 0)
+    switch(message)
     {
-        switch(message)
+        case kMessageKeypadHoldDown:
         {
-            case kMessageKeypadHoldLeftUp:
+            NormalizedDirection normalizedDirection = {0, 0, 0};
+
+            UserInput userInput = KeypadManager::getUserInput();
+
+            if(this->transformation.position.x < 0)
             {
-                normalizedDirection.y = __UP;
-                break;
+                if(0 != (K_LU & userInput.holdKey))
+                {
+                    normalizedDirection.y = __UP;
+                }
+                else if(0 != (K_LD & userInput.holdKey))
+                {
+                    normalizedDirection.y = __DOWN;
+                } 
+            }
+            else
+            {
+                if(0 != (K_RU & userInput.holdKey))
+                {
+                    normalizedDirection.y = __UP;
+                }
+                else if(0 != (K_RU & userInput.holdKey))
+                {
+                    normalizedDirection.y = __DOWN;
+                } 
             }
 
-            case kMessageKeypadHoldLeftDown:
+            if(0 != normalizedDirection.y)
             {
-                normalizedDirection.y = __DOWN;
-                break;
+                Paddle::moveTowards(this, normalizedDirection);
             }
+
+            break;
         }
     }
-    else
-    {
-        switch(message)
-        {
-            case kMessageKeypadHoldRightUp:
-            {
-                normalizedDirection.y = __UP;
-                break;
-            }
 
-            case kMessageKeypadHoldRightDown:
-            {
-                normalizedDirection.y = __DOWN;
-                break;
-            }
-        }
-    }
+    return false;
+}
 
+void Paddle::moveTowards(NormalizedDirection normalizedDirection)
+{
     if(isDeleted(this->body))
     {
         return;
@@ -213,14 +210,12 @@ bool Paddle::handlePropagatedMessage(int32 message)
             (
                 Body::getMass(this->body), Body::getMaximumSpeed(this->body)
             ),
-            __I_TO_FIX10_6(direction.y)
+            __I_TO_FIX10_6(normalizedDirection.y)
         ),
         0
     };
 
     Paddle::applyForce(this, &force, true);
-
-    return false;
 }
 ```
 
