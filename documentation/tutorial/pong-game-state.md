@@ -61,11 +61,11 @@ void PongState::enter(void* owner __attribute__((unused)))
     Camera::startEffect
     (
         Camera::getInstance(),
-        kFadeTo,	   // effect type
-        0,			   // initial delay (in ms)
-        NULL,		   // target brightness
-        __FADE_DELAY,  // delay between fading steps (in ms)
-        NULL		   // callback scope
+        kFadeTo,        // effect type
+        0,              // initial delay (in ms)
+        NULL,           // target brightness
+        __FADE_DELAY,   // delay between fading steps (in ms)
+        NULL            // callback scope
     );
 }
 ```
@@ -165,15 +165,15 @@ void PongState::enter(void* owner __attribute__((unused)))
     Base::enter(this, owner);
 
     // Start fade in effect
-	Camera::startEffect(Camera::getInstance(), kHide);
+    Camera::startEffect(Camera::getInstance(), kHide);
     Camera::startEffect
     (
         Camera::getInstance(),
-        kFadeTo,	   // effect type
-        0,			   // initial delay (in ms)
-        NULL,		   // target brightness
+        kFadeTo,       // effect type
+        0,             // initial delay (in ms)
+        NULL,          // target brightness
         __FADE_DELAY,  // delay between fading steps (in ms)
-        NULL		   // callback scope
+        NULL           // callback scope
     );
 }
 ```
@@ -192,11 +192,11 @@ extern ActorSpec PaddleActorSpec;
 [...]
 
 PositionedActorROMSpec PongStageActors[] =
-{	
-    {&DiskActorSpec, 				{0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&PaddleActorSpec, 				{-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&PaddleActorSpec, 				{180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&LowPowerIndicatorActorSpec, 	{-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+{
+    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&PaddleActorSpec,              {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&PaddleActorSpec,              {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 
     {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
@@ -207,22 +207,22 @@ Now that the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it has
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
 {
-	Base::enter(this, owner);
+    Base::enter(this, owner);
 
-	// Load stage
-	PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
+    // Load stage
+    PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
 
-	// Start fade in effect
-	Camera::startEffect(Camera::getInstance(), kHide);
-	Camera::startEffect
-	(
-		Camera::getInstance(),
-		kFadeTo,	   // effect type
-		0,			   // initial delay (in ms)
-		NULL,		   // target brightness
-		__FADE_DELAY,  // delay between fading steps (in ms)
-		NULL		   // callback scope
-	);
+    // Start fade in effect
+    Camera::startEffect(Camera::getInstance(), kHide);
+    Camera::startEffect
+    (
+        Camera::getInstance(),
+        kFadeTo,       // effect type
+        0,             // initial delay (in ms)
+        NULL,          // target brightness
+        __FADE_DELAY,  // delay between fading steps (in ms)
+        NULL           // callback scope
+    );
 }
 ```
 

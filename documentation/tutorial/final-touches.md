@@ -63,19 +63,19 @@ And the implementation should be like the following:
 
 bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 {
-	Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
+    Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
 
-	switch(Entity::getInGameType(collidingEntity))
-	{
-		case kTypePaddle:
-		case kTypeWall:
-		{
-			SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
-		}
-		break;
-	}
+    switch(Entity::getInGameType(collidingEntity))
+    {
+        case kTypePaddle:
+        case kTypeWall:
+        {
+            SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
+        }
+        break;
+    }
 
-	return Base::collisionStarts(this, collisionInformation);
+    return Base::collisionStarts(this, collisionInformation);
 }
 ```
 
@@ -106,7 +106,7 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
             if(NULL != __GET_CAST(Disk, eventFirer))
             {
                 SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
-    			RumbleManager::startEffect(&BounceRumbleEffectSpec);
+                RumbleManager::startEffect(&BounceRumbleEffectSpec);
 
     [...]
 }

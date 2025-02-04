@@ -73,11 +73,11 @@ Lately, we have been changing the engine to fully embrace composition over inher
 /// @memberof Component
 enum ComponentTypes
 {
-	kSpriteComponent = 0,
-	kColliderComponent,
-	kPhysicsComponent,
-	kWireframeComponent,
-	kMutatorComponent,
+    kSpriteComponent = 0,
+    kColliderComponent,
+    kPhysicsComponent,
+    kWireframeComponent,
+    kMutatorComponent,
 
     // Limmiter
     kComponentTypes,

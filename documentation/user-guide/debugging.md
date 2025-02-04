@@ -51,18 +51,18 @@ The SP (stack pointer) value becomes useful in the case of a stack overflow. By 
 In the above example, the call to `BgmapTextureManager::reset` was made from the code address **0x7010E6E**. Looking for that address in the disassembled code will reveal which part of the program tried to illegally call the method:
 
 ```cpp
- 7010e58:	aa 94       	bne	7010f02 <_AnimationSchemesState_removeSprites+0xea>
- 7010e5a:	a0 bf 01 07 	movhi	1793, r0, r29
- 7010e5e:	bd a3 cc f6 	movea	-2356, r29, r29
- 7010e62:	dd 00       	mov	r29, r6
- 7010e64:	00 ac f4 a3 	jal	701b258 <_BgmapTextureManager_getInstance>
- 7010e68:	ca 00       	mov	r10, r6
- 7010e6a:	00 ac 9e a0 	jal	701af08 <_BgmapTextureManager_reset>
- 7010e6e:	dd 00       	mov	r29, r6
- 7010e70:	00 ac e8 a3 	jal	701b258 <_BgmapTextureManager_getInstance>
- 7010e74:	ca 00       	mov	r10, r6
- 7010e76:	e0 40       	mov	0, r7
- 7010e78:	00 ac 4c a4 	jal	701b2c4 <_BgmapTextureManager_clearBgmapSegment>
+ 7010e58:   aa 94           bne    7010f02 <_AnimationSchemesState_removeSprites+0xea>
+ 7010e5a:   a0 bf 01 07     movhi    1793, r0, r29
+ 7010e5e:   bd a3 cc f6     movea    -2356, r29, r29
+ 7010e62:   dd 00           mov    r29, r6
+ 7010e64:   00 ac f4 a3     jal    701b258 <_BgmapTextureManager_getInstance>
+ 7010e68:   ca 00           mov    r10, r6
+ 7010e6a:   00 ac 9e a0     jal    701af08 <_BgmapTextureManager_reset>
+ 7010e6e:   dd 00           mov    r29, r6
+ 7010e70:   00 ac e8 a3     jal    701b258 <_BgmapTextureManager_getInstance>
+ 7010e74:   ca 00           mov    r10, r6
+ 7010e76:   e0 40           mov    0, r7
+ 7010e78:   00 ac 4c a4     jal    701b2c4 <_BgmapTextureManager_clearBgmapSegment>
  ```
 
 The above reveals that the illegal call is made from `AnimationSchemesState::removeSprites`, which leads to the C code:

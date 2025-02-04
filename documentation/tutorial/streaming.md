@@ -69,28 +69,28 @@ And in its implementation, we process both events as follows:
 ```cpp
 bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uint16 eventCode)
 {
-	switch(eventCode)
-	{
-		case kEventActorDeleted:
-		{
+    switch(eventCode)
+    {
+        case kEventActorDeleted:
+        {
             if(__GET_CAST(Disk, eventFirer))
-			{
-				if(0 < Disk::getPosition(eventFirer)->x)
-				{
-					this->leftScore++;
-				}
-				else
-				{
-					this->rightScore++;
-				}
+            {
+                if(0 < Disk::getPosition(eventFirer)->x)
+                {
+                    this->leftScore++;
+                }
+                else
+                {
+                    this->rightScore++;
+                }
 
-				PongManager::printScore(this);
-			}
+                PongManager::printScore(this);
+            }
 
-			if(NULL != this->disk && eventFirer == ListenerObject::safeCast(this->disk))
-			{
-				this->disk = NULL;
-			}
+            if(NULL != this->disk && eventFirer == ListenerObject::safeCast(this->disk))
+            {
+                this->disk = NULL;
+            }
             else if(NULL != this->leftPaddle && eventFirer == ListenerObject::safeCast(this->leftPaddle))
             {
                 this->leftPaddle = NULL;

@@ -153,7 +153,7 @@ void PongState::exit(void* owner __attribute__((unused)))
     if(!isDeleted(this->pongManager))
     {
         delete this->pongManager;
-    }	
+    }
 
     this->pongManager = NULL;
 
@@ -236,26 +236,26 @@ Finally, we are able to move the paddles. In the iplementation of `Paddle::moveT
 
 void Paddle::moveTowards(NormalizedDirection direction)
 {
-	if(isDeleted(this->body))
-	{
-		return;
-	}
+    if(isDeleted(this->body))
+    {
+        return;
+    }
 
-	Vector3D force = 
-	{
-		0,
-		__FIX10_6_MULT
-		(
-			__FIXED_MULT
-			(
-				Body::getMass(this->body), Body::getMaximumSpeed(this->body)
-			),
-			__I_TO_FIX10_6(direction.y)
-		),
-		0
-	};
+    Vector3D force = 
+    {
+        0,
+        __FIX10_6_MULT
+        (
+            __FIXED_MULT
+            (
+                Body::getMass(this->body), Body::getMaximumSpeed(this->body)
+            ),
+            __I_TO_FIX10_6(direction.y)
+        ),
+        0
+    };
 
-	Paddle::applyForce(this, &force, true);
+    Paddle::applyForce(this, &force, true);
 }
 ```
 

@@ -419,34 +419,34 @@ To load all the maps for all the animation frames of an animation in BGMAP memor
 ```cpp
 TextureROMSpec ActorMultiframeTextureSpec =
 {
-	(CharSetSpec*)&ActorMultiframeCharsetSpec,
+    (CharSetSpec*)&ActorMultiframeCharsetSpec,
 
-	// Pointer to the map array that defines how to use the tiles from the char set
-	Map,
+    // Pointer to the map array that defines how to use the tiles from the char set
+    Map,
 
-	// Horizontal size in tiles of the texture (max. 64)
-	4,
+    // Horizontal size in tiles of the texture (max. 64)
+    4,
 
-	// Vertical size in tiles of the texture (max. 64)
-	6,
+    // Vertical size in tiles of the texture (max. 64)
+    6,
 
-	// Padding added to the size for affine/hbias transformations (cols, rows)
-	{0, 0},
+    // Padding added to the size for affine/hbias transformations (cols, rows)
+    {0, 0},
 
-	// Number of frames that the texture supports
-	12,
+    // Number of frames that the texture supports
+    12,
 
-	// Palette index to use by the graphical data (0 - 3)
-	0,
+    // Palette index to use by the graphical data (0 - 3)
+    0,
 
-	// Flag to recyble the texture with a different map
-	false,
+    // Flag to recyble the texture with a different map
+    false,
 
-	// Flag to vertically flip the image
-	false,
+    // Flag to vertically flip the image
+    false,
 
-	// Flag to horizontally flip the image
-	false,
+    // Flag to horizontally flip the image
+    false,
 };
 ```
 
