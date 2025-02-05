@@ -12,7 +12,6 @@ Lets add a `PongManager` class that will handle the game's logic. At minimum, it
 
 ```cpp
 #include <PongManager.h>
-#include <Printer.h>
 
 [...]
 
@@ -87,15 +86,9 @@ void PongState::constructor()
 The `PongManager` class will be very simple. Appart from receiving in its constructor the `PongState`'s [Stage](/documentation/api/class-stage/) instance so it can retrieve the disk to know when it gets out of the screen, it will have a couple of attributes to keep track of the score:
 
 ```cpp
-#include <KeypadManager.h>
 #include <ListenerObject.h>
 #include <Stage.h>
 
-/// Class PongManager
-///
-/// Inherits from ListenerObject
-///
-/// Implements the logic of a simple pong game.
 class PongManager : ListenerObject
 {
 	/// @privatesection
@@ -114,7 +107,7 @@ class PongManager : ListenerObject
 }
 ```
 
-In the constructor's implementation, it will retrieve the the disk by calling [Stage::getChildByName](/documentation/api/class-stage/) and passing to it the name of the [Actor](/documentation/api/class-actor/) that we are interested in:
+In the constructor's implementation, initialize the variables for the score:
 
 ```cpp
 #include "PongManager.h"
@@ -124,22 +117,16 @@ void PongManager::constructor(Stage stage)
     // Always explicitly call the base's constructor
     Base::constructor();
 
-	this->leftScore = 0;
-	this->rightScore = 0;
+    this->leftScore = 0;
+    this->rightScore = 0;
 
-	PongManager::printScore(this);
+    PongManager::printScore(this);
+}
 
-    if(!isDeleted(stage))
-    {
-        Actor disk = Actor::safeCast(Stage::getChildByName(stage, (char*)"Disk", false));
-
-        if(!isDeleted(disk))
-        {
-            Actor::addEventListener(disk, ListenerObject::safeCast(this), kEventActorDeleted);
-        }
-
-        Stage::addActorLoadingListener(stage, ListenerObject::safeCast(this));
-    }
+void PongManager::destructor()
+{
+    // Always explicitly call the base's destructor
+    Base::destructor();
 }
 
 [...]
@@ -149,22 +136,6 @@ void PongManager::printScore()
 	Printer::int32(this->leftScore, 24 - 3, 0, NULL);
 	Printer::int32(this->rightScore, 24 + 3, 0, NULL);
 }
-```
-
-But the [Actor](/documentation/api/class-actor/) has not been named yet. To do so, lets head back to the *PongStageSpec.c* file and name the [ActorSpecs](/documentation/api/struct-actor-spec/):
-
-```cpp
-PositionedActorROMSpec PongStageActors[] =
-{
-    {&DiskActorSpec,                {0, 0, 0},      {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
-    {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&WallActorSpec,                {0, -120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&WallActorSpec,                {0, 120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-
-    {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-};
 ```
 
 ## Streaming
@@ -180,6 +151,11 @@ void PongManager::constructor(Stage stage)
 {
     // Always explicitly call the base's constructor
     Base::constructor();
+
+    this->leftScore = 0;
+    this->rightScore = 0;
+
+    PongManager::printScore(this);
 
     if(!isDeleted(stage))
     {
@@ -264,6 +240,10 @@ We already put in place the code to print the score by implementing `PongManager
 The [Printer](/documentation/api/class-printer/) fires the `kEventFontRewritten` when its [CharSets](/documentation/api/class-char-set/) get defragmented. So, we just need to listen for it and react appropriately:
 
 ```cpp
+#include <Printer.h>
+
+[...]
+
 void PongManager::constructor(Stage stage)
 {
     [...]

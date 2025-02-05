@@ -130,6 +130,7 @@ Now, we need a [StageSpec](/documentation/api/struct-stage-spec/) for the `PongS
 ```cpp
 [...]
 
+extern ActorSpec DiskActorSpec;
 extern ActorSpec PaddleActorSpec;
 
 [...]
@@ -145,7 +146,7 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-Since the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to `PongState::configureStage`(/documentation/api/class-game-state/):
+Since the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to [PongState::configureStage](/documentation/api/class-game-state/):
 
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
@@ -154,6 +155,45 @@ void PongState::enter(void* owner __attribute__((unused)))
 
     // Load stage
     PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
+
+    PongState::startClocks(this);
+
+    KeypadManager::enable();
+}
+```
+
+Don't forget to override the method in the header file:
+
+```cpp
+singleton class PongState : GameState
+{
+    /// @protectedsection
+
+    /// @publicsection
+
+    /// Method to GameSaveDataManager the singleton instance
+    /// @return AnimationSchemesState singleton
+    static PongState getInstance();
+
+    /// Prepares the object to enter this state.
+    /// @param owner: Object that is entering in this state
+    override void enter(void* owner);
+}
+```
+
+And to add a constructor and destructor to the `PongState`'s implementation:
+
+```cpp
+void PongState::constructor()
+{
+    // Always explicitly call the base's constructor
+    Base::constructor();
+}
+
+void PongState::destructor()
+{
+    // Always explicitly call the base's destructor
+    Base::destructor();
 }
 ```
 

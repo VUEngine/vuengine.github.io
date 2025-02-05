@@ -32,22 +32,7 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 }
 ```
 
-To play a sound effect when the disk hits a paddle or a wall, the `Disk` class has to override the [Entity::collisionStarts](/documentation/api/class-entity/):
-
-```cpp
-mutation class Disk : Actor
-{
-    /// Process a newly detected collision by one of the component colliders.
-    /// @param collisionInformation: Information struct about the collision to resolve
-    /// @return True if the collider must keep track of the collision to detect if it persists and when it
-    /// ends; false otherwise
-    override bool collisionStarts(const CollisionInformation* collisionInformation);
-
-    [...]
-}
-```
-
-And the implementation should be like the following:
+To play a sound effect when the disk hits a paddle or a wall, the code should be like the following:
 
 ```cpp
 #include <SoundManager.h>
@@ -59,19 +44,28 @@ And the implementation should be like the following:
 
 bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 {
-    Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
+    [...]
 
     switch(Entity::getInGameType(collidingEntity))
     {
         case kTypePaddle:
+        {
+            Vector3D velocity = *Body::getVelocity(this->body);
+
+            fixed_t yDisplacement = this->transformation.position.y - Entity::getPosition(collidingEntity)->y;
+
+            velocity.y += yDisplacement;
+
+            Body::setVelocity(this->body, &velocity);
+        }
+        // Intended fall through
+
         case kTypeWall:
         {
             SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
         }
         break;
     }
-
-    return Base::collisionStarts(this, collisionInformation);
 }
 ```
 
@@ -122,18 +116,18 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 {
     [...]
 
-    Entity collidingEntity = Collider::getOwner(collisionInformation->otherCollider);
-
     switch(Entity::getInGameType(collidingEntity))
     {
         case kTypePaddle:
+        [...]
+        // Intended fall through
+
         case kTypeWall:
         {
             SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
             RumbleManager::startEffect(&BounceRumbleEffectSpec);
         }
         break;
-
-    [...]
+    }
 }
 ```

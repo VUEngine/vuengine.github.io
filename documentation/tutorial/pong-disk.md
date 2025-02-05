@@ -57,6 +57,7 @@ MutatorROMSpec DiskMutator1MutatorSpec =
 ComponentSpec* const DiskComponentSpecs[] =
 {
     (ComponentSpec*)&DiskSprite1SpriteSpec,
+    (ComponentSpec*)&DiskBodySpec,
     (ComponentSpec*)&DiskMutator1MutatorSpec,
     NULL
 };
@@ -82,7 +83,9 @@ mutation class Disk : Actor
 
 So, the way in which the engine tells the game that an [Actor](/documentation/api/class-actor/) has been completely configured and can be manipulated is through the call to the [Container::ready](/documentation/api/class-container/) virtual method.
 
-Therefore, to make the disk to move, we override the `ready` method and implement the necessary logic there, making the direction of the movement random each time the disk is ready:
+Create a _source/Actors/Disk_ folder and in it _Disk.h_ and _Disk.c_.
+
+To make the disk to move, we override the `ready` method and implement the necessary logic there, making the direction of the movement random each time the disk is ready:
 
 ```cpp
 #include <Actor.h>
@@ -100,8 +103,25 @@ mutation class Disk : Actor
 Finally, in the implementation of the method, set the velocity of the `Disk` instance as shown below:
 
 ```cpp
+#include <Body.h>
+
+#include "Disk.h"
+
+[...]
+
+mutation class Disk;
+
+[...]
+
 void Disk::ready(bool recursive)
 {
+    Base::ready(this, recursive);
+    
+    if(isDeleted(this->body))
+    {
+        return;
+    }
+
     int16 angle = Math::random(Math::randomSeed(), 64) - 32;
 
     Vector3D velocity =

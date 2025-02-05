@@ -27,7 +27,7 @@ extern ActorSpec PlayerPaddleActorSpec;
 
 PositionedActorROMSpec PongStageActors[] =
 {	
-    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
+    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
@@ -64,12 +64,6 @@ First, lets create the messages. To do that, right click the *config* folder and
 In the `PongState`'s declaration, override the `processUserInput` method:
 
 ```cpp
-[...]
-
-#include <PongManager.h>
-
-[...]
-
 singleton class PongState : GameState
 {
     /// @publicsection
@@ -89,6 +83,10 @@ singleton class PongState : GameState
 And propagate the appropriate message according to the user input:
 
 ```cpp
+#include <Messages.h>
+
+[...]
+
 void PongState::processUserInput(const UserInput* userInput)
 {
     if(0 != userInput->holdKey)
@@ -194,7 +192,7 @@ extern ActorSpec AIPaddleActorSpec;
 
 PositionedActorROMSpec PongStageActors[] =
 {	
-    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
+    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
@@ -222,6 +220,12 @@ mutation class AIPaddle : Actor
 The implementation will be very simple. Retrieve a reference to the `Disk` instance through the whole [Stage](/documentation/api/class-stage/) by calling `AIPaddle::getRelativeByName`, and checking the disk's position over the Y axis and apply a force to the `AIPaddle` to catch up with it:
 
 ```cpp
+#include <Body.h>
+
+#include "AIPaddle.h"
+
+[...]
+
 mutation class AIPaddle;
 
 void AIPaddle::update()
@@ -251,6 +255,20 @@ void AIPaddle::update()
         }
     }
 }
+```
+
+But the [Actor](/documentation/api/class-actor/) has not been named yet. To do so, lets head back to the *PongStageSpec.c* file and name the [ActorSpecs](/documentation/api/struct-actor-spec/):
+
+```cpp
+PositionedActorROMSpec PongStageActors[] =
+{
+    {&DiskActorSpec,                {0, 0, 0},      {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
+    {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+
+    {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+};
 ```
 
 When running the game, both paddles will work as they should.

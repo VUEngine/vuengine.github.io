@@ -32,7 +32,7 @@ The Disk's [Collider](/documentation/api/class-collider/) configuration should l
 
 <a href="/documentation/images/tutorial/disk-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk collider"><img src="/documentation/images/tutorial/disk-collider.png" /></a>
 
-And the Paddles' should be configured as follows:
+And the paddles' should be configured as follows:
 
 <a href="/documentation/images/tutorial/paddle-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle collider"><img src="/documentation/images/tutorial/paddle-collider.png" /></a>
 
@@ -75,9 +75,9 @@ extern ActorSpec WallActorSpec;
 
 PositionedActorROMSpec PongStageActors[] =
 {
-    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
-    {&PaddleActorSpec,              {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, PADDLE_LEFT_NAME, NULL, NULL, false},
-    {&PaddleActorSpec,              {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, PADDLE_RIGHT_NAME, NULL, NULL, false},
+    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&WallActorSpec,                {0, -120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&WallActorSpec,                {0, 120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
@@ -92,9 +92,26 @@ We now have a basic Pong clone!
 
 ## Improving the disk's behavior
 
-The Pong's disk reaction is not very interesting at the moment. We can improve it by artificially modifying its vertical speed in function of the collision point in relation go the paddle:
+The Pong's disk reaction is not very interesting at the moment. We can improve it by artificially modifying its vertical speed in function of the collision point in relation go the paddle. To do so, in the `Disk` class, override the [Entity::collisionStarts](/documentation/api/class-entity/):
 
 ```cpp
+mutation class Disk : Actor
+{
+    /// Process a newly detected collision by one of the component colliders.
+    /// @param collisionInformation: Information struct about the collision to resolve
+    /// @return True if the collider must keep track of the collision to detect if it persists and when it
+    /// ends; false otherwise
+    override bool collisionStarts(const CollisionInformation* collisionInformation);
+
+    [...]
+}
+```
+
+```cpp
+#include <InGameTypes.h>
+
+[...]
+
 bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 {
     bool returnValue = Base::collisionStarts(this, collisionInformation);
