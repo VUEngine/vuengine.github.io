@@ -24,7 +24,7 @@ permalink: documentation/api/class-bgmap-texture-manager/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BgmapTextureManager:</div>
 <div class="dyncontent">
@@ -40,47 +40,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab16a09df4f905e3827aec5ccb378227e" id="r_ab16a09df4f905e3827aec5ccb378227e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16a09df4f905e3827aec5ccb378227e">reset</a> ()</td></tr>
 <tr class="memdesc:ab16a09df4f905e3827aec5ccb378227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
 
-<tr class="memitem:a267352fb1c76001a93b8c09815d50fec" id="r_a267352fb1c76001a93b8c09815d50fec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a267352fb1c76001a93b8c09815d50fec">clearBgmapSegment</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> segment)</td></tr>
+<tr class="memitem:a1b04fd2fb1d3c69ad9bb9a5abbe401f7" id="r_a1b04fd2fb1d3c69ad9bb9a5abbe401f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b04fd2fb1d3c69ad9bb9a5abbe401f7">clearDRAM</a> ()</td></tr>
+<tr class="memdesc:a1b04fd2fb1d3c69ad9bb9a5abbe401f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the contents of BGMAP memory space.  <br /></td></tr>
 
-<tr class="memitem:a83c6cb4981398c6877f1eb98842bcbfb" id="r_a83c6cb4981398c6877f1eb98842bcbfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83c6cb4981398c6877f1eb98842bcbfb">configure</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> paramTableBase)</td></tr>
+<tr class="memitem:a28879fad1533e65b9055bd532ce69166" id="r_a28879fad1533e65b9055bd532ce69166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28879fad1533e65b9055bd532ce69166">updateTextures</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> maximumTextureRowsToWrite, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> defer)</td></tr>
 
-<tr class="memitem:a5fd3446024a5625af67228cfb440613f" id="r_a5fd3446024a5625af67228cfb440613f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fd3446024a5625af67228cfb440613f">getAvailableBgmapSegmentsForTextures</a> ()</td></tr>
+<tr class="memitem:a267352fb1c76001a93b8c09815d50fec" id="r_a267352fb1c76001a93b8c09815d50fec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a267352fb1c76001a93b8c09815d50fec">clearBgmapSegment</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> segment)</td></tr>
 
-<tr class="memitem:a3d4dda6a6728d0f8b1fa2a1f2c924f37" id="r_a3d4dda6a6728d0f8b1fa2a1f2c924f37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4dda6a6728d0f8b1fa2a1f2c924f37">getPrintingBgmapSegment</a> ()</td></tr>
+<tr class="memitem:a83c6cb4981398c6877f1eb98842bcbfb" id="r_a83c6cb4981398c6877f1eb98842bcbfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83c6cb4981398c6877f1eb98842bcbfb">configure</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> paramTableBase)</td></tr>
 
-<tr class="memitem:a8c02d9952d6e2d7675e055e24e9115e1" id="r_a8c02d9952d6e2d7675e055e24e9115e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c02d9952d6e2d7675e055e24e9115e1">loadTextures</a> (const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> **textureSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> removeOldTextures)</td></tr>
+<tr class="memitem:a5fd3446024a5625af67228cfb440613f" id="r_a5fd3446024a5625af67228cfb440613f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fd3446024a5625af67228cfb440613f">getAvailableBgmapSegmentsForTextures</a> ()</td></tr>
 
-<tr class="memitem:ae80107ea5d86d0c9c2d466daa90a67b7" id="r_ae80107ea5d86d0c9c2d466daa90a67b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae80107ea5d86d0c9c2d466daa90a67b7">getTexture</a> (BgmapTextureSpec *bgmapTextureSpec, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> minimumSegment, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> mustLiveAtEvenSegment, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> scValue)</td></tr>
+<tr class="memitem:a3d4dda6a6728d0f8b1fa2a1f2c924f37" id="r_a3d4dda6a6728d0f8b1fa2a1f2c924f37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4dda6a6728d0f8b1fa2a1f2c924f37">getPrintingBgmapSegment</a> ()</td></tr>
+
+<tr class="memitem:a8c02d9952d6e2d7675e055e24e9115e1" id="r_a8c02d9952d6e2d7675e055e24e9115e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c02d9952d6e2d7675e055e24e9115e1">loadTextures</a> (const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> **textureSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> removeOldTextures)</td></tr>
+
+<tr class="memitem:ae80107ea5d86d0c9c2d466daa90a67b7" id="r_ae80107ea5d86d0c9c2d466daa90a67b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae80107ea5d86d0c9c2d466daa90a67b7">getTexture</a> (BgmapTextureSpec *bgmapTextureSpec, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> minimumSegment, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> mustLiveAtEvenSegment, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> scValue)</td></tr>
 
 <tr class="memitem:acc4142e291ea2f7c87be9f9cede2d78e" id="r_acc4142e291ea2f7c87be9f9cede2d78e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc4142e291ea2f7c87be9f9cede2d78e">releaseTexture</a> (<a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a> bgmapTexture)</td></tr>
 
-<tr class="memitem:afc6c5b913d0c84eec7a8e06f8c8afe9f" id="r_afc6c5b913d0c84eec7a8e06f8c8afe9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc6c5b913d0c84eec7a8e06f8c8afe9f">getXOffset</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> id)</td></tr>
+<tr class="memitem:afc6c5b913d0c84eec7a8e06f8c8afe9f" id="r_afc6c5b913d0c84eec7a8e06f8c8afe9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc6c5b913d0c84eec7a8e06f8c8afe9f">getXOffset</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> id)</td></tr>
 
-<tr class="memitem:a1c5d7df81ba08d72e56b3d17a97dee46" id="r_a1c5d7df81ba08d72e56b3d17a97dee46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5d7df81ba08d72e56b3d17a97dee46">getYOffset</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> id)</td></tr>
+<tr class="memitem:a1c5d7df81ba08d72e56b3d17a97dee46" id="r_a1c5d7df81ba08d72e56b3d17a97dee46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5d7df81ba08d72e56b3d17a97dee46">getYOffset</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> id)</td></tr>
 
-<tr class="memitem:a42d84581daf8c9f7196a5e827036e381" id="r_a42d84581daf8c9f7196a5e827036e381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d84581daf8c9f7196a5e827036e381">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> y)</td></tr>
+<tr class="memitem:a42d84581daf8c9f7196a5e827036e381" id="r_a42d84581daf8c9f7196a5e827036e381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d84581daf8c9f7196a5e827036e381">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8fa37f2a259fc60467a879cdb609e1d7" id="r_a8fa37f2a259fc60467a879cdb609e1d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fa37f2a259fc60467a879cdb609e1d7">bgmapTextures</a></td></tr>
 
-<tr class="memitem:a0ae98367315aa5116e586556b84d5281" id="r_a0ae98367315aa5116e586556b84d5281"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ae98367315aa5116e586556b84d5281">usedTiles</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>]</td></tr>
+<tr class="memitem:a0ae98367315aa5116e586556b84d5281" id="r_a0ae98367315aa5116e586556b84d5281"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ae98367315aa5116e586556b84d5281">usedTiles</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>]</td></tr>
 <tr class="memdesc:a0ae98367315aa5116e586556b84d5281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used tiles per BGMAP segment.  <br /></td></tr>
 
-<tr class="memitem:a0da3dc3ed1a72c12debc9b96fbb7f01b" id="r_a0da3dc3ed1a72c12debc9b96fbb7f01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0da3dc3ed1a72c12debc9b96fbb7f01b">xOffset</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td></tr>
+<tr class="memitem:a0da3dc3ed1a72c12debc9b96fbb7f01b" id="r_a0da3dc3ed1a72c12debc9b96fbb7f01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0da3dc3ed1a72c12debc9b96fbb7f01b">xOffset</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td></tr>
 <tr class="memdesc:a0da3dc3ed1a72c12debc9b96fbb7f01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start X coordinate of free space in each BGMAP segment.  <br /></td></tr>
 
-<tr class="memitem:a6c66f85dfa370e4bc445e3859f679e74" id="r_a6c66f85dfa370e4bc445e3859f679e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c66f85dfa370e4bc445e3859f679e74">yOffset</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td></tr>
+<tr class="memitem:a6c66f85dfa370e4bc445e3859f679e74" id="r_a6c66f85dfa370e4bc445e3859f679e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c66f85dfa370e4bc445e3859f679e74">yOffset</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td></tr>
 <tr class="memdesc:a6c66f85dfa370e4bc445e3859f679e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start Y coordinate of free space in each BGMAP segment.  <br /></td></tr>
 
-<tr class="memitem:af4d5f04a2514f697b1ede5e05f6b47f3" id="r_af4d5f04a2514f697b1ede5e05f6b47f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4d5f04a2514f697b1ede5e05f6b47f3">offset</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a> *<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>][4]</td></tr>
+<tr class="memitem:af4d5f04a2514f697b1ede5e05f6b47f3" id="r_af4d5f04a2514f697b1ede5e05f6b47f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4d5f04a2514f697b1ede5e05f6b47f3">offset</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a> *<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>][4]</td></tr>
 <tr class="memdesc:af4d5f04a2514f697b1ede5e05f6b47f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multidimensional array to keep track of the offsets for each allocated texture.  <br /></td></tr>
 
-<tr class="memitem:ae90d151377f48cd4abe3b722d7a836af" id="r_ae90d151377f48cd4abe3b722d7a836af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae90d151377f48cd4abe3b722d7a836af">availableBgmapSegmentsForTextures</a></td></tr>
+<tr class="memitem:ae90d151377f48cd4abe3b722d7a836af" id="r_ae90d151377f48cd4abe3b722d7a836af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae90d151377f48cd4abe3b722d7a836af">availableBgmapSegmentsForTextures</a></td></tr>
 <tr class="memdesc:ae90d151377f48cd4abe3b722d7a836af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of available BGMAP segments for texture allocation.  <br /></td></tr>
 
-<tr class="memitem:a3fa2efcc1ee7d98b612b492a57695132" id="r_a3fa2efcc1ee7d98b612b492a57695132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa2efcc1ee7d98b612b492a57695132">printingBgmapSegment</a></td></tr>
+<tr class="memitem:a3fa2efcc1ee7d98b612b492a57695132" id="r_a3fa2efcc1ee7d98b612b492a57695132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa2efcc1ee7d98b612b492a57695132">printingBgmapSegment</a></td></tr>
 <tr class="memdesc:a3fa2efcc1ee7d98b612b492a57695132"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGMAP segment available for printing.  <br /></td></tr>
 
 <tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
@@ -96,10 +101,10 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
 
-<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
-<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -107,7 +112,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-texture/">Texture</a></p>
 <p>Allocates BGMAP space for textures. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L42">42</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L49">49</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a267352fb1c76001a93b8c09815d50fec" name="a267352fb1c76001a93b8c09815d50fec"></a>
 <h2 class="memtitle">clearBgmapSegment()</h2>
@@ -118,7 +123,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void BgmapTextureManager::clearBgmapSegment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>segment</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>segment</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -130,7 +135,28 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L77">77</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L120">120</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a1b04fd2fb1d3c69ad9bb9a5abbe401f7" name="a1b04fd2fb1d3c69ad9bb9a5abbe401f7"></a>
+<h2 class="memtitle">clearDRAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void BgmapTextureManager::clearDRAM </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erase the contents of BGMAP memory space. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -143,7 +169,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">secure void BgmapTextureManager::configure </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>paramTableBase</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>paramTableBase</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -155,7 +181,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L84">84</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L127">127</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -166,7 +192,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::getAvailableBgmapSegmentsForTextures </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::getAvailableBgmapSegmentsForTextures </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -175,7 +201,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the number of available BGMAP segments to allocate textures. </p><dl class="section return"><dt>Returns</dt><dd>Number of available BGMAP segments to allocate textures </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L98">98</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L141">141</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -186,7 +212,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::getPrintingBgmapSegment </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::getPrintingBgmapSegment </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -195,7 +221,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the number of the BGMAP segment available for printing. </p><dl class="section return"><dt>Returns</dt><dd>Number of the BGMAP segment available for printing </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L105">105</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L148">148</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -213,17 +239,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>minimumSegment</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>minimumSegment</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>mustLiveAtEvenSegment</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>mustLiveAtEvenSegment</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>scValue</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>scValue</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -238,7 +264,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-texture/">Texture</a> initialized with the provided spec </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L193">193</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L236">236</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -249,9 +275,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> BgmapTextureManager::getXOffset </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> BgmapTextureManager::getXOffset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -264,7 +290,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>X coordinate in BGMAP space for the texture ID provided </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L269">269</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L312">312</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -275,9 +301,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> BgmapTextureManager::getYOffset </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> BgmapTextureManager::getYOffset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -290,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Y coordinate in BGMAP space for the texture ID provided </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L276">276</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L319">319</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -308,7 +334,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>removeOldTextures</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>removeOldTextures</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -320,7 +346,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L112">112</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L155">155</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -333,12 +359,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void BgmapTextureManager::print </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L284">284</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L327">327</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -375,7 +401,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L259">259</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L302">302</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -396,7 +422,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the manager's state. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L38">38</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a28879fad1533e65b9055bd532ce69166" name="a28879fad1533e65b9055bd532ce69166"></a>
+<h2 class="memtitle">updateTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void BgmapTextureManager::updateTextures </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>maximumTextureRowsToWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>defer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update texture pending rewriting of data in DRAM. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumTextureRowsToWrite</td><td>Number of texture rows to write during this call </td></tr>
+    <tr><td class="paramname">defer</td><td>If true, the texture data is written overtime; otherwise all is written in a single pass </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c#L98">98</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a>.</p>
 
 </div>
 </div>
@@ -411,7 +467,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::availableBgmapSegmentsForTextures</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::availableBgmapSegmentsForTextures</td>
         </tr>
       </table>
   </td>
@@ -423,7 +479,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Number of available BGMAP segments for texture allocation. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L60">60</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L67">67</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
@@ -447,7 +503,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L45">45</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L52">52</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +517,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::offset[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a> *<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>][4]</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::offset[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a> *<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>][4]</td>
         </tr>
       </table>
   </td>
@@ -473,7 +529,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Multidimensional array to keep track of the offsets for each allocated texture. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L57">57</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L64">64</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +543,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::printingBgmapSegment</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::printingBgmapSegment</td>
         </tr>
       </table>
   </td>
@@ -499,7 +555,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>BGMAP segment available for printing. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L63">63</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L70">70</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +569,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a> BgmapTextureManager::usedTiles[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>]</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> BgmapTextureManager::usedTiles[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>]</td>
         </tr>
       </table>
   </td>
@@ -525,7 +581,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Used tiles per BGMAP segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L48">48</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L55">55</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
@@ -539,7 +595,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::xOffset[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::xOffset[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td>
         </tr>
       </table>
   </td>
@@ -551,7 +607,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Start X coordinate of free space in each BGMAP segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L51">51</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L58">58</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +621,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int8</a> BgmapTextureManager::yOffset[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> BgmapTextureManager::yOffset[<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__MAX_NUMBER_OF_BGMAPS_SEGMENTS</a>][<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/headers/Config.h">__NUM_BGMAPS_PER_SEGMENT</a>]</td>
         </tr>
       </table>
   </td>
@@ -577,13 +633,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Start Y coordinate of free space in each BGMAP segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h#L61">61</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a></li>
-<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.h">BgmapTextureManager.h</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/BgmapTexture/BgmapTextureManager.c">BgmapTextureManager.c</a></li>
 </ul>
 </div>
 

@@ -121,7 +121,7 @@ singleton class PongState : GameState
 }
 ```
 
-But the `PongState` will remain empty if we don't add actors to it. They consists of a disk and 2 paddles so, lets create them in _assets/Actors/Disk/_ and _assets/Actors/Paddle/_ with the _.actor_ file as it was done before to create the logo in the title screen:
+But the `PongState` will remain empty if we don't add actors to it. They consists of a disk and 2 paddles so, let's create them in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo in the title screen:
 
 <a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
 
@@ -205,4 +205,4 @@ While the engine remains in the same state, it will call [GameState::execute](/d
 
 Additionally, the [GameState](/documentation/api/class-game-state/) defines the `suspend` and `resume` methods, which are intented to give the current [GameState](/documentation/api/class-game-state/) the opportunity to perform optional tasks for suspending and resuming it, like when pausing and unpausing the game.
 
-To bring some life into our game, let's [make the Disk move](/documentation/tutorial/pong-disk/) next!
+To bring some life into our game, let's [make the Disk move](/documentation/tutorial/pong-disk/) <i class="fa fa-arrow-right"></i> next!

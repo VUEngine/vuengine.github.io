@@ -4,9 +4,11 @@ parents: Documentation > Tutorial
 title: Sound and Rumble
 ---
 
-# Sound Effects
+# Sound and Rumble
 
-Lets add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/main/assets/Sounds/FX) and place them in *assets/Sounds/FX*. And download the header here from [here](https://github.com/VUEngine/Pong/blob/main/headers/Sounds.h) and place it in the *headers/* folder.
+## Sound Effects
+
+Let's add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/main/assets/Sound/FX) and place them in _assets/Sound/FX_. And download the header here from [here](https://github.com/VUEngine/Pong/blob/main/headers/Sounds.h) and place it in the _headers/_ folder.
 
 To play the sound effect when a point is scored, add the following to the `PongManager::onEvent` method:
 
@@ -69,15 +71,15 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 }
 ```
 
-# Rumble Effects
+## Rumble Effects
 
-Rumble effects are supported thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak. To add the these effects, create the *assets/Rumble/Bounce* and *assets/Rumble/Point* folders. And create a rumble effect file in each:
+Rumble effects are supported thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak. To add the these effects, create the _assets/RumbleEffect/Bounce_ and _assets/RumbleEffect/Point_ folders. And create a rumble effect file in each:
 
 <a href="/documentation/images/tutorial/new-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Rumble Effect"><img src="/documentation/images/tutorial/new-rumble-effect.png" /></a>
 
 <a href="/documentation/images/tutorial/bounce-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Bounce Rumble Effect"><img src="/documentation/images/tutorial/bounce-rumble-effect.png" /></a>
 
-Then, to send the effect to the [Rumble Pak](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack) when a point is scored, call [RumbleManager::startEffect]((/documentation/api/class-rumble-manager/)):
+Then, to send the effect to the [Rumble Pak](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack) when a point is scored, call [RumbleManager::startEffect](<(/documentation/api/class-rumble-manager/)>):
 
 ```cpp
 #include <RumbleEffects.h>
@@ -131,3 +133,9 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
     }
 }
 ```
+
+## Et voilà!
+
+And... we are done. Congratulations! If you followed through, you have just created your first Virtual Boy with VUEngine Studio. 🥳
+
+As your next steps, you might want to have a look at the [User Guide](/documentation/user-guide/introduction/) and perhaps dig into the code of the [VUEngine Showcase](https://github.com/VUEngine/VUEngine-Showcase) project to learn more about the engine's concepts and capabilities. Various sample states will expose you to key aspects of the engine step by step through cleanly written and properly commented code.

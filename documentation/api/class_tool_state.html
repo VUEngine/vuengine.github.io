@@ -24,7 +24,7 @@ permalink: documentation/api/class-tool-state/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ToolState:</div>
 <div class="dyncontent">
@@ -44,11 +44,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae998fe130a802d562b01e3c79e1283a" id="r_aae998fe130a802d562b01e3c79e1283a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae998fe130a802d562b01e3c79e1283a">constructor</a> ()</td></tr>
 <tr class="memdesc:aae998fe130a802d562b01e3c79e1283a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
-<tr class="memitem:add6dcf9daccc39fcf24c006c1fcdd6ac" id="r_add6dcf9daccc39fcf24c006c1fcdd6ac"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6dcf9daccc39fcf24c006c1fcdd6ac">enter</a> (void *owner)</td></tr>
+<tr class="memitem:a6316a60d936af0f7fbdf433020226d00" id="r_a6316a60d936af0f7fbdf433020226d00"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6316a60d936af0f7fbdf433020226d00">start</a> (void *owner)</td></tr>
 
-<tr class="memitem:a3c57f1961529674f41e1deec787659c1" id="r_a3c57f1961529674f41e1deec787659c1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c57f1961529674f41e1deec787659c1">execute</a> (void *owner)</td></tr>
+<tr class="memitem:aad6c1562f81b186c0015655973a6e935" id="r_aad6c1562f81b186c0015655973a6e935"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad6c1562f81b186c0015655973a6e935">update</a> (void *owner)</td></tr>
 
-<tr class="memitem:ae1226abe229f0478007c104316f9ce4d" id="r_ae1226abe229f0478007c104316f9ce4d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1226abe229f0478007c104316f9ce4d">exit</a> (void *owner)</td></tr>
+<tr class="memitem:a6d0351897d73b2465ee7516d4ce68739" id="r_a6d0351897d73b2465ee7516d4ce68739"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d0351897d73b2465ee7516d4ce68739">stop</a> (void *owner)</td></tr>
 
 <tr class="memitem:aa039c28572a0155f620553625c12844a" id="r_aa039c28572a0155f620553625c12844a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa039c28572a0155f620553625c12844a">processUserInput</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)</td></tr>
 
@@ -58,7 +58,9 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:aa937e970d756e85e2e84cd7bcf5d5b8c" id="r_aa937e970d756e85e2e84cd7bcf5d5b8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-stage/">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa937e970d756e85e2e84cd7bcf5d5b8c">getCurrentStage</a> ()</td></tr>
 
-<tr class="memitem:aa332d6aae5453f232d4671ee79229183" id="r_aa332d6aae5453f232d4671ee79229183"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa332d6aae5453f232d4671ee79229183">isKeyCombination</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)=0</td></tr>
+<tr class="memitem:a2a8e3a483cf555fb63df4634e3ae96d4" id="r_a2a8e3a483cf555fb63df4634e3ae96d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a8e3a483cf555fb63df4634e3ae96d4">getComponentManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:aa332d6aae5453f232d4671ee79229183" id="r_aa332d6aae5453f232d4671ee79229183"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa332d6aae5453f232d4671ee79229183">isKeyCombination</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)=0</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -77,32 +79,72 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a5f784a7ab1abd4d153f74fdc145c2fab" id="r_a5f784a7ab1abd4d153f74fdc145c2fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-stage/">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f784a7ab1abd4d153f74fdc145c2fab">currentStage</a></td></tr>
 <tr class="memdesc:a5f784a7ab1abd4d153f74fdc145c2fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game's current stage.  <br /></td></tr>
 
+<tr class="inherit_header pub_attribs_class_game_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_game_state')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-game-state/">GameState</a></td></tr>
+<tr class="memitem:a6bf960142df0d3ded62f45e5f2a326cf inherit pub_attribs_class_game_state" id="r_a6bf960142df0d3ded62f45e5f2a326cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-u-i-container/">UIContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">uiContainer</a></td></tr>
+<tr class="memdesc:a6bf960142df0d3ded62f45e5f2a326cf inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">A container for actors that componse the UI.  <br /></td></tr>
+
+<tr class="memitem:ade6d47575655ffaaa1dac06cf63dde9d inherit pub_attribs_class_game_state" id="r_ade6d47575655ffaaa1dac06cf63dde9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-stage/">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stage</a></td></tr>
+<tr class="memdesc:ade6d47575655ffaaa1dac06cf63dde9d inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">A container for the game entites.  <br /></td></tr>
+
+<tr class="memitem:a18242693d03bb028d98129cced5c2db7 inherit pub_attribs_class_game_state" id="r_a18242693d03bb028d98129cced5c2db7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">componentManagers</a> [<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">kComponentTypes</a>]</td></tr>
+<tr class="memdesc:a18242693d03bb028d98129cced5c2db7 inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of component managers.  <br /></td></tr>
+
+<tr class="memitem:aa59a22170e1d3657cce969d11bc71076 inherit pub_attribs_class_game_state" id="r_aa59a22170e1d3657cce969d11bc71076"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">logicsClock</a></td></tr>
+<tr class="memdesc:aa59a22170e1d3657cce969d11bc71076 inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">A clock for logics.  <br /></td></tr>
+
+<tr class="memitem:a26c2501a70792f0988503eb8f9411afb inherit pub_attribs_class_game_state" id="r_a26c2501a70792f0988503eb8f9411afb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">messagingClock</a></td></tr>
+<tr class="memdesc:a26c2501a70792f0988503eb8f9411afb inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">A clock for messaging.  <br /></td></tr>
+
+<tr class="memitem:ac47d21d492f7c67acd4723fccdaace84 inherit pub_attribs_class_game_state" id="r_ac47d21d492f7c67acd4723fccdaace84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">animationsClock</a></td></tr>
+<tr class="memdesc:ac47d21d492f7c67acd4723fccdaace84 inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">A clock for animations.  <br /></td></tr>
+
+<tr class="memitem:a2ca0144883a98b0434f81adda0e694f5 inherit pub_attribs_class_game_state" id="r_a2ca0144883a98b0434f81adda0e694f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-clock/">Clock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">physicsClock</a></td></tr>
+<tr class="memdesc:a2ca0144883a98b0434f81adda0e694f5 inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">A clock for physics.  <br /></td></tr>
+
+<tr class="memitem:a1c3be46d390379ce07d9ebcb69ac3acc inherit pub_attribs_class_game_state" id="r_a1c3be46d390379ce07d9ebcb69ac3acc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stream</a></td></tr>
+<tr class="memdesc:a1c3be46d390379ce07d9ebcb69ac3acc inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to enable or disable the streaming.  <br /></td></tr>
+
+<tr class="memitem:ab1f1dc77847e87ce52237ad3c811d4fd inherit pub_attribs_class_game_state" id="r_ab1f1dc77847e87ce52237ad3c811d4fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">transform</a></td></tr>
+<tr class="memdesc:ab1f1dc77847e87ce52237ad3c811d4fd inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to enable or disable the transformations.  <br /></td></tr>
+
+<tr class="memitem:a962f604111f05cc435382b52c8ad2922 inherit pub_attribs_class_game_state" id="r_a962f604111f05cc435382b52c8ad2922"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processBehaviors</a></td></tr>
+<tr class="memdesc:a962f604111f05cc435382b52c8ad2922 inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to enable or disable the behavior processing.  <br /></td></tr>
+
+<tr class="memitem:a0119b762ba7c06eaa047d6c809872c75 inherit pub_attribs_class_game_state" id="r_a0119b762ba7c06eaa047d6c809872c75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processMutators</a></td></tr>
+<tr class="memdesc:a0119b762ba7c06eaa047d6c809872c75 inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to enable or disable the mutator processing.  <br /></td></tr>
+
+<tr class="memitem:a5e4243126f54caa4b5cdf03f1250fc0c inherit pub_attribs_class_game_state" id="r_a5e4243126f54caa4b5cdf03f1250fc0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">updatePhysics</a></td></tr>
+<tr class="memdesc:a5e4243126f54caa4b5cdf03f1250fc0c inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to enable or disable the physical simulations.  <br /></td></tr>
+
+<tr class="memitem:a5e0e98cddc6a8058abc0be98d1c670ee inherit pub_attribs_class_game_state" id="r_a5e0e98cddc6a8058abc0be98d1c670ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processCollisions</a></td></tr>
+<tr class="memdesc:a5e0e98cddc6a8058abc0be98d1c670ee inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to enable or disable the collision detection and processing.  <br /></td></tr>
+
+<tr class="memitem:ac56234436625de50f47343388ee5171a inherit pub_attribs_class_game_state" id="r_ac56234436625de50f47343388ee5171a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">framerate</a></td></tr>
+
+<tr class="memitem:a1364fd85104d81ef98c49cdf89c8c56c inherit pub_attribs_class_game_state" id="r_a1364fd85104d81ef98c49cdf89c8c56c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">lockFrameRate</a></td></tr>
+<tr class="memdesc:a1364fd85104d81ef98c49cdf89c8c56c inherit pub_attribs_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">If false, the game loop runs unlocked.  <br /></td></tr>
+
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_game_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_game_state')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-game-state/">GameState</a></td></tr>
+<tr class="memitem:aa43c04814601fa2f5e646f8a2a12cf56 inherit pub_types_class_game_state" id="r_aa43c04814601fa2f5e646f8a2a12cf56"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stopClocks</a> </td></tr>
+
 <tr class="inherit_header pub_methods_class_game_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_state')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-game-state/">GameState</a></td></tr>
 <tr class="memitem:ac2c5fceb1201a48d407896c9d3534f5c inherit pub_methods_class_game_state" id="r_ac2c5fceb1201a48d407896c9d3534f5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">constructor</a> ()</td></tr>
 <tr class="memdesc:ac2c5fceb1201a48d407896c9d3534f5c inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
-<tr class="memitem:a1084502432b9356606438d17034b4759 inherit pub_methods_class_game_state" id="r_a1084502432b9356606438d17034b4759"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
-
-<tr class="memitem:a2610fa8dad8d640609990b6226f0bb5b inherit pub_methods_class_game_state" id="r_a2610fa8dad8d640609990b6226f0bb5b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">start</a> (void *owner)</td></tr>
-
-<tr class="memitem:a877d0dec61732f230b4696c71bfb6ca1 inherit pub_methods_class_game_state" id="r_a877d0dec61732f230b4696c71bfb6ca1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">update</a> (void *owner)</td></tr>
-
-<tr class="memitem:a86885b7be73c6c47ab9b1cd6fc2e13fb inherit pub_methods_class_game_state" id="r_a86885b7be73c6c47ab9b1cd6fc2e13fb"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stop</a> (void *owner)</td></tr>
+<tr class="memitem:a1084502432b9356606438d17034b4759 inherit pub_methods_class_game_state" id="r_a1084502432b9356606438d17034b4759"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
 
 <tr class="memitem:ac414119adc8018c86b398406fc37dd06 inherit pub_methods_class_game_state" id="r_ac414119adc8018c86b398406fc37dd06"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pause</a> (void *owner)</td></tr>
 
 <tr class="memitem:a11346ca02136d991e25b140ffb3c531a inherit pub_methods_class_game_state" id="r_a11346ca02136d991e25b140ffb3c531a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpause</a> (void *owner)</td></tr>
 
-<tr class="memitem:a104b8113b6e7d3259f766a4c02d0231d inherit pub_methods_class_game_state" id="r_a104b8113b6e7d3259f766a4c02d0231d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processMessage</a> (void *owner, <a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+<tr class="memitem:a104b8113b6e7d3259f766a4c02d0231d inherit pub_methods_class_game_state" id="r_a104b8113b6e7d3259f766a4c02d0231d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">processMessage</a> (void *owner, <a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
 
 <tr class="memitem:a21c34ca6b7c7bf1e1a9fcae27db60573 inherit pub_methods_class_game_state" id="r_a21c34ca6b7c7bf1e1a9fcae27db60573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">configureStage</a> (<a class="el" href="/documentation/api/struct-stage-spec/">StageSpec</a> *stageSpec, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> positionedActorsToIgnore)</td></tr>
 
 <tr class="memitem:a23551e76251919dc709b8fdc5e148ab3 inherit pub_methods_class_game_state" id="r_a23551e76251919dc709b8fdc5e148ab3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-u-i-container/">UIContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getUIContainer</a> ()</td></tr>
-
-<tr class="memitem:a832eb3f5879c6fd50b6ae05a8ae76a5e inherit pub_methods_class_game_state" id="r_a832eb3f5879c6fd50b6ae05a8ae76a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getComponentManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
 <tr class="memitem:ad1d3994fdfde7684a08fea6712b6a449 inherit pub_methods_class_game_state" id="r_ad1d3994fdfde7684a08fea6712b6a449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">purgeComponentManagers</a> ()</td></tr>
 <tr class="memdesc:ad1d3994fdfde7684a08fea6712b6a449 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the purging of deleted components.  <br /></td></tr>
@@ -119,48 +161,20 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acc936a857d930027bc3c674ffb312788 inherit pub_methods_class_game_state" id="r_acc936a857d930027bc3c674ffb312788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stopClocks</a> ()</td></tr>
 <tr class="memdesc:acc936a857d930027bc3c674ffb312788 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all the clocks.  <br /></td></tr>
 
-<tr class="memitem:ae816f38876b11964ded412d5250c6b3a inherit pub_methods_class_game_state" id="r_ae816f38876b11964ded412d5250c6b3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startLogics</a> ()</td></tr>
-<tr class="memdesc:ae816f38876b11964ded412d5250c6b3a inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for logics.  <br /></td></tr>
+<tr class="memitem:ac30dfc0fc210fa1508775e4b1134d513 inherit pub_methods_class_game_state" id="r_ac30dfc0fc210fa1508775e4b1134d513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startClock</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> clockEnum)</td></tr>
 
-<tr class="memitem:a6cb166cbd09067f621518bb164dedabc inherit pub_methods_class_game_state" id="r_a6cb166cbd09067f621518bb164dedabc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseLogics</a> ()</td></tr>
-<tr class="memdesc:a6cb166cbd09067f621518bb164dedabc inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for logics.  <br /></td></tr>
+<tr class="memitem:a4a8b7329b47436a776f589ed6d1b5434 inherit pub_methods_class_game_state" id="r_a4a8b7329b47436a776f589ed6d1b5434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseClock</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> clockEnum)</td></tr>
 
-<tr class="memitem:a90a493e84b03ebfe40e4a6ffc2b64316 inherit pub_methods_class_game_state" id="r_a90a493e84b03ebfe40e4a6ffc2b64316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseLogics</a> ()</td></tr>
-<tr class="memdesc:a90a493e84b03ebfe40e4a6ffc2b64316 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for logics.  <br /></td></tr>
+<tr class="memitem:a1adcf39d4f4570cbe7852a5d7607b85b inherit pub_methods_class_game_state" id="r_a1adcf39d4f4570cbe7852a5d7607b85b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseClock</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> clockEnum)</td></tr>
 
-<tr class="memitem:a2709e6704a61143d9b62e2dc399b2c94 inherit pub_methods_class_game_state" id="r_a2709e6704a61143d9b62e2dc399b2c94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startMessaging</a> ()</td></tr>
-<tr class="memdesc:a2709e6704a61143d9b62e2dc399b2c94 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for delayed messages.  <br /></td></tr>
-
-<tr class="memitem:ab7ff5e372a77559f349db054f89fcdf9 inherit pub_methods_class_game_state" id="r_ab7ff5e372a77559f349db054f89fcdf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseMessaging</a> ()</td></tr>
-<tr class="memdesc:ab7ff5e372a77559f349db054f89fcdf9 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for delayed messages.  <br /></td></tr>
-
-<tr class="memitem:af354b139436674d30edb323780052a5f inherit pub_methods_class_game_state" id="r_af354b139436674d30edb323780052a5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseMessaging</a> ()</td></tr>
-<tr class="memdesc:af354b139436674d30edb323780052a5f inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for delayed messages.  <br /></td></tr>
-
-<tr class="memitem:aa09f85722c0a08209f5b10ce97898656 inherit pub_methods_class_game_state" id="r_aa09f85722c0a08209f5b10ce97898656"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startAnimations</a> ()</td></tr>
-<tr class="memdesc:aa09f85722c0a08209f5b10ce97898656 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for animations.  <br /></td></tr>
-
-<tr class="memitem:a45544cf873107505c9143382a1718364 inherit pub_methods_class_game_state" id="r_a45544cf873107505c9143382a1718364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pauseAnimations</a> ()</td></tr>
-<tr class="memdesc:a45544cf873107505c9143382a1718364 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for animations.  <br /></td></tr>
-
-<tr class="memitem:acdb523cbacf933386d5abfba117707c0 inherit pub_methods_class_game_state" id="r_acdb523cbacf933386d5abfba117707c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpauseAnimations</a> ()</td></tr>
-<tr class="memdesc:acdb523cbacf933386d5abfba117707c0 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for animations.  <br /></td></tr>
-
-<tr class="memitem:a401689dac569e8bc461f495146fa0429 inherit pub_methods_class_game_state" id="r_a401689dac569e8bc461f495146fa0429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">startPhysics</a> ()</td></tr>
-<tr class="memdesc:a401689dac569e8bc461f495146fa0429 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock used for physics simulations.  <br /></td></tr>
-
-<tr class="memitem:aff74ba9e7a45ab44944960476526387c inherit pub_methods_class_game_state" id="r_aff74ba9e7a45ab44944960476526387c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">pausePhysics</a> ()</td></tr>
-<tr class="memdesc:aff74ba9e7a45ab44944960476526387c inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the clock used for physics simulations.  <br /></td></tr>
-
-<tr class="memitem:a6c4ea60c535efe369521ace6e843ef15 inherit pub_methods_class_game_state" id="r_a6c4ea60c535efe369521ace6e843ef15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">unpausePhysics</a> ()</td></tr>
-<tr class="memdesc:a6c4ea60c535efe369521ace6e843ef15 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpause the clock used for physics simulations.  <br /></td></tr>
+<tr class="memitem:ab73d451c59b46833352343dd61e83712 inherit pub_methods_class_game_state" id="r_ab73d451c59b46833352343dd61e83712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">stopClock</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> clockEnum)</td></tr>
 
 <tr class="memitem:aa7aeed811e6d28bcdf8a7b0835e69fff inherit pub_methods_class_game_state" id="r_aa7aeed811e6d28bcdf8a7b0835e69fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">applyTransformationsUI</a> ()</td></tr>
 <tr class="memdesc:aa7aeed811e6d28bcdf8a7b0835e69fff inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the UI's children' global transformations.  <br /></td></tr>
 
-<tr class="memitem:a32e7ce3a2fe4de842e72beedddcef522 inherit pub_methods_class_game_state" id="r_a32e7ce3a2fe4de842e72beedddcef522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">propagateMessage</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> message)</td></tr>
+<tr class="memitem:a32e7ce3a2fe4de842e72beedddcef522 inherit pub_methods_class_game_state" id="r_a32e7ce3a2fe4de842e72beedddcef522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">propagateMessage</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> message)</td></tr>
 
-<tr class="memitem:a8bf288798fc36598d7d6c47b764b7ff5 inherit pub_methods_class_game_state" id="r_a8bf288798fc36598d7d6c47b764b7ff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">propagateString</a> (const char *string)</td></tr>
+<tr class="memitem:a8bf288798fc36598d7d6c47b764b7ff5 inherit pub_methods_class_game_state" id="r_a8bf288798fc36598d7d6c47b764b7ff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">propagateString</a> (const char *string)</td></tr>
 
 <tr class="memitem:a70d2e075d2ed029139ae2b253ab75123 inherit pub_methods_class_game_state" id="r_a70d2e075d2ed029139ae2b253ab75123"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-actor/">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">getActorByName</a> (const char *actorName)</td></tr>
 
@@ -168,18 +182,26 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:aabd979542e6424b21af93400a816cb92 inherit pub_methods_class_game_state" id="r_aabd979542e6424b21af93400a816cb92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">hideActorWithName</a> (const char *actorName)</td></tr>
 
-<tr class="memitem:adef9cc38489ed56819e798343aa51b31 inherit pub_methods_class_game_state" id="r_adef9cc38489ed56819e798343aa51b31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">changeFramerate</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> targetFPS, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> duration)</td></tr>
+<tr class="memitem:adef9cc38489ed56819e798343aa51b31 inherit pub_methods_class_game_state" id="r_adef9cc38489ed56819e798343aa51b31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">changeFramerate</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> targetFPS, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> duration)</td></tr>
 
 <tr class="memitem:a9db08b3681ac1c59c9146bcd6d9d7e69 inherit pub_methods_class_game_state" id="r_a9db08b3681ac1c59c9146bcd6d9d7e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">streamAll</a> ()</td></tr>
 <tr class="memdesc:a9db08b3681ac1c59c9146bcd6d9d7e69 inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force to completely stream in and out actors and to initialize all.  <br /></td></tr>
 
-<tr class="memitem:abfc8c78f88146ca20e4b7fb4bbe2b01d inherit pub_methods_class_game_state" id="r_abfc8c78f88146ca20e4b7fb4bbe2b01d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">printClocks</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> y)</td></tr>
+<tr class="memitem:aacb05a008bda4ed01f141a5afbde8caa inherit pub_methods_class_game_state" id="r_aacb05a008bda4ed01f141a5afbde8caa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">lockFrameRate</a> ()</td></tr>
+
+<tr class="memitem:abfc8c78f88146ca20e4b7fb4bbe2b01d inherit pub_methods_class_game_state" id="r_abfc8c78f88146ca20e4b7fb4bbe2b01d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">printClocks</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> y)</td></tr>
+
+<tr class="memitem:afe0143d7a79f118b5d6e3a3988f22a0d inherit pub_methods_class_game_state" id="r_afe0143d7a79f118b5d6e3a3988f22a0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">enter</a> (void *owner)</td></tr>
+
+<tr class="memitem:a3c424b858bdf65aaf32cfc94aad8c9ad inherit pub_methods_class_game_state" id="r_a3c424b858bdf65aaf32cfc94aad8c9ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">execute</a> (void *owner)</td></tr>
+
+<tr class="memitem:ab9c32cc3d8029a8d8ae8187c68a1678e inherit pub_methods_class_game_state" id="r_ab9c32cc3d8029a8d8ae8187c68a1678e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">exit</a> (void *owner)</td></tr>
 
 <tr class="memitem:acd5b3ffbf3c1278e48821bf4a58df835 inherit pub_methods_class_game_state" id="r_acd5b3ffbf3c1278e48821bf4a58df835"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">suspend</a> (void *owner)</td></tr>
 
 <tr class="memitem:ad18693efd025b847b0516eb90bc6af7a inherit pub_methods_class_game_state" id="r_ad18693efd025b847b0516eb90bc6af7a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">resume</a> (void *owner)</td></tr>
 
-<tr class="memitem:a37b0d716878be7b5a715c677a7afc67d inherit pub_methods_class_game_state" id="r_a37b0d716878be7b5a715c677a7afc67d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">isVersusMode</a> ()</td></tr>
+<tr class="memitem:a37b0d716878be7b5a715c677a7afc67d inherit pub_methods_class_game_state" id="r_a37b0d716878be7b5a715c677a7afc67d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-game-state/">isVersusMode</a> ()</td></tr>
 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -187,7 +209,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-game-state/">GameState</a></p>
 <p>Defines an interface for game states that uses various debug tools. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a69d726a18f39df3b366c57b3c43c1f2d" name="a69d726a18f39df3b366c57b3c43c1f2d"></a>
 <h2 class="memtitle">configure()</h2>
@@ -215,7 +237,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L163">163</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L185">185</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
 
 </div>
 </div>
@@ -236,112 +258,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
-
-</div>
-</div>
-<a id="add6dcf9daccc39fcf24c006c1fcdd6ac" name="add6dcf9daccc39fcf24c006c1fcdd6ac"></a>
-<h2 class="memtitle">enter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">void ToolState::enter </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Prepares the object to enter this state. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is entering in this state </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L105">105</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
-
-</div>
-</div>
-<a id="a3c57f1961529674f41e1deec787659c1" name="a3c57f1961529674f41e1deec787659c1"></a>
-<h2 class="memtitle">execute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">void ToolState::execute </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Updates the object in this state. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is in this state </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L124">124</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
-
-</div>
-</div>
-<a id="ae1226abe229f0478007c104316f9ce4d" name="ae1226abe229f0478007c104316f9ce4d"></a>
-<h2 class="memtitle">exit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">void ToolState::exit </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Prepares the object to exit this state. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is exiting this state </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L134">134</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L83">83</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
 
 </div>
 </div>
@@ -375,7 +292,33 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="/documentation/api/class-tool-state/">ToolState</a> that is unlocked if any </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L31">31</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+
+</div>
+</div>
+<a id="a2a8e3a483cf555fb63df4634e3ae96d4" name="a2a8e3a483cf555fb63df4634e3ae96d4"></a>
+<h2 class="memtitle">getComponentManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a> ToolState::getComponentManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>componentType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the manager for the provided component type. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">componentType</td><td>Type of components of the desired manager </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-component/">Component</a> manager for the provided component type </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L207">207</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
 
 </div>
 </div>
@@ -395,7 +338,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a>'s current game state. </p><dl class="section return"><dt>Returns</dt><dd>Game's current game state </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L171">171</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L193">193</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
 
 </div>
 </div>
@@ -415,7 +358,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the <a class="el" href="/documentation/api/class-v-u-engine/">VUEngine</a>'s current game state. </p><dl class="section return"><dt>Returns</dt><dd>Game's current game state </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L178">178</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L200">200</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
 
 </div>
 </div>
@@ -429,7 +372,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> ToolState::isKeyCombination </td>
+          <td class="memname">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ToolState::isKeyCombination </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *</td>          <td class="paramname"><span class="paramname"><em>userInput</em></span></td><td>)</td>
           <td></td>
@@ -478,7 +421,112 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c#L153">153</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L175">175</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+
+</div>
+</div>
+<a id="a6316a60d936af0f7fbdf433020226d00" name="a6316a60d936af0f7fbdf433020226d00"></a>
+<h2 class="memtitle">start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::start </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepares the object to enter this state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is entering in this state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L109">109</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+
+</div>
+</div>
+<a id="a6d0351897d73b2465ee7516d4ce68739" name="a6d0351897d73b2465ee7516d4ce68739"></a>
+<h2 class="memtitle">stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::stop </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepares the object to exit this state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is exiting this state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L156">156</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
+
+</div>
+</div>
+<a id="aad6c1562f81b186c0015655973a6e935" name="aad6c1562f81b186c0015655973a6e935"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ToolState::update </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Updates the object in this state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that is in this state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-game-state/">GameState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c#L130">130</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a>.</p>
 
 </div>
 </div>
@@ -505,7 +553,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Game's current state. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h#L41">41</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h#L41">41</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
 
 </div>
 </div>
@@ -531,7 +579,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Game's current stage. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h#L44">44</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h#L44">44</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
 
 </div>
 </div>
@@ -557,13 +605,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The tool that the state uses. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h#L38">38</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h#L38">38</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h">ToolState.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/State/GameState/ToolState/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.h">ToolState.h</a></li>
-<li>VUEngine-Core/source/State/GameState/ToolState/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/ToolState.c">ToolState.c</a></li>
+<li>VUEngine-Core/source/State/GameState/ToolState/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.h">ToolState.h</a></li>
+<li>VUEngine-Core/source/State/GameState/ToolState/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/ToolState.c">ToolState.c</a></li>
 </ul>
 </div>
 

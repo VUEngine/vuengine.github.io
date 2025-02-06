@@ -120,4 +120,4 @@ After applying that change, once the project is rebuilt and run, the following s
 
 <a href="/documentation/images/tutorial/my-game-state.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState"><img src="/documentation/images/tutorial/my-game-state.png"/></a>
 
-We're now ready to hit the keyboard and [create our first custom GameState](/documentation/tutorial/title-screen/).
+We're now ready to hit the keyboard and [create our first custom GameState](/documentation/tutorial/title-screen/) <i class="fa fa-arrow-right"></i>.

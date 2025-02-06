@@ -12,7 +12,7 @@ The only piece of functionality that still needs to be added to the game, before
 
 ## In-Game Types
 
-An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribute that can be used to identify the type of game object that one is interacting with without having to rely on RTTI (which is kind of expensive). So, lets create an _InGameTypes_ file and add to it two entries - "Disk" and "Paddle".
+An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribute that can be used to identify the type of game object that one is interacting with without having to rely on RTTI (which is kind of expensive). So, let's create an _InGameTypes_ file and add to it two entries - "Disk" and "Paddle".
 
 <a href="/documentation/images/tutorial/in-game-types.png" data-toggle="lightbox" data-gallery="gallery" data-caption="In-Game Types "><img src="/documentation/images/tutorial/in-game-types.png" /></a>
 
@@ -20,7 +20,7 @@ An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribut
 
 A Collider Layer is an enum that is useful to cull off uncessary collision checks between [Colliders](/documentation/api/class-collider/) that belong to [Actors](/documentation/api/class-component/) that don't need to interact with each other. For example, a paddle doesn't need to check collisions against the other. So, their [Colliders](/documentation/api/class-collider/) should mutually ignore each other. To do so, each [Collider](/documentation/api/class-collider/) has a property that flags on which Collider Layers it "exists" and another that signals which Collider Layers to ignore when checking for collisions. With this idea in mind, the paddles' [Colliders](/documentation/api/class-collider/) should live in the "Paddle" layer and they should ignore the "Paddle" layer too. In contrast, the disk's [Collider](/documentation/api/class-collider/) should not ignore the "Paddle" Collider layer.
 
-Create the _ColliderLayers_ file in the _config_ folder and add the following to it:
+So, let's create the Collider Layers by adding a _ColliderLayers_ file in the _config_ folder and add the following to it:
 
 <a href="/documentation/images/tutorial/collider-layers.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Collider Layers"><img src="/documentation/images/tutorial/collider-layers.png" /></a>
 
@@ -59,7 +59,7 @@ Almost there! We are just missing walls for the disk to not go out through the s
     </figcaption>
 </figure>
 
-We can now create a _Wall.actor_ in _assets/Actors/Wall_ and add a [Collider](/documentation/api/class-collider/) that lives in the "Wall" layer to it.
+We can now create a _Wall.actor_ in _assets/Actor/Wall_ and add a [Collider](/documentation/api/class-collider/) that lives in the "Wall" layer to it.
 
 <a href="/documentation/images/tutorial/wall-actor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Wall Actor"><img src="/documentation/images/tutorial/wall-actor.png" /></a>
 
@@ -67,7 +67,7 @@ Also make sure that the Disk's [Collider](/documentation/api/class-collider/) ch
 
 <a href="/documentation/images/tutorial/disk-collider-wall.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk Wall Collider Layer"><img src="/documentation/images/tutorial/disk-collider-wall.png" /></a>
 
-Finally, lets place the walls at the top and bottom of the screen in the [Stage](/documentation/api/struct-stage-spec/)'s **PongStageActors** array.
+Finally, we'll place the walls at the top and bottom of the screen in the [Stage](/documentation/api/struct-stage-spec/)'s **PongStageActors** array.
 
 ```cpp
 [...]
@@ -137,3 +137,5 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
     return returnValue;
 }
 ```
+
+We now have a basic but fully functional Pong game. But it would be more interesting if it displayed scores, right? Let's add that [in the next step](/documentation/tutorial/pong-manager/) <i class="fa fa-arrow-right"></i>.

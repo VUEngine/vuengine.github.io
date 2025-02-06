@@ -17,17 +17,41 @@ _Key combination_: Hold Select + Right Trigger and press Up on the right directi
 
 It shows pages with information about WRAM usage, video memory usage (WORLDs, BGMAPs, OBJECTs and CHARs), the [Stage](/documentation/api/class-stage/)’s status, collisions information, hardware registers, SRAM space:
 
-<a href="/documentation/images/user-guide/development-tools/debug-wram-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="WRAM Inspector"><img src="/documentation/images/user-guide/development-tools/debug-wram-inspector.png" width="500" /></a><br/>
-_WRAM Inspector_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-wram-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="WRAM Inspector">
+        <img src="/documentation/images/user-guide/development-tools/debug-wram-inspector.png" width="500" />
+    </a>
+    <figcaption>
+    WRAM Inspector
+</figcaption>
+</figure>
 
-<a href="/documentation/images/user-guide/development-tools/debug-sprite-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Sprite Inspector"><img src="/documentation/images/user-guide/development-tools/debug-sprite-inspector.png" width="500" /></a><br/>
-_Sprite Inspector_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-sprite-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Sprite Inspector">
+        <img src="/documentation/images/user-guide/development-tools/debug-sprite-inspector.png" width="500" />
+    </a>
+    <figcaption>
+    Sprite Inspector
+</figcaption>
+</figure>
 
-<a href="/documentation/images/user-guide/development-tools/debug-char-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="CHAR Inspector"><img src="/documentation/images/user-guide/development-tools/debug-char-inspector.png" width="500" /></a><br/>
-_CHAR Inspector_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-char-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="CHAR Inspector">
+        <img src="/documentation/images/user-guide/development-tools/debug-char-inspector.png" width="500" />
+    </a>
+    <figcaption>
+    CHAR Inspector
+</figcaption>
+</figure>
 
-<a href="/documentation/images/user-guide/development-tools/debug-sram-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="SRAM Inspector"><img src="/documentation/images/user-guide/development-tools/debug-sram-inspector.png" width="500" /></a><br/>
-_SRAM Inspector_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-sram-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="SRAM Inspector">
+        <img src="/documentation/images/user-guide/development-tools/debug-sram-inspector.png" width="500" />
+    </a>
+    <figcaption>
+    SRAM Inspector
+</figcaption>
+</figure>
 
 ## Animation Inspector
 
@@ -45,8 +69,14 @@ const UserActor _userAnimatedActors[] =
 
 It allows to modify at runtime the frames of animation and the duration of each:
 
-<a href="/documentation/images/user-guide/development-tools/debug-animation-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Animation Inspector"><img src="/documentation/images/user-guide/development-tools/debug-animation-inspector.png" width="500" /></a><br/>
-_Animation Inspector_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-animation-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Animation Inspector">
+        <img src="/documentation/images/user-guide/development-tools/debug-animation-inspector.png" width="500"
+        /></a>
+        <figcaption>
+    Animation Inspector
+</figcaption>
+</figure>
 
 ## Stage Inspector
 
@@ -54,8 +84,14 @@ _Key combination_: Hold Select + Right Trigger and press Left on the right direc
 
 It allows to move around [Actors](/documentation/api/class-actor/) in the current [Stage](/documentation/api/class-stage/) or even add new ones through the [ActorSpecs](/documentation/api/struct-actor-spec/) listed in the global `_userObjects` and to modify the [Stage](/documentation/api/class-stage/)’s optical settings:
 
-<a href="/documentation/images/user-guide/development-tools/debug-stage-editor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Stage Editor"><img src="/documentation/images/user-guide/development-tools/debug-stage-editor.png" width="500" /></a><br/>
-_Stage Editor_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-stage-editor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Stage Editor">
+        <img src="/documentation/images/user-guide/development-tools/debug-stage-editor.png" width="500" />
+    </a>
+    <figcaption>
+    Stage Editor
+</figcaption>
+</figure>
 
 ## Sound Test
 
@@ -65,8 +101,14 @@ It allows to play sounds through the [SoundSpecs](/documentation/api/struct-soun
 
 It allows to modify at runtime the timer settings to test how the sound tolerates changes to the timer interrupts’ frequency.
 
-<a href="/documentation/images/user-guide/development-tools/debug-sound-test.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Sound Test"><img src="/documentation/images/user-guide/development-tools/debug-sound-test.png" width="500" /></a><br/>
-_Sound Test_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/debug-sound-test.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Sound Test">
+        <img src="/documentation/images/user-guide/development-tools/debug-sound-test.png" width="500" /></a><b
+  
+    <figcaption>
+    Sound Test
+</figcaption>
+</figure>
 
 ## Profiler
 
@@ -86,5 +128,11 @@ VUEngine::startProfiling();
 
 Then, the profiler will show the following output:
 
-<a href="/documentation/images/user-guide/development-tools/profiler.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Profiler's output"><img src="/documentation/images/user-guide/development-tools/profiler.png" width="500" /></a><br/>
-_Profiler's output_
+<figure>
+    <a href="/documentation/images/user-guide/development-tools/profiler.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Profiler's output">
+        <img src="/documentation/images/user-guide/development-tools/profiler.png" width="500" />
+    </a>
+    <figcaption>
+        Profiler's output
+    </figcaption>
+</figure>

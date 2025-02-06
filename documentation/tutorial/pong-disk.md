@@ -6,9 +6,9 @@ title: Pong Disk
 
 # Disk
 
-Lets make the disk to move. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the disk in the `PongState`, or creating an instance of a `Disk` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature.
+Let's get the disk to move. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the disk in the `PongState`, or creating an instance of a `Disk` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature.
 
-To make the disk to move we have various options: directly manipulate the its transformation or use physic simulations to give it some weight and inertia. Lets do the latter.
+To make the disk to move we have various options: directly manipulate its transformation or use physic simulations to give it some weight and inertia. Let's do the latter.
 
 ## Adding physic simulations
 
@@ -20,13 +20,13 @@ But to move a [Body](/documentation/api/class-body/), it is necessary to either 
 
 ## Mutation classes
 
-With [mutation classes](/documentation/language/custom-features/#mutation-classes), we can add functionality to classes by means of abstract classes that don't allow instantiation, that is without having to go the full blown inheritance route. In the case of mutations of the [Actor](/documentation/api/class-actor/) class, they spare us the need to define another **Spec** and worry about implementing a constructor and destructor. They are useful as long as we don't need to persist any additional data to implement the logic of the class. They are not restricted to inherit from [Actor](/documentation/api/class-actor/), mutation classes can be created for any non abstract class in [VUEngine](https://github.com/VUEngine/VUEngine-Core). Lets see how to use them.
+With [mutation classes](/documentation/language/custom-features/#mutation-classes), we can add functionality to classes by means of abstract classes that don't allow instantiation, that is without having to go the full blown inheritance route. In the case of mutations of the [Actor](/documentation/api/class-actor/) class, they spare us the need to define another **Spec** and worry about implementing a constructor and destructor. They are useful as long as we don't need to persist any additional data to implement the logic of the class. They are not restricted to inherit from [Actor](/documentation/api/class-actor/), mutation classes can be created for any non abstract class in [VUEngine](https://github.com/VUEngine/VUEngine-Core). Let's see how to use them.
 
 ## Mutators
 
 The [Mutator](/documentation/api/class-mutator/) class is a kind of [Component](/documentation/api/class-component/) that performs the [mutation](/documentation/language/custom-features/#mutation-classes) on [Actors](/documentation/api/class-actor/) without having to do it manually by means of directly calling `SomeClass::mutateTo(someClassObject, MutationClass::getClass())`.
 
-To add a [Mutator](/documentation/api/class-mutator/) to the disk, open the _Disk.actor_ editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto-generated **DiskActorSpec** (see _assets/Actors/Disk/Converted/DiskActorSpec.c_).
+To add a [Mutator](/documentation/api/class-mutator/) to the disk, open the _Disk.actor_ editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto-generated **DiskActorSpec** (see _assets/Actor/Disk/Converted/DiskActorSpec.c_).
 
 When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration.
 
@@ -67,7 +67,7 @@ Now, we have to create the `Disk` class. Since it is a mutation target, it has t
 
 To create the `Disk` mutation class, add the folder _source/Actors/Disk_ and, in it, a header and an implementation file: _Disk.h_ and _Disk.c_.
 
-In _Disk.h_ lets add the following to declare the new class:
+In _Disk.h_ let's add the following to declare the new class:
 
 ```cpp
 #include <Actor.h>
@@ -116,7 +116,7 @@ mutation class Disk;
 void Disk::ready(bool recursive)
 {
     Base::ready(this, recursive);
-    
+
     if(isDeleted(this->body))
     {
         return;

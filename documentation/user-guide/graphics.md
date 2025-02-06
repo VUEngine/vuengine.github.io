@@ -111,7 +111,7 @@ BgmapSpriteROMSpec ActorSpriteSpec =
             },
 
             // Array of function animations
-            NULL 
+            NULL
         },
 
         // Spec for the texture to display
@@ -215,8 +215,14 @@ The [ObjectSprite](/documentation/api/class-object-sprite/) uses OBJECTs to rend
 
 The other kind of visual component are [Wireframes](/documentation/api/class-wireframe/). These are non solid 3D shapes that draw 1 pixel wide lines or circles. They leverage the ability of writing directly to the video frame buffers after the VIP has finished its drawing procedures during the current game frame. Accessing video memory with the CPU is slow and even more so when reading back from it, which is unavoidable when drawing single pixels.
 
-<a href="/documentation/images/user-guide/graphics/wireframe-pyramid.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/wireframe-pyramid.png" width="256"/></a><br/>
-_Example of a Wireframe_
+<figure>
+    <a href="/documentation/images/user-guide/graphics/wireframe-pyramid.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Example of a Wireframe Mesh">
+        <img src="/documentation/images/user-guide/graphics/wireframe-pyramid.png" width="256"/>
+    </a>
+    <figcaption>
+        Example of a Wireframe Mesh
+    </figcaption>
+</figure>
 
 [Wireframe](/documentation/api/class-wireframe/) creation and configuration is done with a [WireframeSpec](/documentation/api/struct-wireframe-spec/), which look like the following:
 
