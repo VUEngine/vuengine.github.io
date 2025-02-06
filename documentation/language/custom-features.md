@@ -64,10 +64,16 @@ Finally, the following method must be called where appropriate:
 SomeSingletonClass::secure(&SomSingletonClassAuthorizedClasses);
 ```
 
-After `SomeSingletonClass::secure` has been called with a non empty array of classes, if any other class besides those listed in the array tries to call `SomeSingletonClass::someMethod`, an exception like the following will be triggered:
+After `SomeSingletonClass::secure` has been called with a non empty array of classes, if any other class besides those listed in the array tries to call `SomeSingletonClass::someMethod`, an exception like the following will be triggered.
 
-<a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Illegal method access"><img src="/documentation/images/language/custom-features/singleton-security.png" width="500" /></a><br/>
-_Illegal access to secure method_
+<figure>
+    <a href="/documentation/images/language/custom-features/singleton-security.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Illegal access to secure method">
+        <img src="/documentation/images/language/custom-features/singleton-security.png" width="500"/>
+    </a>
+    <figcaption>
+        Illegal access to secure method
+    </figcaption>
+</figure>
 
 There are some limitations due to the fact that globality cannot really be so easily defeated. And this contraption doesn't pretend to achieve that. Instead, it is a tool to help preventing potentially dangerous code paths when developing programs using Virtual C.
 
@@ -111,7 +117,7 @@ extension class SomeClassExtension : SomeBaseClass
 };
 ```
 
-Entensions classes are meant to provide a mechanism to change at runtime the implementation of a virtual method affecting all the instances of the original class immediately. 
+Entensions classes are meant to provide a mechanism to change at runtime the implementation of a virtual method affecting all the instances of the original class immediately.
 
 To mutate a virtual method, use the following syntax:
 

@@ -43,8 +43,14 @@ static void wobble(uint32 currentDrawingFrameBufferSet, Entity entity);
 
 It is possible to pass an [Entity](/documentation/api/class-entity/) to the post processing effect so the processed region of the screen can be relative to that object.
 
-<a href="/documentation/images/user-guide/post-processing-effects/wobble.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/post-processing-effects/wobble.png" width="500"/></a><br>
-_Example of a post-processing effect that adds a full-screen wobble_
+<figure>
+    <a href="/documentation/images/user-guide/post-processing-effects/wobble.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Example of a post-processing effect that adds a full-screen wobble">
+        <img src="/documentation/images/user-guide/post-processing-effects/wobble.png" width="500"/>
+    </a>
+    <figcaption>
+        Example of a post-processing effect that adds a full-screen wobble
+    </figcaption>
+</figure>
 
 ## Performance
 
