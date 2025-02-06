@@ -24,7 +24,7 @@ permalink: documentation/api/class-debug-state/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/DebugState/DebugState.h">DebugState.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/DebugState/DebugState.h">DebugState.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DebugState:</div>
 <div class="dyncontent">
@@ -37,7 +37,7 @@ Inheritance diagram for DebugState:</div>
 <table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8316252ef686d9e54525e3db80c12580" id="r_a8316252ef686d9e54525e3db80c12580"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8316252ef686d9e54525e3db80c12580">isKeyCombination</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)</td></tr>
+<tr class="memitem:a8316252ef686d9e54525e3db80c12580" id="r_a8316252ef686d9e54525e3db80c12580"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8316252ef686d9e54525e3db80c12580">isKeyCombination</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -46,11 +46,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aae998fe130a802d562b01e3c79e1283a inherit pub_methods_class_tool_state" id="r_aae998fe130a802d562b01e3c79e1283a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">constructor</a> ()</td></tr>
 <tr class="memdesc:aae998fe130a802d562b01e3c79e1283a inherit pub_methods_class_tool_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
-<tr class="memitem:add6dcf9daccc39fcf24c006c1fcdd6ac inherit pub_methods_class_tool_state" id="r_add6dcf9daccc39fcf24c006c1fcdd6ac"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">enter</a> (void *owner)</td></tr>
+<tr class="memitem:a6316a60d936af0f7fbdf433020226d00 inherit pub_methods_class_tool_state" id="r_a6316a60d936af0f7fbdf433020226d00"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">start</a> (void *owner)</td></tr>
 
-<tr class="memitem:a3c57f1961529674f41e1deec787659c1 inherit pub_methods_class_tool_state" id="r_a3c57f1961529674f41e1deec787659c1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">execute</a> (void *owner)</td></tr>
+<tr class="memitem:aad6c1562f81b186c0015655973a6e935 inherit pub_methods_class_tool_state" id="r_aad6c1562f81b186c0015655973a6e935"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">update</a> (void *owner)</td></tr>
 
-<tr class="memitem:ae1226abe229f0478007c104316f9ce4d inherit pub_methods_class_tool_state" id="r_ae1226abe229f0478007c104316f9ce4d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">exit</a> (void *owner)</td></tr>
+<tr class="memitem:a6d0351897d73b2465ee7516d4ce68739 inherit pub_methods_class_tool_state" id="r_a6d0351897d73b2465ee7516d4ce68739"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">stop</a> (void *owner)</td></tr>
 
 <tr class="memitem:aa039c28572a0155f620553625c12844a inherit pub_methods_class_tool_state" id="r_aa039c28572a0155f620553625c12844a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">processUserInput</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)</td></tr>
 
@@ -59,6 +59,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a7cb75d7ea5633331cf78a9bedc789aae inherit pub_methods_class_tool_state" id="r_a7cb75d7ea5633331cf78a9bedc789aae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-game-state/">GameState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">getCurrentGameState</a> ()</td></tr>
 
 <tr class="memitem:aa937e970d756e85e2e84cd7bcf5d5b8c inherit pub_methods_class_tool_state" id="r_aa937e970d756e85e2e84cd7bcf5d5b8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-stage/">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">getCurrentStage</a> ()</td></tr>
+
+<tr class="memitem:a2a8e3a483cf555fb63df4634e3ae96d4 inherit pub_methods_class_tool_state" id="r_a2a8e3a483cf555fb63df4634e3ae96d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">getComponentManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_tool_state"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_tool_state')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-tool-state/">ToolState</a></td></tr>
 <tr class="memitem:a2262334ca561f4c748a28c781cf24e41 inherit pub_static_methods_class_tool_state" id="r_a2262334ca561f4c748a28c781cf24e41"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-tool-state/">ToolState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-tool-state/">get</a> (const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *userInput)</td></tr>
@@ -69,7 +71,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-tool-state/">ToolState</a></p>
 <p>Implements a tool state to display various debug information. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/DebugState/DebugState.h#L28">28</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/DebugState/DebugState.h">DebugState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/DebugState/DebugState.h#L28">28</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/DebugState/DebugState.h">DebugState.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8316252ef686d9e54525e3db80c12580" name="a8316252ef686d9e54525e3db80c12580"></a>
 <h2 class="memtitle">isKeyCombination()</h2>
@@ -81,7 +83,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a> DebugState::isKeyCombination </td>
+          <td class="memname">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> DebugState::isKeyCombination </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="/documentation/api/struct-user-input/">UserInput</a> *</td>          <td class="paramname"><span class="paramname"><em>userInput</em></span></td><td>)</td>
           <td></td>
@@ -100,7 +102,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <br />The documentation for this class was generated from the following file:<ul>
-<li>VUEngine-Core/source/State/GameState/ToolState/DebugState/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/State/GameState/ToolState/DebugState/DebugState.h">DebugState.h</a></li>
+<li>VUEngine-Core/source/State/GameState/ToolState/DebugState/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/State/GameState/ToolState/DebugState/DebugState.h">DebugState.h</a></li>
 </ul>
 </div>
 

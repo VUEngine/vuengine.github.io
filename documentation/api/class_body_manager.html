@@ -24,7 +24,7 @@ permalink: documentation/api/class-body-manager/
 </div>
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BodyManager:</div>
 <div class="dyncontent">
@@ -40,7 +40,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afef35b089d3927c483f0affc5eb60230" id="r_afef35b089d3927c483f0affc5eb60230"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afef35b089d3927c483f0affc5eb60230">constructor</a> ()</td></tr>
 <tr class="memdesc:afef35b089d3927c483f0affc5eb60230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
 
-<tr class="memitem:a3ee4e29725e131dd675df252b2b7c804" id="r_a3ee4e29725e131dd675df252b2b7c804"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ee4e29725e131dd675df252b2b7c804">getType</a> ()</td></tr>
+<tr class="memitem:a3ee4e29725e131dd675df252b2b7c804" id="r_a3ee4e29725e131dd675df252b2b7c804"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ee4e29725e131dd675df252b2b7c804">getType</a> ()</td></tr>
 
 <tr class="memitem:a45fa5614e881365e273cff6198dd6249" id="r_a45fa5614e881365e273cff6198dd6249"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45fa5614e881365e273cff6198dd6249">enable</a> ()</td></tr>
 <tr class="memdesc:a45fa5614e881365e273cff6198dd6249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the manager.  <br /></td></tr>
@@ -48,7 +48,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aee9c496e6d572ad4926cbdccdaf4d5ea" id="r_aee9c496e6d572ad4926cbdccdaf4d5ea"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee9c496e6d572ad4926cbdccdaf4d5ea">disable</a> ()</td></tr>
 <tr class="memdesc:aee9c496e6d572ad4926cbdccdaf4d5ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the manager.  <br /></td></tr>
 
-<tr class="memitem:afe00a9d54fcf66a788686dbff44c935b" id="r_afe00a9d54fcf66a788686dbff44c935b"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe00a9d54fcf66a788686dbff44c935b">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *bodySpec)</td></tr>
+<tr class="memitem:a3a162c2cf33ed154211679924161b808" id="r_a3a162c2cf33ed154211679924161b808"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a162c2cf33ed154211679924161b808">create</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *bodySpec)</td></tr>
 
 <tr class="memitem:aec19042f0d6853bfaf33277901423cbd" id="r_aec19042f0d6853bfaf33277901423cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec19042f0d6853bfaf33277901423cbd">reset</a> ()</td></tr>
 <tr class="memdesc:aec19042f0d6853bfaf33277901423cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
@@ -56,24 +56,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a36bf05436bb33d2049c5d80f935e5030" id="r_a36bf05436bb33d2049c5d80f935e5030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36bf05436bb33d2049c5d80f935e5030">update</a> ()</td></tr>
 <tr class="memdesc:a36bf05436bb33d2049c5d80f935e5030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the registered bodies by advancing the physics simulations.  <br /></td></tr>
 
-<tr class="memitem:a72a52692eb0be20295ecdaa987b3dd20" id="r_a72a52692eb0be20295ecdaa987b3dd20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a52692eb0be20295ecdaa987b3dd20">setTimeScale</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</td></tr>
+<tr class="memitem:a72a52692eb0be20295ecdaa987b3dd20" id="r_a72a52692eb0be20295ecdaa987b3dd20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a52692eb0be20295ecdaa987b3dd20">setTimeScale</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a>)</td></tr>
 
-<tr class="memitem:a408e77dcaea5c17bdd854fb79aded013" id="r_a408e77dcaea5c17bdd854fb79aded013"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a408e77dcaea5c17bdd854fb79aded013">getTimeScale</a> ()</td></tr>
+<tr class="memitem:a408e77dcaea5c17bdd854fb79aded013" id="r_a408e77dcaea5c17bdd854fb79aded013"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a408e77dcaea5c17bdd854fb79aded013">getTimeScale</a> ()</td></tr>
 
 <tr class="memitem:a042ae452183c9cc112c7701bac4629e5" id="r_a042ae452183c9cc112c7701bac4629e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a042ae452183c9cc112c7701bac4629e5">setGravity</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> <a class="el" href="#a94878b789f611943ebadb47bb01a3005">gravity</a>)</td></tr>
 
 <tr class="memitem:a46ea20cf3264baa9fc69ce9c8f664241" id="r_a46ea20cf3264baa9fc69ce9c8f664241"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46ea20cf3264baa9fc69ce9c8f664241">getGravity</a> ()</td></tr>
 
-<tr class="memitem:ae68abd81bee042fe7d6e8be64337da2b" id="r_ae68abd81bee042fe7d6e8be64337da2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae68abd81bee042fe7d6e8be64337da2b">setFrictionCoefficient</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a>)</td></tr>
+<tr class="memitem:ae68abd81bee042fe7d6e8be64337da2b" id="r_ae68abd81bee042fe7d6e8be64337da2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae68abd81bee042fe7d6e8be64337da2b">setFrictionCoefficient</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a>)</td></tr>
 
-<tr class="memitem:aaf29b8390302aef83c34751831f649f6" id="r_aaf29b8390302aef83c34751831f649f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf29b8390302aef83c34751831f649f6">getFrictionCoefficient</a> ()</td></tr>
+<tr class="memitem:aaf29b8390302aef83c34751831f649f6" id="r_aaf29b8390302aef83c34751831f649f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf29b8390302aef83c34751831f649f6">getFrictionCoefficient</a> ()</td></tr>
 
-<tr class="memitem:a50404d91149d02a5eb1b3d0f31713aab" id="r_a50404d91149d02a5eb1b3d0f31713aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50404d91149d02a5eb1b3d0f31713aab">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> y)</td></tr>
-
-</table><table class="memberdecls table">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a71658a4fa56561b5b34ed7382b800463" id="r_a71658a4fa56561b5b34ed7382b800463"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71658a4fa56561b5b34ed7382b800463">getElapsedTimeStep</a> ()</td></tr>
+<tr class="memitem:a50404d91149d02a5eb1b3d0f31713aab" id="r_a50404d91149d02a5eb1b3d0f31713aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50404d91149d02a5eb1b3d0f31713aab">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -81,19 +76,19 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a94878b789f611943ebadb47bb01a3005" id="r_a94878b789f611943ebadb47bb01a3005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94878b789f611943ebadb47bb01a3005">gravity</a></td></tr>
 <tr class="memdesc:a94878b789f611943ebadb47bb01a3005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gravity in the current physical world.  <br /></td></tr>
 
-<tr class="memitem:a662a8e7dbf5ab64ab2a8e1da1c76d13e" id="r_a662a8e7dbf5ab64ab2a8e1da1c76d13e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a></td></tr>
+<tr class="memitem:a662a8e7dbf5ab64ab2a8e1da1c76d13e" id="r_a662a8e7dbf5ab64ab2a8e1da1c76d13e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a662a8e7dbf5ab64ab2a8e1da1c76d13e">frictionCoefficient</a></td></tr>
 <tr class="memdesc:a662a8e7dbf5ab64ab2a8e1da1c76d13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction coefficient in the current physical world.  <br /></td></tr>
 
-<tr class="memitem:a844d5137cc359b19327464c6bb8c5353" id="r_a844d5137cc359b19327464c6bb8c5353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a></td></tr>
+<tr class="memitem:a844d5137cc359b19327464c6bb8c5353" id="r_a844d5137cc359b19327464c6bb8c5353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a844d5137cc359b19327464c6bb8c5353">timeScale</a></td></tr>
 <tr class="memdesc:a844d5137cc359b19327464c6bb8c5353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time scale for time step on each call to update.  <br /></td></tr>
 
-<tr class="memitem:a10d1da706204bb6eab370b684d6404c5" id="r_a10d1da706204bb6eab370b684d6404c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a></td></tr>
+<tr class="memitem:a10d1da706204bb6eab370b684d6404c5" id="r_a10d1da706204bb6eab370b684d6404c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10d1da706204bb6eab370b684d6404c5">cycle</a></td></tr>
 <tr class="memdesc:a10d1da706204bb6eab370b684d6404c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cycle of physical simulation during the current second.  <br /></td></tr>
 
-<tr class="memitem:adcd76e06a39c49343959facac13205f4" id="r_adcd76e06a39c49343959facac13205f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a></td></tr>
+<tr class="memitem:adcd76e06a39c49343959facac13205f4" id="r_adcd76e06a39c49343959facac13205f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcd76e06a39c49343959facac13205f4">skipCycles</a></td></tr>
 <tr class="memdesc:adcd76e06a39c49343959facac13205f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles to skip physical simulations to slow down physics.  <br /></td></tr>
 
-<tr class="memitem:a3d4b3dd281d9cb04334f811136eaf9ff" id="r_a3d4b3dd281d9cb04334f811136eaf9ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a></td></tr>
+<tr class="memitem:a3d4b3dd281d9cb04334f811136eaf9ff" id="r_a3d4b3dd281d9cb04334f811136eaf9ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4b3dd281d9cb04334f811136eaf9ff">remainingSkipCycles</a></td></tr>
 <tr class="memdesc:a3d4b3dd281d9cb04334f811136eaf9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of pending cycles to skip until the next physical simulation cycle.  <br /></td></tr>
 
 </table><table class="memberdecls table">
@@ -106,18 +101,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a5f02551ea04409d07101562db96f82f3 inherit pub_methods_class_component_manager" id="r_a5f02551ea04409d07101562db96f82f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyAllComponents</a> ()</td></tr>
 <tr class="memdesc:a5f02551ea04409d07101562db96f82f3 inherit pub_methods_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy all the manager's components.  <br /></td></tr>
 
-<tr class="memitem:ae0ff65057b734a50961ae59028bcbb52 inherit pub_methods_class_component_manager" id="r_ae0ff65057b734a50961ae59028bcbb52"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">instantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
+<tr class="memitem:adacff91a2aa0d6be1d814f1d5d8701ca inherit pub_methods_class_component_manager" id="r_adacff91a2aa0d6be1d814f1d5d8701ca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">create</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)=0</td></tr>
 
-<tr class="memitem:a8803e792ebc2bebd2b2a91c3127b91d7 inherit pub_methods_class_component_manager" id="r_a8803e792ebc2bebd2b2a91c3127b91d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">deinstantiateComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
-
-<tr class="memitem:a857bfb91f9066ce89104e5e414a396e8 inherit pub_methods_class_component_manager" id="r_a857bfb91f9066ce89104e5e414a396e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">purgeComponents</a> ()</td></tr>
+<tr class="memitem:a857bfb91f9066ce89104e5e414a396e8 inherit pub_methods_class_component_manager" id="r_a857bfb91f9066ce89104e5e414a396e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">purgeComponents</a> ()</td></tr>
 <tr class="memdesc:a857bfb91f9066ce89104e5e414a396e8 inherit pub_methods_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the purging of deleted components.  <br /></td></tr>
 
-<tr class="memitem:ae13a34663a70fdc54f4c8bf8625a2b68 inherit pub_methods_class_component_manager" id="r_ae13a34663a70fdc54f4c8bf8625a2b68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+<tr class="memitem:a34fef54c13654624e510a57515fffcfb inherit pub_methods_class_component_manager" id="r_a34fef54c13654624e510a57515fffcfb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">areComponentsVisual</a> ()</td></tr>
 
 <tr class="inherit_header pub_static_methods_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
-<tr class="memitem:a26fe2edd2da326d8ba40b56240ace2d8 inherit pub_static_methods_class_component_manager" id="r_a26fe2edd2da326d8ba40b56240ace2d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getManager</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
-
 <tr class="memitem:ab7850e60b0adf3926f04150afba28dd5 inherit pub_static_methods_class_component_manager" id="r_ab7850e60b0adf3926f04150afba28dd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
 
 <tr class="memitem:a4ae69ec984ab68cd9340ca55cd097313 inherit pub_static_methods_class_component_manager" id="r_a4ae69ec984ab68cd9340ca55cd097313"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
@@ -126,33 +117,32 @@ Additional Inherited Members</h2></td></tr>
 
 <tr class="memitem:a92e8340427cb4bec7980d97065930a3f inherit pub_static_methods_class_component_manager" id="r_a92e8340427cb4bec7980d97065930a3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponent</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
 
-<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a3c68aeccd17e620603bef2ce11544c6d inherit pub_static_methods_class_component_manager" id="r_a3c68aeccd17e620603bef2ce11544c6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">addComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a2d22b8f1456c81566550300b83379dde inherit pub_static_methods_class_component_manager" id="r_a2d22b8f1456c81566550300b83379dde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">removeComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
 <tr class="memitem:a123ea126f5ba13de211c4dffced1137e inherit pub_static_methods_class_component_manager" id="r_a123ea126f5ba13de211c4dffced1137e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">createComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
 
 <tr class="memitem:a1c09750f44f3f93cc9039fe65d561065 inherit pub_static_methods_class_component_manager" id="r_a1c09750f44f3f93cc9039fe65d561065"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">destroyComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
 
-<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int16</a> componentIndex)</td></tr>
+<tr class="memitem:a4b446d4fe848a795de3a8c8189b9d30a inherit pub_static_methods_class_component_manager" id="r_a4b446d4fe848a795de3a8c8189b9d30a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentAtIndex</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> componentIndex)</td></tr>
 
-<tr class="memitem:a33f787c9658a559e5e18da3376c7478b inherit pub_static_methods_class_component_manager" id="r_a33f787c9658a559e5e18da3376c7478b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>)</td></tr>
+<tr class="memitem:a33f787c9658a559e5e18da3376c7478b inherit pub_static_methods_class_component_manager" id="r_a33f787c9658a559e5e18da3376c7478b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponents</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>)</td></tr>
 
-<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Object.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a84de5f8e53184ddcb2e0892cd383da6e inherit pub_static_methods_class_component_manager" id="r_a84de5f8e53184ddcb2e0892cd383da6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsOfClass</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-component-manager/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+<tr class="memitem:a173c1986f1cac2302d0a25486f9858ea inherit pub_static_methods_class_component_manager" id="r_a173c1986f1cac2302d0a25486f9858ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getComponentsCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
 
-<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType,...)</td></tr>
+<tr class="memitem:a66848197db33bc9b10cc145181bac7d4 inherit pub_static_methods_class_component_manager" id="r_a66848197db33bc9b10cc145181bac7d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> command, <a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType,...)</td></tr>
 
-<tr class="memitem:afdb9d380597a7ae5e1f4c79a61f018e6 inherit pub_static_methods_class_component_manager" id="r_afdb9d380597a7ae5e1f4c79a61f018e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">getCount</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> componentType)</td></tr>
-
-<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
-
-<tr class="memitem:a50e0ecbab92db23be791d7feaea1ad7d inherit pub_static_methods_class_component_manager" id="r_a50e0ecbab92db23be791d7feaea1ad7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">isAnyCompomentVisible</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner)</td></tr>
+<tr class="memitem:aa034cd42b29cd26e63f8bc73a6d0e7b7 inherit pub_static_methods_class_component_manager" id="r_aa034cd42b29cd26e63f8bc73a6d0e7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">calculateRightBox</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> owner, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> *rightBox)</td></tr>
 
 <tr class="inherit_header pub_attribs_class_component_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_component_manager')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></td></tr>
 <tr class="memitem:a86bce556cf2be26d1414b36ecf82ee85 inherit pub_attribs_class_component_manager" id="r_a86bce556cf2be26d1414b36ecf82ee85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">components</a></td></tr>
 <tr class="memdesc:a86bce556cf2be26d1414b36ecf82ee85 inherit pub_attribs_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of components.  <br /></td></tr>
+
+<tr class="memitem:ae3c1a07ca3d4f024da5da332ec8f1a8b inherit pub_attribs_class_component_manager" id="r_ae3c1a07ca3d4f024da5da332ec8f1a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component-manager/">locked</a></td></tr>
+<tr class="memdesc:ae3c1a07ca3d4f024da5da332ec8f1a8b inherit pub_attribs_class_component_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to prevent the manipulation of the components list.  <br /></td></tr>
 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -160,7 +150,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Inherits from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a></p>
 <p>Manages the physical bodies in the game states. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L38">38</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L31">31</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afef35b089d3927c483f0affc5eb60230" name="afef35b089d3927c483f0affc5eb60230"></a>
 <h2 class="memtitle">constructor()</h2>
@@ -179,7 +169,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Class' constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L296">296</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L37">37</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a3a162c2cf33ed154211679924161b808" name="a3a162c2cf33ed154211679924161b808"></a>
+<h2 class="memtitle">create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-body/">Body</a> BodyManager::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *</td>          <td class="paramname"><span class="paramname"><em>bodySpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a body with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the body will attach to </td></tr>
+    <tr><td class="paramname">bodySpec</td><td>Spec to use to create the body </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Created body </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L87">87</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -210,7 +231,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L64">64</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L80">80</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -241,35 +262,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L57">57</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
-
-</div>
-</div>
-<a id="a71658a4fa56561b5b34ed7382b800463" name="a71658a4fa56561b5b34ed7382b800463"></a>
-<h2 class="memtitle">getElapsedTimeStep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels table">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname table">
-        <tr>
-          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> BodyManager::getElapsedTimeStep </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Retrieve the time that passes between each physical simulation step. </p><dl class="section return"><dt>Returns</dt><dd>The time that passes between each physical simulation step </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L37">37</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L73">73</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -280,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> BodyManager::getFrictionCoefficient </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> BodyManager::getFrictionCoefficient </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -289,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the physical world's friction coefficient. </p><dl class="section return"><dt>Returns</dt><dd>Friction coefficient to set in the current physical world </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L256">256</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L260">260</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -309,7 +302,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the physical world's gravity. </p><dl class="section return"><dt>Returns</dt><dd>Gravity in the current physical world </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L242">242</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L244">244</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -320,7 +313,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> BodyManager::getTimeScale </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> BodyManager::getTimeScale </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -329,7 +322,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Retrieve the time scale for time step on each call to update. </p><dl class="section return"><dt>Returns</dt><dd>Time scale for time step on each call to update </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L228">228</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L228">228</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -343,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint32</a> BodyManager::getType </td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> BodyManager::getType </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -359,38 +352,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="/documentation/api/class-component-manager/">ComponentManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L50">50</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
-
-</div>
-</div>
-<a id="afe00a9d54fcf66a788686dbff44c935b" name="afe00a9d54fcf66a788686dbff44c935b"></a>
-<h2 class="memtitle">instantiateComponent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname table">
-        <tr>
-          <td class="memname"><a class="el" href="/documentation/api/class-body/">Body</a> BodyManager::instantiateComponent </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *</td>          <td class="paramname"><span class="paramname"><em>bodySpec</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Create a body with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params table">
-    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-object/">Object</a> to which the body will attach to </td></tr>
-    <tr><td class="paramname">bodySpec</td><td>Spec to use to create the body </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Created body </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L71">71</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L66">66</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -403,12 +365,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void BodyManager::print </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -420,7 +382,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L270">270</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L274">274</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -441,7 +403,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the manager's state. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L85">85</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L99">99</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -454,7 +416,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void BodyManager::setFrictionCoefficient </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>frictionCoefficient</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>frictionCoefficient</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -466,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L249">249</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L251">251</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -491,7 +453,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L235">235</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L235">235</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -504,7 +466,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void BodyManager::setTimeScale </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>timeScale</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>timeScale</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -516,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L193">193</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L193">193</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -537,7 +499,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Update the registered bodies by advancing the physics simulations. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c#L92">92</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c#L106">106</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a>.</p>
 
 </div>
 </div>
@@ -552,7 +514,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> BodyManager::cycle</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> BodyManager::cycle</td>
         </tr>
       </table>
   </td>
@@ -564,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Cycle of physical simulation during the current second. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L52">52</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L45">45</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 
 </div>
 </div>
@@ -578,7 +540,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> BodyManager::frictionCoefficient</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> BodyManager::frictionCoefficient</td>
         </tr>
       </table>
   </td>
@@ -590,7 +552,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Friction coefficient in the current physical world. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L46">46</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L39">39</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +578,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gravity in the current physical world. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L43">43</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L36">36</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 
 </div>
 </div>
@@ -630,7 +592,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> BodyManager::remainingSkipCycles</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> BodyManager::remainingSkipCycles</td>
         </tr>
       </table>
   </td>
@@ -642,7 +604,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Number of pending cycles to skip until the next physical simulation cycle. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L58">58</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L51">51</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 
 </div>
 </div>
@@ -656,7 +618,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">uint8</a> BodyManager::skipCycles</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> BodyManager::skipCycles</td>
         </tr>
       </table>
   </td>
@@ -668,7 +630,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Number of cycles to skip physical simulations to slow down physics. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L55">55</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L48">48</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 
 </div>
 </div>
@@ -682,7 +644,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Misc/Types.h">fixed_t</a> BodyManager::timeScale</td>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> BodyManager::timeScale</td>
         </tr>
       </table>
   </td>
@@ -694,13 +656,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Time scale for time step on each call to update. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h#L49">49</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h#L42">42</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a>.</p>
 
 </div>
 </div>
 <br />The documentation for this class was generated from the following files:<ul>
-<li>VUEngine-Core/source/Component/Body/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.h">BodyManager.h</a></li>
-<li>VUEngine-Core/source/Component/Body/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/5d0a415d75dfed5bbd179714e1b923266a60a6e5/source/Component/Body/BodyManager.c">BodyManager.c</a></li>
+<li>VUEngine-Core/source/Component/Body/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.h">BodyManager.h</a></li>
+<li>VUEngine-Core/source/Component/Body/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/BodyManager.c">BodyManager.c</a></li>
 </ul>
 </div>
 
