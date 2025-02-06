@@ -24,9 +24,8 @@ And adds a few features of its own:
 - [Abstract classes](../custom-features/#abstract-classes)
 - [Singleton classes](../custom-features/#singleton-classes)
 - [Static classes](../custom-features/#static-classes)
-- [Class extensions](../custom-features/#class-extensions)
-- [Class mutator](../custom-features/#class-mutator)
-- [Instance mutator](../custom-features/#instance-mutator)
+- [Extensions classes](../custom-features/#extensions-classes)
+- [Mutation classes](../custom-features/#mutation-classes)
 
 ## Limitations
 
@@ -40,4 +39,4 @@ Virtual C doesn't support all of the common OOP concepts or common features of f
 
 In Virtual C, all attributes are protected; while all methods are either public or private.
 
-Another limitation is that all class instances have to be dynamically allocated, there can no be instances allocated in the stack. But since the Virtual Boy's CPU doesn't have data cache, the performance impact is not as big as on architectures that have it.
+Another limitation is that all class instances have to be dynamically allocated since `ClassName` declares always a pointer and there is no mechanism to automatically call a constructor at the declaration of instances, therefore, **there can no be instances allocated in the stack**. But since Virtual C targets -for now- the Virtual Boy, and its CPU **doesn't have data cache**, the performance impact is not as big as on architectures that have it.

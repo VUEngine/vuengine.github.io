@@ -79,7 +79,7 @@ These kind of singletons are dynamically allocated, hence not in the stack. Thei
 
 Static classes cannot have instances. All their methods are static.
 
-## Extensions classes
+### Extensions classes
 
 Classes can be extended through the use of the `extension` keyword. They provided a mechanism to achieve something like runtime method re-implementation on specific virtual methods. Extension classes don't have to, and cannot, provide a constructor and destructor.
 
@@ -119,7 +119,7 @@ To mutate a virtual method, use the following syntax:
     SomeClass::mutateMethod(someVirtualMethod, SomeClassExtension::someVirtualMethodOverride);
 ```
 
-## Mutation classes
+### Mutation classes
 
 Virtual C implements polymorphism by adding a virtual table pointer to each object, which means that it can be manipulated in real time. Mutation classes permit to override or to extend a class' functionality by allowing an object's virtual table pointer to change its target in runtime, making the instance subject to different implementations of virtual methods or capable of reacting to new methods provided by the mutation class. These classes have the following constraints:
 

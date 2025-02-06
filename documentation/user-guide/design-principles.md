@@ -23,7 +23,7 @@ order expose those features in a more friendly manner, we implemented a transpil
 
 By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
 
-But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory (that's why they are by default allocated in DRAM instead of WRAM) and performance overhead, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks.
+But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, like the loss of encapsulation details or, even worse in the case of the Virtual Boy, a non negligible memory (that's why they are by default allocated in DRAM instead of WRAM) and performance overhead, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks. So, the usage of singletons is a deliberate choice, conscious of the pitfalls that come with them.
 
 A singleton class' non static method can be protected by qualifying it as follows:
 
@@ -155,7 +155,7 @@ Parenting allows easy transformation of whole sets of [Actors](/documentation/ap
 
 Some of the earliest requirements and goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a [ListenerObject](/documentation/api/class-listener-object/) class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
 
-Messages can be sent directly to another [ListenerObject](/documentation/api/class-listener-object/) when the target is known, or they can be propagated through the [Stage](/documentation/api/class-stage/)’s children list.
+Messages can be sent directly to another [ListenerObject](/documentation/api/class-listener-object/) when the target is known, or they can be propagated through the [Stage](/documentation/api/class-stage/)’s children list in the case of [Actors](/documentation/api/class-actor/).
 
 A special kind of message, called command, can be propagated to the [Components](/documentation/api/class-component/) attached to an [Entity](/documentation/api/class-entity/).
 
@@ -239,7 +239,7 @@ if(!isDeleted(sprite))
 
 Internally, the [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s core will figure out dynamically where to display what the programmer has requested to be displayed, while that which has to be displayed has already been defined elsewhere, not by the game programmer, but by the game designer or artist.
 
-As another mechanism to facilitate the separation of concerns principle, the engine provides a custom facility for dynamic memory allocation that doesn’t rely on enabling the program’s heap. This, again, helps to avoid hardcoding data within the game’s logic by avoiding the need to know in advance how many objects of any given type are required in any given context.
+As another mechanism to facilitate the separation of concerns principle, the engine provides a custom facility for dynamic memory allocation that doesn’t rely on enabling the program’s heap. This, again, helps to avoid hardcoding data within the game’s logic by eliminating the need to know in advance how many objects of any given type are required in any given context.
 
 ## Performance
 
