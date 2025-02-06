@@ -261,7 +261,7 @@ The engine provides methods with the form `Classname::safeCast` to safely cast o
 
 `Classname::safeCast` decays into a plain, unsafe C cast under non debug build modes. When building in debug mode, the method `Classname::safeCast` performs a full blown RTTI, returning `NULL` if it fails or the same pointer casted to the desired class.
 
-When building in beta mode or below, the transpiler adds checks for the validity of the object pointer (`this`) passed to all methods. A call to `Classname::safeCast` is performed too to help track code paths that cause invalid pointers being passed to the wrong methods. This is a very costly check and can easily overflow the stack, particularly if multiplexed VIP interrupts are enabled.
+When building in beta mode or below, the transpiler adds checks for the validity of the object pointer (`this`) passed to all methods. A call to `Classname::safeCast` is performed too to help track code paths that cause dangling pointers being passed to the wrong methods. This is a very costly check and can easily overflow the stack, particularly if multiplexed VIP interrupts are enabled.
 
 ### Checking pointers
 
