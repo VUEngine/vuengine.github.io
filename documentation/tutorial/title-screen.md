@@ -79,7 +79,7 @@ The output when the game is rebuilt will be:
 
 <a href="/documentation/images/tutorial/a-pong-clone.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Game Title"><img src="/documentation/images/tutorial/a-pong-clone.png"/></a>
 
-But we can do better and replace that simple text with a nice image instead. To do that, we need to add an [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/) and attach to it a [Sprite](/documentation/api/class-sprite/). Lets see how to do that.
+But we can do better and replace that simple text with a nice image instead. To do that, we need to add an [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/) and attach to it a [Sprite](/documentation/api/class-sprite/). Let's see how to do that.
 
 ## Stage
 
@@ -195,7 +195,7 @@ And now the indicator will be properly shown:
 
 <a href="/documentation/images/tutorial/low-power-indicator-right.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Low Power Indicator"><img src="/documentation/images/tutorial/low-power-indicator-right.png" /></a>
 
-The dimensions of the indicator's image is in an instance of the [TextureSpec](/documentation/api/struct-texture-spec/) **specification** structure called **LowPowerIndicatorTextureSpec**. Lets find where it is and what it looks like.
+The dimensions of the indicator's image is in an instance of the [TextureSpec](/documentation/api/struct-texture-spec/) **specification** structure called **LowPowerIndicatorTextureSpec**. Let's find where it is and what it looks like.
 
 We can now follow the example of the low power indicator to add an image of our own to replace the title on display.
 
@@ -205,7 +205,7 @@ We will use the following image to replace the text:
 
 <a href="/documentation/images/tutorial/pong-logo.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Logo"><img src="/documentation/images/tutorial/pong-logo.png" /></a>
 
-To do so, create the folder _assets/Actors/Logo_ and add an _.actor_ file in it by right clicking the _Logo_ folder and selecting "New File". Enter "Logo" as the file name and select the Type "Actor" on the right hand side dropdown.
+To do so, create the folder _assets/Actor/Logo_ and add an _.actor_ file in it by right clicking the _Logo_ folder and selecting "New File". Enter "Logo" as the file name and select the Type "Actor" on the right hand side dropdown.
 
 <a href="/documentation/images/tutorial/new-actor-file.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Actor file"><img src="/documentation/images/tutorial/new-actor-file.png" /></a>
 
@@ -242,4 +242,4 @@ Finally, remove the call to `TitleScreenState::print` from the `TitleScreenState
 
 <a href="/documentation/images/tutorial/title-screen.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Title Screen"><img src="/documentation/images/tutorial/title-screen.png" /></a>
 
-We can now [add another custom GameState](/documentation/tutorial/pong-game-state/), this time one that will hold the actual Pong game.
+We can now [add another custom GameState](/documentation/tutorial/pong-game-state/) <i class="fa fa-arrow-right"></i>, this time one that will hold the actual Pong game.

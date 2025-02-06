@@ -20,7 +20,7 @@ This documentation consists of the following sections:
 - [FAQ](/documentation/faq/): for an overview of the most frequently asked questions.
   {% endcomment %}
 
-You might just want to skip most of that and start off with the [tutorial](/documentation/tutorial/introduction/) to start making your first game. You can still come back to the other sections later to deepen your knowledge of e.g. VUEngine's concepts.
+You might just want to skip most of that at first and start off with the [tutorial](/documentation/tutorial/introduction/) to make your first game. You can still come back to the other sections later to deepen your knowledge of e.g. VUEngine's concepts.
 
 > **BTW**: The name "VUEngine" (pronounced as "View Engine") is a portmanteau of the Virtual Boy’s original code name, "VUE" (short for "Virtual Utopia Experience"), and the word "Engine".
 

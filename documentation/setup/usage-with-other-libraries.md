@@ -11,5 +11,5 @@ Although [VUEngine Studio](https://www.vuengine.dev/downloads/) has been tailor-
 In the following, as an example, it is described how to use [VUEngine Studio](https://www.vuengine.dev/downloads/) with libgccvb.
 
 1. Download [libgccvb](https://github.com/VUEngine/libgccvb) from GitHub and unzip. This version of libgccvb ships with a makefile that is compatible with [VUEngine Studio](https://www.vuengine.dev/downloads/) calling conventions.
-2. Change the [VUEngine](https://github.com/VUEngine/VUEngine-Core) Core path setting <span class="setting">build.engine.core.path</span> to the location of libgccvb, e.g. `/Users/user/dev/libgccvb`.
+2. Change the engine path setting <span class="setting">build.engine.core.path</span> to the location of libgccvb, e.g. `/Users/user/dev/libgccvb`.
 3. Profit! You can now build your libgccvb-based project (e.g. [libgccvb-Barebone](https://github.com/VUEngine/libgccvb-Barebone)) through VUEngine Studio's build system.

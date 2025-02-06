@@ -10,7 +10,7 @@ There need to be two paddles that behave differently: one is controller by the p
 
 ## Player Paddle
 
-Delete the previous *Paddle.actor* file and replace it with a new one called *PlayerPaddle.actor* under *assets/Actors/Paddle/PlayerPaddle/*. Then, attach and configure a [Sprite](/documentation/api/class-sprite/) as we already did before.
+Delete the previous _Paddle.actor_ file and replace it with a new one called _PlayerPaddle.actor_ under _assets/Actor/Paddle/PlayerPaddle/_. Then, attach and configure a [Sprite](/documentation/api/class-sprite/) as we already did before.
 
 Now, add a [Mutator](/documentation/api/class-mutator/) to it and name its [mutation class](/documentation/language/custom-features/#mutation-classes) as `PlayerPaddle`:
 
@@ -26,7 +26,7 @@ extern ActorSpec PlayerPaddleActorSpec;
 [...]
 
 PositionedActorROMSpec PongStageActors[] =
-{	
+{
     {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
@@ -36,11 +36,11 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-Now, we have to create the `PlayerPaddle` class. Since it is a mutation target, it has to be a mutation class. 
+Now, we have to create the `PlayerPaddle` class. Since it is a mutation target, it has to be a mutation class.
 
-To create the `PlayerPaddle` mutation class, lets create the folder *source/Actors/Paddle/PlayerPaddle* and, in it, a header and an implementation file: *PlayerPaddle.h* and *PlayerPaddle.c*.
+To create the `PlayerPaddle` mutation class, let's create the folder _source/Actors/Paddle/PlayerPaddle_ and, in it, a header and an implementation file: _PlayerPaddle.h_ and _PlayerPaddle.c_.
 
-In *PlayerPaddle.h*, add the following to declare the new class:
+In _PlayerPaddle.h_, add the following to declare the new class:
 
 ```cpp
 #include <Actor.h>
@@ -56,10 +56,9 @@ Since it has to be controller by the player, it has to receive the keypad's inpu
 
 The [Actors](/documentation/api/class-actor/) that belong to the [Stage](/documentation/api/class-stage/) can receive messages that propagate through all its children. This allows to decouple the `PongState` and the [Actors](/documentation/api/class-actor/), that need to react to the user input, from each other.
 
-First, lets create the messages. To do that, right click the *config* folder and create a new **Messages** file and add the following messages to it:
+First, we'll create the messages. To do that, right click the _config_ folder and create a new **Messages** file and add the following messages to it:
 
 <a href="/documentation/images/tutorial/messages.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle mutator"><img src="/documentation/images/tutorial/messages.png" /></a>
-
 
 In the `PongState`'s declaration, override the `processUserInput` method:
 
@@ -123,7 +122,7 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
 
 Notice that the method returns `false`. This allows the propagation to continue to other [Actors](/documentation/api/class-actor/).
 
-`PlayerPaddle::handlePropagatedMessage` is still empty, we haven't really done anything with the input yet. There are various options here again on how to proceed: directly manipulate the `Paddle`'s transformation or use physic simulations to give the paddles some weight and inertia. Lets add a [Body](/documentation/api/class-body/) to the *PlayerPaddle.actor* as we did for the *Disk.actor*:
+`PlayerPaddle::handlePropagatedMessage` is still empty, we haven't really done anything with the input yet. There are various options here again on how to proceed: directly manipulate the `Paddle`'s transformation or use physic simulations to give the paddles some weight and inertia. Let's add a [Body](/documentation/api/class-body/) to the _PlayerPaddle.actor_ as we did for the _Disk.actor_:
 
 <a href="/documentation/images/tutorial/paddle-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle body"><img src="/documentation/images/tutorial/paddle-body.png" /></a>
 
@@ -148,7 +147,7 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
                 UserInput userInput = KeypadManager::getUserInput();
 
                 fixed_t forceMagnitude = 0;
-                
+
                 if(0 != (K_LU & userInput.holdKey))
                 {
                     forceMagnitude = -__FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
@@ -179,7 +178,7 @@ But we don't want the player to control both paddles.
 
 ## AI Paddle
 
-Repeat the steps above to create an *AIPaddle.actor* file in its respective folder, *assets/Actors/Paddle/AIPaddle/*. Then, attach and configure a [Sprite](/documentation/api/class-sprite/), a [Body](/documentation/api/class-body/) and a [Mutator](/documentation/api/class-mutator/) as we already did for the *PlayerPaddle.actor*, and create in a similar manner an `AIPaddle` mutation class.
+Repeat the steps above to create an _AIPaddle.actor_ file in its respective folder, _assets/Actor/Paddle/AIPaddle/_. Then, attach and configure a [Sprite](/documentation/api/class-sprite/), a [Body](/documentation/api/class-body/) and a [Mutator](/documentation/api/class-mutator/) as we already did for the _PlayerPaddle.actor_, and create in a similar manner an `AIPaddle` mutation class.
 
 Don't forget to update the [StageSpec](/documentation/api/struct-stage-spec/) **PongStageSpec**'s **PongStageActors** array:
 
@@ -191,7 +190,7 @@ extern ActorSpec AIPaddleActorSpec;
 [...]
 
 PositionedActorROMSpec PongStageActors[] =
-{	
+{
     {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
@@ -257,7 +256,7 @@ void AIPaddle::update()
 }
 ```
 
-But the [Actor](/documentation/api/class-actor/) has not been named yet. To do so, lets head back to the *PongStageSpec.c* file and name the [ActorSpecs](/documentation/api/struct-actor-spec/):
+But the [Actor](/documentation/api/class-actor/) has not been named yet. To do so, let's head back to the _PongStageSpec.c_ file and name the [ActorSpecs](/documentation/api/struct-actor-spec/):
 
 ```cpp
 PositionedActorROMSpec PongStageActors[] =

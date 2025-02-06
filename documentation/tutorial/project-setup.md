@@ -68,4 +68,4 @@ If everything goes well, you will be greated with the screen on the right.
     </figcaption>
 </figure>
 
-Now that we have set up our project and confirmed that it's building just fine, we are ready to start [diving into the code](/documentation/tutorial/first-steps/).
+Now that we have set up our project and confirmed that it's building just fine, we are ready to start [diving into the code](/documentation/tutorial/first-steps/) <i class="fa fa-arrow-right"></i>.
