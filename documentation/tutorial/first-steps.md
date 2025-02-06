@@ -46,7 +46,7 @@ The Barebone template project includes various standard splash screens that mimi
     </figcaption>
 </figure>
 
-Once the plugins are installed, their usage depends on what functionality each provides. In the case of the splash screens, they are used to start the game, so, let's see how they are used.
+Once the plugins are installed, their usage depend on what functionality each provides. In the case of the splash screens, they are used to start the game, so, let's see how they are used.
 
 ## The game's entry point
 
