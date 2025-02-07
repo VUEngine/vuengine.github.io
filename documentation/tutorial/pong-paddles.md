@@ -170,7 +170,7 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
 }
 ```
 
-Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, the method halts the propagation of the `kMessageKeypadHoldDown` message, but allows other messages to continue to be propagated by returning `true`.
+Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, the method halts the propagation of the `kMessageKeypadHoldDown` message, but allows other messages to continue to be propagated by returning `false`.
 
 If everything went right, once the game is built and run, both paddles will move when the user presses UP or DOWN in the left directional pad.
 
@@ -216,7 +216,7 @@ mutation class AIPaddle : Actor
 }
 ```
 
-The implementation will be very simple. Retrieve a reference to the `Disk` instance through the whole [Stage](/documentation/api/class-stage/) by calling `AIPaddle::getRelativeByName`, and checking the disk's position over the Y axis and apply a force to the `AIPaddle` to catch up with it:
+The implementation will be very simple: retrieve a reference to the `Disk` instance through the whole [Stage](/documentation/api/class-stage/) by calling `AIPaddle::getRelativeByName`, and check the disk's position over the Y axis and apply a force to the `AIPaddle` to catch up with it:
 
 ```cpp
 #include <Body.h>
@@ -261,13 +261,13 @@ But the [Actor](/documentation/api/class-actor/) has not been named yet. To do s
 ```cpp
 PositionedActorROMSpec PongStageActors[] =
 {
-    {&DiskActorSpec,                {0, 0, 0},      {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
+    {&DiskActorSpec,                {0, 0, 0},    {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
-    {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&AIPaddleActorSpec,            {180, 0, 0},  {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&LowPowerIndicatorActorSpec,   {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 
     {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
 ```
 
-When running the game, both paddles will work as they should.
+When running the game, both paddles will work as you'd expect.

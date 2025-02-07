@@ -6,13 +6,13 @@ title: Collisions
 
 # Collisions
 
-The only piece of functionality that still needs to be added to the game, before we can confidently call it Pong, is collisions. And that's exactly what we will be doing next.
+The only piece of functionality that still needs to be added to the game, before we can call it Pong, are collisions. And that's exactly what we will be doing next.
 
 [Colliders](/documentation/api/class-collider/) are the missing [Components](/documentation/api/class-component/) in our [Actors](/documentation/api/class-actor/) so they can interact with each other. But before adding them, we need to understand In-Game Types and Collider Layers.
 
 ## In-Game Types
 
-An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribute that can be used to identify the type of game object that one is interacting with without having to rely on RTTI (which is kind of expensive). So, let's create an _InGameTypes_ file and add to it two entries - "Disk" and "Paddle".
+An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribute that can be used to identify the type of game object that one is interacting with without having to rely on RTTI (which can be very expensive). So, let's create an _InGameTypes_ file and add to it two entries - "Disk" and "Paddle".
 
 <a href="/documentation/images/tutorial/in-game-types.png" data-toggle="lightbox" data-gallery="gallery" data-caption="In-Game Types "><img src="/documentation/images/tutorial/in-game-types.png" /></a>
 

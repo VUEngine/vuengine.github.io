@@ -85,7 +85,7 @@ So, the way in which the engine tells the game that an [Actor](/documentation/ap
 
 Create a _source/Actors/Disk_ folder and in it _Disk.h_ and _Disk.c_.
 
-To make the disk to move, we override the `ready` method and implement the necessary logic there, making the direction of the movement random each time the disk is ready:
+To make the disk to move, we override the `ready` method:
 
 ```cpp
 #include <Actor.h>
@@ -100,7 +100,7 @@ mutation class Disk : Actor
 }
 ```
 
-Finally, in the implementation of the method, set the velocity of the `Disk` instance as shown below:
+Finally, in the implementation of the method, set the velocity of the `Disk` instance as shown below, making the direction of the movement random each time the disk is ready:
 
 ```cpp
 #include <Body.h>
