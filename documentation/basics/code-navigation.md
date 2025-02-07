@@ -6,13 +6,13 @@ title: Code Navigation
 
 # Code Navigation
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) has a high productivity code editor which, when combined with programming language services, gives you the power of an IDE and the speed of a text editor. In this topic, we'll first describe VUEngine Studio's language intelligence features (suggestions, parameter hints, smart code navigation) and then show the power of the core text editor.
+[VUEngine Studio](https://www.vuengine.dev/) has a high productivity code editor which, when combined with programming language services, gives you the power of an IDE and the speed of a text editor. In this topic, we'll first describe VUEngine Studio's language intelligence features (suggestions, parameter hints, smart code navigation) and then show the power of the core text editor.
 
 ## Quick file navigation
 
 > Tip: You can open any file by its name when you type <span class="keys" data-osx="⌘P">Ctrl+P</span> (Quick Open).
 
-The Explorer is great for navigating between files when you are exploring a project. However, when you are working on a task, you will find yourself quickly jumping between the same set of files. [VUEngine Studio](https://www.vuengine.dev/downloads/) provides two powerful commands to navigate in and across files with easy-to-use key bindings.
+The Explorer is great for navigating between files when you are exploring a project. However, when you are working on a task, you will find yourself quickly jumping between the same set of files. [VUEngine Studio](https://www.vuengine.dev/) provides two powerful commands to navigate in and across files with easy-to-use key bindings.
 
 The `Show All Opened Editors` command <span class="keys" data-osx="⌘K ⌘P">Ctrl+K Ctrl+P</span> shows you a list of all files open in an editor group. To open one of these files, use the arrow keys to pick the file you want to navigate to, then press `Enter` to open it.
 

@@ -8,7 +8,7 @@ title: Project Setup
 
 The very first thing to do, if you haven't already, is to [download and install VUEngine Studio](/documentation/setup/installation/).
 
-Launch [VUEngine Studio](https://www.vuengine.dev/downloads/) and you will be greeted with the [Welcome view](/documentation/basics/getting-started/) when starting it for the first time (or whenever you don't currently have any project loaded).
+Launch [VUEngine Studio](https://www.vuengine.dev/) and you will be greeted with the [Welcome view](/documentation/basics/getting-started/) when starting it for the first time (or whenever you don't currently have any project loaded).
 
 <figure>
     <a href="/documentation/images/tutorial/welcome-view.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Welcome View">
@@ -34,7 +34,7 @@ In the **Create New Project** dialog, give the project a name, we will call it j
     </figcaption>
 </figure>
 
-Finally, click the **Create** button and [VUEngine Studio](https://www.vuengine.dev/downloads/) will create and open the project. Once your project has loaded, the File Explorer will be open. The `pong` folder contains your project's files. The others, `core` and `plugins` are handy shortcuts to the (readonly) [VUEngine Core](https://github.com/VUEngine/VUEngine-Core) and [VUEngine Plugins](https://github.com/VUEngine/VUEngine-Plugins) sources that ship with [VUEngine Studio](https://www.vuengine.dev/downloads/).
+Finally, click the **Create** button and [VUEngine Studio](https://www.vuengine.dev/) will create and open the project. Once your project has loaded, the File Explorer will be open. The `pong` folder contains your project's files. The others, `core` and `plugins` are handy shortcuts to the (readonly) [VUEngine Core](https://github.com/VUEngine/VUEngine-Core) and [VUEngine Plugins](https://github.com/VUEngine/VUEngine-Plugins) sources that ship with [VUEngine Studio](https://www.vuengine.dev/).
 
 <figure>
     <a href="/documentation/images/tutorial/fresh-project.png" data-toggle="lightbox" data-gallery="gallery" data-caption="First time opening the new project">

@@ -10,7 +10,7 @@ IntelliSense is a general term for various code editing features including: code
 
 ## Features
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) IntelliSense features are powered by a language service and such a service for Virtual C, the language used by VUEngine, comes bundled. A language service provides intelligent code completions based on language semantics and an analysis of your source code. If a language service knows possible completions, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (variables, methods, etc.) is filtered to only include members containing your typed characters. Pressing Tab or Enter will insert the selected member.
+[VUEngine Studio](https://www.vuengine.dev/) IntelliSense features are powered by a language service and such a service for Virtual C, the language used by VUEngine, comes bundled. A language service provides intelligent code completions based on language semantics and an analysis of your source code. If a language service knows possible completions, the IntelliSense suggestions will pop up as you type. If you continue typing characters, the list of members (variables, methods, etc.) is filtered to only include members containing your typed characters. Pressing Tab or Enter will insert the selected member.
 
 You can trigger IntelliSense in any editor window by typing <span class="keys" data-osx="⌃Space">Ctrl+Space</span> or by typing a trigger character (such as color (:)).
 
@@ -30,7 +30,7 @@ IntelliSense gives both inferred proposals and the global identifiers of the pro
 
 <a href="/documentation/images/basics/intellisense/auto-completion-types.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/intellisense/auto-completion-types.png"/></a>
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) IntelliSense offers different types of completions, including language server suggestions, snippets, and simple word based textual completions.
+[VUEngine Studio](https://www.vuengine.dev/) IntelliSense offers different types of completions, including language server suggestions, snippets, and simple word based textual completions.
 
 <table class="table">
   <thead>

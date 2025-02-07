@@ -217,7 +217,7 @@ In that panel, an image can be added by clicking the "Source Image" box at the t
 
 <a href="/documentation/images/tutorial/pong-sprite.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Sprite"><img src="/documentation/images/tutorial/pong-sprite.png" /></a>
 
-Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/downloads/) will generate the file _Converted/LogoActorSpec.c_ next to our _Logo.actor_ file, containing the necessary **Spec**(s) to add our logo [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/).
+Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/) will generate the file _Converted/LogoActorSpec.c_ next to our _Logo.actor_ file, containing the necessary **Spec**(s) to add our logo [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/).
 
 <a href="/documentation/images/tutorial/logo-actor-spec.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Logo Actor Spec"><img src="/documentation/images/tutorial/logo-actor-spec.png" /></a>
 

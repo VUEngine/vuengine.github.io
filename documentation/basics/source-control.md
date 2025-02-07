@@ -6,7 +6,7 @@ title: Source Control
 
 # Source Control
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support out-of-the-box. Many other source control providers are available through [extensions](../extensions/) on the Open VSX Registry.
+[VUEngine Studio](https://www.vuengine.dev/) has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support out-of-the-box. Many other source control providers are available through [extensions](../extensions/) on the Open VSX Registry.
 
 ## Initialize a repository
 
@@ -24,7 +24,7 @@ To instead clone an existing repository, use the **Git: Clone** command. You wil
 
 <a href="/documentation/images/basics/source-control/git-overview.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/source-control/git-overview.png" /></a>
 
-> **Note**: Make sure Git is installed. [VUEngine Studio](https://www.vuengine.dev/downloads/) will use your machine's Git installation (at least version 2.0.0), so you need to [install Git](https://git-scm.com/download) first before you get these features.
+> **Note**: Make sure Git is installed. [VUEngine Studio](https://www.vuengine.dev/) will use your machine's Git installation (at least version 2.0.0), so you need to [install Git](https://git-scm.com/download) first before you get these features.
 
 The Source Control icon in the Activity Bar on the left will always indicate an overview of how many changes you currently have in your repository. Selecting the icon will show you the details of your current repository changes: CHANGES, STAGED CHANGES and MERGE CHANGES.
 
@@ -48,33 +48,33 @@ More specific Commit actions can be found in the **More Actions** `...` menu on 
 
 ### Author commit messages using an editor
 
-If you don't enter a commit message when commiting changes, [VUEngine Studio](https://www.vuengine.dev/downloads/) opens an editor for the `COMMIT_EDITMSG` file where you can author the commit message in the editor. After you provide a commit message, either close the editor tab, or select the **Accept Commit Message** button in the editor toolbar to commit the changes.
+If you don't enter a commit message when commiting changes, [VUEngine Studio](https://www.vuengine.dev/) opens an editor for the `COMMIT_EDITMSG` file where you can author the commit message in the editor. After you provide a commit message, either close the editor tab, or select the **Accept Commit Message** button in the editor toolbar to commit the changes.
 
 To cancel the commit operation, you can either clear the contents of the text editor and close the editor tab, or click the **Discard Commit Message** button in the editor toolbar.
 
 <a href="/documentation/images/basics/source-control/commit-messag-editor.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/source-control/commit-messag-editor.png" /></a>
 
-You can disable this functionality by toggling the <span class="setting">git.useEditorAsCommitInput</span> setting. After the setting is changed, you have to restart [VUEngine Studio](https://www.vuengine.dev/downloads/) for the change to take effect.
+You can disable this functionality by toggling the <span class="setting">git.useEditorAsCommitInput</span> setting. After the setting is changed, you have to restart [VUEngine Studio](https://www.vuengine.dev/) for the change to take effect.
 
 To use the same flow for git commit commands executed in the integrated terminal, enable the <span class="setting">git.terminalGitEditor</span> setting.
 
 ## Branches and Tags
 
-You can create and checkout branches directly within [VUEngine Studio](https://www.vuengine.dev/downloads/) through the **Git: Create Branch** and **Git: Checkout to** commands in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>.
+You can create and checkout branches directly within [VUEngine Studio](https://www.vuengine.dev/) through the **Git: Create Branch** and **Git: Checkout to** commands in the **Command Palette** <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>.
 
 If you run **Git: Checkout to**, you will see a dropdown list containing all of the branches or tags in the current repository. It will also give you the option to create a new branch if you decide that's a better option, or checkout a branch in detached mode.
 
 <a href="/documentation/images/basics/source-control/git-branches.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/source-control/git-branches.png" /></a>
 
-The **Git: Create Branch** command lets you quickly create a new branch. Just provide the name of your new branch and [VUEngine Studio](https://www.vuengine.dev/downloads/) will create the branch and switch to it. If you choose to **Create new branch from...**, you'll get an extra prompt that allows you to specify which commit the new branch should be pointing to.
+The **Git: Create Branch** command lets you quickly create a new branch. Just provide the name of your new branch and [VUEngine Studio](https://www.vuengine.dev/) will create the branch and switch to it. If you choose to **Create new branch from...**, you'll get an extra prompt that allows you to specify which commit the new branch should be pointing to.
 
 ## Remotes
 
-Given that your repository is connected to some remote and that your checked out branch has an [upstream link](https://git-scm.com/book/ch3-5.html) to a branch in that remote, [VUEngine Studio](https://www.vuengine.dev/downloads/) offers you useful actions to push, pull, and sync that branch (the latter will run a pull command followed by a push command). You can find these actions in the **More Actions** `...` menu, along with the option to add or remove a remote.
+Given that your repository is connected to some remote and that your checked out branch has an [upstream link](https://git-scm.com/book/ch3-5.html) to a branch in that remote, [VUEngine Studio](https://www.vuengine.dev/) offers you useful actions to push, pull, and sync that branch (the latter will run a pull command followed by a push command). You can find these actions in the **More Actions** `...` menu, along with the option to add or remove a remote.
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) is able to periodically fetch changes from your remotes. This enables [VUEngine Studio](https://www.vuengine.dev/downloads/) to show how many changes your local repository is ahead or behind the remote. This feature is disabled by default and you can use the <span class="setting">git.autofetch</span> setting to enable it.
+[VUEngine Studio](https://www.vuengine.dev/) is able to periodically fetch changes from your remotes. This enables [VUEngine Studio](https://www.vuengine.dev/) to show how many changes your local repository is ahead or behind the remote. This feature is disabled by default and you can use the <span class="setting">git.autofetch</span> setting to enable it.
 
-> **Tip**: You should [set up a credential helper](https://docs.github.com/get-started/getting-started-with-git/caching-your-github-credentials-in-git) to avoid getting asked for credentials every time [VUEngine Studio](https://www.vuengine.dev/downloads/) talks to your Git remotes. If you don't do this, you may want to consider disabling automatic fetching via the <span class="setting">git.autofetch</span> setting to reduce the number of prompts you get.
+> **Tip**: You should [set up a credential helper](https://docs.github.com/get-started/getting-started-with-git/caching-your-github-credentials-in-git) to avoid getting asked for credentials every time [VUEngine Studio](https://www.vuengine.dev/) talks to your Git remotes. If you don't do this, you may want to consider disabling automatic fetching via the <span class="setting">git.autofetch</span> setting to reduce the number of prompts you get.
 
 ## Git Status Bar actions
 
@@ -88,7 +88,7 @@ If there is no upstream branch configured and the Git repository has remotes set
 
 ## Gutter indicators
 
-If you open a folder that is a Git repository and begin making changes, [VUEngine Studio](https://www.vuengine.dev/downloads/) will add useful annotations to the gutter and to the overview ruler.
+If you open a folder that is a Git repository and begin making changes, [VUEngine Studio](https://www.vuengine.dev/) will add useful annotations to the gutter and to the overview ruler.
 
 - A red triangle indicates where lines have been deleted
 - A green bar indicates new added lines
@@ -100,7 +100,7 @@ Click an indicator to open an inline diff of the change along with options to re
 
 ## Merge conflicts
 
-Merge conflicts are recognized by [VUEngine Studio](https://www.vuengine.dev/downloads/). Differences are highlighted and there are inline actions to accept either one or both changes. Once the conflicts are resolved, stage the conflicting file so you can commit those changes.
+Merge conflicts are recognized by [VUEngine Studio](https://www.vuengine.dev/). Differences are highlighted and there are inline actions to accept either one or both changes. Once the conflicts are resolved, stage the conflicting file so you can commit those changes.
 
 <a href="/documentation/images/basics/source-control/git-merge-conflict.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/source-control/git-merge-conflict.png" /></a>
 

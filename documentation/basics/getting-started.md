@@ -6,7 +6,7 @@ title: Getting Started
 
 # Getting Started
 
-When opening [VUEngine Studio](https://www.vuengine.dev/downloads/), you'll be greeted with the "Getting Started" view as seen in the screenshot below. From there you can either open an existing project by clicking on the **Open Folder** or **Open Workspace** buttons or create a new one by clicking the **Create New Project** button.
+When opening [VUEngine Studio](https://www.vuengine.dev/), you'll be greeted with the "Getting Started" view as seen in the screenshot below. From there you can either open an existing project by clicking on the **Open Folder** or **Open Workspace** buttons or create a new one by clicking the **Create New Project** button.
 
 If you have opened any projects before, you'll see a handy list here as well under `Recent`. Click to open any of these project.
 

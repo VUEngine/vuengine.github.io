@@ -6,7 +6,7 @@ title: Introduction
 
 # Introduction
 
-In this step-by-step tutorial we will be creating a simple Nintendo Virtual Boy game with [VUEngine Studio](https://www.vuengine.dev/downloads/).
+In this step-by-step tutorial we will be creating a simple Nintendo Virtual Boy game with [VUEngine Studio](https://www.vuengine.dev/).
 
 The game we will implement is Pong, which should cover all the basic needs for a game, from stages, states and game logic to sprites and collisions.
 

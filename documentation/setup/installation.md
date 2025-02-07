@@ -8,11 +8,11 @@ title: Installation
 
 Download the latest release for your operating system from the [Download](/downloads) page.
 
-> One note that affects all OSes: make sure that neither the folder you run [VUEngine Studio](https://www.vuengine.dev/downloads/) from, nor your project's folder contain whitespaces. Otherwise you won't be able to build your code.
+> One note that affects all OSes: make sure that neither the folder you run [VUEngine Studio](https://www.vuengine.dev/) from, nor your project's folder contain whitespaces. Otherwise you won't be able to build your code.
 
 ## Windows
 
-Run the installer. It will take a little moment to install [VUEngine Studio](https://www.vuengine.dev/downloads/) to `C:\VUEngine` and automatically launch it when done.
+Run the installer. It will take a little moment to install [VUEngine Studio](https://www.vuengine.dev/) to `C:\VUEngine` and automatically launch it when done.
 
 Note that binaries are not signed and Windows might warn you about it.
 
@@ -50,7 +50,7 @@ You can read more about using x86 libraries on Apple Silicon Macs [here](https:/
 
 ## Linux
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) can be run in different ways on Linux systems. Either install the `deb` using your favorite method, e.g.
+[VUEngine Studio](https://www.vuengine.dev/) can be run in different ways on Linux systems. Either install the `deb` using your favorite method, e.g.
 
 ```bash
 sudo dpkg -i VUEngine-Studio-X-X-X-Setup.deb
@@ -68,6 +68,6 @@ chmod a+x VUEngine-Studio-X-X-X.AppImage
 
 ## Bleeding Edge
 
-To enjoy the newest additions, which might not be included in the latest stable release, you can always check out and compile [VUEngine Studio](https://www.vuengine.dev/downloads/) yourself from its [GitHub](https://github.com/VUEngine/VUEngine-Studio) repository, or grab [WIP builds](https://github.com/VUEngine/VUEngine-Studio/actions) if available (you'll need to be signed in to a Github account for the latter).
+To enjoy the newest additions, which might not be included in the latest stable release, you can always check out and compile [VUEngine Studio](https://www.vuengine.dev/) yourself from its [GitHub](https://github.com/VUEngine/VUEngine-Studio) repository, or grab [WIP builds](https://github.com/VUEngine/VUEngine-Studio/actions) if available (you'll need to be signed in to a Github account for the latter).
 
 Note, thought, that there might be compatibility problems with VUEngine Core, Templates and/or other sample code. We only ensure compatibility at time of releases.

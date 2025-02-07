@@ -43,4 +43,4 @@ sudo apt update && sudo apt upgrade
 sudo apt install make libmpfr-dev libmpc-dev
 ```
 
-6.  [VUEngine Studio](https://www.vuengine.dev/downloads/) automatically detects WSL when it is installed. You might have to restart with <span class="keys" data-osx="⌘R">Ctrl+R</span> to pick up the change if you just installed WSL.
+6.  [VUEngine Studio](https://www.vuengine.dev/) automatically detects WSL when it is installed. You might have to restart with <span class="keys" data-osx="⌘R">Ctrl+R</span> to pick up the change if you just installed WSL.

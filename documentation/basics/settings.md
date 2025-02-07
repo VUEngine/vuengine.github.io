@@ -6,18 +6,18 @@ title: Settings
 
 # Settings
 
-You can configure [VUEngine Studio](https://www.vuengine.dev/downloads/) to your liking through its various settings. Nearly every part of its editor, user interface, and functional behavior has options you can modify.
+You can configure [VUEngine Studio](https://www.vuengine.dev/) to your liking through its various settings. Nearly every part of its editor, user interface, and functional behavior has options you can modify.
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) provides different scopes for settings:
+[VUEngine Studio](https://www.vuengine.dev/) provides different scopes for settings:
 
-- **User settings** - Settings that apply globally to any instance of [VUEngine Studio](https://www.vuengine.dev/downloads/) you open.
+- **User settings** - Settings that apply globally to any instance of [VUEngine Studio](https://www.vuengine.dev/) you open.
 - **Workspace settings** - Settings stored inside your workspace and only apply when the workspace is opened.
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) stores setting values in a settings JSON file. You can change settings values either by editing the settings JSON file or by using the [Settings editor](#settings-editor), which provides a graphical interface to manage settings.
+[VUEngine Studio](https://www.vuengine.dev/) stores setting values in a settings JSON file. You can change settings values either by editing the settings JSON file or by using the [Settings editor](#settings-editor), which provides a graphical interface to manage settings.
 
 ## User settings
 
-User settings are your personal settings for customizing [VUEngine Studio](https://www.vuengine.dev/downloads/). These settings apply globally to any instance of [VUEngine Studio](https://www.vuengine.dev/downloads/) you open. For example, if you set the editor font size to 14 in your user settings, it will be 14 in all instances of [VUEngine Studio](https://www.vuengine.dev/downloads/) on your computer.
+User settings are your personal settings for customizing [VUEngine Studio](https://www.vuengine.dev/). These settings apply globally to any instance of [VUEngine Studio](https://www.vuengine.dev/) you open. For example, if you set the editor font size to 14 in your user settings, it will be 14 in all instances of [VUEngine Studio](https://www.vuengine.dev/) on your computer.
 
 You can access your user settings in a few ways:
 
@@ -31,9 +31,9 @@ You can access your user settings in a few ways:
 
 Workspace settings are specific to a project and override user settings. If you have specific settings that you want to apply to a specific project, you can use workspace settings. For example, for a certain project, you might want to set the <span class="setting">files.exclude</span> setting to exclude a certain folder from the File Explorer.
 
-> Note: A [VUEngine Studio](https://www.vuengine.dev/downloads/) "workspace" is usually just your project root folder. You can also have more than one root folder in a [VUEngine Studio](https://www.vuengine.dev/downloads/) workspace through a feature called Multi-root workspaces. Get more info about [VUEngine Studio](https://www.vuengine.dev/downloads/) workspaces.
+> Note: A [VUEngine Studio](https://www.vuengine.dev/) "workspace" is usually just your project root folder. You can also have more than one root folder in a [VUEngine Studio](https://www.vuengine.dev/) workspace through a feature called Multi-root workspaces. Get more info about [VUEngine Studio](https://www.vuengine.dev/) workspaces.
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) stores workspace settings at the root of the project in a folder called `.vuengine`. This makes it easy to share settings with others in a version-controlled project.
+[VUEngine Studio](https://www.vuengine.dev/) stores workspace settings at the root of the project in a folder called `.vuengine`. This makes it easy to share settings with others in a version-controlled project.
 
 You can access the workspace settings in a few ways:
 
@@ -53,7 +53,7 @@ When you open the Settings editor, you can search and discover the settings you 
 
 <a href="/documentation/images/basics/settings/settings-editor-search.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/settings/settings-editor-search.png" width="100%" /></a>
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) applies changes to settings directly as you change them. You can identify settings that you modified by the colored bar on the left of the setting, similar to modified lines in the editor.
+[VUEngine Studio](https://www.vuengine.dev/) applies changes to settings directly as you change them. You can identify settings that you modified by the colored bar on the left of the setting, similar to modified lines in the editor.
 
 In the example below, the engine core path and hide build folder settings were changed.
 
@@ -65,7 +65,7 @@ The gear icon alongside the setting <span class="keys" data-osx="⇧F9">Shift+F9
 
 ## Settings JSON file
 
-[VUEngine Studio](https://www.vuengine.dev/downloads/) stores setting values in a `settings.json` file. The Settings editor is the user interface that enables you to review and modify setting values that are stored in a `settings.json` file.
+[VUEngine Studio](https://www.vuengine.dev/) stores setting values in a `settings.json` file. The Settings editor is the user interface that enables you to review and modify setting values that are stored in a `settings.json` file.
 
 You can also review and edit the `settings.json` file directly by opening it in the editor with the **Preferences: Open Settings (JSON)** or **Preferences: Open Workspace Settings (JSON)** command in the Command Palette <span class="keys" data-osx="⇧⌘P">Ctrl+Shift+P</span>.
 
@@ -102,7 +102,7 @@ While you can reset settings individually via the Settings editor, you can reset
 Configurations can be overridden at multiple levels by the different setting scopes. In the following list, _later scopes override earlier scopes_:
 
 - Default settings - This scope represents the default unconfigured setting values.
-- User settings - Apply globally to all [VUEngine Studio](https://www.vuengine.dev/downloads/) instances.
+- User settings - Apply globally to all [VUEngine Studio](https://www.vuengine.dev/) instances.
 - Workspace settings - Apply to the open folder or workspace.
 - Workspace Folder settings - Apply to a specific folder of a multi-root workspace.
 
@@ -118,7 +118,7 @@ Values with primitive types and Array types are overridden, meaning a configured
 
 ## Settings and security
 
-Some settings allow you to specify an executable that [VUEngine Studio](https://www.vuengine.dev/downloads/) will run to perform certain operations. For example, you can choose which shell the Integrated Terminal should use. For enhanced security, such settings can only be defined in user settings and not at workspace scope.
+Some settings allow you to specify an executable that [VUEngine Studio](https://www.vuengine.dev/) will run to perform certain operations. For example, you can choose which shell the Integrated Terminal should use. For enhanced security, such settings can only be defined in user settings and not at workspace scope.
 
 Here is the list of settings not supported in workspace settings:
 
@@ -127,5 +127,5 @@ Here is the list of settings not supported in workspace settings:
 - <span class="setting">terminal.external.osxExec</span>
 - <span class="setting">terminal.external.linuxExec</span>
 
-The first time you open a workspace that defines any of these settings, [VUEngine Studio](https://www.vuengine.dev/downloads/) will warn you and then always ignore the values after that.
+The first time you open a workspace that defines any of these settings, [VUEngine Studio](https://www.vuengine.dev/) will warn you and then always ignore the values after that.
 Settings Sync

@@ -8,7 +8,7 @@ title: VUEngine Plugins
 
 VUEngine is built on a modular architecture that allows to seamlessly link in and use additional components alongside the actual engine through the concept of **VUEngine Plugins**.
 
-You can [create plugins yourself](#custom-plugins), but first and foremost, [VUEngine Studio](https://www.vuengine.dev/downloads/) comes with a library of reuseable, prefab components like actors, states or fonts, that can be easily included in your VUEngine project for a good headstart and/or to add new functionality.
+You can [create plugins yourself](#custom-plugins), but first and foremost, [VUEngine Studio](https://www.vuengine.dev/) comes with a library of reuseable, prefab components like actors, states or fonts, that can be easily included in your VUEngine project for a good headstart and/or to add new functionality.
 
 For example, the library covers all the basic needs of a Virtual Boy game, like an automatic pause feature, a blinking low battery indicator, various splash screens or even a save data manager to work with Save RAM, so you can focus on writing the actual game. It also offers a broad selection of ready to use fonts, post processing effects, special actors, and more.
 
@@ -41,7 +41,7 @@ The list of installed plugins is stored in the `config/GameConfig` file in your 
 
 Of course you can also create custom plugins and consume them the same way as "official" plugins. That means you will be able to find them in, and install through, the plugins browser alongside the "official" plugins.
 
-For [VUEngine Studio](https://www.vuengine.dev/downloads/) to be able to know your custom plugins, you need to configure a root folder for them with the following setting.
+For [VUEngine Studio](https://www.vuengine.dev/) to be able to know your custom plugins, you need to configure a root folder for them with the following setting.
 
 ```json
 "plugins.user.path": "/Users/chris/dev/vb/plugins/"
