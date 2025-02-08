@@ -49,7 +49,7 @@ void TitleScreenState::enter(void* owner __attribute__((unused)))
 [...]
 ```
 
-Also change the references to `MaGameState` in _source/Game.c_.
+Also change the references to `MyGameState` in _source/Game.c_.
 
 ```cpp
 [...]
@@ -83,12 +83,10 @@ But we can do better and replace that simple text with a nice image instead. To 
 
 ## Stage
 
-At this moment, the `TitleScreenState` initializes its [Stage](/documentation/api/class-stage/) with the **MyGameStageSpec**. It is defined in the file _assets/Stages/MyGameStageSpec.c_. We will rename both to **TitleScreenStageSpec** and _assets/Stages/TitleScreenStageSpec.c_, respectively.
-
-### StageSpec
-
 The [Stages](/documentation/api/class-stage/) are created by passing a [StageSpec](/documentation/api/struct-stage-spec/) pointer to [GameState::configureStage](/documentation/api/class-game-state/). A [StageSpec](/documentation/api/struct-stage-spec/) holds all the configuration details to instatiante a [Stage](/documentation/api/class-stage/) and populate it with
 game [Actors](/documentation/api/class-actor/).
+
+At this moment, the `TitleScreenState` initializes its [Stage](/documentation/api/class-stage/) with the **MyGameStageSpec**. It is defined in the file _assets/Stages/MyGameStageSpec.c_. We will rename both to **TitleScreenStageSpec** and _assets/Stages/TitleScreenStageSpec.c_, respectively.
 
 Almost at the end of it, two arrays are referenced, `TitleScreenStageUiActors` and `TitleScreenStageActors`. These have entries that reference the **ActorSpecs** to use to instantiate and initialize the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/):
 
@@ -138,32 +136,12 @@ When [TitleScreenState::configureStage](/documentation/api/class-game-state/) is
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
 {
-    Base::enter(this, owner);
-
-    // Reset last button inputs
-    TitleScreenState::resetLastInputs(this);
+    [...]
 
     // Load stage
     TitleScreenState::configureStage(this, (StageSpec*)&TitleScreenStageSpec, NULL);
 
-    // Start clocks to start animations
-    TitleScreenState::startClocks(this);
-
-    // Enable user input
-    KeypadManager::enable();
-
-    // Start fade in effect
-    Camera::startEffect(Camera::getInstance(), kHide);
-
-    Camera::startEffect
-    (
-        Camera::getInstance(),
-        kFadeTo,        // effect type
-        0,              // initial delay (in ms)
-        NULL,           // target brightness
-        __FADE_DELAY,   // delay between fading steps (in ms)
-        NULL            // callback scope
-    );
+    [...]
 }
 ```
 
@@ -195,7 +173,7 @@ And now the indicator will be properly shown:
 
 <a href="/documentation/images/tutorial/low-power-indicator-right.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Low Power Indicator"><img src="/documentation/images/tutorial/low-power-indicator-right.png" /></a>
 
-The dimensions of the indicator's image is in an instance of the [TextureSpec](/documentation/api/struct-texture-spec/) **specification** structure called **LowPowerIndicatorTextureSpec**. Let's find where it is and what it looks like.
+The dimensions of the indicator's image is in an instance of the [TextureSpec](/documentation/api/struct-texture-spec/) **specification** structure called **LowPowerIndicatorTextureSpec**.
 
 We can now follow the example of the low power indicator to add an image of our own to replace the title on display.
 

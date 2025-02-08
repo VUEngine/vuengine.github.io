@@ -36,9 +36,7 @@ When the engine's [StateMachine](/documentation/api/class-state-machine/) enters
 
 ## Exiting the Title Screen
 
-At the moment, the `TitleScreenState::enter` method does a few things, like enabling the keypad and loading the [Stage](/documentation/api/class-stage/) with the [Actor](/documentation/api/class-actor/) that displays the logo.
-
-But we need to move beyond this state to start implementing the actual game. To do so, we need to detect the user input and change the engine's current state when the START button is pressed. That is done in the [GameState::processUserInput](/documentation/api/class-game-state/) method, which the state provided in the template project already overrides:
+We need to move beyond the `TitleScreenState` to start implementing the actual game. To do so, we need to detect the user input and change the engine's current state when the START button is pressed. That is done in the [GameState::processUserInput](/documentation/api/class-game-state/) method, which the state provided in the template project already overrides:
 
 ```cpp
 singleton class TitleScreenState : GameState
@@ -181,7 +179,7 @@ singleton class PongState : GameState
 }
 ```
 
-And to add a constructor and destructor to the `PongState`'s implementation:
+and to add a constructor and destructor to the `PongState`'s implementation:
 
 ```cpp
 void PongState::constructor()
