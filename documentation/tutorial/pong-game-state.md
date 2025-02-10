@@ -9,25 +9,25 @@ title: Pong Game State
 The main purpose of a [GameState](/documentation/api/class-game-state/) is to serve as the point of contact between the [VUEngine](https://github.com/VUEngine/VUEngine-Core) and the actual game. [GameStates](/documentation/api/class-game-state/) have a life cycle defined by the following interface:
 
 ```cpp
-    /// Prepares the object to enter this state.
-    /// @param owner: Object that is entering in this state
-    virtual void enter(void* owner);
+/// Prepares the object to enter this state.
+/// @param owner: Object that is entering in this state
+virtual void enter(void* owner);
 
-    /// Updates the object in this state.
-    /// @param owner: Object that is in this state
-    virtual void execute(void* owner);
+/// Updates the object in this state.
+/// @param owner: Object that is in this state
+virtual void execute(void* owner);
 
-    /// Prepares the object to exit this state.
-    /// @param owner: Object that is exiting this state
-    virtual void exit(void* owner);
+/// Prepares the object to exit this state.
+/// @param owner: Object that is exiting this state
+virtual void exit(void* owner);
 
-    /// Prepares the object to become inactive in this state.
-    /// @param owner: Object that is in this state
-    virtual void suspend(void* owner);
+/// Prepares the object to become inactive in this state.
+/// @param owner: Object that is in this state
+virtual void suspend(void* owner);
 
-    /// Prepares the object to become active in this state.
-    /// @param owner: Object that is in this state
-    virtual void resume(void* owner);
+/// Prepares the object to become active in this state.
+/// @param owner: Object that is in this state
+virtual void resume(void* owner);
 ```
 
 While it is possible to implement a whole game that runs solely in the `execute` method, the flexibility of the engine shines when using [Stages](/documentation/api/class-stage/), which are [Containers](/documentation/api/class-container/) that have [Actors](/documentation/api/class-actor/) as children.

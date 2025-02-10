@@ -10,7 +10,7 @@ In this step-by-step tutorial we will be creating a simple Nintendo Virtual Boy 
 
 The game we will implement is Pong, which should cover all the basic needs for a game, from stages, states and game logic to sprites and collisions.
 
-> **P.S.**: The finished code that we will be produced in the course of this tutorial can be found [here](https://github.com/VUEngine/Pong).
+> **P.S.**: The finished code that we will produce in the course of this tutorial can be found [here](https://github.com/VUEngine/Pong).
 
 <a href="/documentation/images/tutorial/the-game.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/tutorial/the-game.png"/></a>
 
