@@ -6,37 +6,11 @@ title: Pong Game State
 
 # Pong Game State
 
-The main purpose of a [GameState](/documentation/api/class-game-state/) is to serve as the point of contact between the [VUEngine](https://github.com/VUEngine/VUEngine-Core) and the actual game. [GameStates](/documentation/api/class-game-state/) have a life cycle defined by the following interface:
-
-```cpp
-/// Prepares the object to enter this state.
-/// @param owner: Object that is entering in this state
-virtual void enter(void* owner);
-
-/// Updates the object in this state.
-/// @param owner: Object that is in this state
-virtual void execute(void* owner);
-
-/// Prepares the object to exit this state.
-/// @param owner: Object that is exiting this state
-virtual void exit(void* owner);
-
-/// Prepares the object to become inactive in this state.
-/// @param owner: Object that is in this state
-virtual void suspend(void* owner);
-
-/// Prepares the object to become active in this state.
-/// @param owner: Object that is in this state
-virtual void resume(void* owner);
-```
-
-While it is possible to implement a whole game that runs solely in the `execute` method, the flexibility of the engine shines when using [Stages](/documentation/api/class-stage/), which are [Containers](/documentation/api/class-container/) that have [Actors](/documentation/api/class-actor/) as children.
-
-When the engine's [StateMachine](/documentation/api/class-state-machine/) enters a new [GameStates](/documentation/api/class-game-state/), it will call [GameState::enter](/documentation/api/class-game-state/), where the state can be initialized.
+So we now have a neat little title screen, but to start implementing the actual game, we need to move beyond the `TitleScreenState`. To do so, we need to detect the user input and change the engine's current state when the <span class="keys">START</span> button is pressed.
 
 ## Exiting the Title Screen
 
-We need to move beyond the `TitleScreenState` to start implementing the actual game. To do so, we need to detect the user input and change the engine's current state when the START button is pressed. That is done in the [GameState::processUserInput](/documentation/api/class-game-state/) method, which the state provided in the template project already overrides:
+That is done in the [GameState::processUserInput](/documentation/api/class-game-state/) method, which the state provided in the template project already overrides.
 
 ```cpp
 singleton class TitleScreenState : GameState
@@ -49,7 +23,7 @@ singleton class TitleScreenState : GameState
 }
 ```
 
-That method receives a pointer to a struct called [UserInput](/documentation/api/struct-user-input/) that has the user input that was registered during the last game frame:
+That method receives a pointer to a struct called [UserInput](/documentation/api/struct-user-input/) that has the user input that was registered during the last game frame.
 
 ```cpp
 /// User's input
@@ -84,7 +58,7 @@ typedef struct UserInput
 } UserInput;
 ```
 
-So, to detect if the user pressed the START button, the `pressedKey` attribute of the [UserInput](/documentation/api/struct-user-input/) struct has to be tested against [K_STA](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Hardware/KeypadManager.h) and, if successful, make the engine to change its current state to the [GameState](/documentation/api/class-game-state/) in which the actual gameplay will run:
+So, to detect if the user pressed the <span class="keys">START</span> button, the `pressedKey` attribute of the [UserInput](/documentation/api/struct-user-input/) struct has to be tested against [K_STA](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Hardware/KeypadManager.h). If successful, we will make the engine change its current state to the [GameState](/documentation/api/class-game-state/) in which the actual game will run.
 
 ```cpp
 void TitleScreenState::processUserInput(const UserInput* userInput)
@@ -102,28 +76,54 @@ void TitleScreenState::processUserInput(const UserInput* userInput)
 }
 ```
 
+> **Note**: Do not forget to also add _PongState.h_ to the list of #includes at the top of the file.
+
 ## Entering the Pong State
 
-We need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files: _source/States/PongState/PongState.h_ and _source/States/PongState/PongState.c_.
+The main purpose of a [GameState](/documentation/api/class-game-state/) is to serve as the point of contact between [VUEngine](https://github.com/VUEngine/VUEngine-Core) and the actual game. [GameStates](/documentation/api/class-game-state/) have a life cycle defined by the following interface:
+
+```cpp
+/// Prepares the object to enter this state.
+/// @param owner: Object that is entering in this state
+virtual void enter(void* owner);
+
+/// Updates the object in this state.
+/// @param owner: Object that is in this state
+virtual void execute(void* owner);
+
+/// Prepares the object to exit this state.
+/// @param owner: Object that is exiting this state
+virtual void exit(void* owner);
+
+/// Prepares the object to become inactive in this state.
+/// @param owner: Object that is in this state
+virtual void suspend(void* owner);
+
+/// Prepares the object to become active in this state.
+/// @param owner: Object that is in this state
+virtual void resume(void* owner);
+```
+
+While it is possible to implement a whole game that runs solely in the `execute` method, the flexibility of the engine shines when using [Stages](/documentation/api/class-stage/), which are [Containers](/documentation/api/class-container/) that have [Actors](/documentation/api/class-actor/) as children.
+
+When the engine's [StateMachine](/documentation/api/class-state-machine/) enters a new [GameStates](/documentation/api/class-game-state/), it will call [GameState::enter](/documentation/api/class-game-state/), where the state can be initialized.
+
+But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_.
 
 ```cpp
 singleton class PongState : GameState
 {
-    /// @protectedsection
-
-    /// @publicsection
-
-    /// Method to GameSaveDataManager the singleton instance
-    /// @return AnimationSchemesState singleton
+    /// Method to get the singleton instance
+    /// @return PongState singleton
     static PongState getInstance();
 }
 ```
 
-But the `PongState` will remain empty if we don't add actors to it. They consists of a disk and 2 paddles so, let's create them in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo in the title screen:
+The `PongState` will remain empty if we don't add actors to it. For a Pong game, we will need a disk and two paddles, but since the paddles are the same, we'll need only one. Create the actors in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo on the [title screen](/documentation/tutorial/title-screen/).
 
 <a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
 
-Now, we need a [StageSpec](/documentation/api/struct-stage-spec/) for the `PongState`. Simply copy the _TitleScreenStageSpec.c_ file, name it as _PongStageSpec.c_ and rename all the variables in it from `TitleScreen*` as `Pong*`. Finally, add the [ActorSpecs](/documentation/api/struct-actor-spec/) for the disk and the paddle as we added the **LogoActorSpec** to the title screen:
+Now, we need a [StageSpec](/documentation/api/struct-stage-spec/) for the `PongState`. Simply copy the _TitleScreenStageSpec.c_ file, rename it to _PongStageSpec.c_ and rename all the variables in it from `TitleScreen*` to `Pong*`. Finally, add the [ActorSpecs](/documentation/api/struct-actor-spec/) for the disk and the paddle as we added the **LogoActorSpec** to the title screen:
 
 ```cpp
 [...]
@@ -144,7 +144,7 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-Since the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to [PongState::configureStage](/documentation/api/class-game-state/):
+Now that the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to [PongState::configureStage](/documentation/api/class-game-state/):
 
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
@@ -165,12 +165,8 @@ Don't forget to override the method in the header file:
 ```cpp
 singleton class PongState : GameState
 {
-    /// @protectedsection
-
-    /// @publicsection
-
-    /// Method to GameSaveDataManager the singleton instance
-    /// @return AnimationSchemesState singleton
+    /// Method to get the singleton instance
+    /// @return PongState singleton
     static PongState getInstance();
 
     /// Prepares the object to enter this state.
@@ -179,7 +175,7 @@ singleton class PongState : GameState
 }
 ```
 
-and to add a constructor and destructor to the `PongState`'s implementation:
+Also add a constructor and destructor to the `PongState`'s implementation:
 
 ```cpp
 void PongState::constructor()
@@ -195,7 +191,7 @@ void PongState::destructor()
 }
 ```
 
-When the game is built and run, pressing START on the title screen will transition to the `PongState`, which will show the following.
+When the game is built and run, pressing <span class="keys">START</span> on the title screen will now transition to the `PongState`, which will show the following.
 
 <a href="/documentation/images/tutorial/pong-state.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/tutorial/pong-state.png" /></a>
 
@@ -203,4 +199,4 @@ While the engine remains in the same state, it will call [GameState::execute](/d
 
 Additionally, the [GameState](/documentation/api/class-game-state/) defines the `suspend` and `resume` methods, which are intented to give the current [GameState](/documentation/api/class-game-state/) the opportunity to perform optional tasks for suspending and resuming it, like when pausing and unpausing the game.
 
-To bring some life into our game, let's [make the Disk move](/documentation/tutorial/pong-disk/) <i class="fa fa-arrow-right"></i> next!
+To bring some life into our game, let's [make the Disk move](/documentation/tutorial/disk/) <i class="fa fa-arrow-right"></i> next!

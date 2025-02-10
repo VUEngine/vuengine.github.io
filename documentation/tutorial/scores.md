@@ -1,12 +1,14 @@
 ---
 layout: documentation
 parents: Documentation > Tutorial
-title: Pong Manager
+title: Scores
 ---
 
-# Pong Manager
+# Scores
 
-It is time track the score of the game. To do so, we are going to implement a class that will serve to separate the actual game's logic from the `PongState`, since the [GameState](/documentation/api/class-game-state/) is more of a proxy between the game and [VUEngine](https://github.com/VUEngine/VUEngine-Core).
+It is time to track the score of the game. To do so, we are going to implement a class that will serve to separate the actual game's logic from the `PongState`, since the [GameState](/documentation/api/class-game-state/) is more of a proxy between the game and [VUEngine](https://github.com/VUEngine/VUEngine-Core).
+
+## Pong Manager
 
 Let's add a `PongManager` class that will handle the game's logic. At minimum, it requires to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and since the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of it. But because the `PongState` persist through the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroys it when it exists. So, override the `enter` and `exit` methods.
 
@@ -56,7 +58,7 @@ void PongState::enter(void* owner __attribute__((unused)))
 }
 ```
 
-While its destructionr should happen in `PongState::exit`:
+While its destruction should happen in `PongState::exit`:
 
 ```cpp
 void PongState::exit(void* owner __attribute__((unused)))
@@ -139,9 +141,9 @@ void PongManager::printScore()
 }
 ```
 
-## Streaming
+## Event Listeners
 
-You should have already noticed that the disk moves back to the center of the screen after it has left it. This is the engine's streaming kicking in, which is implemented by the [Stage](/documentation/api/class-stage/) class, which is constantly checking which [Actors](/documentation/api/class-actor/) are out of bounds -within a tolerance margin configurable in the [StageSpec](/documentation/api/struct-stage-spec/)- to remove and destroy those that are beyond them, and is continually testing the entries in the **PongStageActors** array too, in order to instantiate those [Actors](/documentation/api/class-actor/) that are within the screen bounds. This behavior can be modified by setting to `true` the flag in the entries of the **PongStageActors** array, but we will leave it as it is to avoid the need of writing code to detect when the disk abandons the screen and to move it back to the center of it.
+You should have already noticed that the disk moves back to the center of the screen after it has left it. This is the engine's streaming kicking in, which is implemented by the [Stage](/documentation/api/class-stage/) class. It is constantly checking which [Actors](/documentation/api/class-actor/) are out of bounds -within a tolerance margin configurable in the [StageSpec](/documentation/api/struct-stage-spec/)- to remove and destroy those that are beyond them, and is continually testing the entries in the **PongStageActors** array, too, in order to instantiate those [Actors](/documentation/api/class-actor/) that are within the screen bounds. This behavior can be modified by setting to `true` the flag in the entries of the **PongStageActors** array, but we will leave it as it is to avoid the need of writing code to detect when the disk abandons the screen and to move it back to the center of it.
 
 Since we know that the disk is being continually destroyed and created, we could exploit that to keep track of the score, we just need to know about both events. The way to do that is to add event listeners for two events: `kEventActorDeleted` and `kEventActorCreated`.
 
@@ -234,9 +236,9 @@ When processing the `kEventActorDeleted` event, we check if the object that fire
 
 The processing of `kEventActorCreated` involves checking the firer of the event's name to make sure that we are going to listen for the destruction of the new disk.
 
-## Scoring
+## Printing
 
-We already put in place the code to print the score by implementing `PongManager::pringScore`. But the first time that either side scores a point, you will have probably noticed that the wrong score values are shown on the screen. This happens because the [CharSet](/documentation/api/class-char-set/) that is used for printing is loaded after the disk's [CharSet](/documentation/api/class-char-set/) and when the later is destroyed for the first time, CHAR memory gets defragmented by the [CharSetManager](/documentation/api/class-char-set-manager/), causing the [Printer](/documentation/api/class-printer/)'s [CharSet](/documentation/api/class-char-set/) to be defragmented, which requires that any text that used it to be printed again.
+We already put in place the code to print the score by implementing `PongManager::printScore`. But the first time that either side scores a point, you will have probably noticed that the wrong score values are shown on the screen. This happens because the [CharSet](/documentation/api/class-char-set/) that is used for printing is loaded after the disk's [CharSet](/documentation/api/class-char-set/) and when the later is destroyed for the first time, CHAR memory gets defragmented by the [CharSetManager](/documentation/api/class-char-set-manager/), causing the [Printer](/documentation/api/class-printer/)'s [CharSet](/documentation/api/class-char-set/) to be defragmented, which requires that any text that used it to be printed again.
 
 The [Printer](/documentation/api/class-printer/) fires the `kEventFontRewritten` when its [CharSets](/documentation/api/class-char-set/) get defragmented. So, we just need to listen for it and react appropriately:
 
@@ -270,3 +272,5 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
     [...]
 }
 ```
+
+In the next and final step of this tutorial, let's round things off by adding some [sound and rumble effects](/documentation/tutorial/sound-and-rumble/). <i class="fa fa-arrow-right"></i>.

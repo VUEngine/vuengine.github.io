@@ -6,9 +6,7 @@ title: Collisions
 
 # Collisions
 
-The only piece of functionality that still needs to be added to the game, before we can call it Pong, are collisions. And that's exactly what we will be doing next.
-
-[Colliders](/documentation/api/class-collider/) are the missing [Components](/documentation/api/class-component/) in our [Actors](/documentation/api/class-actor/) so they can interact with each other. But before adding them, we need to understand In-Game Types and Collider Layers.
+The only piece of functionality that still needs to be added to the game, before we can call it Pong, is collisions. And that's exactly what we will be doing next. [Colliders](/documentation/api/class-collider/) are the missing [Components](/documentation/api/class-component/) in our [Actors](/documentation/api/class-actor/) so they can interact with each other. But before adding them, we need to understand In-Game Types and Collider Layers.
 
 ## In-Game Types
 
@@ -18,7 +16,7 @@ An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribut
 
 ## Collider Layers
 
-A Collider Layer is an enum that is useful to cull off uncessary collision checks between [Colliders](/documentation/api/class-collider/) that belong to [Actors](/documentation/api/class-component/) that don't need to interact with each other. For example, a paddle doesn't need to check collisions against the other. So, their [Colliders](/documentation/api/class-collider/) should mutually ignore each other. To do so, each [Collider](/documentation/api/class-collider/) has a property that flags on which Collider Layers it "exists" and another that signals which Collider Layers to ignore when checking for collisions. With this idea in mind, the paddles' [Colliders](/documentation/api/class-collider/) should live in the "Paddle" layer and they should ignore the "Paddle" layer too. In contrast, the disk's [Collider](/documentation/api/class-collider/) should not ignore the "Paddle" Collider layer.
+A Collider Layer is an enum that is useful to cull off uncessary collision checks between [Colliders](/documentation/api/class-collider/) that belong to [Actors](/documentation/api/class-component/) that don't need to interact with each other. For example, a paddle doesn't need to check collisions against the other. So, their [Colliders](/documentation/api/class-collider/) should mutually ignore each other. To do so, each [Collider](/documentation/api/class-collider/) has a property that flags on which Collider Layers it "exists" and another that signals which Collider Layers to ignore when checking for collisions. With this idea in mind, the paddles' [Colliders](/documentation/api/class-collider/) should live in the "Paddle" layer and they should ignore the "Paddle" layer, too. In contrast, the disk's [Collider](/documentation/api/class-collider/) should not ignore the "Paddle" Collider layer.
 
 So, let's create the Collider Layers by adding a _ColliderLayers_ file in the _config_ folder and add the following to it:
 
@@ -26,9 +24,7 @@ So, let's create the Collider Layers by adding a _ColliderLayers_ file in the _c
 
 ## Adding Colliders
 
-Now we are ready to add [Colliders](/documentation/api/class-collider/) to the paddles and disk. Just open their respective _.actor_ files and the corresponding component to them.
-
-The Disk's [Collider](/documentation/api/class-collider/) configuration should look like this:
+Now we are ready to add [Colliders](/documentation/api/class-collider/) to the paddles and disk. Just open their respective _.actor_ files and add the corresponding component to them. The Disk's [Collider](/documentation/api/class-collider/) configuration should look like this:
 
 <a href="/documentation/images/tutorial/disk-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk collider"><img src="/documentation/images/tutorial/disk-collider.png" /></a>
 
@@ -138,4 +134,4 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 }
 ```
 
-We now have a basic but fully functional Pong game. But it would be more interesting if it displayed scores, right? Let's add that [in the next step](/documentation/tutorial/pong-manager/) <i class="fa fa-arrow-right"></i>.
+We now have a basic but fully functional Pong game. But it would be more interesting if it displayed scores, right? Let's add that [in the next step](/documentation/tutorial/scores/) <i class="fa fa-arrow-right"></i>.

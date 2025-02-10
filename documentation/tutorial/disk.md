@@ -1,22 +1,22 @@
 ---
 layout: documentation
 parents: Documentation > Tutorial
-title: Pong Disk
+title: Disk
 ---
 
 # Disk
 
-Let's get the disk to move. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the disk in the `PongState`, or creating an instance of a `Disk` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s mutation feature.
+Let's get the disk to move. This can be done in various ways using [VUEngine](https://github.com/VUEngine/VUEngine-Core), like directly manipulating the disk in the `PongState`, or creating an instance of a `Disk` class that inherits from [Actor](/documentation/api/class-actor/) instead of instantiating the base class, or even using plain [Sprites](/documentation/api/class-sprite/) and mainpulating their positions directly, but we are going to use a special kind of [Component](/documentation/api/class-component/) called [Mutators](/documentation/api/class-mutator/), which are possible thanks to [Virtual C](../../language/introduction)'s [mutation](/language/custom-features/#mutation-classes) feature.
 
-To make the disk to move we have various options: directly manipulate its transformation or use physic simulations to give it some weight and inertia. Let's do the latter.
+To make the disk move we have various options: directly manipulating its transformation or using physics simulations to give it some weight and inertia. Let's do the latter.
 
 ## Adding physic simulations
 
-Another type of [Component](/documentation/api/class-component/) that can be easily added throught **ActorEditor** is the [Body](/documentation/api/class-body/), which allows to apply forces to an [Actor](/documentation/api/class-actor/) or set its velocity and it will take care of the computation of the movement. Input the following values:
+Another type of [Component](/documentation/api/class-component/) that can be easily added through the actor editor is a [Body](/documentation/api/class-body/). It allows to apply forces to an [Actor](/documentation/api/class-actor/) or set its velocity and it will take care of the computation of the movement. Open the _Disk.actor_ editor and add a Body component like you previously did with Sprites, and input the following values:
 
 <a href="/documentation/images/tutorial/disk-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk body"><img src="/documentation/images/tutorial/disk-body.png" /></a>
 
-But to move a [Body](/documentation/api/class-body/), it is necessary to either set its velocity or to apply a force to it. Which means that we need to have access to the disk instance somehow to manipulate it. Enter [mutation classes](/documentation/language/custom-features/#mutation-classes).
+But to actually move a [Body](/documentation/api/class-body/), it is necessary to either set its velocity or to apply a force to it. Which means that we need to have access to the disk instance somehow to manipulate it. Enter [mutation classes](/documentation/language/custom-features/#mutation-classes).
 
 ## Mutation classes
 
@@ -28,9 +28,7 @@ The [Mutator](/documentation/api/class-mutator/) class is a kind of [Component](
 
 To add a [Mutator](/documentation/api/class-mutator/) to the disk, open the _Disk.actor_ editor and add a [Mutator](/documentation/api/class-mutator/) component to it. These components have a single configuration value through which we can specify the mutation class that the component will apply to the instance of the [Actor](/documentation/api/class-actor/), which is created with the auto-generated **DiskActorSpec** (see _assets/Actor/Disk/Converted/DiskActorSpec.c_).
 
-When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration.
-
-Since we want this instance to behave like a Pong disk, we will specify `Disk` as the target mutation class of the [Mutator](/documentation/api/class-mutator/):
+When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration. Since we want this instance to behave like a Pong disk, we will specify `Disk` as the target mutation class of the [Mutator](/documentation/api/class-mutator/):
 
 <a href="/documentation/images/tutorial/disk-mutator.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk mutator"><img src="/documentation/images/tutorial/disk-mutator.png" /></a>
 
@@ -79,13 +77,9 @@ mutation class Disk : Actor
 }
 ```
 
-[Actors](/documentation/api/class-actor/) are not necessarily ready to be manipulated immediately after they are instantiated since whether or not the have, by that point in time, all their [Components](/documentation/api/class-component/) attached to them depends on whether the [Stage](/documentation/api/class-stage/) is configured to defer their initialization over time or not. [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports deferred initialization in order to reduce hiccups during gameplay due to the load on the CPU when creating [Actors](/documentation/api/class-actor/) with many [Components](/documentation/api/class-component/) attached to them.
+[Actors](/documentation/api/class-actor/) are not necessarily ready to be manipulated immediately after they are instantiated since whether or not they have, at that point in time, all their [Components](/documentation/api/class-component/) attached to them depends on whether the [Stage](/documentation/api/class-stage/) is configured to defer their initialization over time or not. [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports deferred initialization in order to reduce hiccups during gameplay due to the load on the CPU when creating [Actors](/documentation/api/class-actor/) with many [Components](/documentation/api/class-component/) attached to them.
 
-So, the way in which the engine tells the game that an [Actor](/documentation/api/class-actor/) has been completely configured and can be manipulated is through the call to the [Container::ready](/documentation/api/class-container/) virtual method.
-
-Create a _source/Actors/Disk_ folder and in it _Disk.h_ and _Disk.c_.
-
-To make the disk to move, we override the `ready` method:
+The way in which the engine tells the game that an [Actor](/documentation/api/class-actor/) has been completely configured and can be manipulated is through the call to the [Container::ready](/documentation/api/class-container/) virtual method. So let's override the `ready` method:
 
 ```cpp
 #include <Actor.h>
@@ -140,4 +134,6 @@ void Disk::ready(bool recursive)
 }
 ```
 
-When building and running the game, the disk will start to move by itself.
+When building and running the game again, the disk will start to move by itself.
+
+Now, let's also breathe some life into the [Paddles](/documentation/tutorial/paddles/) <i class="fa fa-arrow-right"></i>.
