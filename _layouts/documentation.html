@@ -24,12 +24,6 @@ layout: default
       {% endunless %}
       <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
     </ol>
-    {% comment %}
-    <div title='Last modified {{ lastModificationDate | date: "%B %-d, %Y" }}'>
-      {% capture lastModificationDate %}{% last_modified {{ page.path }} %}{% endcapture %}
-      {{ lastModificationDate | date: "%B %-d, %Y" }}
-    </div>
-    {% endcomment %}
   </div>
 </section>
 
