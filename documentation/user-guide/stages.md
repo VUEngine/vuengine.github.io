@@ -34,7 +34,7 @@ The engine takes care of keeping up to date the [Containers](/documentation/api/
 
 At the root of the hierarchy of [Containers](/documentation/api/class-container/), sits an instance of the [Stage](/documentation/api/class-stage/) class. A [Stage](/documentation/api/class-stage/) is the first type of [Container](/documentation/api/class-container/) and [Entity](/documentation/api/class-entity/) that can be instantiated. It only allows instances of another specific type of Container as children: [Actors](/documentation/api/class-actor/). The [Stage](/documentation/api/class-stage/) implements the logic to stream in and out [Actors](/documentation/api/class-actor/) and is the proxy through which the [GameState](/documentation/api/class-game-state/) accesses the [Actors](/documentation/api/class-actor/) in a game level.
 
-The [Stage](/documentation/api/class-stage/) take a [StageSpec](/documentation/api/struct-stage-spec/) in its constructor to initialize itself. Among a lot of other things, it has an array of **ActorSpecs** that determine the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/):
+The [Stage](/documentation/api/class-stage/) takes a [StageSpec](/documentation/api/struct-stage-spec/) in its constructor to initialize itself. Among a lot of other things, it has an array of **ActorSpecs** that determine the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/):
 
 ```cpp
 PositionedActorROMSpec StageActorsSpecs[] =
@@ -204,7 +204,7 @@ PositionedActor positionedActor =
 Actor::spawnChildActor(actor, &positionedActor);
 ```
 
-Just as [Actors](/documentation/api/class-actor/) are not instantiated directly, but through the shown methods, they cannot be destroyed directly either. Instead, a special method that is safe has to be used:
+Just as [Actors](/documentation/api/class-actor/) can but should not be instantiated directly, but through the shown methods, they should not be destroyed directly either, or the program's behavior becomes undefined. Instead, a special method that is safe has to be used:
 
 ```cpp
 if(NULL != childActor)
@@ -316,7 +316,7 @@ Actor::applyForce(actor, &force, true);
 
 [ParticleSystems](/documentation/api/class-particlesystem/) are a specific kind of [Actor](/documentation/api/class-actor/) whose purpose is to instantiate a peculiar kind of [Entity](/documentation/api/class-entity/): [Particles](/documentation/api/class-particle/).
 
-As any other [Actor](/documentation/api/class-actor/), components can be attached to [ParticleSystems](/documentation/api/class-particlesystem/) and they have their own **Spec** that adds a few attributes to control how [Particles](/documentation/api/class-particle/) are generated:
+As is the case with any [Actor](/documentation/api/class-actor/), components can be attached to [ParticleSystems](/documentation/api/class-particlesystem/) and they have their own **Spec** that adds a few attributes to control how [Particles](/documentation/api/class-particle/) are generated:
 
 ```cpp
 ParticleSystemROMSpec SomeParticleSystemNormalSpec =

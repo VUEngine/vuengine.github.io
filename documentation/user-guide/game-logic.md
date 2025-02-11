@@ -24,7 +24,7 @@ void SomeGameState::execute(void* owner __attribute__((unused)))
 }
 ```
 
-By overriding the execute method, the `SomeGameState::execute` method in the above example will be called once per game frame once the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) enters that state. And by forwarding the call to the base’s implementation, any class deriving from [Actor](/documentation/api/class-actor/) that overrides its update method will be called once per frame too:
+By overriding the execute method, the `SomeGameState::execute` method in the above example will be called once per game frame from the moment that the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) enters that state. And by forwarding the call to the base’s implementation, any class deriving from [Actor](/documentation/api/class-actor/) that overrides its update method will be called once per frame too:
 
 ```cpp
 void CogWheel::update()
@@ -38,7 +38,7 @@ void CogWheel::update()
 
 ## Actor initialization
 
-The instantiation and initialization of instance of [Actor](/documentation/api/class-actor/) comprises, among other phases, the attachment of [Components](/documentation/api/class-component/) to them. To save on performance, [Stages](/documentation/api/class-stage/) can be configured to defer the attachment of [Components](/documentation/api/class-component/) over time, therefore, [Actors](/documentation/api/class-actor/) are not necesarilly ready to be manipulated after construction. But in many circumstances, it is necessary to execute some processes when an [Actor](/documentation/api/class-actor/) is ready after initialization and before it starts to be updated. The engine calls the virtual method `Actor::ready` when the initialization is complete so client code can perform custom procedures. The method's signature to override it is:
+The instantiation and initialization of instance of [Actor](/documentation/api/class-actor/) comprises, among other phases, the attachment of [Components](/documentation/api/class-component/) to them. To prevent CPU usage spikes during the instantiation of complex [Actors](/documentation/api/class-actor/), [Stages](/documentation/api/class-stage/) can be configured to defer the attachment of [Components](/documentation/api/class-component/) over time, therefore, [Actors](/documentation/api/class-actor/) are not necesarilly ready to be manipulated after construction. But in many circumstances, it is necessary to execute some processes when an [Actor](/documentation/api/class-actor/) is ready after initialization and before it starts to be updated. The engine calls the virtual method `Actor::ready` when the initialization is complete so client code can perform custom procedures. The method's signature to override it is:
 
 ```cpp
 /// Make the localized actor ready to start operating once it has been completely intialized.
