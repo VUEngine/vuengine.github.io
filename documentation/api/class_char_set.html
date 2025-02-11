@@ -72,7 +72,9 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:a7622f1030d320957da6d07f1481e8e11" id="r_a7622f1030d320957da6d07f1481e8e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7622f1030d320957da6d07f1481e8e11">putPixel</a> (const <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> charToReplace, const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *charSetPixel, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">BYTE</a> newPixelColor)</td></tr>
 
-<tr class="memitem:a379c3c056a0ebedef45bba68730bdab0" id="r_a379c3c056a0ebedef45bba68730bdab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a379c3c056a0ebedef45bba68730bdab0">setFrame</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> frame)</td></tr>
+<tr class="memitem:a379c3c056a0ebedef45bba68730bdab0" id="r_a379c3c056a0ebedef45bba68730bdab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a379c3c056a0ebedef45bba68730bdab0">setFrame</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> <a class="el" href="#a05deba13c0851f2957de60479e5b023d">frame</a>)</td></tr>
+
+<tr class="memitem:a6e2337e822e7d1358ea15b45ab419c23" id="r_a6e2337e822e7d1358ea15b45ab419c23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e2337e822e7d1358ea15b45ab419c23">getFrame</a> ()</td></tr>
 
 <tr class="memitem:ac035a4c1e52a4495ef7d05404832a8af" id="r_ac035a4c1e52a4495ef7d05404832a8af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac035a4c1e52a4495ef7d05404832a8af">write</a> ()</td></tr>
 <tr class="memdesc:ac035a4c1e52a4495ef7d05404832a8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the tile graphical data to VRAM.  <br /></td></tr>
@@ -91,6 +93,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ad451d042daed7d193b7cd6e9fd21917c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spec used in the construction of the char set.  <br /></td></tr>
 
 <tr class="memitem:a9a88d4f63545f438ac6e35ea74da8563" id="r_a9a88d4f63545f438ac6e35ea74da8563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a88d4f63545f438ac6e35ea74da8563">tilesDisplacement</a></td></tr>
+
+<tr class="memitem:a05deba13c0851f2957de60479e5b023d" id="r_a05deba13c0851f2957de60479e5b023d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05deba13c0851f2957de60479e5b023d">frame</a></td></tr>
+<tr class="memdesc:a05deba13c0851f2957de60479e5b023d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicator of the block inside the tiles array to write to DRAM.  <br /></td></tr>
 
 <tr class="memitem:a9d834a09cb3b9917debe3c7fb70c6fb2" id="r_a9d834a09cb3b9917debe3c7fb70c6fb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d834a09cb3b9917debe3c7fb70c6fb2">offset</a></td></tr>
 <tr class="memdesc:a9d834a09cb3b9917debe3c7fb70c6fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset in CHAR space where the block allocated for this char set starts.  <br /></td></tr>
@@ -282,6 +287,26 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-char-set/">CharSet</a> initialized with the provided spec </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c#L27">27</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c">CharSet.c</a>.</p>
+
+</div>
+</div>
+<a id="a6e2337e822e7d1358ea15b45ab419c23" name="a6e2337e822e7d1358ea15b45ab419c23"></a>
+<h2 class="memtitle">getFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> CharSet::getFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retriev the current frame (frame * number of CHARs + number of CHARs) to write to CHAR memory. </p><dl class="section return"><dt>Returns</dt><dd>The frame to write to CHAR memory </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c#L253">253</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c">CharSet.c</a>.</p>
 
 </div>
 </div>
@@ -613,7 +638,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Write the tile graphical data to VRAM. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c#L250">250</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c">CharSet.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c#L260">260</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.c">CharSet.c</a>.</p>
 
 </div>
 </div>
@@ -644,6 +669,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a05deba13c0851f2957de60479e5b023d" name="a05deba13c0851f2957de60479e5b023d"></a>
+<h2 class="memtitle">frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> CharSet::frame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicator of the block inside the tiles array to write to DRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L93">93</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
+
+</div>
+</div>
 <a id="a9d834a09cb3b9917debe3c7fb70c6fb2" name="a9d834a09cb3b9917debe3c7fb70c6fb2"></a>
 <h2 class="memtitle">offset</h2>
 
@@ -666,7 +717,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Offset in CHAR space where the block allocated for this char set starts. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L93">93</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L96">96</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
 
 </div>
 </div>
@@ -716,7 +767,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Number of references to this char set instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L99">99</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L102">102</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
 
 </div>
 </div>
@@ -742,7 +793,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If true the graphical data is written to VRAM; false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L96">96</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h#L99">99</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSet.h">CharSet.h</a>.</p>
 
 </div>
 </div>

@@ -62,12 +62,6 @@ Public Member Functions</h2></td></tr>
 
 <tr class="memitem:a5ec659bfe2411292f15abea9c4bb70ef" id="r_a5ec659bfe2411292f15abea9c4bb70ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ec659bfe2411292f15abea9c4bb70ef">disableQueue</a> ()</td></tr>
 
-<tr class="memitem:a1caf4a2fedb7c6553fadf7dbfc5f525b" id="r_a1caf4a2fedb7c6553fadf7dbfc5f525b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1caf4a2fedb7c6553fadf7dbfc5f525b">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
-<tr class="memdesc:a1caf4a2fedb7c6553fadf7dbfc5f525b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the manager's status.  <br /></td></tr>
-
-<tr class="memitem:a6bf8340106d292780237f9961627aa72" id="r_a6bf8340106d292780237f9961627aa72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf8340106d292780237f9961627aa72">printWaveFormStatus</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
-<tr class="memdesc:a6bf8340106d292780237f9961627aa72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print waveforms.  <br /></td></tr>
-
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -78,6 +72,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a445ca968154732e1f8247950a67cd89f" id="r_a445ca968154732e1f8247950a67cd89f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a445ca968154732e1f8247950a67cd89f">stopSoundSourcesUsedBy</a> (<a class="el" href="/documentation/api/class-object/">Object</a> requester)</td></tr>
 
 <tr class="memitem:a34771e36edbe276db9ee1ac681ba86aa" id="r_a34771e36edbe276db9ee1ac681ba86aa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34771e36edbe276db9ee1ac681ba86aa">getMode</a> ()</td></tr>
+
+<tr class="memitem:af48bfda5badff6c6b03f6bd934db2a88" id="r_af48bfda5badff6c6b03f6bd934db2a88"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48bfda5badff6c6b03f6bd934db2a88">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+<tr class="memdesc:af48bfda5badff6c6b03f6bd934db2a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the manager's status.  <br /></td></tr>
+
+<tr class="memitem:a98730b5eb112d58a9e4b832c4e2d7758" id="r_a98730b5eb112d58a9e4b832c4e2d7758"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98730b5eb112d58a9e4b832c4e2d7758">printWaveFormStatus</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+<tr class="memdesc:a98730b5eb112d58a9e4b832c4e2d7758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print waveforms.  <br /></td></tr>
 
 </table><table class="memberdecls table">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -249,7 +249,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Disable queueing petitions to play sounds (if there are no sound sources availables at the time of request, the petition is ignored). </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L261">261</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L350">350</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -270,7 +270,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Enable queueing petitions to play sounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L254">254</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L343">343</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -325,14 +325,17 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1caf4a2fedb7c6553fadf7dbfc5f525b" name="a1caf4a2fedb7c6553fadf7dbfc5f525b"></a>
+<a id="af48bfda5badff6c6b03f6bd934db2a88" name="af48bfda5badff6c6b03f6bd934db2a88"></a>
 <h2 class="memtitle">print()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">void VSUManager::print </td>
+          <td class="memname">static void VSUManager::print </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
@@ -342,22 +345,30 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Print the manager's status. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L276">276</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L105">105</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
-<a id="a6bf8340106d292780237f9961627aa72" name="a6bf8340106d292780237f9961627aa72"></a>
+<a id="a98730b5eb112d58a9e4b832c4e2d7758" name="a98730b5eb112d58a9e4b832c4e2d7758"></a>
 <h2 class="memtitle">printWaveFormStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname table">
         <tr>
-          <td class="memname">void VSUManager::printWaveFormStatus </td>
+          <td class="memname">static void VSUManager::printWaveFormStatus </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
@@ -367,11 +378,16 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Print waveforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L303">303</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L134">134</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -392,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reset the manager's state. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L109">109</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L198">198</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -417,7 +433,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L192">192</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L281">281</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -438,7 +454,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Stop all sound sources. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L232">232</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L321">321</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
@@ -492,7 +508,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Update the manager. </p>
 
-<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L215">215</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c#L304">304</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Hardware/VSUManager.c">VSUManager.c</a>.</p>
 
 </div>
 </div>
