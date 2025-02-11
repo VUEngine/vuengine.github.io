@@ -12,13 +12,13 @@ When a build fails, you can, in the best case, just follow the error messages to
 
 ## Error diagnosis
 
-Currently, there isn't an interactive C debugger for the version of GCC bundled with [VUEngine Studio](https://www.vuengine.dev/). There are active efforts to patch it in and/or get the later to work with LLVM but for the time being, debugging is done through in game text output. There are a few handy macros defined in [**Priting.h**](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Component/Graphics/2d/Sprites/Bgmap/Printing/Printing.h) that help to write such debug output code less tedious:
+Currently, there isn't an interactive C debugger for the version of GCC bundled with [VUEngine Studio](https://www.vuengine.dev/). There are active efforts to patch it in and/or get the later to work with LLVM but for the time being, debugging is done through in game text output. There are a few handy macros defined in [**Printer.h**](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Entity/Printer/Printer.h) that help to write such debug output code less tedious:
 
 ```cpp
-#define PRINT_TEXT(string, x, y)            Printing::text(string, x, y, NULL)
-#define PRINT_INT(number, x, y)             Printing::int32(number, x, y, NULL)
-#define PRINT_FLOAT(number, x, y)           Printing::float(number, x, y, 2, NULL)
-#define PRINT_HEX(number, x, y)             Printing::hex(number, x, y, 8, NULL)
+#define PRINT_TEXT(string, x, y)            Printer::text(string, x, y, NULL)
+#define PRINT_INT(number, x, y)             Printer::int32(number, x, y, NULL)
+#define PRINT_FLOAT(number, x, y)           Printer::float(number, x, y, 2, NULL)
+#define PRINT_HEX(number, x, y)             Printer::hex(number, x, y, 8, NULL)
 ```
 
 [Mednafen](https://mednafen.github.io/)'s debugger can come in handy to step through the disassembled code.

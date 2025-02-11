@@ -336,7 +336,7 @@ if(!isDeleted(wireframe))
 [Printing](/documentation/api/class-printing/) is used as follows:
 
 ```cpp
-Printing::text
+Printer::text
 (
     "Hello World",
     0,
@@ -348,7 +348,7 @@ Printing::text
 To erase all printing, use:
 
 ```cpp
-Printing::clear();
+Printer::clear();
 ```
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) comes with a default font for writing to the printing Layer, but you can replace it with any number of custom fonts.
