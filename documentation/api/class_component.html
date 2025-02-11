@@ -1,0 +1,508 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Component Class Reference"
+permalink: documentation/api/class-component/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Component Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Component:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_component.png" usemap="#Component_map" alt />
+  <map id="Component_map" name="Component_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="294,0,431,24" />
+<area href="/documentation/api/class-behavior/" alt="Behavior" shape="rect" coords="0,112,137,136" />
+<area href="/documentation/api/class-body/" alt="Body" shape="rect" coords="147,112,284,136" />
+<area href="/documentation/api/class-collider/" alt="Collider" shape="rect" coords="294,112,431,136" />
+<area href="/documentation/api/class-mutator/" alt="Mutator" shape="rect" coords="441,112,578,136" />
+<area href="/documentation/api/class-visual-component/" alt="VisualComponent" shape="rect" coords="735,112,872,136" />
+<area href="/documentation/api/class-ball/" alt="Ball" shape="rect" coords="147,168,284,192" />
+<area href="/documentation/api/class-box/" alt="Box" shape="rect" coords="294,168,431,192" />
+<area href="/documentation/api/class-line-field/" alt="LineField" shape="rect" coords="441,168,578,192" />
+<area href="/documentation/api/class-sprite/" alt="Sprite" shape="rect" coords="588,168,725,192" />
+<area href="/documentation/api/class-wireframe/" alt="Wireframe" shape="rect" coords="882,168,1019,192" />
+<area href="/documentation/api/class-inverse-box/" alt="InverseBox" shape="rect" coords="294,224,431,248" />
+<area href="/documentation/api/class-bgmap-sprite/" alt="BgmapSprite" shape="rect" coords="735,224,872,248" />
+<area href="/documentation/api/class-object-sprite/" alt="ObjectSprite" shape="rect" coords="735,280,872,304" />
+<area href="/documentation/api/class-object-sprite-container/" alt="ObjectSpriteContainer" shape="rect" coords="735,336,872,360" />
+<area href="/documentation/api/class-asterisk/" alt="Asterisk" shape="rect" coords="1029,224,1166,248" />
+<area href="/documentation/api/class-line/" alt="Line" shape="rect" coords="1029,280,1166,304" />
+<area href="/documentation/api/class-mesh/" alt="Mesh" shape="rect" coords="1029,336,1166,360" />
+<area href="/documentation/api/class-sphere/" alt="Sphere" shape="rect" coords="1029,392,1166,416" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aaae35aa887053415ab42210fd2354c6c" id="r_aaae35aa887053415ab42210fd2354c6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaae35aa887053415ab42210fd2354c6c">ComponentCommands</a> </td></tr>
+
+<tr class="memitem:a463f6accfd16254f18a653e9b42a3d8f" id="r_a463f6accfd16254f18a653e9b42a3d8f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a463f6accfd16254f18a653e9b42a3d8f">ComponentTypes</a> </td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a28bad0ff044a24a480e90333664bb736" id="r_a28bad0ff044a24a480e90333664bb736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28bad0ff044a24a480e90333664bb736">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="#aca4d3c4346e10579e0dce15d2deb2a22">owner</a>, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *<a class="el" href="#ada6fd2c1a873fe14efcc7db63d7a5d7e">componentSpec</a>)</td></tr>
+
+<tr class="memitem:aa363223965ab4fde75e7bb8cd3fa31a5" id="r_aa363223965ab4fde75e7bb8cd3fa31a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa363223965ab4fde75e7bb8cd3fa31a5">destructor</a> ()</td></tr>
+<tr class="memdesc:aa363223965ab4fde75e7bb8cd3fa31a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:a10a34c37c647a2eb17d35a52e99637f4" id="r_a10a34c37c647a2eb17d35a52e99637f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10a34c37c647a2eb17d35a52e99637f4">getSpec</a> ()</td></tr>
+
+<tr class="memitem:a25e761bb96d00c1983a60baa175c8a46" id="r_a25e761bb96d00c1983a60baa175c8a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-entity/">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25e761bb96d00c1983a60baa175c8a46">getOwner</a> ()</td></tr>
+<tr class="memdesc:a25e761bb96d00c1983a60baa175c8a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the collider's owner.  <br /></td></tr>
+
+<tr class="memitem:abd743f9cb05a07df8d21ec9ab2556bf6" id="r_abd743f9cb05a07df8d21ec9ab2556bf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd743f9cb05a07df8d21ec9ab2556bf6">getType</a> ()</td></tr>
+
+<tr class="memitem:ac23ddbae782c7e97ec99489147053721" id="r_ac23ddbae782c7e97ec99489147053721"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac23ddbae782c7e97ec99489147053721">releaseResources</a> ()</td></tr>
+<tr class="memdesc:ac23ddbae782c7e97ec99489147053721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to release the component.  <br /></td></tr>
+
+<tr class="memitem:aeb8bcf6d63894cf031312c5298334e1b" id="r_aeb8bcf6d63894cf031312c5298334e1b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8bcf6d63894cf031312c5298334e1b">handleCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> command, va_list args)</td></tr>
+
+<tr class="memitem:a23569737a5b0c64882e2ab8124385154" id="r_a23569737a5b0c64882e2ab8124385154"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23569737a5b0c64882e2ab8124385154">getRightBox</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aca4d3c4346e10579e0dce15d2deb2a22" id="r_aca4d3c4346e10579e0dce15d2deb2a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-entity/">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca4d3c4346e10579e0dce15d2deb2a22">owner</a></td></tr>
+<tr class="memdesc:aca4d3c4346e10579e0dce15d2deb2a22"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-object/">Object</a> to which this component attaches to.  <br /></td></tr>
+
+<tr class="memitem:ada6fd2c1a873fe14efcc7db63d7a5d7e" id="r_ada6fd2c1a873fe14efcc7db63d7a5d7e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6fd2c1a873fe14efcc7db63d7a5d7e">componentSpec</a></td></tr>
+<tr class="memdesc:ada6fd2c1a873fe14efcc7db63d7a5d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the spec that defines how to initialize the component.  <br /></td></tr>
+
+<tr class="memitem:a079d309fbac2b3b2a6be4f7096da3955" id="r_a079d309fbac2b3b2a6be4f7096da3955"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a079d309fbac2b3b2a6be4f7096da3955">transformation</a></td></tr>
+
+<tr class="memitem:a6635da6105aa4fdf6905707468eb5905" id="r_a6635da6105aa4fdf6905707468eb5905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6635da6105aa4fdf6905707468eb5905">deleteMe</a></td></tr>
+<tr class="memdesc:a6635da6105aa4fdf6905707468eb5905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark the component as pending deletion.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:abbad842e81ca692ea80f2a123fe3d4ad inherit pub_methods_class_listener_object" id="r_abbad842e81ca692ea80f2a123fe3d4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a4576f085df122b6ca093affc2ad92061 inherit pub_methods_class_listener_object" id="r_a4576f085df122b6ca093affc2ad92061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aa118c3b40a6ff3e2b49aacaa7536cf07 inherit pub_methods_class_listener_object" id="r_aa118c3b40a6ff3e2b49aacaa7536cf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message)</td></tr>
+
+<tr class="memitem:ad4061ed61e54372bfc3be55718900f02 inherit pub_methods_class_listener_object" id="r_ad4061ed61e54372bfc3be55718900f02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ac00bf51bd5d127ab6c703fe37008ea68 inherit pub_methods_class_listener_object" id="r_ac00bf51bd5d127ab6c703fe37008ea68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-component/">Component</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Serves as the base class for components of actors. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L77">77</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="aaae35aa887053415ab42210fd2354c6c" name="aaae35aa887053415ab42210fd2354c6c"></a>
+<h2 class="memtitle">ComponentCommands</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aaae35aa887053415ab42210fd2354c6c">ComponentCommands</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="/documentation/api/class-component/">Component</a> commands </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L33">33</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+
+</div>
+</div>
+<a id="a463f6accfd16254f18a653e9b42a3d8f" name="a463f6accfd16254f18a653e9b42a3d8f"></a>
+<h2 class="memtitle">ComponentTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a463f6accfd16254f18a653e9b42a3d8f">ComponentTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="/documentation/api/class-component/">Component</a> types </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L43">43</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a28bad0ff044a24a480e90333664bb736" name="a28bad0ff044a24a480e90333664bb736"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Component::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>componentSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the component attaches to </td></tr>
+    <tr><td class="paramname">componentSpec</td><td>Pointer to the spec that defines how to initialize the component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L42">42</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="aa363223965ab4fde75e7bb8cd3fa31a5" name="aa363223965ab4fde75e7bb8cd3fa31a5"></a>
+<h2 class="memtitle">destructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Component::destructor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class' destructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L80">80</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="a25e761bb96d00c1983a60baa175c8a46" name="a25e761bb96d00c1983a60baa175c8a46"></a>
+<h2 class="memtitle">getOwner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-entity/">Entity</a> Component::getOwner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the collider's owner. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L102">102</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="a23569737a5b0c64882e2ab8124385154" name="a23569737a5b0c64882e2ab8124385154"></a>
+<h2 class="memtitle">getRightBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-right-box/">RightBox</a> Component::getRightBox </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the mesh's bounding box. </p><dl class="section return"><dt>Returns</dt><dd>Bounding box of the mesh </dd></dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-mesh/">Mesh</a>, and <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L126">126</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="a10a34c37c647a2eb17d35a52e99637f4" name="a10a34c37c647a2eb17d35a52e99637f4"></a>
+<h2 class="memtitle">getSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> * Component::getSpec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the spec pointer that defined how to initialized the component </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-component/">Component</a> spec pointer </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L95">95</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="abd743f9cb05a07df8d21ec9ab2556bf6" name="abd743f9cb05a07df8d21ec9ab2556bf6"></a>
+<h2 class="memtitle">getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Component::getType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the component's type. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-component/">Component</a>'s type' </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L109">109</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="aeb8bcf6d63894cf031312c5298334e1b" name="aeb8bcf6d63894cf031312c5298334e1b"></a>
+<h2 class="memtitle">handleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Component::handleCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle a command. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">command</td><td>Command to handle </td></tr>
+    <tr><td class="paramname">args</td><td>Variable arguments list depending on the command to handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-body/">Body</a>, <a class="el" href="/documentation/api/class-collider/">Collider</a>, and <a class="el" href="/documentation/api/class-visual-component/">VisualComponent</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L121">121</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<a id="ac23ddbae782c7e97ec99489147053721" name="ac23ddbae782c7e97ec99489147053721"></a>
+<h2 class="memtitle">releaseResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Component::releaseResources </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called to release the component. </p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-sprite/">Sprite</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c#L116">116</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ada6fd2c1a873fe14efcc7db63d7a5d7e" name="ada6fd2c1a873fe14efcc7db63d7a5d7e"></a>
+<h2 class="memtitle">componentSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a>* Component::componentSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the spec that defines how to initialize the component. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L85">85</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+
+</div>
+</div>
+<a id="a6635da6105aa4fdf6905707468eb5905" name="a6635da6105aa4fdf6905707468eb5905"></a>
+<h2 class="memtitle">deleteMe</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Component::deleteMe</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to mark the component as pending deletion. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L92">92</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+
+</div>
+</div>
+<a id="aca4d3c4346e10579e0dce15d2deb2a22" name="aca4d3c4346e10579e0dce15d2deb2a22"></a>
+<h2 class="memtitle">owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-entity/">Entity</a> Component::owner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-object/">Object</a> to which this component attaches to. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L82">82</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+
+</div>
+</div>
+<a id="a079d309fbac2b3b2a6be4f7096da3955" name="a079d309fbac2b3b2a6be4f7096da3955"></a>
+<h2 class="memtitle">transformation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a>* Component::transformation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cache the transformation of the <a class="el" href="/documentation/api/class-entity/">Entity</a> that the component attaches to to avoid having to retrieve it all the time </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h#L89">89</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.h">Component.h</a></li>
+<li>VUEngine-Core/source/Component/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Component.c">Component.c</a></li>
+</ul>
+</div>
+
+
+</div>

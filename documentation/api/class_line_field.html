@@ -1,0 +1,535 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "LineField Class Reference"
+permalink: documentation/api/class-line-field/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">LineField Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for LineField:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_line_field.png" usemap="#LineField_map" alt />
+  <map id="LineField_map" name="LineField_map">
+<area href="/documentation/api/class-collider/" alt="Collider" shape="rect" coords="0,0,64,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab9a484176f4b47174df11516f5cc0fc3" id="r_ab9a484176f4b47174df11516f5cc0fc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9a484176f4b47174df11516f5cc0fc3">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> *colliderSpec)</td></tr>
+<tr class="memdesc:ab9a484176f4b47174df11516f5cc0fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a0b892808b7c0c58e44eeadc0f642f293" id="r_a0b892808b7c0c58e44eeadc0f642f293"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b892808b7c0c58e44eeadc0f642f293">getNormal</a> ()</td></tr>
+
+<tr class="memitem:a8bf94be34b904f3eeaae235a14181f58" id="r_a8bf94be34b904f3eeaae235a14181f58"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bf94be34b904f3eeaae235a14181f58">configureWireframe</a> ()</td></tr>
+<tr class="memdesc:a8bf94be34b904f3eeaae235a14181f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the wireframe used to show the collider.  <br /></td></tr>
+
+<tr class="memitem:a1b2a1b008f3fdbc2e228de69c40c3de8" id="r_a1b2a1b008f3fdbc2e228de69c40c3de8"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b2a1b008f3fdbc2e228de69c40c3de8">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+
+<tr class="memitem:a32500ff1f00971ea907c24c2a9f73132" id="r_a32500ff1f00971ea907c24c2a9f73132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32500ff1f00971ea907c24c2a9f73132">displace</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> displacement)</td></tr>
+
+<tr class="memitem:af21e35ec778b22553bc08789639a2743" id="r_af21e35ec778b22553bc08789639a2743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af21e35ec778b22553bc08789639a2743">getCenter</a> ()</td></tr>
+
+<tr class="memitem:a1d4cd8ef41334d80bac191da2636c3d1" id="r_a1d4cd8ef41334d80bac191da2636c3d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d4cd8ef41334d80bac191da2636c3d1">getVertexes</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> vertexes[2])</td></tr>
+
+<tr class="memitem:a125556ad2e0217c0177948adccb855c8" id="r_a125556ad2e0217c0177948adccb855c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a125556ad2e0217c0177948adccb855c8">setNormalLength</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a9fb8814be40f6cdb1a6f617bd025124b">normalLength</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af4c8087f6319cae5d9a8cd820727b091" id="r_af4c8087f6319cae5d9a8cd820727b091"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4c8087f6319cae5d9a8cd820727b091">meshSpec</a></td></tr>
+<tr class="memdesc:af4c8087f6319cae5d9a8cd820727b091"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-mesh/">Mesh</a> used to draw the collider.  <br /></td></tr>
+
+<tr class="memitem:a660be1a5762f8fbbcdb8a5a56baf33ed" id="r_a660be1a5762f8fbbcdb8a5a56baf33ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a660be1a5762f8fbbcdb8a5a56baf33ed">a</a></td></tr>
+<tr class="memdesc:a660be1a5762f8fbbcdb8a5a56baf33ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extreme of the line that defines the line field.  <br /></td></tr>
+
+<tr class="memitem:aadd09d046967ebcc14b84a488615543e" id="r_aadd09d046967ebcc14b84a488615543e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadd09d046967ebcc14b84a488615543e">b</a></td></tr>
+<tr class="memdesc:aadd09d046967ebcc14b84a488615543e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extreme of the line that defines the line field.  <br /></td></tr>
+
+<tr class="memitem:a13a82bc055a27a39a20723fb6a6052e6" id="r_a13a82bc055a27a39a20723fb6a6052e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a82bc055a27a39a20723fb6a6052e6">normal</a></td></tr>
+<tr class="memdesc:a13a82bc055a27a39a20723fb6a6052e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal to the line defined by the points a and b.  <br /></td></tr>
+
+<tr class="memitem:a9fb8814be40f6cdb1a6f617bd025124b" id="r_a9fb8814be40f6cdb1a6f617bd025124b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fb8814be40f6cdb1a6f617bd025124b">normalLength</a></td></tr>
+<tr class="memdesc:a9fb8814be40f6cdb1a6f617bd025124b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the line field's normal.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_collider"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_collider')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-collider/">Collider</a></td></tr>
+<tr class="memitem:afa53873975943a015e3dbe1683696ac4 inherit pub_types_class_collider" id="r_afa53873975943a015e3dbe1683696ac4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">CollisionResult</a> </td></tr>
+
+<tr class="memitem:acb64310d4a061637083550a348805661 inherit pub_types_class_collider" id="r_acb64310d4a061637083550a348805661"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">ColliderClassIndexes</a> </td></tr>
+
+<tr class="memitem:a310bfcf60d1aac1cb1a0ed5ce50a507b inherit pub_types_class_collider" id="r_a310bfcf60d1aac1cb1a0ed5ce50a507b"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">ColliderROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_collider"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_collider')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-collider/">Collider</a></td></tr>
+<tr class="memitem:ac548a82a926cfaf623396e55bce032a6 inherit pub_methods_class_collider" id="r_ac548a82a926cfaf623396e55bce032a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> *colliderSpec)</td></tr>
+<tr class="memdesc:ac548a82a926cfaf623396e55bce032a6 inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a6decc258c4f7155a975f893126deb345 inherit pub_methods_class_collider" id="r_a6decc258c4f7155a975f893126deb345"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:addc8ed5e9582775300ecdb84a2a600c3 inherit pub_methods_class_collider" id="r_addc8ed5e9582775300ecdb84a2a600c3"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="memitem:ae95ac8a217edda6210c9331e1e68c7f6 inherit pub_methods_class_collider" id="r_ae95ac8a217edda6210c9331e1e68c7f6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">handleCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> command, va_list args)</td></tr>
+
+<tr class="memitem:a9d460f03e9fcaf210a835d3ad38679b9 inherit pub_methods_class_collider" id="r_a9d460f03e9fcaf210a835d3ad38679b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">enable</a> ()</td></tr>
+<tr class="memdesc:a9d460f03e9fcaf210a835d3ad38679b9 inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the collider for collision checks.  <br /></td></tr>
+
+<tr class="memitem:afc38e30271187b1b58898ca2120f112d inherit pub_methods_class_collider" id="r_afc38e30271187b1b58898ca2120f112d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">disable</a> ()</td></tr>
+<tr class="memdesc:afc38e30271187b1b58898ca2120f112d inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the collider for collision checks.  <br /></td></tr>
+
+<tr class="memitem:a0d7ed508ddc7050c7e52d5f6f73d1305 inherit pub_methods_class_collider" id="r_a0d7ed508ddc7050c7e52d5f6f73d1305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">setLayers</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> <a class="el" href="/documentation/api/class-collider/">layers</a>)</td></tr>
+
+<tr class="memitem:ab5f5c72ae3df1608cc17e49d248bbe71 inherit pub_methods_class_collider" id="r_ab5f5c72ae3df1608cc17e49d248bbe71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">getLayers</a> ()</td></tr>
+
+<tr class="memitem:a01cbe20dbc711a5baaadbd66d958692c inherit pub_methods_class_collider" id="r_a01cbe20dbc711a5baaadbd66d958692c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">setLayersToIgnore</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> <a class="el" href="/documentation/api/class-collider/">layersToIgnore</a>)</td></tr>
+
+<tr class="memitem:a6e3f34e1ae362430c50c0494948ed136 inherit pub_methods_class_collider" id="r_a6e3f34e1ae362430c50c0494948ed136"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">getLayersToIgnore</a> ()</td></tr>
+
+<tr class="memitem:a190c1b3e21dfc4a4860fb3c253938f2a inherit pub_methods_class_collider" id="r_a190c1b3e21dfc4a4860fb3c253938f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">checkCollisions</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> checkCollisions)</td></tr>
+
+<tr class="memitem:a646aec0bdda5a94a0642a5ee280e7943 inherit pub_methods_class_collider" id="r_a646aec0bdda5a94a0642a5ee280e7943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">registerCollisions</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> registerCollisions)</td></tr>
+
+<tr class="memitem:af66280d9c0a9b8af81223fea5bb19814 inherit pub_methods_class_collider" id="r_af66280d9c0a9b8af81223fea5bb19814"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-collider/">CollisionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">collides</a> (<a class="el" href="/documentation/api/class-collider/">Collider</a> collider)</td></tr>
+
+<tr class="memitem:aa869bd3e5c35f8a8308c16b6e27903a4 inherit pub_methods_class_collider" id="r_aa869bd3e5c35f8a8308c16b6e27903a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">resolveCollision</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:ac563d51027ef94c04e31ea0be2009a7b inherit pub_methods_class_collider" id="r_ac563d51027ef94c04e31ea0be2009a7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">canMoveTowards</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> displacement)</td></tr>
+
+<tr class="memitem:a9273e3c9b4dc2e89f474bd21d87ca708 inherit pub_methods_class_collider" id="r_a9273e3c9b4dc2e89f474bd21d87ca708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">discardCollisions</a> ()</td></tr>
+<tr class="memdesc:a9273e3c9b4dc2e89f474bd21d87ca708 inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard any registered collision.  <br /></td></tr>
+
+<tr class="memitem:a8451d024bae7255fb8148a32249f1ddb inherit pub_methods_class_collider" id="r_a8451d024bae7255fb8148a32249f1ddb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">getCollidingFrictionCoefficient</a> ()</td></tr>
+
+<tr class="memitem:a9e4e0c27de7dd700a84f470dcfb6d774 inherit pub_methods_class_collider" id="r_a9e4e0c27de7dd700a84f470dcfb6d774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">show</a> ()</td></tr>
+<tr class="memdesc:a9e4e0c27de7dd700a84f470dcfb6d774 inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the collider.  <br /></td></tr>
+
+<tr class="memitem:a01a0bb18fb69c75fa71e929dfa385c0d inherit pub_methods_class_collider" id="r_a01a0bb18fb69c75fa71e929dfa385c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">hide</a> ()</td></tr>
+<tr class="memdesc:a01a0bb18fb69c75fa71e929dfa385c0d inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide the collider.  <br /></td></tr>
+
+<tr class="memitem:aebbe95a8c2872f85cb3a1aa82d92500a inherit pub_methods_class_collider" id="r_aebbe95a8c2872f85cb3a1aa82d92500a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">resize</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> sizeDelta)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_collider"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_collider')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-collider/">Collider</a></td></tr>
+<tr class="memitem:a0118d492500f883fd4c9919e1284ed19 inherit pub_attribs_class_collider" id="r_a0118d492500f883fd4c9919e1284ed19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">position</a></td></tr>
+<tr class="memdesc:a0118d492500f883fd4c9919e1284ed19 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displaced position.  <br /></td></tr>
+
+<tr class="memitem:ac9c942d35dd8aa4db4209478b3f7f803 inherit pub_attribs_class_collider" id="r_ac9c942d35dd8aa4db4209478b3f7f803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">otherColliders</a></td></tr>
+<tr class="memdesc:ac9c942d35dd8aa4db4209478b3f7f803 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of colliding colliders.  <br /></td></tr>
+
+<tr class="memitem:a78772d53fc7b082419ccfcc2a0509e2d inherit pub_attribs_class_collider" id="r_a78772d53fc7b082419ccfcc2a0509e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">layers</a></td></tr>
+<tr class="memdesc:a78772d53fc7b082419ccfcc2a0509e2d inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layers on which this collider live.  <br /></td></tr>
+
+<tr class="memitem:aa59fe6197674d817278e13ba220365f3 inherit pub_attribs_class_collider" id="r_aa59fe6197674d817278e13ba220365f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">layersToIgnore</a></td></tr>
+<tr class="memdesc:aa59fe6197674d817278e13ba220365f3 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layers to ignore when checking for collisions.  <br /></td></tr>
+
+<tr class="memitem:af7c8e9085485a2ed45d355b13369b00b inherit pub_attribs_class_collider" id="r_af7c8e9085485a2ed45d355b13369b00b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">wireframe</a></td></tr>
+<tr class="memdesc:af7c8e9085485a2ed45d355b13369b00b inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-wireframe/">Wireframe</a> to make the collider visible (mainly for debugging purposes)  <br /></td></tr>
+
+<tr class="memitem:a11223e6c48173abf89f353d3fc256f59 inherit pub_attribs_class_collider" id="r_a11223e6c48173abf89f353d3fc256f59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">enabled</a></td></tr>
+<tr class="memdesc:a11223e6c48173abf89f353d3fc256f59 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">If false, it is ignored in all callision checks.  <br /></td></tr>
+
+<tr class="memitem:a946c1f2c55e29da882a88a5b82a17731 inherit pub_attribs_class_collider" id="r_a946c1f2c55e29da882a88a5b82a17731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">checkForCollisions</a></td></tr>
+<tr class="memdesc:a946c1f2c55e29da882a88a5b82a17731 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">If false, it doesn't check collision against other colliders.  <br /></td></tr>
+
+<tr class="memitem:a00440e32dc4014c85b3572b67a368e91 inherit pub_attribs_class_collider" id="r_a00440e32dc4014c85b3572b67a368e91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">registerCollisions</a></td></tr>
+<tr class="memdesc:a00440e32dc4014c85b3572b67a368e91 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, it registers other colliders when a collision arises.  <br /></td></tr>
+
+<tr class="memitem:ad8ed2f7368675f6dbde1b491193981de inherit pub_attribs_class_collider" id="r_ad8ed2f7368675f6dbde1b491193981de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">classIndex</a></td></tr>
+<tr class="memdesc:ad8ed2f7368675f6dbde1b491193981de inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class index to avoid using __GET_CAST when checking for collisions.  <br /></td></tr>
+
+<tr class="memitem:aaf7d8c65d76f08b4dfa8ae9b34a5a239 inherit pub_attribs_class_collider" id="r_aaf7d8c65d76f08b4dfa8ae9b34a5a239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-collider/">invalidPosition</a></td></tr>
+<tr class="memdesc:aaf7d8c65d76f08b4dfa8ae9b34a5a239 inherit pub_attribs_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to force the computation of the collider's position.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-line-field/">LineField</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-collider/">Collider</a></p>
+<p>Defines a line that is sensible to collision on one of its sides. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8bf94be34b904f3eeaae235a14181f58" name="a8bf94be34b904f3eeaae235a14181f58"></a>
+<h2 class="memtitle">configureWireframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void LineField::configureWireframe </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configure the wireframe used to show the collider. </p>
+<p>color</p>
+<p>Transparency mode (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD)</p>
+<p>Flag to render the wireframe in interlaced mode</p>
+<p>segments</p>
+
+<p>Implements <a class="el" href="/documentation/api/class-collider/">Collider</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L92">92</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="ab9a484176f4b47174df11516f5cc0fc3" name="ab9a484176f4b47174df11516f5cc0fc3"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void LineField::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-collider-spec/">ColliderSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>colliderSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class' constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L52">52</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="a32500ff1f00971ea907c24c2a9f73132" name="a32500ff1f00971ea907c24c2a9f73132"></a>
+<h2 class="memtitle">displace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void LineField::displace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>displacement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Displace the line filed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">displacement</td><td>Displacement vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L202">202</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="af21e35ec778b22553bc08789639a2743" name="af21e35ec778b22553bc08789639a2743"></a>
+<h2 class="memtitle">getCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> LineField::getCenter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the line field's center point. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-line/">Line</a> field's center point </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L210">210</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="a0b892808b7c0c58e44eeadc0f642f293" name="a0b892808b7c0c58e44eeadc0f642f293"></a>
+<h2 class="memtitle">getNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> LineField::getNormal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the normal to the collider. </p><dl class="section return"><dt>Returns</dt><dd>Normal to the collider </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-collider/">Collider</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L85">85</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="a1d4cd8ef41334d80bac191da2636c3d1" name="a1d4cd8ef41334d80bac191da2636c3d1"></a>
+<h2 class="memtitle">getVertexes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void LineField::getVertexes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>vertexes</em></span>[2]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the vertexes that define the line field. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">vertexes</td><td>Array of vectors that define the linefied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L225">225</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="a1b2a1b008f3fdbc2e228de69c40c3de8" name="a1b2a1b008f3fdbc2e228de69c40c3de8"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void LineField::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print collider's state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-collider/">Collider</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L172">172</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<a id="a125556ad2e0217c0177948adccb855c8" name="a125556ad2e0217c0177948adccb855c8"></a>
+<h2 class="memtitle">setNormalLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void LineField::setNormalLength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>normalLength</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the length of the line field's normal. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">normalLength</td><td>Length of the line field's normal </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c#L244">244</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a660be1a5762f8fbbcdb8a5a56baf33ed" name="a660be1a5762f8fbbcdb8a5a56baf33ed"></a>
+<h2 class="memtitle">a</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> LineField::a</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extreme of the line that defines the line field. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h#L43">43</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>.</p>
+
+</div>
+</div>
+<a id="aadd09d046967ebcc14b84a488615543e" name="aadd09d046967ebcc14b84a488615543e"></a>
+<h2 class="memtitle">b</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> LineField::b</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extreme of the line that defines the line field. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h#L46">46</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>.</p>
+
+</div>
+</div>
+<a id="af4c8087f6319cae5d9a8cd820727b091" name="af4c8087f6319cae5d9a8cd820727b091"></a>
+<h2 class="memtitle">meshSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a>* LineField::meshSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-mesh/">Mesh</a> used to draw the collider. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>.</p>
+
+</div>
+</div>
+<a id="a13a82bc055a27a39a20723fb6a6052e6" name="a13a82bc055a27a39a20723fb6a6052e6"></a>
+<h2 class="memtitle">normal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> LineField::normal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Normal to the line defined by the points a and b. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h#L49">49</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>.</p>
+
+</div>
+</div>
+<a id="a9fb8814be40f6cdb1a6f617bd025124b" name="a9fb8814be40f6cdb1a6f617bd025124b"></a>
+<h2 class="memtitle">normalLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> LineField::normalLength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Length of the line field's normal. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h#L52">52</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Collider/LineField/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.h">LineField.h</a></li>
+<li>VUEngine-Core/source/Component/Collider/LineField/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Collider/LineField/LineField.c">LineField.c</a></li>
+</ul>
+</div>
+
+
+</div>

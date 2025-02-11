@@ -1,0 +1,333 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "AnimationCoordinator Class Reference"
+permalink: documentation/api/class-animation-coordinator/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">AnimationCoordinator Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h">AnimationCoordinator.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for AnimationCoordinator:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_animation_coordinator.png" usemap="#AnimationCoordinator_map" alt />
+  <map id="AnimationCoordinator_map" name="AnimationCoordinator_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="0,0,134,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4854e9555f98af7274c70bde4459e258" id="r_a4854e9555f98af7274c70bde4459e258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4854e9555f98af7274c70bde4459e258">constructor</a> (const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *<a class="el" href="#a92a3c088e0dbc01a2bcd35ba0ce22510">charSetSpec</a>, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> <a class="el" href="#ab20a09f326296b20f68979feab2e7c21">scope</a>)</td></tr>
+
+<tr class="memitem:a649c52269ecf060e1c1ff91c235a5f0a" id="r_a649c52269ecf060e1c1ff91c235a5f0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a649c52269ecf060e1c1ff91c235a5f0a">playAnimation</a> (<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a> animationController, const <a class="el" href="/documentation/api/struct-animation-function/">AnimationFunction</a> **animationFunctions, const char *animationName)</td></tr>
+
+<tr class="memitem:ab7bee197f82daa22af6fcd1fda56ea62" id="r_ab7bee197f82daa22af6fcd1fda56ea62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7bee197f82daa22af6fcd1fda56ea62">addAnimationController</a> (<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a> animationController)</td></tr>
+
+<tr class="memitem:a1e8084ccfaa68044cd818a319bdda1a2" id="r_a1e8084ccfaa68044cd818a319bdda1a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e8084ccfaa68044cd818a319bdda1a2">removeAnimationController</a> (<a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a> animationController)</td></tr>
+
+<tr class="memitem:aa0db1770bc22c6606a9e978f5bc83a89" id="r_aa0db1770bc22c6606a9e978f5bc83a89"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0db1770bc22c6606a9e978f5bc83a89">getCharSetSpec</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ab20a09f326296b20f68979feab2e7c21" id="r_ab20a09f326296b20f68979feab2e7c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20a09f326296b20f68979feab2e7c21">scope</a></td></tr>
+<tr class="memdesc:ab20a09f326296b20f68979feab2e7c21"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-object/">Object</a> that might need to listen for playback related events.  <br /></td></tr>
+
+<tr class="memitem:ab3be165c9c8857ec7fb9f0443dda66db" id="r_ab3be165c9c8857ec7fb9f0443dda66db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3be165c9c8857ec7fb9f0443dda66db">animationControllers</a></td></tr>
+<tr class="memdesc:ab3be165c9c8857ec7fb9f0443dda66db"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of animation controllers to sync.  <br /></td></tr>
+
+<tr class="memitem:a92a3c088e0dbc01a2bcd35ba0ce22510" id="r_a92a3c088e0dbc01a2bcd35ba0ce22510"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92a3c088e0dbc01a2bcd35ba0ce22510">charSetSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:abbad842e81ca692ea80f2a123fe3d4ad inherit pub_methods_class_listener_object" id="r_abbad842e81ca692ea80f2a123fe3d4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a4576f085df122b6ca093affc2ad92061 inherit pub_methods_class_listener_object" id="r_a4576f085df122b6ca093affc2ad92061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aa118c3b40a6ff3e2b49aacaa7536cf07 inherit pub_methods_class_listener_object" id="r_aa118c3b40a6ff3e2b49aacaa7536cf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message)</td></tr>
+
+<tr class="memitem:ad4061ed61e54372bfc3be55718900f02 inherit pub_methods_class_listener_object" id="r_ad4061ed61e54372bfc3be55718900f02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ac00bf51bd5d127ab6c703fe37008ea68 inherit pub_methods_class_listener_object" id="r_ac00bf51bd5d127ab6c703fe37008ea68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-animation-coordinator/">AnimationCoordinator</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Coordinates animation controllers whose sprites share the same <a class="el" href="/documentation/api/class-char-set/">CharSet</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h#L36">36</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h">AnimationCoordinator.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab7bee197f82daa22af6fcd1fda56ea62" name="ab7bee197f82daa22af6fcd1fda56ea62"></a>
+<h2 class="memtitle">addAnimationController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void AnimationCoordinator::addAnimationController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></td>          <td class="paramname"><span class="paramname"><em>animationController</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an animation controller to coordinate. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">animationController</td><td>Animation controller to coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c#L95">95</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c">AnimationCoordinator.c</a>.</p>
+
+</div>
+</div>
+<a id="a4854e9555f98af7274c70bde4459e258" name="a4854e9555f98af7274c70bde4459e258"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void AnimationCoordinator::constructor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSetSpec</td><td>Spec shared by the animation controllers to coordinate </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that might need to listen for playback related events </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c">AnimationCoordinator.c</a>.</p>
+
+</div>
+</div>
+<a id="aa0db1770bc22c6606a9e978f5bc83a89" name="aa0db1770bc22c6606a9e978f5bc83a89"></a>
+<h2 class="memtitle">getCharSetSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> * AnimationCoordinator::getCharSetSpec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the spec shared by the animation controllers to coordinate. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to spec shared by the animation controllers to coordinate </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c#L145">145</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c">AnimationCoordinator.c</a>.</p>
+
+</div>
+</div>
+<a id="a649c52269ecf060e1c1ff91c235a5f0a" name="a649c52269ecf060e1c1ff91c235a5f0a"></a>
+<h2 class="memtitle">playAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> AnimationCoordinator::playAnimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></td>          <td class="paramname"><span class="paramname"><em>animationController</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-animation-function/">AnimationFunction</a> **</td>          <td class="paramname"><span class="paramname"><em>animationFunctions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>animationName</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Play an animation on the specified animation controller. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">animationController</td><td>Animation controller on which to play the animation </td></tr>
+    <tr><td class="paramname">animationFunctions</td><td>Array of animation functions in which to look for the animation to play </td></tr>
+    <tr><td class="paramname">animationName</td><td>Name of the animation to play </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the animation was found and started to play; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c#L60">60</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c">AnimationCoordinator.c</a>.</p>
+
+</div>
+</div>
+<a id="a1e8084ccfaa68044cd818a319bdda1a2" name="a1e8084ccfaa68044cd818a319bdda1a2"></a>
+<h2 class="memtitle">removeAnimationController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void AnimationCoordinator::removeAnimationController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-animation-controller/">AnimationController</a></td>          <td class="paramname"><span class="paramname"><em>animationController</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Remove a coordinated animation controller. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">animationController</td><td>Coordinated animation controller to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c#L112">112</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c">AnimationCoordinator.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab3be165c9c8857ec7fb9f0443dda66db" name="ab3be165c9c8857ec7fb9f0443dda66db"></a>
+<h2 class="memtitle">animationControllers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> AnimationCoordinator::animationControllers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of animation controllers to sync. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h#L44">44</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h">AnimationCoordinator.h</a>.</p>
+
+</div>
+</div>
+<a id="a92a3c088e0dbc01a2bcd35ba0ce22510" name="a92a3c088e0dbc01a2bcd35ba0ce22510"></a>
+<h2 class="memtitle">charSetSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a>* AnimationCoordinator::charSetSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h">AnimationCoordinator.h</a>.</p>
+
+</div>
+</div>
+<a id="ab20a09f326296b20f68979feab2e7c21" name="ab20a09f326296b20f68979feab2e7c21"></a>
+<h2 class="memtitle">scope</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> AnimationCoordinator::scope</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-object/">Object</a> that might need to listen for playback related events. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h#L41">41</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h">AnimationCoordinator.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/AnimationController/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.h">AnimationCoordinator.h</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/AnimationController/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/AnimationController/AnimationCoordinator.c">AnimationCoordinator.c</a></li>
+</ul>
+</div>
+
+
+</div>

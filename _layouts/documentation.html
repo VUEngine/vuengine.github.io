@@ -2,49 +2,72 @@
 layout: default
 ---
 
-<div class="documentation py-4">
-  <div class="container">
+<section class="text-bg-dark">
+  <div class="container px-4 py-2 d-flex justify-content-between">
+    {% assign currentSection = 'API' %}
+    {% assign currentSectionUrl = '/documentation/api/classes' %}
+    {% for section in site.data.documentation %}
+    {% for docPage in section[1] %}
+    {% if page.url == docPage.url %}
+    {% assign currentSection = section[0] %}
+    {% assign currentSectionUrl = section[1][0].url %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/documentation/">Documentation</a></li>
+      {% unless page.url == '/documentation/' %}
+      <li class="breadcrumb-item"><a href="{{ currentSectionUrl }}">{{ currentSection }}</a></li>
+      {% endunless %}
+      <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+    </ol>
+  </div>
+</section>
+
+{% if currentSection == 'API' %}
+<!-- Doxygen JS -->
+<script type="text/javascript" src="/assets/doxygen/jquery.js"></script>
+<script type="text/javascript" src="/assets/doxygen/dynsections.js"></script>
+{% endif %}
+
+<section class="documentation">
+  <div class="container p-4">
     <div class="row">
       <div class="col-md-3 order-2 order-md-1">
         <div class="sticky-top mb-5 me-3" style="top: 20px">
-          {% include search-lunr.html %}
-
-          <div class="accordion accordion-flush mt-4" id="docsnav">
-            {% for section in site.data.documentation %} 
-              {% assign collapsed = true %} 
-              {% assign currentDocUrl = '' %} 
-              {% for docPage in section[1] %} 
-                {% assign docPageLink = docPage.url %} 
-                {% if page.url == docPageLink %}
-                  {% assign currentDocUrl = docPage.url %} 
-                  {% assign collapsed = false %} 
-                  {% assign currentDocSection = section[0] %} 
-                  {% break %} 
-                {% endif %} 
-              {% endfor %}
+          <div class="accordion accordion-flush" id="docsnav">
+            {% for section in site.data.documentation %}
+            {% assign collapsed = true %}
+            {% assign currentDocUrl = '' %}
+            {% for docPage in section[1] %}
+            {% assign docPageLink = docPage.url %}
+            {% if page.url == docPageLink %}
+            {% assign currentDocUrl = docPage.url %}
+            {% assign collapsed = false %}
+            {% assign currentDocSection = section[0] %}
+            {% break %}
+            {% endif %}
+            {% if page.url contains '/api/' and docPageLink contains '/api/' %}
+            {% assign collapsed = false %}
+            {% assign currentDocSection = section[0] %}
+            {% endif %}
+            {% endfor %}
 
             <div class="accordion-item border-bottom-0">
-              <h2
-                class="accordion-header"
-                id="flush-heading{{ forloop.index }}"
-              >
-                <button
-                  class="accordion-button px-1 py-1 shadow-none{% if collapsed %} collapsed{% endif %}"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapse{{ forloop.index }}"
+              <h2 class="accordion-header" id="flush-heading-{{ forloop.index }}">
+                <button class="accordion-button px-1 py-1 shadow-none{% if collapsed == false %} current{% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ forloop.index }}"
                   aria-expanded="{% if collapsed %}false{% else %}true{% endif %}"
-                  aria-controls="flush-collapse{{ forloop.index }}"
-                >
+                  aria-controls="flush-collapse{{ forloop.index }}">
                   {{ section[0] }}
                 </button>
               </h2>
-              <div
-                id="flush-collapse{{ forloop.index }}"
+              <div id="flush-collapse{{ forloop.index }}"
                 class="accordion-collapse collapse{% unless collapsed %} show{% endunless %}"
-                aria-labelledby="flush-heading{{ forloop.index }}"
-                data-bs-parent="#docsnav"
-              >
+                aria-labelledby="flush-heading-{{ forloop.index }}" data-bs-parent="#docsnav">
                 <ul class="list-unstyled mx-3 mb-2 fs-90p">
                   {% for docPage in section[1] %}
                   <li>
@@ -53,27 +76,23 @@ layout: default
                       {{ docPage.name }}
                     </a>
                     <ul class="list-unstyled ps-3">
-                      {% assign headers = content | split: '<h' %}
-                      {% for header in headers %}
-                          {% assign _string = header | split: '</h' %}
-                          {% capture _hAttrToStrip %}{{ _string[0] | split: '>' | first }}>{% endcapture %}
-                          {% assign title = _string[0] | replace: _hAttrToStrip, '' %}
-                          {% assign _idstring = header | split: 'id="' %}
-                          {% assign headerLevel = _idstring[0] | strip %}
-                          {% assign _idstring = _idstring[1] | split: '"' %}
-                          {% assign html_id = _idstring[0] %}
-                          {% if headerLevel == "2" %}
-                          <li class="fs-80p">
-                              <a href="#{{html_id}}" class="text-decoration-none text-primary">{{title}}</a>
-                          </li>
-                          {% endif %}
-                      {% endfor %}
+                      {% assign headers = content | split: '<h' %} {% for header in headers %} {% assign _string=header
+                        | split: '</h' %} {% capture _hAttrToStrip %}{{ _string[0] | split: '>' | first }}>{% endcapture
+                        %}
+                        {% assign title = _string[0] | replace: _hAttrToStrip, '' %}
+                        {% assign _idstring = header | split: 'id="' %}
+                        {% assign headerLevel = _idstring[0] | strip %}
+                        {% assign _idstring = _idstring[1] | split: '"' %}
+                        {% assign html_id = _idstring[0] %}
+                        {% if headerLevel == "2" %}
+                        <li class="fs-80p">
+                          <a href="#{{html_id}}" class="text-decoration-none text-primary">{{title}}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
                     </ul>
                     {% else %}
-                    <a
-                      href="{{ docPage.url }}"
-                      class="text-decoration-none text-secondary"
-                    >
+                    <a href="{{ docPage.url }}" class="text-decoration-none text-secondary">
                       {{ docPage.name }}
                     </a>
                     {% endif %}
@@ -87,77 +106,36 @@ layout: default
         </div>
       </div>
       <div class="col-md-9 order-1 order-md-2">
-        {% comment %}
-        <nav aria-label="breadcrumb" class="mt-1 mb-4">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item text-primary">
-              <i class="fas fa-book"></i>
-              <a href="/documentation/" class="text-decoration-none"
-                >Documentation</a
-              >
-            </li>
-            {% unless page.url == '/documentation/' %}
-            <li class="breadcrumb-item text-muted">{{ currentDocSection }}</li>
-            {% endunless %}
-            <li class="breadcrumb-item text-muted" aria-current="page">
-              {{ page.title }}
-            </li>
-          </ol>
-        </nav>
-        {% endcomment %} 
+        {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true
+        anchorClass="text-decoration-none" h_min=2 %}
 
-        {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true anchorClass="text-decoration-none" h_min=2 %} 
-        
-        {% assign done = false %} 
-        {% for section in site.data.documentation %} 
-          {% for docPage in section[1] %} 
-            {% if done == false %} 
-              {% if page.url == currentDocPage.url %}
-                <div class="d-flex justify-content-between my-5">
-                  <a
-                    href="{{ prevDocPage.url }}"
-                    class="text-decoration-none text-primary"
-                  >
-                    {% if prevDocPage.name %}
-                      <i class="fa fa-arrow-left"></i>
-                      {{ prevDocPage.name }}
-                    {% endif %}
-                  </a>
-                  <a href="{{ docPage.url }}" class="text-decoration-none text-primary">
-                    {% if docPage.name %}
-                      {{ docPage.name }}
-                      <i class="fa fa-arrow-right"></i>
-                    {% endif %}
-                  </a>
-                </div>
-                {% assign done = true %} 
-              {% endif %} 
-              {% assign prevDocPage = currentDocPage %} 
-              {% assign currentDocPage = docPage %} 
-            {% endif %} 
-          {% endfor %} 
+        {% assign done = false %}
+        {% for section in site.data.documentation %}
+        {% for docPage in section[1] %}
+        {% if done == false %}
+        {% if page.url == currentDocPage.url %}
+        <div class="d-flex justify-content-between my-5">
+          <a href="{{ prevDocPage.url }}" class="text-decoration-none text-primary">
+            {% if prevDocPage.name %}
+            <i class="fa fa-arrow-left"></i>
+            {{ prevDocPage.name }}
+            {% endif %}
+          </a>
+          <a href="{{ docPage.url }}" class="text-decoration-none text-primary">
+            {% if docPage.name %}
+            {{ docPage.name }}
+            <i class="fa fa-arrow-right"></i>
+            {% endif %}
+          </a>
+        </div>
+        {% assign done = true %}
+        {% endif %}
+        {% assign prevDocPage = currentDocPage %}
+        {% assign currentDocPage = docPage %}
+        {% endif %}
+        {% endfor %}
         {% endfor %}
       </div>
     </div>
   </div>
-</div>
-
-{% comment %}
-<script>
-  function replaceCtrlCmd(node) {
-    if (node.nodeType == 3) {
-      let targetString = "Ctrl";
-      if (navigator.appVersion.indexOf("Mac") != -1) {
-        targetString = "⌘";
-      }
-      node.data = node.data.replace(/CTRLCMD/g, targetString);
-    }
-    if (node.nodeType == 1 && node.nodeName != "SCRIPT") {
-      for (var i = 0; i < node.childNodes.length; i++) {
-        replaceCtrlCmd(node.childNodes[i]);
-      }
-    }
-  }
-  replaceCtrlCmd(document.body);
-</script>
-{% endcomment %}
+</section>

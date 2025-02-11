@@ -1,0 +1,439 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Mesh Class Reference"
+permalink: documentation/api/class-mesh/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Mesh Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h">Mesh.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Mesh:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_mesh.png" usemap="#Mesh_map" alt />
+  <map id="Mesh_map" name="Mesh_map">
+<area href="/documentation/api/class-wireframe/" alt="Wireframe" shape="rect" coords="0,0,70,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aafa437fa5ba0709a349a31cecc10ed24" id="r_aafa437fa5ba0709a349a31cecc10ed24"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa437fa5ba0709a349a31cecc10ed24">MeshROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af0f7b754559afdef29e0c8db0f49e3b8" id="r_af0f7b754559afdef29e0c8db0f49e3b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0f7b754559afdef29e0c8db0f49e3b8">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a> *meshSpec)</td></tr>
+
+<tr class="memitem:a4e5e1b0c583a531bfbc12066f0ed9c0e" id="r_a4e5e1b0c583a531bfbc12066f0ed9c0e"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e5e1b0c583a531bfbc12066f0ed9c0e">getRightBox</a> ()</td></tr>
+
+<tr class="memitem:a23749771614e31367cb426974f40e0ac" id="r_a23749771614e31367cb426974f40e0ac"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23749771614e31367cb426974f40e0ac">getVertices</a> ()</td></tr>
+
+<tr class="memitem:a1a334a8baab887bcdaa7083226409bf4" id="r_a1a334a8baab887bcdaa7083226409bf4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a334a8baab887bcdaa7083226409bf4">render</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> relativePosition)</td></tr>
+
+<tr class="memitem:a95b18475defd1b3b8a713f2745b4a086" id="r_a95b18475defd1b3b8a713f2745b4a086"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95b18475defd1b3b8a713f2745b4a086">draw</a> ()</td></tr>
+
+<tr class="memitem:ae5f6aa9bad5b210de3fcfae92d61b9a7" id="r_ae5f6aa9bad5b210de3fcfae92d61b9a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f6aa9bad5b210de3fcfae92d61b9a7">addSegments</a> (<a class="el" href="/documentation/api/class-pixel-vector/">PixelVector</a>(*<a class="el" href="#a199c8827e4d03d15f21b617befb65fb9">segments</a>)[2], <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> <a class="el" href="/documentation/api/class-wireframe/">displacement</a>)</td></tr>
+
+<tr class="memitem:ad8379711aa6d21f3eb13af5da1813037" id="r_ad8379711aa6d21f3eb13af5da1813037"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8379711aa6d21f3eb13af5da1813037">addSegment</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> startVector, <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> endVector)</td></tr>
+
+<tr class="memitem:ae4efe63ce6fc6ffe516c035f6b81bb8c" id="r_ae4efe63ce6fc6ffe516c035f6b81bb8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4efe63ce6fc6ffe516c035f6b81bb8c">drawInterlaced</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:af84aafc8640e89ba8df58f92a944ef1b" id="r_af84aafc8640e89ba8df58f92a944ef1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af84aafc8640e89ba8df58f92a944ef1b">getRightBoxFromSpec</a> (<a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a> *meshSpec)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a199c8827e4d03d15f21b617befb65fb9" id="r_a199c8827e4d03d15f21b617befb65fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a199c8827e4d03d15f21b617befb65fb9">segments</a></td></tr>
+<tr class="memdesc:a199c8827e4d03d15f21b617befb65fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of segments.  <br /></td></tr>
+
+<tr class="memitem:ad62c53a8f5d1dbdd89d7bfaf5104c3bf" id="r_ad62c53a8f5d1dbdd89d7bfaf5104c3bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad62c53a8f5d1dbdd89d7bfaf5104c3bf">vertices</a></td></tr>
+<tr class="memdesc:ad62c53a8f5d1dbdd89d7bfaf5104c3bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of vertices.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_wireframe"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_wireframe')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></td></tr>
+<tr class="memitem:a25095825727df57e3cf3995cbb34b5c4 inherit pub_types_class_wireframe" id="r_a25095825727df57e3cf3995cbb34b5c4"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">WireframeROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_wireframe"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_wireframe')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></td></tr>
+<tr class="memitem:afc7063a56ee55de7f4006a935b14f962 inherit pub_methods_class_wireframe" id="r_afc7063a56ee55de7f4006a935b14f962"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a> *wireframeSpec)</td></tr>
+
+<tr class="memitem:ab239f265f38d595cc5b2781c715a4869 inherit pub_methods_class_wireframe" id="r_ab239f265f38d595cc5b2781c715a4869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">setDisplacement</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> <a class="el" href="/documentation/api/class-wireframe/">displacement</a>)</td></tr>
+
+<tr class="memitem:a21b00018462ec2977eb1ae20e7da847b inherit pub_methods_class_wireframe" id="r_a21b00018462ec2977eb1ae20e7da847b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">isVisible</a> ()</td></tr>
+
+<tr class="memitem:a2e7f59620fc39a313d1341fcf6d9dbac inherit pub_methods_class_wireframe" id="r_a2e7f59620fc39a313d1341fcf6d9dbac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">prepareForRender</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *relativePosition, const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *cameraDirection)</td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-mesh/">Mesh</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></p>
+<p>Draws the segments that compose the mesh. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h">Mesh.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aafa437fa5ba0709a349a31cecc10ed24" name="aafa437fa5ba0709a349a31cecc10ed24"></a>
+<h2 class="memtitle">MeshROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a> <a class="el" href="#aafa437fa5ba0709a349a31cecc10ed24">MeshROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-mesh/">Mesh</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h#L37">37</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h">Mesh.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad8379711aa6d21f3eb13af5da1813037" name="ad8379711aa6d21f3eb13af5da1813037"></a>
+<h2 class="memtitle">addSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Mesh::addSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>startVector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>endVector</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new segment from provided vectors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">startVector</td><td>New segment's starting point </td></tr>
+    <tr><td class="paramname">endVector</td><td>New segment's end point </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L385">385</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="ae5f6aa9bad5b210de3fcfae92d61b9a7" name="ae5f6aa9bad5b210de3fcfae92d61b9a7"></a>
+<h2 class="memtitle">addSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Mesh::addSegments </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-pixel-vector/">PixelVector</a>(*)</td>          <td class="paramname"><span class="paramname"><em>segments</em></span>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>displacement</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create new segments from the provided array. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">segments</td><td>Array of segments holding their spatial data </td></tr>
+    <tr><td class="paramname">displacement</td><td>Displacement to add to the segments' vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L352">352</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="af0f7b754559afdef29e0c8db0f49e3b8" name="af0f7b754559afdef29e0c8db0f49e3b8"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Mesh::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>meshSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the wireframe attaches to </td></tr>
+    <tr><td class="paramname">meshSpec</td><td>Specification that determines how to configure the wireframe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L158">158</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="a95b18475defd1b3b8a713f2745b4a086" name="a95b18475defd1b3b8a713f2745b4a086"></a>
+<h2 class="memtitle">draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Mesh::draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw the wireframe to the frame buffers. </p><dl class="section return"><dt>Returns</dt><dd>True if at least one pixel is drawn; false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L326">326</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="ae4efe63ce6fc6ffe516c035f6b81bb8c" name="ae4efe63ce6fc6ffe516c035f6b81bb8c"></a>
+<h2 class="memtitle">drawInterlaced()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Mesh::drawInterlaced </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw the wireframe to the frame buffers in interlaced mode. </p><dl class="section return"><dt>Returns</dt><dd>True if at least one pixel is drawn; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L433">433</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="a4e5e1b0c583a531bfbc12066f0ed9c0e" name="a4e5e1b0c583a531bfbc12066f0ed9c0e"></a>
+<h2 class="memtitle">getRightBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-right-box/">RightBox</a> Mesh::getRightBox </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the mesh's bounding box. </p><dl class="section return"><dt>Returns</dt><dd>Bounding box of the mesh </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-component/">Component</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L186">186</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="af84aafc8640e89ba8df58f92a944ef1b" name="af84aafc8640e89ba8df58f92a944ef1b"></a>
+<h2 class="memtitle">getRightBoxFromSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> Mesh::getRightBoxFromSpec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-mesh-spec/">MeshSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>meshSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the bounding box defined by the provided mesh spec's values. </p><dl class="section return"><dt>Returns</dt><dd>Bounding box of the resulting mesh </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L36">36</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="a23749771614e31367cb426974f40e0ac" name="a23749771614e31367cb426974f40e0ac"></a>
+<h2 class="memtitle">getVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> Mesh::getVertices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the list of vertices that compose the mesh. </p><dl class="section return"><dt>Returns</dt><dd>Linked list of vertices </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L232">232</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<a id="a1a334a8baab887bcdaa7083226409bf4" name="a1a334a8baab887bcdaa7083226409bf4"></a>
+<h2 class="memtitle">render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Mesh::render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>relativePosition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepare the wireframe for drawing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">relativePosition</td><td>Position relative to the camera's </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c#L239">239</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a199c8827e4d03d15f21b617befb65fb9" name="a199c8827e4d03d15f21b617befb65fb9"></a>
+<h2 class="memtitle">segments</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> Mesh::segments</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of segments. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h#L77">77</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h">Mesh.h</a>.</p>
+
+</div>
+</div>
+<a id="ad62c53a8f5d1dbdd89d7bfaf5104c3bf" name="ad62c53a8f5d1dbdd89d7bfaf5104c3bf"></a>
+<h2 class="memtitle">vertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> Mesh::vertices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of vertices. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h#L80">80</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h">Mesh.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/VisualComponent/Wireframe/Mesh/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.h">Mesh.h</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Wireframe/Mesh/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Mesh/Mesh.c">Mesh.c</a></li>
+</ul>
+</div>
+
+
+</div>

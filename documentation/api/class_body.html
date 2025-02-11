@@ -1,0 +1,1999 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Body Class Reference"
+permalink: documentation/api/class-body/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Body Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Body:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_body.png" usemap="#Body_map" alt />
+  <map id="Body_map" name="Body_map">
+<area href="/documentation/api/class-component/" alt="Component" shape="rect" coords="0,0,75,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a12e806271fd6e2585582f773729589d0" id="r_a12e806271fd6e2585582f773729589d0"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e806271fd6e2585582f773729589d0">BodyROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a66abc4291eabe5a5e30e053d108d11c0" id="r_a66abc4291eabe5a5e30e053d108d11c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66abc4291eabe5a5e30e053d108d11c0">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *bodySpec)</td></tr>
+
+<tr class="memitem:acc1e4162589e90a1f0709fd234596421" id="r_acc1e4162589e90a1f0709fd234596421"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc1e4162589e90a1f0709fd234596421">handleCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> command, va_list args)</td></tr>
+
+<tr class="memitem:ad69c422faab8826f7a6f2ad45fc84b74" id="r_ad69c422faab8826f7a6f2ad45fc84b74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad69c422faab8826f7a6f2ad45fc84b74">reset</a> ()</td></tr>
+<tr class="memdesc:ad69c422faab8826f7a6f2ad45fc84b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the body's state.  <br /></td></tr>
+
+<tr class="memitem:a224291aa093cda0ec6e5cee3eae635ee" id="r_a224291aa093cda0ec6e5cee3eae635ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a224291aa093cda0ec6e5cee3eae635ee">clearNormal</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> referent)</td></tr>
+
+<tr class="memitem:a3464affc6c598cad7277daf4ba1a5948" id="r_a3464affc6c598cad7277daf4ba1a5948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3464affc6c598cad7277daf4ba1a5948">update</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> cycle, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fix7_9_ext</a> elapsedTime)</td></tr>
+
+<tr class="memitem:a7e363ec0f7e1c109d5e7465b653f2e78" id="r_a7e363ec0f7e1c109d5e7465b653f2e78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e363ec0f7e1c109d5e7465b653f2e78">applyForce</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *force)</td></tr>
+
+<tr class="memitem:acae6b93dc822b6bf6ba47cd1d9f8936a" id="r_acae6b93dc822b6bf6ba47cd1d9f8936a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acae6b93dc822b6bf6ba47cd1d9f8936a">bounce</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> bounceReferent, <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> bouncingPlaneNormal, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#aea4587d75b70a4e39b4cdd7dcfa0a118">frictionCoefficient</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a5f49265c06f7aa9f0ade9c2aacab9c51">bounciness</a>)</td></tr>
+
+<tr class="memitem:a0a3432f29493ec02cae04df7239de2ec" id="r_a0a3432f29493ec02cae04df7239de2ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a3432f29493ec02cae04df7239de2ec">stopMovement</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> axis)</td></tr>
+
+<tr class="memitem:aefd59fb2b7492544cc41e8bfdd33aee4" id="r_aefd59fb2b7492544cc41e8bfdd33aee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefd59fb2b7492544cc41e8bfdd33aee4">setVelocity</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *<a class="el" href="#aa6ef1aa00e37993bf22410a48c29ecfa">velocity</a>)</td></tr>
+
+<tr class="memitem:abb1a81af31834c8dee0110626b320f80" id="r_abb1a81af31834c8dee0110626b320f80"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb1a81af31834c8dee0110626b320f80">getVelocity</a> ()</td></tr>
+
+<tr class="memitem:a404fd02902e6bc24ae104a785e5b6edd" id="r_a404fd02902e6bc24ae104a785e5b6edd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a404fd02902e6bc24ae104a785e5b6edd">setDirection</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *<a class="el" href="#a9956c7bd8804067e6a60d9279b9075ab">direction</a>)</td></tr>
+
+<tr class="memitem:ac5fa078b415a1a07731390623b7fe94e" id="r_ac5fa078b415a1a07731390623b7fe94e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5fa078b415a1a07731390623b7fe94e">getDirection</a> ()</td></tr>
+<tr class="memdesc:ac5fa078b415a1a07731390623b7fe94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the direction towards which the body is moving.  <br /></td></tr>
+
+<tr class="memitem:a87a03396184223353fe99a0abbc0efd5" id="r_a87a03396184223353fe99a0abbc0efd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87a03396184223353fe99a0abbc0efd5">setAxisSubjectToGravity</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> <a class="el" href="#a543c8d6e605b4ac155a89c7b0ed7b9a5">axisSubjectToGravity</a>)</td></tr>
+
+<tr class="memitem:aac828aa83bde723e43415bcdde0ea8c6" id="r_aac828aa83bde723e43415bcdde0ea8c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac828aa83bde723e43415bcdde0ea8c6">getAxisSubjectToGravity</a> ()</td></tr>
+
+<tr class="memitem:a508a0aae90c2f6a6fcbb70bdd127e7c7" id="r_a508a0aae90c2f6a6fcbb70bdd127e7c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a508a0aae90c2f6a6fcbb70bdd127e7c7">setAxisForSynchronizationWithBody</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> <a class="el" href="#a250c79bfc7021b43840f8a616b2ca929">axisForSynchronizationWithBody</a>)</td></tr>
+
+<tr class="memitem:a76b6240f9d43611f5eb8679487fdb19e" id="r_a76b6240f9d43611f5eb8679487fdb19e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b6240f9d43611f5eb8679487fdb19e">getAxisForSynchronizationWithBody</a> ()</td></tr>
+
+<tr class="memitem:a7bfc0bbec02c9d1401a72e60528fddba" id="r_a7bfc0bbec02c9d1401a72e60528fddba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bfc0bbec02c9d1401a72e60528fddba">setBounciness</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a5f49265c06f7aa9f0ade9c2aacab9c51">bounciness</a>)</td></tr>
+
+<tr class="memitem:a623a5f9c3e56545e13aa0990efb92b21" id="r_a623a5f9c3e56545e13aa0990efb92b21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a623a5f9c3e56545e13aa0990efb92b21">getBounciness</a> ()</td></tr>
+
+<tr class="memitem:a6bc4a005a2fd38fae7cbf3b4993912bd" id="r_a6bc4a005a2fd38fae7cbf3b4993912bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bc4a005a2fd38fae7cbf3b4993912bd">setFrictionCoefficient</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#aea4587d75b70a4e39b4cdd7dcfa0a118">frictionCoefficient</a>)</td></tr>
+
+<tr class="memitem:a003977c7effd236d223c8ec9b912f581" id="r_a003977c7effd236d223c8ec9b912f581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a003977c7effd236d223c8ec9b912f581">getFrictionCoefficient</a> ()</td></tr>
+
+<tr class="memitem:a9f7dae4ca72a69e9376456f6631fc1c4" id="r_a9f7dae4ca72a69e9376456f6631fc1c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f7dae4ca72a69e9376456f6631fc1c4">setMass</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a0e979b54b2435d4b5082b2937add0611">mass</a>)</td></tr>
+
+<tr class="memitem:adc19c20f271308bd9d7b623ec63f3687" id="r_adc19c20f271308bd9d7b623ec63f3687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc19c20f271308bd9d7b623ec63f3687">getMass</a> ()</td></tr>
+
+<tr class="memitem:a6d06654c267811ac1fd4f24612687c4e" id="r_a6d06654c267811ac1fd4f24612687c4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d06654c267811ac1fd4f24612687c4e">setPosition</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *<a class="el" href="#a5e0365a8f56f00334174d4bf6a1c57a7">position</a>, <a class="el" href="/documentation/api/class-entity/">Entity</a> caller)</td></tr>
+
+<tr class="memitem:a568516a864c4bdd0f7ad6aac90d03424" id="r_a568516a864c4bdd0f7ad6aac90d03424"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a568516a864c4bdd0f7ad6aac90d03424">getPosition</a> ()</td></tr>
+
+<tr class="memitem:a6edde19f6998369e38dd9600d3e838cb" id="r_a6edde19f6998369e38dd9600d3e838cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6edde19f6998369e38dd9600d3e838cb">setMaximumVelocity</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> <a class="el" href="#a2c3a499728bfa69a7ff96e691fcdf59d">maximumVelocity</a>)</td></tr>
+
+<tr class="memitem:a2eb188888e8a328c3754b5a8655ad310" id="r_a2eb188888e8a328c3754b5a8655ad310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eb188888e8a328c3754b5a8655ad310">getMaximumVelocity</a> ()</td></tr>
+
+<tr class="memitem:a89ca37e3b9468bbb7bae12ef959b7494" id="r_a89ca37e3b9468bbb7bae12ef959b7494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ca37e3b9468bbb7bae12ef959b7494">setMaximumSpeed</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a23803b818faab5388116d41dc1b4e1f3">maximumSpeed</a>)</td></tr>
+
+<tr class="memitem:ac1b5ec0529d61f6b68b90437e544d2d3" id="r_ac1b5ec0529d61f6b68b90437e544d2d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1b5ec0529d61f6b68b90437e544d2d3">getMaximumSpeed</a> ()</td></tr>
+
+<tr class="memitem:ad2d9bcb17d887b0bad91688a7a8ab312" id="r_ad2d9bcb17d887b0bad91688a7a8ab312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2d9bcb17d887b0bad91688a7a8ab312">sendMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> value)</td></tr>
+
+<tr class="memitem:a50a040a22d12b4117c491e2620e0fb5c" id="r_a50a040a22d12b4117c491e2620e0fb5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a040a22d12b4117c491e2620e0fb5c">setSkipCycles</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> <a class="el" href="#aaa8280d3e11044ba3299ac99e64ce98f">skipCycles</a>)</td></tr>
+
+<tr class="memitem:a9baf5df5188911cd67b554b7569565fc" id="r_a9baf5df5188911cd67b554b7569565fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9baf5df5188911cd67b554b7569565fc">setSurroundingFrictionCoefficient</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a9106ee58e1a177db0af628a093cb9bfe">surroundingFrictionCoefficient</a>)</td></tr>
+
+<tr class="memitem:a821cf21270309e12add705387732cb23" id="r_a821cf21270309e12add705387732cb23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a821cf21270309e12add705387732cb23">getSpeed</a> ()</td></tr>
+
+<tr class="memitem:a043fdfdd6242aec0d53f8d28c14a8211" id="r_a043fdfdd6242aec0d53f8d28c14a8211"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a043fdfdd6242aec0d53f8d28c14a8211">getMovementOnAllAxis</a> ()</td></tr>
+
+<tr class="memitem:a44128937b6d5da7766e365e5a7ed2e88" id="r_a44128937b6d5da7766e365e5a7ed2e88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44128937b6d5da7766e365e5a7ed2e88">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a9554d1afe3df994789cf0201c30bb7ca" id="r_a9554d1afe3df994789cf0201c30bb7ca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9554d1afe3df994789cf0201c30bb7ca">setGlobalGravity</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> <a class="el" href="#a13d2e94d01bf84db3f7fdc0faad20006">gravity</a>)</td></tr>
+
+<tr class="memitem:a964a8a51cb1b60d3f51f02387c3449a8" id="r_a964a8a51cb1b60d3f51f02387c3449a8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a964a8a51cb1b60d3f51f02387c3449a8">setGlobalFrictionCoefficient</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#aea4587d75b70a4e39b4cdd7dcfa0a118">frictionCoefficient</a>)</td></tr>
+
+<tr class="memitem:ac572681a35353d7d03e6a10e7fa151b7" id="r_ac572681a35353d7d03e6a10e7fa151b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac572681a35353d7d03e6a10e7fa151b7">getElapsedTimeStep</a> ()</td></tr>
+
+<tr class="memitem:af37e2d2c393c98d15584807c92fc103f" id="r_af37e2d2c393c98d15584807c92fc103f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af37e2d2c393c98d15584807c92fc103f">computeInstantaneousSpeed</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> forceMagnitude, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a13d2e94d01bf84db3f7fdc0faad20006">gravity</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a0e979b54b2435d4b5082b2937add0611">mass</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#af73628b40bbf3805ef5d953885ea0216">friction</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a23803b818faab5388116d41dc1b4e1f3">maximumSpeed</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a5e0365a8f56f00334174d4bf6a1c57a7" id="r_a5e0365a8f56f00334174d4bf6a1c57a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0365a8f56f00334174d4bf6a1c57a7">position</a></td></tr>
+<tr class="memdesc:a5e0365a8f56f00334174d4bf6a1c57a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial position.  <br /></td></tr>
+
+<tr class="memitem:a7101faea627ebcf692f471db92bd5167" id="r_a7101faea627ebcf692f471db92bd5167"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d-plus/">Vector3DPlus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7101faea627ebcf692f471db92bd5167">internalPosition</a></td></tr>
+<tr class="memdesc:a7101faea627ebcf692f471db92bd5167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial position at higher decimal precision.  <br /></td></tr>
+
+<tr class="memitem:aa6ef1aa00e37993bf22410a48c29ecfa" id="r_aa6ef1aa00e37993bf22410a48c29ecfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6ef1aa00e37993bf22410a48c29ecfa">velocity</a></td></tr>
+<tr class="memdesc:aa6ef1aa00e37993bf22410a48c29ecfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity vector.  <br /></td></tr>
+
+<tr class="memitem:ad7f9b34213e26c6f5747e213b641b472" id="r_ad7f9b34213e26c6f5747e213b641b472"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d-plus/">Vector3DPlus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7f9b34213e26c6f5747e213b641b472">internalVelocity</a></td></tr>
+<tr class="memdesc:ad7f9b34213e26c6f5747e213b641b472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity vector at higher decimal precision.  <br /></td></tr>
+
+<tr class="memitem:a9956c7bd8804067e6a60d9279b9075ab" id="r_a9956c7bd8804067e6a60d9279b9075ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9956c7bd8804067e6a60d9279b9075ab">direction</a></td></tr>
+
+<tr class="memitem:a2c3a499728bfa69a7ff96e691fcdf59d" id="r_a2c3a499728bfa69a7ff96e691fcdf59d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c3a499728bfa69a7ff96e691fcdf59d">maximumVelocity</a></td></tr>
+<tr class="memdesc:a2c3a499728bfa69a7ff96e691fcdf59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum velocity.  <br /></td></tr>
+
+<tr class="memitem:a77f866e31b548774c2f2d22897197105" id="r_a77f866e31b548774c2f2d22897197105"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77f866e31b548774c2f2d22897197105">speed</a></td></tr>
+<tr class="memdesc:a77f866e31b548774c2f2d22897197105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed magnitude.  <br /></td></tr>
+
+<tr class="memitem:a23803b818faab5388116d41dc1b4e1f3" id="r_a23803b818faab5388116d41dc1b4e1f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23803b818faab5388116d41dc1b4e1f3">maximumSpeed</a></td></tr>
+<tr class="memdesc:a23803b818faab5388116d41dc1b4e1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum speed.  <br /></td></tr>
+
+<tr class="memitem:a13d2e94d01bf84db3f7fdc0faad20006" id="r_a13d2e94d01bf84db3f7fdc0faad20006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13d2e94d01bf84db3f7fdc0faad20006">gravity</a></td></tr>
+<tr class="memdesc:a13d2e94d01bf84db3f7fdc0faad20006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gravity affecting the body.  <br /></td></tr>
+
+<tr class="memitem:ad9db62e7fd770ceadedf0723c53b953b" id="r_ad9db62e7fd770ceadedf0723c53b953b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9db62e7fd770ceadedf0723c53b953b">externalForce</a></td></tr>
+<tr class="memdesc:ad9db62e7fd770ceadedf0723c53b953b"><td class="mdescLeft">&#160;</td><td class="mdescRight">External applied force.  <br /></td></tr>
+
+<tr class="memitem:af73628b40bbf3805ef5d953885ea0216" id="r_af73628b40bbf3805ef5d953885ea0216"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af73628b40bbf3805ef5d953885ea0216">friction</a></td></tr>
+<tr class="memdesc:af73628b40bbf3805ef5d953885ea0216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction surrounding object.  <br /></td></tr>
+
+<tr class="memitem:a44b9cccdc197e4ea4d27a82701ff4290" id="r_a44b9cccdc197e4ea4d27a82701ff4290"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44b9cccdc197e4ea4d27a82701ff4290">totalNormal</a></td></tr>
+<tr class="memdesc:a44b9cccdc197e4ea4d27a82701ff4290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total normal forces applied to the body.  <br /></td></tr>
+
+<tr class="memitem:ab31c81835d0a95209b40ab5ce1fd77f6" id="r_ab31c81835d0a95209b40ab5ce1fd77f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31c81835d0a95209b40ab5ce1fd77f6">normals</a></td></tr>
+<tr class="memdesc:ab31c81835d0a95209b40ab5ce1fd77f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of normal for the forces affecting the body.  <br /></td></tr>
+
+<tr class="memitem:a1dfce6bc57d49b4930f54243fbb8e361" id="r_a1dfce6bc57d49b4930f54243fbb8e361"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-vector3-d-flag/">Vector3DFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dfce6bc57d49b4930f54243fbb8e361">accelerating</a></td></tr>
+<tr class="memdesc:a1dfce6bc57d49b4930f54243fbb8e361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags for the acceleration state of the body on each axis.  <br /></td></tr>
+
+<tr class="memitem:a5f49265c06f7aa9f0ade9c2aacab9c51" id="r_a5f49265c06f7aa9f0ade9c2aacab9c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f49265c06f7aa9f0ade9c2aacab9c51">bounciness</a></td></tr>
+<tr class="memdesc:a5f49265c06f7aa9f0ade9c2aacab9c51"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-body/">Body</a>'s bounciness factor.  <br /></td></tr>
+
+<tr class="memitem:aea4587d75b70a4e39b4cdd7dcfa0a118" id="r_aea4587d75b70a4e39b4cdd7dcfa0a118"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea4587d75b70a4e39b4cdd7dcfa0a118">frictionCoefficient</a></td></tr>
+<tr class="memdesc:aea4587d75b70a4e39b4cdd7dcfa0a118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction coefficient of the body.  <br /></td></tr>
+
+<tr class="memitem:a9106ee58e1a177db0af628a093cb9bfe" id="r_a9106ee58e1a177db0af628a093cb9bfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9106ee58e1a177db0af628a093cb9bfe">surroundingFrictionCoefficient</a></td></tr>
+<tr class="memdesc:a9106ee58e1a177db0af628a093cb9bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction coefficient of the body's surroundings.  <br /></td></tr>
+
+<tr class="memitem:a63f40cd36b1fd8d89d2d85c7c18ad766" id="r_a63f40cd36b1fd8d89d2d85c7c18ad766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63f40cd36b1fd8d89d2d85c7c18ad766">totalFrictionCoefficient</a></td></tr>
+<tr class="memdesc:a63f40cd36b1fd8d89d2d85c7c18ad766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction force's magnitude.  <br /></td></tr>
+
+<tr class="memitem:a53e2b82b04cafc0f21302aa2b6b1112a" id="r_a53e2b82b04cafc0f21302aa2b6b1112a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53e2b82b04cafc0f21302aa2b6b1112a">frictionForceMagnitude</a></td></tr>
+<tr class="memdesc:a53e2b82b04cafc0f21302aa2b6b1112a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total friction force magnitude affecting the body.  <br /></td></tr>
+
+<tr class="memitem:a0e979b54b2435d4b5082b2937add0611" id="r_a0e979b54b2435d4b5082b2937add0611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e979b54b2435d4b5082b2937add0611">mass</a></td></tr>
+<tr class="memdesc:a0e979b54b2435d4b5082b2937add0611"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-body/">Body</a>'s mass.  <br /></td></tr>
+
+<tr class="memitem:a0f14d38ee66c5c0c226677793f00b78e" id="r_a0f14d38ee66c5c0c226677793f00b78e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-movement-type/">MovementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f14d38ee66c5c0c226677793f00b78e">movementType</a></td></tr>
+<tr class="memdesc:a0f14d38ee66c5c0c226677793f00b78e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-body/">Body</a>'s movement type on each axis.  <br /></td></tr>
+
+<tr class="memitem:a543c8d6e605b4ac155a89c7b0ed7b9a5" id="r_a543c8d6e605b4ac155a89c7b0ed7b9a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a543c8d6e605b4ac155a89c7b0ed7b9a5">axisSubjectToGravity</a></td></tr>
+<tr class="memdesc:a543c8d6e605b4ac155a89c7b0ed7b9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axises on which the body is subject to gravity.  <br /></td></tr>
+
+<tr class="memitem:a250c79bfc7021b43840f8a616b2ca929" id="r_a250c79bfc7021b43840f8a616b2ca929"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a250c79bfc7021b43840f8a616b2ca929">axisForSynchronizationWithBody</a></td></tr>
+<tr class="memdesc:a250c79bfc7021b43840f8a616b2ca929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axises around which to rotate the owner when syncronizing with body.  <br /></td></tr>
+
+<tr class="memitem:aaa8280d3e11044ba3299ac99e64ce98f" id="r_aaa8280d3e11044ba3299ac99e64ce98f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8280d3e11044ba3299ac99e64ce98f">skipCycles</a></td></tr>
+<tr class="memdesc:aaa8280d3e11044ba3299ac99e64ce98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles to skip physical simulations to slow down physics.  <br /></td></tr>
+
+<tr class="memitem:a1563eee3a1dfa6c1f9a515bcb599472d" id="r_a1563eee3a1dfa6c1f9a515bcb599472d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1563eee3a1dfa6c1f9a515bcb599472d">skipedCycles</a></td></tr>
+<tr class="memdesc:a1563eee3a1dfa6c1f9a515bcb599472d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of skiped cycles.  <br /></td></tr>
+
+<tr class="memitem:a469d0b05f586a3f391fc87f345585e4c" id="r_a469d0b05f586a3f391fc87f345585e4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a469d0b05f586a3f391fc87f345585e4c">awake</a></td></tr>
+<tr class="memdesc:a469d0b05f586a3f391fc87f345585e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If not true, the body skips physical simulations.  <br /></td></tr>
+
+<tr class="memitem:a48ae86417fb7111738b38fe549d227ad" id="r_a48ae86417fb7111738b38fe549d227ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48ae86417fb7111738b38fe549d227ad">sendMessages</a></td></tr>
+<tr class="memdesc:a48ae86417fb7111738b38fe549d227ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the body informs its owner of its change in movement state.  <br /></td></tr>
+
+<tr class="memitem:add6af40cb347cd391e4e54d8bebffa21" id="r_add6af40cb347cd391e4e54d8bebffa21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6af40cb347cd391e4e54d8bebffa21">movesIndependentlyOnEachAxis</a></td></tr>
+<tr class="memdesc:add6af40cb347cd391e4e54d8bebffa21"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the movement of the body is independent on each axis.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_component')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-component/">Component</a></td></tr>
+<tr class="memitem:aaae35aa887053415ab42210fd2354c6c inherit pub_types_class_component" id="r_aaae35aa887053415ab42210fd2354c6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">ComponentCommands</a> </td></tr>
+
+<tr class="memitem:a463f6accfd16254f18a653e9b42a3d8f inherit pub_types_class_component" id="r_a463f6accfd16254f18a653e9b42a3d8f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">ComponentTypes</a> </td></tr>
+
+<tr class="inherit_header pub_methods_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_component')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-component/">Component</a></td></tr>
+<tr class="memitem:a28bad0ff044a24a480e90333664bb736 inherit pub_methods_class_component" id="r_a28bad0ff044a24a480e90333664bb736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *<a class="el" href="/documentation/api/class-component/">componentSpec</a>)</td></tr>
+
+<tr class="memitem:aa363223965ab4fde75e7bb8cd3fa31a5 inherit pub_methods_class_component" id="r_aa363223965ab4fde75e7bb8cd3fa31a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">destructor</a> ()</td></tr>
+<tr class="memdesc:aa363223965ab4fde75e7bb8cd3fa31a5 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:a10a34c37c647a2eb17d35a52e99637f4 inherit pub_methods_class_component" id="r_a10a34c37c647a2eb17d35a52e99637f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getSpec</a> ()</td></tr>
+
+<tr class="memitem:a25e761bb96d00c1983a60baa175c8a46 inherit pub_methods_class_component" id="r_a25e761bb96d00c1983a60baa175c8a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-entity/">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getOwner</a> ()</td></tr>
+<tr class="memdesc:a25e761bb96d00c1983a60baa175c8a46 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the collider's owner.  <br /></td></tr>
+
+<tr class="memitem:abd743f9cb05a07df8d21ec9ab2556bf6 inherit pub_methods_class_component" id="r_abd743f9cb05a07df8d21ec9ab2556bf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getType</a> ()</td></tr>
+
+<tr class="memitem:ac23ddbae782c7e97ec99489147053721 inherit pub_methods_class_component" id="r_ac23ddbae782c7e97ec99489147053721"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">releaseResources</a> ()</td></tr>
+<tr class="memdesc:ac23ddbae782c7e97ec99489147053721 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to release the component.  <br /></td></tr>
+
+<tr class="memitem:a23569737a5b0c64882e2ab8124385154 inherit pub_methods_class_component" id="r_a23569737a5b0c64882e2ab8124385154"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">getRightBox</a> ()</td></tr>
+
+<tr class="inherit_header pub_attribs_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_component')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-component/">Component</a></td></tr>
+<tr class="memitem:aca4d3c4346e10579e0dce15d2deb2a22 inherit pub_attribs_class_component" id="r_aca4d3c4346e10579e0dce15d2deb2a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-entity/">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">owner</a></td></tr>
+<tr class="memdesc:aca4d3c4346e10579e0dce15d2deb2a22 inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-object/">Object</a> to which this component attaches to.  <br /></td></tr>
+
+<tr class="memitem:ada6fd2c1a873fe14efcc7db63d7a5d7e inherit pub_attribs_class_component" id="r_ada6fd2c1a873fe14efcc7db63d7a5d7e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">componentSpec</a></td></tr>
+<tr class="memdesc:ada6fd2c1a873fe14efcc7db63d7a5d7e inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the spec that defines how to initialize the component.  <br /></td></tr>
+
+<tr class="memitem:a079d309fbac2b3b2a6be4f7096da3955 inherit pub_attribs_class_component" id="r_a079d309fbac2b3b2a6be4f7096da3955"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">transformation</a></td></tr>
+
+<tr class="memitem:a6635da6105aa4fdf6905707468eb5905 inherit pub_attribs_class_component" id="r_a6635da6105aa4fdf6905707468eb5905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-component/">deleteMe</a></td></tr>
+<tr class="memdesc:a6635da6105aa4fdf6905707468eb5905 inherit pub_attribs_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark the component as pending deletion.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-body/">Body</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-component/">Component</a></p>
+<p>Implements newtonian physics. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L99">99</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a12e806271fd6e2585582f773729589d0" name="a12e806271fd6e2585582f773729589d0"></a>
+<h2 class="memtitle">BodyROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> <a class="el" href="#a12e806271fd6e2585582f773729589d0">BodyROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-body/">Body</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L78">78</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7e363ec0f7e1c109d5e7465b653f2e78" name="a7e363ec0f7e1c109d5e7465b653f2e78"></a>
+<h2 class="memtitle">applyForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> Body::applyForce </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>force</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply a force to the body. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">force</td><td>Force to be applied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L345">345</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="acae6b93dc822b6bf6ba47cd1d9f8936a" name="acae6b93dc822b6bf6ba47cd1d9f8936a"></a>
+<h2 class="memtitle">bounce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::bounce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>bounceReferent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>bouncingPlaneNormal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>frictionCoefficient</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>bounciness</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Make the body to bounce on the profixed plane according to the provided friction and bounciness. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bounceReferent</td><td>Referent of the normal to the plane on which the body has to bounce </td></tr>
+    <tr><td class="paramname">bouncingPlaneNormal</td><td>Normal of the plane on which the body has to bounce </td></tr>
+    <tr><td class="paramname">frictionCoefficient</td><td>Friction coefficient of the bounce referent </td></tr>
+    <tr><td class="paramname">bounciness</td><td>Bounciness coefficient of the bounce referent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L385">385</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a224291aa093cda0ec6e5cee3eae635ee" name="a224291aa093cda0ec6e5cee3eae635ee"></a>
+<h2 class="memtitle">clearNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::clearNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>referent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Remove any normal vector affecting the body belonging to the provided referent. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">referent</td><td>Normal vector affecting the body's owner </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L253">253</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="af37e2d2c393c98d15584807c92fc103f" name="af37e2d2c393c98d15584807c92fc103f"></a>
+<h2 class="memtitle">computeInstantaneousSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::computeInstantaneousSpeed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>forceMagnitude</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>gravity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>mass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>friction</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>maximumSpeed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the instantaneous speed caused by the provided physical properties. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">forceMagnitude</td><td>Magnitude of the applied force </td></tr>
+    <tr><td class="paramname">gravity</td><td>Gravity acceleration vector that affects the resulting speed </td></tr>
+    <tr><td class="paramname">mass</td><td>The mass that will aquire the computed speed </td></tr>
+    <tr><td class="paramname">friction</td><td>Friction affecting the mass that will aquire the computed speed </td></tr>
+    <tr><td class="paramname">maximumSpeed</td><td>Maximum value that the computated speed can reach </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The instantaneous speed caused by the provided physical properties </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L106">106</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a66abc4291eabe5a5e30e053d108d11c0" name="a66abc4291eabe5a5e30e053d108d11c0"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-body-spec/">BodySpec</a> *</td>          <td class="paramname"><span class="paramname"><em>bodySpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the body attaches to </td></tr>
+    <tr><td class="paramname">bodySpec</td><td>Struct that specifies the physical properties of bodies </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L147">147</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a76b6240f9d43611f5eb8679487fdb19e" name="a76b6240f9d43611f5eb8679487fdb19e"></a>
+<h2 class="memtitle">getAxisForSynchronizationWithBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Body::getAxisForSynchronizationWithBody </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the axises around which the owner's rotation must be synchronized. </p><dl class="section return"><dt>Returns</dt><dd>Flag containing the axises around which the owner is subject to rotation synchronization </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L645">645</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="aac828aa83bde723e43415bcdde0ea8c6" name="aac828aa83bde723e43415bcdde0ea8c6"></a>
+<h2 class="memtitle">getAxisSubjectToGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Body::getAxisSubjectToGravity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the axises on which the body is subject to gravity. </p><dl class="section return"><dt>Returns</dt><dd>Flag containing the axises on which the body is subject to gravity </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L631">631</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a623a5f9c3e56545e13aa0990efb92b21" name="a623a5f9c3e56545e13aa0990efb92b21"></a>
+<h2 class="memtitle">getBounciness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::getBounciness </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's bounciness factor. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-body/">Body</a>'s bounciness factor </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L668">668</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="ac5fa078b415a1a07731390623b7fe94e" name="ac5fa078b415a1a07731390623b7fe94e"></a>
+<h2 class="memtitle">getDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> * Body::getDirection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the direction towards which the body is moving. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L614">614</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="ac572681a35353d7d03e6a10e7fa151b7" name="ac572681a35353d7d03e6a10e7fa151b7"></a>
+<h2 class="memtitle">getElapsedTimeStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::getElapsedTimeStep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the time that passes between each physical simulation step. </p><dl class="section return"><dt>Returns</dt><dd>The time that passes between each physical simulation step </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L99">99</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a003977c7effd236d223c8ec9b912f581" name="a003977c7effd236d223c8ec9b912f581"></a>
+<h2 class="memtitle">getFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::getFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's friction coefficient. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-body/">Body</a>'s friction coefficient </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L692">692</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="adc19c20f271308bd9d7b623ec63f3687" name="adc19c20f271308bd9d7b623ec63f3687"></a>
+<h2 class="memtitle">getMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::getMass </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's mass. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-body/">Body</a>'s mass </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L706">706</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="ac1b5ec0529d61f6b68b90437e544d2d3" name="ac1b5ec0529d61f6b68b90437e544d2d3"></a>
+<h2 class="memtitle">getMaximumSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::getMaximumSpeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's maximum speed. </p><dl class="section return"><dt>Returns</dt><dd>Maximum magnitude of the body's velocity </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L755">755</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a2eb188888e8a328c3754b5a8655ad310" name="a2eb188888e8a328c3754b5a8655ad310"></a>
+<h2 class="memtitle">getMaximumVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::getMaximumVelocity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's maximum velocity. </p><dl class="section return"><dt>Returns</dt><dd>3D vector defining the body's maximum speed on each axis (only applicable when the body's movement is independent on each axis) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L741">741</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a043fdfdd6242aec0d53f8d28c14a8211" name="a043fdfdd6242aec0d53f8d28c14a8211"></a>
+<h2 class="memtitle">getMovementOnAllAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Body::getMovementOnAllAxis </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's current movement state </p><dl class="section return"><dt>Returns</dt><dd>Flag containing the body's current movement state on each axis </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L801">801</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a568516a864c4bdd0f7ad6aac90d03424" name="a568516a864c4bdd0f7ad6aac90d03424"></a>
+<h2 class="memtitle">getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> * Body::getPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's position. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the body's 3D vector defining its position </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L727">727</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a821cf21270309e12add705387732cb23" name="a821cf21270309e12add705387732cb23"></a>
+<h2 class="memtitle">getSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::getSpeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the body's current speed (velocity vector's magnitude). </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-body/">Body</a>'s current speed (velocity vector's magnitude) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L794">794</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="abb1a81af31834c8dee0110626b320f80" name="abb1a81af31834c8dee0110626b320f80"></a>
+<h2 class="memtitle">getVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> * Body::getVelocity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the current velocity at which the body move. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the body's velocity vector </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L590">590</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="acc1e4162589e90a1f0709fd234596421" name="acc1e4162589e90a1f0709fd234596421"></a>
+<h2 class="memtitle">handleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::handleCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle a command. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">command</td><td>Command to handle </td></tr>
+    <tr><td class="paramname">args</td><td>Variable arguments list depending on the command to handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-component/">Component</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L218">218</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a44128937b6d5da7766e365e5a7ed2e88" name="a44128937b6d5da7766e365e5a7ed2e88"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the body's properties. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L830">830</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="ad69c422faab8826f7a6f2ad45fc84b74" name="ad69c422faab8826f7a6f2ad45fc84b74"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the body's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L231">231</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="ad2d9bcb17d887b0bad91688a7a8ab312" name="ad2d9bcb17d887b0bad91688a7a8ab312"></a>
+<h2 class="memtitle">sendMessages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::sendMessages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the flag that enables or prevents the sending of messages to the body's owner about its state changes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">value</td><td>If true, the body sends messages to its owner when its movement state changes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a508a0aae90c2f6a6fcbb70bdd127e7c7" name="a508a0aae90c2f6a6fcbb70bdd127e7c7"></a>
+<h2 class="memtitle">setAxisForSynchronizationWithBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setAxisForSynchronizationWithBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>axisForSynchronizationWithBody</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the axises around which the owner's rotation must be synchronized. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">axisForSynchronizationWithBody</td><td>Flag containing the axises around which the owner must be subject to rotation synchronization </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L638">638</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a87a03396184223353fe99a0abbc0efd5" name="a87a03396184223353fe99a0abbc0efd5"></a>
+<h2 class="memtitle">setAxisSubjectToGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setAxisSubjectToGravity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>axisSubjectToGravity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the axises on which the body is subject to gravity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">axisSubjectToGravity</td><td>Flag containing the axises on which the body is subject to gravity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L621">621</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a7bfc0bbec02c9d1401a72e60528fddba" name="a7bfc0bbec02c9d1401a72e60528fddba"></a>
+<h2 class="memtitle">setBounciness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setBounciness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>bounciness</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's bounciness factor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">bounciness</td><td>Value to set as the body's bounciness factor (between 0 and 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L652">652</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a404fd02902e6bc24ae104a785e5b6edd" name="a404fd02902e6bc24ae104a785e5b6edd"></a>
+<h2 class="memtitle">setDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setDirection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the direction towards which the body must move. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">direction</td><td>Pointer to a direction vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L597">597</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a6bc4a005a2fd38fae7cbf3b4993912bd" name="a6bc4a005a2fd38fae7cbf3b4993912bd"></a>
+<h2 class="memtitle">setFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>frictionCoefficient</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's friction coefficient. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frictionCoefficient</td><td>Value to set as the body's friction coefficient (between 0 and __MAXIMUM_FRICTION_COEFFICIENT) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L675">675</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a964a8a51cb1b60d3f51f02387c3449a8" name="a964a8a51cb1b60d3f51f02387c3449a8"></a>
+<h2 class="memtitle">setGlobalFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Body::setGlobalFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>frictionCoefficient</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the current global gravity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frictionCoefficient</td><td>Value to set as the body's friction coefficient (between 0 and __MAXIMUM_FRICTION_COEFFICIENT) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L92">92</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a9554d1afe3df994789cf0201c30bb7ca" name="a9554d1afe3df994789cf0201c30bb7ca"></a>
+<h2 class="memtitle">setGlobalGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Body::setGlobalGravity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>gravity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the current global gravity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">gravity</td><td>Gravity to set in the current physical world </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L85">85</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a9f7dae4ca72a69e9376456f6631fc1c4" name="a9f7dae4ca72a69e9376456f6631fc1c4"></a>
+<h2 class="memtitle">setMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setMass </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>mass</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's mass. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">mass</td><td>Value to set as the body's mass (between 0.01f and 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L699">699</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a89ca37e3b9468bbb7bae12ef959b7494" name="a89ca37e3b9468bbb7bae12ef959b7494"></a>
+<h2 class="memtitle">setMaximumSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setMaximumSpeed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>maximumSpeed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's maximum speed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumSpeed</td><td>Maximum magnitude of the body's velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L748">748</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a6edde19f6998369e38dd9600d3e838cb" name="a6edde19f6998369e38dd9600d3e838cb"></a>
+<h2 class="memtitle">setMaximumVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setMaximumVelocity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>maximumVelocity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's maximum velocity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumVelocity</td><td>3D vector defining the body's maximum speed on each axis (only applicable when the body's movement is independent on each axis) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L734">734</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a6d06654c267811ac1fd4f24612687c4e" name="a6d06654c267811ac1fd4f24612687c4e"></a>
+<h2 class="memtitle">setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>caller</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's position. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">position</td><td>3D vector defining the body's new position </td></tr>
+    <tr><td class="paramname">caller</td><td>Must be the body's owner; otherwise the call to this method doesn't have any effect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L713">713</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a50a040a22d12b4117c491e2620e0fb5c" name="a50a040a22d12b4117c491e2620e0fb5c"></a>
+<h2 class="memtitle">setSkipCycles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setSkipCycles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a></td>          <td class="paramname"><span class="paramname"><em>skipCycles</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the number of cycles to wait before updating the physics simulations on the body. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">skipCycles</td><td>Number of cycles to skip physical simulations to slow down physics </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L769">769</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a9baf5df5188911cd67b554b7569565fc" name="a9baf5df5188911cd67b554b7569565fc"></a>
+<h2 class="memtitle">setSurroundingFrictionCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setSurroundingFrictionCoefficient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>surroundingFrictionCoefficient</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the body's friction coefficient of the its surroundings. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">surroundingFrictionCoefficient</td><td><a class="el" href="/documentation/api/class-body/">Body</a>'s friction coefficient of the its surroundings </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L777">777</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="aefd59fb2b7492544cc41e8bfdd33aee4" name="aefd59fb2b7492544cc41e8bfdd33aee4"></a>
+<h2 class="memtitle">setVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::setVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>velocity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a constant velocity at which the body must move. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">velocity</td><td>Pointer to a velocity vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L546">546</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a0a3432f29493ec02cae04df7239de2ec" name="a0a3432f29493ec02cae04df7239de2ec"></a>
+<h2 class="memtitle">stopMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Body::stopMovement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stop the body's movement on the speficied axis. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">axis</td><td>Flag indicating the axises on which the movement has to stop </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Flag indicatiing the actual axises on which the body's movement stopped </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L499">499</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<a id="a3464affc6c598cad7277daf4ba1a5948" name="a3464affc6c598cad7277daf4ba1a5948"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>cycle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fix7_9_ext</a></td>          <td class="paramname"><span class="paramname"><em>elapsedTime</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update the physics simulation on the body. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">cycle</td><td>Cycle number during the current second </td></tr>
+    <tr><td class="paramname">elapsedTime</td><td>Elapsed time since the last call to this method </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c#L285">285</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1dfce6bc57d49b4930f54243fbb8e361" name="a1dfce6bc57d49b4930f54243fbb8e361"></a>
+<h2 class="memtitle">accelerating</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d-flag/">Vector3DFlag</a> Body::accelerating</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flags for the acceleration state of the body on each axis. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L143">143</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a469d0b05f586a3f391fc87f345585e4c" name="a469d0b05f586a3f391fc87f345585e4c"></a>
+<h2 class="memtitle">awake</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::awake</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If not true, the body skips physical simulations. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L179">179</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a250c79bfc7021b43840f8a616b2ca929" name="a250c79bfc7021b43840f8a616b2ca929"></a>
+<h2 class="memtitle">axisForSynchronizationWithBody</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Body::axisForSynchronizationWithBody</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Axises around which to rotate the owner when syncronizing with body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L170">170</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a543c8d6e605b4ac155a89c7b0ed7b9a5" name="a543c8d6e605b4ac155a89c7b0ed7b9a5"></a>
+<h2 class="memtitle">axisSubjectToGravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Body::axisSubjectToGravity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Axises on which the body is subject to gravity. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L167">167</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a5f49265c06f7aa9f0ade9c2aacab9c51" name="a5f49265c06f7aa9f0ade9c2aacab9c51"></a>
+<h2 class="memtitle">bounciness</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::bounciness</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-body/">Body</a>'s bounciness factor. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L146">146</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a9956c7bd8804067e6a60d9279b9075ab" name="a9956c7bd8804067e6a60d9279b9075ab"></a>
+<h2 class="memtitle">direction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::direction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L116">116</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9db62e7fd770ceadedf0723c53b953b" name="ad9db62e7fd770ceadedf0723c53b953b"></a>
+<h2 class="memtitle">externalForce</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::externalForce</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>External applied force. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L131">131</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="af73628b40bbf3805ef5d953885ea0216" name="af73628b40bbf3805ef5d953885ea0216"></a>
+<h2 class="memtitle">friction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::friction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Friction surrounding object. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L134">134</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="aea4587d75b70a4e39b4cdd7dcfa0a118" name="aea4587d75b70a4e39b4cdd7dcfa0a118"></a>
+<h2 class="memtitle">frictionCoefficient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::frictionCoefficient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Friction coefficient of the body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L149">149</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a53e2b82b04cafc0f21302aa2b6b1112a" name="a53e2b82b04cafc0f21302aa2b6b1112a"></a>
+<h2 class="memtitle">frictionForceMagnitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::frictionForceMagnitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total friction force magnitude affecting the body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L158">158</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a13d2e94d01bf84db3f7fdc0faad20006" name="a13d2e94d01bf84db3f7fdc0faad20006"></a>
+<h2 class="memtitle">gravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::gravity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gravity affecting the body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L128">128</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a7101faea627ebcf692f471db92bd5167" name="a7101faea627ebcf692f471db92bd5167"></a>
+<h2 class="memtitle">internalPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d-plus/">Vector3DPlus</a> Body::internalPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spatial position at higher decimal precision. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L107">107</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="ad7f9b34213e26c6f5747e213b641b472" name="ad7f9b34213e26c6f5747e213b641b472"></a>
+<h2 class="memtitle">internalVelocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-vector3-d-plus/">Vector3DPlus</a> Body::internalVelocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Velocity vector at higher decimal precision. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L113">113</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a0e979b54b2435d4b5082b2937add0611" name="a0e979b54b2435d4b5082b2937add0611"></a>
+<h2 class="memtitle">mass</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::mass</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-body/">Body</a>'s mass. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L161">161</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a23803b818faab5388116d41dc1b4e1f3" name="a23803b818faab5388116d41dc1b4e1f3"></a>
+<h2 class="memtitle">maximumSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::maximumSpeed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum speed. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L125">125</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a2c3a499728bfa69a7ff96e691fcdf59d" name="a2c3a499728bfa69a7ff96e691fcdf59d"></a>
+<h2 class="memtitle">maximumVelocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::maximumVelocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum velocity. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L119">119</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f14d38ee66c5c0c226677793f00b78e" name="a0f14d38ee66c5c0c226677793f00b78e"></a>
+<h2 class="memtitle">movementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-movement-type/">MovementType</a> Body::movementType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-body/">Body</a>'s movement type on each axis. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L164">164</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="add6af40cb347cd391e4e54d8bebffa21" name="add6af40cb347cd391e4e54d8bebffa21"></a>
+<h2 class="memtitle">movesIndependentlyOnEachAxis</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Body::movesIndependentlyOnEachAxis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, the movement of the body is independent on each axis. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L185">185</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="ab31c81835d0a95209b40ab5ce1fd77f6" name="ab31c81835d0a95209b40ab5ce1fd77f6"></a>
+<h2 class="memtitle">normals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> Body::normals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of normal for the forces affecting the body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L140">140</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a5e0365a8f56f00334174d4bf6a1c57a7" name="a5e0365a8f56f00334174d4bf6a1c57a7"></a>
+<h2 class="memtitle">position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spatial position. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L104">104</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a48ae86417fb7111738b38fe549d227ad" name="a48ae86417fb7111738b38fe549d227ad"></a>
+<h2 class="memtitle">sendMessages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Body::sendMessages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, the body informs its owner of its change in movement state. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L182">182</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="aaa8280d3e11044ba3299ac99e64ce98f" name="aaa8280d3e11044ba3299ac99e64ce98f"></a>
+<h2 class="memtitle">skipCycles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> Body::skipCycles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of cycles to skip physical simulations to slow down physics. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L173">173</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a1563eee3a1dfa6c1f9a515bcb599472d" name="a1563eee3a1dfa6c1f9a515bcb599472d"></a>
+<h2 class="memtitle">skipedCycles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> Body::skipedCycles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of skiped cycles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L176">176</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a77f866e31b548774c2f2d22897197105" name="a77f866e31b548774c2f2d22897197105"></a>
+<h2 class="memtitle">speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::speed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Speed magnitude. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L122">122</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a9106ee58e1a177db0af628a093cb9bfe" name="a9106ee58e1a177db0af628a093cb9bfe"></a>
+<h2 class="memtitle">surroundingFrictionCoefficient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::surroundingFrictionCoefficient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Friction coefficient of the body's surroundings. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L152">152</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a63f40cd36b1fd8d89d2d85c7c18ad766" name="a63f40cd36b1fd8d89d2d85c7c18ad766"></a>
+<h2 class="memtitle">totalFrictionCoefficient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Body::totalFrictionCoefficient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Friction force's magnitude. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L155">155</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="a44b9cccdc197e4ea4d27a82701ff4290" name="a44b9cccdc197e4ea4d27a82701ff4290"></a>
+<h2 class="memtitle">totalNormal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::totalNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total normal forces applied to the body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L137">137</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<a id="aa6ef1aa00e37993bf22410a48c29ecfa" name="aa6ef1aa00e37993bf22410a48c29ecfa"></a>
+<h2 class="memtitle">velocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> Body::velocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Velocity vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h#L110">110</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/Body/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.h">Body.h</a></li>
+<li>VUEngine-Core/source/Component/Body/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/Body/Body.c">Body.c</a></li>
+</ul>
+</div>
+
+
+</div>

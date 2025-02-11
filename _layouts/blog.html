@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="text-bg-dark">
+  <div class="container px-4 py-2 d-flex justify-content-between">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/blog/">Blog</a></li>
+      <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+    </ol>
+    <div>
+      {{ page.date | date: "%B %-d, %Y" }}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container p-4">
+    {{ content }}
+  </div>
+</section>

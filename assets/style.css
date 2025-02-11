@@ -1,14 +1,38 @@
 /* Bootstrap overrides */
 body {
-  overflow-y: scroll;
+  background-image: radial-gradient(rgba(0, 0, 0, .1) 1px, transparent 0);
+  background-size: 16px 16px;
 }
 
-a {
-  color: #d31422;
+main {
+  background-image: url('/assets/images/bg.png');
+  background-position: 75% 64px;
+  background-repeat: no-repeat;
 }
 
-a:hover {
-  color: #930c16;
+header {
+  background: var(--bs-primary) url('/assets/images/wireframe-header.jpg') no-repeat center;
+  background-size: cover;
+  border-bottom: 1px solid #111;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .3);
+}
+
+header .text-secondary {
+  color: rgba(255, 255, 255, .3) !important;
+}
+
+html[data-bs-theme="dark"] .bg-light {
+  background-color: transparent !important;
+}
+
+html[data-bs-theme="dark"] .features .text-bg-dark {
+  color: #000 !important;
+  background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity,1)) !important;
+}
+
+.breadcrumb a {
+  color: var(--bs-white) !important;
+  text-decoration: none;
 }
 
 blockquote {
@@ -16,32 +40,10 @@ blockquote {
   padding-left: 8px;
 }
 
-.btn-primary {
-  background-color: #d31422;
-  border-color: #d31422;
-}
-
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-  background-color: #930c16;
-  border-color: #930c16;
-}
-
 .btn-primary.disabled,
 .btn-primary:disabled {
   background-color: #666;
   border-color: #666;
-}
-
-.btn-patreon:hover {
-  background-color: #c65141;
-  border-color: #c65141;
-  color: #fff;
-}
-
-.text-primary {
-  color: #d31422 !important;
 }
 
 .bg-light {
@@ -86,15 +88,51 @@ blockquote {
 }
 
 .documentation h2 {
+  margin: 2.5rem 0 1rem;
+}
+
+.documentation h3 {
   margin: 2rem 0 1rem;
+}
+
+.documentation h4 {
+  margin: 1.5rem 0 1rem;
+}
+
+.documentation .accordion-button,
+.documentation .accordion-item {
+  background-color: transparent;
 }
 
 .documentation .accordion h2 {
   margin: 0;
 }
 
-.documentation img {
+.documentation .accordion button.current {
+  color: var(--bs-primary);
+}
+
+img {
+  border-radius: var(--bs-border-radius);
   max-width: 100%;
+}
+
+img[usemap] {
+    border-radius: 0;
+}
+
+figure {
+  display: inline-block;
+}
+
+figcaption {
+  font-size: 90%;
+  font-style: italic;
+  text-align: center;
+}
+
+figcaption.pullup {
+  margin-top: -4%;
 }
 
 @media (min-width: 1400px) {
@@ -160,9 +198,9 @@ body.os-other .target-os-not-other {
   display: none;
 }
 
-.documentation .keys {
+.keys {
   background-color: #6c757d;
-  border-radius: 0.25rem;
+  border-radius: var(--bs-border-radius);
   color: #fff;
   display: inline-block;
   font-size: 0.8em;
@@ -174,10 +212,34 @@ body.os-other .target-os-not-other {
   white-space: nowrap;
 }
 
+.setting {
+  background-color: #eee;
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-primary);
+  font-family: var(--bs-font-monospace);
+  font-size: .9rem;
+  padding: 2px 6px;
+}
+
+.setting::before {
+  content: "\f013";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  padding-right: 3px;
+}
+
+.documentation img + em {
+  display: block;
+  font-size: 90%;
+  font-style: italic;
+}
+
 .highlighter-rouge>.highlight {
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  border-radius: var(--bs-border-radius);
+  font-size: .85rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
+  line-height: 110%;
 }
 
 .highlighter-rouge pre {
@@ -215,9 +277,29 @@ body.os-other .target-os-not-other {
 /* Codicon overrides */
 
 .documentation .codicon[class*="codicon-"] {
-  color: #d63384;
+  color: var(--bs-primary);
   font-size: 120%;
   vertical-align: text-bottom;
+}
+
+.codicon-rotate-45:before {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.codicon-rotate-90:before {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.codicon-rotate-180:before {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.codicon-flip-y:before {
+  display: inline-block;
+  transform: rotate(180deg);
 }
 
 /* Font Awesome overrides */
@@ -226,5 +308,15 @@ body.os-other .target-os-not-other {
 .documentation .fab,
 .documentation .far,
 .documentation .fas {
-  color: #d63384;
+  color: var(--bs-primary);
+}
+
+/* BS5 Lightbox overrides */
+
+.modal-content {
+  overflow: hidden; /* enabled border-radius */
+}
+
+.modal-content .carousel-item .ratio {
+  background-color: #111 !important;
 }

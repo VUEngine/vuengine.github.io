@@ -1,0 +1,1382 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Texture Class Reference"
+permalink: documentation/api/class-texture/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Texture Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Texture:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_texture.png" usemap="#Texture_map" alt />
+  <map id="Texture_map" name="Texture_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="52,0,146,24" />
+<area href="/documentation/api/class-bgmap-texture/" alt="BgmapTexture" shape="rect" coords="0,112,94,136" />
+<area href="/documentation/api/class-object-texture/" alt="ObjectTexture" shape="rect" coords="104,112,198,136" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a69b8a7e4fac8e6ff7238a3e585437db2" id="r_a69b8a7e4fac8e6ff7238a3e585437db2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69b8a7e4fac8e6ff7238a3e585437db2">TextureStatus</a> </td></tr>
+
+<tr class="memitem:a381ae6ddcaa4295ada38f9af2434bca7" id="r_a381ae6ddcaa4295ada38f9af2434bca7"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a381ae6ddcaa4295ada38f9af2434bca7">TextureROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5e496b36d5c8d199fdd45ba979cdcd70" id="r_a5e496b36d5c8d199fdd45ba979cdcd70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e496b36d5c8d199fdd45ba979cdcd70">constructor</a> (const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> <a class="el" href="#a6e0ab9b77457dbd8c7176c3e9110033f">id</a>)</td></tr>
+
+<tr class="memitem:ac920e4521c2478dfcb11546b4731c8aa" id="r_ac920e4521c2478dfcb11546b4731c8aa"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac920e4521c2478dfcb11546b4731c8aa">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a3d41cea76e60ca9cea1dd3f4eea8541a" id="r_a3d41cea76e60ca9cea1dd3f4eea8541a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d41cea76e60ca9cea1dd3f4eea8541a">getId</a> ()</td></tr>
+
+<tr class="memitem:a50e620ea5cb09ff3bc58fb6836bfd1c0" id="r_a50e620ea5cb09ff3bc58fb6836bfd1c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e620ea5cb09ff3bc58fb6836bfd1c0">setSpec</a> (<a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>)</td></tr>
+
+<tr class="memitem:a310696e565a2ada2a8f74ad0ba7c904d" id="r_a310696e565a2ada2a8f74ad0ba7c904d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310696e565a2ada2a8f74ad0ba7c904d">getSpec</a> ()</td></tr>
+
+<tr class="memitem:aadca9e82f62b35bd91bcb24ad3d4400f" id="r_aadca9e82f62b35bd91bcb24ad3d4400f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-char-set/">CharSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadca9e82f62b35bd91bcb24ad3d4400f">getCharSet</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> loadIfNeeded)</td></tr>
+
+<tr class="memitem:a079927cb1c33abc97f4ec8dbbbf077c8" id="r_a079927cb1c33abc97f4ec8dbbbf077c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a079927cb1c33abc97f4ec8dbbbf077c8">increaseUsageCount</a> ()</td></tr>
+<tr class="memdesc:a079927cb1c33abc97f4ec8dbbbf077c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the usage count.  <br /></td></tr>
+
+<tr class="memitem:a2fc4adcaabfd7fcf9c4f666482ef3695" id="r_a2fc4adcaabfd7fcf9c4f666482ef3695"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc4adcaabfd7fcf9c4f666482ef3695">decreaseUsageCount</a> ()</td></tr>
+<tr class="memdesc:a2fc4adcaabfd7fcf9c4f666482ef3695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the usage count.  <br /></td></tr>
+
+<tr class="memitem:a2bc1317527e4e58b6cd21f0eeea86c5b" id="r_a2bc1317527e4e58b6cd21f0eeea86c5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bc1317527e4e58b6cd21f0eeea86c5b">getUsageCount</a> ()</td></tr>
+
+<tr class="memitem:a22a9fb2af7f9635e19fcb248f492b149" id="r_a22a9fb2af7f9635e19fcb248f492b149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22a9fb2af7f9635e19fcb248f492b149">setPalette</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> <a class="el" href="#ab2cead005ee897d0804a188f33ea269a">palette</a>)</td></tr>
+
+<tr class="memitem:a018f3917391d5bbbe1bd724585091175" id="r_a018f3917391d5bbbe1bd724585091175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018f3917391d5bbbe1bd724585091175">getPalette</a> ()</td></tr>
+
+<tr class="memitem:a911f0cf914b7403d3dd2ce5f642db9ec" id="r_a911f0cf914b7403d3dd2ce5f642db9ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a911f0cf914b7403d3dd2ce5f642db9ec">getNumberOfFrames</a> ()</td></tr>
+
+<tr class="memitem:ae12371078252f1e8004c34aed150af1b" id="r_ae12371078252f1e8004c34aed150af1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae12371078252f1e8004c34aed150af1b">setFrame</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> <a class="el" href="#aa760abb5b7c93a305b87f0a0e66ba566">frame</a>)</td></tr>
+
+<tr class="memitem:ae949d7603719c4c32ca2730cc9c654c3" id="r_ae949d7603719c4c32ca2730cc9c654c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae949d7603719c4c32ca2730cc9c654c3">getFrame</a> ()</td></tr>
+
+<tr class="memitem:aeac775fbaf2cb2eb46494853d656d106" id="r_aeac775fbaf2cb2eb46494853d656d106"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac775fbaf2cb2eb46494853d656d106">getCols</a> ()</td></tr>
+
+<tr class="memitem:abacf43e3820b7b235125641af2540e94" id="r_abacf43e3820b7b235125641af2540e94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abacf43e3820b7b235125641af2540e94">getRows</a> ()</td></tr>
+
+<tr class="memitem:a77bfb6084ffcdab6335a103a407ebdd7" id="r_a77bfb6084ffcdab6335a103a407ebdd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77bfb6084ffcdab6335a103a407ebdd7">isWritten</a> ()</td></tr>
+
+<tr class="memitem:ad7df7f4eccb01575708a2ce99286fda9" id="r_ad7df7f4eccb01575708a2ce99286fda9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7df7f4eccb01575708a2ce99286fda9">isShared</a> ()</td></tr>
+
+<tr class="memitem:afe86da652f5710212a55961f52a54548" id="r_afe86da652f5710212a55961f52a54548"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe86da652f5710212a55961f52a54548">isAnimated</a> ()</td></tr>
+
+<tr class="memitem:a279d3cfa1772245c11cadfd9d6f8d9ae" id="r_a279d3cfa1772245c11cadfd9d6f8d9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a279d3cfa1772245c11cadfd9d6f8d9ae">isSingleFrame</a> ()</td></tr>
+
+<tr class="memitem:a221c597f264e6440c307ca0a521ffee9" id="r_a221c597f264e6440c307ca0a521ffee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a221c597f264e6440c307ca0a521ffee9">isMultiframe</a> ()</td></tr>
+
+<tr class="memitem:a715aea378b07a7e146975e7aaf28b9d2" id="r_a715aea378b07a7e146975e7aaf28b9d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a715aea378b07a7e146975e7aaf28b9d2">addChar</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePoint, const <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:a907fbf05fe35e3e9a6879ae0e00f2aa9" id="r_a907fbf05fe35e3e9a6879ae0e00f2aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a907fbf05fe35e3e9a6879ae0e00f2aa9">putChar</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePoint, const <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> *newChar)</td></tr>
+
+<tr class="memitem:a242a84056e799c85e970ee62888b8bce" id="r_a242a84056e799c85e970ee62888b8bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a242a84056e799c85e970ee62888b8bce">putPixel</a> (const <a class="el" href="/documentation/api/struct-point/">Point</a> *texturePixel, const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *charSetPixel, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">BYTE</a> newPixelColor)</td></tr>
+
+<tr class="memitem:a778ad9d50fd497d65237cd0e1eb785b5" id="r_a778ad9d50fd497d65237cd0e1eb785b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a778ad9d50fd497d65237cd0e1eb785b5">prepare</a> ()</td></tr>
+
+<tr class="memitem:adab0ca31bc2ff07accd7ebd4896dc792" id="r_adab0ca31bc2ff07accd7ebd4896dc792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adab0ca31bc2ff07accd7ebd4896dc792">update</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> maximumTextureRowsToWrite)</td></tr>
+
+<tr class="memitem:a6e4a1ecab0fb9d8e8a7ce38474c9991d" id="r_a6e4a1ecab0fb9d8e8a7ce38474c9991d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4a1ecab0fb9d8e8a7ce38474c9991d">write</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> maximumTextureRowsToWrite)</td></tr>
+
+<tr class="memitem:af3f19601f39654b5a4acfd2291e59f5e" id="r_af3f19601f39654b5a4acfd2291e59f5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f19601f39654b5a4acfd2291e59f5e">rewrite</a> ()</td></tr>
+<tr class="memdesc:af3f19601f39654b5a4acfd2291e59f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite graphical data to the allocated DRAM space.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a1f147398961876ee0f73fb669c4be281" id="r_a1f147398961876ee0f73fb669c4be281"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-texture/">Texture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f147398961876ee0f73fb669c4be281">get</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> textureClass, const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> minimumSegment, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> mustLiveAtEvenSegment, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> scValue)</td></tr>
+
+<tr class="memitem:a2792c5d91f49d5bfc067f12b0acbd6e1" id="r_a2792c5d91f49d5bfc067f12b0acbd6e1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2792c5d91f49d5bfc067f12b0acbd6e1">release</a> (<a class="el" href="/documentation/api/class-texture/">Texture</a> texture)</td></tr>
+
+<tr class="memitem:a97045531c0cb8857ec4f525b47d904f4" id="r_a97045531c0cb8857ec4f525b47d904f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97045531c0cb8857ec4f525b47d904f4">updateTextures</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> maximumTextureRowsToWrite, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> defer)</td></tr>
+
+<tr class="memitem:a809276cd6ac766fd96de316a5bb46e3e" id="r_a809276cd6ac766fd96de316a5bb46e3e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809276cd6ac766fd96de316a5bb46e3e">getTotalCols</a> (<a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>)</td></tr>
+
+<tr class="memitem:a148a4d727f3d346ec0d81276c3fe57bf" id="r_a148a4d727f3d346ec0d81276c3fe57bf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a148a4d727f3d346ec0d81276c3fe57bf">getTotalRows</a> (<a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *<a class="el" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a>)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab6b3c5283c3da16a10e02e505af457e0" id="r_ab6b3c5283c3da16a10e02e505af457e0"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6b3c5283c3da16a10e02e505af457e0">doUpdate</a> )(<a class="el" href="/documentation/api/class-texture/">Texture</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>)</td></tr>
+<tr class="memdesc:ab6b3c5283c3da16a10e02e505af457e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the implementation that updates graphical data in DRAM.  <br /></td></tr>
+
+<tr class="memitem:af7fa112527e1022449d30d2ee57e7bb5" id="r_af7fa112527e1022449d30d2ee57e7bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-char-set/">CharSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7fa112527e1022449d30d2ee57e7bb5">charSet</a></td></tr>
+<tr class="memdesc:af7fa112527e1022449d30d2ee57e7bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Char set that holds the pixel data used by the texture.  <br /></td></tr>
+
+<tr class="memitem:aecbd7d299afc30d351fb79ad7ddea283" id="r_aecbd7d299afc30d351fb79ad7ddea283"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecbd7d299afc30d351fb79ad7ddea283">textureSpec</a></td></tr>
+<tr class="memdesc:aecbd7d299afc30d351fb79ad7ddea283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spec used to configure the texture.  <br /></td></tr>
+
+<tr class="memitem:a9676661fcbea40902159483eef472d9c" id="r_a9676661fcbea40902159483eef472d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9676661fcbea40902159483eef472d9c">mapDisplacement</a></td></tr>
+<tr class="memdesc:a9676661fcbea40902159483eef472d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displacement inside the map array modified according to the frame's value.  <br /></td></tr>
+
+<tr class="memitem:a6e0ab9b77457dbd8c7176c3e9110033f" id="r_a6e0ab9b77457dbd8c7176c3e9110033f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e0ab9b77457dbd8c7176c3e9110033f">id</a></td></tr>
+<tr class="memdesc:a6e0ab9b77457dbd8c7176c3e9110033f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificator.  <br /></td></tr>
+
+<tr class="memitem:aa760abb5b7c93a305b87f0a0e66ba566" id="r_aa760abb5b7c93a305b87f0a0e66ba566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa760abb5b7c93a305b87f0a0e66ba566">frame</a></td></tr>
+<tr class="memdesc:aa760abb5b7c93a305b87f0a0e66ba566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicator of the block inside the map array to write to DRAM.  <br /></td></tr>
+
+<tr class="memitem:ab2cead005ee897d0804a188f33ea269a" id="r_ab2cead005ee897d0804a188f33ea269a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2cead005ee897d0804a188f33ea269a">palette</a></td></tr>
+<tr class="memdesc:ab2cead005ee897d0804a188f33ea269a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Palette index to use by the graphical data.  <br /></td></tr>
+
+<tr class="memitem:a8d72c05d46e81dfd582f5b4c0c0a5c28" id="r_a8d72c05d46e81dfd582f5b4c0c0a5c28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d72c05d46e81dfd582f5b4c0c0a5c28">status</a></td></tr>
+<tr class="memdesc:a8d72c05d46e81dfd582f5b4c0c0a5c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writing status flag.  <br /></td></tr>
+
+<tr class="memitem:ae1a4b167aca163d4e42a6d68817d4ebc" id="r_ae1a4b167aca163d4e42a6d68817d4ebc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1a4b167aca163d4e42a6d68817d4ebc">usageCount</a></td></tr>
+<tr class="memdesc:ae1a4b167aca163d4e42a6d68817d4ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of references to this texture instance.  <br /></td></tr>
+
+<tr class="memitem:a4facafb3b5be41dcfbeac78eb8d0a396" id="r_a4facafb3b5be41dcfbeac78eb8d0a396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4facafb3b5be41dcfbeac78eb8d0a396">update</a></td></tr>
+<tr class="memdesc:a4facafb3b5be41dcfbeac78eb8d0a396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to signal that the texture needs to update DRAM in the next render cycle.  <br /></td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:abbad842e81ca692ea80f2a123fe3d4ad inherit pub_methods_class_listener_object" id="r_abbad842e81ca692ea80f2a123fe3d4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a4576f085df122b6ca093affc2ad92061 inherit pub_methods_class_listener_object" id="r_a4576f085df122b6ca093affc2ad92061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aa118c3b40a6ff3e2b49aacaa7536cf07 inherit pub_methods_class_listener_object" id="r_aa118c3b40a6ff3e2b49aacaa7536cf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message)</td></tr>
+
+<tr class="memitem:ac00bf51bd5d127ab6c703fe37008ea68 inherit pub_methods_class_listener_object" id="r_ac00bf51bd5d127ab6c703fe37008ea68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-char-set/">CharSet</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>A texture to be displayed by a sprite. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L90">90</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a381ae6ddcaa4295ada38f9af2434bca7" name="a381ae6ddcaa4295ada38f9af2434bca7"></a>
+<h2 class="memtitle">TextureROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> <a class="el" href="#a381ae6ddcaa4295ada38f9af2434bca7">TextureROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-texture/">Texture</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a69b8a7e4fac8e6ff7238a3e585437db2" name="a69b8a7e4fac8e6ff7238a3e585437db2"></a>
+<h2 class="memtitle">TextureStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a69b8a7e4fac8e6ff7238a3e585437db2">TextureStatus</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L31">31</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a715aea378b07a7e146975e7aaf28b9d2" name="a715aea378b07a7e146975e7aaf28b9d2"></a>
+<h2 class="memtitle">addChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::addChar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-point/">Point</a> *</td>          <td class="paramname"><span class="paramname"><em>texturePoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> *</td>          <td class="paramname"><span class="paramname"><em>newChar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add the color provided color data to a CHAR in the sprite's texture. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">texturePoint</td><td>Coordinate in texture's space of the CHAR to replace </td></tr>
+    <tr><td class="paramname">newChar</td><td>Color data array for the CHAR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L467">467</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a5e496b36d5c8d199fdd45ba979cdcd70" name="a5e496b36d5c8d199fdd45ba979cdcd70"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::constructor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>textureSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">textureSpec</td><td>Specification that determines how to configure the texture </td></tr>
+    <tr><td class="paramname">id</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a>'s identificator </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L201">201</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a2fc4adcaabfd7fcf9c4f666482ef3695" name="a2fc4adcaabfd7fcf9c4f666482ef3695"></a>
+<h2 class="memtitle">decreaseUsageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::decreaseUsageCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decrease the usage count. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L336">336</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a1f147398961876ee0f73fb669c4be281" name="a1f147398961876ee0f73fb669c4be281"></a>
+<h2 class="memtitle">get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-texture/">Texture</a> Texture::get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a></td>          <td class="paramname"><span class="paramname"><em>textureClass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>textureSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>minimumSegment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>mustLiveAtEvenSegment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>scValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a texture configured with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">textureClass</td><td>Class of texture to instantiate </td></tr>
+    <tr><td class="paramname">textureSpec</td><td>Spec used to select or initialize a texture with </td></tr>
+    <tr><td class="paramname">minimumSegment</td><td>Minimum BGMAP segment where to allocate the texture </td></tr>
+    <tr><td class="paramname">mustLiveAtEvenSegment</td><td>Required BGMAP segment where to allocate the texture </td></tr>
+    <tr><td class="paramname">scValue</td><td>SC configuration value for multi segment textures </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-texture/">Texture</a> initialized with the provided spec </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L45">45</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="aadca9e82f62b35bd91bcb24ad3d4400f" name="aadca9e82f62b35bd91bcb24ad3d4400f"></a>
+<h2 class="memtitle">getCharSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-char-set/">CharSet</a> Texture::getCharSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>loadIfNeeded</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the texture's char set. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">loadIfNeeded</td><td>If true and the char set is not loaded, loads it </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-texture/">Texture</a>'s char set </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L317">317</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="aeac775fbaf2cb2eb46494853d656d106" name="aeac775fbaf2cb2eb46494853d656d106"></a>
+<h2 class="memtitle">getCols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Texture::getCols </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the texture's horizontal size in tiles. </p><dl class="section return"><dt>Returns</dt><dd>Horizontal size in tiles </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L408">408</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="ae949d7603719c4c32ca2730cc9c654c3" name="ae949d7603719c4c32ca2730cc9c654c3"></a>
+<h2 class="memtitle">getFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Texture::getFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve frame that species the block inside the map array to write to DRAM. </p><dl class="section return"><dt>Returns</dt><dd>The frame that species the block inside the map array to write to DRAM </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L401">401</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a3d41cea76e60ca9cea1dd3f4eea8541a" name="a3d41cea76e60ca9cea1dd3f4eea8541a"></a>
+<h2 class="memtitle">getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Texture::getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the texture's identificator. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-texture/">Texture</a>'s identificator </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L276">276</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a911f0cf914b7403d3dd2ce5f642db9ec" name="a911f0cf914b7403d3dd2ce5f642db9ec"></a>
+<h2 class="memtitle">getNumberOfFrames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Texture::getNumberOfFrames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the number frames specified by the texture's spec. </p><dl class="section return"><dt>Returns</dt><dd>Number frames specified by the texture's spec </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L378">378</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a018f3917391d5bbbe1bd724585091175" name="a018f3917391d5bbbe1bd724585091175"></a>
+<h2 class="memtitle">getPalette()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> Texture::getPalette </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the palette index used the graphical data. </p><dl class="section return"><dt>Returns</dt><dd>Palette index used by the graphical data </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L371">371</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="abacf43e3820b7b235125641af2540e94" name="abacf43e3820b7b235125641af2540e94"></a>
+<h2 class="memtitle">getRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Texture::getRows </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the texture's vertical size in tiles. </p><dl class="section return"><dt>Returns</dt><dd>Vertical size in tiles </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L415">415</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a310696e565a2ada2a8f74ad0ba7c904d" name="a310696e565a2ada2a8f74ad0ba7c904d"></a>
+<h2 class="memtitle">getSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> * Texture::getSpec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the texture's spec. </p><dl class="section return"><dt>Returns</dt><dd>Specification that determines how to configure the texture </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L310">310</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a809276cd6ac766fd96de316a5bb46e3e" name="a809276cd6ac766fd96de316a5bb46e3e"></a>
+<h2 class="memtitle">getTotalCols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Texture::getTotalCols </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>textureSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the total horizontal size of the textures defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">textureSpec</td><td>Spec of which to compute the horizontal size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Total horizontal size of the textures defined by the provided spec </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L103">103</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a148a4d727f3d346ec0d81276c3fe57bf" name="a148a4d727f3d346ec0d81276c3fe57bf"></a>
+<h2 class="memtitle">getTotalRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Texture::getTotalRows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>textureSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the total vertical size of the textures defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">textureSpec</td><td>Spec of which to compute the vertical size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Total vertical size of the textures defined by the provided spec </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L127">127</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a2bc1317527e4e58b6cd21f0eeea86c5b" name="a2bc1317527e4e58b6cd21f0eeea86c5b"></a>
+<h2 class="memtitle">getUsageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> Texture::getUsageCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the usage count. </p><dl class="section return"><dt>Returns</dt><dd>Usage count </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L355">355</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a079927cb1c33abc97f4ec8dbbbf077c8" name="a079927cb1c33abc97f4ec8dbbbf077c8"></a>
+<h2 class="memtitle">increaseUsageCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::increaseUsageCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase the usage count. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L329">329</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="afe86da652f5710212a55961f52a54548" name="afe86da652f5710212a55961f52a54548"></a>
+<h2 class="memtitle">isAnimated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::isAnimated </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the texture is an animation or not. </p><dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="/documentation/api/class-char-set/">CharSet</a> has an array of animation frames </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L446">446</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a221c597f264e6440c307ca0a521ffee9" name="a221c597f264e6440c307ca0a521ffee9"></a>
+<h2 class="memtitle">isMultiframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::isMultiframe </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the texture is a multiframe texture. </p><dl class="section return"><dt>Returns</dt><dd>True if the texture is multiframe; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L460">460</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="ad7df7f4eccb01575708a2ce99286fda9" name="ad7df7f4eccb01575708a2ce99286fda9"></a>
+<h2 class="memtitle">isShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::isShared </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the texture is a shared one. </p><dl class="section return"><dt>Returns</dt><dd>True if the texture is shared; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L429">429</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a279d3cfa1772245c11cadfd9d6f8d9ae" name="a279d3cfa1772245c11cadfd9d6f8d9ae"></a>
+<h2 class="memtitle">isSingleFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::isSingleFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the texture has only one frame. </p><dl class="section return"><dt>Returns</dt><dd>True if the texture has only one frame; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L453">453</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a77bfb6084ffcdab6335a103a407ebdd7" name="a77bfb6084ffcdab6335a103a407ebdd7"></a>
+<h2 class="memtitle">isWritten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::isWritten </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the texture's data is completely writen to DRAM. </p><dl class="section return"><dt>Returns</dt><dd>True if the texture's data is completely writing to DRAM </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L422">422</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="ac920e4521c2478dfcb11546b4731c8aa" name="ac920e4521c2478dfcb11546b4731c8aa"></a>
+<h2 class="memtitle">onEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::onEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>eventFirer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>eventCode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process an event that the instance is listen for. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">eventFirer</td><td><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> that signals the event </td></tr>
+    <tr><td class="paramname">eventCode</td><td>Code of the firing event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if the listener has to be removed; true to keep it </dd></dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L244">244</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a778ad9d50fd497d65237cd0e1eb785b5" name="a778ad9d50fd497d65237cd0e1eb785b5"></a>
+<h2 class="memtitle">prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::prepare </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prepare the texture to write its graphical data to DRAM during the next render cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L517">517</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a907fbf05fe35e3e9a6879ae0e00f2aa9" name="a907fbf05fe35e3e9a6879ae0e00f2aa9"></a>
+<h2 class="memtitle">putChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::putChar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-point/">Point</a> *</td>          <td class="paramname"><span class="paramname"><em>texturePoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> *</td>          <td class="paramname"><span class="paramname"><em>newChar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replace a CHAR in the sprite's texture. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">texturePoint</td><td>Coordinate in texture's space of the CHAR to replace </td></tr>
+    <tr><td class="paramname">newChar</td><td>Color data array for the CHAR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L484">484</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a242a84056e799c85e970ee62888b8bce" name="a242a84056e799c85e970ee62888b8bce"></a>
+<h2 class="memtitle">putPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::putPixel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-point/">Point</a> *</td>          <td class="paramname"><span class="paramname"><em>texturePixel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-pixel/">Pixel</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetPixel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">BYTE</a></td>          <td class="paramname"><span class="paramname"><em>newPixelColor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replace a pixel in the sprite's texture. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">texturePixel</td><td>Coordinate in texture's space of the CHAR to replace </td></tr>
+    <tr><td class="paramname">charSetPixel</td><td>Coordinate in CHAR space of the CHAR to replace </td></tr>
+    <tr><td class="paramname">newPixelColor</td><td>Color data array for the CHAR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L501">501</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a2792c5d91f49d5bfc067f12b0acbd6e1" name="a2792c5d91f49d5bfc067f12b0acbd6e1"></a>
+<h2 class="memtitle">release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Texture::release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-texture/">Texture</a></td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Release a texture. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">texture</td><td><a class="el" href="/documentation/api/class-texture/">Texture</a> to release </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L76">76</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="af3f19601f39654b5a4acfd2291e59f5e" name="af3f19601f39654b5a4acfd2291e59f5e"></a>
+<h2 class="memtitle">rewrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::rewrite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rewrite graphical data to the allocated DRAM space. </p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L595">595</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="ae12371078252f1e8004c34aed150af1b" name="ae12371078252f1e8004c34aed150af1b"></a>
+<h2 class="memtitle">setFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::setFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Write to DRAM the graphical data of the map that corresponds to the specified frame. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">frame</td><td>The frame that species the block inside the map array to write to DRAM </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L385">385</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a22a9fb2af7f9635e19fcb248f492b149" name="a22a9fb2af7f9635e19fcb248f492b149"></a>
+<h2 class="memtitle">setPalette()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::setPalette </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>palette</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the palette index to use by the graphical data. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">palette</td><td>Palette index to use by the graphical data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L362">362</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a50e620ea5cb09ff3bc58fb6836bfd1c0" name="a50e620ea5cb09ff3bc58fb6836bfd1c0"></a>
+<h2 class="memtitle">setSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Texture::setSpec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>textureSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the texture's spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">textureSpec</td><td>Specification that determines how to configure the texture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L283">283</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="adab0ca31bc2ff07accd7ebd4896dc792" name="adab0ca31bc2ff07accd7ebd4896dc792"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>maximumTextureRowsToWrite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update the texture's underlying graphics. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumTextureRowsToWrite</td><td>Number of texture rows to write during this call </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a97045531c0cb8857ec4f525b47d904f4" name="a97045531c0cb8857ec4f525b47d904f4"></a>
+<h2 class="memtitle">updateTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void Texture::updateTextures </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>maximumTextureRowsToWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>defer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update texture pending rewriting of data in DRAM. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumTextureRowsToWrite</td><td>Number of texture rows to write during this call </td></tr>
+    <tr><td class="paramname">defer</td><td>If true, the texture data is written overtime; otherwise all is written in a single pass </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L95">95</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<a id="a6e4a1ecab0fb9d8e8a7ce38474c9991d" name="a6e4a1ecab0fb9d8e8a7ce38474c9991d"></a>
+<h2 class="memtitle">write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>maximumTextureRowsToWrite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write graphical data to the allocated DRAM space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">maximumTextureRowsToWrite</td><td>Number of texture rows to write during this call </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the texture was written; false if it fails </dd></dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-bgmap-texture/">BgmapTexture</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c#L577">577</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af7fa112527e1022449d30d2ee57e7bb5" name="af7fa112527e1022449d30d2ee57e7bb5"></a>
+<h2 class="memtitle">charSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-char-set/">CharSet</a> Texture::charSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Char set that holds the pixel data used by the texture. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L96">96</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="ab6b3c5283c3da16a10e02e505af457e0" name="ab6b3c5283c3da16a10e02e505af457e0"></a>
+<h2 class="memtitle">doUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void(* Texture::doUpdate) (<a class="el" href="/documentation/api/class-texture/">Texture</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the implementation that updates graphical data in DRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L93">93</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="aa760abb5b7c93a305b87f0a0e66ba566" name="aa760abb5b7c93a305b87f0a0e66ba566"></a>
+<h2 class="memtitle">frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Texture::frame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicator of the block inside the map array to write to DRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L108">108</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="a6e0ab9b77457dbd8c7176c3e9110033f" name="a6e0ab9b77457dbd8c7176c3e9110033f"></a>
+<h2 class="memtitle">id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Texture::id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identificator. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L105">105</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="a9676661fcbea40902159483eef472d9c" name="a9676661fcbea40902159483eef472d9c"></a>
+<h2 class="memtitle">mapDisplacement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> Texture::mapDisplacement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displacement inside the map array modified according to the frame's value. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L102">102</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="ab2cead005ee897d0804a188f33ea269a" name="ab2cead005ee897d0804a188f33ea269a"></a>
+<h2 class="memtitle">palette</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> Texture::palette</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Palette index to use by the graphical data. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L111">111</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="a8d72c05d46e81dfd582f5b4c0c0a5c28" name="a8d72c05d46e81dfd582f5b4c0c0a5c28"></a>
+<h2 class="memtitle">status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> Texture::status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writing status flag. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L114">114</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="aecbd7d299afc30d351fb79ad7ddea283" name="aecbd7d299afc30d351fb79ad7ddea283"></a>
+<h2 class="memtitle">textureSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-texture-spec/">TextureSpec</a>* Texture::textureSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spec used to configure the texture. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L99">99</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="a4facafb3b5be41dcfbeac78eb8d0a396" name="a4facafb3b5be41dcfbeac78eb8d0a396"></a>
+<h2 class="memtitle">update</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Texture::update</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to signal that the texture needs to update DRAM in the next render cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L120">120</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1a4b167aca163d4e42a6d68817d4ebc" name="ae1a4b167aca163d4e42a6d68817d4ebc"></a>
+<h2 class="memtitle">usageCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> Texture::usageCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of references to this texture instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h#L117">117</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.h">Texture.h</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/Texture.c">Texture.c</a></li>
+</ul>
+</div>
+
+
+</div>

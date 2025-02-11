@@ -1,0 +1,365 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Sphere Class Reference"
+permalink: documentation/api/class-sphere/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Sphere Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Sphere:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_sphere.png" usemap="#Sphere_map" alt />
+  <map id="Sphere_map" name="Sphere_map">
+<area href="/documentation/api/class-wireframe/" alt="Wireframe" shape="rect" coords="0,0,70,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a8a1419f26cc974702b16c8c23a6b1ab3" id="r_a8a1419f26cc974702b16c8c23a6b1ab3"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-sphere-spec/">SphereSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a1419f26cc974702b16c8c23a6b1ab3">SphereROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a36c552a4ed1d17c0d9d680ea433aa1f5" id="r_a36c552a4ed1d17c0d9d680ea433aa1f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36c552a4ed1d17c0d9d680ea433aa1f5">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-sphere-spec/">SphereSpec</a> *sphereSpec)</td></tr>
+
+<tr class="memitem:ac08ac35e2f3e4a9465725cf3314d361e" id="r_ac08ac35e2f3e4a9465725cf3314d361e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08ac35e2f3e4a9465725cf3314d361e">render</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> relativePosition)</td></tr>
+
+<tr class="memitem:a905be7cd09c12c446b528c40c5495956" id="r_a905be7cd09c12c446b528c40c5495956"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a905be7cd09c12c446b528c40c5495956">draw</a> ()</td></tr>
+
+<tr class="memitem:ac25e0c369a944121e904b9a0bd45921d" id="r_ac25e0c369a944121e904b9a0bd45921d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac25e0c369a944121e904b9a0bd45921d">setRadius</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> <a class="el" href="#a53d22a9cea0697ff86eb6afea34a1dc7">radius</a>)</td></tr>
+
+<tr class="memitem:af91562a8f7401973f703db2a2e7bace9" id="r_af91562a8f7401973f703db2a2e7bace9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af91562a8f7401973f703db2a2e7bace9">getRadius</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a0887c65aa33217124839d7bf677b5d9f" id="r_a0887c65aa33217124839d7bf677b5d9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-pixel-vector/">PixelVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0887c65aa33217124839d7bf677b5d9f">position</a></td></tr>
+<tr class="memdesc:a0887c65aa33217124839d7bf677b5d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position at which to draw the wireframe.  <br /></td></tr>
+
+<tr class="memitem:a53d22a9cea0697ff86eb6afea34a1dc7" id="r_a53d22a9cea0697ff86eb6afea34a1dc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d22a9cea0697ff86eb6afea34a1dc7">radius</a></td></tr>
+<tr class="memdesc:a53d22a9cea0697ff86eb6afea34a1dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of the sphere.  <br /></td></tr>
+
+<tr class="memitem:a6bf8202c382556dad12aaebf6246eb40" id="r_a6bf8202c382556dad12aaebf6246eb40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf8202c382556dad12aaebf6246eb40">scaledRadius</a></td></tr>
+<tr class="memdesc:a6bf8202c382556dad12aaebf6246eb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used radius of the sphere's to draw it.  <br /></td></tr>
+
+<tr class="memitem:a88f19752af8939d11df4ec7691ea567f" id="r_a88f19752af8939d11df4ec7691ea567f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88f19752af8939d11df4ec7691ea567f">drawCenter</a></td></tr>
+<tr class="memdesc:a88f19752af8939d11df4ec7691ea567f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to control the drawing of the sphere's center point.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_wireframe"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_wireframe')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></td></tr>
+<tr class="memitem:a25095825727df57e3cf3995cbb34b5c4 inherit pub_types_class_wireframe" id="r_a25095825727df57e3cf3995cbb34b5c4"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">WireframeROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_wireframe"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_wireframe')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></td></tr>
+<tr class="memitem:afc7063a56ee55de7f4006a935b14f962 inherit pub_methods_class_wireframe" id="r_afc7063a56ee55de7f4006a935b14f962"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">constructor</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> <a class="el" href="/documentation/api/class-component/">owner</a>, const <a class="el" href="/documentation/api/struct-wireframe-spec/">WireframeSpec</a> *wireframeSpec)</td></tr>
+
+<tr class="memitem:ab239f265f38d595cc5b2781c715a4869 inherit pub_methods_class_wireframe" id="r_ab239f265f38d595cc5b2781c715a4869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">setDisplacement</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> <a class="el" href="/documentation/api/class-wireframe/">displacement</a>)</td></tr>
+
+<tr class="memitem:a21b00018462ec2977eb1ae20e7da847b inherit pub_methods_class_wireframe" id="r_a21b00018462ec2977eb1ae20e7da847b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">isVisible</a> ()</td></tr>
+
+<tr class="memitem:a2e7f59620fc39a313d1341fcf6d9dbac inherit pub_methods_class_wireframe" id="r_a2e7f59620fc39a313d1341fcf6d9dbac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">prepareForRender</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *relativePosition, const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *cameraDirection)</td></tr>
+
+<tr class="memitem:ac5113268aee4f6b9a3d9326aeac02edb inherit pub_methods_class_wireframe" id="r_ac5113268aee4f6b9a3d9326aeac02edb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-wireframe/">getVertices</a> ()</td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-sphere/">Sphere</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a></p>
+<p>Draws a cirle that represents a 3D sphere. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h#L51">51</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a8a1419f26cc974702b16c8c23a6b1ab3" name="a8a1419f26cc974702b16c8c23a6b1ab3"></a>
+<h2 class="memtitle">SphereROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-sphere-spec/">SphereSpec</a> <a class="el" href="#a8a1419f26cc974702b16c8c23a6b1ab3">SphereROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-sphere/">Sphere</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a36c552a4ed1d17c0d9d680ea433aa1f5" name="a36c552a4ed1d17c0d9d680ea433aa1f5"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Sphere::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-entity/">Entity</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sphere-spec/">SphereSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>sphereSpec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">owner</td><td><a class="el" href="/documentation/api/class-entity/">Entity</a> to which the wireframe attaches to </td></tr>
+    <tr><td class="paramname">sphereSpec</td><td>Specification that determines how to configure the wireframe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c#L27">27</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c">Sphere.c</a>.</p>
+
+</div>
+</div>
+<a id="a905be7cd09c12c446b528c40c5495956" name="a905be7cd09c12c446b528c40c5495956"></a>
+<h2 class="memtitle">draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Sphere::draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw the wireframe to the frame buffers. </p><dl class="section return"><dt>Returns</dt><dd>True if at least one pixel is drawn; false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c#L70">70</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c">Sphere.c</a>.</p>
+
+</div>
+</div>
+<a id="af91562a8f7401973f703db2a2e7bace9" name="af91562a8f7401973f703db2a2e7bace9"></a>
+<h2 class="memtitle">getRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Sphere::getRadius </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the sphere's radius. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-sphere/">Sphere</a>'s radius </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c#L97">97</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c">Sphere.c</a>.</p>
+
+</div>
+</div>
+<a id="ac08ac35e2f3e4a9465725cf3314d361e" name="ac08ac35e2f3e4a9465725cf3314d361e"></a>
+<h2 class="memtitle">render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Sphere::render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>relativePosition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepare the wireframe for drawing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">relativePosition</td><td>Position relative to the camera's </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-wireframe/">Wireframe</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c#L58">58</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c">Sphere.c</a>.</p>
+
+</div>
+</div>
+<a id="ac25e0c369a944121e904b9a0bd45921d" name="ac25e0c369a944121e904b9a0bd45921d"></a>
+<h2 class="memtitle">setRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Sphere::setRadius </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a></td>          <td class="paramname"><span class="paramname"><em>radius</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the sphere's radius. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">radius</td><td><a class="el" href="/documentation/api/class-sphere/">Sphere</a>'s radius </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c#L90">90</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c">Sphere.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a88f19752af8939d11df4ec7691ea567f" name="a88f19752af8939d11df4ec7691ea567f"></a>
+<h2 class="memtitle">drawCenter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Sphere::drawCenter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to control the drawing of the sphere's center point. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h#L65">65</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>.</p>
+
+</div>
+</div>
+<a id="a0887c65aa33217124839d7bf677b5d9f" name="a0887c65aa33217124839d7bf677b5d9f"></a>
+<h2 class="memtitle">position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-pixel-vector/">PixelVector</a> Sphere::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Position at which to draw the wireframe. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h#L56">56</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>.</p>
+
+</div>
+</div>
+<a id="a53d22a9cea0697ff86eb6afea34a1dc7" name="a53d22a9cea0697ff86eb6afea34a1dc7"></a>
+<h2 class="memtitle">radius</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a> Sphere::radius</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Radius of the sphere. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h#L59">59</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>.</p>
+
+</div>
+</div>
+<a id="a6bf8202c382556dad12aaebf6246eb40" name="a6bf8202c382556dad12aaebf6246eb40"></a>
+<h2 class="memtitle">scaledRadius</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> Sphere::scaledRadius</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used radius of the sphere's to draw it. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h#L62">62</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/VisualComponent/Wireframe/Sphere/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.h">Sphere.h</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Wireframe/Sphere/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Wireframe/Sphere/Sphere.c">Sphere.c</a></li>
+</ul>
+</div>
+
+
+</div>

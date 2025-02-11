@@ -1,0 +1,421 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "CharSetManager Class Reference"
+permalink: documentation/api/class-char-set-manager/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">CharSetManager Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h">CharSetManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for CharSetManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_char_set_manager.png" usemap="#CharSetManager_map" alt />
+  <map id="CharSetManager_map" name="CharSetManager_map">
+<area href="/documentation/api/class-object/" alt="Object" shape="rect" coords="0,0,109,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af5fa31cb9f0d1a47edfac2c5fb3f72a2" id="r_af5fa31cb9f0d1a47edfac2c5fb3f72a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5fa31cb9f0d1a47edfac2c5fb3f72a2">reset</a> ()</td></tr>
+<tr class="memdesc:af5fa31cb9f0d1a47edfac2c5fb3f72a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empties internal virtual list of registered fonts.  <br /></td></tr>
+
+<tr class="memitem:a440f1044cece9eaba8b39bb4e7fb4a10" id="r_a440f1044cece9eaba8b39bb4e7fb4a10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a440f1044cece9eaba8b39bb4e7fb4a10">clearDRAM</a> ()</td></tr>
+<tr class="memdesc:a440f1044cece9eaba8b39bb4e7fb4a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the contents of CHAR memory space.  <br /></td></tr>
+
+<tr class="memitem:a87007d849703e40e8fb40d534060fde2" id="r_a87007d849703e40e8fb40d534060fde2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87007d849703e40e8fb40d534060fde2">loadCharSets</a> (const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> **charSetSpecs)</td></tr>
+
+<tr class="memitem:a70d5b6c0df10a21daf575cc5f175faa4" id="r_a70d5b6c0df10a21daf575cc5f175faa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-char-set/">CharSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70d5b6c0df10a21daf575cc5f175faa4">getCharSet</a> (const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *charSetSpec)</td></tr>
+
+<tr class="memitem:a8a36a9182381f8d831b463dfd53ae467" id="r_a8a36a9182381f8d831b463dfd53ae467"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a36a9182381f8d831b463dfd53ae467">releaseCharSet</a> (<a class="el" href="/documentation/api/class-char-set/">CharSet</a> charSet)</td></tr>
+
+<tr class="memitem:af314e88a5867b1862d0afc6e40865001" id="r_af314e88a5867b1862d0afc6e40865001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af314e88a5867b1862d0afc6e40865001">writeCharSets</a> ()</td></tr>
+<tr class="memdesc:af314e88a5867b1862d0afc6e40865001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write graphical data to VRAM.  <br /></td></tr>
+
+<tr class="memitem:a8a4c114f09ac138790e7c6f5bbe43bf3" id="r_a8a4c114f09ac138790e7c6f5bbe43bf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a4c114f09ac138790e7c6f5bbe43bf3">defragment</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> deferred)</td></tr>
+
+<tr class="memitem:a873356c34e3cecd87fc1571b17936f1b" id="r_a873356c34e3cecd87fc1571b17936f1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a873356c34e3cecd87fc1571b17936f1b">getTotalUsedChars</a> ()</td></tr>
+
+<tr class="memitem:abd90188dfa19ce93e6ade055d159c61b" id="r_abd90188dfa19ce93e6ade055d159c61b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd90188dfa19ce93e6ade055d159c61b">getTotalFreeChars</a> ()</td></tr>
+
+<tr class="memitem:ac9440fbde0fb1e25c498432ceafe1036" id="r_ac9440fbde0fb1e25c498432ceafe1036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9440fbde0fb1e25c498432ceafe1036">getTotalCharSets</a> ()</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3dea5cf38447b47778d854e8ea65d644" id="r_a3dea5cf38447b47778d854e8ea65d644"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dea5cf38447b47778d854e8ea65d644">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:afdbca56d6af25f2fcad0ff3553c8b964" id="r_afdbca56d6af25f2fcad0ff3553c8b964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdbca56d6af25f2fcad0ff3553c8b964">charSets</a></td></tr>
+<tr class="memdesc:afdbca56d6af25f2fcad0ff3553c8b964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated char sets with a block in CHAR memory allocated to them.  <br /></td></tr>
+
+<tr class="memitem:a2adb9c6121f38e3ab53fef3ad0cc258e" id="r_a2adb9c6121f38e3ab53fef3ad0cc258e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2adb9c6121f38e3ab53fef3ad0cc258e">freedOffset</a></td></tr>
+<tr class="memdesc:a2adb9c6121f38e3ab53fef3ad0cc258e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start offset in CHAR space when free memory starts.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object" id="r_a3a3ea4d86b4b946d57464f65a6a42362"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:a3a3ea4d86b4b946d57464f65a6a42362 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:a3e0f8f5b91339830eda363780e2cab8a inherit pub_methods_class_object" id="r_a3e0f8f5b91339830eda363780e2cab8a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getVTable</a> ()</td></tr>
+
+<tr class="memitem:ae35f028309cbeb2728b1742e7e05176a inherit pub_methods_class_object" id="r_ae35f028309cbeb2728b1742e7e05176a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">mutateTo</a> (const void *targetClass)</td></tr>
+
+<tr class="inherit_header pub_static_methods_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_object')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a8ae116f1bf924247a7fd9e91a615a705 inherit pub_static_methods_class_object" id="r_a8ae116f1bf924247a7fd9e91a615a705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-object/">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">getCast</a> (void *object, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> targetClassGetClassMethod, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> baseClassGetClassMethod)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-object/">Object</a></td></tr>
+<tr class="memitem:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object" id="r_a481b05c1f25b4e686eca17995944bfcc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-object/">vTable</a></td></tr>
+<tr class="memdesc:a481b05c1f25b4e686eca17995944bfcc inherit pub_attribs_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the class's virtual table.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-char-set-manager/">CharSetManager</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-object/">Object</a></p>
+<p>Manages char sets and CHAR memory allocation. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h">CharSetManager.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a440f1044cece9eaba8b39bb4e7fb4a10" name="a440f1044cece9eaba8b39bb4e7fb4a10"></a>
+<h2 class="memtitle">clearDRAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CharSetManager::clearDRAM </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erase the contents of CHAR memory space. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L69">69</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a8a4c114f09ac138790e7c6f5bbe43bf3" name="a8a4c114f09ac138790e7c6f5bbe43bf3"></a>
+<h2 class="memtitle">defragment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CharSetManager::defragment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>deferred</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Defragment CHAR space. </p><dl class="section return"><dt>Returns</dt><dd>True if memory was defragmented; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L156">156</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a70d5b6c0df10a21daf575cc5f175faa4" name="a70d5b6c0df10a21daf575cc5f175faa4"></a>
+<h2 class="memtitle">getCharSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-char-set/">CharSet</a> CharSetManager::getCharSet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>charSetSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve a char set initialized with the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSetSpec</td><td>Spec to use to initilize the desired char set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Char set initialized with the provided spec </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L92">92</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="ac9440fbde0fb1e25c498432ceafe1036" name="ac9440fbde0fb1e25c498432ceafe1036"></a>
+<h2 class="memtitle">getTotalCharSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> CharSetManager::getTotalCharSets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the total number of char sets. </p><dl class="section return"><dt>Returns</dt><dd>Total number of char sets </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L212">212</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="abd90188dfa19ce93e6ade055d159c61b" name="abd90188dfa19ce93e6ade055d159c61b"></a>
+<h2 class="memtitle">getTotalFreeChars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> CharSetManager::getTotalFreeChars </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the total number of free CHARs in CHAR space. </p><dl class="section return"><dt>Returns</dt><dd>Total number of free CHARs in CHAR space </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L205">205</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a873356c34e3cecd87fc1571b17936f1b" name="a873356c34e3cecd87fc1571b17936f1b"></a>
+<h2 class="memtitle">getTotalUsedChars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> CharSetManager::getTotalUsedChars </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the total number of used CHARs in CHAR space. </p><dl class="section return"><dt>Returns</dt><dd>Total number of used CHARs in CHAR space </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L195">195</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a87007d849703e40e8fb40d534060fde2" name="a87007d849703e40e8fb40d534060fde2"></a>
+<h2 class="memtitle">loadCharSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CharSetManager::loadCharSets </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-char-set-spec/">CharSetSpec</a> **</td>          <td class="paramname"><span class="paramname"><em>charSetSpecs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load char sets in function of the provided array of specs. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSetSpecs</td><td>Array of char set specs in function of which to load char sets </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L76">76</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a3dea5cf38447b47778d854e8ea65d644" name="a3dea5cf38447b47778d854e8ea65d644"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static void CharSetManager::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the manager's status. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L37">37</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a8a36a9182381f8d831b463dfd53ae467" name="a8a36a9182381f8d831b463dfd53ae467"></a>
+<h2 class="memtitle">releaseCharSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> CharSetManager::releaseCharSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-char-set/">CharSet</a></td>          <td class="paramname"><span class="paramname"><em>charSet</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Release a char set. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">charSet</td><td>Char set to release </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the char set is successfully deleted; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L128">128</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="af5fa31cb9f0d1a47edfac2c5fb3f72a2" name="af5fa31cb9f0d1a47edfac2c5fb3f72a2"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CharSetManager::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empties internal virtual list of registered fonts. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L57">57</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<a id="af314e88a5867b1862d0afc6e40865001" name="af314e88a5867b1862d0afc6e40865001"></a>
+<h2 class="memtitle">writeCharSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void CharSetManager::writeCharSets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write graphical data to VRAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c#L317">317</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="afdbca56d6af25f2fcad0ff3553c8b964" name="afdbca56d6af25f2fcad0ff3553c8b964"></a>
+<h2 class="memtitle">charSets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> CharSetManager::charSets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocated char sets with a block in CHAR memory allocated to them. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h#L40">40</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h">CharSetManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a2adb9c6121f38e3ab53fef3ad0cc258e" name="a2adb9c6121f38e3ab53fef3ad0cc258e"></a>
+<h2 class="memtitle">freedOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> CharSetManager::freedOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start offset in CHAR space when free memory starts. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h#L43">43</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h">CharSetManager.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/CharSet/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.h">CharSetManager.h</a></li>
+<li>VUEngine-Core/source/Component/VisualComponent/Sprite/Texture/CharSet/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Component/VisualComponent/Sprite/Texture/CharSet/CharSetManager.c">CharSetManager.c</a></li>
+</ul>
+</div>
+
+
+</div>

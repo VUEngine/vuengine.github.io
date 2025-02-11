@@ -1,117 +1,120 @@
 <!DOCTYPE html>
-<html class="h-100" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>
-      {% if page.url != "/" %}{{ page.title }} - {% endif %}{% if page.url contains "/documentation/" %}Documentation - {% endif %}{{ site.title }}
-    </title>
+<html class="h-100" lang="en" data-bs-theme="dark">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
-    <link rel="stylesheet" href="/assets/codicon/codicon.css" />
-    <link
-      rel="stylesheet"
-      href="/assets/style.css?{{ site.time | split:' ' | first }}"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/rogue/syntax-base16.monokai.dark.css"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>
+    {% if page.url != "/" %}{{ page.title }} - {% endif %}{% if page.url contains "/documentation/" %}Documentation - {%
+    endif %}{{ site.title }}
+  </title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-  </head>
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="/assets/codicon/codicon.css" />
+  <link rel="stylesheet" href="/assets/style.css?{{ site.time | split:' ' | first }}" />
+  <link rel="stylesheet" href="/assets/rogue/syntax-base16.monokai.dark.css" />
+  <link rel="stylesheet" href="/assets/doxygen-awesome.css" />
 
-  <body class="d-flex flex-column h-100 os-other">
-    <header
-      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bg-dark text-white"
-    >
-      <div class="container">
-        <div
-          class="d-flex flex-column flex-lg-row align-items-center justify-content-center"
-        >
-          <a
-            href="/"
-            class="d-flex align-items-center col-lg-3 mb-2 mb-lg-0 text-white text-decoration-none"
-          >
-            <img
-              src="/assets/images/logo-full-color.png"
-              width="44"
-              height="44"
-              class="bi me-2"
-            />
-            <span class="fs-3 text-nowrap">
-              <strong>{{ site.title }}</strong>
-            </span>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+</head>
+
+<body class="d-flex flex-column h-100 os-other">
+  <div class="modal fade" id="siteSearch" tabindex="-1" aria-labelledby="siteSearchTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="height: 60vh">
+        <div class="modal-body d-flex flex-column gap-3 overflow-hidden">
+          {% include search-lunr.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="d-flex flex-wrap py-3 text-bg-primary">
+    <div class="container px-4">
+      <div class="d-flex flex-column gap-2 flex-lg-row align-items-start justify-content-between">
+        <a href="/" class="d-flex align-items-center text-decoration-none">
+          <img src="/assets/images/logo.png" width="44" height="44" class="bi me-2" />
+          <span class="fs-3 text-nowrap text-white">
+            <strong>{{ site.title }}</strong>
+          </span>
+        </a>
+
+        <ul class="nav fs-6 justify-content-center">
+          {% for node in site.nav.pages %} {%- assign check = page.url |
+          split:'/' -%} {%- assign topPage = check[1] | append: '/' | prepend:
+          '/' -%}
+          <li>
+            <a class="nav-link fs-5 px-2 {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
+              href="{{ node[1] }}">
+              {{ node[0] }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="text-end text-nowrap" style="margin-top:6px;">
+          <button type="button" id="siteSearchToggle" class="btn btn-outline-light" aria-label="Search" title="Search"
+            data-bs-toggle="modal" data-bs-target="#siteSearch">
+            <i class="fa fa-search fa-lg"></i>
+          </button>
+          <a href="https://www.patreon.com/VUEngine" role="button" class="btn btn-outline-light d-inline-block"
+            aria-label="Donate" title="Donate">
+            <i class="fab fa-patreon fa-lg"></i>
           </a>
-
-          <ul class="nav col-lg-7 fs-6 justify-content-center">
-            {% for node in site.nav.pages %} {%- assign check = page.url |
-            split:'/' -%} {%- assign topPage = check[1] | append: '/' | prepend:
-            '/' -%}
-            <li>
-              <a
-                class="nav-link px-2 {% if page.url == node[1] or node[1] == topPage %}text-white{% else %}text-secondary{% endif %}"
-                href="{{ node[1] }}"
-              >
-                {{ node[0] }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-
-          <div class="col-lg-2 text-end text-nowrap text-white">
-            <a
-              href="https://www.patreon.com/VUEngine"
-              role="button"
-              class="btn btn-outline-secondary btn-patreon d-none d-lg-inline-block"
-            >
-              <i class="fab fa-patreon"></i>
-            </a>
-          </div>
+          <button class="btn btn-outline-light" id="bd-theme" aria-label="Toggle theme (auto)"
+            title="Toggle theme (auto)">
+            <i class="far fa-sun fa-lg" data-bs-theme-value="light"></i>
+            <i class="far fa-moon fa-lg" data-bs-theme-value="dark"></i>
+            <i class="fas fa-adjust fa-lg" data-bs-theme-value="auto"></i>
+          </button>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main role="main" class="flex-shrink-0">{{ content }}</main>
+  <main role="main" class="flex-grow-1">{{ content }}</main>
 
-    <footer class="footer mt-auto py-3 bg-secondary text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 py-2 text-center text-md-start">{{ site.data.footer.copyright }}</div>
-          <div class="col-md-6 text-center text-md-end">
-            {% for link in site.data.footer.links %}
-            <a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
-              <i class="{{ link.icon }}"></i>
-            </a>
-            {% endfor %}
-          </div>
+  <footer class="footer mt-auto py-3 text-bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 py-2 text-center text-md-start">{{ site.data.footer.copyright }}</div>
+        <div class="col-md-6 text-center text-md-end">
+          {% for link in site.data.footer.links %}
+          <a role="button" href="{{ link.link }}" class="btn fs-2 text-white">
+            <i class="{{ link.icon }}"></i>
+          </a>
+          {% endfor %}
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
-      if (navigator.appVersion.indexOf("Win") != -1) {
+  <script>
+    const osMap = { Win: "win", Mac: "osx", Linux: "Linux" };
+    const keyLabels = document.getElementsByClassName("keys");
+    Object.keys(osMap).forEach(key => {
+      const os = osMap[key];
+      if (navigator.appVersion.indexOf(key) != -1) {
         document.body.classList.remove("os-other");
-        document.body.classList.add("os-win");
-      } else if (navigator.appVersion.indexOf("Mac") != -1) {
-        document.body.classList.remove("os-other");
-        document.body.classList.add("os-osx");
-      } else if (navigator.appVersion.indexOf("Linux") != -1) {
-        document.body.classList.remove("os-other");
-        document.body.classList.add("os-linux");
+        document.body.classList.add("os-" + os);
+        Array.prototype.forEach.call(keyLabels, (keyLabel) => {
+          const keyData = keyLabel.getAttribute("data-" + os);
+          if (keyData) { keyLabel.innerHTML = keyData; }
+        });
       }
-    </script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-  </body>
+    });
+  </script>
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/bootstrap/lightbox/index.bundle.min.js"></script>
+  <script src="/assets/bootstrap/color-mode.js"></script>
+</body>
+
 </html>

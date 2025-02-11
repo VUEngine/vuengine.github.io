@@ -1,0 +1,2012 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "Container Class Reference"
+permalink: documentation/api/class-container/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">Container Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Container:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_container.png" usemap="#Container_map" alt />
+  <map id="Container_map" name="Container_map">
+<area href="/documentation/api/class-entity/" alt="Entity" shape="rect" coords="105,0,200,24" />
+<area href="/documentation/api/class-actor/" alt="Actor" shape="rect" coords="0,112,95,136" />
+<area href="/documentation/api/class-stage/" alt="Stage" shape="rect" coords="105,112,200,136" />
+<area href="/documentation/api/class-u-i-container/" alt="UIContainer" shape="rect" coords="210,112,305,136" />
+<area href="/documentation/api/class-particle-system/" alt="ParticleSystem" shape="rect" coords="0,168,95,192" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac5bc214a92993d96cf56e0694a6d3b5f" id="r_ac5bc214a92993d96cf56e0694a6d3b5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5bc214a92993d96cf56e0694a6d3b5f">constructor</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> <a class="el" href="#a73a6d7ee211ade6233bcea653a5854ee">internalId</a>, const char *const <a class="el" href="#a67ce2f5aefbdfebfdf389731573933e1">name</a>)</td></tr>
+
+<tr class="memitem:a7cc247769e9bda3af64bff594061faf6" id="r_a7cc247769e9bda3af64bff594061faf6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cc247769e9bda3af64bff594061faf6">setDirection</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *direction)</td></tr>
+
+<tr class="memitem:a48cdaa85884938b417513cca003f4f6c" id="r_a48cdaa85884938b417513cca003f4f6c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48cdaa85884938b417513cca003f4f6c">show</a> ()</td></tr>
+<tr class="memdesc:a48cdaa85884938b417513cca003f4f6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this instance visible.  <br /></td></tr>
+
+<tr class="memitem:a5f2b24b3eff15fb251043fcfd32bf537" id="r_a5f2b24b3eff15fb251043fcfd32bf537"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f2b24b3eff15fb251043fcfd32bf537">hide</a> ()</td></tr>
+<tr class="memdesc:a5f2b24b3eff15fb251043fcfd32bf537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this instance invisible.  <br /></td></tr>
+
+<tr class="memitem:a677f94df00237921eeabb59108a62d09" id="r_a677f94df00237921eeabb59108a62d09"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a677f94df00237921eeabb59108a62d09">setTransparency</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> transparency)</td></tr>
+
+<tr class="memitem:a3fd46f4cab6dd1b8f86cff7bc47c5d42" id="r_a3fd46f4cab6dd1b8f86cff7bc47c5d42"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fd46f4cab6dd1b8f86cff7bc47c5d42">setPosition</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *position)</td></tr>
+
+<tr class="memitem:a9b806b4cee883a2d99bc354efab512d1" id="r_a9b806b4cee883a2d99bc354efab512d1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b806b4cee883a2d99bc354efab512d1">setRotation</a> (const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *rotation)</td></tr>
+
+<tr class="memitem:abad82dbf25f7a76482c73abf52c967ec" id="r_abad82dbf25f7a76482c73abf52c967ec"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abad82dbf25f7a76482c73abf52c967ec">setScale</a> (const <a class="el" href="/documentation/api/class-scale/">Scale</a> *<a class="el" href="#aab305941ee2aac6bffd85cf926927206">scale</a>)</td></tr>
+
+<tr class="memitem:a47cd0af6f0bd02dfc4f58031125a80d7" id="r_a47cd0af6f0bd02dfc4f58031125a80d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47cd0af6f0bd02dfc4f58031125a80d7">setNormalizedDirection</a> (<a class="el" href="/documentation/api/struct-normalized-direction/">NormalizedDirection</a> normalizedDirection)</td></tr>
+
+<tr class="memitem:a575f290d6a74fc46370f695192332874" id="r_a575f290d6a74fc46370f695192332874"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-normalized-direction/">NormalizedDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a575f290d6a74fc46370f695192332874">getNormalizedDirection</a> ()</td></tr>
+
+<tr class="memitem:a520d819e3ccdd849e6d0cb215a44c666" id="r_a520d819e3ccdd849e6d0cb215a44c666"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a520d819e3ccdd849e6d0cb215a44c666">deleteMyself</a> ()</td></tr>
+
+<tr class="memitem:a8377ee930c97af9c02cf6d4dfad89c98" id="r_a8377ee930c97af9c02cf6d4dfad89c98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8377ee930c97af9c02cf6d4dfad89c98">getInternalId</a> ()</td></tr>
+
+<tr class="memitem:ad0cf677fdf0e8845b1a26bba90d66cac" id="r_ad0cf677fdf0e8845b1a26bba90d66cac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0cf677fdf0e8845b1a26bba90d66cac">setName</a> (const char *const <a class="el" href="#a67ce2f5aefbdfebfdf389731573933e1">name</a>)</td></tr>
+
+<tr class="memitem:afdf2017032500557b8bdf19f40c2eb2b" id="r_afdf2017032500557b8bdf19f40c2eb2b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdf2017032500557b8bdf19f40c2eb2b">getName</a> ()</td></tr>
+
+<tr class="memitem:a4f51ac48e53d926cab51f0adba713ee1" id="r_a4f51ac48e53d926cab51f0adba713ee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f51ac48e53d926cab51f0adba713ee1">streamOut</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> streamOut)</td></tr>
+
+<tr class="memitem:a550a49e1671eaa0207871f49a5c07a9a" id="r_a550a49e1671eaa0207871f49a5c07a9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a550a49e1671eaa0207871f49a5c07a9a">getParent</a> ()</td></tr>
+
+<tr class="memitem:a8ba750b307df289fa6ead4cb27245e01" id="r_a8ba750b307df289fa6ead4cb27245e01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba750b307df289fa6ead4cb27245e01">addChild</a> (<a class="el" href="/documentation/api/class-container/">Container</a> child)</td></tr>
+
+<tr class="memitem:a0814b16599e9c7cc0ce8386b6cbfafc1" id="r_a0814b16599e9c7cc0ce8386b6cbfafc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0814b16599e9c7cc0ce8386b6cbfafc1">removeChild</a> (<a class="el" href="/documentation/api/class-container/">Container</a> child, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> deleteChild)</td></tr>
+
+<tr class="memitem:af17d3ae36ea3cd09921351b98d709e35" id="r_af17d3ae36ea3cd09921351b98d709e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af17d3ae36ea3cd09921351b98d709e35">purgeChildren</a> ()</td></tr>
+<tr class="memdesc:af17d3ae36ea3cd09921351b98d709e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the destruction of all children marked to be deleted.  <br /></td></tr>
+
+<tr class="memitem:ab92321eb1ec00fd69b7a8c8c853354da" id="r_ab92321eb1ec00fd69b7a8c8c853354da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab92321eb1ec00fd69b7a8c8c853354da">getChildren</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="#a017b25246dd27385b00df2969696c93c">children</a>)</td></tr>
+
+<tr class="memitem:a71ee1ccb17892758c775baf5507a6643" id="r_a71ee1ccb17892758c775baf5507a6643"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71ee1ccb17892758c775baf5507a6643">getChildById</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> id)</td></tr>
+
+<tr class="memitem:a0d04b3f896f69ed8addb7445cec56ea7" id="r_a0d04b3f896f69ed8addb7445cec56ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d04b3f896f69ed8addb7445cec56ea7">getChildByName</a> (const char *childName, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> recursive)</td></tr>
+
+<tr class="memitem:aed30886a0551cde03ec897d07614d69d" id="r_aed30886a0551cde03ec897d07614d69d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed30886a0551cde03ec897d07614d69d">getChildAtPosition</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> position)</td></tr>
+
+<tr class="memitem:ad0c296893ff58f0504085b72a4794df5" id="r_ad0c296893ff58f0504085b72a4794df5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0c296893ff58f0504085b72a4794df5">getChildrenCount</a> ()</td></tr>
+
+<tr class="memitem:a169e9e45693bb34f5bd24646f6c1c5cb" id="r_a169e9e45693bb34f5bd24646f6c1c5cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169e9e45693bb34f5bd24646f6c1c5cb">getFirstAncestor</a> ()</td></tr>
+
+<tr class="memitem:a993fd535d5a062f31b96800e8d12ec0f" id="r_a993fd535d5a062f31b96800e8d12ec0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993fd535d5a062f31b96800e8d12ec0f">getRelativeByName</a> (const char *relativeName)</td></tr>
+
+<tr class="memitem:a032e3dadea9ef81d04e110e51ecce0cd" id="r_a032e3dadea9ef81d04e110e51ecce0cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a032e3dadea9ef81d04e110e51ecce0cd">updateChildren</a> ()</td></tr>
+<tr class="memdesc:a032e3dadea9ef81d04e110e51ecce0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the children of this container.  <br /></td></tr>
+
+<tr class="memitem:a72cec2aef0379cafbed4ecceedcdd630" id="r_a72cec2aef0379cafbed4ecceedcdd630"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72cec2aef0379cafbed4ecceedcdd630">invalidateTransformation</a> ()</td></tr>
+
+<tr class="memitem:abff8d8e26b5a248e0f0e6aa48838594f" id="r_abff8d8e26b5a248e0f0e6aa48838594f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abff8d8e26b5a248e0f0e6aa48838594f">transformChildren</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> invalidateTransformationFlag)</td></tr>
+
+<tr class="memitem:a50e632bb8cf3100b6880c1a7b6c1e0e0" id="r_a50e632bb8cf3100b6880c1a7b6c1e0e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e632bb8cf3100b6880c1a7b6c1e0e0">propagateCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> command,...)</td></tr>
+
+<tr class="memitem:a7f47b4bffb34a4ac18266e8b97e77d52" id="r_a7f47b4bffb34a4ac18266e8b97e77d52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f47b4bffb34a4ac18266e8b97e77d52">propagateMessage</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>(*propagatedMessageHandler)(void *, va_list),...)</td></tr>
+
+<tr class="memitem:a3caab7745d0523f170be75ef8f1b6d1f" id="r_a3caab7745d0523f170be75ef8f1b6d1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3caab7745d0523f170be75ef8f1b6d1f">onPropagatedMessage</a> (va_list args)</td></tr>
+
+<tr class="memitem:a0af892db508677995cf9604fc10ef8f6" id="r_a0af892db508677995cf9604fc10ef8f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0af892db508677995cf9604fc10ef8f6">propagateString</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>(*propagatedMessageHandler)(void *, va_list),...)</td></tr>
+
+<tr class="memitem:a19506a55d292ec16d5a70b9c3beccd0a" id="r_a19506a55d292ec16d5a70b9c3beccd0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19506a55d292ec16d5a70b9c3beccd0a">onPropagatedString</a> (va_list args)</td></tr>
+
+<tr class="memitem:a04dd513e3454fe68270c90ee73c44a10" id="r_a04dd513e3454fe68270c90ee73c44a10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04dd513e3454fe68270c90ee73c44a10">translate</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *translation)</td></tr>
+
+<tr class="memitem:a25d82a57d457bdfb6a581358e67f2064" id="r_a25d82a57d457bdfb6a581358e67f2064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25d82a57d457bdfb6a581358e67f2064">rotate</a> (const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *rotation)</td></tr>
+
+<tr class="memitem:aab305941ee2aac6bffd85cf926927206" id="r_aab305941ee2aac6bffd85cf926927206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab305941ee2aac6bffd85cf926927206">scale</a> (const <a class="el" href="/documentation/api/class-scale/">Scale</a> *scale)</td></tr>
+
+<tr class="memitem:a07aa0b15ad6e706283ed76f86aaae97a" id="r_a07aa0b15ad6e706283ed76f86aaae97a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07aa0b15ad6e706283ed76f86aaae97a">getLocalPosition</a> ()</td></tr>
+
+<tr class="memitem:a4fe0fb31a2313a18a2fc7bbb514f5f4d" id="r_a4fe0fb31a2313a18a2fc7bbb514f5f4d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fe0fb31a2313a18a2fc7bbb514f5f4d">getLocalRotation</a> ()</td></tr>
+
+<tr class="memitem:ac77acbf1f58ccab4f94cac17840486f3" id="r_ac77acbf1f58ccab4f94cac17840486f3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-scale/">Scale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac77acbf1f58ccab4f94cac17840486f3">getLocalScale</a> ()</td></tr>
+
+<tr class="memitem:a5eb825771868224a0c7992074dce0525" id="r_a5eb825771868224a0c7992074dce0525"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb825771868224a0c7992074dce0525">setLocalPosition</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *position)</td></tr>
+
+<tr class="memitem:ab6c6dfa10e9bf9bfbcab1fcffcdab9d2" id="r_ab6c6dfa10e9bf9bfbcab1fcffcdab9d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c6dfa10e9bf9bfbcab1fcffcdab9d2">setLocalRotation</a> (const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *rotation)</td></tr>
+
+<tr class="memitem:ad5928971c6e675cf8f3acf21d5b1660f" id="r_ad5928971c6e675cf8f3acf21d5b1660f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5928971c6e675cf8f3acf21d5b1660f">setLocalScale</a> (const <a class="el" href="/documentation/api/class-scale/">Scale</a> *<a class="el" href="#aab305941ee2aac6bffd85cf926927206">scale</a>)</td></tr>
+
+<tr class="memitem:a4df40fcb8a24cefaa4dcb0e08475950b" id="r_a4df40fcb8a24cefaa4dcb0e08475950b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df40fcb8a24cefaa4dcb0e08475950b">ready</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> recursive)</td></tr>
+
+<tr class="memitem:a22f701579c2e59976477a7a4c78408b0" id="r_a22f701579c2e59976477a7a4c78408b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22f701579c2e59976477a7a4c78408b0">transform</a> (const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *environmentTransform, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> invalidateTransformationFlag)</td></tr>
+
+<tr class="memitem:abc539906e3b7a6fad7f79ca73a403deb" id="r_abc539906e3b7a6fad7f79ca73a403deb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc539906e3b7a6fad7f79ca73a403deb">update</a> ()</td></tr>
+<tr class="memdesc:abc539906e3b7a6fad7f79ca73a403deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update this instance's logic.  <br /></td></tr>
+
+<tr class="memitem:a87dbf7fc8881be19de42e369700ad4b8" id="r_a87dbf7fc8881be19de42e369700ad4b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87dbf7fc8881be19de42e369700ad4b8">suspend</a> ()</td></tr>
+<tr class="memdesc:a87dbf7fc8881be19de42e369700ad4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare to suspend this instance's logic.  <br /></td></tr>
+
+<tr class="memitem:a0b9b682b4fae073fc1bbaf75615310c3" id="r_a0b9b682b4fae073fc1bbaf75615310c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b9b682b4fae073fc1bbaf75615310c3">resume</a> ()</td></tr>
+<tr class="memdesc:a0b9b682b4fae073fc1bbaf75615310c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare to resume this instance's logic.  <br /></td></tr>
+
+<tr class="memitem:afa941ef821f545406fe2b93598e20a10" id="r_afa941ef821f545406fe2b93598e20a10"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa941ef821f545406fe2b93598e20a10">handleCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> command, va_list args)</td></tr>
+
+<tr class="memitem:a95bc89203c0729a8988a061d774de943" id="r_a95bc89203c0729a8988a061d774de943"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95bc89203c0729a8988a061d774de943">handlePropagatedMessage</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> message)</td></tr>
+
+<tr class="memitem:a366fe4bd729543e9980a0249496e0f2e" id="r_a366fe4bd729543e9980a0249496e0f2e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a366fe4bd729543e9980a0249496e0f2e">handlePropagatedString</a> (const char *string)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a7dbd57b8d860ee793a83343faeb28046" id="r_a7dbd57b8d860ee793a83343faeb28046"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-container/">Container</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dbd57b8d860ee793a83343faeb28046">parent</a></td></tr>
+<tr class="memdesc:a7dbd57b8d860ee793a83343faeb28046"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-container/">Container</a> of which this one is a child.  <br /></td></tr>
+
+<tr class="memitem:a017b25246dd27385b00df2969696c93c" id="r_a017b25246dd27385b00df2969696c93c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017b25246dd27385b00df2969696c93c">children</a></td></tr>
+
+<tr class="memitem:ad2355b2853e8d90e434c2b8726e066e8" id="r_ad2355b2853e8d90e434c2b8726e066e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-transformation/">Transformation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2355b2853e8d90e434c2b8726e066e8">localTransformation</a></td></tr>
+<tr class="memdesc:ad2355b2853e8d90e434c2b8726e066e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D local transformation  <br /></td></tr>
+
+<tr class="memitem:a67ce2f5aefbdfebfdf389731573933e1" id="r_a67ce2f5aefbdfebfdf389731573933e1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67ce2f5aefbdfebfdf389731573933e1">name</a></td></tr>
+<tr class="memdesc:a67ce2f5aefbdfebfdf389731573933e1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-container/">Container</a>'s name.  <br /></td></tr>
+
+<tr class="memitem:a73a6d7ee211ade6233bcea653a5854ee" id="r_a73a6d7ee211ade6233bcea653a5854ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73a6d7ee211ade6233bcea653a5854ee">internalId</a></td></tr>
+<tr class="memdesc:a73a6d7ee211ade6233bcea653a5854ee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="/documentation/api/class-container/">Container</a>'s internal id, set by the engine.  <br /></td></tr>
+
+<tr class="memitem:a889e8a8f7c9886bcded4f3937852b17c" id="r_a889e8a8f7c9886bcded4f3937852b17c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a889e8a8f7c9886bcded4f3937852b17c">deleteMe</a></td></tr>
+<tr class="memdesc:a889e8a8f7c9886bcded4f3937852b17c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the parent will delete this container when appropriate.  <br /></td></tr>
+
+<tr class="memitem:a661933ea6bc220eb6963886194ccdcc2" id="r_a661933ea6bc220eb6963886194ccdcc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a661933ea6bc220eb6963886194ccdcc2">ready</a></td></tr>
+
+<tr class="memitem:a5ff53e145f2c6d8410614ecf9b732684" id="r_a5ff53e145f2c6d8410614ecf9b732684"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff53e145f2c6d8410614ecf9b732684">dontStreamOut</a></td></tr>
+
+<tr class="memitem:ac16a42eb53f626fc017455edeca09cd0" id="r_ac16a42eb53f626fc017455edeca09cd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac16a42eb53f626fc017455edeca09cd0">hidden</a></td></tr>
+<tr class="memdesc:ac16a42eb53f626fc017455edeca09cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark the container (and its children) as non visible.  <br /></td></tr>
+
+<tr class="memitem:a2efcf10aeee49d72cd385c65aba2479c" id="r_a2efcf10aeee49d72cd385c65aba2479c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2efcf10aeee49d72cd385c65aba2479c">axisForSynchronizationWithBody</a></td></tr>
+<tr class="memdesc:a2efcf10aeee49d72cd385c65aba2479c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axises around which to rotate the container when syncronizing with body.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_entity')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-entity/">Entity</a></td></tr>
+<tr class="memitem:ac2581324b54cab2cad6749cc42cfc2df inherit pub_methods_class_entity" id="r_ac2581324b54cab2cad6749cc42cfc2df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">constructor</a> ()</td></tr>
+<tr class="memdesc:ac2581324b54cab2cad6749cc42cfc2df inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad0dfa1dc1d3146e7a3f66b65444d94dc inherit pub_methods_class_entity" id="r_ad0dfa1dc1d3146e7a3f66b65444d94dc"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="memitem:a5e1bc9f47ded5dc2c606e89850f507f6 inherit pub_methods_class_entity" id="r_a5e1bc9f47ded5dc2c606e89850f507f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">clearComponentLists</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a241d7059a56679c05f6645390321a44e inherit pub_methods_class_entity" id="r_a241d7059a56679c05f6645390321a44e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">addComponent</a> (const <a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> *componentSpec)</td></tr>
+
+<tr class="memitem:ac4ad48cc047718e23b3a395aab1e5c5d inherit pub_methods_class_entity" id="r_ac4ad48cc047718e23b3a395aab1e5c5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">removeComponent</a> (<a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:ae420dfc77549012f61010274eb031d6f inherit pub_methods_class_entity" id="r_ae420dfc77549012f61010274eb031d6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">addComponents</a> (<a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:ac8d9b85b1ea6fb282dac1e101c506d75 inherit pub_methods_class_entity" id="r_ac8d9b85b1ea6fb282dac1e101c506d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">removeComponents</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a8c918c932b3c1cee7f0d8c52af551f5a inherit pub_methods_class_entity" id="r_a8c918c932b3c1cee7f0d8c52af551f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-component/">Component</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponentAtIndex</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> componentIndex)</td></tr>
+
+<tr class="memitem:a81cc5dc030f75c2eafaca17bab78d7d3 inherit pub_methods_class_entity" id="r_a81cc5dc030f75c2eafaca17bab78d7d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponents</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:ac517599844c683557be7f7978dea3075 inherit pub_methods_class_entity" id="r_ac517599844c683557be7f7978dea3075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponentsOfClass</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a> classPointer, <a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> <a class="el" href="/documentation/api/class-entity/">components</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a0a38dc1e053049a3a0e7470a0c6d2d87 inherit pub_methods_class_entity" id="r_a0a38dc1e053049a3a0e7470a0c6d2d87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getComponentsCount</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> componentType)</td></tr>
+
+<tr class="memitem:a7cc2be4d7a98fd264cc56ad5514b97bf inherit pub_methods_class_entity" id="r_a7cc2be4d7a98fd264cc56ad5514b97bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">resetComponents</a> ()</td></tr>
+<tr class="memdesc:a7cc2be4d7a98fd264cc56ad5514b97bf inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset components.  <br /></td></tr>
+
+<tr class="memitem:a34f1f5206dbbf2ea258d346a8fc39a39 inherit pub_methods_class_entity" id="r_a34f1f5206dbbf2ea258d346a8fc39a39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setVisible</a> ()</td></tr>
+<tr class="memdesc:a34f1f5206dbbf2ea258d346a8fc39a39 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this instance's visibility flag up.  <br /></td></tr>
+
+<tr class="memitem:adab7ec0e927c7c5ddcc218434469c4b5 inherit pub_methods_class_entity" id="r_adab7ec0e927c7c5ddcc218434469c4b5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getTransformation</a> ()</td></tr>
+
+<tr class="memitem:aae654d8c799bbb62d136efacd8f21f70 inherit pub_methods_class_entity" id="r_aae654d8c799bbb62d136efacd8f21f70"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getPosition</a> ()</td></tr>
+
+<tr class="memitem:aa99e6245fb520f7c28b6124a5bb5f703 inherit pub_methods_class_entity" id="r_aa99e6245fb520f7c28b6124a5bb5f703"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getRotation</a> ()</td></tr>
+
+<tr class="memitem:aaac65288970c9e2ed33956ad3c517e0c inherit pub_methods_class_entity" id="r_aaac65288970c9e2ed33956ad3c517e0c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-scale/">Scale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getScale</a> ()</td></tr>
+
+<tr class="memitem:a1f79c0c15771984ff26fc424135e5078 inherit pub_methods_class_entity" id="r_a1f79c0c15771984ff26fc424135e5078"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getBody</a> ()</td></tr>
+
+<tr class="memitem:aa208f77af13f749357d0151fdb5f8b34 inherit pub_methods_class_entity" id="r_aa208f77af13f749357d0151fdb5f8b34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isMoving</a> ()</td></tr>
+
+<tr class="memitem:a1ebc8385e1533e8d90c6dfea07e05a13 inherit pub_methods_class_entity" id="r_a1ebc8385e1533e8d90c6dfea07e05a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">stopAllMovement</a> ()</td></tr>
+<tr class="memdesc:a1ebc8385e1533e8d90c6dfea07e05a13 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all entity's movement.  <br /></td></tr>
+
+<tr class="memitem:aa9ddf3598c286de71a5273ad94a0ea99 inherit pub_methods_class_entity" id="r_aa9ddf3598c286de71a5273ad94a0ea99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">stopMovement</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> axis)</td></tr>
+
+<tr class="memitem:a156e120c08558ac1472fe79b82fdc48a inherit pub_methods_class_entity" id="r_a156e120c08558ac1472fe79b82fdc48a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setVelocity</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *velocity, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> checkIfCanMove)</td></tr>
+
+<tr class="memitem:ab407723b12e144148fd4e3651496bd3c inherit pub_methods_class_entity" id="r_ab407723b12e144148fd4e3651496bd3c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getVelocity</a> ()</td></tr>
+
+<tr class="memitem:ab6c7a4c84c33bd58e17a804f1953364d inherit pub_methods_class_entity" id="r_ab6c7a4c84c33bd58e17a804f1953364d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getSpeed</a> ()</td></tr>
+
+<tr class="memitem:a88518d918b595a5cf21f4a9140f87c93 inherit pub_methods_class_entity" id="r_a88518d918b595a5cf21f4a9140f87c93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getMaximumSpeed</a> ()</td></tr>
+
+<tr class="memitem:a0c10fd8eae068e567d44bc6f4d713ec8 inherit pub_methods_class_entity" id="r_a0c10fd8eae068e567d44bc6f4d713ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getBounciness</a> ()</td></tr>
+
+<tr class="memitem:af63c24fa234f1d77d5ca5b965432fa4b inherit pub_methods_class_entity" id="r_af63c24fa234f1d77d5ca5b965432fa4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getFrictionCoefficient</a> ()</td></tr>
+
+<tr class="memitem:ad2f418750e207243cb8eb52d822d9d55 inherit pub_methods_class_entity" id="r_ad2f418750e207243cb8eb52d822d9d55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">enableCollisions</a> ()</td></tr>
+<tr class="memdesc:ad2f418750e207243cb8eb52d822d9d55 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable collision detection on the entity's colliders.  <br /></td></tr>
+
+<tr class="memitem:a74dfb657f6ca82ae338fdf17527f2f45 inherit pub_methods_class_entity" id="r_a74dfb657f6ca82ae338fdf17527f2f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">disableCollisions</a> ()</td></tr>
+<tr class="memdesc:a74dfb657f6ca82ae338fdf17527f2f45 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable collision detection on the entity's colliders.  <br /></td></tr>
+
+<tr class="memitem:ad45add407d10d69f47a542a1156ce245 inherit pub_methods_class_entity" id="r_ad45add407d10d69f47a542a1156ce245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">checkCollisions</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> activate)</td></tr>
+
+<tr class="memitem:a3e2e4b5724aa0a99ec2c71545c50c312 inherit pub_methods_class_entity" id="r_a3e2e4b5724aa0a99ec2c71545c50c312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">registerCollisions</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> activate)</td></tr>
+
+<tr class="memitem:ada6b23e83beee98ad358ede0a951b1c3 inherit pub_methods_class_entity" id="r_ada6b23e83beee98ad358ede0a951b1c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setCollidersLayers</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> layers)</td></tr>
+
+<tr class="memitem:adf17c1e37166f326f89735ffb70e5f7b inherit pub_methods_class_entity" id="r_adf17c1e37166f326f89735ffb70e5f7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getCollidersLayers</a> ()</td></tr>
+
+<tr class="memitem:a1787451b502cb4c62862f783658bb810 inherit pub_methods_class_entity" id="r_a1787451b502cb4c62862f783658bb810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">setCollidersLayersToIgnore</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> layersToIgnore)</td></tr>
+
+<tr class="memitem:a86153e825d0e8fb07689c3729313ffaa inherit pub_methods_class_entity" id="r_a86153e825d0e8fb07689c3729313ffaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getCollidersLayersToIgnore</a> ()</td></tr>
+
+<tr class="memitem:adffb2ec95320ad431fd300ce002111e2 inherit pub_methods_class_entity" id="r_adffb2ec95320ad431fd300ce002111e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">hasColliders</a> ()</td></tr>
+
+<tr class="memitem:a54b636c231de434ecfc65c00964fec79 inherit pub_methods_class_entity" id="r_a54b636c231de434ecfc65c00964fec79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">showColliders</a> ()</td></tr>
+<tr class="memdesc:a54b636c231de434ecfc65c00964fec79 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the entity's colliders visible.  <br /></td></tr>
+
+<tr class="memitem:aed3d3cccd8686d08587d678d21e76e7b inherit pub_methods_class_entity" id="r_aed3d3cccd8686d08587d678d21e76e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">hideColliders</a> ()</td></tr>
+<tr class="memdesc:aed3d3cccd8686d08587d678d21e76e7b inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the entity's colliders invisible.  <br /></td></tr>
+
+<tr class="memitem:aeeb988a19c8316d22bac106db6d2e789 inherit pub_methods_class_entity" id="r_aeeb988a19c8316d22bac106db6d2e789"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">createComponents</a> (<a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
+
+<tr class="memitem:a9b47fc6b5830f7b8be2f749ea462b5f4 inherit pub_methods_class_entity" id="r_a9b47fc6b5830f7b8be2f749ea462b5f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">destroyComponents</a> ()</td></tr>
+<tr class="memdesc:a9b47fc6b5830f7b8be2f749ea462b5f4 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the components that attach to this container.  <br /></td></tr>
+
+<tr class="memitem:a439a33e947e77bdf488dad4dd6f987da inherit pub_methods_class_entity" id="r_a439a33e947e77bdf488dad4dd6f987da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">addedComponent</a> (<a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:a67922bdd54d970af08d8cc993dd57707 inherit pub_methods_class_entity" id="r_a67922bdd54d970af08d8cc993dd57707"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">removedComponent</a> (<a class="el" href="/documentation/api/class-component/">Component</a> component)</td></tr>
+
+<tr class="memitem:a77b86ede95c6b975c132bc509bcb0e63 inherit pub_methods_class_entity" id="r_a77b86ede95c6b975c132bc509bcb0e63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">calculateSize</a> ()</td></tr>
+<tr class="memdesc:a77b86ede95c6b975c132bc509bcb0e63 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the entity's size.  <br /></td></tr>
+
+<tr class="memitem:a7d6f3030d87ec26f038773ef74a62f0a inherit pub_methods_class_entity" id="r_a7d6f3030d87ec26f038773ef74a62f0a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getRadius</a> ()</td></tr>
+
+<tr class="memitem:ac154174d13c1eca884912e2ee50a80dc inherit pub_methods_class_entity" id="r_ac154174d13c1eca884912e2ee50a80dc"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getDirection</a> ()</td></tr>
+
+<tr class="memitem:ad2918531b95eed94370ae7eb661be1ee inherit pub_methods_class_entity" id="r_ad2918531b95eed94370ae7eb661be1ee"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">applyForce</a> (const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *force, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> checkIfCanMove)</td></tr>
+
+<tr class="memitem:a64dd59e61991238af058b94e839a2935 inherit pub_methods_class_entity" id="r_a64dd59e61991238af058b94e839a2935"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">canMoveTowards</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> direction)</td></tr>
+
+<tr class="memitem:ae1eed7653bafd427161eb83496a3653d inherit pub_methods_class_entity" id="r_ae1eed7653bafd427161eb83496a3653d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isSensibleToCollidingObjectBouncinessOnCollision</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> collidingEntity)</td></tr>
+
+<tr class="memitem:adb43eaa20d84a8d16669dd5a7d4ca0f3 inherit pub_methods_class_entity" id="r_adb43eaa20d84a8d16669dd5a7d4ca0f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isSensibleToCollidingObjectFrictionOnCollision</a> (<a class="el" href="/documentation/api/class-entity/">Entity</a> collidingEntity)</td></tr>
+
+<tr class="memitem:a12c484e8f4a610ee9694e801a834fd8f inherit pub_methods_class_entity" id="r_a12c484e8f4a610ee9694e801a834fd8f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isSubjectToGravity</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> gravity)</td></tr>
+
+<tr class="memitem:aa769d3b3089290e04bdc5ba66958f7bc inherit pub_methods_class_entity" id="r_aa769d3b3089290e04bdc5ba66958f7bc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">collisionStarts</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:a4ec73898129388029ebf96cd379839c1 inherit pub_methods_class_entity" id="r_a4ec73898129388029ebf96cd379839c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">collisionPersists</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:ab531aaa8cbf234e7ea7785badfa91127 inherit pub_methods_class_entity" id="r_ab531aaa8cbf234e7ea7785badfa91127"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">collisionEnds</a> (const <a class="el" href="/documentation/api/struct-collision-information/">CollisionInformation</a> *collisionInformation)</td></tr>
+
+<tr class="memitem:a2076e90ad4cdd3823e6a3d9abbbcdd0f inherit pub_methods_class_entity" id="r_a2076e90ad4cdd3823e6a3d9abbbcdd0f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">getInGameType</a> ()</td></tr>
+
+<tr class="inherit_header pub_attribs_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_entity')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-entity/">Entity</a></td></tr>
+<tr class="memitem:aaa6483e8ee109c7f19df03a605f96b8c inherit pub_attribs_class_entity" id="r_aaa6483e8ee109c7f19df03a605f96b8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">components</a></td></tr>
+<tr class="memdesc:aaa6483e8ee109c7f19df03a605f96b8c inherit pub_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked list of attached components.  <br /></td></tr>
+
+<tr class="memitem:aae66d4192d0965d383a6d1ebe11e6e01 inherit pub_attribs_class_entity" id="r_aae66d4192d0965d383a6d1ebe11e6e01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-transformation/">Transformation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">transformation</a></td></tr>
+<tr class="memdesc:aae66d4192d0965d383a6d1ebe11e6e01 inherit pub_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D transformation  <br /></td></tr>
+
+<tr class="memitem:a2f6f06971778eb48c43666051201f0c3 inherit pub_attribs_class_entity" id="r_a2f6f06971778eb48c43666051201f0c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-body/">Body</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">body</a></td></tr>
+
+<tr class="memitem:a8af20e61f5de761c97e7f596525ecb1b inherit pub_attribs_class_entity" id="r_a8af20e61f5de761c97e7f596525ecb1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-entity/">isVisible</a></td></tr>
+<tr class="memdesc:a8af20e61f5de761c97e7f596525ecb1b inherit pub_attribs_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag used for streaming purposes.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-container/">Container</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-entity/">Entity</a></p>
+<p>Adds parenting cababilities to spatial objects. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L41">41</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8ba750b307df289fa6ead4cb27245e01" name="a8ba750b307df289fa6ead4cb27245e01"></a>
+<h2 class="memtitle">addChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::addChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-container/">Container</a></td>          <td class="paramname"><span class="paramname"><em>child</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a container as a child. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">child</td><td><a class="el" href="/documentation/api/class-container/">Container</a> to be added as a child </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L406">406</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ac5bc214a92993d96cf56e0694a6d3b5f" name="ac5bc214a92993d96cf56e0694a6d3b5f"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::constructor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>internalId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *const</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">internalId</td><td>ID to keep track internally of the new instance </td></tr>
+    <tr><td class="paramname">name</td><td>Name to assign to the new instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L35">35</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a520d819e3ccdd849e6d0cb215a44c666" name="a520d819e3ccdd849e6d0cb215a44c666"></a>
+<h2 class="memtitle">deleteMyself()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::deleteMyself </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Delete this container when appropriate. Containers must not be deleted nor created directly by the client code </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L334">334</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="aed30886a0551cde03ec897d07614d69d" name="aed30886a0551cde03ec897d07614d69d"></a>
+<h2 class="memtitle">getChildAtPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::getChildAtPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the child at the provided position in the linked list of children. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">position</td><td>Position in the linked list of children </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The child container at the provided position if any </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L614">614</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a71ee1ccb17892758c775baf5507a6643" name="a71ee1ccb17892758c775baf5507a6643"></a>
+<h2 class="memtitle">getChildById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::getChildById </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve a child of this container whose internal ID equals the provided one. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">id</td><td>Internal ID to look for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Child container whose ID matches the provided one </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L573">573</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a0d04b3f896f69ed8addb7445cec56ea7" name="a0d04b3f896f69ed8addb7445cec56ea7"></a>
+<h2 class="memtitle">getChildByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::getChildByName </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>childName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>recursive</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find a child with the provided name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">childName</td><td>Name to look for </td></tr>
+    <tr><td class="paramname">recursive</td><td>If true, the seach extends to grand children, grand grand children, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The first child container whose name equals the provided one </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L593">593</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ab92321eb1ec00fd69b7a8c8c853354da" name="ab92321eb1ec00fd69b7a8c8c853354da"></a>
+<h2 class="memtitle">getChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::getChildren </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">ClassPointer</a></td>          <td class="paramname"><span class="paramname"><em>classPointer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a></td>          <td class="paramname"><span class="paramname"><em>children</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the linked list of children that are instances of the provided class. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">classPointer</td><td>Pointer to the class to use as search criteria. Usage: <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Object.h">typeofclass(ClassName)</a> </td></tr>
+    <tr><td class="paramname">children</td><td>Linked list to be filled with the children that meed the search criteria (it is externally allocated and must be externally deleted) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if one or more children met the search criteria; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L551">551</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ad0c296893ff58f0504085b72a4794df5" name="ad0c296893ff58f0504085b72a4794df5"></a>
+<h2 class="memtitle">getChildrenCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> Container::getChildrenCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the amount of children of this container. </p><dl class="section return"><dt>Returns</dt><dd>Amount of children of this container </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L626">626</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a169e9e45693bb34f5bd24646f6c1c5cb" name="a169e9e45693bb34f5bd24646f6c1c5cb"></a>
+<h2 class="memtitle">getFirstAncestor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::getFirstAncestor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the first ancestor. </p><dl class="section return"><dt>Returns</dt><dd>The first ancestor of the container. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L633">633</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a8377ee930c97af9c02cf6d4dfad89c98" name="a8377ee930c97af9c02cf6d4dfad89c98"></a>
+<h2 class="memtitle">getInternalId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> Container::getInternalId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the container's internal id used by the engine to keep track of it. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-container/">Container</a>'s internal id </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L378">378</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a07aa0b15ad6e706283ed76f86aaae97a" name="a07aa0b15ad6e706283ed76f86aaae97a"></a>
+<h2 class="memtitle">getLocalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> * Container::getLocalPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the local position. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the local transformation's position </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L871">871</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a4fe0fb31a2313a18a2fc7bbb514f5f4d" name="a4fe0fb31a2313a18a2fc7bbb514f5f4d"></a>
+<h2 class="memtitle">getLocalRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> * Container::getLocalRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the local rotation. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the local transformation's rotation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L878">878</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ac77acbf1f58ccab4f94cac17840486f3" name="ac77acbf1f58ccab4f94cac17840486f3"></a>
+<h2 class="memtitle">getLocalScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/class-scale/">Scale</a> * Container::getLocalScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the local scale. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the local transformation's scale </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L885">885</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="afdf2017032500557b8bdf19f40c2eb2b" name="afdf2017032500557b8bdf19f40c2eb2b"></a>
+<h2 class="memtitle">getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const char * Container::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrive the container's name. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the container's name </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L385">385</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a575f290d6a74fc46370f695192332874" name="a575f290d6a74fc46370f695192332874"></a>
+<h2 class="memtitle">getNormalizedDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-normalized-direction/">NormalizedDirection</a> Container::getNormalizedDirection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve the normalized direction towards where the container faces. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="/documentation/api/class-container/">Container</a>'s facing direction with is components normalized </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L307">307</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a550a49e1671eaa0207871f49a5c07a9a" name="a550a49e1671eaa0207871f49a5c07a9a"></a>
+<h2 class="memtitle">getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::getParent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieve this container's parent container. </p><dl class="section return"><dt>Returns</dt><dd>Parent container </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L399">399</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a993fd535d5a062f31b96800e8d12ec0f" name="a993fd535d5a062f31b96800e8d12ec0f"></a>
+<h2 class="memtitle">getRelativeByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::getRelativeByName </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>relativeName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find a relative in the whole hierarchy of containers with the provided name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">relativeName</td><td>Name to look for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The first container whose name equals the provided one </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L647">647</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="afa941ef821f545406fe2b93598e20a10" name="afa941ef821f545406fe2b93598e20a10"></a>
+<h2 class="memtitle">handleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::handleCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default command handler. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">command</td><td>Propagated command </td></tr>
+    <tr><td class="paramname">args</td><td>Variable arguments list depending on the command to handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-actor/">Actor</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L1056">1056</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a95bc89203c0729a8988a061d774de943" name="a95bc89203c0729a8988a061d774de943"></a>
+<h2 class="memtitle">handlePropagatedMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::handlePropagatedMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default interger message handler for propagateMessage </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">message</td><td>Propagated integer message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the propagation must stop; false if the propagation must reach other containers </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L1061">1061</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a366fe4bd729543e9980a0249496e0f2e" name="a366fe4bd729543e9980a0249496e0f2e"></a>
+<h2 class="memtitle">handlePropagatedString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::handlePropagatedString </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>string</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default string handler for propagateString </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">string</td><td>Propagated string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the propagation must stop; false if the propagation must reach other containers </dd></dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-actor/">Actor</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L1068">1068</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a5f2b24b3eff15fb251043fcfd32bf537" name="a5f2b24b3eff15fb251043fcfd32bf537"></a>
+<h2 class="memtitle">hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::hide </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make this instance invisible. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L151">151</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a72cec2aef0379cafbed4ecceedcdd630" name="a72cec2aef0379cafbed4ecceedcdd630"></a>
+<h2 class="memtitle">invalidateTransformation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::invalidateTransformation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Invalidate the transformation to force it to be recomputed in the next game cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L701">701</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a3caab7745d0523f170be75ef8f1b6d1f" name="a3caab7745d0523f170be75ef8f1b6d1f"></a>
+<h2 class="memtitle">onPropagatedMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::onPropagatedMessage </td>
+          <td>(</td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generic integer message propagator </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">args</td><td>Variable list of propagated arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L797">797</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a19506a55d292ec16d5a70b9c3beccd0a" name="a19506a55d292ec16d5a70b9c3beccd0a"></a>
+<h2 class="memtitle">onPropagatedString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::onPropagatedString </td>
+          <td>(</td>
+          <td class="paramtype">va_list</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generic string propagator </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">args</td><td>Variable list of propagated arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L819">819</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a50e632bb8cf3100b6880c1a7b6c1e0e0" name="a50e632bb8cf3100b6880c1a7b6c1e0e0"></a>
+<h2 class="memtitle">propagateCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::propagateCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Propagate a command to the container's children. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">command</td><td>Method that handles the message </td></tr>
+    <tr><td class="paramname">...</td><td>Variable arguments list depending on the command </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result that the provided message handler returns </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L758">758</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a7f47b4bffb34a4ac18266e8b97e77d52" name="a7f47b4bffb34a4ac18266e8b97e77d52"></a>
+<h2 class="memtitle">propagateMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::propagateMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>(*</td>          <td class="paramname"><span class="paramname"><em>propagatedMessageHandler&#160;</em></span>)(void *, va_list), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Propagate an integer message through the whole parenting hierarchy (children, grand children, etc.). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">propagatedMessageHandler</td><td>Method that handles the message </td></tr>
+    <tr><td class="paramname">...</td><td>Variable arguments list depending on the message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result that the provided message handler returns </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L783">783</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a0af892db508677995cf9604fc10ef8f6" name="a0af892db508677995cf9604fc10ef8f6"></a>
+<h2 class="memtitle">propagateString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::propagateString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>(*</td>          <td class="paramname"><span class="paramname"><em>propagatedMessageHandler&#160;</em></span>)(void *, va_list), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Propagate a string through the whole parenting hierarchy (children, grand children, etc.). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">propagatedMessageHandler</td><td>Method that handles the string </td></tr>
+    <tr><td class="paramname">...</td><td>Variable arguments list depending on the string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result that the provided string handler returns </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L805">805</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="af17d3ae36ea3cd09921351b98d709e35" name="af17d3ae36ea3cd09921351b98d709e35"></a>
+<h2 class="memtitle">purgeChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::purgeChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force the destruction of all children marked to be deleted. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L507">507</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a4df40fcb8a24cefaa4dcb0e08475950b" name="a4df40fcb8a24cefaa4dcb0e08475950b"></a>
+<h2 class="memtitle">ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">virtual void Container::ready </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>recursive</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Make the container ready to start operating once it has been completely intialized. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">recursive</td><td>If true, the ready call is propagated to its children, grand children, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-actor/">Actor</a>.</p>
+
+</div>
+</div>
+<a id="a0814b16599e9c7cc0ce8386b6cbfafc1" name="a0814b16599e9c7cc0ce8386b6cbfafc1"></a>
+<h2 class="memtitle">removeChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::removeChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-container/">Container</a></td>          <td class="paramname"><span class="paramname"><em>child</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>deleteChild</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reomve a child container for this container's children list. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">child</td><td><a class="el" href="/documentation/api/class-container/">Container</a> to be remove as a child </td></tr>
+    <tr><td class="paramname">deleteChild</td><td>If true, the child will be deleted in the next game cycle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L460">460</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a0b9b682b4fae073fc1bbaf75615310c3" name="a0b9b682b4fae073fc1bbaf75615310c3"></a>
+<h2 class="memtitle">resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::resume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare to resume this instance's logic. </p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a>, and <a class="el" href="/documentation/api/class-stage/">Stage</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L1030">1030</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a25d82a57d457bdfb6a581358e67f2064" name="a25d82a57d457bdfb6a581358e67f2064"></a>
+<h2 class="memtitle">rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::rotate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotate the container. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">rotation</td><td><a class="el" href="/documentation/api/class-rotation/">Rotation</a> to be added to the container's rotation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L850">850</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="aab305941ee2aac6bffd85cf926927206" name="aab305941ee2aac6bffd85cf926927206"></a>
+<h2 class="memtitle">scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::scale </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-scale/">Scale</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="/documentation/api/class-scale/">Scale</a> the container. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">scale</td><td><a class="el" href="/documentation/api/class-scale/">Scale</a> to be applied to the container's scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L862">862</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a7cc247769e9bda3af64bff594061faf6" name="a7cc247769e9bda3af64bff594061faf6"></a>
+<h2 class="memtitle">setDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setDirection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the direction towards which the object must move. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">direction</td><td>Pointer to a direction vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L210">210</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a5eb825771868224a0c7992074dce0525" name="a5eb825771868224a0c7992074dce0525"></a>
+<h2 class="memtitle">setLocalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setLocalPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the local position. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">position</td><td>New local position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L892">892</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ab6c6dfa10e9bf9bfbcab1fcffcdab9d2" name="ab6c6dfa10e9bf9bfbcab1fcffcdab9d2"></a>
+<h2 class="memtitle">setLocalRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setLocalRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the local rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">rotation</td><td>New local rotation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L933">933</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ad5928971c6e675cf8f3acf21d5b1660f" name="ad5928971c6e675cf8f3acf21d5b1660f"></a>
+<h2 class="memtitle">setLocalScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setLocalScale </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-scale/">Scale</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the local scale. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">scale</td><td>New local scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L955">955</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="ad0cf677fdf0e8845b1a26bba90d66cac" name="ad0cf677fdf0e8845b1a26bba90d66cac"></a>
+<h2 class="memtitle">setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setName </td>
+          <td>(</td>
+          <td class="paramtype">const char *const</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the container's name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">name</td><td>Name to assign to the instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L351">351</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a47cd0af6f0bd02dfc4f58031125a80d7" name="a47cd0af6f0bd02dfc4f58031125a80d7"></a>
+<h2 class="memtitle">setNormalizedDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setNormalizedDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-normalized-direction/">NormalizedDirection</a></td>          <td class="paramname"><span class="paramname"><em>normalizedDirection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the normalized direction towards where the container faces. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">normalizedDirection</td><td>New facing direction with is components normalized </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L271">271</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a3fd46f4cab6dd1b8f86cff7bc47c5d42" name="a3fd46f4cab6dd1b8f86cff7bc47c5d42"></a>
+<h2 class="memtitle">setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the container's position. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">position</td><td>3D vector defining the object's new position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L177">177</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a9b806b4cee883a2d99bc354efab512d1" name="a9b806b4cee883a2d99bc354efab512d1"></a>
+<h2 class="memtitle">setRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-rotation/">Rotation</a> *</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the container's rotation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">rotation</td><td><a class="el" href="/documentation/api/class-rotation/">Rotation</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L188">188</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="abad82dbf25f7a76482c73abf52c967ec" name="abad82dbf25f7a76482c73abf52c967ec"></a>
+<h2 class="memtitle">setScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setScale </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-scale/">Scale</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the container's scale. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">scale</td><td><a class="el" href="/documentation/api/class-scale/">Scale</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L199">199</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a677f94df00237921eeabb59108a62d09" name="a677f94df00237921eeabb59108a62d09"></a>
+<h2 class="memtitle">setTransparency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::setTransparency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>transparency</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set this instance's transparency effects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">transparency</td><td>Transparecy effect (__TRANSPARENCY_NONE, __EVEN or __ODD) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L165">165</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a48cdaa85884938b417513cca003f4f6c" name="a48cdaa85884938b417513cca003f4f6c"></a>
+<h2 class="memtitle">show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::show </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make this instance visible. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-entity/">Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L135">135</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a4f51ac48e53d926cab51f0adba713ee1" name="a4f51ac48e53d926cab51f0adba713ee1"></a>
+<h2 class="memtitle">streamOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::streamOut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>streamOut</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the streaming effects on this container. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">streamOut</td><td>If false, this container won't be streamed out when outside of the camera's reach </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L392">392</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a87dbf7fc8881be19de42e369700ad4b8" name="a87dbf7fc8881be19de42e369700ad4b8"></a>
+<h2 class="memtitle">suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::suspend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare to suspend this instance's logic. </p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-actor/">Actor</a>, <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a>, and <a class="el" href="/documentation/api/class-stage/">Stage</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L1011">1011</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a22f701579c2e59976477a7a4c78408b0" name="a22f701579c2e59976477a7a4c78408b0"></a>
+<h2 class="memtitle">transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::transform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-transformation/">Transformation</a> *</td>          <td class="paramname"><span class="paramname"><em>environmentTransform</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>invalidateTransformationFlag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute the container's global transformation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">environmentTransform</td><td>Reference environment for the local transformation </td></tr>
+    <tr><td class="paramname">invalidateTransformationFlag</td><td>Flag that determines which transfomation's components must be recomputed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-u-i-container/">UIContainer</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L997">997</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="abff8d8e26b5a248e0f0e6aa48838594f" name="abff8d8e26b5a248e0f0e6aa48838594f"></a>
+<h2 class="memtitle">transformChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::transformChildren </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>invalidateTransformationFlag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply the transformations to this container's children. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">invalidateTransformationFlag</td><td>Flag that determines which transfomation's components must be recomputed </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Force non virtual call</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L718">718</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a04dd513e3454fe68270c90ee73c44a10" name="a04dd513e3454fe68270c90ee73c44a10"></a>
+<h2 class="memtitle">translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::translate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>translation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Displace the container. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">translation</td><td>Displacement to be added to the container's position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L827">827</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="abc539906e3b7a6fad7f79ca73a403deb" name="abc539906e3b7a6fad7f79ca73a403deb"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update this instance's logic. </p>
+
+<p>Reimplemented in <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L1004">1004</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<a id="a032e3dadea9ef81d04e110e51ecce0cd" name="a032e3dadea9ef81d04e110e51ecce0cd"></a>
+<h2 class="memtitle">updateChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::updateChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the children of this container. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c#L656">656</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2efcf10aeee49d72cd385c65aba2479c" name="a2efcf10aeee49d72cd385c65aba2479c"></a>
+<h2 class="memtitle">axisForSynchronizationWithBody</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> Container::axisForSynchronizationWithBody</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Axises around which to rotate the container when syncronizing with body. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L75">75</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a017b25246dd27385b00df2969696c93c" name="a017b25246dd27385b00df2969696c93c"></a>
+<h2 class="memtitle">children</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> Container::children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Linked list of child containers The VB's CPU doesn't have data cache, so there is not a good reason to loose generality </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L51">51</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a889e8a8f7c9886bcded4f3937852b17c" name="a889e8a8f7c9886bcded4f3937852b17c"></a>
+<h2 class="memtitle">deleteMe</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::deleteMe</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, the parent will delete this container when appropriate. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L63">63</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ff53e145f2c6d8410614ecf9b732684" name="a5ff53e145f2c6d8410614ecf9b732684"></a>
+<h2 class="memtitle">dontStreamOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::dontStreamOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L69">69</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="ac16a42eb53f626fc017455edeca09cd0" name="ac16a42eb53f626fc017455edeca09cd0"></a>
+<h2 class="memtitle">hidden</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> Container::hidden</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to mark the container (and its children) as non visible. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L72">72</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a73a6d7ee211ade6233bcea653a5854ee" name="a73a6d7ee211ade6233bcea653a5854ee"></a>
+<h2 class="memtitle">internalId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> Container::internalId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-container/">Container</a>'s internal id, set by the engine. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L60">60</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="ad2355b2853e8d90e434c2b8726e066e8" name="ad2355b2853e8d90e434c2b8726e066e8"></a>
+<h2 class="memtitle">localTransformation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-transformation/">Transformation</a> Container::localTransformation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>3D local transformation </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L54">54</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a67ce2f5aefbdfebfdf389731573933e1" name="a67ce2f5aefbdfebfdf389731573933e1"></a>
+<h2 class="memtitle">name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">char* Container::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-container/">Container</a>'s name. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L57">57</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a7dbd57b8d860ee793a83343faeb28046" name="a7dbd57b8d860ee793a83343faeb28046"></a>
+<h2 class="memtitle">parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-container/">Container</a> Container::parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="/documentation/api/class-container/">Container</a> of which this one is a child. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L46">46</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<a id="a661933ea6bc220eb6963886194ccdcc2" name="a661933ea6bc220eb6963886194ccdcc2"></a>
+<h2 class="memtitle">ready</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void Container::ready</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h#L66">66</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Entity/Container/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.h">Container.h</a></li>
+<li>VUEngine-Core/source/Entity/Container/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Container.c">Container.c</a></li>
+</ul>
+</div>
+
+
+</div>

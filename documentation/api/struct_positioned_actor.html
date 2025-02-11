@@ -1,0 +1,214 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "PositionedActor Struct Reference"
+permalink: documentation/api/struct-positioned-actor/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">PositionedActor Struct Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>&gt;</code></p>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a04981072780d60aa9b170388141c1435" id="r_a04981072780d60aa9b170388141c1435"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04981072780d60aa9b170388141c1435">actorSpec</a></td></tr>
+
+<tr class="memitem:ac55a2f1e812bf9769ae425c2ea8995d8" id="r_ac55a2f1e812bf9769ae425c2ea8995d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac55a2f1e812bf9769ae425c2ea8995d8">onScreenPosition</a></td></tr>
+
+<tr class="memitem:ad5f4b37b14f01fec0bdc426ade168119" id="r_ad5f4b37b14f01fec0bdc426ade168119"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f4b37b14f01fec0bdc426ade168119">onScreenRotation</a></td></tr>
+
+<tr class="memitem:a45332b2cdf167cdfeaf361ffafdc428c" id="r_a45332b2cdf167cdfeaf361ffafdc428c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/struct-screen-pixel-scale/">ScreenPixelScale</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45332b2cdf167cdfeaf361ffafdc428c">onScreenScale</a></td></tr>
+
+<tr class="memitem:a64d5d50c48949fd989772e9fe33f2e8f" id="r_a64d5d50c48949fd989772e9fe33f2e8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d5d50c48949fd989772e9fe33f2e8f">id</a></td></tr>
+
+<tr class="memitem:a48419e7655f30834967b6a23a0949053" id="r_a48419e7655f30834967b6a23a0949053"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48419e7655f30834967b6a23a0949053">name</a></td></tr>
+
+<tr class="memitem:a086b36d4c4dcc1d8979f6b751aa14e2d" id="r_a086b36d4c4dcc1d8979f6b751aa14e2d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a086b36d4c4dcc1d8979f6b751aa14e2d">childrenSpecs</a></td></tr>
+<tr class="memdesc:a086b36d4c4dcc1d8979f6b751aa14e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Children.  <br /></td></tr>
+
+<tr class="memitem:a9755ff7c99f7014ef9999678d9bf8fcd" id="r_a9755ff7c99f7014ef9999678d9bf8fcd"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9755ff7c99f7014ef9999678d9bf8fcd">extraInfo</a></td></tr>
+<tr class="memdesc:a9755ff7c99f7014ef9999678d9bf8fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra info.  <br /></td></tr>
+
+<tr class="memitem:a044e66ef53632b314ebe263fd65d9ced" id="r_a044e66ef53632b314ebe263fd65d9ced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a044e66ef53632b314ebe263fd65d9ced">loadRegardlessOfPosition</a></td></tr>
+<tr class="memdesc:a044e66ef53632b314ebe263fd65d9ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force load even if out of the camera's frustum.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct that specifies how to create an spatially situated actor </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L67">67</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a04981072780d60aa9b170388141c1435" name="a04981072780d60aa9b170388141c1435"></a>
+<h2 class="memtitle">actorSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">const <a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a>* PositionedActor::actorSpec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L70">70</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="a086b36d4c4dcc1d8979f6b751aa14e2d" name="a086b36d4c4dcc1d8979f6b751aa14e2d"></a>
+<h2 class="memtitle">childrenSpecs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">struct <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a>* PositionedActor::childrenSpecs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Children. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L88">88</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="a9755ff7c99f7014ef9999678d9bf8fcd" name="a9755ff7c99f7014ef9999678d9bf8fcd"></a>
+<h2 class="memtitle">extraInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void* PositionedActor::extraInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extra info. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L91">91</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="a64d5d50c48949fd989772e9fe33f2e8f" name="a64d5d50c48949fd989772e9fe33f2e8f"></a>
+<h2 class="memtitle">id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> PositionedActor::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L82">82</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="a044e66ef53632b314ebe263fd65d9ced" name="a044e66ef53632b314ebe263fd65d9ced"></a>
+<h2 class="memtitle">loadRegardlessOfPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> PositionedActor::loadRegardlessOfPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force load even if out of the camera's frustum. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L94">94</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="a48419e7655f30834967b6a23a0949053" name="a48419e7655f30834967b6a23a0949053"></a>
+<h2 class="memtitle">name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">char* PositionedActor::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L85">85</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="ac55a2f1e812bf9769ae425c2ea8995d8" name="ac55a2f1e812bf9769ae425c2ea8995d8"></a>
+<h2 class="memtitle">onScreenPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-screen-pixel-vector/">ScreenPixelVector</a> PositionedActor::onScreenPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L73">73</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="ad5f4b37b14f01fec0bdc426ade168119" name="ad5f4b37b14f01fec0bdc426ade168119"></a>
+<h2 class="memtitle">onScreenRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-screen-pixel-rotation/">ScreenPixelRotation</a> PositionedActor::onScreenRotation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L76">76</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<a id="a45332b2cdf167cdfeaf361ffafdc428c" name="a45332b2cdf167cdfeaf361ffafdc428c"></a>
+<h2 class="memtitle">onScreenScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/struct-screen-pixel-scale/">ScreenPixelScale</a> PositionedActor::onScreenScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this struct was generated from the following file:<ul>
+<li>VUEngine-Core/source/Entity/Container/Actor/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/Actor.h">Actor.h</a></li>
+</ul>
+</div>
+
+
+</div>

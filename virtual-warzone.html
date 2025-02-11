@@ -4,15 +4,15 @@ title: Virtual WarZone
 favicon: /assets/images/games/virtual-warzone/favicon.png
 ---
 
-<section class="h-100" style="background: #000">
-  <section class="d-flex flex-column gap-4 px-3 pt-3 pb-5 align-items-center"
-    style="background: url('/assets/images/games/virtual-warzone/background.jpg') no-repeat top center; background-size: cover;">
+<section class="h-100">
+  <section class="d-flex flex-column gap-4 px-3 pt-3 pb-5 align-items-center">
 
     <img src="/assets/images/games/virtual-warzone/vwz-logo.png" width="500" class="img-fluid" />
 
     <div class="w-100" style="max-width: 840px;">
       <div class="position-relative h-0 w-100" style="padding-top: 56.25%; /* 16:9 Aspect Ratio */">
-        <iframe class="bg-dark shadow position-absolute h-100 w-100 top-0 start-0" style="border-radius: .5rem"
+        <iframe class="bg-dark shadow position-absolute h-100 w-100 top-0 start-0"
+          style="border-radius: var(--bs-border-radius)"
           src="https://www.youtube-nocookie.com/embed/cDUkpSSduAc?autoplay=1&modestbranding=1&rel=0&iv_load_policy=3"
           width="560" height="315" title="FORMULA V Commercial" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -40,3 +40,9 @@ favicon: /assets/images/games/virtual-warzone/favicon.png
     </div>
   </section>
 </section>
+<style>
+  body {
+    background: #000 url('/assets/images/games/virtual-warzone/background.jpg') no-repeat top center;
+    background-size: cover;
+  }
+</style>

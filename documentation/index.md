@@ -1,24 +1,27 @@
 ---
 layout: documentation
+parents: Documentation
 title: Introduction
 ---
 
 # Introduction
 
-Hello! I am the VUEngine Studio documentation.
+[VUEngine Studio](https://www.vuengine.dev/) is a custom integrated development environment (IDE), tailor-made for [Nintendo Virtual Boy](https://www.virtual-boy.com) game development with [VUEngine](https://github.com/VUEngine/VUEngine-Core), our versatile, object oriented Virtual Boy game engine. As the end result, it can generate ROM files (`.vb`) that can be run in an emulator or, via a flash cart, on actual Virtual Boy hardware.
 
-**I am incomplete and still being written. Partially even outdated. Beware!**
+This documentation consists of the following sections:
 
-VUEngine Studio is a custom integrated development environment (IDE), tailor-made for <a href="https://www.virtual-boy.com">Nintendo Virtual Boy</a> game development with <a href="https://github.com/VUEngine/VUEngine-Core">VUEngine</a>, our versatile, object oriented Virtual Boy game engine.
+- [Setup](/documentation/setup/installation/): to get your copy of [VUEngine Studio](https://www.vuengine.dev/) up and running.
+- [Basics](/documentation/basics/getting-started/): to get to know the IDE and the most important of its many features.
+- [Language](/documentation/language/introduction/): to learn about Virtual C, our custom C dialect.
+- [User Guide](/documentation/user-guide/introduction/): to learn about the design principles and concepts of VUEngine, the engine you'll build upon.
+- [API](/documentation/api/classes/): for an API documentation of VUEngine's classes.
+- [Tutorial](/documentation/tutorial/introduction/): for a step-by-step tutorial that implements a simple game with [VUEngine Studio](https://www.vuengine.dev/).
+  {% comment %}
+- [FAQ](/documentation/faq/): for an overview of the most frequently asked questions.
+  {% endcomment %}
 
-Check out the following sections:
+You might just want to skip most of that at first and start off with the [tutorial](/documentation/tutorial/introduction/) to make your first game. You can still come back to the other sections later to deepen your knowledge of e.g. VUEngine's concepts.
 
-- <a href="/documentation/setup/installation/">Setup</a>: to get your copy of VUEngine Studio up and running.
-- <a href="/documentation/basics/user-interface/">Basics</a>: to get to know the IDE and the most important of its many features.
-- <a href="/documentation/user-guide/building/">User Guide</a>: to learn how to actually develop games with VUEngine Studio.
-- <a href="/documentation/engine/introduction/">Engine</a>: to learn about VUEngine, the engine you'll build upon.
-- <a href="/documentation/tutorials/video-tutorials/">Tutorials</a>: for a different approach to learn working with VUEngine Studio (well... once anything is up there).
+> **BTW**: The name "VUEngine" (pronounced as "View Engine") is a portmanteau of the Virtual Boy’s original code name, "VUE" (short for "Virtual Utopia Experience"), and the word "Engine".
 
-> **BTW**: The name "VUEngine" (pronounced as "View Engine") is based on the Virtual Boy’s code name, "VUE" or "Virtual Utopia Experience".
-
-<img src="/documentation/images/VUEngine-Studio.png" width="100%" />
+![](/documentation/images/VUEngine-Studio.png)

@@ -1,0 +1,657 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "SoundManager Class Reference"
+permalink: documentation/api/class-sound-manager/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">SoundManager Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h">SoundManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for SoundManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_sound_manager.png" usemap="#SoundManager_map" alt />
+  <map id="SoundManager_map" name="SoundManager_map">
+<area href="/documentation/api/class-listener-object/" alt="ListenerObject" shape="rect" coords="0,0,99,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a424c1126bbb515b202d5ca7ba3b52dd6" id="r_a424c1126bbb515b202d5ca7ba3b52dd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a424c1126bbb515b202d5ca7ba3b52dd6">updateSounds</a> ()</td></tr>
+<tr class="memdesc:a424c1126bbb515b202d5ca7ba3b52dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the sounds lists.  <br /></td></tr>
+
+<tr class="memitem:ae615be9e380febe5485f02ac39037977" id="r_ae615be9e380febe5485f02ac39037977"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae615be9e380febe5485f02ac39037977">playSounds</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> elapsedMicroseconds)</td></tr>
+
+<tr class="memitem:a7afaa00ee00a4d3509ae7db4d745020b" id="r_a7afaa00ee00a4d3509ae7db4d745020b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7afaa00ee00a4d3509ae7db4d745020b">reset</a> ()</td></tr>
+<tr class="memdesc:a7afaa00ee00a4d3509ae7db4d745020b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the manager's state.  <br /></td></tr>
+
+<tr class="memitem:a8d1a070e1ce8bd7cdba9b74e237d4faa" id="r_a8d1a070e1ce8bd7cdba9b74e237d4faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1a070e1ce8bd7cdba9b74e237d4faa">setPCMTargetPlaybackRefreshRate</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> pcmTargetPlaybackRefreshRate)</td></tr>
+
+<tr class="memitem:a893c736a19eac0423127019d04745d6b" id="r_a893c736a19eac0423127019d04745d6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a893c736a19eac0423127019d04745d6b">isPlayingSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec)</td></tr>
+
+<tr class="memitem:a7e94cd39561b9c7d44b9d7c1a3884f4c" id="r_a7e94cd39561b9c7d44b9d7c1a3884f4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e94cd39561b9c7d44b9d7c1a3884f4c">muteAllSounds</a> ()</td></tr>
+<tr class="memdesc:a7e94cd39561b9c7d44b9d7c1a3884f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mute all playing sounds.  <br /></td></tr>
+
+<tr class="memitem:a39a393169001b8f8d34946fbfa96a46c" id="r_a39a393169001b8f8d34946fbfa96a46c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39a393169001b8f8d34946fbfa96a46c">unmuteAllSounds</a> ()</td></tr>
+<tr class="memdesc:a39a393169001b8f8d34946fbfa96a46c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmute all playing sounds.  <br /></td></tr>
+
+<tr class="memitem:aec900e86c18aca853d1123222570e10f" id="r_aec900e86c18aca853d1123222570e10f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec900e86c18aca853d1123222570e10f">rewindAllSounds</a> ()</td></tr>
+<tr class="memdesc:aec900e86c18aca853d1123222570e10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewind all playing sounds.  <br /></td></tr>
+
+<tr class="memitem:a69320cd5ebd61dce596defee12805f24" id="r_a69320cd5ebd61dce596defee12805f24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69320cd5ebd61dce596defee12805f24">stopAllSounds</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> release, <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> **excludedSounds)</td></tr>
+
+<tr class="memitem:a55c8aa5448240457690cb9a65b4bb7bc" id="r_a55c8aa5448240457690cb9a65b4bb7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55c8aa5448240457690cb9a65b4bb7bc">lock</a> ()</td></tr>
+<tr class="memdesc:a55c8aa5448240457690cb9a65b4bb7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refuse petitions to play or allocate sounds are processed.  <br /></td></tr>
+
+<tr class="memitem:aa032d9167434e497863be8bc91077075" id="r_aa032d9167434e497863be8bc91077075"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa032d9167434e497863be8bc91077075">unlock</a> ()</td></tr>
+<tr class="memdesc:aa032d9167434e497863be8bc91077075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow petitions to play or allocate sounds are processed.  <br /></td></tr>
+
+<tr class="memitem:a84e40a239add301d3615c153bf53350d" id="r_a84e40a239add301d3615c153bf53350d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84e40a239add301d3615c153bf53350d">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+<tr class="memdesc:a84e40a239add301d3615c153bf53350d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the manager's status.  <br /></td></tr>
+
+<tr class="memitem:ad29431bab4b067c90354646cd305e19f" id="r_ad29431bab4b067c90354646cd305e19f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad29431bab4b067c90354646cd305e19f">printPlaybackTime</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> y)</td></tr>
+<tr class="memdesc:ad29431bab4b067c90354646cd305e19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print playback time of the playing sounds.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a738a0552797e3032bda172e0332e3599" id="r_a738a0552797e3032bda172e0332e3599"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a738a0552797e3032bda172e0332e3599">playSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec, const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *position, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> playbackType, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a9e564116299a60d8db6af21003422dbf" id="r_a9e564116299a60d8db6af21003422dbf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-sound/">Sound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e564116299a60d8db6af21003422dbf">getSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+<tr class="memitem:a8e8ab0177c8e28e2c32338274159feb8" id="r_a8e8ab0177c8e28e2c32338274159feb8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-sound/">Sound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8ab0177c8e28e2c32338274159feb8">findSound</a> (const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *soundSpec, <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> scope)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af0022ad9f0768427cfad0ea2dc059863" id="r_af0022ad9f0768427cfad0ea2dc059863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0022ad9f0768427cfad0ea2dc059863">sounds</a></td></tr>
+<tr class="memdesc:af0022ad9f0768427cfad0ea2dc059863"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of playing sounds.  <br /></td></tr>
+
+<tr class="memitem:a6952eecd53445bf9aedf259e66cd2acc" id="r_a6952eecd53445bf9aedf259e66cd2acc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6952eecd53445bf9aedf259e66cd2acc">targetPCMUpdates</a></td></tr>
+<tr class="memdesc:a6952eecd53445bf9aedf259e66cd2acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target PCM cycles per game cycle.  <br /></td></tr>
+
+<tr class="memitem:a9561982a39f0eae9ce83aa2a5bb10fd4" id="r_a9561982a39f0eae9ce83aa2a5bb10fd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9561982a39f0eae9ce83aa2a5bb10fd4">lock</a></td></tr>
+<tr class="memdesc:a9561982a39f0eae9ce83aa2a5bb10fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If raised, no petitions to play or allocate sounds are processed.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object" id="r_aff6e0d9a0ef892fc651d033a590bee8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">constructor</a> ()</td></tr>
+<tr class="memdesc:aff6e0d9a0ef892fc651d033a590bee8d inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' constructor.  <br /></td></tr>
+
+<tr class="memitem:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object" id="r_ad7d1242145a2893f5609286c58a03535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">destructor</a> ()</td></tr>
+<tr class="memdesc:ad7d1242145a2893f5609286c58a03535 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class' destructor.  <br /></td></tr>
+
+<tr class="memitem:abbad842e81ca692ea80f2a123fe3d4ad inherit pub_methods_class_listener_object" id="r_abbad842e81ca692ea80f2a123fe3d4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">addEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a4576f085df122b6ca093affc2ad92061 inherit pub_methods_class_listener_object" id="r_a4576f085df122b6ca093affc2ad92061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListener</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> listener, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:aa118c3b40a6ff3e2b49aacaa7536cf07 inherit pub_methods_class_listener_object" id="r_aa118c3b40a6ff3e2b49aacaa7536cf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeEventListeners</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object" id="r_a12aa1f5be761aad9c22a82ff32801471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">removeAllEventListeners</a> ()</td></tr>
+<tr class="memdesc:a12aa1f5be761aad9c22a82ff32801471 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all listener objects.  <br /></td></tr>
+
+<tr class="memitem:ab2c880d142736b13b5f903815de132ee inherit pub_methods_class_listener_object" id="r_ab2c880d142736b13b5f903815de132ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">hasActiveEventListeners</a> ()</td></tr>
+
+<tr class="memitem:aa7bddc5d7ebb22d3d3cd7537786c4b27 inherit pub_methods_class_listener_object" id="r_aa7bddc5d7ebb22d3d3cd7537786c4b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">fireEvent</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ab5d2710d5899a6ccc43c9ba593c0f6e4 inherit pub_methods_class_listener_object" id="r_ab5d2710d5899a6ccc43c9ba593c0f6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageTo</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> receiver, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a250117f0271a80ac5a501813c79f83a1 inherit pub_methods_class_listener_object" id="r_a250117f0271a80ac5a501813c79f83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">sendMessageToSelf</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> delay, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> randomDelay)</td></tr>
+
+<tr class="memitem:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object" id="r_a38293ac2b0f60480e1ac66f1668af206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardAllMessages</a> ()</td></tr>
+<tr class="memdesc:a38293ac2b0f60480e1ac66f1668af206 inherit pub_methods_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all messages, both to be sent and to be received.  <br /></td></tr>
+
+<tr class="memitem:aae7a3b707aa7deaa86116c98285cbc7e inherit pub_methods_class_listener_object" id="r_aae7a3b707aa7deaa86116c98285cbc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">discardMessages</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> message)</td></tr>
+
+<tr class="memitem:ad4061ed61e54372bfc3be55718900f02 inherit pub_methods_class_listener_object" id="r_ad4061ed61e54372bfc3be55718900f02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:ac00bf51bd5d127ab6c703fe37008ea68 inherit pub_methods_class_listener_object" id="r_ac00bf51bd5d127ab6c703fe37008ea68"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">handleMessage</a> (<a class="el" href="/documentation/api/class-telegram/">Telegram</a> telegram)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_listener_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_listener_object')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td></tr>
+<tr class="memitem:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object" id="r_a9867d0b4fc72feb68eadd9cf6d88cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">events</a></td></tr>
+<tr class="memdesc:a9867d0b4fc72feb68eadd9cf6d88cca0 inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered events.  <br /></td></tr>
+
+<tr class="memitem:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object" id="r_a9a94add9233fee0172513f97a1b4fbde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-listener-object/">eventFirings</a></td></tr>
+<tr class="memdesc:a9a94add9233fee0172513f97a1b4fbde inherit pub_attribs_class_listener_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter that keeps track of the number of fired events to prevent race conditions in nested firings.  <br /></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-sound-manager/">SoundManager</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></p>
+<p>Manages the <a class="el" href="/documentation/api/class-sound/">Sound</a> instances. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h#L39">39</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h">SoundManager.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e8ab0177c8e28e2c32338274159feb8" name="a8e8ab0177c8e28e2c32338274159feb8"></a>
+<h2 class="memtitle">findSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-sound/">Sound</a> SoundManager::findSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve a previously allocated sound defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td>Spec that defines the sound to play </td></tr>
+    <tr><td class="paramname">soundReleaseListener</td><td>Callback method for when the sound is released </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that will be notified of communication events </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a9e564116299a60d8db6af21003422dbf" name="a9e564116299a60d8db6af21003422dbf"></a>
+<h2 class="memtitle">getSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="/documentation/api/class-sound/">Sound</a> SoundManager::getSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocate sound defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td>Spec that defines the sound to play </td></tr>
+    <tr><td class="paramname">soundReleaseListener</td><td>Callback method for when the sound is released </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> that will be notified of communication events </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L65">65</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a893c736a19eac0423127019d04745d6b" name="a893c736a19eac0423127019d04745d6b"></a>
+<h2 class="memtitle">isPlayingSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> SoundManager::isPlayingSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if a sound with the provided spec is playing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td><a class="el" href="/documentation/api/class-sound/">Sound</a> spec to check for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L231">231</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a55c8aa5448240457690cb9a65b4bb7bc" name="a55c8aa5448240457690cb9a65b4bb7bc"></a>
+<h2 class="memtitle">lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::lock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Refuse petitions to play or allocate sounds are processed. </p>
+
+</div>
+</div>
+<a id="a7e94cd39561b9c7d44b9d7c1a3884f4c" name="a7e94cd39561b9c7d44b9d7c1a3884f4c"></a>
+<h2 class="memtitle">muteAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::muteAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mute all playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L250">250</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a738a0552797e3032bda172e0332e3599" name="a738a0552797e3032bda172e0332e3599"></a>
+<h2 class="memtitle">playSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> SoundManager::playSound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>soundSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>playbackType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Play a sound defined by the provided spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">soundSpec</td><td>Spec that defines the sound to play </td></tr>
+    <tr><td class="paramname">position</td><td>Position for spatilly position sound </td></tr>
+    <tr><td class="paramname">playbackType</td><td>How to play the sound </td></tr>
+    <tr><td class="paramname">scope</td><td><a class="el" href="/documentation/api/class-object/">Object</a> on which to perform the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L38">38</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="ae615be9e380febe5485f02ac39037977" name="ae615be9e380febe5485f02ac39037977"></a>
+<h2 class="memtitle">playSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void SoundManager::playSounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elapsedMicroseconds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Play the allocated sounds. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">elapsedMicroseconds</td><td>Elapsed time between call </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L168">168</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a84e40a239add301d3615c153bf53350d" name="a84e40a239add301d3615c153bf53350d"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print the manager's status. </p>
+
+</div>
+</div>
+<a id="ad29431bab4b067c90354646cd305e19f" name="ad29431bab4b067c90354646cd305e19f"></a>
+<h2 class="memtitle">printPlaybackTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::printPlaybackTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print playback time of the playing sounds. </p>
+
+</div>
+</div>
+<a id="a7afaa00ee00a4d3509ae7db4d745020b" name="a7afaa00ee00a4d3509ae7db4d745020b"></a>
+<h2 class="memtitle">reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void SoundManager::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the manager's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L195">195</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="aec900e86c18aca853d1123222570e10f" name="aec900e86c18aca853d1123222570e10f"></a>
+<h2 class="memtitle">rewindAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::rewindAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rewind all playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L278">278</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a8d1a070e1ce8bd7cdba9b74e237d4faa" name="a8d1a070e1ce8bd7cdba9b74e237d4faa"></a>
+<h2 class="memtitle">setPCMTargetPlaybackRefreshRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::setPCMTargetPlaybackRefreshRate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a></td>          <td class="paramname"><span class="paramname"><em>pcmTargetPlaybackRefreshRate</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the target refresh rate for PCM playback. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">pcmTargetPlaybackRefreshRate</td><td>Target refresh rate for PCM playback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L217">217</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a69320cd5ebd61dce596defee12805f24" name="a69320cd5ebd61dce596defee12805f24"></a>
+<h2 class="memtitle">stopAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::stopAllSounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>release</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="/documentation/api/struct-sound-spec/">SoundSpec</a> **</td>          <td class="paramname"><span class="paramname"><em>excludedSounds</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stop all playing sounds. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">release</td><td>If true, sounds are not only stopped but released </td></tr>
+    <tr><td class="paramname">excludedSounds</td><td>Array of sound specs to not stop </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L292">292</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="aa032d9167434e497863be8bc91077075" name="aa032d9167434e497863be8bc91077075"></a>
+<h2 class="memtitle">unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::unlock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allow petitions to play or allocate sounds are processed. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L351">351</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a39a393169001b8f8d34946fbfa96a46c" name="a39a393169001b8f8d34946fbfa96a46c"></a>
+<h2 class="memtitle">unmuteAllSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::unmuteAllSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unmute all playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L264">264</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<a id="a424c1126bbb515b202d5ca7ba3b52dd6" name="a424c1126bbb515b202d5ca7ba3b52dd6"></a>
+<h2 class="memtitle">updateSounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">secure void SoundManager::updateSounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the sounds lists. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c#L144">144</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9561982a39f0eae9ce83aa2a5bb10fd4" name="a9561982a39f0eae9ce83aa2a5bb10fd4"></a>
+<h2 class="memtitle">lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void SoundManager::lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If raised, no petitions to play or allocate sounds are processed. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h#L50">50</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h">SoundManager.h</a>.</p>
+
+</div>
+</div>
+<a id="af0022ad9f0768427cfad0ea2dc059863" name="af0022ad9f0768427cfad0ea2dc059863"></a>
+<h2 class="memtitle">sounds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> SoundManager::sounds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of playing sounds. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h#L44">44</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h">SoundManager.h</a>.</p>
+
+</div>
+</div>
+<a id="a6952eecd53445bf9aedf259e66cd2acc" name="a6952eecd53445bf9aedf259e66cd2acc"></a>
+<h2 class="memtitle">targetPCMUpdates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> SoundManager::targetPCMUpdates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Target PCM cycles per game cycle. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h#L47">47</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h">SoundManager.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Sound/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.h">SoundManager.h</a></li>
+<li>VUEngine-Core/source/Sound/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Sound/SoundManager.c">SoundManager.c</a></li>
+</ul>
+</div>
+
+
+</div>

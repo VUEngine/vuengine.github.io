@@ -1,0 +1,1187 @@
+---
+layout: documentation
+parents: Documentation > API
+title: "ParticleSystem Class Reference"
+permalink: documentation/api/class-particle-system/
+---
+
+
+<div id="top">
+
+
+
+
+
+
+
+<div id="main-nav"></div>
+
+</div>
+<div id="doc-content">
+<div class="header">
+  
+  <div class="headertitle"><h1 class="title">ParticleSystem Class Reference</h1></div>
+</div>
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ParticleSystem:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../class_particle_system.png" usemap="#ParticleSystem_map" alt />
+  <map id="ParticleSystem_map" name="ParticleSystem_map">
+<area href="/documentation/api/class-actor/" alt="Actor" shape="rect" coords="0,0,95,24" />
+  </map>
+</div></div>
+<table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a6f24e9c63144637a1fd679deb099b163" id="r_a6f24e9c63144637a1fd679deb099b163"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-particle-system-spec/">ParticleSystemSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f24e9c63144637a1fd679deb099b163">ParticleSystemROMSpec</a></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:adaf422c80e740f582c49469d82557c91" id="r_adaf422c80e740f582c49469d82557c91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf422c80e740f582c49469d82557c91">constructor</a> (const <a class="el" href="/documentation/api/struct-particle-system-spec/">ParticleSystemSpec</a> *particleSystemSpec, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> <a class="el" href="/documentation/api/class-container/">internalId</a>, const char *const <a class="el" href="/documentation/api/class-container/">name</a>)</td></tr>
+
+<tr class="memitem:a8ab17bf49f357b75fc82a893e1139adf" id="r_a8ab17bf49f357b75fc82a893e1139adf"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ab17bf49f357b75fc82a893e1139adf">show</a> ()</td></tr>
+<tr class="memdesc:a8ab17bf49f357b75fc82a893e1139adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this instance visible.  <br /></td></tr>
+
+<tr class="memitem:aae09e08eeb0c1f348838edd1c275b3ff" id="r_aae09e08eeb0c1f348838edd1c275b3ff"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae09e08eeb0c1f348838edd1c275b3ff">hide</a> ()</td></tr>
+<tr class="memdesc:aae09e08eeb0c1f348838edd1c275b3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make this instance invisible.  <br /></td></tr>
+
+<tr class="memitem:a40e5ab5f279f0a0ec6b7b2812543d899" id="r_a40e5ab5f279f0a0ec6b7b2812543d899"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e5ab5f279f0a0ec6b7b2812543d899">update</a> ()</td></tr>
+<tr class="memdesc:a40e5ab5f279f0a0ec6b7b2812543d899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update this instance's logic.  <br /></td></tr>
+
+<tr class="memitem:ae109c688f754c02db81e6e43acf76054" id="r_ae109c688f754c02db81e6e43acf76054"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae109c688f754c02db81e6e43acf76054">suspend</a> ()</td></tr>
+<tr class="memdesc:ae109c688f754c02db81e6e43acf76054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare to suspend this instance's logic.  <br /></td></tr>
+
+<tr class="memitem:aa3d3de6ca44c1e4cf77980c4a1683c3d" id="r_aa3d3de6ca44c1e4cf77980c4a1683c3d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3d3de6ca44c1e4cf77980c4a1683c3d">resume</a> ()</td></tr>
+<tr class="memdesc:aa3d3de6ca44c1e4cf77980c4a1683c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare to resume this instance's logic.  <br /></td></tr>
+
+<tr class="memitem:aa24c46658c15e7c91eb630c47cd6d77b" id="r_aa24c46658c15e7c91eb630c47cd6d77b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa24c46658c15e7c91eb630c47cd6d77b">setTransparency</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> transparency)</td></tr>
+
+<tr class="memitem:aae86fb7028ee856876b1f12c7b0456b1" id="r_aae86fb7028ee856876b1f12c7b0456b1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae86fb7028ee856876b1f12c7b0456b1">setSpec</a> (void *particleSystemSpec)</td></tr>
+
+<tr class="memitem:ac014e94d42a575cec20f6071ea9d6f37" id="r_ac014e94d42a575cec20f6071ea9d6f37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac014e94d42a575cec20f6071ea9d6f37">start</a> ()</td></tr>
+<tr class="memdesc:ac014e94d42a575cec20f6071ea9d6f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start spawning particles.  <br /></td></tr>
+
+<tr class="memitem:a12323985fc36a67a7b2338a0e2d98014" id="r_a12323985fc36a67a7b2338a0e2d98014"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12323985fc36a67a7b2338a0e2d98014">pause</a> ()</td></tr>
+<tr class="memdesc:a12323985fc36a67a7b2338a0e2d98014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the spawning of particles.  <br /></td></tr>
+
+<tr class="memitem:aca050809aa66e9f29f2ef072c5ac0b10" id="r_aca050809aa66e9f29f2ef072c5ac0b10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca050809aa66e9f29f2ef072c5ac0b10">unpause</a> ()</td></tr>
+<tr class="memdesc:aca050809aa66e9f29f2ef072c5ac0b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the spawning of particles.  <br /></td></tr>
+
+<tr class="memitem:ab1cf7d5f5b79d2eede8c53efad5c1625" id="r_ab1cf7d5f5b79d2eede8c53efad5c1625"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1cf7d5f5b79d2eede8c53efad5c1625">isPaused</a> ()</td></tr>
+
+<tr class="memitem:a9382f17acbe50ac1e538c733447863f8" id="r_a9382f17acbe50ac1e538c733447863f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9382f17acbe50ac1e538c733447863f8">deleteAllParticles</a> ()</td></tr>
+<tr class="memdesc:a9382f17acbe50ac1e538c733447863f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete all spawned particles.  <br /></td></tr>
+
+<tr class="memitem:a2563b73e72374a092e4dccb103d5cb2e" id="r_a2563b73e72374a092e4dccb103d5cb2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2563b73e72374a092e4dccb103d5cb2e">setLoop</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> <a class="el" href="#a642660470e697ebf3101597fe2b79a70">loop</a>)</td></tr>
+
+<tr class="memitem:a0fe0d0051b9e9982e799f4040367d4c5" id="r_a0fe0d0051b9e9982e799f4040367d4c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe0d0051b9e9982e799f4040367d4c5">getLoop</a> ()</td></tr>
+
+<tr class="memitem:ae2ff6eb82954b2abdbfe346fd7ad8aa6" id="r_ae2ff6eb82954b2abdbfe346fd7ad8aa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ff6eb82954b2abdbfe346fd7ad8aa6">setSelfDestroyWhenDone</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> <a class="el" href="#a2533b9aff290583c65f5f1a0feba42b8">selfDestroyWhenDone</a>)</td></tr>
+
+<tr class="memitem:afeddf6fe1d9a30d09553bc5049b71b3f" id="r_afeddf6fe1d9a30d09553bc5049b71b3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeddf6fe1d9a30d09553bc5049b71b3f">setElapsedTime</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> <a class="el" href="#a39e83f9c55cc24bf3f3d377aba087764">elapsedTime</a>)</td></tr>
+
+<tr class="memitem:a6b753c1b4c3fb55652377c7ca7bccb1f" id="r_a6b753c1b4c3fb55652377c7ca7bccb1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b753c1b4c3fb55652377c7ca7bccb1f">print</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> x, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> y)</td></tr>
+
+<tr class="memitem:adf57c71260ba0ee20c1115a4137c195a" id="r_adf57c71260ba0ee20c1115a4137c195a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf57c71260ba0ee20c1115a4137c195a">particleSpawned</a> (<a class="el" href="/documentation/api/class-particle/">Particle</a> particle)</td></tr>
+
+<tr class="memitem:aaebaeec853282ca7ffc396e0c7ea9c0d" id="r_aaebaeec853282ca7ffc396e0c7ea9c0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaebaeec853282ca7ffc396e0c7ea9c0d">particleRecycled</a> (<a class="el" href="/documentation/api/class-particle/">Particle</a> particle)</td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aa83257b35df8695eceb4f60de4e3d0c5" id="r_aa83257b35df8695eceb4f60de4e3d0c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa83257b35df8695eceb4f60de4e3d0c5">particles</a></td></tr>
+<tr class="memdesc:aa83257b35df8695eceb4f60de4e3d0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked list of particles.  <br /></td></tr>
+
+<tr class="memitem:a985343e367f064b7eeabbd33abcb6baa" id="r_a985343e367f064b7eeabbd33abcb6baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a985343e367f064b7eeabbd33abcb6baa">spawnPositionDisplacement</a></td></tr>
+<tr class="memdesc:a985343e367f064b7eeabbd33abcb6baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Range for random displacement upon particle spawning.  <br /></td></tr>
+
+<tr class="memitem:acdf939a7dd059cd9546fc9381197e221" id="r_acdf939a7dd059cd9546fc9381197e221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdf939a7dd059cd9546fc9381197e221">spawnForceDelta</a></td></tr>
+
+<tr class="memitem:a39e83f9c55cc24bf3f3d377aba087764" id="r_a39e83f9c55cc24bf3f3d377aba087764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e83f9c55cc24bf3f3d377aba087764">elapsedTime</a></td></tr>
+<tr class="memdesc:a39e83f9c55cc24bf3f3d377aba087764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed time per tick.  <br /></td></tr>
+
+<tr class="memitem:af5add30a6a5cca27eeebb7d695c50060" id="r_af5add30a6a5cca27eeebb7d695c50060"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5add30a6a5cca27eeebb7d695c50060">nextSpawnTime</a></td></tr>
+<tr class="memdesc:af5add30a6a5cca27eeebb7d695c50060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time when the next particle has to be spawned.  <br /></td></tr>
+
+<tr class="memitem:a9c5134499c4ad24e1cbd748c28a1fbae" id="r_a9c5134499c4ad24e1cbd748c28a1fbae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c5134499c4ad24e1cbd748c28a1fbae">numberOfVisualComponentSpecs</a></td></tr>
+<tr class="memdesc:a9c5134499c4ad24e1cbd748c28a1fbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of available visual component specs for particles.  <br /></td></tr>
+
+<tr class="memitem:abdb6452f0892087bf099c5d9460660bd" id="r_abdb6452f0892087bf099c5d9460660bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdb6452f0892087bf099c5d9460660bd">numberOfWireframeSpecs</a></td></tr>
+<tr class="memdesc:abdb6452f0892087bf099c5d9460660bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of available wireframes specs for particles.  <br /></td></tr>
+
+<tr class="memitem:a72977bbccaefce07e9d80bda30f9da71" id="r_a72977bbccaefce07e9d80bda30f9da71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72977bbccaefce07e9d80bda30f9da71">aliveParticlesCount</a></td></tr>
+<tr class="memdesc:a72977bbccaefce07e9d80bda30f9da71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of alive particles.  <br /></td></tr>
+
+<tr class="memitem:ae068188f7f19cb1fff9b181951861466" id="r_ae068188f7f19cb1fff9b181951861466"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae068188f7f19cb1fff9b181951861466">totalSpawnedParticles</a></td></tr>
+<tr class="memdesc:ae068188f7f19cb1fff9b181951861466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter of total spawned particles.  <br /></td></tr>
+
+<tr class="memitem:a88a23286a8c96018460c0e67b388a73b" id="r_a88a23286a8c96018460c0e67b388a73b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88a23286a8c96018460c0e67b388a73b">maximumNumberOfAliveParticles</a></td></tr>
+<tr class="memdesc:a88a23286a8c96018460c0e67b388a73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of alive particles at any given moment.  <br /></td></tr>
+
+<tr class="memitem:a6518db454b1740c0af6c79583a460bf2" id="r_a6518db454b1740c0af6c79583a460bf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6518db454b1740c0af6c79583a460bf2">paused</a></td></tr>
+<tr class="memdesc:a6518db454b1740c0af6c79583a460bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to pause the generation of particles.  <br /></td></tr>
+
+<tr class="memitem:a642660470e697ebf3101597fe2b79a70" id="r_a642660470e697ebf3101597fe2b79a70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642660470e697ebf3101597fe2b79a70">loop</a></td></tr>
+
+<tr class="memitem:a2533b9aff290583c65f5f1a0feba42b8" id="r_a2533b9aff290583c65f5f1a0feba42b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2533b9aff290583c65f5f1a0feba42b8">selfDestroyWhenDone</a></td></tr>
+
+<tr class="memitem:a8bb81285954fd9b3df9469cb4fe8572e" id="r_a8bb81285954fd9b3df9469cb4fe8572e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bb81285954fd9b3df9469cb4fe8572e">applyForceToParticles</a></td></tr>
+<tr class="memdesc:a8bb81285954fd9b3df9469cb4fe8572e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to prevent computing force when not necessary.  <br /></td></tr>
+
+</table><table class="memberdecls table">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_actor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_actor')"><img src="../closed.png" alt="-" />&#160;Private Types inherited from <a class="el" href="/documentation/api/class-actor/">Actor</a></td></tr>
+<tr class="memitem:a991ab3b0695c3fe5fb5c51466b18538f inherit pub_types_class_actor" id="r_a991ab3b0695c3fe5fb5c51466b18538f"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">ActorROMSpec</a></td></tr>
+
+<tr class="memitem:a13e2754b29b12deaa2ee7f217f55abfc inherit pub_types_class_actor" id="r_a13e2754b29b12deaa2ee7f217f55abfc"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">PositionedActorROMSpec</a></td></tr>
+
+<tr class="inherit_header pub_methods_class_actor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_actor')"><img src="../closed.png" alt="-" />&#160;Private Member Functions inherited from <a class="el" href="/documentation/api/class-actor/">Actor</a></td></tr>
+<tr class="memitem:a74d16d268a21327f5b5f3afd6387bfe6 inherit pub_methods_class_actor" id="r_a74d16d268a21327f5b5f3afd6387bfe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">constructor</a> (const <a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a> *<a class="el" href="/documentation/api/class-actor/">actorSpec</a>, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> <a class="el" href="/documentation/api/class-container/">internalId</a>, const char *const <a class="el" href="/documentation/api/class-container/">name</a>)</td></tr>
+
+<tr class="memitem:ab82d4d8ccc31c6f638efd4dc533f66eb inherit pub_methods_class_actor" id="r_ab82d4d8ccc31c6f638efd4dc533f66eb"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">onEvent</a> (<a class="el" href="/documentation/api/class-listener-object/">ListenerObject</a> eventFirer, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint16</a> eventCode)</td></tr>
+
+<tr class="memitem:a059c09350ac9f4b7b09b5709a5ce1bb7 inherit pub_methods_class_actor" id="r_a059c09350ac9f4b7b09b5709a5ce1bb7"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">createComponents</a> (<a class="el" href="/documentation/api/struct-component-spec/">ComponentSpec</a> **componentSpecs)</td></tr>
+
+<tr class="memitem:a40a74338fb5a54d6ad2ee834d98d0643 inherit pub_methods_class_actor" id="r_a40a74338fb5a54d6ad2ee834d98d0643"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">destroyComponents</a> ()</td></tr>
+<tr class="memdesc:a40a74338fb5a54d6ad2ee834d98d0643 inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the components that attach to this actor.  <br /></td></tr>
+
+<tr class="memitem:a1dedd41032b7c330c4e8c81174df0e0c inherit pub_methods_class_actor" id="r_a1dedd41032b7c330c4e8c81174df0e0c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">calculateSize</a> ()</td></tr>
+<tr class="memdesc:a1dedd41032b7c330c4e8c81174df0e0c inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the actor's size.  <br /></td></tr>
+
+<tr class="memitem:a5c90deaa1a1c0b1f8969e15be161eb41 inherit pub_methods_class_actor" id="r_a5c90deaa1a1c0b1f8969e15be161eb41"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getRadius</a> ()</td></tr>
+
+<tr class="memitem:ac402b1fc6c21db50dd17265ad3c2c8b0 inherit pub_methods_class_actor" id="r_ac402b1fc6c21db50dd17265ad3c2c8b0"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getInGameType</a> ()</td></tr>
+
+<tr class="memitem:aef22d89a48edddba5b1b40fb6ccebd2c inherit pub_methods_class_actor" id="r_aef22d89a48edddba5b1b40fb6ccebd2c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">ready</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> recursive)</td></tr>
+
+<tr class="memitem:a9857f71667e454e7d95ad2161c02dbd6 inherit pub_methods_class_actor" id="r_a9857f71667e454e7d95ad2161c02dbd6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">handleCommand</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> command, va_list args)</td></tr>
+
+<tr class="memitem:a6badaa001d3edf3282ea6a40d65115aa inherit pub_methods_class_actor" id="r_a6badaa001d3edf3282ea6a40d65115aa"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">handlePropagatedString</a> (const char *string)</td></tr>
+
+<tr class="memitem:ae6ca498ad9335d6a922f5282d97e6177 inherit pub_methods_class_actor" id="r_ae6ca498ad9335d6a922f5282d97e6177"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getSpec</a> ()</td></tr>
+
+<tr class="memitem:a85cefb202b759fef2b6424d7d73f0de2 inherit pub_methods_class_actor" id="r_a85cefb202b759fef2b6424d7d73f0de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-actor-factory/">ActorFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getActorFactory</a> ()</td></tr>
+
+<tr class="memitem:a8c32205fc86997433fd15045b70ddfcb inherit pub_methods_class_actor" id="r_a8c32205fc86997433fd15045b70ddfcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-actor/">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">spawnChildActor</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *const positionedActor)</td></tr>
+
+<tr class="memitem:ae816ee195de08809105ec735ee5e46b4 inherit pub_methods_class_actor" id="r_ae816ee195de08809105ec735ee5e46b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">addChildActors</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *childrenSpecs)</td></tr>
+
+<tr class="memitem:a93519ce0ef6f3a2fe7d2072080835153 inherit pub_methods_class_actor" id="r_a93519ce0ef6f3a2fe7d2072080835153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">addChildActorsDeferred</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *childrenSpecs)</td></tr>
+
+<tr class="memitem:ac688bbe8a239e2296f0ababb58e1fd9d inherit pub_methods_class_actor" id="r_ac688bbe8a239e2296f0ababb58e1fd9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getWidth</a> ()</td></tr>
+
+<tr class="memitem:aa28a05b43d9328d9ff788afa3ec96ea2 inherit pub_methods_class_actor" id="r_aa28a05b43d9328d9ff788afa3ec96ea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getHeight</a> ()</td></tr>
+
+<tr class="memitem:af487c95888d71de34bd05e9703ea00d2 inherit pub_methods_class_actor" id="r_af487c95888d71de34bd05e9703ea00d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">fixed_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getDepth</a> ()</td></tr>
+
+<tr class="memitem:a86680c1eadb89618eada6fe94866b30d inherit pub_methods_class_actor" id="r_a86680c1eadb89618eada6fe94866b30d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">isInCameraRange</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> padding, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> recursive)</td></tr>
+
+<tr class="memitem:a88a01a309aa57f462efa67c26f665e3f inherit pub_methods_class_actor" id="r_a88a01a309aa57f462efa67c26f665e3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">playAnimation</a> (const char *animationName)</td></tr>
+
+<tr class="memitem:ab4f1e1dd7e852084544f48ab92f0de9c inherit pub_methods_class_actor" id="r_ab4f1e1dd7e852084544f48ab92f0de9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">pauseAnimation</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> pause)</td></tr>
+
+<tr class="memitem:a0d4df3a5620d517342d895f65a8a79e8 inherit pub_methods_class_actor" id="r_a0d4df3a5620d517342d895f65a8a79e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">stopAnimation</a> ()</td></tr>
+<tr class="memdesc:a0d4df3a5620d517342d895f65a8a79e8 inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop any playing animation if any.  <br /></td></tr>
+
+<tr class="memitem:aa5636e6a3de9c06cf3910c52119a6777 inherit pub_methods_class_actor" id="r_aa5636e6a3de9c06cf3910c52119a6777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">isPlaying</a> ()</td></tr>
+
+<tr class="memitem:af2de7c28d86fdb7eac0339f228b045f7 inherit pub_methods_class_actor" id="r_af2de7c28d86fdb7eac0339f228b045f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">isPlayingAnimation</a> (char *animationName)</td></tr>
+
+<tr class="memitem:ab45949675bd5e9c7a86952516e9b1ddf inherit pub_methods_class_actor" id="r_ab45949675bd5e9c7a86952516e9b1ddf"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getPlayingAnimationName</a> ()</td></tr>
+
+<tr class="memitem:a3ef0ebc8e4fbbf5a299a8882a994f069 inherit pub_methods_class_actor" id="r_a3ef0ebc8e4fbbf5a299a8882a994f069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">setActualFrame</a> (<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> frame)</td></tr>
+
+<tr class="memitem:a91d706c1bf6bd1303fc7174f7fefb0b1 inherit pub_methods_class_actor" id="r_a91d706c1bf6bd1303fc7174f7fefb0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">nextFrame</a> ()</td></tr>
+<tr class="memdesc:a91d706c1bf6bd1303fc7174f7fefb0b1 inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skip the currently playing animation to the next frame.  <br /></td></tr>
+
+<tr class="memitem:a356bb4b22a22fa83f9748e798fd93edb inherit pub_methods_class_actor" id="r_a356bb4b22a22fa83f9748e798fd93edb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">previousFrame</a> ()</td></tr>
+<tr class="memdesc:a356bb4b22a22fa83f9748e798fd93edb inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewind the currently playing animation to the previous frame.  <br /></td></tr>
+
+<tr class="memitem:ab6b40afce41a051191321f21f205a085 inherit pub_methods_class_actor" id="r_ab6b40afce41a051191321f21f205a085"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getActualFrame</a> ()</td></tr>
+
+<tr class="memitem:a34a597e3861152c2e54566e387c619b0 inherit pub_methods_class_actor" id="r_a34a597e3861152c2e54566e387c619b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getNumberOfFrames</a> ()</td></tr>
+
+<tr class="memitem:ac3ab0c47f4ac6bfe480cadc48707e7c4 inherit pub_methods_class_actor" id="r_ac3ab0c47f4ac6bfe480cadc48707e7c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">setExtraInfo</a> (void *extraInfo)</td></tr>
+
+<tr class="memitem:af48df0109273b6de7e5fabddb13fad0c inherit pub_methods_class_actor" id="r_af48df0109273b6de7e5fabddb13fad0c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">alwaysStreamIn</a> ()</td></tr>
+
+<tr class="inherit_header pub_static_methods_class_actor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_actor')"><img src="../closed.png" alt="-" />&#160;Static Private Member Functions inherited from <a class="el" href="/documentation/api/class-actor/">Actor</a></td></tr>
+<tr class="memitem:ab96855bd8e7033e2881e632718a8263d inherit pub_static_methods_class_actor" id="r_ab96855bd8e7033e2881e632718a8263d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-actor/">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">createActor</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *const positionedActor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> <a class="el" href="/documentation/api/class-container/">internalId</a>)</td></tr>
+
+<tr class="memitem:a2357ab6e51b8a79bc28931e4c5a53a17 inherit pub_static_methods_class_actor" id="r_a2357ab6e51b8a79bc28931e4c5a53a17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/class-actor/">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">createActorDeferred</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *const positionedActor, <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a> <a class="el" href="/documentation/api/class-container/">internalId</a>)</td></tr>
+
+<tr class="memitem:a102101974b1a51e49fd195e28891a7a1 inherit pub_static_methods_class_actor" id="r_a102101974b1a51e49fd195e28891a7a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="/documentation/api/struct-right-box/">RightBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">getRightBoxFromSpec</a> (const <a class="el" href="/documentation/api/struct-positioned-actor/">PositionedActor</a> *positionedActor, const <a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *environmentPosition)</td></tr>
+
+<tr class="memitem:a6879a70a5c498e6931754fb6bd4a6b62 inherit pub_static_methods_class_actor" id="r_a6879a70a5c498e6931754fb6bd4a6b62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">isInsideFrustrum</a> (<a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> vector3D, <a class="el" href="/documentation/api/struct-right-box/">RightBox</a> rightBox)</td></tr>
+
+<tr class="inherit_header pub_attribs_class_actor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_actor')"><img src="../closed.png" alt="-" />&#160;Private Attributes inherited from <a class="el" href="/documentation/api/class-actor/">Actor</a></td></tr>
+<tr class="memitem:a54cc1e7532f704b0fd8c736b56105dda inherit pub_attribs_class_actor" id="r_a54cc1e7532f704b0fd8c736b56105dda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-size/">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">size</a></td></tr>
+
+<tr class="memitem:ad6e28c724d2cb45e131ea1e8a610af95 inherit pub_attribs_class_actor" id="r_ad6e28c724d2cb45e131ea1e8a610af95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-actor-factory/">ActorFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">actorFactory</a></td></tr>
+<tr class="memdesc:ad6e28c724d2cb45e131ea1e8a610af95 inherit pub_attribs_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create this actor's children.  <br /></td></tr>
+
+<tr class="memitem:a128ed3f508456f1dffd663e43c14480e inherit pub_attribs_class_actor" id="r_a128ed3f508456f1dffd663e43c14480e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="/documentation/api/struct-actor-spec/">ActorSpec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">actorSpec</a></td></tr>
+<tr class="memdesc:a128ed3f508456f1dffd663e43c14480e inherit pub_attribs_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the spec that defines how to initialize the actor.  <br /></td></tr>
+
+<tr class="memitem:a87cfd646604ee065a9ea6949e4ce6946 inherit pub_attribs_class_actor" id="r_a87cfd646604ee065a9ea6949e4ce6946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">centerDisplacement</a></td></tr>
+
+<tr class="memitem:a52f8739c974be16ab6c77dfa5773e689 inherit pub_attribs_class_actor" id="r_a52f8739c974be16ab6c77dfa5773e689"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="/documentation/api/class-actor/">playingAnimationName</a></td></tr>
+
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a></p>
+<p>Inherits from <a class="el" href="/documentation/api/class-actor/">Actor</a></p>
+<p>Implements an actor that generates particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L90">90</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a6f24e9c63144637a1fd679deb099b163" name="a6f24e9c63144637a1fd679deb099b163"></a>
+<h2 class="memtitle">ParticleSystemROMSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="/documentation/api/struct-particle-system-spec/">ParticleSystemSpec</a> <a class="el" href="#a6f24e9c63144637a1fd679deb099b163">ParticleSystemROMSpec</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="/documentation/api/class-particle-system/">ParticleSystem</a> spec that is stored in ROM </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L79">79</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adaf422c80e740f582c49469d82557c91" name="adaf422c80e740f582c49469d82557c91"></a>
+<h2 class="memtitle">constructor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::constructor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="/documentation/api/struct-particle-system-spec/">ParticleSystemSpec</a> *</td>          <td class="paramname"><span class="paramname"><em>particleSystemSpec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>internalId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *const</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class' constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">particleSystemSpec</td><td>Specification that determines how to configure the particle system </td></tr>
+    <tr><td class="paramname">internalId</td><td>ID to internally identify this instance </td></tr>
+    <tr><td class="paramname">name</td><td>Instance's name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L36">36</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a9382f17acbe50ac1e538c733447863f8" name="a9382f17acbe50ac1e538c733447863f8"></a>
+<h2 class="memtitle">deleteAllParticles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::deleteAllParticles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete all spawned particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L346">346</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a0fe0d0051b9e9982e799f4040367d4c5" name="a0fe0d0051b9e9982e799f4040367d4c5"></a>
+<h2 class="memtitle">getLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ParticleSystem::getLoop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check the looping behavior of the particle system. </p><dl class="section return"><dt>Returns</dt><dd>False if the spawning or particles stops once the total number of spawned particles equals the maximum number of alive particles </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L365">365</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="aae09e08eeb0c1f348838edd1c275b3ff" name="aae09e08eeb0c1f348838edd1c275b3ff"></a>
+<h2 class="memtitle">hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::hide </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make this instance invisible. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-container/">Container</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L103">103</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="ab1cf7d5f5b79d2eede8c53efad5c1625" name="ab1cf7d5f5b79d2eede8c53efad5c1625"></a>
+<h2 class="memtitle">isPaused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ParticleSystem::isPaused </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the spawning of particles is paused. </p><dl class="section return"><dt>Returns</dt><dd>True if the spawning of particles is paused; false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L339">339</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="aaebaeec853282ca7ffc396e0c7ea9c0d" name="aaebaeec853282ca7ffc396e0c7ea9c0d"></a>
+<h2 class="memtitle">particleRecycled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::particleRecycled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-particle/">Particle</a></td>          <td class="paramname"><span class="paramname"><em>particle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Informs itself when a particle is recycled. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">particle</td><td>The recycled particle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L405">405</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="adf57c71260ba0ee20c1115a4137c195a" name="adf57c71260ba0ee20c1115a4137c195a"></a>
+<h2 class="memtitle">particleSpawned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::particleSpawned </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="/documentation/api/class-particle/">Particle</a></td>          <td class="paramname"><span class="paramname"><em>particle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Informs itself when a particle is spawned. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">particle</td><td>The newly spawned particle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L400">400</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a12323985fc36a67a7b2338a0e2d98014" name="a12323985fc36a67a7b2338a0e2d98014"></a>
+<h2 class="memtitle">pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::pause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pause the spawning of particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L319">319</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a6b753c1b4c3fb55652377c7ca7bccb1f" name="a6b753c1b4c3fb55652377c7ca7bccb1f"></a>
+<h2 class="memtitle">print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int16</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the particle system's status. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">x</td><td>Screen x coordinate where to print </td></tr>
+    <tr><td class="paramname">y</td><td>Screen y coordinate where to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L386">386</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="aa3d3de6ca44c1e4cf77980c4a1683c3d" name="aa3d3de6ca44c1e4cf77980c4a1683c3d"></a>
+<h2 class="memtitle">resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::resume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare to resume this instance's logic. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-actor/">Actor</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L257">257</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="afeddf6fe1d9a30d09553bc5049b71b3f" name="afeddf6fe1d9a30d09553bc5049b71b3f"></a>
+<h2 class="memtitle">setElapsedTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::setElapsedTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elapsedTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the elapsed time between calls to the update method. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">elapsedTime</td><td>Elapsed time between calls to the update method </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L379">379</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a2563b73e72374a092e4dccb103d5cb2e" name="a2563b73e72374a092e4dccb103d5cb2e"></a>
+<h2 class="memtitle">setLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::setLoop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>loop</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the looping behavior of the particle system. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">loop</td><td>If false, the spawning or particles stops once the total number of spawned particles equals the maximum number of alive particles </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L358">358</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="ae2ff6eb82954b2abdbfe346fd7ad8aa6" name="ae2ff6eb82954b2abdbfe346fd7ad8aa6"></a>
+<h2 class="memtitle">setSelfDestroyWhenDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::setSelfDestroyWhenDone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a></td>          <td class="paramname"><span class="paramname"><em>selfDestroyWhenDone</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the particle system to auto destroy or not when the total number of spawned particles equals the maximum number of alive particles. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">selfDestroyWhenDone</td><td>If true, the particle system auto destroys when the total number of spawned particles equals the maximum number of alive particles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L372">372</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="aae86fb7028ee856876b1f12c7b0456b1" name="aae86fb7028ee856876b1f12c7b0456b1"></a>
+<h2 class="memtitle">setSpec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::setSpec </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>particleSystemSpec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the particle systems's spec. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">particleSystemSpec</td><td>Specification that determines how to configure the particle system </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-actor/">Actor</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L296">296</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="aa24c46658c15e7c91eb630c47cd6d77b" name="aa24c46658c15e7c91eb630c47cd6d77b"></a>
+<h2 class="memtitle">setTransparency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::setTransparency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a></td>          <td class="paramname"><span class="paramname"><em>transparency</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set this instance's transparency effects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params table">
+    <tr><td class="paramname">transparency</td><td>Transparecy effect (__TRANSPARENCY_NONE, __TRANSPARENCY_EVEN or __TRANSPARENCY_ODD) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-container/">Container</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L279">279</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a8ab17bf49f357b75fc82a893e1139adf" name="a8ab17bf49f357b75fc82a893e1139adf"></a>
+<h2 class="memtitle">show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::show </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make this instance visible. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-container/">Container</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L74">74</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="ac014e94d42a575cec20f6071ea9d6f37" name="ac014e94d42a575cec20f6071ea9d6f37"></a>
+<h2 class="memtitle">start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start spawning particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L309">309</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="ae109c688f754c02db81e6e43acf76054" name="ae109c688f754c02db81e6e43acf76054"></a>
+<h2 class="memtitle">suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::suspend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare to suspend this instance's logic. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-actor/">Actor</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L238">238</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="aca050809aa66e9f29f2ef072c5ac0b10" name="aca050809aa66e9f29f2ef072c5ac0b10"></a>
+<h2 class="memtitle">unpause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::unpause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resume the spawning of particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L326">326</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<a id="a40e5ab5f279f0a0ec6b7b2812543d899" name="a40e5ab5f279f0a0ec6b7b2812543d899"></a>
+<h2 class="memtitle">update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname">void ParticleSystem::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update this instance's logic. </p>
+
+<p>Reimplemented from <a class="el" href="/documentation/api/class-container/">Container</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c#L125">125</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a72977bbccaefce07e9d80bda30f9da71" name="a72977bbccaefce07e9d80bda30f9da71"></a>
+<h2 class="memtitle">aliveParticlesCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> ParticleSystem::aliveParticlesCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of alive particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L117">117</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a8bb81285954fd9b3df9469cb4fe8572e" name="a8bb81285954fd9b3df9469cb4fe8572e"></a>
+<h2 class="memtitle">applyForceToParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ParticleSystem::applyForceToParticles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to prevent computing force when not necessary. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L137">137</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a39e83f9c55cc24bf3f3d377aba087764" name="a39e83f9c55cc24bf3f3d377aba087764"></a>
+<h2 class="memtitle">elapsedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint32</a> ParticleSystem::elapsedTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Elapsed time per tick. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L105">105</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a642660470e697ebf3101597fe2b79a70" name="a642660470e697ebf3101597fe2b79a70"></a>
+<h2 class="memtitle">loop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ParticleSystem::loop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If false, the spawning or particles stops once the total number of spawned particles equals the maximum number of alive particles </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L130">130</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a88a23286a8c96018460c0e67b388a73b" name="a88a23286a8c96018460c0e67b388a73b"></a>
+<h2 class="memtitle">maximumNumberOfAliveParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">uint8</a> ParticleSystem::maximumNumberOfAliveParticles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum number of alive particles at any given moment. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L123">123</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="af5add30a6a5cca27eeebb7d695c50060" name="af5add30a6a5cca27eeebb7d695c50060"></a>
+<h2 class="memtitle">nextSpawnTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int32</a> ParticleSystem::nextSpawnTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Time when the next particle has to be spawned. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L108">108</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a9c5134499c4ad24e1cbd748c28a1fbae" name="a9c5134499c4ad24e1cbd748c28a1fbae"></a>
+<h2 class="memtitle">numberOfVisualComponentSpecs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> ParticleSystem::numberOfVisualComponentSpecs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of available visual component specs for particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L111">111</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="abdb6452f0892087bf099c5d9460660bd" name="abdb6452f0892087bf099c5d9460660bd"></a>
+<h2 class="memtitle">numberOfWireframeSpecs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> ParticleSystem::numberOfWireframeSpecs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of available wireframes specs for particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L114">114</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="aa83257b35df8695eceb4f60de4e3d0c5" name="aa83257b35df8695eceb4f60de4e3d0c5"></a>
+<h2 class="memtitle">particles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-virtual-list/">VirtualList</a> ParticleSystem::particles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linked list of particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L95">95</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a6518db454b1740c0af6c79583a460bf2" name="a6518db454b1740c0af6c79583a460bf2"></a>
+<h2 class="memtitle">paused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ParticleSystem::paused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag to pause the generation of particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L126">126</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a2533b9aff290583c65f5f1a0feba42b8" name="a2533b9aff290583c65f5f1a0feba42b8"></a>
+<h2 class="memtitle">selfDestroyWhenDone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">bool</a> ParticleSystem::selfDestroyWhenDone</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If true, the particle system auto destroys when the total number of spawned particles equals the maximum number of alive particles </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L134">134</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="acdf939a7dd059cd9546fc9381197e221" name="acdf939a7dd059cd9546fc9381197e221"></a>
+<h2 class="memtitle">spawnForceDelta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> ParticleSystem::spawnForceDelta</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Range for random force delta to be adde to the force applied to newly spawned particles </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L102">102</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a985343e367f064b7eeabbd33abcb6baa" name="a985343e367f064b7eeabbd33abcb6baa"></a>
+<h2 class="memtitle">spawnPositionDisplacement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="/documentation/api/class-vector3-d/">Vector3D</a> ParticleSystem::spawnPositionDisplacement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Range for random displacement upon particle spawning. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L98">98</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="ae068188f7f19cb1fff9b181951861466" name="ae068188f7f19cb1fff9b181951861466"></a>
+<h2 class="memtitle">totalSpawnedParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels table">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname table">
+        <tr>
+          <td class="memname"><a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Misc/Types.h">int8</a> ParticleSystem::totalSpawnedParticles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Counter of total spawned particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h#L120">120</a> of file <a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a>.</p>
+
+</div>
+</div>
+<br />The documentation for this class was generated from the following files:<ul>
+<li>VUEngine-Core/source/Entity/Container/Actor/ParticleSystem/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.h">ParticleSystem.h</a></li>
+<li>VUEngine-Core/source/Entity/Container/Actor/ParticleSystem/<a class="el" href="https://github.com/VUEngine/VUEngine-Core/tree/57a7d43b2097971ee6adad2cd41e8f7ed861b190/source/Entity/Container/Actor/ParticleSystem/ParticleSystem.c">ParticleSystem.c</a></li>
+</ul>
+</div>
+
+
+</div>

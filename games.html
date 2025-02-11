@@ -3,17 +3,22 @@ layout: default
 title: Games
 ---
 
-<section class="bg-light">
+<section class="text-bg-dark">
 	<div class="container px-4 py-2">
-		<h1 class="mt-4 fs-2">Made with VUEngine Studio</h1>
-		<p class="fs-5 mb-4">
-			A selection of projects that have been brought to life with VUEngine Studio.
-		</p>
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+		</ol>
 	</div>
 </section>
 
-<div class="py-4">
-	<div class="container">
+<section>
+	<div class="container p-4">
+		<h1>Made with VUEngine Studio</h1>
+		<p class="fs-5 mb-4">
+			A selection of projects that have been brought to life with VUEngine Studio.
+		</p>
+
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-1">
 			{% for game in site.data.games %}
 			{% include game.html %}
@@ -21,9 +26,9 @@ title: Games
 		</div>
 
 		<p class="mt-4">
-			<a href="https://www.virtual-boy.com/games/tags/vuengine/" role="button" class="btn btn-secondary">
+			<a href="https://www.virtual-boy.com/games/tags/vuengine/" role="button" class="btn btn-primary">
 				More games…
 			</a>
 		</p>
 	</div>
-</div>
+</section>

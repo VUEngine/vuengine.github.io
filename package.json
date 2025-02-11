@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "node-html-better-parser": "^1.4.7"
+  },
+  "scripts": {
+    "updateDoxygen": "echo 'Pulling VUEngine Core...' && git submodule foreach git pull && cd resources && echo 'Cleaning...' && rm -r -f ../documentation/api && echo 'Generating docs...' && doxygen Doxyfile >/dev/null 2>&1 && echo 'Converting docs...' && node convertDoxygen.js && echo 'all done.'"
+  }
+}
