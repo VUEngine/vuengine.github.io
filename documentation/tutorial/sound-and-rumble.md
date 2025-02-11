@@ -138,6 +138,6 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 
 ## Et voilà!
 
-And... we are done. Congratulations! If you followed through, you have just created your first Virtual Boy with VUEngine Studio. 🥳
+And... we are done. Congratulations! If you followed through, you have just created your first Virtual Boy game with VUEngine Studio. 🥳
 
 As your next steps, you might want to have a look at the [User Guide](/documentation/user-guide/introduction/) and perhaps dig into the code of the [VUEngine Showcase](https://github.com/VUEngine/VUEngine-Showcase) project to learn more about the engine's concepts and capabilities. Various sample states will expose you to key aspects of the engine step by step through cleanly written and properly commented code.
