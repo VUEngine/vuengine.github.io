@@ -23,7 +23,7 @@ Launch [VUEngine Studio](https://www.vuengine.dev/) and you will be greeted with
 
 Click the **New Project** button to bring up the **Create New Project** dialog. Alternatively, you can bring it up through the main menu with `Help > Welcome` or through the command palette <span class="keys" data-osx="⇧⌘P">Ctrl+P</span>, choosing the `Welcome` command.
 
-In the **Create New Project** dialog, give the project a name, we will call it just "Pong", enter your name as the author, and select the Barebone template to start off with a minimal boilerplate project.
+In the **Create New Project** dialog, give the project a name, we will call it just "Pong". Enter your name as the author, and select the Barebone template to start off with a minimal boilerplate project.
 
 <figure>
     <a href="/documentation/images/tutorial/create-new-project-dialog.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Create New Project dialog">
@@ -47,9 +47,9 @@ Finally, click the **Create** button and [VUEngine Studio](https://www.vuengine.
 
 ## First Build & Run
 
-Let's build and run our new project for the first time, before we head on to make any modifications, to be sure things are working fine so far. In the toolbar, on the top right of the IDE, click the **Build** button. Then click the **Run** button right next to it to schedule the game to be started in the built-in emulator once the build is done.
+Let's [build](/documentation/basics/building/) and [run](/documentation/basics/emulator/) our new project for the first time, before we head on to make any modifications, to be sure things are working fine so far. In the toolbar, on the top right of the IDE, click the **Build** button. Then click the **Run** button right next to it to schedule the game to be started in the built-in emulator once the build is done.
 
-If everything goes well, you will be greated with the screen on the right.
+If everything goes well, you will eventually be greeted by the screen on the right.
 
 <figure style="width: 48%">
     <a href="/documentation/images/tutorial/building.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Build view">

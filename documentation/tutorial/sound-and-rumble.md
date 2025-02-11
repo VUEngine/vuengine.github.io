@@ -6,9 +6,11 @@ title: Sound and Rumble
 
 # Sound and Rumble
 
+Our game is almost done. We just want to round things off by adding some sound and rumble effects to make things more pleasing to the ears and hands.
+
 ## Sound Effects
 
-Let's add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/main/assets/Sound/FX) and place them in _assets/Sound/FX_. And download the header here from [here](https://github.com/VUEngine/Pong/blob/main/headers/Sounds.h) and place it in the _headers/_ folder.
+Let's add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/main/assets/Sound/FX) and place them in _assets/Sound/FX_. Also download the header from [here](https://github.com/VUEngine/Pong/blob/main/headers/Sounds.h) and place it in the _headers/_ folder.
 
 To play the sound effect when a point is scored, add the following to the `PongManager::onEvent` method:
 
@@ -73,7 +75,7 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 
 ## Rumble Effects
 
-Rumble effects are supported thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak. To add the these effects, create the _assets/RumbleEffect/Bounce_ and _assets/RumbleEffect/Point_ folders. And create a rumble effect file in each:
+Rumble effects are supported thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak. To add these effects, create the _assets/RumbleEffect/Bounce_ and _assets/RumbleEffect/Point_ folders. And create a rumble effect file in each:
 
 <a href="/documentation/images/tutorial/new-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Rumble Effect"><img src="/documentation/images/tutorial/new-rumble-effect.png" /></a>
 

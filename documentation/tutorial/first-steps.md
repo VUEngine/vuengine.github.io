@@ -29,11 +29,11 @@ Each [VUEngine](https://github.com/VUEngine/VUEngine-Core) based project's files
 - _config.make_: This auto-generated file holds various parameters that are required by the build chain to create the game's ROM.
 - _pong.workspace_: This is the project file that [VUEngine Studio](https://www.vuengine.dev/) uses.
 
-Of these, you will be mostly working in the **assets** and **sources** folders.
+Of these, we will be mostly working in the **assets** and **sources** folders.
 
 ## VUEngine Plugins
 
-When starting your game in the emulator earlier, you'll have seen things like a precaution screen, an IPD/focus adjustment screen, etc. You might have looked through the project files, not finding any related files and wondered where those screens coming from. The answer is simple - at this point, most of the game's content is contributed through [plugins](/documentation/basics/vuengine-plugins/).
+When starting your game in the emulator earlier, you'll have seen things like a precaution screen, an IPD/focus adjustment screen, etc. You might have looked through the project files, not finding any related files and wondered where those screens coming from. The answer is simple - at this point, the extent of the game's sources is slim and most of the game's content is contributed through [plugins](/documentation/basics/vuengine-plugins/).
 
 The Barebone template project includes various standard splash screens that mimick officially developed games, like adjustment and precautions screens. Those are provided as plugins that can be installed or removed through the IDE.
 
@@ -50,7 +50,7 @@ Once the plugins are installed, their usage depend on what functionality each pr
 
 ## The game's entry point
 
-In the **source** folder, there is a file called _Game.c_ and inside it, you will find a function called `game` that returns an instance of `GameState`.
+In the **source** folder, there is a file called _Game.c_ and inside it, you will find a function called `game` that returns an instance of `GameState`. This is where everything starts - the game's entry point.
 
 ```cpp
 GameState game(void)
@@ -96,9 +96,9 @@ GameState game(void)
 }
 ```
 
-The engine internally calls the global `game` function for it to return the first [GameState](/documentation/api/class-game-state/) that the engine's [StateMachine](/documentation/api/class-state-machine/) must enter into. In this case, it is the `PrecautionScreenState` that is returned at the end of the function.
+Internally, the engine calls the global `game` function for it to return the first [GameState](/documentation/api/class-game-state/) that the engine's [StateMachine](/documentation/api/class-state-machine/) must enter into. In this case, it is the `PrecautionScreenState` that is returned at the end of the function.
 
-Various other initialization steps can be performed in the `game` function before returning the control back to the engine. The template project already does some common tasks, like enabling the `AutomaticPauseManager`, that takes care of pausing the game after a fixed amount of time has passed to remember the player to rest regularly, etc.
+Various other initialization steps can be performed in the `game` function before returning the control back to the engine. The template project already does some common tasks, like enabling the `AutomaticPauseManager`, that takes care of pausing the game after a fixed amount of time has passed to remind the player to rest regularly, etc.
 
 But the more interesting part is the chaining of states that is set up and that ends with `MyGameState`. The `PrecautionScreenState` inherits from `SplashScreenState`, which can be configured to change the engine's state to an arbitrary [GameState](/documentation/api/class-game-state/). In the template project, it is set up to instruct the engine to enter the `AdjustmentScreenState` when it exits. The sequence will make the engine to enter the following states:
 
@@ -110,7 +110,9 @@ But the more interesting part is the chaining of states that is set up and that 
 
 Out of these, `MyGameState` is the first [GameState](/documentation/api/class-game-state/) of the game that is not contributed by a plugin and, as such, where the game's logic actually starts.
 
-During development, it makes sense to skip those splash screens and go directly to the [GameState](/documentation/api/class-game-state/) that is being implemented. This can be easily done by returning that state in the `game` function instead of `PrecautionScreenState`.
+## Taking a short cut
+
+During development, it makes sense to skip those splash screens and go directly to the [GameState](/documentation/api/class-game-state/) that is being implemented. This can be easily done by returning that state in the `game` function instead of `PrecautionScreenState`. Let's change the last line of the `game` function to the following to boot directly to `MyGameState`.
 
 ```cpp
 return GameState::safeCast(MyGameState::getInstance());
@@ -120,4 +122,4 @@ After applying that change, once the project is rebuilt and run, the following s
 
 <a href="/documentation/images/tutorial/my-game-state.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState"><img src="/documentation/images/tutorial/my-game-state.png"/></a>
 
-We're now ready to hit the keyboard and [create our first custom GameState](/documentation/tutorial/title-screen/) <i class="fa fa-arrow-right"></i>.
+Great, we're now ready to hit the keyboard and [create our first custom GameState](/documentation/tutorial/title-screen/) <i class="fa fa-arrow-right"></i>.

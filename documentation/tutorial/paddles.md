@@ -1,12 +1,12 @@
 ---
 layout: documentation
 parents: Documentation > Tutorial
-title: Pong Paddles
+title: Paddles
 ---
 
 # Paddles
 
-There need to be two paddles that behave differently: one is controller by the player while the other is controller by the program itself. There is, again, great flexibility on how to achieve this using [VUEngine](https://github.com/VUEngine/VUEngine-Core). But we want a clean implementation that doesn't couple any class to another if it is not absolutely necessary. So, we are going to create two different mutation classes for the paddles: `PlayerPaddle` and `AIPaddle`.
+There need to be two paddles that behave differently - one is controlled by the player while the other is controlled by the program itself. There is, again, great flexibility on how to achieve this using [VUEngine](https://github.com/VUEngine/VUEngine-Core). But we want a clean implementation that doesn't couple any class to another if it is not absolutely necessary. So, we are going to create two different mutation classes for the paddles: `PlayerPaddle` and `AIPaddle`.
 
 ## Player Paddle
 
@@ -16,7 +16,7 @@ Now, add a [Mutator](/documentation/api/class-mutator/) to it and name its [muta
 
 <a href="/documentation/images/tutorial/paddle-mutator.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle mutator"><img src="/documentation/images/tutorial/paddle-mutator.png" /></a>
 
-Since we deleted the previous **PaddleActorSpec**, we need to update the [StageSpec](/documentation/api/struct-stage-spec/) **PongStageSpec**'s **PongStageActors** array:
+Since we deleted the previous **PaddleActorSpec**, we need to update the **PongStageSpec**'s **PongStageActors** array:
 
 ```cpp
 [...]
@@ -56,7 +56,7 @@ Since it has to be controller by the player, it has to receive the keypad's inpu
 
 The [Actors](/documentation/api/class-actor/) that belong to the [Stage](/documentation/api/class-stage/) can receive messages that propagate through all its children. This allows to decouple the `PongState` and the [Actors](/documentation/api/class-actor/), that need to react to the user input, from each other.
 
-First, we'll create the messages. To do that, right click the _config_ folder and create a new **Messages** file and add the following messages to it:
+First, we'll create the messages. To do that, right click the _config_ folder and create a new **Messages** file and add a message called "Keypad Hold Down" to it:
 
 <a href="/documentation/images/tutorial/messages.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle mutator"><img src="/documentation/images/tutorial/messages.png" /></a>
 
@@ -172,15 +172,15 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
 
 Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, the method halts the propagation of the `kMessageKeypadHoldDown` message, but allows other messages to continue to be propagated by returning `false`.
 
-If everything went right, once the game is built and run, both paddles will move when the user presses UP or DOWN in the left directional pad.
+If everything went right, once the game is built and run, both paddles will move when the user presses <span class="keys">UP</span> or <span class="keys">DOWN</span> on the left directional pad.
 
-But we don't want the player to control both paddles.
+However, we don't want the player to control both paddles, so we'll need some AI-controlled opponent.
 
 ## AI Paddle
 
 Repeat the steps above to create an _AIPaddle.actor_ file in its respective folder, _assets/Actor/Paddle/AIPaddle/_. Then, attach and configure a [Sprite](/documentation/api/class-sprite/), a [Body](/documentation/api/class-body/) and a [Mutator](/documentation/api/class-mutator/) as we already did for the _PlayerPaddle.actor_, and create in a similar manner an `AIPaddle` mutation class.
 
-Don't forget to update the [StageSpec](/documentation/api/struct-stage-spec/) **PongStageSpec**'s **PongStageActors** array:
+Don't forget to update the **PongStageSpec**'s **PongStageActors** array:
 
 ```cpp
 [...]
@@ -216,7 +216,7 @@ mutation class AIPaddle : Actor
 }
 ```
 
-The implementation will be very simple: retrieve a reference to the `Disk` instance through the whole [Stage](/documentation/api/class-stage/) by calling `AIPaddle::getRelativeByName`, and check the disk's position over the Y axis and apply a force to the `AIPaddle` to catch up with it:
+The implementation will be very simple: retrieve a reference to the `Disk` instance through the [Stage](/documentation/api/class-stage/) by calling `AIPaddle::getRelativeByName`, check the disk's position over the Y axis and apply a force to the `AIPaddle` to catch up with it:
 
 ```cpp
 #include <Body.h>
@@ -256,7 +256,7 @@ void AIPaddle::update()
 }
 ```
 
-But the [Actor](/documentation/api/class-actor/) has not been named yet. To do so, let's head back to the _PongStageSpec.c_ file and name the [ActorSpecs](/documentation/api/struct-actor-spec/):
+Since the Disk [Actor](/documentation/api/class-actor/) has not been named yet, `AIPaddle::getRelativeByName` will find nothing. Let's head back to the _PongStageSpec.c_ file and assign a name to `DiskActorSpec` to change that.
 
 ```cpp
 PositionedActorROMSpec PongStageActors[] =
@@ -270,4 +270,6 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-When running the game, both paddles will work as you'd expect.
+When running the game, both paddles will now work as you'd expect.
+
+Blimey! But you will notice that the paddles can not yet interact with the Disk. We will need to add some [Colliders](/documentation/tutorial/collisions/) <i class="fa fa-arrow-right"></i>.
