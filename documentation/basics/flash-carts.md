@@ -6,27 +6,36 @@ title: Flash Carts
 
 # Flash Carts
 
-[VUEngine Studio](https://www.vuengine.dev/) has built-in support for writing your [freshly built](/documentation/basics/building/) ROM to your flash cart(s), through the flash carts widget. You can connect, and flash to, any number of flash carts at once.
+As part of [VUEngine Studio](https://www.vuengine.dev/)'s build chain, it features built-in support for writing your project's ROM to your flash cart(s), through the flash carts widget or with the command `Flash to Flash Cart` <span class="keys" data-osx="⇧⌥F">Shift+Alt+F</span>. If no ROM exists yet, or a build is currently in progress, flashing will be queued to happen after the build has succeeded. You can connect, and flash to, any number of flash carts at once.
 
-<a href="/documentation/images/basics/flash-carts/flash-carts-panel.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Flash Carts Panel"><img src="/documentation/images/basics/flash-carts/flash-carts-panel.png" /></a><br />
-_The Flash Carts Panel_
-
-<span class="keys" data-osx="⇧⌥F">Shift+Alt+F</span>
-
-## Custom configurations
+<figure>
+    <a href="/documentation/images/basics/flash-carts/flash-carts-panel.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Flash Carts Panel">
+        <img src="/documentation/images/basics/flash-carts/flash-carts-panel.png" width="640"/>
+    </a>
+    <figcaption class="pullup">
+        The Flash Carts Panel
+    </figcaption>
+</figure>
 
 [VUEngine Studio](https://www.vuengine.dev/) ships with built-in configurations for all the most common Virtual Boy flash carts.
 
 - FlashBoy
 - FlashBoy Plus
 - HyperBoy
-- HyperBoy+
 - HyperFlash32
 
-You can, however, easily add custom configurations by expanding the Configuration Panel (H) and clicking the "+" button on the bottom.
+## Custom configurations
 
-<a href="/documentation/images/basics/flash-carts/custom-flash-cart-config.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A sample custom Flash Cart config"><img src="/documentation/images/basics/flash-carts/custom-flash-cart-config.png" width="500" /></a><br />
-_A sample custom Flash Cart config_
+If your cart is not natively supported, you can, however, easily add custom configurations by expanding the Configuration Panel (H) and clicking the "+" button on the bottom.
+
+<figure>
+    <a href="/documentation/images/basics/flash-carts/custom-flash-cart-config.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Creating a custom Flash Cart configuration">
+        <img src="/documentation/images/basics/flash-carts/custom-flash-cart-config.png" width="500" />
+    </a>
+    <figcaption class="pullup">
+        Creating a custom Flash Cart configuration
+    </figcaption>
+</figure>
 
 A flash cart config consists of the following information:
 

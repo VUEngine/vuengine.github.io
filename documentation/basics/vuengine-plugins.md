@@ -6,9 +6,9 @@ title: VUEngine Plugins
 
 # VUEngine Plugins
 
-VUEngine is built on a modular architecture that allows to seamlessly link in and use additional components alongside the actual engine through the concept of **VUEngine Plugins**.
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) is built on a modular architecture that allows to seamlessly link in and use additional components alongside the actual engine through the concept of **VUEngine Plugins**.
 
-You can [create plugins yourself](#custom-plugins), but first and foremost, [VUEngine Studio](https://www.vuengine.dev/) comes with a library of reuseable, prefab components like actors, states or fonts, that can be easily included in your VUEngine project for a good headstart and/or to add new functionality.
+You can [create plugins yourself](#custom-plugins), but first and foremost, [VUEngine Studio](https://www.vuengine.dev/) comes with an extensive library of reuseable, prefab components like actors, states or fonts, that can be easily included in your VUEngine project for a good headstart and/or to add new functionality.
 
 For example, the library covers all the basic needs of a Virtual Boy game, like an automatic pause feature, a blinking low battery indicator, various splash screens or even a save data manager to work with Save RAM, so you can focus on writing the actual game. It also offers a broad selection of ready to use fonts, post processing effects, special actors, and more.
 
@@ -21,7 +21,14 @@ You can conveniently manage your project's plugins in the Plugins Browser (**B**
 - with the `Toggle Plugins View` command
 - through the menu: **View > Plugins**
 
-<a href="/documentation/images/basics/plugins/vuengine-plugins-browser.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/plugins/vuengine-plugins-browser.png" width="100%" /></a>
+<figure>
+    <a href="/documentation/images/basics/plugins/vuengine-plugins-browser.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The VUEngine Plugins Browser">
+        <img src="/documentation/images/basics/plugins/vuengine-plugins-browser.png"/>
+    </a>
+    <figcaption class="pullup">
+        The VUEngine Plugins Browser
+    </figcaption>
+</figure>
 
 ### Browsing Plugins
 

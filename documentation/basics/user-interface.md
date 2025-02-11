@@ -6,9 +6,16 @@ title: User Interface
 
 # User Interface
 
-VUEngine Studio's user interface is modeled after Visual Studio Code, but with more flexibility and an additional right sidepanel and sidebar in mind. Like many other code editors, [VUEngine Studio](https://www.vuengine.dev/) adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to, and an editor in the center, showing the content of the files you have opened.
+[VUEngine Studio](https://www.vuengine.dev/)'s user interface is modeled after Visual Studio Code, but with more flexibility and an additional right sidepanel and sidebar in mind. Like many other code editors, [VUEngine Studio](https://www.vuengine.dev/) adopts a common user interface and layout of an explorer on the left, showing all of the files and folders you have access to, and an editor in the center, showing the content of the files you have opened. Additionally, on the right, build chain tools can be found.
 
-<a href="/documentation/images/basics/user-interface/user-interface.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/user-interface/user-interface.png" width="100%" /></a>
+<figure>
+    <a href="/documentation/images/basics/user-interface/user-interface.png" data-toggle="lightbox" data-gallery="gallery" data-caption="VUEngine Studio's User Interface">
+        <img src="/documentation/images/basics/user-interface/user-interface.png"/>
+    </a>
+    <figcaption class="pullup">
+        VUEngine Studio's User Interface
+    </figcaption>
+</figure>
 
 ## Layout
 
@@ -115,19 +122,21 @@ Once you are done with your task, you can remove files individually from the **O
 
 The Explorer is just one of the Views available in [VUEngine Studio](https://www.vuengine.dev/). There are also Views for:
 
-- Build - The project build panel.
-- Documentation - Browse this documentation within [VUEngine Studio](https://www.vuengine.dev/).
+- Build Project - The project build panel.
+- Emulator - Lets you start your built ROM in an emulator and manage custom emulator configurations.
+- Explorer - The file explorer.
 - Extensions - Install and manage extensions within [VUEngine Studio](https://www.vuengine.dev/).
-- Flash Carts - Lets you write your built ROM to any flash carts.
+- Flash Carts - Lets you write your built ROM to any flash carts manage custom flash cart configurations.
 - History - Git history of currently opened file.
-- Image Conversion - Image conversion logs.
+- Outline - For source files, this shows an outline of the contained functions, classes, structs etc.
 - Output - Generic output panel.
 - Plugins - VUEngine Plugins management.
 - Problems - List of problems in workspace.
 - Properties - Properties of currently opened file.
 - Search - Provides global search and replace across your open folder.
 - Source Control - [VUEngine Studio](https://www.vuengine.dev/) includes Git source control by default.
-- Other - Views contributed by extensions.
+
+Plus possible additional views contributed by extensions.
 
 > **Tip:** You can open any view using the `View: Open View` command.
 
@@ -153,14 +162,6 @@ Type "?" into the input field to get a list of available commands you can execut
 ## Editor Configuration
 
 [VUEngine Studio](https://www.vuengine.dev/) gives you many options to configure the editor. From the **View** menu, you can hide or toggle various parts of the user interface, such as the Side Panels, Status Bar, and Bottom Panel.
-
-### Settings
-
-Most editor configurations are kept in settings which can be modified directly. You can set options globally through user settings, per project through workspace settings, or per folder. Settings values are kept in a `settings.json` file in the user folder or currently opened folder under a `.vuengine` folder, or in a workspace file.
-
-- Select File > Preferences > Open Settings (UI) (or press <span class="keys" data-osx="⌘,">Ctrl+,</span>) to edit the user `settings.json` file.
-- To edit workspace settings, select the **Workspace** tab to edit the settings saved to the current workspace file.
-- To edit folder settings, select the **Folder** tab to edit the settings saved to the current folder.
 
 ## Preview Mode
 

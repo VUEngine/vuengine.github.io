@@ -70,4 +70,4 @@ chmod a+x VUEngine-Studio-X-X-X.AppImage
 
 To enjoy the newest additions, which might not be included in the latest stable release, you can always check out and compile [VUEngine Studio](https://www.vuengine.dev/) yourself from its [GitHub](https://github.com/VUEngine/VUEngine-Studio) repository, or grab [WIP builds](https://github.com/VUEngine/VUEngine-Studio/actions) if available (you'll need to be signed in to a Github account for the latter).
 
-Note, thought, that there might be compatibility problems with VUEngine Core, Templates and/or other sample code. We only ensure compatibility at time of releases.
+> **Note**: There might be compatibility isses with VUEngine Core, Templates and/or other sample code. We only ensure compatibility at time of releases.

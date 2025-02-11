@@ -6,25 +6,32 @@ title: Building
 
 # Building
 
-To get from source code to a playable ROM (\*.vb) file, you'll need to build your code.
+To get from source code to a playable ROM (`.vb`) file, you'll need to build your code.
 
-[VUEngine Studio](https://www.vuengine.dev/) allows you to build your project and queue running it in an emulator, flash to your flash cart(s) or export the ROM, all in a unified workflow and in fully embedded tools.
+[VUEngine Studio](https://www.vuengine.dev/)'s build chain allows you to build your project and queue running it in an emulator, flash to your flash cart(s) or export the ROM, all in a unified workflow and in fully embedded tools.
 
 ## Build Panel
 
 The central spot for building is the Build Panel.
 
-<a href="/documentation/images/basics/building/build-panel.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/basics/building/build-panel.png" width="500" /></a>
+<figure>
+    <a href="/documentation/images/basics/building/build-panel.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Build Panel">
+        <img src="/documentation/images/basics/building/build-panel.png" width="640"/>
+    </a>
+    <figcaption class="pullup">
+        The Build Panel
+    </figcaption>
+</figure>
 
 ### Action Buttons
 
 The toolbar Action Buttons (**A**) in the top right of the application allow you to quickly start a build, run or flash a game, clean the build cache and more.
 
-If you click on <i class="fa fa-play" /> **Run** or <i class="fa fa-microchip" /> **Flash** without a ROM being built yet, a build will start and the respective action will be queued and executed once the build is completed. Click the button again to unqueue. Click the other button, respectively, to queue/unqueue that action as well. Clicking the Build button while a build is running toggles the Build Panel.
+If you click on <i class="codicon codicon-play"></i> **Run** or <i class="codicon codicon-empty-window codicon-rotate-180"></i> **Flash** without a ROM being built yet, a build will start and the respective action will be queued and executed once the build is completed. Click the button again to unqueue. Click the other button, respectively, to queue/unqueue that action as well. Clicking the Build button while a build is running toggles the Build Panel.
 
-Click the <i class="fa fa-trash" /> **Clean** button to delete the build cache for the current mode.
+Click the <i class="codicon codicon codicon codicon-trash"></i> **Clean** button to delete the build cache for the current mode.
 
-The progress bar on the <i class="fa fa-wrench" /> **Build** button will turn yellow once a warning occured. It will be colored red if a build failed.
+The progress bar on the <i class="codicon codicon-symbol-property"></i> **Build** button will turn yellow once a warning occured. It will be colored red if a build failed.
 
 Keyboard shortcuts:
 
@@ -37,9 +44,9 @@ Keyboard shortcuts:
 
 The Build Side Bar Tab <i class="codicon codicon-tools"></i> (**B**) allows you to toggle the visibility of the Build Panel by clicking on it. It can also shows the current build status and progress:
 
-- <i class="fa fa-fw fa-cog" /> Cog for running build
-- <i class="fa fa-fw fa-check" /> Checkmark for a successful build
-- <i class="far fa-fw fa-times-circle" /> Cross for a failed build
+- <i class="fa fa-fw fa-cog"></i> Cog for running build
+- <i class="fa fa-fw fa-check"></i> Checkmark for a successful build
+- <i class="far fa-fw fa-times-circle"></i> Cross for a failed build
 
 ### Context Buttons
 
