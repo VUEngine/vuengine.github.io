@@ -43,4 +43,4 @@ On Windows, build times can be painfully slow. However, if you're running Window
     sudo apt install make libmpfr-dev libmpc-dev
     ```
 
-6.  [VUEngine Studio](https://www.vuengine.dev/) automatically detects WSL when it is installed. You might have to restart with <span class="keys" data-osx="⌘R">Ctrl+R</span> to pick up the change if you just installed WSL.
+6.  [VUEngine Studio](https://www.vuengine.dev/) automatically detects WSL when it is installed. You might have to restart with <span class="keys" data-osx="⇧⌘R">Ctrl+Shift+R</span> to pick up the change if you just installed WSL.
