@@ -36,15 +36,15 @@ To work on devices running Apple Silicon, you will also need a `libmpc`, but ins
 
 1. Install brew with command:
 
-```bash
-arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+   ```bash
+   arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
 2. Install the `x86_64` version of `libmpc`:
 
-```bash
-arch -x86_64 /usr/local/bin/brew install libmpc
-```
+   ```bash
+   arch -x86_64 /usr/local/bin/brew install libmpc
+   ```
 
 You can read more about using x86 libraries on Apple Silicon Macs [here](https://gist.github.com/progrium/b286cd8c82ce0825b2eb3b0b3a0720a0).
 
