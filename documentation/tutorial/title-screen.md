@@ -170,7 +170,7 @@ Now, the indicator will be properly shown:
 
 <a href="/documentation/images/tutorial/low-power-indicator-right.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Low Power Indicator"><img src="/documentation/images/tutorial/low-power-indicator-right.png" /></a>
 
-With this new knowledge, we can now follow the example of the low power indicator to add our previously created Logo [Actor](/documentation/api/class-actor/) to replace the simple text title. We want the logo to display in the center of the screen, so {0, 0, 0} are the coordinates to use.
+With this new knowledge, we can now follow the example of the low power indicator to add our previously created Logo [Actor](/documentation/api/class-actor/) to replace the simple text title. We want the logo to display in the center of the screen, so {0, 0, 0} are the coordinates to use. Don't for get to also declare _LogoActorSpec_ above with the line "extern ActorSpec LogoActorSpec;".
 
 ```cpp
 [...]
@@ -189,7 +189,7 @@ PositionedActorROMSpec TitleScreenStageActors[] =
 
 > **Note**: Never remove the final entry, `{NULL, {0, 0, 0}, [...]`, or bad things will happen. This is a delimiter, used by the engine to know when it is done reading **ActorSpecs**.
 
-Finally, to get rid of the text title, remove all the calls to `TitleScreenState::print` from the `TitleScreenState::enter` method. After another round of build and run, the image will show up in the emulator.
+Finally, to get rid of the text title, remove all calls to `TitleScreenState::print` from the `TitleScreenState::enter` and `TitleScreenState::resume` methods, as well as the method itself. After another round of build and run, the image will show up in the emulator.
 
 <a href="/documentation/images/tutorial/title-screen.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Title Screen"><img src="/documentation/images/tutorial/title-screen.png" /></a>
 
