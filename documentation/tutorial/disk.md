@@ -145,6 +145,7 @@ void PongState::enter(void* owner __attribute__((unused)))
     // Load stage
     PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
 
+	// Start clocks to start animations, physics, etc
     PongState::startClocks(this);
 }
 ```
