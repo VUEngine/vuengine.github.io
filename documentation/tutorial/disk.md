@@ -61,9 +61,7 @@ ComponentSpec* const DiskComponentSpecs[] =
 };
 ```
 
-Now, we have to create the `Disk` class. Since it is a mutation target, it has to be a mutation class.
-
-To create the `Disk` mutation class, add the folder _source/Actors/Disk_ and, in it, a header and an implementation file: _Disk.h_ and _Disk.c_.
+Now, we have to create the `Disk` mutation class. To do so, add the folder _source/Actors/Disk_ and, in it, a header and an implementation file: _Disk.h_ and _Disk.c_.
 
 In _Disk.h_ let's add the following to declare the new class:
 

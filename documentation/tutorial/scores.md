@@ -10,7 +10,7 @@ It is time to track the score of the game. To do so, we are going to implement a
 
 ## Pong Manager
 
-Let's add a `PongManager` class that will handle the game's logic. At minimum, it requires to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and since the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of it. But because the `PongState` persist through the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroys it when it exists. So, override the `enter` and `exit` methods.
+Let's add a `PongManager` class that will handle the game's logic. At minimum, it requires to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and given that the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of it. But because the `PongState` persist through the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroys it when it exists. So, override the `enter` and `exit` methods.
 
 ```cpp
 #include <PongManager.h>
@@ -143,11 +143,11 @@ void PongManager::printScore()
 
 ## Event Listeners
 
-You should have already noticed that the disk moves back to the center of the screen after it has left it. This is the engine's streaming kicking in, which is implemented by the [Stage](/documentation/api/class-stage/) class. It is constantly checking which [Actors](/documentation/api/class-actor/) are out of bounds -within a tolerance margin configurable in the [StageSpec](/documentation/api/struct-stage-spec/)- to remove and destroy those that are beyond them, and is continually testing the entries in the **PongStageActors** array, too, in order to instantiate those [Actors](/documentation/api/class-actor/) that are within the screen bounds. This behavior can be modified by setting to `true` the flag in the entries of the **PongStageActors** array, but we will leave it as it is to avoid the need of writing code to detect when the disk abandons the screen and to move it back to the center of it.
+You should have already noticed that the disk moves back to the center of the screen after it has left it. This is the engine's streaming kicking in, which is implemented by the [Stage](/documentation/api/class-stage/) class. It is constantly checking which [Actors](/documentation/api/class-actor/) are out of bounds -within a tolerance margin configurable in the [StageSpec](/documentation/api/struct-stage-spec/)- to remove and destroy those that are beyond them, and is continually testing the entries in the **PongStageActors** array too, in order to instantiate those [Actors](/documentation/api/class-actor/) that are within the screen bounds. This behavior can be modified by setting to `true` the flag in the entries of the **PongStageActors** array, but we will leave it as it is to avoid the need of writing code to detect when the disk abandons the screen and to move it back to the center of it.
 
-Since we know that the disk is being continually destroyed and created, we could exploit that to keep track of the score, we just need to know about both events. The way to do that is to add event listeners for two events: `kEventActorDeleted` and `kEventActorCreated`.
+Since we know that the disk is being continually destroyed and created, we could exploit that to keep track of the score, we just need to know about both events. The way to do that is to add event listeners for them: `kEventActorDeleted` and `kEventActorCreated`.
 
-To listen for the event when the disk is deleted, a listener has to be added on it. That is easy enough for the first instance of `Disk` that can be retrieved from the [Stage](/documentation/api/class-stage/) passed to the `PongManager`'s constructor. But it is not so easy to know about when a new instance is spawned since a listener cannot be added to instances of `Disk` that have not been created yet. So, we have to instruct the [Stage](/documentation/api/class-stage/) to add the listener for us when the instance is ready by calling [Stage::addActorLoadingListener](/documentation/api/class-stage/), which will take care of adding the listener to the [Actor](/documentation/api/class-actor/) that has been created:
+To listen for the event when the disk is deleted, a listener has to be added on it. That is easy enough for the first instance of `Disk` that can be retrieved from the [Stage](/documentation/api/class-stage/) passed to the `PongManager`'s constructor. But it is not so easy to know about when a new instance is spawned because a listener cannot be added to instances of `Disk` that have not been created yet. So, we have to instruct the [Stage](/documentation/api/class-stage/) to add the listener for us when the instance is ready by calling [Stage::addActorLoadingListener](/documentation/api/class-stage/), which will take care of adding the listener to the [Actor](/documentation/api/class-actor/) that has been created:
 
 ```cpp
 void PongManager::constructor(Stage stage)
@@ -235,6 +235,8 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 When processing the `kEventActorDeleted` event, we check if the object that fired the event's name is "Disk" and, if so, proceed to decide to which side assign the point by checkings its X position.
 
 The processing of `kEventActorCreated` involves checking the firer of the event's name to make sure that we are going to listen for the destruction of the new disk.
+
+The method `onEvent` has to return a boolean value. When it returns `true` the listener will be kept; otherwise, if it returns `false`, the listener will be removed after the method returns.
 
 ## Printing
 

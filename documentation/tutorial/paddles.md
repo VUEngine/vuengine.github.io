@@ -6,7 +6,7 @@ title: Paddles
 
 # Paddles
 
-There need to be two paddles that behave differently - one is controlled by the player while the other is controlled by the program itself. There is, again, great flexibility on how to achieve this using [VUEngine](https://github.com/VUEngine/VUEngine-Core). But we want a clean implementation that doesn't couple any class to another if it is not absolutely necessary. So, we are going to create two different mutation classes for the paddles: `PlayerPaddle` and `AIPaddle`.
+There need to be two paddles that behave differently. One is controlled by the player while the other is controlled by the program itself. There is, again, great flexibility on how to achieve this using [VUEngine](https://github.com/VUEngine/VUEngine-Core). But we want a clean implementation that doesn't couple any class to another if it is not absolutely necessary. So, we are going to create two different mutation classes for the paddles: `PlayerPaddle` and `AIPaddle`.
 
 ## Player Paddle
 
@@ -36,9 +36,7 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-Now, we have to create the `PlayerPaddle` class. Since it is a mutation target, it has to be a mutation class.
-
-To create the `PlayerPaddle` mutation class, let's create the folder _source/Actors/Paddle/PlayerPaddle_ and, in it, a header and an implementation file: _PlayerPaddle.h_ and _PlayerPaddle.c_.
+Then, we have to create the `PlayerPaddle` mutation class. Let's create the folder _source/Actors/Paddle/PlayerPaddle_ and, in it, a header and an implementation file: _PlayerPaddle.h_ and _PlayerPaddle.c_.
 
 In _PlayerPaddle.h_, add the following to declare the new class:
 
@@ -54,7 +52,7 @@ Since it has to be controller by the player, it has to receive the keypad's inpu
 
 ### Processing the user input
 
-The [Actors](/documentation/api/class-actor/) that belong to the [Stage](/documentation/api/class-stage/) can receive messages that propagate through all its children. This allows to decouple the `PongState` and the [Actors](/documentation/api/class-actor/), that need to react to the user input, from each other.
+The [Actors](/documentation/api/class-actor/) that belong to the [Stage](/documentation/api/class-stage/) can receive messages that propagate through all its children. This allows to decouple the `PongState` and the [Actors](/documentation/api/class-actor/) that need to react to the user input from each other.
 
 First, we'll create the messages. To do that, right click the _config_ folder and create a new **Messages** file and add a message called "Keypad Hold Down" to it:
 
@@ -119,8 +117,6 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
     return false;
 }
 ```
-
-Notice that the method returns `false`. This allows the propagation to continue to other [Actors](/documentation/api/class-actor/).
 
 `PlayerPaddle::handlePropagatedMessage` is still empty, we haven't really done anything with the input yet. There are various options here again on how to proceed: directly manipulate the `Paddle`'s transformation or use physic simulations to give the paddles some weight and inertia. Let's add a [Body](/documentation/api/class-body/) to the _PlayerPaddle.actor_ as we did for the _Disk.actor_:
 
@@ -221,7 +217,7 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-Since this paddle doesn't react to the user inputs but to the `Disk` instance, its logic will be a little bit different from that of the `PlayerPaddle`.
+Since this paddle doesn't react to the user inputs but to the `Disk`'s position, its logic will be a little bit different from that of the `PlayerPaddle`.
 
 The [Container](/documentation/api/class-container/) class has an `update` method that is called on all the instances inside a [Stage](/documentation/api/class-stage/) every game cycle. So, override it to implement the AI's logic in it:
 
@@ -277,7 +273,7 @@ void AIPaddle::update()
 }
 ```
 
-Since the Disk [Actor](/documentation/api/class-actor/) has not been named yet, `AIPaddle::getRelativeByName` will find nothing. Let's head back to the _PongStageSpec.c_ file and assign a name to `DiskActorSpec` to change that.
+Because the Disk [Actor](/documentation/api/class-actor/) has not been named yet, `AIPaddle::getRelativeByName` will find nothing. Let's head back to the _PongStageSpec.c_ file and assign a name to `DiskActorSpec` to change that.
 
 ```cpp
 PositionedActorROMSpec PongStageActors[] =

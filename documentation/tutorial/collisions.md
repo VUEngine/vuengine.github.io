@@ -6,7 +6,7 @@ title: Collisions
 
 # Collisions
 
-The only piece of functionality that still needs to be added to the game, before we can call it Pong, is collisions. And that's exactly what we will be doing next. [Colliders](/documentation/api/class-collider/) are the missing [Components](/documentation/api/class-component/) in our [Actors](/documentation/api/class-actor/) so they can interact with each other. But before adding them, we need to understand In-Game Types and Collider Layers.
+The only piece of functionality that still needs to be added to the game, before we can call it Pong, are collisions. And that's exactly what we will be doing next. [Colliders](/documentation/api/class-collider/) are the missing [Components](/documentation/api/class-component/) in our [Actors](/documentation/api/class-actor/) for them to be able to interact with each other. But before adding them, we need to understand In-Game Types and Collider Layers.
 
 ## In-Game Types
 
@@ -32,7 +32,7 @@ And the paddles' should be configured as follows:
 
 <a href="/documentation/images/tutorial/paddle-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle collider"><img src="/documentation/images/tutorial/paddle-collider.png" /></a>
 
-Notice that the toggle for collision checking in the paddle's [Collider](/documentation/api/class-collider/) configuration is disabled. This is because there is no reason to waste performance by performing the test for collisions against the disk when the latter will already be doing checks for itself.
+Notice that the toggle for collision checking in the paddle's [Collider](/documentation/api/class-collider/) configuration is disabled. This is because there is no reason to waste performance by performing the test for collisions against the disk when it already does it.
 
 ## Adding Walls
 
@@ -82,7 +82,7 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-If you don't like that the paddles get out of the screen, enable the collision checks in their [Collider](/documentation/api/class-collider/) and add the "Wall" Collider Layer to the layers that it checks.
+If you don't like that the paddles get out of the screen, enable the collision checks in their [Colliders](/documentation/api/class-collider/) and add the "Wall" Collider Layer to the layers that it checks.
 
 We now have a basic Pong clone!
 
