@@ -10,7 +10,7 @@ We should start off with something simple, instead of getting into the more comp
 
 ## State
 
-First, rename the files _source/States/MyGameState/MyGameState.c_ and _source/States/MyGameState/MyGameState.h_, as well as the folder as, _source/States/TitleScreenState/TitleScreenState.c_ and _source/States/TitleScreenState/TitleScreenState.h_ respectively.
+First, rename the files _source/States/MyGameState/MyGameState.c_ and _source/States/MyGameState/MyGameState.h_, as well as the folder, to _source/States/TitleScreenState/TitleScreenState.c_ and _source/States/TitleScreenState/TitleScreenState.h_ respectively.
 
 <figure>
     <a href="/documentation/images/tutorial/my-game-state-folders.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState folder">
