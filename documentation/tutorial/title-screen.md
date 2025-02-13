@@ -10,7 +10,7 @@ We should start off with something simple, instead of getting into the more comp
 
 ## State
 
-First, rename the files _source/States/MyGameState/MyGameState.c_ and _source/States/MyGameState/MyGameState.h_, as well as the folder.
+First, rename the files _source/States/MyGameState/MyGameState.c_ and _source/States/MyGameState/MyGameState.h_, as well as the folder as, _source/States/TitleScreenState/TitleScreenState.c_ and _source/States/TitleScreenState/TitleScreenState.h_ respectively.
 
 <figure>
     <a href="/documentation/images/tutorial/my-game-state-folders.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState folder">
@@ -66,7 +66,7 @@ GameState game(void)
 }
 ```
 
-Finally, we will change the message printed to the screen by modifying the method `TitleScreenState::print`.
+Finally, we will change the message printed to the screen by modifying the method `TitleScreenState::print` to look as follows:
 
 ```cpp
 void TitleScreenState::print()
@@ -93,7 +93,7 @@ First of all, create the folder _assets/Actor/Logo_ and add an _.actor_ file in 
 
 <a href="/documentation/images/tutorial/new-actor-file.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Actor file"><img src="/documentation/images/tutorial/new-actor-file.png" /></a>
 
-Our newly created file, _Logo.actor_ will automatically be opened and you will see an empty editor with a single button that reads "Add Component". Click it and select "Sprite" from the drop down menu. The newly added [Sprite](/documentation/api/class-sprite/) component will automatically be selected and an editor panel for that component shown on the right hand side.
+Our newly created file, _Logo.actor_ will automatically be opened and you will see an empty editor with a single button that reads "Add Component". Click it and select "Sprite" from the drop down menu. The newly added [Sprite](/documentation/api/class-sprite/) component will automatically be selected and an editor panel for that component will be shown on the right hand side.
 
 <a href="/documentation/images/tutorial/new-sprite-component.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Sprite Component"><img src="/documentation/images/tutorial/new-sprite-component.png" /></a>
 
@@ -187,7 +187,7 @@ PositionedActorROMSpec TitleScreenStageActors[] =
 
 > **Note**: Never remove the final entry, `{NULL, {0, 0, 0}, [...]`, or bad things will happen. This is a delimiter, used by the engine to know when it is done reading **ActorSpecs**.
 
-Finally, to get right of the text title, remove the call to `TitleScreenState::print` from the `TitleScreenState::enter` method. After another round of build and run, the image will show up in the emulator.
+Finally, to get rid of the text title, remove all the calls to `TitleScreenState::print` from the `TitleScreenState::enter` method. After another round of build and run, the image will show up in the emulator.
 
 <a href="/documentation/images/tutorial/title-screen.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Title Screen"><img src="/documentation/images/tutorial/title-screen.png" /></a>
 

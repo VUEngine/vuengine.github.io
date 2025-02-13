@@ -23,7 +23,7 @@ singleton class TitleScreenState : GameState
 }
 ```
 
-That method receives a pointer to a struct called [UserInput](/documentation/api/struct-user-input/) that has the user input that was registered during the last game frame.
+That method receives a pointer to a struct called [UserInput](/documentation/api/struct-user-input/) that has the user input that was registered during the last game frame. This is the declaration of that struct with all the possible fields that can be polled during user input processing:
 
 ```cpp
 /// User's input
@@ -58,7 +58,7 @@ typedef struct UserInput
 } UserInput;
 ```
 
-So, to detect if the user pressed the <span class="keys">START</span> button, the `pressedKey` attribute of the [UserInput](/documentation/api/struct-user-input/) struct has to be tested against [K_STA](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Hardware/KeypadManager.h). If successful, we will make the engine change its current state to the [GameState](/documentation/api/class-game-state/) in which the actual game will run.
+So, to detect if the user pressed the <span class="keys">START</span> button, the `pressedKey` attribute of the [UserInput](/documentation/api/struct-user-input/) struct has to be tested against [K_STA](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Hardware/KeypadManager.h). If successful, we will make the engine change its current state to the [GameState](/documentation/api/class-game-state/) in which the actual game will run. Add the following to `TitleScreenState::processUserInput`:
 
 ```cpp
 void TitleScreenState::processUserInput(const UserInput* userInput)
@@ -108,7 +108,7 @@ While it is possible to implement a whole game that runs solely in the `execute`
 
 When the engine's [StateMachine](/documentation/api/class-state-machine/) enters a new [GameStates](/documentation/api/class-game-state/), it will call [GameState::enter](/documentation/api/class-game-state/), where the state can be initialized.
 
-But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_.
+But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_. In the later, declare the `PongState` class as shown below:
 
 ```cpp
 singleton class PongState : GameState

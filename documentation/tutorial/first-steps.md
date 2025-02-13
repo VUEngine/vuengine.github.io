@@ -50,7 +50,7 @@ Once the plugins are installed, their usage depend on what functionality each pr
 
 ## The game's entry point
 
-In the **source** folder, there is a file called _Game.c_ and inside it, you will find a function called `game` that returns an instance of `GameState`. This is where everything starts - the game's entry point.
+In the new project's **source** folder, there is a file called _Game.c_ and inside it, you will find a function called `game` that returns an instance of `GameState`. This is where everything starts - the game's entry point.
 
 ```cpp
 GameState game(void)
