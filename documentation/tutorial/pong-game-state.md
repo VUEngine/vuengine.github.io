@@ -123,7 +123,7 @@ The `PongState` will remain empty if we don't add actors to it. For a Pong game,
 
 <a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
 
-Download the image for the disk <a href="/documentation/images/tutorial/Disk.png.png" download>here</a> and the one for the paddle <a href="/documentation/images/tutorial/Paddle.png" download>here</a>.
+Download the image for the disk <a href="/documentation/images/tutorial/Disk.png" download>here</a> and the one for the paddle <a href="/documentation/images/tutorial/Paddle.png" download>here</a>.
 
 Now, we need a [StageSpec](/documentation/api/struct-stage-spec/) for the `PongState`. Simply copy the _TitleScreenStageSpec.c_ file, rename it to _PongStageSpec.c_ and rename all the variables in it from `TitleScreen*` to `Pong*`. Finally, add the [ActorSpecs](/documentation/api/struct-actor-spec/) for the disk and the paddle as we added the **LogoActorSpec** to the title screen:
 
