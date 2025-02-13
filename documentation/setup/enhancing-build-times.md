@@ -34,7 +34,22 @@ On Windows, build times can be painfully slow. However, if you're running Window
 4.  Update the distro:
 
     ```bash
-    sudo apt update && sudo apt upgrade
+    sudo apt update
+    sudo apt upgrade
+    ```
+
+    If you run into the error "Failed to take /etc/passwd lock: Invalid argument" when trying to run the above commands, try running the below instead.
+
+    ```bash
+    sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
+    sudo mkdir /var/lib/dpkg/info
+    sudo apt-get update
+    sudo apt-get -f install
+    sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_silent
+    sudo rm -rf /var/lib/dpkg/info
+    sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
+    sudo apt-get update
+    sudo apt-get upgrade
     ```
 
 5.  Install required libraries:
@@ -43,4 +58,4 @@ On Windows, build times can be painfully slow. However, if you're running Window
     sudo apt install make libmpfr-dev libmpc-dev
     ```
 
-6.  [VUEngine Studio](https://www.vuengine.dev/) automatically detects WSL when it is installed. You might have to restart with <span class="keys" data-osx="⇧⌘R">Ctrl+Shift+R</span> to pick up the change if you just installed WSL.
+6.  [VUEngine Studio](https://www.vuengine.dev/) automatically detects WSL when it is installed. You will have to restart with <span class="keys" data-osx="⇧⌘R">Ctrl+Shift+R</span> to pick up the change if you just installed WSL.
