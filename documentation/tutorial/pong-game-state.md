@@ -108,7 +108,7 @@ While it is possible to implement a whole game that runs solely in the `execute`
 
 When the engine's [StateMachine](/documentation/api/class-state-machine/) enters a new [GameStates](/documentation/api/class-game-state/), it will call [GameState::enter](/documentation/api/class-game-state/), where the state can be initialized.
 
-But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_. In the later, declare the `PongState` class as shown below:
+But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_. In the latter, declare the `PongState` class as shown below:
 
 ```cpp
 singleton class PongState : GameState

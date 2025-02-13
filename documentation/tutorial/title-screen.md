@@ -10,7 +10,7 @@ We should start off with something simple, instead of getting into the more comp
 
 ## State
 
-First, rename the files _source/States/MyGameState/MyGameState.c_ and _source/States/MyGameState/MyGameState.h_, as well as the folder as, _source/States/TitleScreenState/TitleScreenState.c_ and _source/States/TitleScreenState/TitleScreenState.h_ respectively.
+First, rename the files _source/States/MyGameState/MyGameState.c_ and _source/States/MyGameState/MyGameState.h_, as well as the folder, to _source/States/TitleScreenState/TitleScreenState.c_ and _source/States/TitleScreenState/TitleScreenState.h_ respectively.
 
 <figure>
     <a href="/documentation/images/tutorial/my-game-state-folders.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState folder">
@@ -85,9 +85,9 @@ But we can do better and replace that simple text with a nice image. To do that,
 
 ## Actor
 
-We want to replace the text with the following image, _pong-logo.png_.
+We want to replace the text with the following image, _pong-logo.png_. Click it to download.
 
-<a href="/documentation/images/tutorial/pong-logo.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Logo"><img src="/documentation/images/tutorial/pong-logo.png" /></a>
+<a href="/documentation/images/tutorial/pong-logo.png" download><img src="/documentation/images/tutorial/pong-logo.png" /></a>
 
 First of all, create the folder _assets/Actor/Logo_ and add an _.actor_ file in it by right clicking the _Logo_ folder and selecting "New File". Enter "Logo" as the file name and select the Type "Actor" in the dropdown on the right hand side.
 
@@ -105,6 +105,8 @@ Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/) will generate th
 
 <a href="/documentation/images/tutorial/logo-actor-spec.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Logo Actor Spec"><img src="/documentation/images/tutorial/logo-actor-spec.png" /></a>
 
+> **Attention**: The current version of the actor editor has a bug that prevents it from detecting any changes when adding a sprite component, even after adding an image source. As a workaround for the time being, you will have to do another change, e.g. setting the palette to 1 and back to 0, before the sprite component gets detected and can be saved.
+
 ## Stage
 
 Internally, [Stages](/documentation/api/class-stage/) are created by the engine by passing a [StageSpec](/documentation/api/struct-stage-spec/) pointer to [GameState::configureStage](/documentation/api/class-game-state/). A [StageSpec](/documentation/api/struct-stage-spec/) holds all the configuration details to instantiante a [Stage](/documentation/api/class-stage/) and populate it with
@@ -119,7 +121,7 @@ The arrays are very simple right now, containing only **LowPowerIndicatorActorSp
 ```cpp
 PositionedActorROMSpec TitleScreenStageActors[] =
 {
-    {&LowPowerIndicatorActorSpec, {0, 12, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&LowPowerIndicatorActorSpec, {__PLUGIN_LOW_POWER_ACTOR_X_POSITION, __PLUGIN_LOW_POWER_ACTOR_Y_POSITION, __PLUGIN_LOW_POWER_ACTOR_Z_POSITION}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 
     {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
 };
@@ -168,7 +170,7 @@ Now, the indicator will be properly shown:
 
 <a href="/documentation/images/tutorial/low-power-indicator-right.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Low Power Indicator"><img src="/documentation/images/tutorial/low-power-indicator-right.png" /></a>
 
-With this new knowledge, we can now follow the example of the low power indicator to add our previously created Logo [Actor](/documentation/api/class-actor/) to replace the simple text title. We want the logo to display in the center of the screen, so {0, 0, 0} are the coordinates to use.
+With this new knowledge, we can now follow the example of the low power indicator to add our previously created Logo [Actor](/documentation/api/class-actor/) to replace the simple text title. We want the logo to display in the center of the screen, so {0, 0, 0} are the coordinates to use. Don't for get to also declare _LogoActorSpec_ above with the line "extern ActorSpec LogoActorSpec;".
 
 ```cpp
 [...]
@@ -187,7 +189,7 @@ PositionedActorROMSpec TitleScreenStageActors[] =
 
 > **Note**: Never remove the final entry, `{NULL, {0, 0, 0}, [...]`, or bad things will happen. This is a delimiter, used by the engine to know when it is done reading **ActorSpecs**.
 
-Finally, to get rid of the text title, remove all the calls to `TitleScreenState::print` from the `TitleScreenState::enter` method. After another round of build and run, the image will show up in the emulator.
+Finally, to get rid of the text title, remove all calls to `TitleScreenState::print` from the `TitleScreenState::enter` and `TitleScreenState::resume` methods, as well as the method itself. After another round of build and run, the image will show up in the emulator.
 
 <a href="/documentation/images/tutorial/title-screen.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Title Screen"><img src="/documentation/images/tutorial/title-screen.png" /></a>
 
