@@ -105,6 +105,8 @@ Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/) will generate th
 
 <a href="/documentation/images/tutorial/logo-actor-spec.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Logo Actor Spec"><img src="/documentation/images/tutorial/logo-actor-spec.png" /></a>
 
+> **Attention**: The current version of the actor editor has a bug that prevents it from detecting any changes when adding a sprite component, even after adding an image source. As a workaround for the time being, you will have to do another change, e.g. setting the palette to 1 and back to 0, before the sprite component gets detected and can be saved.
+
 ## Stage
 
 Internally, [Stages](/documentation/api/class-stage/) are created by the engine by passing a [StageSpec](/documentation/api/struct-stage-spec/) pointer to [GameState::configureStage](/documentation/api/class-game-state/). A [StageSpec](/documentation/api/struct-stage-spec/) holds all the configuration details to instantiante a [Stage](/documentation/api/class-stage/) and populate it with
