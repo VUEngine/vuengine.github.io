@@ -110,7 +110,7 @@ Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/) will generate th
 Internally, [Stages](/documentation/api/class-stage/) are created by the engine by passing a [StageSpec](/documentation/api/struct-stage-spec/) pointer to [GameState::configureStage](/documentation/api/class-game-state/). A [StageSpec](/documentation/api/struct-stage-spec/) holds all the configuration details to instantiante a [Stage](/documentation/api/class-stage/) and populate it with
 game [Actors](/documentation/api/class-actor/).
 
-At this moment, `TitleScreenState` initializes its [Stage](/documentation/api/class-stage/) with the **MyGameStageSpec**, which is defined in the file _assets/Stage/MyGameStageSpec.c_. Rename the file to _assets/Stage/TitleScreenStageSpec.c_ and in it, change all occurences of "MyGameStateStage" to "TitleScreenStage".
+At this moment, `TitleScreenState` initializes its [Stage](/documentation/api/class-stage/) with the **MyGameStageSpec**, which is defined in the file _assets/Stage/MyGameStageSpec.c_. Rename the file to _assets/Stage/TitleScreenStageSpec.c_ and in it, change all occurences of "MyGameStage*" to "TitleScreenStage*".
 
 At the beginning of the file, you will find two arrays - `TitleScreenStageUiActors` and `TitleScreenStageActors`. These have entries that reference the **ActorSpecs** to use to instantiate and initialize the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/).
 
