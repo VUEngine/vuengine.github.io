@@ -44,11 +44,7 @@ bool SomeActor::collisionStarts(const CollisionInformation* collisionInformation
         {
             case kTypeSomeEntityType:
                 {
-                    SomeActor::sendMessageTo
-                    (
-                        0, ListenerObject::safeCast(this), ListenerObject::safeCast(collidingEntity),
-                        kMessageTouchedBySomeActor, NULL
-                    );
+                    SomeActor::sendMessageTo(this, ListenerObject::safeCast(collidingEntity), kMessageTouchedBySomeActor, 0, 0);
                 }
                 break;
         }

@@ -10,7 +10,7 @@ title: Configuration
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a header file called _Config.h_ where different aspects of its behavior are defined.
 
-The engine provides its own configuartion file, but each game should provide its own to override the engine’s default behavoir.
+The engine provides its own configuration file, but each game should provide its own to override the engine’s default behavior.
 
 For a description of the configuration parameters check the default _Config.h_ file.
 

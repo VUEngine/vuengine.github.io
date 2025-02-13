@@ -6,7 +6,7 @@ title: Graphics
 
 # Graphics
 
-[VUEngine](https://github.com/VUEngine/VUEngine-Core) now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: [Sprites](/documentation/api/class-sprite/), [Wireframes](/documentation/api/class-wireframe/) and [Printing](/documentation/api/class-printing/).
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: [Sprites](/documentation/api/class-sprite/), [Wireframes](/documentation/api/class-wireframe/) and [Printer](/documentation/api/class-printer/).
 
 [Sprites](/documentation/api/class-sprite/) are the means by which the engine displays 2D images, while [Wireframes](/documentation/api/class-wireframe/) are used to display non textured 3D geometry shapes.
 
@@ -79,7 +79,7 @@ TextureROMSpec ActorTextureSpec =
     // Palette index to use by the graphical data (0 - 3)
     0,
 
-    // Flag to recyble the texture with a different map
+    // Flag to recycle the texture with a different map
     false,
 
     // Flag to vertically flip the image
@@ -333,7 +333,7 @@ if(!isDeleted(wireframe))
     void float(float value, uint8 x, uint8 y, int32 precision, const char* font);
 ```
 
-[Printing](/documentation/api/class-printing/) is used as follows:
+The [Printer](/documentation/api/class-printer/) is used as follows:
 
 ```cpp
 Printer::text
@@ -386,11 +386,11 @@ CharSetROMSpec ActorCharsetSpec =
 
 When requesting a [CharSet](/documentation/api/class-char-set/) by providing a shared [CharSetSpec](/documentation/api/struct-char-set-spec/), the engine will only allocate a [CharSet](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU performance.
 
-The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any give moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSet](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame making all instances to be in sync:
+The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any give moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSet](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame, making all instances to be in sync:
 
 <a href="/documentation/images/user-guide/graphics/punk-chars-shared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" /></a>
 
-Since it would be overkill to play animations on all [Sprites](/documentation/api/class-sprite/) underlyed by a shared [CharSet](/documentation/api/class-char-set/), the engine runs the animations only on the first Sprite.
+Since it would be overkill to play animations on all [Sprites](/documentation/api/class-sprite/) underlied by a shared [CharSet](/documentation/api/class-char-set/), the engine runs the animations only on the first Sprite.
 
 On th other hand, when using a non-shared [CharSetSpec](/documentation/api/struct-char-set-spec/) to create a [CharSet](/documentation/api/class-char-set/), each request will be served with a new [CharSet](/documentation/ap/class-char-set/) instance. This permits to have different sprites with the same graphics but displaying different frames of animation:
 
@@ -445,7 +445,7 @@ TextureROMSpec ActorMultiframeTextureSpec =
     // Palette index to use by the graphical data (0 - 3)
     0,
 
-    // Flag to recyble the texture with a different map
+    // Flag to recycle the texture with a different map
     false,
 
     // Flag to vertically flip the image

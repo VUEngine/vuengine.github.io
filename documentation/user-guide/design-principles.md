@@ -17,13 +17,13 @@ Since the beginning of its development, [VUEngine](https://github.com/VUEngine/V
 - Polymorphism
 
 Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in
-order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code writen in a syntax close to that of C++'s, into standard C. We call our custom language Virtual C.
+order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code written in a syntax close to that of C++'s, into standard C. We call our custom language Virtual C.
 
 ## Singletons
 
 By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
 
-But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, the most important of which is that, in the case of the Virtual Boy, memory and CPU time are at a premium, so, some idealizations have to give way to practicallity (that's why store singletons by default in DRAM instead of WRAM, for example), [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks. So, the usage of singletons is a deliberate choice, conscious of the pitfalls that come with them, and done when the cost of allocating them dynamically in WRAM outweights their drawbacks, since [Virtual C](../../language/introduction) doesn't support class instances to be allocated in the stack.
+But they are an intuitive tool to solve some general problems in gaming. And since other design patterns that address the weaknesses of singletons, like dependency injection, come with their own caveats, the most important of which is that, in the case of the Virtual Boy, memory and CPU time are at a premium, some idealizations have to give way to practicallity (that's why store singletons by default in DRAM instead of WRAM, for example), [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer by leveraging the `secure` keyword that Virtual C provides in order to mitigate the mentioned risks. So, the usage of singletons is a deliberate choice, conscious of the pitfalls that come with them, and done when the cost of allocating them dynamically in WRAM outweights their drawbacks, since [Virtual C](../../language/introduction) doesn't support class instances to be allocated in the stack.
 
 A singleton class' non static method can be protected by qualifying it as follows:
 
