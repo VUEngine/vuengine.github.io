@@ -85,9 +85,9 @@ But we can do better and replace that simple text with a nice image. To do that,
 
 ## Actor
 
-We want to replace the text with the following image, _pong-logo.png_.
+We want to replace the text with the following image, _pong-logo.png_. Click it to download.
 
-<a href="/documentation/images/tutorial/pong-logo.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Logo"><img src="/documentation/images/tutorial/pong-logo.png" /></a>
+<a href="/documentation/images/tutorial/pong-logo.png" download><img src="/documentation/images/tutorial/pong-logo.png" /></a>
 
 First of all, create the folder _assets/Actor/Logo_ and add an _.actor_ file in it by right clicking the _Logo_ folder and selecting "New File". Enter "Logo" as the file name and select the Type "Actor" in the dropdown on the right hand side.
 
