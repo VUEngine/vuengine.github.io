@@ -94,7 +94,7 @@ mutation class Disk : Actor
 }
 ```
 
-Finally, in the implementation of the method, set the velocity of the `Disk` instance as shown below, making the direction of the movement random each time the disk is ready:
+In the implementation of the method, set the velocity of the `Disk` instance as shown below, making the direction of the movement random each time the disk is ready:
 
 ```cpp
 #include <Body.h>
@@ -131,6 +131,21 @@ void Disk::ready(bool recursive)
     }
 
     Disk::setVelocity(this, &velocity, false);
+}
+```
+
+Finally, it is necessary to start the clock that controls physics simulations, that can be done in various ways, here, we do it by calling `PongState::startClocks`:
+
+
+```cpp
+void PongState::enter(void* owner __attribute__((unused)))
+{
+    Base::enter(this, owner);
+
+    // Load stage
+    PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
+
+    PongState::startClocks(this);
 }
 ```
 

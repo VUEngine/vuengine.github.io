@@ -126,7 +126,7 @@ Notice that the method returns `false`. This allows the propagation to continue 
 
 <a href="/documentation/images/tutorial/paddle-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle body"><img src="/documentation/images/tutorial/paddle-body.png" /></a>
 
-Finally, we are able to move the paddle. To do so, in the implementation of `PlayerPaddle::handlePropagatedMessage`, add the following:
+Now, we are able to implement the logic to move the paddle. To do so, in the implementation of `PlayerPaddle::handlePropagatedMessage`, add the following:
 
 ```cpp
 [...]
@@ -171,6 +171,27 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
 ```
 
 Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, the method halts the propagation of the `kMessageKeypadHoldDown` message, but allows other messages to continue to be propagated by returning `false`.
+
+Since we disabled the user input when changing the state in `TitleScreenState::processUserInput`, it is necessary to enable it again by calling `KeypadManager::enable` when the engine enters in the `PongState` :
+
+```cpp
+void PongState::enter(void* owner __attribute__((unused)))
+{
+	Base::enter(this, owner);
+
+	// Load stage
+	PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
+
+	// Create the Pong game controller
+	this->pongManager = new PongManager(this->stage);
+
+	// Start clocks to start animations
+	PongState::startClocks(this);
+
+	// Enable user input
+	KeypadManager::enable();
+}
+```
 
 If everything went right, once the game is built and run, both paddles will move when the user presses <span class="keys">UP</span> or <span class="keys">DOWN</span> on the left directional pad.
 

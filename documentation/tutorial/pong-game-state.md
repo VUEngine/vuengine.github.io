@@ -119,7 +119,7 @@ singleton class PongState : GameState
 }
 ```
 
-The `PongState` will remain empty if we don't add actors to it. For a Pong game, we will need a disk and two paddles, but since the paddles are the same, we'll need only one. Create the actors in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo on the [title screen](/documentation/tutorial/title-screen/).
+The `PongState` will remain empty if we don't add actors to it. For a Pong game, we will need a disk and two paddles, but since the paddles are the same, we'll need only one **Spec** for both. Create the actors in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo on the [title screen](/documentation/tutorial/title-screen/).
 
 <a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
 
@@ -155,10 +155,6 @@ void PongState::enter(void* owner __attribute__((unused)))
 
     // Load stage
     PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
-
-    PongState::startClocks(this);
-
-    KeypadManager::enable();
 }
 ```
 
