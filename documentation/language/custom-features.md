@@ -129,7 +129,9 @@ To mutate a virtual method, use the following syntax:
 
 ### Mutation classes
 
-Virtual C implements polymorphism by adding a virtual table pointer to each object, which means that it can be manipulated in real time. Mutation classes permit to override or to extend a class' functionality by allowing an object's virtual table pointer to change its target during runtime, making the instance subject to different implementations of virtual methods or capable of reacting to new methods provided by the mutation class. These classes have the following constraints:
+Virtual C implements polymorphism by adding a virtual table pointer to each object, which means that it can be manipulated in real time. Mutation classes permit to override or to extend a class' functionality by allowing an object's virtual table pointer to change its target during runtime, making the instance subject to different implementations of virtual methods or capable of reacting to new methods provided by the mutation class. 
+
+These classes have the following constraints:
 
 - They have to inherit from a non abstract class
 - They have to be data-invariant with respect to the base class (ie: they cannot add attributes of their own)
