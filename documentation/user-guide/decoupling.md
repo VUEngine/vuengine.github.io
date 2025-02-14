@@ -78,7 +78,7 @@ Messages can be propagated too, instead of being specifically directed to a know
     SomeGameState::propagateMessage(this, kMessageSomeMessage);
 ```
 
-And any interested [Entity](/documentation/api/class-entity/) can process the message and let it be forwarded to other instance of [Entity](/documentation/api/class-entity/), by returning false, or they can stop the propagation by returning true -or acknowledging the processing of the message-:
+And any interested [Entity](/documentation/api/class-entity/) can process the message and let it be forwarded to other instances of [Entity](/documentation/api/class-entity/) -by returning false- or they can stop the propagation by returning `true`:
 
 ```cpp
 bool SomeClass::handlePropagatedMessage(int32 message)

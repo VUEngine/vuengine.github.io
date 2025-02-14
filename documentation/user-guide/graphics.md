@@ -6,7 +6,7 @@ title: Graphics
 
 # Graphics
 
-[VUEngine](https://github.com/VUEngine/VUEngine-Core) now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: [Sprites](/documentation/api/class-sprite/), [Wireframes](/documentation/api/class-wireframe/) and [Printer](/documentation/api/class-printer/).
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) now supports three kinds of visual elements that can display something on the Virtual Boy’s screens: [Sprites](/documentation/api/class-sprite/), [Wireframes](/documentation/api/class-wireframe/) and a [Printer](/documentation/api/class-printer/) to output text on the screen..
 
 [Sprites](/documentation/api/class-sprite/) are the means by which the engine displays 2D images, while [Wireframes](/documentation/api/class-wireframe/) are used to display non textured 3D geometry shapes.
 
@@ -14,11 +14,11 @@ They are components that can be attached to an [Entity](/documentation/api/class
 
 ## Sprites
 
-[Sprites](/documentation/api/class-sprite/) work as a sort of logical window that peaks into graphical memory, either into BGMAP space or directly into CHAR space, and draws what is seen through that window by means of a WORLD or an OBJECT or group of OBJECTs.
+[Sprites](/documentation/api/class-sprite/) work as a sort of logical window that peaks into graphical memory, either into BGMAP space or directly into CHAR space, and draw what is seen through that window by means of a WORLD or an OBJECT or group of OBJECTs.
 
 CHAR, BGMAP, OBJECT and WORLD are all hardware concepts of the Virtual Boy’s architecture. The engine provides classes that correspond to each one of these for their management.
 
-A [CharSet](/documentation/api/class-char-set/) represents one or more CHARs and treats them as a single unit. These hold the indexes of color data that underlies the graphics that the Virtual Boy’s Visual Image Processor (VIP) displays. Each CHAR is an 8×8 pixel matrix, or tile, from which complex images can be composed. [CharSets](/documentation/api/class-char-set/) are constructed by providing a [CharSetSpec](/documentation/api/struct-char-set-spec/) that specifies its properties
+A [CharSet](/documentation/api/class-char-set/) represents one or more CHARs and treats them as a single unit. These hold the indexes of color data that underlie the graphics that the Virtual Boy’s Visual Image Processor (VIP) displays. Each CHAR is an 8×8 pixel matrix, or tile, from which complex images can be composed. [CharSets](/documentation/api/class-char-set/) are constructed by providing a [CharSetSpec](/documentation/api/struct-char-set-spec/) that specifies its properties
 
 Take the following image as an example from which a [CharSetSpec](/documentation/api/struct-char-set-spec/) will be defined:
 
@@ -54,7 +54,7 @@ CHAR memory is arranged as a unidimensional array. Visually, it would look like 
 
 In such arrangement, the CHARs or tiles of this [CharSet](/documentation/api/class-char-set/) cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the CHARs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the [CharSet](/documentation/api/class-char-set/), are used to provide such bidimensional order. In the engine these are encapsulated in a [Texture](/documentation/api/class-texture/) class.
 
-[Textures](/documentation/api/class-texture/) need their own [TextureSpec](/documentation/api/struct-texture-spec/) to be instantiated and properly initialized. The following corresponds to the Spec for the texture that reconstruct the original image:
+[Textures](/documentation/api/class-texture/) need their own [TextureSpec](/documentation/api/struct-texture-spec/) to be instantiated and properly initialized. The following corresponds to the **Spec** for the texture that reconstruct the original image:
 
 ```cpp
 TextureROMSpec ActorTextureSpec =
@@ -90,7 +90,7 @@ TextureROMSpec ActorTextureSpec =
 };
 ```
 
-A [Texture](/documentation/api/class-texture/)’s map has to be loaded in BGMAP memory when it is displayed by a [BgmapSprite](/documentation/api/class-bgmap-sprite/). But graphical memory allocation isn’t required when the graphical data is displayed using a [ObjectSprite](/documentation/api/class-object-sprite/) since it only requires the map array to reference from OBJECT memory the CHARs from the [CharSet](/documentation/api/class-char-set/) in the right bidimensional order.
+A [Texture](/documentation/api/class-texture/)’s map has to be loaded in BGMAP memory when it is displayed by a [BgmapSprite](/documentation/api/class-bgmap-sprite/). But graphical memory allocation isn’t required when the graphical data is displayed using an [ObjectSprite](/documentation/api/class-object-sprite/) since it only requires the map array to reference from OBJECT memory the CHARs from the [CharSet](/documentation/api/class-char-set/) in the right bidimensional order.
 
 Finally, [Textures](/documentation/api/class-texture/) are displayed by [Sprites](/documentation/api/class-sprite/), either from BGMAP memory through a single WORLD, or by rendering each CHAR into OBJECT memory. The following [SpriteSpec](/documentation/api/struct-sprite-spec/) exemplifies the former in reference to the [TextureSpec](/documentation/api/struct-texture-spec/) above:
 
@@ -209,7 +209,7 @@ The following shows an example of a frame blending [Texture](/documentation/api/
 
 ### OBJECT Sprites
 
-The [ObjectSprite](/documentation/api/class-object-sprite/) uses OBJECTs to render CHARs in one of the 4 posible WORLDS in OBJECT display mode. As all the [Sprites](/documentation/api/class-sprite/), they use a [Texture](/documentation/api/class-texture/), but its map is used directly by the [ObjectSprite](/documentation/api/class-object-sprite/) to configure the OBJECTs. They are more flexible than [BgmapSprite](/documentation/api/class-bgmap-sprite/), but use more memory and are heavier to process, both by the CPU and the VIP.
+The [ObjectSprite](/documentation/api/class-object-sprite/) uses OBJECTs to render CHARs in one of the 4 posible WORLDS in OBJECT display mode. As all the [Sprites](/documentation/api/class-sprite/), they use a [Texture](/documentation/api/class-texture/), but its map is used directly by the [ObjectSprite](/documentation/api/class-object-sprite/) to configure the OBJECTs. They are more flexible than [BgmapSprites](/documentation/api/class-bgmap-sprite/), but use more memory and are heavier to process, both by the CPU and the VIP.
 
 ## Wireframes
 
@@ -299,7 +299,7 @@ if(!isDeleted(wireframe))
 
 ## Printing
 
-[VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a special [Sprite](/documentation/api/class-sprite/) to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a special [Entity](/documentation/api/class-entity/) and [Sprite](/documentation/api/class-sprite/) to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
 
 ```cpp
     /// Print a string.

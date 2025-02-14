@@ -12,7 +12,7 @@ title: Configuration
 
 The engine provides its own configuration file, but each game should provide its own to override the engine’s default behavior.
 
-For a description of the configuration parameters check the default _Config.h_ file.
+For a description of the configuration parameters check the default [_Config.h_](https://github.com/VUEngine/VUEngine-Core/blob/master/headers/Config.h) file.
 
 ## Compilation options
 
