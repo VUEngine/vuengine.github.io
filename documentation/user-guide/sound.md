@@ -125,7 +125,7 @@ const SoundTrackKeyframe MenuSongSoundTrack1Keyframes[] =
 };
 ```
 
-The [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source, instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
+The [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source/ Instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
 
 To reproduce a sound, a request to the [SoundManager](/documentation/api/class-sound-manager/)’s instance can be performed as shown below:
 
@@ -145,7 +145,7 @@ extern SoundSpec SampleSoundSpec;
 Sound sound = SoundManager::getSound(&SampleSoundSpec, NULL, NULL);
 ```
 
-Sound playback supports spatial positioning through stereo separation if a reference to a [Transformation](/documentation/api/struct-transformation/) is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
+Sound playback supports spatial positioning through stereo separation if a pointer to a [Transformation](/documentation/api/struct-transformation/) is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
 
 ```cpp
 if(!isDeleted(sound))
@@ -189,11 +189,11 @@ typedef struct StageSpec
 
 The resolution corresponds to the hardware's capabilities of ticking at 20 or 100 us intervals. Hence, a resolution of `__TIMER_20US` allows for greater precision between interrupts.
 
-The target time per interrupt, measured either in milliseconds or in microseconds depending on the value of the target timer per interrupt units attribute (`kMS` or `kUS`), is the disired time interval between interrupts.
+The target time per interrupt, measured either in milliseconds or in microseconds depending on the value of the target time per interrupt units attribute (`kMS` or `kUS`), is the disired time interval between interrupts.
 
-Usually, a target timer per interrupt of 5, 10, or even 20 ms is good enough for rich sound effects and songs during gameplay. Depending on the [Stage](/documentation/api/class-stage/), firing more interrupts per second can have a negative impact on the performance of the game.
+Usually, a target time per interrupt of 5, 10, or even 20 ms is good enough for rich sound effects and songs during gameplay. Depending on the [Stage](/documentation/api/class-stage/), firing more interrupts per second can have a negative impact on the performance of the game. But a too low frequency can cause silence intervals if too many playback requests to the [VSUManager](/documentation/api/class-v-s-u-manager/) pile on.
 
-In the case of PCM playback, a high frequency interrupt triggering is required to achieve acceptable sound playback and to reduce the noise, product of the fact that the VSU is not designed to reproduce such sounds and they are basically hacked together to make them possible on the platform.
+In the case of PCM playback, a high frequency interrupt triggering is required to achieve acceptable sound quality and to reduce the noise, product of the fact that the VSU is not designed to reproduce such sounds and they are basically hacked together to make them possible on the platform.
 
 The following table shows some general guidance on what is achievable, although the actual results are highly dependent on the load on the [Stage](/documentation/api/class-stage/)'s complexity:
 

@@ -15,7 +15,7 @@ Each one is opened through the pressing of a key combination.
 
 _Key combination_: Hold Select + Right Trigger and press Up on the right direction pad
 
-It shows pages with information about WRAM usage, video memory usage (WORLDs, BGMAPs, OBJECTs and CHARs), the [Stage](/documentation/api/class-stage/)’s status, collisions information, hardware registers, SRAM space:
+It shows pages with information about WRAM usage, video memory usage (WORLDs, BGMAPs, OBJECTs and CHARs), the [Stage](/documentation/api/class-stage/)’s status, collisions information, hardware registers, SRAM space, etc.:
 
 <figure>
     <a href="/documentation/images/user-guide/development-tools/debug-wram-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="WRAM Inspector">
@@ -82,7 +82,7 @@ It allows to modify at runtime the frames of animation and the duration of each:
 
 _Key combination_: Hold Select + Right Trigger and press Left on the right direction pad
 
-It allows to move around [Actors](/documentation/api/class-actor/) in the current [Stage](/documentation/api/class-stage/) or even add new ones through the [ActorSpecs](/documentation/api/struct-actor-spec/) listed in the global `_userObjects` and to modify the [Stage](/documentation/api/class-stage/)’s optical settings:
+It allows to modify the [Stage](/documentation/api/class-stage/)’s optical settings, or to move around [Actors](/documentation/api/class-actor/) in the current [Stage](/documentation/api/class-stage/) and even to add new ones through the [ActorSpecs](/documentation/api/struct-actor-spec/) listed in the global `_userObjects`:
 
 <figure>
     <a href="/documentation/images/user-guide/development-tools/debug-stage-editor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Stage Editor">
@@ -97,9 +97,7 @@ It allows to move around [Actors](/documentation/api/class-actor/) in the curren
 
 _Key combination_: Hold Select + Right Trigger and press Down on the right direction pad
 
-It allows to play sounds through the [SoundSpecs](/documentation/api/struct-sound-spec/) listed in the global `_userSounds`:
-
-It allows to modify at runtime the timer settings to test how the sound tolerates changes to the timer interrupts’ frequency.
+It allows to play sounds through the [SoundSpecs](/documentation/api/struct-sound-spec/) listed in the global `_userSounds` and to modify at runtime the timer settings to test how the sound tolerates changes to the timer interrupts’ frequency.
 
 <figure>
     <a href="/documentation/images/user-guide/development-tools/debug-sound-test.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Sound Test">

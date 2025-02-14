@@ -19,7 +19,7 @@ void SomeGameState::processUserInput(const UserInput* userInput)
 }
 ```
 
-The [UserInput](/documentation/api/struct-user-input/) struct, passed as a pointer to the [GameState](/documentation/api/class-game-state/) and is only valid during that call. It has the following members:
+The [UserInput](/documentation/api/struct-user-input/) struct, passed as a pointer to the [GameState](/documentation/api/class-game-state/) and is valid during the current game frame. It has the following members:
 
 ```cpp
 /// User's input

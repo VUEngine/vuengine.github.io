@@ -12,7 +12,7 @@ The engine supports post-processing effects that allow the direct manipulation o
 
 Once the image frame has been fully processed and written to the current frame buffers at the moment post-processing kicks in, you are free to manipulate the image in any way you like. You can thus use post-processing to achieve visual effects which would not be possible by other means on the Virtual Boy.
 
-To apply a post-processing effect register it using the following call with a appropriate post processing function:
+To apply a post-processing effect, register it using the following call with a appropriate post processing function:
 
 ```cpp
 VUEngine::pushBackPostProcessingEffect
@@ -32,7 +32,7 @@ VUEngine::removePostProcessingEffect
 );
 ```
 
-A post processing effect function is one with a signature exemplified as follows:
+A post processing effect function is one with a signature as the one shown below:
 
 ```cpp
 /// Apply the post processing effect.

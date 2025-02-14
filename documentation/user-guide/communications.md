@@ -8,7 +8,7 @@ title: Communications
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports versus mode in games through connectivity between 2 Virtual Boy systems by means of the Link Cable and the [CommunicationManager](/documentation/api/class-communication-manager/), which manages the hardware’s EXT port. It supports both synchronous and asynchronous communications.
 
-Transmission consists of a message and optional data to be transmitted as a stream of bytes. After transmission is completed, the client code must check for the validity of the transmitted data by verifying the received message.
+Transmission consists of a message and optional data to be transmitted as a stream of bytes. After the transmission is completed, the client code must check for the validity of the transmitted data by verifying the received message.
 
 ```cpp
 void SomeClass::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataBytes)

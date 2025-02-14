@@ -299,7 +299,7 @@ if(!isDeleted(wireframe))
 
 ## Printing
 
-[VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a special [Entity](/documentation/api/class-entity/) and [Sprite](/documentation/api/class-sprite/) to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) uses a special [Entity](/documentation/api/class-entity/) to provide a printing facility, both for UI and gaming purposes, as for helping debugging. The following are the available methods to print different primitive data types:
 
 ```cpp
     /// Print a string.
@@ -360,7 +360,7 @@ Only [Sprites](/documentation/api/class-sprite/) support animations. There are b
 - To load all the CHARs for all the frames of animation at once
 - To load only the CHARs that correspond to a single frame of animation at any given time
 
-The first approach puts stress on video memory since depending on the size of each frame and the number of animation frames, it can quickly deplete CHAR memory. The second alternative puts the stress on the CPU since it has to rewrite the pixel data when the frame of animation changes. Using one or the other depends on the memory and performance requirements of the game.
+The first approach puts stress on video memory since depending on the size of each frame and the number of animation frames, it can quickly deplete CHAR memory. The second alternative puts the stress on the CPU because it has to rewrite the pixel data when the frame of animation changes. Using one or the other depends on the memory and performance requirements of the game.
 
 [CharSets](/documentation/api/class-char-set/) can be shared by multiple [Textures](/documentation/api/class-texture/). Whether this is the case or not, is determined by the shared flag of the [CharSetSpec](/documentation/api/struct-char-set-spec/):
 
@@ -384,9 +384,9 @@ CharSetROMSpec ActorCharsetSpec =
 };
 ```
 
-When requesting a [CharSet](/documentation/api/class-char-set/) by providing a shared [CharSetSpec](/documentation/api/struct-char-set-spec/), the engine will only allocate a [CharSet](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU performance.
+When requesting a [CharSet](/documentation/api/class-char-set/) by providing a shared [CharSetSpec](/documentation/api/struct-char-set-spec/), the engine will only allocate a [CharSet](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU time.
 
-The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any give moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSet](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame, making all instances to be in sync:
+The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any given moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSet](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame, making all instances to be in sync:
 
 <a href="/documentation/images/user-guide/graphics/punk-chars-shared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" /></a>
 
@@ -418,7 +418,7 @@ CharSetROMSpec ActorMultiframeCharsetSpec =
 };
 ```
 
-Allocating all frames of animation has a meaning in regards to [Textures](/documentation/api/class-texture/) too. [Textures](/documentation/api/class-texture/) define how to organize the CHARs or tiles of a [CharSet](/documentation/api/class-cha-set/) into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of [ObjectSprite](/documentation/api/class-object-sprite/). But when using BGMAPs with [BgmapSprite](/documentation/api/class-bgmap-sprite/), the [Texture](/documentation/api/class-texture/)’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.
+Allocating all frames of animation has a meaning in regards to [Textures](/documentation/api/class-texture/) too. [Textures](/documentation/api/class-texture/) define how to organize the CHARs or tiles of a [CharSet](/documentation/api/class-cha-set/) into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of [ObjectSprite](/documentation/api/class-object-sprite/). But when using BGMAPs with [BgmapSprites](/documentation/api/class-bgmap-sprite/), the [Texture](/documentation/api/class-texture/)’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.
 
 To load all the maps for all the animation frames of an animation in BGMAP memory, the [TextureSpec](/documentation/api/struct-texture-spec/) must specify the total number of frames:
 

@@ -8,19 +8,17 @@ title: Stages
 
 [Sprites](/documentation/api/class-sprite/) already help to avoid mixing data with game logic with hardware management, but they are still somehow “low level” objects. Games are not composed of [Sprites](/documentation/api/class-sprite/), but of game objects, some of which have a visual representation, some of which don’t (a trigger, for example).
 
-[VUEngine](https://github.com/VUEngine/VUEngine-Core) implements [Stages](/documentation/api/class-stage/) as collections of a specific type of [Entity](/documentation/api/class-entity/): [Actors](/documentation/api/class-actor/).
-
-Since the Virtual Boy's CPU lacks data cache, the penalty for having to dereference pointers instead of indexing fixed arrays is not big enough to give up the generality that the use of lists affords.
+[VUEngine](https://github.com/VUEngine/VUEngine-Core) implements [Stages](/documentation/api/class-stage/) as dynamic collections of a specific type of [Entity](/documentation/api/class-entity/): [Actors](/documentation/api/class-actor/). Since the Virtual Boy's CPU lacks data cache, the penalty for having to dereference pointers instead of indexing fixed arrays is not big enough to give up the generality that the use of lists affords.
 
 ## Entity
 
-An [Entity](/documentation/api/class-entity/) is a [ListenerObject](/documentation/api/class-listener-object/), so it can send and receive messages and it can listen for and fire events. It adds to it a 3D [Transformation](/documentation/api/struct-transformation/), which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that [Transformation](/documentation/api/struct-transformation/). Finally, it supports the attachment of [Components](/documentation/api/class-component/) to it. [Components](/documentation/api/class-component/) can be visual components, like [Sprites](/documentation/api/class-sprite/) and [Wireframes](/documentation/api/class-wireframe/); behavioral components, like steering behaviors; mutators;physical components or collision components.
+An [Entity](/documentation/api/class-entity/) is a [ListenerObject](/documentation/api/class-listener-object/), so it can send and receive messages and it can listen for and fire events. It adds to it a 3D [Transformation](/documentation/api/struct-transformation/), which describes a position, a rotation (euclidean only) and a scale in 3D space, and declares and implements some methods that operate on that [Transformation](/documentation/api/struct-transformation/). Finally, it supports the attachment of [Components](/documentation/api/class-component/) to it. [Components](/documentation/api/class-component/) can be visual components, like [Sprites](/documentation/api/class-sprite/) and [Wireframes](/documentation/api/class-wireframe/); behavioral components, like steering behaviors; mutators; physical components or collision components.
 
 The [Entity](/documentation/api/class-entity/) class is abstract, therefore there can not be pure instances of it.
 
 ## Container
 
-[Containers](/documentation/api/class-container/) are a special type of [Entity](/documentation/api/class-entity/) that implement parenting by adding a local [Transformation](/documentation/api/struct-transformation/) relative to that of a parent [Container](/documentation/api/class-container/). They are the means by which the engine implements the composite pattern.
+[Containers](/documentation/api/class-container/) are a special type of [Entity](/documentation/api/class-entity/) that implements parenting by adding a local [Transformation](/documentation/api/struct-transformation/) relative to that of a parent [Container](/documentation/api/class-container/). They are the means by which the engine implements the composite pattern.
 
 [Containers](/documentation/api/class-container/) can have children [Containers](/documentation/api/class-container/), grandchildren [Containers](/documentation/api/class-container/), grand-grandchildren [Containers](/documentation/api/class-container/), etc.
 
@@ -28,11 +26,11 @@ The engine takes care of keeping up to date the [Containers](/documentation/api/
 
 [Containers](/documentation/api/class-container/) can forward or block the flow of logic towards their children. They can propagate messages to them too.
 
-[Containers](/documentation/api/class-container/) are abstract too. So they are not used nor instantiated directly.
+[Containers](/documentation/api/class-container/) are abstract, so they are not used nor instantiated directly.
 
 ## Stage
 
-At the root of the hierarchy of [Containers](/documentation/api/class-container/), sits an instance of the [Stage](/documentation/api/class-stage/) class. A [Stage](/documentation/api/class-stage/) is the first type of [Container](/documentation/api/class-container/) and [Entity](/documentation/api/class-entity/) that can be instantiated. It only allows instances of another specific type of Container as children: [Actors](/documentation/api/class-actor/). The [Stage](/documentation/api/class-stage/) implements the logic to stream in and out [Actors](/documentation/api/class-actor/) and is the proxy through which the [GameState](/documentation/api/class-game-state/) accesses the [Actors](/documentation/api/class-actor/) in a game level.
+At the root of the hierarchy of [Containers](/documentation/api/class-container/), sits an instance of the [Stage](/documentation/api/class-stage/) class. A [Stage](/documentation/api/class-stage/) is the first type of [Container](/documentation/api/class-container/) that can be instantiated. It only allows instances of another specific type of Container as children: [Actors](/documentation/api/class-actor/). The [Stage](/documentation/api/class-stage/) implements the logic to stream in and out [Actors](/documentation/api/class-actor/) and is the proxy through which the [GameState](/documentation/api/class-game-state/) accesses the [Actors](/documentation/api/class-actor/) in a game level.
 
 The [Stage](/documentation/api/class-stage/) takes a [StageSpec](/documentation/api/struct-stage-spec/) in its constructor to initialize itself. Among a lot of other things, it has an array of **ActorSpecs** that determine the [Actors](/documentation/api/class-actor/) that will populate the [Stage](/documentation/api/class-stage/):
 
@@ -176,10 +174,6 @@ PositionedActor positionedActor =
     &ActorSpec, {0, 64, 16}, {0, 0, 0}, {1, 1, 1},  0, "Moe", NULL, NULL, false
 };
 
-/*
-* This is how we add actors to the Stage. Notice that we don't creates Sprites nor animate them
-* directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
-*/
 Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false);
 ```
 
@@ -223,16 +217,16 @@ You acquire a direct reference to a newly spawned [Actor](/documentation/api/cla
 * directly anymore. Now, the engine takes care of all that by reading the ActorSpec.
 */
 Actor actor =
-Actor::safeCast
-(
-    Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false)
-);
+    Actor::safeCast
+    (
+        Stage::spawnChildActor(this->stage, (const PositionedActor* const)&positionedActor, false)
+    );
 ```
 
 Or you acquire it indirectly if the [Actor](/documentation/api/class-actor/) is being added automatically by the [Stage](/documentation/api/class-stage/)’s streaming as specified in the [StageSpec](/documentation/api/struct-stage-spec/):
 
 ```cpp
-Actor childActor = Actor::safeCast(Actor::getChildByName(actor, "ChildActorName", false));
+Actor childActor = Actor::safeCast(Stage::getChildByName(this->stage, "ChildActorName", false));
 ```
 
 Then you can move around the [Actor](/documentation/api/class-actor/), rotate it, etc., and all its components will take care of keeping their states in sync with the [Actor](/documentation/api/class-actor/).
@@ -323,7 +317,7 @@ ParticleSystemROMSpec SomeParticleSystemNormalSpec =
 {
     // EntitySpec
     {...
-    }
+    },
 
     // reuse expired particles?
     true,
@@ -376,9 +370,9 @@ ParticleSystemROMSpec SomeParticleSystemNormalSpec =
 
 ## Particle
 
-[Particles](/documentation/api/class-particle/) are a kind of lightweight, reusable [Entity](/documentation/api/class-entity/), that are instantiated by [ParticleSystems](/documentation/api/class-particlesystem/). They don’t exist in the [Stage](/documentation/api/class-stage/) as childs of it, although they can interact with other [Actors](/documentation/api/class-actor/) by means of collisions.
+[Particles](/documentation/api/class-particle/) are a kind of lightweight, reusable [Entity](/documentation/api/class-entity/), that are instantiated by [ParticleSystems](/documentation/api/class-particlesystem/). They don’t exist in the [Stage](/documentation/api/class-stage/) as children of it, although they can interact with other [Actors](/documentation/api/class-actor/) by means of collisions.
 
-[Particles](/documentation/api/class-particle/) manage their components in a more specific and constrained way than [Actors](/documentation/api/class-actor/) in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to reduce the overhead of constantly creating and destroying them.
+[Particles](/documentation/api/class-particle/) manage their components in a more specific and constrained way than [Actors](/documentation/api/class-actor/) in order to be as performant as possible, to reduce their memory footprint and to make it possible their reutilization to avoid the overhead of constantly creating and destroying them.
 
 ```cpp
 ParticleROMSpec SomeParticleSpec =
@@ -409,4 +403,4 @@ ParticleROMSpec SomeParticleSpec =
 };
 ```
 
-[Particles](/documentation/api/class-particle/) can have physics applied to them and they can even collide with other instances of [Entity](/documentation/api/class-entity/) in a [Stage](/documentation/api/class-stage/).
+[Particles](/documentation/api/class-particle/) can have physics applied to them and they can even collide with other [Entities](/documentation/api/class-entity/) in a [Stage](/documentation/api/class-stage/).

@@ -25,7 +25,7 @@ Currently, there isn't an interactive C debugger for the version of GCC bundled 
 
 ### Exceptions
 
-Since the engine makes heavy use of pointer logic, it is really easy to trigger difficult to find bugs. In order to mitigate this issue, [VUEngine](https://github.com/VUEngine/VUEngine-Core) provides an error facility that helps to catch when the code execution followed a logically invalide path.
+Since the engine makes heavy use of pointer logic, it is really easy to trigger difficult to find bugs. In order to mitigate this issue, [VUEngine](https://github.com/VUEngine/VUEngine-Core) provides an error facility that helps to catch when the code execution followed a logically invalid path.
 
 Use the `ASSERT` or `NM_ASSERT` macros to test for a condition that, when not met, throws and exception:
 
@@ -33,14 +33,14 @@ Use the `ASSERT` or `NM_ASSERT` macros to test for a condition that, when not me
 ASSERT(NULL != object, "ClassName::methodName: NULL Object");
 ```
 
-These macros should be used throughout the code to make debugging easier. Since the engine relies heavily on pointer usage, it is common to operate on a `NULL` pointer and get lost.
+These macros should be used throughout the code to make debugging easier. Since the engine relies heavily on pointer usage, it is common to operate on a `NULL` or dangling pointer and get lost.
 
 For example, the engine protects some singleton methods to prevent unintended side of effects produced by modifying part of the global state of the program from where they shouldn't be modified. When trying to call the `reset` method of the `BgmapTextureManager` singleton, an exception will be thrown:
 
 <a href="/documentation/images/faq/exception.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Illegal method access"><img src="/documentation/images/faq/exception.png" width="500" /></a><br/>
 _Exception screen_
 
-When an exception is thrown, you're presented with some output that's meant to help you find the exact location that is causing the crash. Looking for the message in both your game code as well as the engine would be the quickest thing to do but should give you only a rough idea of the problem's root in most cases.
+When an exception is thrown, you're presented with some output that's meant to help you find the exact location that is causing the crash. Looking for the message in both your game code as well as the engine would be the quickest thing to do and should give you only a rough idea of the problem's root in most cases.
 
 The most important information in the exception screen are the LP and the message. The message usually shows the class and the method where an assertion failed, while the LP value represents the return point in the binary of the code that made the call to method shown by the message.
 
@@ -90,7 +90,7 @@ Only inserted when compiling under [debug mode](/documentation/basics/building/#
 
 ##### NM_ASSERT
 
-Inserted in non release build modes. NM stands for "non maskable". This macro is meant to be placed in sensible parts of the code that you want to catch when working under [beta mode](/documentation/basics/building/#beta).
+It is inserted in non release build modes. NM stands for "non maskable". This macro is meant to be placed in sensible parts of the code that you want to catch when working under [beta mode](/documentation/basics/building/#beta).
 
 ```cpp
 NM_ASSERT(!isDeleted(someObject), "ClassName::methodName: someObject is invalid");
@@ -110,7 +110,7 @@ PRINT_TEXT(__GET_CLASS_NAME(object), 1, 1);
 
 To up or down cast an object safely, use the macro:
 
-- `__GET_CLASS_NAME(ClassName, object)`
+- `__GET_CAST(ClassName, object)`
 
 Usually, it is used in conjunction with an assert macro:
 
@@ -122,7 +122,7 @@ NM_ASSERT(NULL != __GET_CAST(ClassName, object), "ClassName::methodName: object 
 
 #### Initialize everything
 
-One of the most difficult, and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange behavior often are caused by not properly initialized variables. To aid the detection of such mistakes, set `memoryPools.cleanUp` to `true` in `config/Engine.json` to define the `__MEMORY_POOL_CLEAN_UP` macro. This will force the engine to put every memory pool's free block to 0 when the game changes its state, so, if the problem gets solved by defining such macro, the cause is, most likely, an uninitialized variable.
+One of the most difficult and common source of hard to diagnose bugs are uninitialized variables; random crashes or completely strange behavior often are caused by that, so, make sure to properly initialized all of them.
 
 #### MemoryPool size
 
@@ -130,7 +130,7 @@ When things begin to break unexpectedly and in random places, it is almost guara
 
 Since the safe minimum for the stack is about 4KB, your memory pool configuration should not exceed 60KB (depending on how deep the stack can grow because of nested function calls, this limit could be lower; this is specially the case when compiling under [debug mode](/documentation/basics/building/#debug)).
 
-#### Cast everything
+#### Safely cast everything
 
 Because the engine implements class inheritance by accumulation of attributes' definitions within macros, it is necessary to cast every object pointer in order to avoid compiler warnings when calling class methods. To save some typing, this is done implicitly by the traspiler for the class object. But other object arguments should be explicitly casted with:
 
