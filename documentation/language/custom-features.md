@@ -6,7 +6,7 @@ title: Custom Features
 
 # Custom Features
 
-Virtual C adds a couple features of its own, thanks to the fact that it manipulates virtual tables directly.
+Virtual C adds a couple features of its own, thanks to the fact that it is a custom implementation on top of C.
 
 ## Class modifiers
 
@@ -30,11 +30,13 @@ The class modifiers are:
 
 The `abstract` class modifier prevents the creation of class instances through the `new` keyword, without the requirement of there being at least one pure virtual method.
 
+Classes that have pure virtual methods (by qualifying their declaration with `= 0;`) are implicitly abstract.
+
 ### Singleton classes
 
 The language support the declaration of classes that can only have a single instance and adds automatically the necessary code to prevent more than one instantiation.
 
-The singleton classes' instances are allocated in the stack.
+The singleton classes' instances are allocated in global memory.
 
 Since singletons are globally accesible, they put at risk the stability of the program by being modifiable from anywhere. So, it is important to have some mechanism to help preventing as much as possible such modifications.
 
@@ -79,15 +81,15 @@ There are some limitations due to the fact that globality cannot really be so ea
 
 ### Dynamic Singleton classes
 
-These kind of singletons are dynamically allocated, hence not in the stack. Their destruction is optional, but they are usually manually deleted when not necessary to save on memory. In every other aspect, they are just like normal singletons.
+These kind of singletons are dynamically allocated. Their destruction is optional, but they are usually manually deleted when not necessary to save on memory. In every other aspect, they are just like normal singletons.
 
 ### Static classes
 
-Static classes cannot have instances. All their methods are static.
+Static classes cannot have instances and all their methods are static.
 
 ### Extensions classes
 
-Classes can be extended through the use of the `extension` keyword. They provided a mechanism to achieve something like runtime method re-implementation on specific virtual methods. Extension classes don't have to, and cannot, provide a constructor and destructor.
+Classes can be extended through the use of the `extension` keyword. They provide a mechanism to achieve something like runtime method re-implementation on specific virtual methods. Extension classes don't have to, and cannot, provide a constructor and destructor.
 
 Given some class:
 
@@ -127,7 +129,7 @@ To mutate a virtual method, use the following syntax:
 
 ### Mutation classes
 
-Virtual C implements polymorphism by adding a virtual table pointer to each object, which means that it can be manipulated in real time. Mutation classes permit to override or to extend a class' functionality by allowing an object's virtual table pointer to change its target in runtime, making the instance subject to different implementations of virtual methods or capable of reacting to new methods provided by the mutation class. These classes have the following constraints:
+Virtual C implements polymorphism by adding a virtual table pointer to each object, which means that it can be manipulated in real time. Mutation classes permit to override or to extend a class' functionality by allowing an object's virtual table pointer to change its target during runtime, making the instance subject to different implementations of virtual methods or capable of reacting to new methods provided by the mutation class. These classes have the following constraints:
 
 - They have to inherit from a non abstract class
 - They have to be data-invariant with respect to the base class (ie: they cannot add attributes of their own)

@@ -48,7 +48,7 @@ SomeClass someClassObject = new SomeClass();
 delete someClassObject;
 ```
 
-Structs can be dynamicall allocated too:
+Structs can be dynamically allocated too:
 
 ```cpp
 typedef SomeStruct
