@@ -12,7 +12,7 @@ To make the disk move we have various options: directly manipulating its transfo
 
 ## Adding physic simulations
 
-Another type of [Component](/documentation/api/class-component/) that can be easily added through the actor editor is a [Body](/documentation/api/class-body/). It allows to apply forces to an [Actor](/documentation/api/class-actor/) or set its velocity and it will take care of the computation of the movement. Open the _Disk.actor_ editor and add a Body component like you previously did with Sprites, and input the following values:
+Another type of [Component](/documentation/api/class-component/) that can be easily added through the actor editor is a [Body](/documentation/api/class-body/). It allows to apply forces to an [Actor](/documentation/api/class-actor/) or set its velocity and it will take care of the computation of the movement. Open the _Disk.actor_ editor and add a [Body](/documentation/api/class-body/) component like you previously did with [Sprites](/documentation/api/class-sprite/), and input the following values:
 
 <a href="/documentation/images/tutorial/disk-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk body"><img src="/documentation/images/tutorial/disk-body.png" /></a>
 

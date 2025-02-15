@@ -106,7 +106,7 @@ virtual void resume(void* owner);
 
 While it is possible to implement a whole game that runs solely in the `execute` method, the flexibility of the engine shines when using [Stages](/documentation/api/class-stage/), which are [Containers](/documentation/api/class-container/) that have [Actors](/documentation/api/class-actor/) as children.
 
-When the engine's [StateMachine](/documentation/api/class-state-machine/) enters a new [GameStates](/documentation/api/class-game-state/), it will call [GameState::enter](/documentation/api/class-game-state/), where the state can be initialized.
+When the engine's [StateMachine](/documentation/api/class-state-machine/) enters a new [GameState](/documentation/api/class-game-state/), it will call [GameState::enter](/documentation/api/class-game-state/), where the state can be initialized.
 
 But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_. In the latter, declare the `PongState` class as shown below:
 
@@ -149,6 +149,10 @@ PositionedActorROMSpec PongStageActors[] =
 Now that the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to [PongState::configureStage](/documentation/api/class-game-state/):
 
 ```cpp
+#include "PongState.h"
+
+[...]
+
 void PongState::enter(void* owner __attribute__((unused)))
 {
     Base::enter(this, owner);
