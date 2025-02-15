@@ -165,6 +165,10 @@ void PongState::enter(void* owner __attribute__((unused)))
 Don't forget to override the method in the header file:
 
 ```cpp
+#include <GameState.h>
+
+[...]
+
 singleton class PongState : GameState
 {
     /// Method to get the singleton instance
