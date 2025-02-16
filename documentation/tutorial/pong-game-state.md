@@ -111,6 +111,10 @@ When the engine's [StateMachine](/documentation/api/class-state-machine/) enters
 But we just got ahead of ourselves a little bit. First, we need to create the `PongState` in order to being able to transition to it. To do so, create the folder _source/States/PongState_ and two files in it: _source/States/PongState/PongState.c_ and _source/States/PongState/PongState.h_. In the latter, declare the `PongState` class as shown below:
 
 ```cpp
+#include <GameState.h>
+
+[...]
+
 singleton class PongState : GameState
 {
     /// Method to get the singleton instance
@@ -165,10 +169,6 @@ void PongState::enter(void* owner __attribute__((unused)))
 Don't forget to override the method in the header file:
 
 ```cpp
-#include <GameState.h>
-
-[...]
-
 singleton class PongState : GameState
 {
     /// Method to get the singleton instance
