@@ -161,7 +161,8 @@ void PongState::enter(void* owner __attribute__((unused)))
 {
     Base::enter(this, owner);
 
-    // Load stage
+    // Load the stage
+    extern StageROMSpec PongStageSpec;
     PongState::configureStage(this, (StageSpec*)&PongStageSpec, NULL);
 }
 ```
