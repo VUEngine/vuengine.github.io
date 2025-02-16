@@ -132,7 +132,7 @@ void Disk::ready(bool recursive)
 }
 ```
 
-> **Note**: Make sure to place the files in the right folders. Virtual C's transpiler is applied only to the files under the _source/_ folder; while those in the _assets/_ folder are directly feed to the C compiler because they shouldn't contain Virtual C code. Failing to following this guide line will probably generate tons of be cryptinc errores by the compiler.
+> **Note**: Make sure to place the files in the right folders. The Virtual C's transpiler is applied only to the files under the _source/_ folder; while those in the _assets/_ folder are directly feed to the C compiler. Failing to following this guide line will probably generate tons of cryptic errores by the compiler.
 
 Finally, it is necessary to start the clock that controls physics simulations, that can be done in various ways, here, we do it by calling `PongState::startClocks`:
 
