@@ -166,7 +166,7 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
 }
 ```
 
-Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, the method halts the propagation of the `kMessageKeypadHoldDown` message, but allows other messages to continue to be propagated by returning `false`.
+Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, the method halts the propagation of the `kMessageKeypadHoldDown` message, but allows other messages to continue to be propagated by returning `false`. So, only the first instance of `Paddle` will move.
 
 Since we disabled the user input when changing the state in `TitleScreenState::processUserInput`, it is necessary to enable it again by calling `KeypadManager::enable` when the engine enters in the `PongState` :
 
@@ -189,9 +189,9 @@ void PongState::enter(void* owner __attribute__((unused)))
 }
 ```
 
-If everything went right, once the game is built and run, both paddles will move when the user presses <span class="keys">UP</span> or <span class="keys">DOWN</span> on the left directional pad.
+If everything went right, once the game is built and run, the first paddle will move when the user presses <span class="keys">UP</span> or <span class="keys">DOWN</span> on the left directional pad.
 
-However, we don't want the player to control both paddles, so we'll need some AI-controlled opponent.
+Since only one of the paddles reacts to the user input, so we'll need some AI-controlled opponent.
 
 ## AI Paddle
 
