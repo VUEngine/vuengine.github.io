@@ -10,7 +10,7 @@ It is time to track the score of the game. To do so, we are going to implement a
 
 ## Pong Manager
 
-Let's add a `PongManager` class that will handle the game's logic. At minimum, it requires to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and given that the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of it. But because the `PongState` persist through the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroys it when it exists. So, override the `enter` and `exit` methods.
+Let's add a `PongManager` class that will handle the game's logic. At minimum, it requires to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and given that the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of it. But because the `PongState` persist through the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroy it when it exists. So, override the `enter` and `exit` methods.
 
 ```cpp
 #include <PongManager.h>
