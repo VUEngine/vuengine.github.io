@@ -194,7 +194,7 @@ class PongManager : ListenerObject
 And in its implementation, it has to process both events as follows:
 
 ```cpp
-bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uint16 eventCode)
+bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 {
     switch(eventCode)
     {
@@ -258,7 +258,7 @@ void PongManager::constructor(Stage stage)
 
 [...]
 
-bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uint16 eventCode)
+bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 {
     switch(eventCode)
     {

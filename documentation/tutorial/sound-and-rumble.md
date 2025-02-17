@@ -20,7 +20,7 @@ To play the sound effect when a point is scored, add the following to the `PongM
 
 [...]
 
-bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uint16 eventCode)
+bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 {
     switch(eventCode)
     {
@@ -89,7 +89,7 @@ Then, to send the effect to the [Rumble Pak](https://www.retroonyx.com/product-p
 
 [...]
 
-bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uint16 eventCode)
+bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 {
     switch(eventCode)
     {
