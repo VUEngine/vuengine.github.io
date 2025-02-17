@@ -71,7 +71,7 @@ extern ActorSpec WallActorSpec;
 
 PositionedActorROMSpec PongStageActors[] =
 {
-    {&DiskActorSpec,                {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&DiskActorSpec,                {0, 0, 0},    {0, 0, 0}, {1, 1, 1}, 0, "Disk", NULL, NULL, false},
     {&PlayerPaddleActorSpec,        {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&AIPaddleActorSpec,            {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
     {&WallActorSpec,                {0, -120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
