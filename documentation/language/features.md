@@ -37,10 +37,6 @@ abstract class Object : Object
     /// Class' constructor
     void constructor();
 
-    /// Retrieve the object's virtual table pointer
-    /// @return Pointer to the object's virtual table pointer
-    const void* getVTable();
-
     /// Converts the object into an instance of the target class if object's class is in the hierarchy of the target class.
     /// @param targetClass: pointer to the target class' virtual table
     /// @return True if successful
