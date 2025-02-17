@@ -275,4 +275,6 @@ bool PongManager::onEvent(ListenerObject eventFirer __attribute__((unused)), uin
 }
 ```
 
+This problem could have been solved by preloading the font by listing it in the [StageSpec](/documentation/api/struct-stage-spec/)'s fonts array, which would have ensured that the font' s[CharSets](/documentation/api/class-char-set/) is loaded at the begining of CHAR memory space so it is not defragmented. But because we are not specifying a font for the score printing, there is nothing to preload and the engine fallbacks to load a default one on demand.
+
 In the next and final step of this tutorial, let's round things off by adding some [sound and rumble effects](/documentation/tutorial/sound-and-rumble/). <i class="fa fa-arrow-right"></i>.
