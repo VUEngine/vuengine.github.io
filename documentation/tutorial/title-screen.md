@@ -101,7 +101,7 @@ In that panel, an image can be added by clicking the "Source Image" box at the t
 
 <a href="/documentation/images/tutorial/pong-sprite.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Pong Sprite"><img src="/documentation/images/tutorial/pong-sprite.png" /></a>
 
-Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/) will generate the file _Converted/LogoActorSpec.c_ next to our _Logo.actor_ file, containing the necessary **Spec**(s) to add our logo [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/).
+Behind the scenes, [VUEngine Studio](https://www.vuengine.dev/) will generate the file _Converted/LogoActorSpec.c_ next to our _Logo.actor_ file, it will contain the necessary **Spec**(s) to add our logo [Actor](/documentation/api/class-actor/) to the [Stage](/documentation/api/class-stage/).
 
 <a href="/documentation/images/tutorial/logo-actor-spec.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Logo Actor Spec"><img src="/documentation/images/tutorial/logo-actor-spec.png" /></a>
 
@@ -132,7 +132,7 @@ PositionedActorROMSpec TitleScreenStageUiActors[] =
 };
 ```
 
-When [TitleScreenState::configureStage](/documentation/api/class-game-state/) is called with **TitleScreenStageSpec** as one of its arguments in the `TitleScreenState::enter` function, an [Actor](/documentation/api/class-actor/) will be created according to the **LowPowerIndicatorActorSpec**.
+When **TitleScreenStageSpec**  is passed to [TitleScreenState::configureStage](/documentation/api/class-game-state/), as shown below, from the `TitleScreenState::enter` function, an [Actor](/documentation/api/class-actor/) will be created according to the **LowPowerIndicatorActorSpec**:
 
 ```cpp
 void TitleScreenState::enter(void* owner __attribute__((unused)))
@@ -174,6 +174,7 @@ With this new knowledge, we can now follow the example of the low power indicato
 
 ```cpp
 [...]
+
 extern ActorSpec LogoActorSpec;
 
 PositionedActorROMSpec TitleScreenStageActors[] =
