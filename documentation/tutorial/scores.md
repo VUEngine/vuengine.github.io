@@ -86,7 +86,7 @@ void PongState::constructor()
 }
 ```
 
-The `PongManager` class will be very simple. Appart from receiving in its constructor the `PongState`'s [Stage](/documentation/api/class-stage/) instance so it can retrieve the disk to know when it gets out of the screen, it will have a couple of attributes to keep track of the score:
+The `PongManager` class will be very simple. Apart from receiving in its constructor the `PongState`'s [Stage](/documentation/api/class-stage/) instance so it can retrieve the disk to know when it gets out of the screen, it will have a couple of attributes to keep track of the score:
 
 ```cpp
 #include <ListenerObject.h>
