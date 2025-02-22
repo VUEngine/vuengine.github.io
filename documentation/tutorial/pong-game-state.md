@@ -154,6 +154,9 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
+> **Note**: Be careful to add the **Specs** of the [Actors](/documentation/api/class-actor/) to the **PongStageActors** and not to the **PongStageUiActors** array.
+
+
 Now that the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to [PongState::configureStage](/documentation/api/class-game-state/):
 
 ```cpp
