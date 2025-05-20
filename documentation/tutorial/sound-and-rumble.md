@@ -10,7 +10,7 @@ Our game is almost done. We just want to round things off by adding some sound a
 
 ## Sound Effects
 
-Let's add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/main/assets/Sound/FX) and place them in _assets/Sound/FX_. Also download the header from [here](https://github.com/VUEngine/Pong/blob/main/headers/Sounds.h) and place it in the _headers/_ folder.
+Let's add a sound effect when the disk hits something and one when either side scores a point. Download the effects from [here](https://github.com/VUEngine/Pong/tree/ves-v0.6.0/assets/Sound/FX) and place them in _assets/Sound/FX_. Also download the header from [here](https://github.com/VUEngine/Pong/blob/ves-v0.6.0/headers/Sounds.h) and place it in the _headers/_ folder.
 
 To play the sound effect when a point is scored, add the following to the `PongManager::onEvent` method:
 
