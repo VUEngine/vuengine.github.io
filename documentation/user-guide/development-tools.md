@@ -17,7 +17,7 @@ _Key combination_: Hold <span class="keys">Select + Right Trigger</span> and pre
 
 The Debug Inspector shows pages with information about WRAM usage, video memory usage (WORLDs, BGMAPs, OBJECTs and CHARs), the [Stage](/documentation/api/class-stage/)’s status, collisions information, hardware registers, SRAM space, etc.
 
-Cycle through the different modes with the <span class="keys">Left Trigger</span> and <span class="keys">Right Trigger</span> buttons.
+Cycle through the different modes with the <span class="keys">Left D-Pad</span>.
 
 <figure>
     <a href="/documentation/images/user-guide/development-tools/debug-wram-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="WRAM Inspector">
@@ -86,7 +86,7 @@ _Key combination_: Hold <span class="keys">Select + Right Trigger</span> and pre
 
 The Stage Inspector allows to modify the [Stage](/documentation/api/class-stage/)’s optical settings, or to move around [Actors](/documentation/api/class-actor/) in the current [Stage](/documentation/api/class-stage/) and even to add new ones through the [ActorSpecs](/documentation/api/struct-actor-spec/) listed in the global `_userObjects`.
 
-Cycle through the different modes with the <span class="keys">Left Trigger</span> and <span class="keys">Right Trigger</span> buttons.
+Cycle through the different modes with the <span class="keys">Select</span> button.
 
 <figure>
     <a href="/documentation/images/user-guide/development-tools/debug-stage-editor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Stage Editor">
