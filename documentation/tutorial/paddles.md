@@ -236,6 +236,8 @@ mutation class AIPaddle : Actor
 The implementation will be very simple: retrieve a reference to the `Disk` instance through the [Stage](/documentation/api/class-stage/) by calling `AIPaddle::getRelativeByName`, check the disk's position over the Y axis and apply a force to the `AIPaddle` to catch up with it:
 
 ```cpp
+#include <string.h>
+
 #include <Body.h>
 
 #include "AIPaddle.h"

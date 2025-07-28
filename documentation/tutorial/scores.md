@@ -175,6 +175,10 @@ Since we know that the disk is being continually destroyed and created, we could
 To listen for the event when the disk is deleted, a listener has to be added on it. That is easy enough for the first instance of `Disk` that can be retrieved from the [Stage](/documentation/api/class-stage/) passed to the `PongManager`'s constructor. But it is not so easy to know about when a new instance is spawned because a listener cannot be added to instances of `Disk` that have not been created yet. So, we have to instruct the [Stage](/documentation/api/class-stage/) to add the listener for us when the instance is ready by calling [Stage::addActorLoadingListener](/documentation/api/class-stage/), which will take care of adding the listener to the [Actor](/documentation/api/class-actor/) that has been created:
 
 ```cpp
+#include <string.h>
+
+[...]
+
 void PongManager::constructor(Stage stage)
 {
     // Always explicitly call the base's constructor
