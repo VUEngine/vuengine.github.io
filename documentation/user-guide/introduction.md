@@ -8,7 +8,7 @@ title: Introduction
 
 So, you want to create some awesome game or application for the Nintendo Virtual Boy, or you just want to display stereoscopic graphics or even only to play music or sound effects on it. If you have already downloaded [VUEngine Studio](https://www.vuengine.dev/) (VES for short) for any of that, it is most likely because you are not planning on writing assembly code, but C, and might already be wondering if [VUEngine](https://github.com/VUEngine/VUEngine-Core) is the right tool to use to achieve your goals.
 
-VES can be used with other libraries, and [Team VUEngine](https://www.patreon.com/vuengine) even provides a ready to be used version of libgccvb, a basic set of functions that give access to the hardware features if you want to manage all the low level stuff yourself. With it, you will be controlling down to the hardware’s registers and the system's memory, most likely mixing data within the code that implements the logic of the game to do basic stuff like displaying some graphics, keeping track of mapping screen coordinates to video memory coordinates, among other things:
+VES can be used with other libraries, and [Team VUEngine](https://www.vuengine.dev/) even provides a ready to be used version of libgccvb, a basic set of functions that give access to the hardware features if you want to manage all the low level stuff yourself. With it, you will be controlling down to the hardware’s registers and the system's memory, most likely mixing data within the code that implements the logic of the game to do basic stuff like displaying some graphics, keeping track of mapping screen coordinates to video memory coordinates, among other things:
 
 ```cpp
 copymem ((void*) CharSeg0, (void*)chPass, 512*16);
@@ -83,12 +83,13 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
 ## Features
 
 - General:
+
   - Object Oriented
   - Composite and composition architecture
   - Decoupling through message sending and propagation, and event firing
   - State machines
-  - Separation of concers through *Spec* recipes to instantiate
-  game actors
+  - Separation of concers through _Spec_ recipes to instantiate
+    game actors
   - Restricted singletons
   - Dinaymic memory allocation through custom memory pools
   - Runtime debugging tools
@@ -96,11 +97,13 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Assets preloading
 
 - Stages:
+
   - 3D stages
   - Automatic streaming
   - Parenting
 
 - Components:
+
   - Mutators
   - Physics
   - Colliders
@@ -108,10 +111,12 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Wireframes
 
 - Particles:
+
   - Physically capable
   - Recyclable
 
 - Rendering:
+
   - CHAR memory management
   - BGAMP memory management
   - OBJECT memory management
@@ -122,6 +127,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Event driven frame based animation
 
 - Physics:
+
   - Basic accelerated/uniform movement
   - Gravity
   - Friction
@@ -129,6 +135,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Collision detection and notification
 
 - Sound:
+
   - Fully flexible VSU-native soundtrack format
   - PCM playback
 

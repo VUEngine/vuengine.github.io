@@ -189,7 +189,7 @@ typedef struct StageSpec
 
 The resolution corresponds to the hardware's capabilities of ticking at 20 or 100 us intervals. Hence, a resolution of `__TIMER_20US` allows for greater precision between interrupts.
 
-The target time per interrupt, measured either in milliseconds or in microseconds depending on the value of the target time per interrupt units attribute (`kMS` or `kUS`), is the disired time interval between interrupts.
+The target time per interrupt, measured either in milliseconds or in microseconds depending on the value of the target time per interrupt units attribute (`kMS` or `kUS`), is the desired time interval between interrupts.
 
 Usually, a target time per interrupt of 5, 10, or even 20 ms is good enough for rich sound effects and songs during gameplay. Depending on the [Stage](/documentation/api/class-stage/), firing more interrupts per second can have a negative impact on the performance of the game. But a too low frequency can cause silence intervals if too many playback requests to the [VSUManager](/documentation/api/class-v-s-u-manager/) pile on.
 
