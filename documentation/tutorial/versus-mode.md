@@ -479,6 +479,28 @@ void Disk::sychronize()
 }
 ```
 
+## Some fixes
+
+You will notice that the game can get stuck if it is first played for a while in one of the systems and then entering versus mode. This is due to the implicit supposition that the paddles and the `Disk` occupy always the same relative positions to each other in the [Stage](/documentation/api/struct-stage-spec/)'s children list.
+
+The more robust approach would be to centralize the synchronization of the game in the `PongManager`, but that would complicate the code quite a bit. Besides, that approach is already exemplified in the [VUEngine Showcase](https://github.com/VUEngine/VUEngine-Showcase) template project.
+
+So, for an easy workaround, to make sure that the `Disk` is always loaded after the paddles in the [StageSpec](/documentation/api/struct-stage-spec/):
+
+```cpp
+PositionedActorROMSpec PongStageActors[] =
+{    
+    {&PlayerPaddleActorSpec,         {-180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&AIPaddleActorSpec,             {180, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&WallActorSpec,                 {0, -120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&WallActorSpec,                 {0, 120, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&LowPowerIndicatorActorSpec,     {-192 + 8, 112 - 4, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+    {&DiskActorSpec,                 {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, DISK_NAME, NULL, NULL, false},
+
+    {NULL, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}, 0, NULL, NULL, NULL, false},
+};
+```
+
 ## That's all
 
 Once compiled and run, when two Virtual Boys are connected and both enter the game, it will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen.
