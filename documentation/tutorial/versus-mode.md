@@ -14,85 +14,11 @@ We are going to modify the game to detect when another Virtual Boy system is con
 
 ## Starting communications
 
-To handle communications between two Virtual Boy systems, VUEngine provides the singleton [CommunicationManager](<(/documentation/api/class-communication-manager/)>). The first thing to do is to enable communications at the end of `PongState::enter`:
+To handle communications between two Virtual Boy systems, VUEngine provides the singleton [CommunicationManager](<(/documentation/api/class-communication-manager/)>). The first thing to do is to enable communications at the end of `PongManager::constructor`. 
 
 ```cpp
 #include <CommunicationManager.h>
 
-[...]
-
-void PongState::enter(void* owner __attribute__((unused)))
-{
-    Base::enter(this, owner);
-
-    [...]
-
-    // Enable comms    
-    CommunicationManager::enableCommunications(CommunicationManager::getInstance(), ListenerObject::safeCast(this));
-}
-```
-
-The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event on the object provided as its scope once the handshake procedure with another system has succeeded.
-
-Let's add the corresponding listener. First, override the `onEvent` method in the header file, `PongState.h`:
-
-```cpp
-singleton class PongState : GameState
-{
-    [...]
-
-    override bool onEvent(ListenerObject eventFirer, uint16 eventCode);
-
-    [...]
-}
-```
-
-And in `PongState.c`, define the method to handle the `kEventCommunicationsConnected` message. We are going to call a new method, `PongManager::startVersusMode`, and send to it the master state of the system during the intial handshake to decide which system corresponds to player 1:
-
-```cpp
-bool PongState::onEvent(ListenerObject eventFirer, uint16 eventCode)
-{
-    switch(eventCode)
-    {
-        case kEventCommunicationsConnected:
-        {
-            if(!isDeleted(this->pongManager))
-            {
-                PongManager::startVersusMode(this->pongManager, CommunicationManager::isMaster(CommunicationManager::getInstance()));
-            }
-
-            return false;
-        }
-    }
-
-return Base::onEvent(this, eventFirer, eventCode);
-}
-```
-
-In the `PongManager` class' header file, declare the new method as follows and add member attribute to cache the [Stage](/documentation/api/struct-stage-spec/):
-
-```cpp
-class PongManager : ListenerObject
-{
-    /// @privatesection
-    [...]
-
-    //// Cache of the stage
-    Stage stage;
-
-    [...]
-
-    /// Start versus mode.
-    /// @param isPlayerOne: If true, this system is player one (left)
-    void startVersusMode(bool isPlayerOne);
-}
-```
-
-In the implementation file for the `PongManager`, cache [Stage](/documentation/api/struct-stage-spec/) passed to its constructor for later use. And create the `startVersusMode` method as follows:
-
-```cpp
-#include <KeypadManager.h>
-#include <Messages.h>
 [...]
 
 void PongManager::constructor(Stage stage)
@@ -101,12 +27,90 @@ void PongManager::constructor(Stage stage)
     Base::constructor();
 
     [...]
-
+    // Cache the Stage for later usage
     this->stage = stage;
+
+    // Enable comms    
+    CommunicationManager::enableCommunications(CommunicationManager::getInstance(), ListenerObject::safeCast(this));
 }
+```
 
-[...]
+Don't forget to add a [Stage](/documentation/api/struct-stage-spec/) attribute to the `PongManager`:
 
+```cpp
+class PongManager : ListenerObject
+{
+    /// @privatesection
+
+    [...]
+
+    //// Cache of the stage
+    Stage stage;
+
+    [...]
+};
+```
+
+The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event on the object provided as its scope once the handshake procedure with another system has succeeded.
+
+In `PongManager::onEvent`, add the case to handle the `kEventCommunicationsConnected` message. We are going to send a delayed message, `kEventCommunicationsConnected`, to the `PongManager` itself to setup up the versus mode. This in necessary to be sure that the sequence that takes place in `PongManager::startVersusMode` happens at the right moment. This is not warranted during the call to `onEvent` due to it being asychronously called by the `CommunicationManager`:
+
+```cpp
+bool PongState::onEvent(ListenerObject eventFirer, uint16 eventCode)
+{
+    switch(eventCode)
+    {
+        case kEventCommunicationsConnected:
+        {
+            // Disable the gameplay for a few cycles
+            KeypadManager::disable();
+
+            // Delay the start of the versus mode
+            PongManager::sendMessageToSelf(this, kMessageStartVersusMode, 250, 0);
+            return false;
+        }
+
+        [...]
+    }
+
+    return Base::onEvent(this, eventFirer, eventCode);
+}
+```
+
+Add the message `Start Versus Mode` to the **Messages** file inside the _config_ folder. 
+
+Override the `handleMessage` method in `PongManager`:
+
+```cpp
+class PongManager : ListenerObject
+{
+    [...]
+
+    override bool handleMessage(Telegram telegram);
+}
+```
+
+And implement it as follows:
+
+```cpp
+bool PongManager::handleMessage(Telegram telegram)
+{
+    switch(Telegram::getMessage(telegram))
+    {
+        case kMessageStartVersusMode:
+        {
+            PongManager::startVersusMode(this);
+            break;
+        }
+    }
+
+    return true;
+}
+```
+
+We are going to use the system's state during the intial handshake to decide which system corresponds to player 1:
+
+```cpp
 void PongManager::startVersusMode(bool isPlayerOne)
 {
     // Reprint the score
@@ -118,26 +122,26 @@ void PongManager::startVersusMode(bool isPlayerOne)
     // Reset random seed in multiplayer mode so both machines are completely in sync
     Math::resetRandomSeed();
 
+    bool isPlayerOne = CommunicationManager::isMaster(CommunicationManager::getInstance());
+
     // Propagate the message about the versus mode player assigned to the local system
     Stage::propagateMessage(this->stage, Container::onPropagatedMessage, isPlayerOne ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2);
 
     // Since we are using the method processUserInput to sync both system, 
     // we must make sure that it is called regardless of local input
     KeypadManager::enableDummyKey();
+    KeypadManager::enable();
 }
 ```
 
-Add the messages `Versus Mode Player 1` and `Versus Mode Player 2` in the **Messages** file inside the _config_ folder. 
+Add the messages `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder. 
 
-The call to `KeypadManager::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. Which is necessary prevent the other system to get stuck waiting for the other player to press any key. To complete this, change `PongState::processUserInput` to check for the `dummyKey` instead:
+The call to `KeypadManager::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. Which is to prevent the other system to get stuck waiting for the other player to press any key. In addition, change `PongState::processUserInput` to not check for any key, since we are going to synchronize the relevant [Actors](/documentation/api/class-actor/) across systems in their handling of user inputs:
 
 ```cpp
 void PongState::processUserInput(const UserInput* userInput)
 {
-    if(0 != userInput->dummyKey)
-    {
-        PongState::propagateMessage(this, kMessageKeypadHoldDown);
-    }
+    PongState::propagateMessage(this, kMessageKeypadHoldDown);
 }
 ```
 
@@ -259,74 +263,6 @@ void PlayerPaddle::resetPosition()
 
 Do not forget to reset the paddle's position in both cases. And make sure that `handlePropagatedMessage` doesn't return `true` for message `kMessageKeypadHoldDown` in order to allow the message to propagate to other [Actors](/documentation/api/class-actor/), since we want to process it in the `RemotePaddle` class.
 
-## Disk
-
-We need to sychronize the `Disk` in both systems too. To do so, we will process the messages propagated by the `PongManager`.
-Override the `handlePropagateMessage` in the `Disk.h`:
-
-```cpp
-mutation class Disk : Actor
-{
-    [...]
-
-    override bool handlePropagatedMessage(int32 message);
-
-    [...]
-}
-```
-
-Then, in `Disk.c`, create `Disk::handlePropagatedMessage` as follows, as well as adding `Disk::resetPosition` and updating `Disk::ready` as shown below:
-
-```cpp
-bool Disk::handlePropagatedMessage(int32 message)
-{
-    switch(message)
-    {
-        case kMessageVersusModePlayer1:
-        case kMessageVersusModePlayer2:
-        {
-            Disk::resetPosition(this);
-            return false;
-        }
-    }
-
-    return false;
-}
-
-[...]
-
-void Disk::ready(bool recursive)
-{
-    Base::ready(this, recursive);
-
-    Disk::resetPosition(this);
-}
-
-void Disk::resetPosition()
-{
-    Disk::stopMovement(this, __ALL_AXIS);
-    Vector3D localPosition = this->localTransformation.position;
-    localPosition.x = 0;
-    localPosition.y = 0;
-    Disk::setLocalPosition(this, &localPosition);
-
-    int16 angle = Math::random(Math::randomSeed(), 64) - 32;
-
-    Vector3D velocity = 
-    {
-        __FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__COS(angle))),
-        __FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__SIN(angle))),
-        0
-    };
-
-    if(50 > Math::random(Math::randomSeed(), 100))
-    {
-        velocity.x = -velocity.x;
-    }
-
-    Disk::setVelocity(this, &velocity, false);
-}
-```
 
 ## RemotePaddle
 
@@ -369,12 +305,9 @@ bool RemotePaddle::handlePropagatedMessage(int32 message)
     {
         case kMessageKeypadHoldDown:
         {
-            if(!isDeleted(this->body))
-            {
-                UserInput userInput = KeypadManager::getUserInput();
+            UserInput userInput = KeypadManager::getUserInput();
 
-                RemotePaddle::syncWithRemote(this, &userInput);
-            }
+            RemotePaddle::transmitData(this, userInput.holdKey);
 
             return false;
         }
@@ -384,95 +317,29 @@ bool RemotePaddle::handlePropagatedMessage(int32 message)
 }
 ```
 
-In `RemotePaddle::syncWithRemote`, we check that communications are enabled and then proceed to encapsulate the data to be sent to the other system. This data will be the key hold by the local player plus a constant value that will serve as a sort of CRC, we call it `command`:
+In `RemotePaddle::transmitData`, we check that communications are enabled and then proceed to send a message, `kMessageVersusModeSendInput` plus the local hold key to the remote system. The loop will force both systems to synchronize by waiting the other to reach the same transmission point. This is achieved by checking the received message:
 
 ```cpp
-typedef struct RemotePlayerData
+void RemotePaddle::transmitData(uint16 holdKey)
 {
-    uint32 command;
-
-    // Hold key(s)
-    uint16 holdKey;
-
-} RemotePlayerData;
-
-[...]
-
-void RemotePaddle::syncWithRemote(const UserInput* userInput)
-{
-    /*
-        * This call will sync both systems. The approach in this example is to get both
-        * systems to follow the same code paths and only transmit the user input. So,
-        * both are at the end of each frame in the same state. It is possible to run
-        * the game in one and send the data to the other so this only shows it.
-        */
-    if(CommunicationManager::isConnected(CommunicationManager::getInstance()))
+    if(!CommunicationManager::isConnected(CommunicationManager::getInstance()))
     {
-        /*
-        * A command is used to verify that the received message and the data
-        * are valid.
-        */
-        uint8 command = RemotePaddle::getCommunicationCommand(this, kMessageVersusModeSendInput);
-
-        /*
-        * This is the struct that we are going to send down the link port.
-        */
-        RemotePlayerData remotePlayerData;
-
-        remotePlayerData.command = command;
-        remotePlayerData.holdKey = userInput->holdKey;
-
-        RemotePaddle::transmitData(this, kMessageVersusModeSendInput, (BYTE*)&remotePlayerData, sizeof(remotePlayerData));
-    }    
-}
-```
-
-`RemotePaddle::transmitData` handles the data transmission. It uses `CommunicationManager::sendAndReceiveData` to send the data synchronously. It receives an enum to act as a message, or control parameter, and a stream of bytes. In this case, we will use the message `kMessageVersusModeSendInput`, that must be added to the **Messages** file inside the _config_ folder as `Versus Mode Send Input`.
-
-We will keep sending the message until `RemotePaddle::isMessageValid` returns `true`. This method checks the `command` attribute of the `RemotePlayerData` struct:
-
-```cpp
-#include <CommunicationManager.h>
-
-[...]
-
-#define REMOTE_NO_COMMAND                     0x00
-#define REMOTE_SEND_USER_INPUT                 0xAB
-
-[...]
-
-uint32 RemotePaddle::getCommunicationCommand(uint32 message)
-{
-    switch(message)
-    {
-        case kMessageVersusModeSendInput:
-
-            return REMOTE_SEND_USER_INPUT;
+        return;
     }
 
-    return REMOTE_NO_COMMAND;
-}
-
-bool RemotePaddle::isMessageValid(uint32 message, uint8 command)
-{
-    return RemotePaddle::getCommunicationCommand(this, message) == command;
-}
-
-void RemotePaddle::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataBytes)
-{
     uint32 receivedMessage = kMessageVersusModeDummy;
-    const RemotePlayerData* remotePlayerData = NULL;
+    uint16 receivedHoldKey = __KEY_NONE;
 
     /*
      * Data will be sent sychroniously. This means that if the cable is disconnected during
-     * transmission, the mutator is undefined.
+     * transmission, the behavior is undefined.
      */
     do
     {
         /*
          * Data transmission can fail if there was already a request to send data.
          */
-        if(!CommunicationManager::sendAndReceiveData(CommunicationManager::getInstance(), messageForRemote, data, dataBytes))
+        if(!CommunicationManager::sendAndReceiveData(CommunicationManager::getInstance(), kMessageVersusModeSendInput, &(BYTE*)holdKey, sizeof(holdKey)))
         {
             /*
              * In this case, simply cancel all communications and try again. This supposes
@@ -485,54 +352,133 @@ void RemotePaddle::transmitData(uint32 messageForRemote, BYTE* data, uint32 data
          * Every transmission sends a control message and then the data itself.
          */
         receivedMessage = CommunicationManager::getReceivedMessage(CommunicationManager::getInstance());
-        remotePlayerData = (const RemotePlayerData*)CommunicationManager::getReceivedData(CommunicationManager::getInstance());
+        receivedHoldKey = *(const uint16*)CommunicationManager::getReceivedData(CommunicationManager::getInstance());
     }
     /*
-     * The validity of the message is based on the command that was received
+     * Keep sending the data until the received message matches the sent one
      */
-    while(!RemotePaddle::isMessageValid(this, receivedMessage, remotePlayerData->command));
-
-    RemotePaddle::processReceivedMessage(this, messageForRemote, receivedMessage, remotePlayerData);
+    while(kMessageVersusModeSendInput != receivedMessage);
+    
+    RemotePaddle::move(this, receivedHoldKey);
 }
 ```
 
-Once the message is verified, the transmited data is processed in `RemotePaddle::processReceivedMessage`. Here, if the received message is `kMessageVersusModeSendInput`, the remote hold key is applied to move the paddle:
+Then, we simply apply a force to the `RemotePaddle` according to the input received from the other system:
+
 
 ```cpp
-#include <Body.h>
-
-void RemotePaddle::processReceivedMessage(uint32 messageForRemote, uint32 receivedMessage, const RemotePlayerData* remotePlayerData)
+void RemotePaddle::move(uint16 holdKey)
 {
-    /*
-     * When both systems send the same message, they are in sync. If the received
-     * message differs from what I've sent, then update appropriately the message
-     * that I will send in the next cycle.
-     */
-    switch(receivedMessage)
+    fixed_t forceMagnitude = 0;
+    
+    if(0 != (K_LU & holdKey))
     {
-        case kMessageVersusModeSendInput:
-
-            if(kMessageVersusModeSendInput == messageForRemote)
-            {
-                fixed_t forceMagnitude = 0;
-                
-                if(0 != (K_LU & remotePlayerData->holdKey))
-                {
-                    forceMagnitude = -__FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
-                }
-                else if(0 != (K_LD & remotePlayerData->holdKey))
-                {
-                    forceMagnitude = __FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
-                }
-
-                Vector3D force = {0, forceMagnitude, 0};
-
-                RemotePaddle::applyForce(this, &force, true);
-            }
-
-            break;
+        forceMagnitude = -__FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
     }
+    else if(0 != (K_LD & holdKey))
+    {
+        forceMagnitude = __FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
+    }
+
+    Vector3D force = {0, forceMagnitude, 0};
+
+    RemotePaddle::applyForce(this, &force, true);
 }
 ```
 
-Once compiled and run, when two Virtual Boys are connected and both enter the game, will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen, while the other paddle doesn't move.
+## Disk
+
+We need to sychronize the `Disk` in both systems too. Otherwise, they will get out of sync pretty soon. There are various possible approaches. One could have been to centralize the sychronization of the systems in the `PongManager`, but since sending the data between paddles was very straight forward and required no new state variables, we are going to sync the `Disks` in a similar manner.
+
+The first thing to notice, though, is that syncing the `Disks` at any other place than during the processing of the user input will hardly work due to the need to spin wait for the other system to catch up to the same point in the code. Thus, we are going to sychronize the `Disks` during the same sub-process.
+
+First, override the `handlePropagatedMessage`:
+
+```cpp
+mutation class Disk : Actor
+{
+    [...]
+
+    override bool handlePropagatedMessage(int32 message);
+
+    [...]
+}
+```
+
+Then, in `Disk.c`, create `Disk::handlePropagatedMessage` as follows. First, we need to reset the `Disk`'s position when the messages about versus mode arrive, and then we must make it to start moving.
+
+And when the `kMessageKeypadHoldDown` message arrives, we are going to synchronize the `Disks`:
+
+```cpp
+bool Disk::handlePropagatedMessage(int32 message)
+{
+    switch(message)
+    {
+        case kMessageVersusModePlayer1:
+        case kMessageVersusModePlayer2:
+        {
+            Disk::resetPosition(this);
+            Disk::startMoving(this);
+            return false;
+        }
+
+        case kMessageKeypadHoldDown:
+        {
+            Disk::sychronize(this);
+            return false;
+        }
+    }
+
+    return false;
+}
+```
+
+The synchronization of the `Disks` follows a similar pattern to the paddles, but we are going to send different data. In this case, we are going to send both the `Disk`'s [Body](/documentation/api/class-body/)'s position and velocity. And we are going to override both in the two systems with the average between them.
+
+It is possible to disable the [Body](/documentation/api/class-body/) in one of the `Disks`,  for example the player 2's, and syncing this one to the player 1's. 
+
+```cpp
+void Disk::sychronize()
+{
+    if(!CommunicationManager::isConnected(CommunicationManager::getInstance()))
+    {
+        return;
+    }
+
+    typedef struct RemoteDiskData
+    {
+        Vector3D position;
+        Vector3D velocity;
+
+    } RemoteDiskData;
+
+    uint32 receivedMessage = kMessageVersusModeDummy;
+    RemoteDiskData remoteDiskData = 
+    {
+        *Body::getPosition(this->body),
+        *Body::getVelocity(this->body)
+    };
+
+    do
+    {
+        if(!CommunicationManager::sendAndReceiveData(CommunicationManager::getInstance(), kMessageVersusModeSendInput, (BYTE*)&remoteDiskData, sizeof(remoteDiskData)))
+        {
+            CommunicationManager::cancelCommunications(CommunicationManager::getInstance());
+        }
+
+        receivedMessage = CommunicationManager::getReceivedMessage(CommunicationManager::getInstance());
+        remoteDiskData = *(const RemoteDiskData*)CommunicationManager::getReceivedData(CommunicationManager::getInstance());
+    }
+    while(kMessageVersusModeSendInput != receivedMessage);
+
+    Vector3D averageBodyPosition = Vector3D::intermediate(*Body::getPosition(this->body), remoteDiskData.position);
+    Vector3D averageBodyVelocity = Vector3D::intermediate(*Body::getVelocity(this->body), remoteDiskData.velocity);
+
+    Body::setPosition(this->body, &averageBodyPosition, Entity::safeCast(this));
+    Body::setVelocity(this->body, &averageBodyVelocity);
+}
+```
+
+## That's all
+
+Once compiled and run, when two Virtual Boys are connected and both enter the game, it will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen.

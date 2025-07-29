@@ -109,26 +109,26 @@ void Disk::ready(bool recursive)
 {
     Base::ready(this, recursive);
 
-    if(isDeleted(this->body))
-    {
-        return;
-    }
+	Disk::startMoving(this);
+}
 
-    int16 angle = Math::random(Math::randomSeed(), 64) - 32;
+void Disk::startMoving()
+{
+	int16 angle = (Math::random(Math::randomSeed(), 128) - 64) >> 1;
 
-    Vector3D velocity =
-    {
-        __FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__COS(angle))),
-        __FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__SIN(angle))),
-        0
-    };
+	Vector3D velocity = 
+	{
+		__FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__COS(angle))),
+		__FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__SIN(angle))),
+		0
+	};
 
-    if(50 > Math::random(Math::randomSeed(), 100))
-    {
-        velocity.x = -velocity.x;
-    }
+	if(50 > Math::random(Math::randomSeed(), 100))
+	{
+		velocity.x = -velocity.x;
+	}
 
-    Disk::setVelocity(this, &velocity, false);
+	Disk::setVelocity(this, &velocity, false);
 }
 ```
 
