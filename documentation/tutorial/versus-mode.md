@@ -189,7 +189,7 @@ Add the messages `Versus Mode Player 1` and `Versus Mode Player 2` to the **Mess
 The call to `KeypadManager::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. Which is to prevent the other system to get stuck waiting for the other player to press any key. In addition, change `PongState::processUserInput` to not check for any key, since we are going to synchronize the relevant [Actors](/documentation/api/class-actor/) across systems in their handling of user inputs:
 
 ```cpp
-void PongState::processUserInput(const UserInput* userInput)
+void PongState::processUserInput(const UserInput* userInput __attribute__((unused)))
 {
     PongState::propagateMessage(this, kMessageKeypadHoldDown);
 }
@@ -379,11 +379,11 @@ void RemotePaddle::transmitData(uint16 holdKey)
         if(
             CommunicationManager::sendAndReceiveData
             (
-                communicationManager, RemotePaddle::getClass(), &holdKey, sizeof(holdKey)
+                communicationManager, (uint32)RemotePaddle::getClass(), (BYTE*)&holdKey, sizeof(holdKey)
             )
         )
         {
-            if(RemotePaddle::getClass() == CommunicationManager::getReceivedMessage(communicationManager))
+            if((uint32)RemotePaddle::getClass() == CommunicationManager::getReceivedMessage(communicationManager))
             {
                 RemotePaddle::move(this, *(const uint16*)CommunicationManager::getReceivedData(communicationManager));
             }
@@ -476,12 +476,12 @@ Here is the implementation for `mustSychronize` and `mustNotSychronize`:
 ```cpp
 bool Disk::mustSychronize()
 {
-	return true;
+    return true;
 }
 
 bool Disk::mustNotSychronize()
 {
-	return false;
+    return false;
 }
 ```
 
@@ -492,30 +492,26 @@ void Disk::update()
 {
     CommunicationManager communicationManager = CommunicationManager::getInstance();
 
-    if(!CommunicationManager::isConnected(communicationManager))
+    if(CommunicationManager::isConnected(communicationManager))
     {
-        return;
-    }
-
-    if
-    (
-        !CommunicationManager::sendAndReceiveData
+        if
         (
-            communicationManager, Disk::getClass(), 
-            (BYTE*)&this->transformation.position, sizeof(this->transformation.position)
+            CommunicationManager::sendAndReceiveData
+            (
+                communicationManager, (uint32)Disk::getClass(), 
+                (BYTE*)&this->transformation.position, sizeof(this->transformation.position)
+            )
         )
-    )
-    {
-        return;
-    }
-
-    if(Disk::getClass() == CommunicationManager::getReceivedMessage(communicationManager))
-    {
-        if(Disk::mustSychronize(this))
         {
-            Disk::stopMovement(this, __ALL_AXIS);
+            if((uint32)Disk::getClass() == CommunicationManager::getReceivedMessage(communicationManager))
+            {
+                if(Disk::mustSychronize(this))
+                {
+                    Disk::stopMovement(this, __ALL_AXIS);
 
-            Disk::setPosition(this, (const Vector3D*)CommunicationManager::getReceivedData(communicationManager));
+                    Disk::setPosition(this, (const Vector3D*)CommunicationManager::getReceivedData(communicationManager));
+                }
+            }
         }
     }
 }
