@@ -526,7 +526,7 @@ void Disk::update()
 
 ## Some caveats
 
-Both systems must be connected before turning them on. For the connection to be recognized, both systems must reach the titel screen before continuing to the gameplay arena.
+Both systems must be connected before turning them on. For the connection to be recognized, both systems must reach the title screen before continuing to the gameplay arena.
 
 There are a few workarounds. A better approach would be to enable the communications as soon as the system boots. But since this demo uses the splash screens plugin, doing so would require implementing a custom adjustment screen, which is out of the scope of this tutorial, and we wanted to showcase the asynchronous nature of the `kEventCommunicationsConnected` event.
 
