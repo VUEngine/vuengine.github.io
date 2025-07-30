@@ -515,8 +515,15 @@ void Disk::update()
         }
     }
 }
-
 ```
+
+## Some caveats
+
+The rumble effects are broadcasted to the EXT port without checking if there is anything connected to it. If by the time a rumble effect is requested no connection with another Virtual Boy system has been established, the handshake will be cancelled.
+
+Since the game requests rumble effects in the `PongManager` and the `Disk`, if these happen before the remove system has completed the handshake, versus mode won't work.
+
+There are a few workarounds. The easies one is to not use rumble effects. A better approach would be to enable the communications as soon as the system boots. But since this demo uses the splash screens plugin, doing so would require implementing a custom adjustment screen, which is out of the scope of this tutorial, in which we wanted to showcase the asynchronous nature of the `kEventCommunicationsConnected` event.
 
 ## That's all
 
