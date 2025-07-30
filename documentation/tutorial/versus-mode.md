@@ -14,9 +14,55 @@ We are going to modify the game to detect when another Virtual Boy system is con
 
 ## Starting communications
 
-To handle communications between two Virtual Boy systems, VUEngine provides the singleton [CommunicationManager](<(/documentation/api/class-communication-manager/)>). The first thing to do is to enable communications at the end of `PongManager::constructor`.
+To handle communications between two Virtual Boy systems, VUEngine provides the singleton [CommunicationManager](<(/documentation/api/class-communication-manager/)>). The first thing to do is to enable communications at the end of `TitleScreenState::enter`.
 
-We are going to change the game to delay the moving of the `Disk` by 1 second, and will disable the user inputs until it starts to move:
+We need firt to override the `TitleScreenState::onEvent` method:
+
+```
+singleton class TitleScreenState : GameState
+{
+    [...]
+
+    override bool onEvent(ListenerObject eventFirer, uint16 eventCode);
+
+    [...]
+}
+```
+
+Let's enable the communications now. The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event, `kEventCommunicationsConnected`, on the object provided as its scope once the handshake procedure with another system has succeeded.
+
+
+```cpp
+#include <CommunicationManager.h>
+[...]
+
+void TitleScreenState::enter(void* owner __attribute__((unused)))
+{
+    [...]
+
+    CommunicationManager::enableCommunications(CommunicationManager::getInstance(), ListenerObject::safeCast(this));
+}
+```
+
+And we are going to print a message to notify the players when the connection is successful:
+
+```cpp
+bool TitleScreenState::onEvent(ListenerObject eventFirer, uint16 eventCode)
+{
+    switch(eventCode)
+    {
+        case kEventCommunicationsConnected:
+        {
+            Printer::text("Connected", 24 - 4, 27, NULL);
+            return false;
+        }
+    }
+
+    return Base::onEvent(this, eventFirer, eventCode);
+}
+```
+
+In `PongManager::constructor`, we are going to change the game to delay the moving of the `Disk` by 1 second, will disable the user inputs until it starts to move, and if another system is present, we are going to use the system's state during the intial handshake to decide which system corresponds to player 1.
 
 ```cpp
 #include <CommunicationManager.h>
@@ -32,18 +78,27 @@ void PongManager::constructor(Stage stage)
     // Cache the Stage for later usage
     this->stage = stage;
 
-    // Enable comms    
-    CommunicationManager::enableCommunications(CommunicationManager::getInstance(), ListenerObject::safeCast(this));
-
     // Delay the starting of the game
     PongManager::sendMessageToSelf(this, kMessageStartGame, 1000, 0);
 
     // Disable the gameplay for a few cycles
     KeypadManager::disable();
+
+    if(CommunicationManager::isConnected(CommunicationManager::getInstance()))
+    {
+        // Propagate the message about the versus mode player assigned to the local system
+        Stage::propagateMessage
+        (
+            this->stage, Container::onPropagatedMessage, 
+            CommunicationManager::isMaster(CommunicationManager::getInstance()) ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2
+        );
+
+        Printer::text("Waiting", 24 - 3, 27, NULL);
+    }
 }
 ```
 
-Add the message `Star tGame` to the **Messages** file inside the _config_ folder. 
+Add the messages `Star tGame`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder. 
 
 Don't forget to add a [Stage](/documentation/api/struct-stage-spec/) attribute to the `PongManager`:
 
@@ -61,32 +116,6 @@ class PongManager : ListenerObject
 };
 ```
 
-The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event on the object provided as its scope once the handshake procedure with another system has succeeded.
-
-In `PongManager::onEvent`, add the case to handle the `kEventCommunicationsConnected` message. We are going to send a delayed message, `kEventCommunicationsConnected`, to the `PongManager` itself to setup up the versus mode. This in necessary to be sure that the sequence that takes place in `PongManager::startVersusMode` happens at the right moment. This is not warranted during the call to `onEvent` due to it being asychronously called by the `CommunicationManager`:
-
-```cpp
-bool PongState::onEvent(ListenerObject eventFirer, uint16 eventCode)
-{
-    switch(eventCode)
-    {
-        case kEventCommunicationsConnected:
-        {
-            // First, discard any previous message to start the game
-            PongManager::discardMessages(this, kMessageStartGame);
-
-            // Then call the method that setups the game to start the versus match
-            PongManager::startVersusMode(this);
-            return false;
-        }
-
-        [...]
-    }
-
-    return Base::onEvent(this, eventFirer, eventCode);
-}
-```
-
 Override the `handleMessage` method in `PongManager`:
 
 ```cpp
@@ -98,7 +127,7 @@ class PongManager : ListenerObject
 }
 ```
 
-And implement it as follows:
+And implement it as follows to process the `kMessageStartGame` message:
 
 ```cpp
 #include <Telegram.h>
@@ -115,6 +144,8 @@ bool PongManager::handleMessage(Telegram telegram)
             {
                 // Must make sure that both systems are in sync before starting the game
                 CommunicationManager::startSyncCycle(CommunicationManager::getInstance());
+
+                Printer::text("        ", 24 - 3, 27, NULL);
             }
 
             // Propagate the message to start the game
@@ -133,28 +164,6 @@ bool PongManager::handleMessage(Telegram telegram)
 }
 ```
 
-We are going to use the system's state during the intial handshake to decide which system corresponds to player 1:
-
-```cpp
-void PongManager::startVersusMode(bool isPlayerOne)
-{
-    // Reprint the score
-    this->leftScore = 0;
-    this->rightScore = 0;
-
-    PongManager::printScore(this);
-
-    // Propagate the message about the versus mode player assigned to the local system
-    Stage::propagateMessage
-    (
-        this->stage, Container::onPropagatedMessage, 
-        CommunicationManager::isMaster(CommunicationManager::getInstance()) ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2
-    );
-
-    // Delay the start of the versus mode
-    PongManager::sendMessageToSelf(this, kMessageStartGame, 250, 0);
-}
-```
 
 Since we want to always delay the initial movement of the `Disk` after each point too, modify the processing of the event `kEventActorCreated` as follows:
 
@@ -183,8 +192,6 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
     return Base::onEvent(this, eventFirer, eventCode);
 }
 ```
-
-Add the messages `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder. 
 
 The call to `KeypadManager::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. Which is to prevent the other system to get stuck waiting for the other player to press any key. In addition, change `PongState::processUserInput` to not check for any key, since we are going to synchronize the relevant [Actors](/documentation/api/class-actor/) across systems in their handling of user inputs:
 
@@ -519,11 +526,9 @@ void Disk::update()
 
 ## Some caveats
 
-The rumble effects are broadcasted to the EXT port without checking if there is anything connected to it. If by the time a rumble effect is requested no connection with another Virtual Boy system has been established, the handshake will be cancelled.
+Both systems must be connected before turning them on. For the connection to be recognized, both systems must reach the titel screen before continuing to the gameplay arena.
 
-Since the game requests rumble effects in the `PongManager` and the `Disk`, if these happen before the remove system has completed the handshake, versus mode won't work.
-
-There are a few workarounds. The easies one is to not use rumble effects. A better approach would be to enable the communications as soon as the system boots. But since this demo uses the splash screens plugin, doing so would require implementing a custom adjustment screen, which is out of the scope of this tutorial, in which we wanted to showcase the asynchronous nature of the `kEventCommunicationsConnected` event.
+There are a few workarounds. A better approach would be to enable the communications as soon as the system boots. But since this demo uses the splash screens plugin, doing so would require implementing a custom adjustment screen, which is out of the scope of this tutorial, and we wanted to showcase the asynchronous nature of the `kEventCommunicationsConnected` event.
 
 ## That's all
 
