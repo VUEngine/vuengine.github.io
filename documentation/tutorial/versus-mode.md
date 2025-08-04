@@ -10,7 +10,7 @@ Including multiplayer in any game can be a bit involved. We are going to try to 
 
 There are various approaches in game development to handle net code. Here, we are going to use the simplest, which consist in simply running the same game twice relying on the deterministic nature of programs produced for the Virtual Boy and the fact that the game is simple enough to not require much in the way of sofisticated recovery mechanism.
 
-We are going to modify the game to detect when another Virtual Boy system is connected through the EXT port and change to versus mode automatically. 
+We are going to modify the game to detect when another Virtual Boy system is connected through the EXT port and change to versus mode automatically.
 
 ## Starting communications
 
@@ -30,7 +30,6 @@ singleton class TitleScreenState : GameState
 ```
 
 Let's enable the communications now. The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event, `kEventCommunicationsConnected`, on the object provided as its scope once the handshake procedure with another system has succeeded.
-
 
 ```cpp
 #include <CommunicationManager.h>
@@ -89,7 +88,7 @@ void PongManager::constructor(Stage stage)
         // Propagate the message about the versus mode player assigned to the local system
         Stage::propagateMessage
         (
-            this->stage, Container::onPropagatedMessage, 
+            this->stage, Container::onPropagatedMessage,
             CommunicationManager::isMaster(CommunicationManager::getInstance()) ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2
         );
 
@@ -98,7 +97,7 @@ void PongManager::constructor(Stage stage)
 }
 ```
 
-Add the messages `Star tGame`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder. 
+Add the messages `Star tGame`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder.
 
 Don't forget to add a [Stage](/documentation/api/struct-stage-spec/) attribute to the `PongManager`:
 
@@ -151,7 +150,7 @@ bool PongManager::handleMessage(Telegram telegram)
             // Propagate the message to start the game
             Stage::propagateMessage(this->stage, Container::onPropagatedMessage, kMessageStartGame);
 
-            // Since we are using the method processUserInput to sync both system, 
+            // Since we are using the method processUserInput to sync both system,
             // we must make sure that it is called regardless of local input
             KeypadManager::enableDummyKey();
             KeypadManager::enable();
@@ -163,7 +162,6 @@ bool PongManager::handleMessage(Telegram telegram)
     return true;
 }
 ```
-
 
 Since we want to always delay the initial movement of the `Disk` after each point too, modify the processing of the event `kEventActorCreated` as follows:
 
@@ -219,13 +217,12 @@ mutation class AIPaddle : Actor
 }
 ```
 
-In the implementation file, `AIPaddle.c`, we need to implement the logic to mutate the paddle depending on which number of player the system has been assigned. 
+In the implementation file, `AIPaddle.c`, we need to implement the logic to mutate the paddle depending on which number of player the system has been assigned.
 
 In the case that the system is player 1, the `AIPaddle`'s instance will be synched with the remote player's paddle. To do that, we are going to mutate it to a new class, `RemotePladdle`.
 If this system is player 2, we can simply mutate the `AIPaddle` to `PlayerPaddle` since that class already handles the local player's inputs.
 
 We need to reset the position of the paddle too.
-
 
 ```cpp
 #include <Messages.h>
@@ -320,7 +317,6 @@ void PlayerPaddle::resetPosition()
 
 Do not forget to reset the paddle's position in both cases. And make sure that `handlePropagatedMessage` doesn't return `true` for message `kMessageKeypadHoldDown` in order to allow the message to propagate to other [Actors](/documentation/api/class-actor/), since we want to process it in the `RemotePaddle` class.
 
-
 ## RemotePaddle
 
 Inside the folder _source_/_Actors_/_Paddle_, create a folder called _RemotePaddle_ and add `RemotePaddle.h` and `RemotePaddle.c` files with the following contents:
@@ -405,7 +401,7 @@ Then, we simply apply a force to the `RemotePaddle` according to the input recei
 void RemotePaddle::move(uint16 holdKey)
 {
     fixed_t forceMagnitude = 0;
-    
+
     if(0 != (K_LU & holdKey))
     {
         forceMagnitude = -__FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
@@ -505,7 +501,7 @@ void Disk::update()
         (
             CommunicationManager::sendAndReceiveData
             (
-                communicationManager, (uint32)Disk::getClass(), 
+                communicationManager, (uint32)Disk::getClass(),
                 (BYTE*)&this->transformation.position, sizeof(this->transformation.position)
             )
         )
@@ -530,6 +526,6 @@ Both systems must be connected before turning them on. For the connection to be 
 
 There are a few workarounds. A better approach would be to enable the communications as soon as the system boots. But since this demo uses the splash screens plugin, doing so would require implementing a custom adjustment screen, which is out of the scope of this tutorial, and we wanted to showcase the asynchronous nature of the `kEventCommunicationsConnected` event.
 
-## That's all
+## They're talking!
 
-Once compiled and run, when two Virtual Boys are connected and both enter the game, it will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen.
+Once compiled and run, when two Virtual Boys are connected and both enter the game, they will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen.
