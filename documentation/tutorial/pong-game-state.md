@@ -23,6 +23,12 @@ singleton class TitleScreenState : GameState
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/States/TitleScreenState/TitleScreenState.c
+    </span>
+</div>
+
 That method receives a pointer to a struct called [UserInput](/documentation/api/struct-user-input/) that has the user input that was registered during the last game frame. This is the declaration of that struct with all the possible fields that can be polled during user input processing:
 
 ```cpp
@@ -80,6 +86,12 @@ void TitleScreenState::processUserInput(const UserInput* userInput)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/States/TitleScreenState/TitleScreenState.c
+    </span>
+</div>
+
 > **Note**: Do not forget to also add _PongState.h_ to the list of #includes at the top of the file.
 
 ## Entering the Pong State
@@ -127,9 +139,28 @@ singleton class PongState : GameState
 }
 ```
 
-The `PongState` will remain empty if we don't add actors to it. For a Pong game, we will need a disk and two paddles, but since the paddles are the same, we'll need only one **Spec** for both. Create the actors in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo on the [title screen](/documentation/tutorial/title-screen/).
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.h
+    </span>
+</div>
 
-<a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle Actor Spec"><img src="/documentation/images/tutorial/disk-and-paddle-actors.png" /></a>
+The `PongState` will remain empty if we don't add actors to its stage. For a Pong game, we will need a disk and two paddles, but since the paddles are the same, we'll need only one **Spec** for both. Create the actors in _assets/Actor/Disk/_ and _assets/Actor/Paddle/_ with the _.actor_ file as it was done before to create the logo on the [title screen](/documentation/tutorial/title-screen/).
+
+<figure>
+    <a href="/documentation/images/tutorial/disk-and-paddle-actors.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk and Paddle actor files">
+        <img src="/documentation/images/tutorial/disk-and-paddle-actors.png" />
+    </a>
+    <figcaption>
+        Disk and Paddle actor files
+        <span class="filepath">
+            assets/Actor/Disk/Disk.actor
+        </span>
+        <span class="filepath">
+            assets/Actor/Paddle/Paddle.actor
+        </span>
+    </figcaption>
+</figure>
 
 Download the image for the disk <a href="/documentation/images/tutorial/Disk.png" download>here</a> and the one for the paddle <a href="/documentation/images/tutorial/Paddle.png" download>here</a>.
 
@@ -154,8 +185,13 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
-> **Note**: Be careful to add the **Specs** of the [Actors](/documentation/api/class-actor/) to the **PongStageActors** and not to the **PongStageUiActors** array.
+<div class="codecaption">
+    <span class="filepath">
+        assets/Stage/PongStageSpec.c
+    </span>
+</div>
 
+> **Note**: Be careful to add the **Specs** of the [Actors](/documentation/api/class-actor/) to the **PongStageActors** and not to the **PongStageUiActors** array.
 
 Now that the [StageSpec](/documentation/api/struct-stage-spec/) is ready, it can be passed to [PongState::configureStage](/documentation/api/class-game-state/):
 
@@ -174,6 +210,12 @@ void PongState::enter(void* owner __attribute__((unused)))
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.c
+    </span>
+</div>
+
 Don't forget to override the method in the header file:
 
 ```cpp
@@ -188,6 +230,12 @@ singleton class PongState : GameState
     override void enter(void* owner);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.h
+    </span>
+</div>
 
 Also add a constructor and destructor to the `PongState`'s implementation:
 
@@ -205,9 +253,22 @@ void PongState::destructor()
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.c
+    </span>
+</div>
+
 When the game is built and run, pressing <span class="keys">START</span> on the title screen will now transition to the `PongState`, which will show the following.
 
-<a href="/documentation/images/tutorial/pong-state.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/tutorial/pong-state.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/pong-state.png" data-toggle="lightbox" data-gallery="gallery" data-caption="This looks like Pong">
+        <img src="/documentation/images/tutorial/pong-state.png" />
+    </a>
+    <figcaption>
+        This looks like Pong
+    </figcaption>
+</figure>
 
 While the engine remains in the same state, it will call [GameState::execute](/documentation/api/class-game-state/) once per game frame. So far, the `PongState` doesn't override the method, nor does it override the `exit` method, which is called when the engine's [StateMachine](/documentation/api/class-state-machine/) changes to another [GameState](/documentation/api/class-game-state/).
 

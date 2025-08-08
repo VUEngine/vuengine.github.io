@@ -12,7 +12,17 @@ The only piece of functionality that still needs to be added to the game, before
 
 An In-Game Type is an [Actor](/documentation/api/class-component/) enum attribute that can be used to identify the type of game object that one is interacting with without having to rely on RTTI (which can be very expensive). So, let's create an _InGameTypes_ file and add to it two entries - "Disk" and "Paddle".
 
-<a href="/documentation/images/tutorial/in-game-types.png" data-toggle="lightbox" data-gallery="gallery" data-caption="In-Game Types "><img src="/documentation/images/tutorial/in-game-types.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/in-game-types.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The In-Game Types editor">
+        <img src="/documentation/images/tutorial/in-game-types.png" />
+    </a>
+    <figcaption>
+        The In-Game Types editor
+        <span class="filepath">
+            config/InGameTypes
+        </span>
+    </figcaption>
+</figure>
 
 ## Collider Layers
 
@@ -20,17 +30,47 @@ A Collider Layer is an enum that is useful to cull off uncessary collision check
 
 So, let's create the Collider Layers by adding a _ColliderLayers_ file in the _config_ folder and add the following to it:
 
-<a href="/documentation/images/tutorial/collider-layers.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Collider Layers"><img src="/documentation/images/tutorial/collider-layers.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/collider-layers.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The Collider Layers editor">
+        <img src="/documentation/images/tutorial/collider-layers.png" />
+    </a>
+    <figcaption>
+        The Collider Layers editor
+        <span class="filepath">
+            config/ColliderLayers
+        </span>
+    </figcaption>
+</figure>
 
 ## Adding Colliders
 
 Now we are ready to add [Colliders](/documentation/api/class-collider/) to the paddles and disk. Just open their respective _.actor_ files and add the corresponding component to them. The Disk's [Collider](/documentation/api/class-collider/) configuration should look like this:
 
-<a href="/documentation/images/tutorial/disk-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk collider"><img src="/documentation/images/tutorial/disk-collider.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/disk-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A Collider component in the actor editor">
+        <img src="/documentation/images/tutorial/disk-collider.png" />
+    </a>
+    <figcaption>
+        A Collider component in the actor editor
+        <span class="filepath">
+            assets/Actor/Disk/Disk.actor
+        </span>
+    </figcaption>
+</figure>
 
 And the paddles' should be configured as follows:
 
-<a href="/documentation/images/tutorial/paddle-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Paddle collider"><img src="/documentation/images/tutorial/paddle-collider.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/paddle-collider.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A Collider component in the actor editor">
+        <img src="/documentation/images/tutorial/paddle-collider.png" />
+    </a>
+    <figcaption>
+        A Collider component in the actor editor
+        <span class="filepath">
+            assets/Actor/Paddle/PlayerPaddle/PlayerPaddle.actor
+        </span>
+    </figcaption>
+</figure>
 
 Notice that the toggle for collision checking in the paddle's [Collider](/documentation/api/class-collider/) configuration is disabled. This is because there is no reason to waste performance by performing the test for collisions against the disk when it already does it.
 
@@ -44,6 +84,10 @@ Almost there! We are just missing walls for the disk to not go out through the s
     </a>
     <figcaption>
         Wall In-Game Type
+        config/InGameTypes
+        <span class="filepath">
+            config/InGameTypes
+        </span>
     </figcaption>
 </figure>
 <figure style="width: 48%">
@@ -52,16 +96,39 @@ Almost there! We are just missing walls for the disk to not go out through the s
     </a>
     <figcaption>
         Wall Collider Layer
+        <span class="filepath">
+            config/ColliderLayers
+        </span>
     </figcaption>
 </figure>
 
 We can now create a _Wall.actor_ in _assets/Actor/Wall_ and add a [Collider](/documentation/api/class-collider/) that lives in the "Wall" layer to it.
 
-<a href="/documentation/images/tutorial/wall-actor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Wall Actor"><img src="/documentation/images/tutorial/wall-actor.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/wall-actor.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A Collider component in the actor editor">
+        <img src="/documentation/images/tutorial/wall-actor.png" />
+    </a>
+    <figcaption>
+        A Collider component in the actor editor
+        <span class="filepath">
+            assets/Actor/Wall/Wall.actor
+        </span>
+    </figcaption>
+</figure>
 
 Also make sure that the Disk's [Collider](/documentation/api/class-collider/) checks collisions against others in the "Wall" Collider Layer.
 
-<a href="/documentation/images/tutorial/disk-collider-wall.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk Wall Collider Layer"><img src="/documentation/images/tutorial/disk-collider-wall.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/disk-collider-wall.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A Collider component in the actor editor">
+        <img src="/documentation/images/tutorial/disk-collider-wall.png" />
+    </a>
+    <figcaption>
+        A Collider component in the actor editor
+        <span class="filepath">
+            assets/Actor/Disk/Disk.actor
+        </span>
+    </figcaption>
+</figure>
 
 Finally, we'll place the walls at the top and bottom of the screen in the [Stage](/documentation/api/struct-stage-spec/)'s **PongStageActors** array.
 
@@ -82,13 +149,19 @@ PositionedActorROMSpec PongStageActors[] =
 };
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        assets/Stage/PongStageSpec.c
+    </span>
+</div>
+
 If you don't like that the paddles get out of the screen, enable the collision checks in their [Colliders](/documentation/api/class-collider/) and add the "Wall" Collider Layer to the layers that it checks.
 
 We now have a basic Pong clone!
 
 ## Improving the disk's behavior
 
-The Pong's disk reaction is not very interesting at the moment. We can improve it by artificially modifying its vertical speed in function of the collision point in relation go the paddle. To do so, in the `Disk` class, override the [Entity::collisionStarts](/documentation/api/class-entity/):
+The Pong's disk reaction is not very interesting at the moment. We can improve it by artificially modifying its vertical speed in function of the collision point in relation to the paddle. To do so, override the method [Entity::collisionStarts](/documentation/api/class-entity/) in the `Disk` class:
 
 ```cpp
 mutation class Disk : Actor
@@ -102,6 +175,12 @@ mutation class Disk : Actor
     [...]
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.h
+    </span>
+</div>
 
 ```cpp
 #include <InGameTypes.h>
@@ -133,5 +212,11 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
     return returnValue;
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
 
 We now have a basic but fully functional Pong game. But it would be more interesting if it displayed scores, right? Let's add that [in the next step](/documentation/tutorial/scores/) <i class="fa fa-arrow-right"></i>.

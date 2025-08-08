@@ -36,6 +36,12 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
+
 To play a sound effect when the disk hits a paddle or a wall, the code should be like the following:
 
 ```cpp
@@ -73,13 +79,36 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
+
 ## Rumble Effects
 
-Rumble effects are supported thanks to [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak. To add these effects, create the _assets/RumbleEffect/Bounce_ and _assets/RumbleEffect/Point_ folders. And create a rumble effect file in each:
+VUEngine out of the box supports [RetroOnyx](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack)'s RumblePak for providing haptic feedback to the player. To add these effects, create the _assets/RumbleEffect/Bounce_ and _assets/RumbleEffect/Point_ folders. And create a rumble effect file in each:
 
-<a href="/documentation/images/tutorial/new-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="New Rumble Effect"><img src="/documentation/images/tutorial/new-rumble-effect.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/new-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Creating a rumble effect through the New File dialog">
+        <img src="/documentation/images/tutorial/new-rumble-effect.png" />
+    </a>
+    <figcaption>
+        Creating a rumble effect through the "New File" dialog
+    </figcaption>
+</figure>
 
-<a href="/documentation/images/tutorial/bounce-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Bounce Rumble Effect"><img src="/documentation/images/tutorial/bounce-rumble-effect.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/bounce-rumble-effect.png" data-toggle="lightbox" data-gallery="gallery" data-caption="The rumble effect editor">
+        <img src="/documentation/images/tutorial/bounce-rumble-effect.png" />
+    </a>
+    <figcaption>
+        The rumble effect editor
+        <span class="filepath">
+            assets/RumbleEffect/Bounce/Bounce.rumble
+        </span>
+    </figcaption>
+</figure>
 
 Then, to send the effect to the [Rumble Pak](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack) when a point is scored, call [RumbleManager::startEffect](<(/documentation/api/class-rumble-manager/)>):
 
@@ -105,6 +134,12 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
     [...]
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
 
 And to start a the rumble effect when the disk detects a collision:
 
@@ -135,6 +170,12 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
     }
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
 
 ## Et voilà!
 

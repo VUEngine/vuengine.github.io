@@ -10,11 +10,11 @@ It is time to track the score of the game. To do so, we are going to implement a
 
 ## Pong Manager
 
-Let's add a `PongManager` class that will handle the game's logic. At minimum, it requires to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and given that the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of it. But because the `PongState` persist through the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroy it when it exists. So, override the `enter` and `exit` methods.
+Let's add a `PongManager` class that will handle the game's logic. At minimum, it needs to know when the disk goes out of the screen. And to know about the disk, it has to get a reference to it somehow. The way to do it is to retrieve it from the [Stage](/documentation/api/class-stage/), and given that the later belongs to the `PongState`, it makes sense to make the `PongManager` an attribute of `PongState`. But because the `PongState` persists throughout the whole life cycle of the game by being a `singleton` class, it is better to create the `PongManager` when the engine enters the state and destroy it when it exists. So, override the `enter` and `exit` methods of `PongState`.
 
 ```cpp
-#ifndef PONG_MANAGER_H_
-#define PONG_MANAGER_H_
+#ifndef PONG_STATE_H_
+#define PONG_STATE_H_
 
 [...]
 
@@ -53,18 +53,19 @@ singleton class PongState : GameState
 #endif
 ```
 
-> **Note**: The `PongManager.h` will end up being included multiple times in the same compilation unit by the transpiler since it has to have access to the contents in `PongManager.c` and in `PongState.h`. This will cause redefining errors during the link stage of the building process. To prevent such errors, a common technique is to embed all declarations in all header files inside the following preprocessor directives:
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.h
+    </span>
+</div>
+
+> **Note**: _PongManager.h_ will end up being included multiple times in the same compilation unit by the transpiler since it has to have access to the contents in _PongManager.c_ and in _PongState.h_. This will cause redefining errors during the link stage of the building process. To prevent such errors, a common technique is to embed all declarations in all header files inside the following preprocessor directives:
 
 ```cpp
 #ifndef SOME_CLASS_H_
 #define SOME_CLASS_H_
 
 [...]
-
-class SomeClass: BaseClass
-{
-    [...]
-}
 
 #endif
 ```
@@ -82,6 +83,12 @@ void PongState::enter(void* owner __attribute__((unused)))
     this->pongManager = new PongManager(this->stage);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.c
+    </span>
+</div>
 
 While its destruction should happen in `PongState::exit`:
 
@@ -111,7 +118,13 @@ void PongState::constructor()
 }
 ```
 
-The `PongManager` class will be very simple. Apart from receiving in its constructor the `PongState`'s [Stage](/documentation/api/class-stage/) instance so it can retrieve the disk to know when it gets out of the screen, it will have a couple of attributes to keep track of the score:
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.c
+    </span>
+</div>
+
+The `PongManager` class will be very simple. Apart from receiving in its constructor the `PongState`'s [Stage](/documentation/api/class-stage/) instance so it can retrieve the disk to know when it gets out of the screen, it will have a couple of attributes to keep track of the score. Create the files _PongManager.h_ and _PongManager.c_ in _source/Managers/PongManager/_.
 
 ```cpp
 #include <ListenerObject.h>
@@ -134,6 +147,12 @@ class PongManager : ListenerObject
 	void destructor();
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.h
+    </span>
+</div>
 
 In the constructor's implementation, initialize the variables for the score:
 
@@ -165,6 +184,12 @@ void PongManager::printScore()
 	Printer::int32(this->rightScore, 24 + 3, 0, NULL);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
 
 ## Event Listeners
 
@@ -203,6 +228,12 @@ void PongManager::constructor(Stage stage)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
+
 The next step is to process the events that the manager is listening for. To do so, the `PongManager` has to override the [ListenerObject::onEvent](/documentation/api/class-stage/) method:
 
 ```cpp
@@ -219,6 +250,12 @@ class PongManager : ListenerObject
     [...]
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.h
+    </span>
+</div>
 
 And in its implementation, it has to process both events as follows:
 
@@ -260,6 +297,12 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
     return Base::onEvent(this, eventFirer, eventCode);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
 
 When processing the `kEventActorDeleted` event, we check if the object that fired the event's name is "Disk" and, if so, proceed to decide to which side assign the point by checkings its X position.
 
@@ -303,6 +346,12 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
     [...]
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
 
 This problem could have been solved by preloading the font by listing it in the [StageSpec](/documentation/api/struct-stage-spec/)'s fonts array, which would have ensured that the font's [CharSets](/documentation/api/class-char-set/) is loaded at the begining of CHAR memory space so it is not defragmented. But because we are not specifying a font for the score printing, there is nothing to preload and the engine falls back to load a default one on demand.
 

@@ -14,7 +14,17 @@ To make the disk move we have various options: directly manipulating its transfo
 
 Another type of [Component](/documentation/api/class-component/) that can be easily added through the actor editor is a [Body](/documentation/api/class-body/). It allows to apply forces to an [Actor](/documentation/api/class-actor/) or set its velocity and it will take care of the computation of the movement. Open the _Disk.actor_ editor and add a [Body](/documentation/api/class-body/) component like you previously did with [Sprites](/documentation/api/class-sprite/), and input the following values:
 
-<a href="/documentation/images/tutorial/disk-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk body"><img src="/documentation/images/tutorial/disk-body.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/disk-body.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A Body component in the actor editor">
+        <img src="/documentation/images/tutorial/disk-body.png" />
+    </a>
+    <figcaption>
+        A Body component in the actor editor
+        <span class="filepath">
+            assets/Actor/Disk/Disk.actor
+        </span>
+    </figcaption>
+</figure>
 
 But to actually move a [Body](/documentation/api/class-body/), it is necessary to either set its velocity or to apply a force to it. Which means that we need to have access to the disk instance somehow to manipulate it. Enter [mutation classes](/documentation/language/custom-features/#mutation-classes).
 
@@ -30,7 +40,17 @@ To add a [Mutator](/documentation/api/class-mutator/) to the disk, open the _Dis
 
 When a [Mutator](/documentation/api/class-mutator/) is attached to an [Actor](/documentation/api/class-actor/), it will convert the instance object into an instance of the mutation class, specified in the [Mutator](/documentation/api/class-mutator/)'s configuration. Since we want this instance to behave like a Pong disk, we will specify `Disk` as the target mutation class of the [Mutator](/documentation/api/class-mutator/):
 
-<a href="/documentation/images/tutorial/disk-mutator.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Disk mutator"><img src="/documentation/images/tutorial/disk-mutator.png" /></a>
+<figure>
+    <a href="/documentation/images/tutorial/disk-mutator.png" data-toggle="lightbox" data-gallery="gallery" data-caption="A Mutator component in the actor editor">
+        <img src="/documentation/images/tutorial/disk-mutator.png" />
+    </a>
+    <figcaption>
+        A Mutator component in the actor editor
+        <span class="filepath">
+            assets/Actor/Disk/Disk.actor
+        </span>
+    </figcaption>
+</figure>
 
 The editor will update **DiskActorSpec** and render a **DiskMutator1MutatorSpec** in `DiskComponentSpecs`:
 
@@ -61,6 +81,12 @@ ComponentSpec* const DiskComponentSpecs[] =
 };
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        assets/Actor/Disk/Converted/DiskActorSpec.c        
+    </span>
+</div>
+
 Now, we have to create the `Disk` mutation class. To do so, add the folder _source/Actors/Disk_ and, in it, a header and an implementation file: _Disk.h_ and _Disk.c_.
 
 In _Disk.h_ let's add the following to declare the new class:
@@ -74,6 +100,12 @@ mutation class Disk : Actor
 {
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.h
+    </span>
+</div>
 
 [Actors](/documentation/api/class-actor/) are not necessarily ready to be manipulated immediately after they are instantiated since whether or not they have, at that point in time, all their [Components](/documentation/api/class-component/) attached to them depends on whether the [Stage](/documentation/api/class-stage/) is configured to defer their initialization over time or not. [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports deferred initialization in order to reduce hiccups during gameplay due to the load on the CPU when creating [Actors](/documentation/api/class-actor/) with many [Components](/documentation/api/class-component/) attached to them.
 
@@ -91,6 +123,12 @@ mutation class Disk : Actor
     override void ready(bool recursive);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.h
+    </span>
+</div>
 
 In the implementation of the method, set the velocity of the `Disk` instance as shown below, making the direction of the movement random each time the disk is ready:
 
@@ -116,7 +154,7 @@ void Disk::startMoving()
 {
 	int16 angle = (Math::random(Math::randomSeed(), 128) - 64) >> 1;
 
-	Vector3D velocity = 
+	Vector3D velocity =
 	{
 		__FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__COS(angle))),
 		__FIXED_MULT(Body::getMaximumSpeed(this->body), __FIX7_9_TO_FIXED(__SIN(angle))),
@@ -132,10 +170,15 @@ void Disk::startMoving()
 }
 ```
 
-> **Note**: Make sure to place the files in the right folders. The Virtual C's transpiler is applied only to the files under the _source/_ folder; while those in the _assets/_ folder are directly fed to the C compiler. Failing to following this guide line will probably generate tons of cryptic errores by the compiler.
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
+
+> **Note**: Make sure to place the files in the right folders. The Virtual C transpiler is applied only to the files under the _source/_ folder; while those in the _assets/_ folder are directly fed to the C compiler. Failing to following this guideline will probably generate tons of cryptic errors by the compiler.
 
 Finally, it is necessary to start the clock that controls physics simulations, that can be done in various ways, here, we do it by calling `PongState::startClocks`:
-
 
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
@@ -149,6 +192,12 @@ void PongState::enter(void* owner __attribute__((unused)))
     PongState::startClocks(this);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.c
+    </span>
+</div>
 
 When building and running the game again, the disk will start to move by itself.
 

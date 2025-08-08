@@ -96,6 +96,12 @@ GameState game(void)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Game.c
+    </span>
+</div>
+
 Internally, the engine calls the global `game` function for it to return the first [GameState](/documentation/api/class-game-state/) that the engine's [StateMachine](/documentation/api/class-state-machine/) must enter into. In this case, it is the `PrecautionScreenState` that is returned at the end of the function.
 
 Various other initialization steps can be performed in the `game` function before returning the control back to the engine. The template project already does some common tasks, like enabling the `AutomaticPauseManager`, that takes care of pausing the game after a fixed amount of time has passed to remind the player to rest regularly, etc.
@@ -110,7 +116,7 @@ But the more interesting part is the chaining of states that is set up and that 
 
 Out of these, `MyGameState` is the first [GameState](/documentation/api/class-game-state/) of the game that is not contributed by a plugin and, as such, where the game's logic actually starts.
 
-## Taking a short cut
+## Taking a shortcut
 
 During development, it makes sense to skip those splash screens and go directly to the [GameState](/documentation/api/class-game-state/) that is being implemented. This can be easily done by returning that state in the `game` function instead of `PrecautionScreenState`. Let's change the last line of the `game` function to the following to boot directly to `MyGameState`.
 
@@ -118,8 +124,21 @@ During development, it makes sense to skip those splash screens and go directly 
 return GameState::safeCast(MyGameState::getInstance());
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Game.c
+    </span>
+</div>
+
 After applying that change, once the project is rebuilt and run, the following screen will show up in the emulator right away, kindly inviting us to put our own game into place.
 
-<a href="/documentation/images/tutorial/my-game-state.png" data-toggle="lightbox" data-gallery="gallery" data-caption="MyGameState"><img src="/documentation/images/tutorial/my-game-state.png"/></a>
+<figure>
+    <a href="/documentation/images/tutorial/my-game-state.png" data-toggle="lightbox" data-gallery="gallery" data-caption="Booting directly to MyGameState">
+        <img src="/documentation/images/tutorial/my-game-state.png" />
+    </a>
+    <figcaption>
+        Booting directly to MyGameState
+    </figcaption>
+</figure>
 
 Great, we're now ready to hit the keyboard and [create our first custom GameState](/documentation/tutorial/title-screen/) <i class="fa fa-arrow-right"></i>.
