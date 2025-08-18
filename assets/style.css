@@ -128,6 +128,8 @@ figure {
 figcaption {
   font-size: 90%;
   font-style: italic;
+  line-height: 120%;
+  padding-top: 3px;
   text-align: center;
 }
 
@@ -226,6 +228,30 @@ body.os-other .target-os-not-other {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   padding-right: 3px;
+}
+
+.codecaption {
+  font-size: 90%;
+  font-style: italic;
+  line-height: 120%;
+  margin: -22px 0 20px;
+  text-align: center;
+}
+
+.filepath {
+  display: block;
+  font-size: 90%;
+}
+
+.filepath:before {
+  content: "\ea7b";
+  font: normal normal normal 13px/1 codicon;
+  font-size: 13px;
+  text-rendering: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: text-bottom;
 }
 
 .documentation img + em {

@@ -10,7 +10,7 @@ Including multiplayer in any game can be a bit involved. We are going to try to 
 
 There are various approaches in game development to handle net code. Here, we are going to use the simplest, which consist in simply running the same game twice relying on the deterministic nature of programs produced for the Virtual Boy and the fact that the game is simple enough to not require much in the way of sofisticated recovery mechanism.
 
-We are going to modify the game to detect when another Virtual Boy system is connected through the EXT port and change to versus mode automatically. 
+We are going to modify the game to detect when another Virtual Boy system is connected through the EXT port and change to versus mode automatically.
 
 ## Starting communications
 
@@ -18,7 +18,7 @@ To handle communications between two Virtual Boy systems, VUEngine provides the 
 
 We need firt to override the `TitleScreenState::onEvent` method:
 
-```
+```cpp
 singleton class TitleScreenState : GameState
 {
     [...]
@@ -29,8 +29,13 @@ singleton class TitleScreenState : GameState
 }
 ```
 
-Let's enable the communications now. The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event, `kEventCommunicationsConnected`, on the object provided as its scope once the handshake procedure with another system has succeeded.
+<div class="codecaption">
+    <span class="filepath">
+        source/States/TitleScreenState/TitleScreenState.h
+    </span>
+</div>
 
+Let's enable the communications now. The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event, `kEventCommunicationsConnected`, on the object provided as its scope once the handshake procedure with another system has succeeded.
 
 ```cpp
 #include <CommunicationManager.h>
@@ -43,6 +48,12 @@ void TitleScreenState::enter(void* owner __attribute__((unused)))
     CommunicationManager::enableCommunications(CommunicationManager::getInstance(), ListenerObject::safeCast(this));
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/States/TitleScreenState/TitleScreenState.c
+    </span>
+</div>
 
 And we are going to print a message to notify the players when the connection is successful:
 
@@ -61,6 +72,12 @@ bool TitleScreenState::onEvent(ListenerObject eventFirer, uint16 eventCode)
     return Base::onEvent(this, eventFirer, eventCode);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/States/TitleScreenState/TitleScreenState.c
+    </span>
+</div>
 
 In `PongManager::constructor`, we are going to change the game to delay the moving of the `Disk` by 1 second, will disable the user inputs until it starts to move, and if another system is present, we are going to use the system's state during the intial handshake to decide which system corresponds to player 1.
 
@@ -89,7 +106,7 @@ void PongManager::constructor(Stage stage)
         // Propagate the message about the versus mode player assigned to the local system
         Stage::propagateMessage
         (
-            this->stage, Container::onPropagatedMessage, 
+            this->stage, Container::onPropagatedMessage,
             CommunicationManager::isMaster(CommunicationManager::getInstance()) ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2
         );
 
@@ -98,7 +115,13 @@ void PongManager::constructor(Stage stage)
 }
 ```
 
-Add the messages `Star tGame`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder. 
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
+
+Add the messages `Star tGame`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder.
 
 Don't forget to add a [Stage](/documentation/api/struct-stage-spec/) attribute to the `PongManager`:
 
@@ -116,6 +139,12 @@ class PongManager : ListenerObject
 };
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.h
+    </span>
+</div>
+
 Override the `handleMessage` method in `PongManager`:
 
 ```cpp
@@ -126,6 +155,12 @@ class PongManager : ListenerObject
     override bool handleMessage(Telegram telegram);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.h
+    </span>
+</div>
 
 And implement it as follows to process the `kMessageStartGame` message:
 
@@ -151,7 +186,7 @@ bool PongManager::handleMessage(Telegram telegram)
             // Propagate the message to start the game
             Stage::propagateMessage(this->stage, Container::onPropagatedMessage, kMessageStartGame);
 
-            // Since we are using the method processUserInput to sync both system, 
+            // Since we are using the method processUserInput to sync both system,
             // we must make sure that it is called regardless of local input
             KeypadManager::enableDummyKey();
             KeypadManager::enable();
@@ -164,6 +199,11 @@ bool PongManager::handleMessage(Telegram telegram)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
 
 Since we want to always delay the initial movement of the `Disk` after each point too, modify the processing of the event `kEventActorCreated` as follows:
 
@@ -193,6 +233,12 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Managers/PongManager/PongManager.c
+    </span>
+</div>
+
 The call to `KeypadManager::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. Which is to prevent the other system to get stuck waiting for the other player to press any key. In addition, change `PongState::processUserInput` to not check for any key, since we are going to synchronize the relevant [Actors](/documentation/api/class-actor/) across systems in their handling of user inputs:
 
 ```cpp
@@ -202,11 +248,17 @@ void PongState::processUserInput(const UserInput* userInput __attribute__((unuse
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/States/PongState/PongState.c
+    </span>
+</div>
+
 ## Mutating the AIPaddle
 
 Since each player will control one paddle, there is no need for the `AIPaddle` instance. But since this class is a mutation class, we can simply mutate the underlying [Actor](/documentation/api/class-actor/) to make it an instance of either `PlayerPaddle` for the second player, who will cotrol the padde on the right side of the screen; or to make it an instance of a class that can sync itself with the remote player's paddle.
 
-First, override the `onEvent` method in `AIPaddle.h`:
+First, override the `onEvent` method in _AIPaddle.h_:
 
 ```cpp
 mutation class AIPaddle : Actor
@@ -219,13 +271,18 @@ mutation class AIPaddle : Actor
 }
 ```
 
-In the implementation file, `AIPaddle.c`, we need to implement the logic to mutate the paddle depending on which number of player the system has been assigned. 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/AIPaddle/AIPaddle.h
+    </span>
+</div>
+
+In the implementation file, `AIPaddle.c`, we need to implement the logic to mutate the paddle depending on which number of player the system has been assigned.
 
 In the case that the system is player 1, the `AIPaddle`'s instance will be synched with the remote player's paddle. To do that, we are going to mutate it to a new class, `RemotePladdle`.
 If this system is player 2, we can simply mutate the `AIPaddle` to `PlayerPaddle` since that class already handles the local player's inputs.
 
 We need to reset the position of the paddle too.
-
 
 ```cpp
 #include <Messages.h>
@@ -265,6 +322,12 @@ void AIPaddle::resetPosition()
     AIPaddle::setLocalPosition(this, &localPosition);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/AIPaddle/AIPaddle.c
+    </span>
+</div>
 
 ## Mutating the PlayerPaddle
 
@@ -318,12 +381,17 @@ void PlayerPaddle::resetPosition()
 }
 ```
 
-Do not forget to reset the paddle's position in both cases. And make sure that `handlePropagatedMessage` doesn't return `true` for message `kMessageKeypadHoldDown` in order to allow the message to propagate to other [Actors](/documentation/api/class-actor/), since we want to process it in the `RemotePaddle` class.
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/PlayerPaddle/PlayerPaddle.c
+    </span>
+</div>
 
+Do not forget to reset the paddle's position in both cases. And make sure that `handlePropagatedMessage` doesn't return `true` for message `kMessageKeypadHoldDown` in order to allow the message to propagate to other [Actors](/documentation/api/class-actor/), since we want to process it in the `RemotePaddle` class.
 
 ## RemotePaddle
 
-Inside the folder _source_/_Actors_/_Paddle_, create a folder called _RemotePaddle_ and add `RemotePaddle.h` and `RemotePaddle.c` files with the following contents:
+Inside the folder _source/Actors/Paddle_, create a folder called _RemotePaddle_ and add _RemotePaddle.h_ and _RemotePaddle.c_ files with the following contents:
 
 ```cpp
 #ifndef REMOTE_PADDLE_H_
@@ -339,6 +407,12 @@ mutation class RemotePaddle : Actor
 #endif
 
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/RemotePaddle/RemotePaddle.h
+    </span>
+</div>
 
 The implementation of the `RemotePaddle` will handle all the communications with the remote Virtual Boy system.
 
@@ -374,6 +448,12 @@ bool RemotePaddle::handlePropagatedMessage(int32 message)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/RemotePaddle/RemotePaddle.c
+    </span>
+</div>
+
 In `RemotePaddle::transmitData`, we check that communications are enabled and then proceed to send a message with the value returned by `RemotePaddle::getClass()`. We could use a message too, but we can take advantage of the uniqueness of return value of get `getClass` method. We use it to check if the received data was sent by the `RemotePaddle`'s instance from the other system:
 
 ```cpp
@@ -399,13 +479,19 @@ void RemotePaddle::transmitData(uint16 holdKey)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/RemotePaddle/RemotePaddle.c
+    </span>
+</div>
+
 Then, we simply apply a force to the `RemotePaddle` according to the input received from the other system:
 
 ```cpp
 void RemotePaddle::move(uint16 holdKey)
 {
     fixed_t forceMagnitude = 0;
-    
+
     if(0 != (K_LU & holdKey))
     {
         forceMagnitude = -__FIXED_MULT(Body::getMass(this->body), Body::getMaximumSpeed(this->body));
@@ -420,6 +506,12 @@ void RemotePaddle::move(uint16 holdKey)
     RemotePaddle::applyForce(this, &force, true);
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Paddle/RemotePaddle/RemotePaddle.c
+    </span>
+</div>
 
 ## Disk
 
@@ -443,6 +535,12 @@ mutation class Disk : Actor
     virtual bool mustSychronize();
 }
 ```
+
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.h
+    </span>
+</div>
 
 Then, in `Disk.c`, create `Disk::handlePropagatedMessage` as follows. First, we need to reset the `Disk`'s position when the messages about versus mode arrive, and then we must make it to start moving when the message `kMessageStartGame` arrives.
 
@@ -478,6 +576,12 @@ bool Disk::handlePropagatedMessage(int32 message)
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
+
 Here is the implementation for `mustSychronize` and `mustNotSychronize`:
 
 ```cpp
@@ -492,6 +596,12 @@ bool Disk::mustNotSychronize()
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
+
 We will implement synchronization of the `Disks` in `Disk::update`. In this case, we are going to send both the `Disk`'s position. But we are only going to synchronize the `Disk` corresponding to the system of player 2.
 
 ```cpp
@@ -505,7 +615,7 @@ void Disk::update()
         (
             CommunicationManager::sendAndReceiveData
             (
-                communicationManager, (uint32)Disk::getClass(), 
+                communicationManager, (uint32)Disk::getClass(),
                 (BYTE*)&this->transformation.position, sizeof(this->transformation.position)
             )
         )
@@ -524,12 +634,18 @@ void Disk::update()
 }
 ```
 
+<div class="codecaption">
+    <span class="filepath">
+        source/Actors/Disk/Disk.c
+    </span>
+</div>
+
 ## Some caveats
 
 Both systems must be connected before turning them on. For the connection to be recognized, both systems must reach the title screen before continuing to the gameplay arena.
 
 There are a few workarounds. A better approach would be to enable the communications as soon as the system boots. But since this demo uses the splash screens plugin, doing so would require implementing a custom adjustment screen, which is out of the scope of this tutorial, and we wanted to showcase the asynchronous nature of the `kEventCommunicationsConnected` event.
 
-## That's all
+## They're talking!
 
-Once compiled and run, when two Virtual Boys are connected and both enter the game, it will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen.
+Once compiled and run, when two Virtual Boys are connected and both enter the game, they will detect each other when entering the Pong arena and each player will be in control of a paddle at the opposite side of the screen.
