@@ -211,6 +211,8 @@ The following shows an example of a frame blending [Texture](/documentation/api/
 
 The [ObjectSprite](/documentation/api/class-object-sprite/) uses OBJECTs to render CHARs in one of the 4 posible WORLDS in OBJECT display mode. As all the [Sprites](/documentation/api/class-sprite/), they use a [Texture](/documentation/api/class-texture/), but its map is used directly by the [ObjectSprite](/documentation/api/class-object-sprite/) to configure the OBJECTs. They are more flexible than [BgmapSprites](/documentation/api/class-bgmap-sprite/), but use more memory and are heavier to process, both by the CPU and the VIP.
 
+[ObjectSprites](/documentation/api/class-object-sprite/) requiere [ObjectSpriteContainers](/documentation/api/class-object-sprite-container/) to be rendered. Since the VIP can draw up to 4 OBJECT WORLDs, the engine allows to instantiate up to 4 [ObjectSpriteContainers](/documentation/api/class-object-sprite-container/). To control how many containers are instantiated, set a non-zero value in the [StageSpec](/documentation/api/struct-stage-spec/)'s `objectSpritesContainersSize` array.
+
 ## Wireframes
 
 The other kind of visual component are [Wireframes](/documentation/api/class-wireframe/). These are non solid 3D shapes that draw 1 pixel wide lines or circles. They leverage the ability of writing directly to the video frame buffers after the VIP has finished its drawing procedures during the current game frame. Accessing video memory with the CPU is slow and even more so when reading back from it, which is unavoidable when drawing single pixels.
