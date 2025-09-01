@@ -95,10 +95,12 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - User data saving support
   - Assets preloading
 
+
 - Stages
   - 3D stages
   - Automatic streaming
   - Parenting
+
 
 - Components:
   - Mutators
@@ -107,9 +109,11 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Sprites
   - Wireframes
 
+
 - Particles:
   - Physically capable
   - Recyclable
+
 
 - Rendering:
   - CHAR memory management
@@ -121,6 +125,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Transparency
   - Event driven frame based animation
 
+
 - Physics:
   - Basic accelerated/uniform movement
   - Gravity
@@ -128,9 +133,11 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Bouncing
   - Collision detection and notification
 
+
 - Sound:
   - Fully flexible VSU-native soundtrack format
   - PCM playback
+
 
 - Development tools:
   - Debug
