@@ -82,7 +82,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
 
 ## Features
 
-- General:
+**General:**
   - Object Oriented
   - Composite and composition architecture
   - Decoupling through message sending and propagation, and event firing
@@ -95,27 +95,23 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - User data saving support
   - Assets preloading
 
-
-- Stages
+**Stages**
   - 3D stages
   - Automatic streaming
   - Parenting
 
-
-- Components:
+**Components:**
   - Mutators
   - Physics
   - Colliders
   - Sprites
   - Wireframes
 
-
-- Particles:
+**Particles:**
   - Physically capable
   - Recyclable
 
-
-- Rendering:
+**Rendering:**
   - CHAR memory management
   - BGAMP memory management
   - OBJECT memory management
@@ -125,21 +121,18 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Transparency
   - Event driven frame based animation
 
-
-- Physics:
+**Physics:**
   - Basic accelerated/uniform movement
   - Gravity
   - Friction
   - Bouncing
   - Collision detection and notification
 
-
-- Sound:
+**Sound:**
   - Fully flexible VSU-native soundtrack format
   - PCM playback
 
-
-- Development tools:
+**Development tools:**
   - Debug
     - Memory usage
     - Profiling data
