@@ -129,8 +129,6 @@ But we just got ahead of ourselves a little bit. First, we need to create the `P
 ```cpp
 #include <GameState.h>
 
-[...]
-
 singleton class PongState : GameState
 {
     /// Method to get the singleton instance
