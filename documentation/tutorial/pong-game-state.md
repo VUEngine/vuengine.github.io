@@ -25,7 +25,7 @@ singleton class TitleScreenState : GameState
 
 <div class="codecaption">
     <span class="filepath">
-        source/States/TitleScreenState/TitleScreenState.c
+        source/States/TitleScreenState/TitleScreenState.h
     </span>
 </div>
 
