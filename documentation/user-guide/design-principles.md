@@ -19,110 +19,6 @@ Since the beginning of its development, [VUEngine](https://github.com/VUEngine/V
 Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in
 order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code written in a syntax close to that of C++'s into standard C. We call our custom language Virtual C.
 
-## Singletons
-
-By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
-
-But they are an intuitive tool to solve some general problems in gaming. And because other design patterns that address the weaknesses of singletons, like dependency injection, put pressure on memory and CPU time requirements, both of which are at a premium in the case of the Virtual Boy, some idealizations have to give way to practicallity. Therefore, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer by leveraging the `secure` keyword that [Virtual C](../../language/introduction) provides in order to mitigate the mentioned risks. So, the usage of singletons is a deliberate choice, conscious of the pitfalls that come with them, and done when the cost of allocating them dynamically in WRAM outweights their drawbacks.
-
-A singleton class' non static method can be protected by qualifying it as follows:
-
-```cpp
-secure void SomeSingletonClass::someSecureMethod()
-{
-    [...]
-}
-```
-
-Then, a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the singleton class has to be passed to `SomeSingletonClass::secure`:
-
-```cpp
-const ClassPointer SomeSingletonClassAuthorizedClasses[] =
-{
-    typeofclass(SomeAuthorizeClass),
-    NULL
-};
-```
-
-And finally, the above array is passed to `SomeSingletonClass::secure` at some point:
-
-```cpp
-SomeSingletonClass::secure(&SomeSingletonClassAuthorizedClasses);
-```
-
-Only the first call to `SomeSingletonClass::secure` has any effect, subsequent calls won't change the security conditions for the class.
-
-Implicitly, all secured methods are accessible from their own classes without restrictions. So, `SomeSingletonClass` still has access to `SomeSingletonClass::someSecureMethod`.
-
-One of the first methods to protect from logically invalid calls is the `VUEngine::run` method. To protect it from multiple calls, a global array of authorized classes is passed to its `secure` method:
-
-```cpp
-const ClassPointer VUEngineAuthorizedClasses[] =
-{
-    NULL
-};
-
-int32 main(void)
-{
-    [...]
-
-    VUEngine::secure(&VUEngineAuthorizedClasses);
-
-    [...]
-}
-```
-
-In this way, the first call to `VUEngine::secure` secures it so no external class or function can call it, otherwise, an exception is triggered during runtime in non release builds.
-
-The safety checks are removed in release builds to prevent them from impacting the game's performance.
-
-## State Machines
-
-The core of the engine is the [VUEngine](/documentation/api/class-v-u-engine/) singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
-
-Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter into:
-
-```cpp
-GameState game(void)
-{
-    // Initialize stuff
-    [...]
-
-    // Return the instance of the intial GameState
-    return GameState::safeCast(InitialGameState::getInstance());
-}
-```
-
-In the state machine pattern implemented by the engine, the life cycle of any [GameState](/documentation/api/class-game-state/) consists of the following events:
-
-```cpp
-/// Prepares the object to enter this state.
-/// @param owner: Object that is entering in this state
-virtual void enter(void* owner);
-
-/// Updates the object in this state.
-/// @param owner: Object that is in this state
-virtual void execute(void* owner);
-
-/// Prepares the object to exit this state.
-/// @param owner: Object that is exiting this state
-virtual void exit(void* owner);
-
-/// Prepares the object to become inactive in this state.
-/// @param owner: Object that is in this state
-virtual void suspend(void* owner);
-
-/// Prepares the object to become active in this state.
-/// @param owner: Object that is in this state
-virtual void resume(void* owner);
-```
-
-Through the life of a program, the [VUEngine](/documentation/api/class-v-u-engine/) instance will enter different [GameStates](/documentation/api/class-game-state/), each representing a screen that is presented to the user for it to interact with.
-
-[StateMachines](/documentation/api/class-state-machine/) can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-v-u-engine/) class. [Actors](/documentation/api/class-actor/), which are used to implement enemies, vehicles, etc., can use [StateMachines](/documentation/api/class-state-machine/) to define the logic that drives their behavior with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
-
-The [StateMachine](/documentation/api/class-state-machine/) is agnostic with rewards to whether the [States](/documentation/api/class-state/) in its stack are singletons or not, so it is up to the developer to decide if he uses singleton classes for them or not. The advantage of using `singleton` [States](/documentation/api/class-state/) is their allocation: singletons are by default configured to reside in DRAM and, by doing so, a non negligible amount of WRAM is freed, making it possible to have richer [Stages](/documentation/api/class-stage/).
-
 ## Components
 
 Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, [Entity](/documentation/api/class-entity/), that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of [Components](/documentation/api/class-component/) can be attached. The following is the complete list of the kind of [Components](/documentation/api/class-component/) that the engine currently supports:
@@ -240,6 +136,110 @@ if(!isDeleted(sprite))
 Internally, [VUEngine](https://github.com/VUEngine/VUEngine-Core) will figure out dynamically where to display what the programmer has requested to be displayed, while that which has to be displayed has already been defined elsewhere, not by the game programmer, but by the game designer or artist.
 
 As another mechanism to facilitate the separation of concerns principle, the engine provides a custom facility for dynamic memory allocation that doesn’t rely on enabling the program’s heap. This, again, helps to avoid hardcoding data within the game’s logic by eliminating the need to know in advance how many objects of any given type are required in any given context.
+
+## State Machines
+
+The core of the engine is the [VUEngine](/documentation/api/class-v-u-engine/) singleton class. It represents the program as a whole and its state is managed through a [StateMachine](/documentation/api/class-state-machine/) whose states must inherit from the [GameState](/documentation/api/class-game-state/) class.
+
+Any [VUEngine](https://github.com/VUEngine/VUEngine-Core) based program must provide a [GameState](/documentation/api/class-gamestate/) for the [VUEngine](/documentation/api/class-v-u-engine/) instance’s [StateMachine](/documentation/api/class-state-machine/) to enter into:
+
+```cpp
+GameState game(void)
+{
+    // Initialize stuff
+    [...]
+
+    // Return the instance of the intial GameState
+    return GameState::safeCast(InitialGameState::getInstance());
+}
+```
+
+In the state machine pattern implemented by the engine, the life cycle of any [GameState](/documentation/api/class-game-state/) consists of the following events:
+
+```cpp
+/// Prepares the object to enter this state.
+/// @param owner: Object that is entering in this state
+virtual void enter(void* owner);
+
+/// Updates the object in this state.
+/// @param owner: Object that is in this state
+virtual void execute(void* owner);
+
+/// Prepares the object to exit this state.
+/// @param owner: Object that is exiting this state
+virtual void exit(void* owner);
+
+/// Prepares the object to become inactive in this state.
+/// @param owner: Object that is in this state
+virtual void suspend(void* owner);
+
+/// Prepares the object to become active in this state.
+/// @param owner: Object that is in this state
+virtual void resume(void* owner);
+```
+
+Through the life of a program, the [VUEngine](/documentation/api/class-v-u-engine/) instance will enter different [GameStates](/documentation/api/class-game-state/), each representing a screen that is presented to the user for it to interact with.
+
+[StateMachines](/documentation/api/class-state-machine/) can be used by other classes, they are not exclusive to the [VUEngine](/documentation/api/class-v-u-engine/) class. [Actors](/documentation/api/class-actor/), which are used to implement enemies, vehicles, etc., can use [StateMachines](/documentation/api/class-state-machine/) to define the logic that drives their behavior with custom states that inherit from the generic [State](/documentation/api/class-state/) class.
+
+The [StateMachine](/documentation/api/class-state-machine/) is agnostic with rewards to whether the [States](/documentation/api/class-state/) in its stack are singletons or not, so it is up to the developer to decide if he uses singleton classes for them or not. The advantage of using `singleton` [States](/documentation/api/class-state/) is their allocation: singletons are by default configured to reside in DRAM and, by doing so, a non negligible amount of WRAM is freed, making it possible to have richer [Stages](/documentation/api/class-stage/).
+
+## Singletons
+
+By their own nature, singletons are globally accessible, hence, they come with all the dangers and caveats that global accessibility entails. And, on top of that, their accessibility makes it very tempting to overuse them, tightly coupling classes that shouldn't really be tied together.
+
+But they are an intuitive tool to solve some general problems in gaming. And because other design patterns that address the weaknesses of singletons, like dependency injection, put pressure on memory and CPU time requirements, both of which are at a premium in the case of the Virtual Boy, some idealizations have to give way to practicallity. Therefore, [VUEngine](https://github.com/VUEngine/VUEngine-Core) tries to make use of singletons a little bit safer by leveraging the `secure` keyword that [Virtual C](../../language/introduction) provides in order to mitigate the mentioned risks. So, the usage of singletons is a deliberate choice, conscious of the pitfalls that come with them, and done when the cost of allocating them dynamically in WRAM outweights their drawbacks.
+
+A singleton class' non static method can be protected by qualifying it as follows:
+
+```cpp
+secure void SomeSingletonClass::someSecureMethod()
+{
+    [...]
+}
+```
+
+Then, a global array allocated in non volatile memory containing the authorized classes to call the secure methods of the singleton class has to be passed to `SomeSingletonClass::secure`:
+
+```cpp
+const ClassPointer SomeSingletonClassAuthorizedClasses[] =
+{
+    typeofclass(SomeAuthorizeClass),
+    NULL
+};
+```
+
+And finally, the above array is passed to `SomeSingletonClass::secure` at some point:
+
+```cpp
+SomeSingletonClass::secure(&SomeSingletonClassAuthorizedClasses);
+```
+
+Only the first call to `SomeSingletonClass::secure` has any effect, subsequent calls won't change the security conditions for the class.
+
+Implicitly, all secured methods are accessible from their own classes without restrictions. So, `SomeSingletonClass` still has access to `SomeSingletonClass::someSecureMethod`.
+
+One of the first methods to protect from logically invalid calls is the `VUEngine::run` method. To protect it from multiple calls, a global array of authorized classes is passed to its `secure` method:
+
+```cpp
+const ClassPointer VUEngineAuthorizedClasses[] =
+{
+    NULL
+};
+
+int32 main(void)
+{
+    [...]
+
+    VUEngine::secure(&VUEngineAuthorizedClasses);
+
+    [...]
+}
+```
+
+In this way, the first call to `VUEngine::secure` secures it so no external class or function can call it, otherwise, an exception is triggered during runtime in non release builds.
+
+The safety checks are removed in release builds to prevent them from impacting the game's performance.
 
 ## Performance
 
