@@ -19,42 +19,6 @@ Since the beginning of its development, [VUEngine](https://github.com/VUEngine/V
 Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in
 order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code written in a syntax close to that of C++'s into standard C. We call our custom language Virtual C.
 
-## Components
-
-Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, [Entity](/documentation/api/class-entity/), that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of [Components](/documentation/api/class-component/) can be attached. The following is the complete list of the kind of [Components](/documentation/api/class-component/) that the engine currently supports:
-
-```cpp
-/// Component types
-/// @memberof Component
-enum ComponentTypes
-{
-    kSpriteComponent = 0,
-    kColliderComponent,
-    kPhysicsComponent,
-    kWireframeComponent,
-    kMutatorComponent,
-
-    // Limmiter
-    kComponentTypes,
-};
-```
-
-Each [Component](/documentation/api/class-component/) keeps a reference to the object that it attaches to and takes care of updating its internal state in order to always stay in sync with the state of the relevant properties of its owner. A [Sprite](/documentation/api/class-sprite/), for example, computes its position on the screen during the rendering subprocess according to the transformation of its owner.
-
-## Parenting
-
-A game must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. In the context of [VUEngine](/documentation/api/class-v-u-engine/) games, such objects are constructed and managed by a [GameState](/documentation/api/class-game-state/) through an instance of the [Stage](/documentation/api/class-stage/) class. All the objects that belong to a [Stage](/documentation/api/class-stage/) have to be instances of the [Actor](/documentation/api/class-actor/) class. And both, it and the [Stage](/documentation/api/class-stage/) class, inherit from the [Container](/documentation/api/class-container/) class, which is a special type of [Entity](/documentation/api/class-entity/) that keeps a local transformation relative to that of another [Container](/documentation/api/class-container/) that acts as its parent.
-
-Parenting allows easy transformation of whole sets of [Actors](/documentation/api/class-actor/) in a [Stage](/documentation/api/class-stage/) by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and ideally this happens without having to manually keep track of the buttons’ absolute or global positions.
-
-## Decoupling
-
-Some of the earliest goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a [ListenerObject](/documentation/api/class-listener-object/) class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
-
-Messages can be sent directly to another [ListenerObject](/documentation/api/class-listener-object/) when the target is known, or they can be propagated through the [Stage](/documentation/api/class-stage/)’s children list in the case of [Actors](/documentation/api/class-actor/).
-
-A special kind of message, called command, can be propagated to the [Components](/documentation/api/class-component/) attached to an [Entity](/documentation/api/class-entity/).
-
 ## Separation of concerns
 
 At the core of the engine’s principles lies the idea of separating audiovisual data from gaming logic, and both from hardware management logic. Management of the Virtual Boy’s hardware is something that all programs, games or not, require in order to do something meaningful with the platform. And it boils down, in all cases, to the manipulation of the same registers, memory addresses and what not, with the appropriate values to achieve a specific result among all the possible ones.
@@ -136,6 +100,43 @@ if(!isDeleted(sprite))
 Internally, [VUEngine](https://github.com/VUEngine/VUEngine-Core) will figure out dynamically where to display what the programmer has requested to be displayed, while that which has to be displayed has already been defined elsewhere, not by the game programmer, but by the game designer or artist.
 
 As another mechanism to facilitate the separation of concerns principle, the engine provides a custom facility for dynamic memory allocation that doesn’t rely on enabling the program’s heap. This, again, helps to avoid hardcoding data within the game’s logic by eliminating the need to know in advance how many objects of any given type are required in any given context.
+
+## Components
+
+Lately, we have been changing the engine to fully embrace composition over inheritance as much as possible. It now provides a generic class, [Entity](/documentation/api/class-entity/), that represents a spatial transformation (position, rotation and scale) to which an arbitrary number of [Components](/documentation/api/class-component/) can be attached. The following is the complete list of the kind of [Components](/documentation/api/class-component/) that the engine currently supports:
+
+```cpp
+/// Component types
+/// @memberof Component
+enum ComponentTypes
+{
+    kSpriteComponent = 0,
+    kColliderComponent,
+    kPhysicsComponent,
+    kWireframeComponent,
+    kMutatorComponent,
+
+    // Limmiter
+    kComponentTypes,
+};
+```
+
+Each [Component](/documentation/api/class-component/) keeps a reference to the object that it attaches to and takes care of updating its internal state in order to always stay in sync with the state of the relevant properties of its owner. A [Sprite](/documentation/api/class-sprite/), for example, computes its position on the screen during the rendering subprocess according to the transformation of its owner.
+
+## Parenting
+
+A game must present something to the user to perceive. At the bare minimum, it will be either a visual or an audio object. In the context of [VUEngine](/documentation/api/class-v-u-engine/) games, such objects are constructed and managed by a [GameState](/documentation/api/class-game-state/) through an instance of the [Stage](/documentation/api/class-stage/) class. All the objects that belong to a [Stage](/documentation/api/class-stage/) have to be instances of the [Actor](/documentation/api/class-actor/) class. And both, it and the [Stage](/documentation/api/class-stage/) class, inherit from the [Container](/documentation/api/class-container/) class, which is a special type of [Entity](/documentation/api/class-entity/) that keeps a local transformation relative to that of another [Container](/documentation/api/class-container/) that acts as its parent.
+
+Parenting allows easy transformation of whole sets of [Actors](/documentation/api/class-actor/) in a [Stage](/documentation/api/class-stage/) by manipulating the parent of all of them. Think of a movable pop up with a couple of buttons in it: when the pop up moves, the buttons remain in their positions relative to it, which act as their parent, and ideally this happens without having to manually keep track of the buttons’ absolute or global positions.
+
+## Decoupling
+
+Some of the earliest goals of the engine were to provide mechanisms that enable the developer to avoid tightly coupled game logic. Instead of requiring the implementation of bespoke methods that a class exposes to tackle specific requests or to poll for the status of certain conditions in other classes’ instances, the engine provides a [ListenerObject](/documentation/api/class-listener-object/) class that can send and receive messages in the form of enums or strings, and can listen for or trigger events encoded in enums.
+
+Messages can be sent directly to another [ListenerObject](/documentation/api/class-listener-object/) when the target is known, or they can be propagated through the [Stage](/documentation/api/class-stage/)’s children list in the case of [Actors](/documentation/api/class-actor/).
+
+A special kind of message, called command, can be propagated to the [Components](/documentation/api/class-component/) attached to an [Entity](/documentation/api/class-entity/).
+
 
 ## State Machines
 
