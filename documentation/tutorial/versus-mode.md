@@ -6,9 +6,7 @@ title: Versus Mode
 
 # Versus Mode
 
-Including multiplayer in any game can be a bit involved. We are going to try to extend this simple Pong clone as little as possible to handle 2 player matches.
-
-There are various approaches in game development to handle net code. Here, we will use the simplest, which consist in running the same game twice, relying on the deterministic nature of programs produced for the Virtual Boy and the fact that the game is small enough to not require much in the way of sofisticated recovery mechanism.
+Including multiplayer in any game can be a bit involved. There are various approaches in game development to handle net code. Here, we will use the simplest, which consist in running the same game twice, relying on the deterministic nature of programs produced for the Virtual Boy and the fact that the game is small enough to not require much in the way of sofisticated recovery mechanisms.
 
 Let's modify the game to detect when another Virtual Boy system is connected through the EXT port and change to versus mode automatically.
 
