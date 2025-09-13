@@ -20,7 +20,7 @@ All the code written by [Team VUEngine](https://www.vuengine.dev/) tries to adhe
 
 - Global **Spec** names must be declared in StudlyCaps and follow the scheme: **SomeClassSpec**.
 
-- Macros must be declared in all upper case with underscore separators. Engine macros additionally must be prefixed with two underscores: `MACRO_NAME`
+- Macros must be declared in all upper case with underscore separators. Engine macros additionally must be prefixed with two underscores: `__MACRO_NAME`
 
 - Opening braces follow Allman style blocks, ie: for all blocks must go on the next line, and closing braces must go on the next line after the block's body:
 
