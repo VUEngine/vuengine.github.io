@@ -16,8 +16,7 @@ Since the beginning of its development, [VUEngine](https://github.com/VUEngine/V
 - Encapsulation
 - Polymorphism
 
-Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in
-order expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code written in a syntax close to that of C++'s into standard C. We call our custom language Virtual C.
+Under the hood, these are implemented through a set of C macros that create the necessary boilerplate code. But in order to expose those features in a more friendly manner, we implemented a transpiler that converts, before compilation, code written in a syntax close to that of C++'s into standard C. We call our custom language Virtual C.
 
 ## Separation of concerns
 
