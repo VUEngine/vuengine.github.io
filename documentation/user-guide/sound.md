@@ -6,6 +6,8 @@ title: Sound
 
 # Sound
 
+*Notice: PCM support has been remove from [VUEngine's core](https://github.com/VUEngine/VUEngine-Core) to clean up the code base from what is basically a hack of the hardware, and one whose usage is very constrained. We plan to eventually bring back PCM support through a plugin. For those requiring it, support still exists in the `legacy-pcm-support` branch in the GitHub repository.*
+
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTracks](/documentation/api/class-sound-track/) to play:
 
 ```cpp
