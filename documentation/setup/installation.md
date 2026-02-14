@@ -20,7 +20,7 @@ Note that binaries are not signed and Windows might warn you about it.
 
 Run the installer to install `VUEngine.app` to your Applications folder.
 
-Note that binaries are are neither signed nor authored and macOS might warn you about it. If that is the case for you, hold down either the Options key <span class="keys">⌥</span> or meta key <span class="keys">⌘</span> while right clicking the `pkg` installer and selecting "Open". MacOS will allow you to still run the setup and not warn you again in the future.
+Note that binaries are neither signed nor authored and macOS might warn you about it. If that is the case for you, hold down either the Options key <span class="keys">⌥</span> or meta key <span class="keys">⌘</span> while right clicking the `pkg` installer and selecting "Open". MacOS will allow you to still run the setup and not warn you again in the future.
 
 You may need to install additional libraries to be able to build your code.
 
@@ -70,4 +70,4 @@ chmod a+x VUEngine-Studio-X-X-X.AppImage
 
 To enjoy the newest additions, which might not be included in the latest stable release, you can always check out and compile [VUEngine Studio](https://www.vuengine.dev/) yourself from its [GitHub](https://github.com/VUEngine/VUEngine-Studio) repository, or grab [WIP builds](https://github.com/VUEngine/VUEngine-Studio/actions) if available (you'll need to be signed in to a Github account for the latter).
 
-> **Note**: There might be compatibility isses with VUEngine Core, Templates and/or other sample code. We only ensure compatibility at time of releases.
+> **Note**: There might be compatibility issues with VUEngine Core, Templates and/or other sample code. We only ensure compatibility at time of releases.
