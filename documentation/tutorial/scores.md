@@ -180,8 +180,8 @@ void PongManager::destructor()
 
 void PongManager::printScore()
 {
-	Printer::int32(this->leftScore, 24 - 3, 0, NULL);
-	Printer::int32(this->rightScore, 24 + 3, 0, NULL);
+    Printer::int32(this->leftScore, 24 - 3, 0, NULL);
+    Printer::int32(this->rightScore, 24 + 3, 0, NULL);
 }
 ```
 

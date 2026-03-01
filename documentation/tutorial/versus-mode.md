@@ -119,7 +119,7 @@ void PongManager::constructor(Stage stage)
     </span>
 </div>
 
-Add the messages `Star tGame`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder.
+Add the messages `Start Game`, `Versus Mode Player 1` and `Versus Mode Player 2` to the **Messages** file inside the _config_ folder.
 
 Don't forget to add a [Stage](/documentation/api/struct-stage-spec/) attribute to the `PongManager`:
 
@@ -558,7 +558,7 @@ bool Disk::handlePropagatedMessage(int32 message)
 
         case kMessageVersusModePlayer1:
         {
-            Disk::mutateMethod(mustSychronize, Disk::dontSychronizeWithRemote);
+            Disk::mutateMethod(mustSychronize, Disk::mustNotSychronize);
             Disk::resetPosition(this);
             return false;
         }
