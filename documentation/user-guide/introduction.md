@@ -114,7 +114,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
 **Rendering:**
   - Graphics memory management
   - Direct frame buffer manipulation
-  - Affine/H-Bias effects
+  - Special sprite efffects (affine, horizontal line parallax, etc.)
   - Transparency
   - Event driven frame based animation
 
