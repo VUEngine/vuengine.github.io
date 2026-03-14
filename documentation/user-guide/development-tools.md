@@ -15,7 +15,7 @@ Each one is opened by pressing a key combination.
 
 _Key combination_: Hold <span class="keys">Select + Right Trigger</span> and press <span class="keys">Up</span> on the right D-Pad.
 
-The Debug Inspector shows pages with information about WRAM usage, video memory usage (WORLDs, BGMAPs, OBJECTs and CHARs), the [Stage](/documentation/api/class-stage/)’s status, collisions information, hardware registers, SRAM space, etc.
+The Debug Inspector shows pages with information about WRAM usage, video memory usage (WORLDs, BGMAPs, OBJECTs and TILEs), the [Stage](/documentation/api/class-stage/)’s status, collisions information, hardware registers, SRAM space, etc.
 
 Cycle through the different modes with the <span class="keys">Left D-Pad</span>.
 
@@ -38,11 +38,11 @@ Cycle through the different modes with the <span class="keys">Left D-Pad</span>.
 </figure>
 
 <figure>
-    <a href="/documentation/images/user-guide/development-tools/debug-char-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="CHAR Memory Inspector">
+    <a href="/documentation/images/user-guide/development-tools/debug-char-inspector.png" data-toggle="lightbox" data-gallery="gallery" data-caption="TILE Memory Inspector">
         <img src="/documentation/images/user-guide/development-tools/debug-char-inspector.png" width="500" />
     </a>
     <figcaption>
-    CHAR Memory Inspector
+    TILE Memory Inspector
 </figcaption>
 </figure>
 

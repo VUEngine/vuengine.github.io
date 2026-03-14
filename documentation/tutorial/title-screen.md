@@ -89,7 +89,7 @@ Finally, we will change the message printed to the screen by modifying the metho
 ```cpp
 void TitleScreenState::print()
 {
-    Printer::text("A Pong Clone", (__SCREEN_WIDTH_IN_CHARS >> 1) - 6, 12, NULL);
+    Printer::text("A Pong Clone", (__SCREEN_WIDTH_IN_TILES >> 1) - 6, 12, NULL);
 }
 ```
 

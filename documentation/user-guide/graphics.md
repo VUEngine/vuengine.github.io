@@ -14,20 +14,20 @@ They are components that can be attached to an [Entity](/documentation/api/class
 
 ## Sprites
 
-[Sprites](/documentation/api/class-sprite/) work as a sort of logical window that peaks into graphical memory, either into BGMAP space or directly into CHAR space, and draw what is seen through that window by means of a WORLD or an OBJECT or group of OBJECTs.
+[Sprites](/documentation/api/class-sprite/) work as a sort of logical window that peaks into graphical memory, either into BGMAP space or directly into TILE space, and draw what is seen through that window by means of a WORLD or an OBJECT or group of OBJECTs.
 
-CHAR, BGMAP, OBJECT and WORLD are all hardware concepts of the Virtual Boy’s architecture. The engine provides classes that correspond to each one of these for their management.
+TILE, BGMAP, OBJECT and WORLD are all hardware concepts of the Virtual Boy’s architecture. The engine provides classes that correspond to each one of these for their management.
 
-A [CharSet](/documentation/api/class-char-set/) represents one or more CHARs and treats them as a single unit. These hold the indexes of color data that underlie the graphics that the Virtual Boy’s Visual Image Processor (VIP) displays. Each CHAR is an 8×8 pixel matrix, or tile, from which complex images can be composed. [CharSets](/documentation/api/class-char-set/) are constructed by providing a [CharSetSpec](/documentation/api/struct-char-set-spec/) that specifies its properties
+A [TileSet](/documentation/api/class-tile-set/) represents one or more TILEs and treats them as a single unit. These hold the indexes of color data that underlie the graphics that the Virtual Boy’s Visual Image Processor (VIP) displays. Each TILE is an 8×8 pixel matrix, or tile, from which complex images can be composed. [TileSets](/documentation/api/class-tile-set/) are constructed by providing a [TileSetSpec](/documentation/api/struct-tile-set-spec/) that specifies its properties
 
-Take the following image as an example from which a [CharSetSpec](/documentation/api/struct-char-set-spec/) will be defined:
+Take the following image as an example from which a [TileSetSpec](/documentation/api/struct-tile-set-spec/) will be defined:
 
 <a href="/documentation/images/user-guide/graphics/punk.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk.png" width="200" /></a> <a href="/documentation/images/user-guide/graphics/punk-chars.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars.png" width="200" /></a>
 
 The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The **Spec** that defines it is the following:
 
 ```cpp
-CharSetROMSpec ActorCharsetSpec =
+TileSetROMSpec ActorCharsetSpec =
 {
     // Number of chars in function of the number of frames to load at the same time
     4 * 6,
@@ -46,20 +46,20 @@ CharSetROMSpec ActorCharsetSpec =
 };
 ```
 
-[CharSets](/documentation/api/class-char-set/) can have a unique usage or they can be shared to display more than one copy of the same image without increasing the memory footprint in the CHAR memory space. In the above example, the **ActorTiles** is a reference to the array that actually holds the pixel data.
+[TileSets](/documentation/api/class-tile-set/) can have a unique usage or they can be shared to display more than one copy of the same image without increasing the memory footprint in the TILE memory space. In the above example, the **ActorTiles** is a reference to the array that actually holds the pixel data.
 
-CHAR memory is arranged as a unidimensional array. Visually, it would look like this:
+TILE memory is arranged as a unidimensional array. Visually, it would look like this:
 
 <a href="/documentation/images/user-guide/graphics/punk-char-memory.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-char-memory.png" /></a>
 
-In such arrangement, the CHARs or tiles of this [CharSet](/documentation/api/class-char-set/) cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the CHARs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the [CharSet](/documentation/api/class-char-set/), are used to provide such bidimensional order. In the engine these are encapsulated in a [Texture](/documentation/api/class-texture/) class.
+In such arrangement, the TILEs or tiles of this [TileSet](/documentation/api/class-tile-set/) cannot be directly drawn to reconstruct the original image. For that, it is necessary to define a specific bidimensional arrangement of the TILEs relative to each order. Array maps that are interpreted as 2D matrices, where each point references a tile in the [TileSet](/documentation/api/class-tile-set/), are used to provide such bidimensional order. In the engine these are encapsulated in a [Texture](/documentation/api/class-texture/) class.
 
 [Textures](/documentation/api/class-texture/) need their own [TextureSpec](/documentation/api/struct-texture-spec/) to be instantiated and properly initialized. The following corresponds to the **Spec** for the texture that reconstruct the original image:
 
 ```cpp
 TextureROMSpec ActorTextureSpec =
 {
-    (CharSetSpec*)&ActorCharsetSpec,
+    (TileSetSpec*)&ActorCharsetSpec,
 
     // Pointer to the map array that defines how to use the tiles from the char set
     ActorMap,
@@ -90,9 +90,9 @@ TextureROMSpec ActorTextureSpec =
 };
 ```
 
-A [Texture](/documentation/api/class-texture/)’s map has to be loaded in BGMAP memory when it is displayed by a [BgmapSprite](/documentation/api/class-bgmap-sprite/). But graphical memory allocation isn’t required when the graphical data is displayed using an [ObjectSprite](/documentation/api/class-object-sprite/) since it only requires the map array to reference from OBJECT memory the CHARs from the [CharSet](/documentation/api/class-char-set/) in the right bidimensional order.
+A [Texture](/documentation/api/class-texture/)’s map has to be loaded in BGMAP memory when it is displayed by a [BgmapSprite](/documentation/api/class-bgmap-sprite/). But graphical memory allocation isn’t required when the graphical data is displayed using an [ObjectSprite](/documentation/api/class-object-sprite/) since it only requires the map array to reference from OBJECT memory the TILEs from the [TileSet](/documentation/api/class-tile-set/) in the right bidimensional order.
 
-Finally, [Textures](/documentation/api/class-texture/) are displayed by [Sprites](/documentation/api/class-sprite/), either from BGMAP memory through a single WORLD, or by rendering each CHAR into OBJECT memory. The following [SpriteSpec](/documentation/api/struct-sprite-spec/) exemplifies the former in reference to the [TextureSpec](/documentation/api/struct-texture-spec/) above:
+Finally, [Textures](/documentation/api/class-texture/) are displayed by [Sprites](/documentation/api/class-sprite/), either from BGMAP memory through a single WORLD, or by rendering each TILE into OBJECT memory. The following [SpriteSpec](/documentation/api/struct-sprite-spec/) exemplifies the former in reference to the [TextureSpec](/documentation/api/struct-texture-spec/) above:
 
 ```cpp
 BgmapSpriteROMSpec ActorSpriteSpec =
@@ -155,7 +155,7 @@ if(!isDeleted(sprite))
 }
 ```
 
-[CharSets](/documentation/api/class-char-set/) and [Textures](/documentation/api/class-texture/) are reusable, which means that multiple [Textures](/documentation/api/class-texture/) can share the same [CharSet](/documentation/api/class-cha-set/) and that more than one [Sprite](/documentation/api/class-sprite/) can display the same [Texture](/documentation/api/class-texture/). The intricacies of how these relationships are worked out by the engine depend on the allocation type of the [CharSet](/documentation/api/class-char-set/), which in turn depends on animations.
+[TileSets](/documentation/api/class-tile-set/) and [Textures](/documentation/api/class-texture/) are reusable, which means that multiple [Textures](/documentation/api/class-texture/) can share the same [TileSet](/documentation/api/class-cha-set/) and that more than one [Sprite](/documentation/api/class-sprite/) can display the same [Texture](/documentation/api/class-texture/). The intricacies of how these relationships are worked out by the engine depend on the allocation type of the [TileSet](/documentation/api/class-tile-set/), which in turn depends on animations.
 
 ### BGMAP Sprites
 
@@ -201,7 +201,7 @@ Factoring in all possible combinations, with this technique it would theoretical
 
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) includes a special [Sprite](/documentation/api/class-sprite/), [FrameBlendBgmapSprite](/documentation/api/class-frame-blend-bgmap-sprite/), that supports frame blending out of the box. It takes a [Texture](/documentation/api/class-texture/) that is basically a vertical spritesheet containing two frames of the same image that differ only in pixels that should be blended. Each game frame, the [FrameBlendBgmapSprite](/documentation/api/class-frame-blend-bgmap-sprite/) toggles between displaying the upper or the lower half of the [Texture](/documentation/api/class-texture/) to the user.
 
-This way, a higher visual fidelity can be achieved on a per-[Sprite](/documentation/api/class-sprite/) basis, at the cost of higher CHAR and BGMAP memory requirements.
+This way, a higher visual fidelity can be achieved on a per-[Sprite](/documentation/api/class-sprite/) basis, at the cost of higher TILE and BGMAP memory requirements.
 
 The following shows an example of a frame blending [Texture](/documentation/api/class-texture/) and how the resulting 7 color image would appear to the player.
 
@@ -209,7 +209,7 @@ The following shows an example of a frame blending [Texture](/documentation/api/
 
 ### OBJECT Sprites
 
-The [ObjectSprite](/documentation/api/class-object-sprite/) uses OBJECTs to render CHARs in one of the 4 posible WORLDS in OBJECT display mode. As all the [Sprites](/documentation/api/class-sprite/), they use a [Texture](/documentation/api/class-texture/), but its map is used directly by the [ObjectSprite](/documentation/api/class-object-sprite/) to configure the OBJECTs. They are more flexible than [BgmapSprites](/documentation/api/class-bgmap-sprite/), but use more memory and are heavier to process, both by the CPU and the VIP.
+The [ObjectSprite](/documentation/api/class-object-sprite/) uses OBJECTs to render TILEs in one of the 4 posible WORLDS in OBJECT display mode. As all the [Sprites](/documentation/api/class-sprite/), they use a [Texture](/documentation/api/class-texture/), but its map is used directly by the [ObjectSprite](/documentation/api/class-object-sprite/) to configure the OBJECTs. They are more flexible than [BgmapSprites](/documentation/api/class-bgmap-sprite/), but use more memory and are heavier to process, both by the CPU and the VIP.
 
 [ObjectSprites](/documentation/api/class-object-sprite/) requiere [ObjectSpriteContainers](/documentation/api/class-object-sprite-container/) to be rendered. Since the VIP can draw up to 4 OBJECT WORLDs, the engine allows to instantiate up to 4 [ObjectSpriteContainers](/documentation/api/class-object-sprite-container/). To control how many containers are instantiated, set a `true` value in the [StageSpec](/documentation/api/struct-stage-spec/)'s `objectSpritesContainersConfiguration` array.
 
@@ -363,15 +363,15 @@ Printer::clear();
 
 Only [Sprites](/documentation/api/class-sprite/) support animations. There are basically 2 ways to allocate the graphical data for animations in the system’s video memory:
 
-- To load all the CHARs for all the frames of animation at once
-- To load only the CHARs that correspond to a single frame of animation at any given time
+- To load all the TILEs for all the frames of animation at once
+- To load only the TILEs that correspond to a single frame of animation at any given time
 
-The first approach puts stress on video memory since depending on the size of each frame and the number of animation frames, it can quickly deplete CHAR memory. The second alternative puts the stress on the CPU because it has to rewrite the pixel data when the frame of animation changes. Using one or the other depends on the memory and performance requirements of the game.
+The first approach puts stress on video memory since depending on the size of each frame and the number of animation frames, it can quickly deplete TILE memory. The second alternative puts the stress on the CPU because it has to rewrite the pixel data when the frame of animation changes. Using one or the other depends on the memory and performance requirements of the game.
 
-[CharSets](/documentation/api/class-char-set/) can be shared by multiple [Textures](/documentation/api/class-texture/). Whether this is the case or not, is determined by the shared flag of the [CharSetSpec](/documentation/api/struct-char-set-spec/):
+[TileSets](/documentation/api/class-tile-set/) can be shared by multiple [Textures](/documentation/api/class-texture/). Whether this is the case or not, is determined by the shared flag of the [TileSetSpec](/documentation/api/struct-tile-set-spec/):
 
 ```cpp
-CharSetROMSpec ActorCharsetSpec =
+TileSetROMSpec ActorCharsetSpec =
 {
     // Number of chars in function of the number of frames to load at the same time
     4 * 6,
@@ -390,22 +390,22 @@ CharSetROMSpec ActorCharsetSpec =
 };
 ```
 
-When requesting a [CharSet](/documentation/api/class-char-set/) by providing a shared [CharSetSpec](/documentation/api/struct-char-set-spec/), the engine will only allocate a [CharSet](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU time.
+When requesting a [TileSet](/documentation/api/class-tile-set/) by providing a shared [TileSetSpec](/documentation/api/struct-tile-set-spec/), the engine will only allocate a [TileSet](/documentation/api/class-cha-set/) once, and any subsequent request will be served with the previously created instance. This saves both work and graphics memory, as well as CPU time.
 
-The overshoot of a shared [CharSetSpec](/documentation/api/struct-char-set-spec/) that only allocates a single frame at any given moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [CharSet](/documentation/api/class-char-set/) will show a change of animation if any of them changes the frame, making all instances to be in sync:
+The overshoot of a shared [TileSetSpec](/documentation/api/struct-tile-set-spec/) that only allocates a single frame at any given moment is that any [Sprite](/documentation/api/class-sprite/) that uses a [Texture](/documentation/api/class-texture/) which reference that [TileSet](/documentation/api/class-tile-set/) will show a change of animation if any of them changes the frame, making all instances to be in sync:
 
 <a href="/documentation/images/user-guide/graphics/punk-chars-shared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-shared.png" width="500" /></a>
 
-Since it would be overkill to play animations on all [Sprites](/documentation/api/class-sprite/) underlied by a shared [CharSet](/documentation/api/class-char-set/), the engine runs the animations only on the first Sprite.
+Since it would be overkill to play animations on all [Sprites](/documentation/api/class-sprite/) underlied by a shared [TileSet](/documentation/api/class-tile-set/), the engine runs the animations only on the first Sprite.
 
-On th other hand, when using a non-shared [CharSetSpec](/documentation/api/struct-char-set-spec/) to create a [CharSet](/documentation/api/class-char-set/), each request will be served with a new [CharSet](/documentation/ap/class-char-set/) instance. This permits to have different sprites with the same graphics but displaying different frames of animation:
+On th other hand, when using a non-shared [TileSetSpec](/documentation/api/struct-tile-set-spec/) to create a [TileSet](/documentation/api/class-tile-set/), each request will be served with a new [TileSet](/documentation/ap/class-tile-set/) instance. This permits to have different sprites with the same graphics but displaying different frames of animation:
 
 <a href="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" data-toggle="lightbox" data-gallery="gallery"><img src="/documentation/images/user-guide/graphics/punk-chars-nonshared.png" width="500" /></a>
 
-To load the complete pixel data of all the animation frames of an animation, the [CharSetSpec](/documentation/api/struct-char-set-spec/) must specify the total amount of CHARs used by all of the:
+To load the complete pixel data of all the animation frames of an animation, the [TileSetSpec](/documentation/api/struct-tile-set-spec/) must specify the total amount of TILEs used by all of the:
 
 ```cpp
-CharSetROMSpec ActorMultiframeCharsetSpec =
+TileSetROMSpec ActorMultiframeCharsetSpec =
 {
     // Number of chars in function of the number of frames to load at the same time
     4 * 6 * 12,
@@ -424,14 +424,14 @@ CharSetROMSpec ActorMultiframeCharsetSpec =
 };
 ```
 
-Allocating all frames of animation has a meaning in regards to [Textures](/documentation/api/class-texture/) too. [Textures](/documentation/api/class-texture/) define how to organize the CHARs or tiles of a [CharSet](/documentation/api/class-cha-set/) into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of [ObjectSprite](/documentation/api/class-object-sprite/). But when using BGMAPs with [BgmapSprites](/documentation/api/class-bgmap-sprite/), the [Texture](/documentation/api/class-texture/)’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.
+Allocating all frames of animation has a meaning in regards to [Textures](/documentation/api/class-texture/) too. [Textures](/documentation/api/class-texture/) define how to organize the TILEs or tiles of a [TileSet](/documentation/api/class-cha-set/) into a bidimensional plane. This order can be applied directly when displaying the image using OBJECTs through instances of [ObjectSprite](/documentation/api/class-object-sprite/). But when using BGMAPs with [BgmapSprites](/documentation/api/class-bgmap-sprite/), the [Texture](/documentation/api/class-texture/)’s map has to be allocated in BGMAP memory to be displayed by means of a WORLD. In this case, there is an analogous difference between allocating all the frames of the animation at once or only one.
 
 To load all the maps for all the animation frames of an animation in BGMAP memory, the [TextureSpec](/documentation/api/struct-texture-spec/) must specify the total number of frames:
 
 ```cpp
 TextureROMSpec ActorMultiframeTextureSpec =
 {
-    (CharSetSpec*)&ActorMultiframeCharsetSpec,
+    (TileSetSpec*)&ActorMultiframeCharsetSpec,
 
     // Pointer to the map array that defines how to use the tiles from the char set
     Map,

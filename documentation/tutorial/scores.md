@@ -312,9 +312,9 @@ The method `onEvent` has to return a boolean value. When it returns `true` the l
 
 ## Printing
 
-We already put in place the code to print the score by implementing `PongManager::printScore`. But the first time that either side scores a point, you will have probably noticed that the wrong score values are shown on the screen. This happens because the [CharSet](/documentation/api/class-char-set/) that is used for printing is loaded after the disk's [CharSet](/documentation/api/class-char-set/) and, when the latter is destroyed for the first time, CHAR memory gets defragmented by the [CharSetManager](/documentation/api/class-char-set-manager/), causing the [Printer](/documentation/api/class-printer/)'s [CharSet](/documentation/api/class-char-set/) to be moved in CHAR memory and this requires that any text that used it to be printed again.
+We already put in place the code to print the score by implementing `PongManager::printScore`. But the first time that either side scores a point, you will have probably noticed that the wrong score values are shown on the screen. This happens because the [TileSet](/documentation/api/class-tile-set/) that is used for printing is loaded after the disk's [TileSet](/documentation/api/class-tile-set/) and, when the latter is destroyed for the first time, TILE memory gets defragmented by the [TileSetManager](/documentation/api/class-tile-set-manager/), causing the [Printer](/documentation/api/class-printer/)'s [TileSet](/documentation/api/class-tile-set/) to be moved in TILE memory and this requires that any text that used it to be printed again.
 
-The [Printer](/documentation/api/class-printer/) fires the `kEventFontRewritten` when its [CharSets](/documentation/api/class-char-set/) get defragmented. So, we just need to listen for it and react appropriately:
+The [Printer](/documentation/api/class-printer/) fires the `kEventFontRewritten` when its [TileSets](/documentation/api/class-tile-set/) get defragmented. So, we just need to listen for it and react appropriately:
 
 ```cpp
 #include <Printer.h>
@@ -353,6 +353,6 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
     </span>
 </div>
 
-This problem could have been solved by preloading the font by listing it in the [StageSpec](/documentation/api/struct-stage-spec/)'s fonts array, which would have ensured that the font's [CharSets](/documentation/api/class-char-set/) is loaded at the begining of CHAR memory space so it is not defragmented. But because we are not specifying a font for the score printing, there is nothing to preload and the engine falls back to load a default one on demand.
+This problem could have been solved by preloading the font by listing it in the [StageSpec](/documentation/api/struct-stage-spec/)'s fonts array, which would have ensured that the font's [TileSets](/documentation/api/class-tile-set/) is loaded at the begining of TILE memory space so it is not defragmented. But because we are not specifying a font for the score printing, there is nothing to preload and the engine falls back to load a default one on demand.
 
 In the next and final step of this tutorial, let's round things off by adding some [sound and rumble effects](/documentation/tutorial/sound-and-rumble/) <i class="fa fa-arrow-right"></i>.

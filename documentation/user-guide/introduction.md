@@ -112,10 +112,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
   - Recyclable
 
 **Rendering:**
-  - CHAR memory management
-  - BGAMP memory management
-  - OBJECT memory management
-  - WORLD memory management
+  - Graphics memory management
   - Direct frame buffer manipulation
   - Affine/H-Bias effects
   - Transparency
@@ -138,11 +135,7 @@ void ShowcaseState::enter(void* owner __attribute__ ((unused)))
     - Profiling data
     - Streaming
     - Hardware registers' usage
-    - VIP inspector:
-      - CHAR memory
-      - BGMAP memory
-      - OBJECT memory
-      - WORLD memory
+    - Graphics memory inspector
     - Colliders
   - Stage editor
   - Animations inspector
