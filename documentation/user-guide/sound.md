@@ -135,10 +135,10 @@ const SoundTrackKeyframe MenuSongSoundTrack1Keyframes[] =
 
 The [VUEngine](https://github.com/VUEngine/VUEngine-Core)’s sound player is flexible enough to support all sound effects that the VSU is capable off and doesn’t require to reserve in advance any sound source/ Instead, it dispatches sound playback requests following a FIFO strategy as sound sources become available. This flexibility puts the responsibility of proper usage of the available resources on the sound data. Which means that priority has to be taken into account when producing sound effects and songs since sound playback requests have to be queued or ignored when there are no sound sources available at the moment of the request.
 
-To reproduce a sound, a request to the [SoundManager](/documentation/api/class-sound-manager/)’s instance can be performed as shown below:
+To reproduce a sound, a request to the [Sound](/documentation/api/class-sound/) class can be performed as shown below:
 
 ```cpp
-SoundManager::playSound
+Sound::playSound
 (
     soundSpec, (const Vector3D*)&this->transformation.position,
     kSoundPlaybackNormal, NULL, NULL
@@ -150,7 +150,7 @@ A [Sound](/documentation/api/class-sound/) can be acquired to control its playba
 ```cpp
 extern SoundSpec SampleSoundSpec;
 
-Sound sound = SoundManager::getSound(&SampleSoundSpec, NULL, NULL);
+Sound sound = Sound::get(&SampleSoundSpec, NULL, NULL);
 ```
 
 Sound playback supports spatial positioning through stereo separation if a pointer to a [Transformation](/documentation/api/struct-transformation/) is provided when calling [Sound::play](/documentation/api/class-sound/#a70097b312319605afa05f6b2e72f4834):
@@ -162,7 +162,7 @@ if(!isDeleted(sound))
 }
 ```
 
-[Sounds](/documentation/api/class-sound/) can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `SoundManager::playSound`.
+[Sounds](/documentation/api/class-sound/) can be set to auto release on completion. This is the default behavior when they are simply reproduced by calling `Sound::playSound`.
 
 ## Timer settings
 

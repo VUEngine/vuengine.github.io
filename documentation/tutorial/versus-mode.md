@@ -457,20 +457,18 @@ In `RemotePaddle::transmitData`, check that communications are enabled and then 
 ```cpp
 void RemotePaddle::transmitData(uint16 holdKey)
 {
-    CommunicationManager communicationManager = ;
-
-    if(Communications::isConnected(communicationManager))
+    if(Communications::isConnected())
     {
         if(
             Communications::sendAndReceiveData
             (
-                communicationManager, (uint32)RemotePaddle::getClass(), (BYTE*)&holdKey, sizeof(holdKey)
+                (uint32)RemotePaddle::getClass(), (BYTE*)&holdKey, sizeof(holdKey)
             )
         )
         {
-            if((uint32)RemotePaddle::getClass() == Communications::getReceivedMessage(communicationManager))
+            if((uint32)RemotePaddle::getClass() == Communications::getReceivedMessage())
             {
-                RemotePaddle::move(this, *(const uint16*)Communications::getReceivedData(communicationManager));
+                RemotePaddle::move(this, *(const uint16*)Communications::getReceivedData());
             }
         }
     }
@@ -605,26 +603,24 @@ We will implement synchronization of the `Disks` in `Disk::update`. In this case
 ```cpp
 void Disk::update()
 {
-    CommunicationManager communicationManager = ;
-
-    if(Communications::isConnected(communicationManager))
+    if(Communications::isConnected())
     {
         if
         (
             Communications::sendAndReceiveData
             (
-                communicationManager, (uint32)Disk::getClass(),
+                (uint32)Disk::getClass(),
                 (BYTE*)&this->transformation.position, sizeof(this->transformation.position)
             )
         )
         {
-            if((uint32)Disk::getClass() == Communications::getReceivedMessage(communicationManager))
+            if((uint32)Disk::getClass() == Communications::getReceivedMessage())
             {
                 if(Disk::mustSychronize(this))
                 {
                     Disk::stopMovement(this, __ALL_AXIS);
 
-                    Disk::setPosition(this, (const Vector3D*)Communications::getReceivedData(communicationManager));
+                    Disk::setPosition(this, (const Vector3D*)Communications::getReceivedData());
                 }
             }
         }

@@ -29,7 +29,7 @@ The above image’s size is 32×48 pixels, which translates to 4×6 tiles. The *
 ```cpp
 TileSetROMSpec ActorCharsetSpec =
 {
-    // Number of chars in function of the number of frames to load at the same time
+    // Number of tiles in function of the number of frames to load at the same time
     4 * 6,
 
     // Whether it is shared or not

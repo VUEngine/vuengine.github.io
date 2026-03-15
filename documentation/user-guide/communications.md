@@ -15,7 +15,6 @@ void SomeClass::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataByt
 {
     uint32 receivedMessage = kMessageSomeClassDummy;
     const RemotePlayerData* remotePlayerData = NULL;
-    CommunicationManager communicationManager = ;
 
     /*
     * Data will be sent sychroniously. This means that if the cable is disconnected during
@@ -26,20 +25,20 @@ void SomeClass::transmitData(uint32 messageForRemote, BYTE* data, uint32 dataByt
         /*
         * Data transmission can fail if there was already a request to send data.
         */
-        if(!CommunicationManager::sendAndReceiveData(communicationManager, messageForRemote, data, dataBytes))
+        if(!Communications::sendAndReceiveData(messageForRemote, data, dataBytes))
         {
             /*
             * In this case, simply cancel all communications and try again. This supposes
             * that there are no other calls that could cause a race condition.
             */
-            CommunicationManager::cancelCommunications(communicationManager);
+            Communications::cancelCommunications();
         }
 
         /*
         * Every transmission sends a control message and then the data itself.
         */
-        receivedMessage = CommunicationManager::getReceivedMessage(communicationManager);
-        remotePlayerData = (const RemotePlayerData*)CommunicationManager::getReceivedData(communicationManager);
+        receivedMessage = Communications::getReceivedMessage();
+        remotePlayerData = (const RemotePlayerData*)Communications::getReceivedData();
     }
     /*
     * The validity of the message is based on the command that was received

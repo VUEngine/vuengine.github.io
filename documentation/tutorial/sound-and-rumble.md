@@ -15,7 +15,6 @@ Let's add a sound effect when the disk hits something and one when either side s
 To play the sound effect when a point is scored, add the following to the `PongManager::onEvent` method:
 
 ```cpp
-#include <SoundManager.h>
 #include <Sounds.h>
 
 [...]
@@ -30,7 +29,7 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
         {
             if(0 == strcmp("Disk", Actor::getName(eventFirer)))
             {
-                SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
+                Sound::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
 
     [...]
 }
@@ -45,7 +44,6 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
 To play a sound effect when the disk hits a paddle or a wall, the code should be like the following:
 
 ```cpp
-#include <SoundManager.h>
 #include <Sounds.h>
 
 #include "Disk.h"
@@ -72,7 +70,7 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 
         case kTypeWall:
         {
-            SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
+            Sound::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
         }
         break;
     }
@@ -128,7 +126,7 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
         {
             if(0 == strcmp("Disk", Actor::getName(eventFirer)))
             {
-                SoundManager::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
+                Sound::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
                 RumbleManager::startEffect(&PointRumbleEffectSpec);
 
     [...]
@@ -163,7 +161,7 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
 
         case kTypeWall:
         {
-            SoundManager::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
+            Sound::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
             RumbleManager::startEffect(&BounceRumbleEffectSpec);
         }
         break;
