@@ -108,11 +108,11 @@ VUEngine out of the box supports [RetroOnyx](https://www.retroonyx.com/product-p
     </figcaption>
 </figure>
 
-Then, to send the effect to the [Rumble Pak](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack) when a point is scored, call [RumbleManager::startEffect](<(/documentation/api/class-rumble-manager/)>):
+Then, to send the effect to the [Rumble Pak](https://www.retroonyx.com/product-page/virtual-boy-rumble-pack) when a point is scored, call [Rumble::startEffect](<(/documentation/api/class-rumble/)>):
 
 ```cpp
 #include <RumbleEffects.h>
-#include <RumbleManager.h>
+#include <Rumble.h>
 
 [...]
 
@@ -127,7 +127,7 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
             if(0 == strcmp("Disk", Actor::getName(eventFirer)))
             {
                 Sound::playSound(&PointSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
-                RumbleManager::startEffect(&PointRumbleEffectSpec);
+                Rumble::startEffect(&PointRumbleEffectSpec);
 
     [...]
 }
@@ -145,7 +145,7 @@ And to start a the rumble effect when the disk detects a collision:
 [...]
 
 #include <RumbleEffects.h>
-#include <RumbleManager.h>
+#include <Rumble.h>
 
 [...]
 
@@ -162,7 +162,7 @@ bool Disk::collisionStarts(const CollisionInformation* collisionInformation)
         case kTypeWall:
         {
             Sound::playSound(&BounceSoundSpec,  NULL, kSoundPlaybackNormal, NULL);
-            RumbleManager::startEffect(&BounceRumbleEffectSpec);
+            Rumble::startEffect(&BounceRumbleEffectSpec);
         }
         break;
     }

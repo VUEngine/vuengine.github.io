@@ -12,7 +12,7 @@ Let's modify the game to detect when another Virtual Boy system is connected thr
 
 ## Starting communications
 
-To handle communications between two Virtual Boy systems, VUEngine provides the singleton [CommunicationManager](<(/documentation/api/class-communication-manager/)>). The first thing to do is to enable communications at the end of `TitleScreenState::enter`.
+To handle communications between two Virtual Boy systems, VUEngine provides the [Communications](<(/documentation/api/class-communications/)>) class. The first thing to do is to enable communications at the end of `TitleScreenState::enter`.
 
 First, override the `TitleScreenState::onEvent` method:
 
@@ -33,10 +33,10 @@ singleton class TitleScreenState : GameState
     </span>
 </div>
 
-Let's enable the communications now. The [CommunicationManager](<(/documentation/api/class-communication-manager/)>) will fire an event, `kEventCommunicationsConnected`, on the object provided as its scope once the handshake procedure has succeeded.
+Let's enable the communications now. The [Communications](<(/documentation/api/class-communications/)>) class will fire an event, `kEventCommunicationsConnected`, on the object provided as its scope once the handshake procedure has succeeded.
 
 ```cpp
-#include <CommunicationManager.h>
+#include <Communications.h>
 [...]
 
 void TitleScreenState::enter(void* owner __attribute__((unused)))
@@ -80,7 +80,7 @@ bool TitleScreenState::onEvent(ListenerObject eventFirer, uint16 eventCode)
 In `PongManager::constructor`, we will change the game to delay moving the `Disk` by 1 second and disable the user inputs until it starts to move, and if another system is present, we will use the system's state during the intial handshake to decide which one corresponds to player 1.
 
 ```cpp
-#include <CommunicationManager.h>
+#include <Communications.h>
 
 [...]
 
