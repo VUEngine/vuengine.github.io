@@ -193,7 +193,7 @@ Now, we are able to implement the logic to move the paddle. To do so, in the imp
 ```cpp
 [...]
 
-#include <KeypadManager.h>
+#include <Keypad.h>
 #include <Messages.h>
 
 [...]
@@ -206,7 +206,7 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
         {
             if(!isDeleted(this->body))
             {
-                UserInput userInput = KeypadManager::getUserInput();
+                UserInput userInput = Keypad::getUserInput();
 
                 fixed_t forceMagnitude = 0;
 
@@ -240,7 +240,7 @@ bool PlayerPaddle::handlePropagatedMessage(int32 message)
 
 Notice that the method returns either `true` or `false`. If a `handlePropagatedMessage` implementation returns `true`, the propagation of the message is halted, preventing other [Actors](/documentation/api/class-actor/) from reacting to it. Since only one of the paddles must be controlled by the player, we halt the propagation of the `kMessageKeypadHoldDown` message, but allow other messages to continue to be propagated by returning `false`. So, only the first instance of `Paddle` will move.
 
-Since we disabled the user input when changing the state in `TitleScreenState::processUserInput`, it is necessary to enable it again by calling `KeypadManager::enable` when the engine enters in the `PongState` :
+Since we disabled the user input when changing the state in `TitleScreenState::processUserInput`, it is necessary to enable it again by calling `Keypad::enable` when the engine enters in the `PongState` :
 
 ```cpp
 void PongState::enter(void* owner __attribute__((unused)))
@@ -257,7 +257,7 @@ void PongState::enter(void* owner __attribute__((unused)))
 	PongState::startClocks(this);
 
 	// Enable user input
-	KeypadManager::enable();
+	Keypad::enable();
 }
 ```
 

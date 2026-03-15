@@ -33,7 +33,7 @@ That method receives a pointer to a struct called [UserInput](/documentation/api
 
 ```cpp
 /// User's input
-/// @memberof KeypadManager
+/// @memberof Keypad
 typedef struct UserInput
 {
     /// All pressed key(s)
@@ -64,7 +64,7 @@ typedef struct UserInput
 } UserInput;
 ```
 
-So, to detect if the user pressed the <span class="keys">START</span> button, the `pressedKey` attribute of the [UserInput](/documentation/api/struct-user-input/) struct has to be tested against [K_STA](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Hardware/KeypadManager.h). If successful, we will make the engine change its current state to the [GameState](/documentation/api/class-game-state/) in which the actual game will run. Add the following to `TitleScreenState::processUserInput`:
+So, to detect if the user pressed the <span class="keys">START</span> button, the `pressedKey` attribute of the [UserInput](/documentation/api/struct-user-input/) struct has to be tested against [K_STA](https://github.com/VUEngine/VUEngine-Core/blob/master/source/Hardware/Keypad.h). If successful, we will make the engine change its current state to the [GameState](/documentation/api/class-game-state/) in which the actual game will run. Add the following to `TitleScreenState::processUserInput`:
 
 ```cpp
 #include <PongState.h>
@@ -78,7 +78,7 @@ void TitleScreenState::processUserInput(const UserInput* userInput)
     if(0 != (K_STA & userInput->pressedKey))
     {
         // Disable the keypad to prevent processing of more inputs
-        KeypadManager::disable();
+        Keypad::disable();
 
         // Tell the VUEngine to change the current state
         VUEngine::changeState(GameState::safeCast(PongState::getInstance()));

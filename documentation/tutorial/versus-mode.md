@@ -43,7 +43,7 @@ void TitleScreenState::enter(void* owner __attribute__((unused)))
 {
     [...]
 
-    CommunicationManager::enableCommunications(CommunicationManager::getInstance(), ListenerObject::safeCast(this));
+    Communications::enableCommunications(ListenerObject::safeCast(this));
 }
 ```
 
@@ -97,15 +97,15 @@ void PongManager::constructor(Stage stage)
     PongManager::sendMessageToSelf(this, kMessageStartGame, 1000, 0);
 
     // Disable the gameplay for a few cycles
-    KeypadManager::disable();
+    Keypad::disable();
 
-    if(CommunicationManager::isConnected(CommunicationManager::getInstance()))
+    if(Communications::isConnected())
     {
         // Propagate the message about the versus mode player assigned to the local system
         Stage::propagateMessage
         (
             this->stage, Container::onPropagatedMessage,
-            CommunicationManager::isMaster(CommunicationManager::getInstance()) ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2
+            Communications::isMaster() ? kMessageVersusModePlayer1 : kMessageVersusModePlayer2
         );
 
         Printer::text("Waiting", 24 - 3, 27, NULL);
@@ -173,10 +173,10 @@ bool PongManager::handleMessage(Telegram telegram)
     {
         case kMessageStartGame:
         {
-            if(CommunicationManager::isConnected(CommunicationManager::getInstance()))
+            if(Communications::isConnected())
             {
                 // Must make sure that both systems are in sync before starting the game
-                CommunicationManager::startSyncCycle(CommunicationManager::getInstance());
+                Communications::startSyncCycle();
 
                 Printer::text("        ", 24 - 3, 27, NULL);
             }
@@ -186,8 +186,8 @@ bool PongManager::handleMessage(Telegram telegram)
 
             // Since we are using the method processUserInput to sync both system,
             // we must make sure that it is called regardless of local input
-            KeypadManager::enableDummyKey();
-            KeypadManager::enable();
+            Keypad::enableDummyKey();
+            Keypad::enable();
 
             break;
         }
@@ -218,7 +218,7 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
             {
                 Actor::addEventListener(eventFirer, ListenerObject::safeCast(this), kEventActorDeleted);
 
-                KeypadManager::disable();
+                Keypad::disable();
 
                 PongManager::sendMessageToSelf(this, kMessageStartGame, 100, 0);
             }
@@ -237,7 +237,7 @@ bool PongManager::onEvent(ListenerObject eventFirer, uint16 eventCode)
     </span>
 </div>
 
-The call to `KeypadManager::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. This prevents the other system from getting stuck waiting for the other player to provide an input. In addition, change `PongState::processUserInput` to not check for any key, since we are going to synchronize the relevant [Actors](/documentation/api/class-actor/) across systems in their handling of user inputs:
+The call to `Keypad::enableDummyKey` is necessary to force the engine calling `processUserInput` on the current [GameState](/documentation/api/class-game-state/) regardless of the input. This prevents the other system from getting stuck waiting for the other player to provide an input. In addition, change `PongState::processUserInput` to not check for any key, since we are going to synchronize the relevant [Actors](/documentation/api/class-actor/) across systems in their handling of user inputs:
 
 ```cpp
 void PongState::processUserInput(const UserInput* userInput __attribute__((unused)))
@@ -417,7 +417,7 @@ The implementation of the `RemotePaddle` will handle all the communications with
 Let's start by implementing the `handlePropagateMessage`, where we will intercept the `kMessageKeyHoldDown` message to send it to the other system:
 
 ```cpp
-#include <KeypadManager.h>
+#include <Keypad.h>
 #include <Messages.h>
 
 #include "RemotePaddle.h"
@@ -434,7 +434,7 @@ bool RemotePaddle::handlePropagatedMessage(int32 message)
     {
         case kMessageKeypadHoldDown:
         {
-            UserInput userInput = KeypadManager::getUserInput();
+            UserInput userInput = Keypad::getUserInput();
 
             RemotePaddle::transmitData(this, userInput.holdKey);
 
@@ -457,20 +457,20 @@ In `RemotePaddle::transmitData`, check that communications are enabled and then 
 ```cpp
 void RemotePaddle::transmitData(uint16 holdKey)
 {
-    CommunicationManager communicationManager = CommunicationManager::getInstance();
+    CommunicationManager communicationManager = ;
 
-    if(CommunicationManager::isConnected(communicationManager))
+    if(Communications::isConnected(communicationManager))
     {
         if(
-            CommunicationManager::sendAndReceiveData
+            Communications::sendAndReceiveData
             (
                 communicationManager, (uint32)RemotePaddle::getClass(), (BYTE*)&holdKey, sizeof(holdKey)
             )
         )
         {
-            if((uint32)RemotePaddle::getClass() == CommunicationManager::getReceivedMessage(communicationManager))
+            if((uint32)RemotePaddle::getClass() == Communications::getReceivedMessage(communicationManager))
             {
-                RemotePaddle::move(this, *(const uint16*)CommunicationManager::getReceivedData(communicationManager));
+                RemotePaddle::move(this, *(const uint16*)Communications::getReceivedData(communicationManager));
             }
         }
     }
@@ -605,26 +605,26 @@ We will implement synchronization of the `Disks` in `Disk::update`. In this case
 ```cpp
 void Disk::update()
 {
-    CommunicationManager communicationManager = CommunicationManager::getInstance();
+    CommunicationManager communicationManager = ;
 
-    if(CommunicationManager::isConnected(communicationManager))
+    if(Communications::isConnected(communicationManager))
     {
         if
         (
-            CommunicationManager::sendAndReceiveData
+            Communications::sendAndReceiveData
             (
                 communicationManager, (uint32)Disk::getClass(),
                 (BYTE*)&this->transformation.position, sizeof(this->transformation.position)
             )
         )
         {
-            if((uint32)Disk::getClass() == CommunicationManager::getReceivedMessage(communicationManager))
+            if((uint32)Disk::getClass() == Communications::getReceivedMessage(communicationManager))
             {
                 if(Disk::mustSychronize(this))
                 {
                     Disk::stopMovement(this, __ALL_AXIS);
 
-                    Disk::setPosition(this, (const Vector3D*)CommunicationManager::getReceivedData(communicationManager));
+                    Disk::setPosition(this, (const Vector3D*)Communications::getReceivedData(communicationManager));
                 }
             }
         }

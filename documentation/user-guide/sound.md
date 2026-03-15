@@ -11,7 +11,7 @@ title: Sound
 [VUEngine](https://github.com/VUEngine/VUEngine-Core) supports two types of sound playback through a common interface: the [Sound](/documentation/api/class-sound/) class. A [SoundSpec](/documentation/api/struct-sound-spec/) specifies, among other properties, a list of [SoundTracks](/documentation/api/class-sound-track/) to play:
 
 ```cpp
-SoundTrackROMSpec* const MenuSongSoundTracks[] =
+VSUSoundTrackROMSpec* const MenuSongSoundTracks[] =
 {
     &MenuSongSoundTrack1,
     &MenuSongSoundTrack2,
@@ -41,19 +41,25 @@ SoundROMSpec MenuSongSoundSpec =
 A [SoundTrackSpec](/documentation/api/struct-sound-track-spec/) determines if the playback reproduces sounds as natively supported by the Virtual Boy’s Virtual Sound Unit (VSU) or Pulse Code Modulation data (PCM).
 
 ```cpp
-SoundTrackROMSpec MenuSongSoundTrack1 =
+VSUSoundTrackROMSpec MenuSongSoundTrack1 =
 {
-    /// kTrackNative, kTrackPCM
-    kTrackNative,
+    // SoundTrack
+    {
+        // Allocator
+        __TYPE(VSUSoundTrack),
 
-    /// Skip if no sound source available?
-    true,
+        /// Priority for sound channel usage
+        10,
 
-    /// Total number of samples (0 if not PCM)
-    0,
+        /// Skip if no sound source available?
+        true,
 
-    /// Keyframes that define the track
-    (SoundTrackKeyframe*)MenuSongSoundTrack1Keyframes,
+        /// Loop back point (cursor)
+        0,
+
+        /// Keyframes that define the track
+        (SoundTrackKeyframe*)MenuSongSoundTrack1Keyframes,
+    },
 
     /// SxINT values
     (uint8*)MenuSongSoundTrack1SxINT,

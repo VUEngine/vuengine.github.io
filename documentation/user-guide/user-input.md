@@ -6,7 +6,7 @@ title: User Input
 
 # User Input
 
-User input is read by the [KeypadManager](/documentation/api/class-keypad-manager/) class’ instance and the engine takes on the duty of notifying the current [GameState](/documentation/api/class-game-state/) about changes to the user input by calling `GameState::processUserInput`.
+User input is read by the [Keypad](/documentation/api/class-keypad-manager/) class’ instance and the engine takes on the duty of notifying the current [GameState](/documentation/api/class-game-state/) about changes to the user input by calling `GameState::processUserInput`.
 
 In order to react to the actions of the user, the [GameStates](/documentation/api/class-game-state/) that implement the logic of the specific game must provide a custom implementation of the `processUserInput` method.
 
@@ -23,7 +23,7 @@ The [UserInput](/documentation/api/struct-user-input/) struct, passed as a point
 
 ```cpp
 /// User's input
-/// @memberof KeypadManager
+/// @memberof Keypad
 typedef struct UserInput
 {
     /// All pressed key(s)

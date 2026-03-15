@@ -207,7 +207,7 @@ if(NULL != childActor)
 }
 ```
 
-The game logic should always manipulate [Actors](/documentation/api/class-actor/) and not [Sprites](/documentation/api/class-sprite/), [Textures](/documentation/api/class-texture/) or [TileSets](/documentation/api/class-charsets/). There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, [Actors](/documentation/api/class-actor/) are the main citizens in [VUEngine](https://github.com/VUEngine/VUEngine-Core) based games.
+The game logic should always manipulate [Actors](/documentation/api/class-actor/) and not [Sprites](/documentation/api/class-sprite/), [Textures](/documentation/api/class-texture/) or [TileSets](/documentation/api/class-tile-set/). There are applications for those, like implementing special effects or managing a global image, maybe to save on performance. But in general, [Actors](/documentation/api/class-actor/) are the main citizens in [VUEngine](https://github.com/VUEngine/VUEngine-Core) based games.
 
 You acquire a direct reference to a newly spawned [Actor](/documentation/api/class-actor/) when using the above methods:
 
